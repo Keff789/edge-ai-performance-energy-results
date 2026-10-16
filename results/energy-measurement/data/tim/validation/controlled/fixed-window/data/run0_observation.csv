@@ -1,0 +1,6 @@
+workload,run0_5M_load_W,min_other_5M_load_W,max_other_5M_load_W,run0_larger_than_all_other_5M,n_5M_below_2k_median,run0_mtime_is_earliest_in_5M,note
+gemm_fp16,34.14982387800079,32.97678178541505,33.29624009564949,True,14,True,Run number / file mtime do not establish an accurate inter-benchmark pause
+gemm_int8,32.39835172610853,31.77976361253649,31.927743924746498,True,15,True,Run number / file mtime do not establish an accurate inter-benchmark pause
+llm,30.704016255371364,29.85972056081409,29.924348797242,True,14,True,Run number / file mtime do not establish an accurate inter-benchmark pause
+yolo_fp32,23.42565259580328,23.042308627148476,23.17759158586373,True,14,True,Run number / file mtime do not establish an accurate inter-benchmark pause
+yolo_int8,18.69698410942547,18.584252789270703,18.768837454540805,False,10,True,Run number / file mtime do not establish an accurate inter-benchmark pause

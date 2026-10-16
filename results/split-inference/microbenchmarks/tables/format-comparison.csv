@@ -1,0 +1,5 @@
+experiment,variant,model,cut,latency_mean_ms,latency_min_ms,latency_max_ms,latency_stdev_ms,latency_samples,stream_fps,stream_frames,stream_elapsed_s,max_outstanding_jobs,input_bytes_per_frame,output_bytes_per_frame,scope
+input-format,float32_input,yolo26s,b024,49.61844993,48.950004,50.431387,0.5242105365625201,100,20.150719295864484,100,4.962602006,1,4915200,819200,Hailo-10H Part 1 only; no FIFO or TensorRT Part 2
+input-format,native_input,yolo26s,b024,12.768618449999998,12.436842,13.11446,0.16925937591125484,100,78.28029630466753,100,1.277460673,1,1228800,819200,Hailo-10H Part 1 only; no FIFO or TensorRT Part 2
+output-format,float32,yolo26s,b024,63.0268782,61.893128,63.329166,0.38824259142479484,50,28.34757464268764,200,7.055277304,2,,3276800,Hailo-10H Part 1 only; no FIFO or TensorRT Part 2
+output-format,native,yolo26s,b024,49.740540339999995,48.693297,50.002099,0.3463413060742023,50,28.293678746867887,200,7.068716719,2,,819200,Hailo-10H Part 1 only; no FIFO or TensorRT Part 2

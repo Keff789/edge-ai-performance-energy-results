@@ -1,0 +1,24 @@
+\begin{table}[tbp]
+\centering
+\small
+\caption{Pico power measurements. Unspecified precision or boundary is not inferred from directory names; platform comparisons remain exploratory.}
+\label{tab:journal-table-cross-platform-inventory-1}
+\begingroup
+\setbox0=\hbox{%
+\begin{tabular}{lllllll}
+\toprule
+Platform & Workload & Window & Runs & Duration (s) & Precision & Boundary \\
+\midrule
+Hailo-10 & Hailo-10 / gemm & full\_record & 15 & 102.000 & unspecified & unspecified \\
+Hailo-10 & Hailo-10 / gemm & matched\_prefix & 15 & 10.000 & unspecified & unspecified \\
+Hailo-10 & Hailo-10 / yolo & full\_record & 15 & 103.000 & unspecified & unspecified \\
+Hailo-10 & Hailo-10 / yolo & matched\_prefix & 15 & 10.000 & unspecified & unspecified \\
+\bottomrule
+\end{tabular}}
+\ifdim\wd0>\linewidth
+\resizebox{\linewidth}{!}{\box0}
+\else
+\box0
+\fi
+\endgroup
+\end{table}

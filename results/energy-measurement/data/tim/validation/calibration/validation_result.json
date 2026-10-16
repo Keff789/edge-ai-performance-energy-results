@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "workbook_sha256": "1f4c154806426dd2db193ce4cff7b7c7b88b8c778954cdf9058f44c498bf1e16",
+  "ods_content_xml_sha256": "4adaea65b4aeaf77fdde510dea4200677d0c3cfabd8a01b2c7ea1a732d97bdc8",
+  "verification_points_checked": 72,
+  "nonzero_target_points_per_current_path": 35,
+  "relative_error_definition": "100 * (corrected_current_A - reference_current_A) / reference_current_A",
+  "zero_target_policy": "Preserve both commanded-zero points; exclude the first verification point of each path from percentage aggregates despite its 0.002-A reference reading.",
+  "statistics": {
+    "INA225": {
+      "n_excluding_zero_target": 35,
+      "median_signed_pct": -0.037667387119925795,
+      "mean_signed_pct": -0.18920488453109022,
+      "mean_absolute_pct": 0.19391426808873696,
+      "maximum_absolute_pct": 1.977118158659774,
+      "mean_absolute_error_A": 0.000937568610832972,
+      "gain_retained": 1.99000512058047,
+      "offset_retained_in_pre_gain_units": 0.0004272598504,
+      "source_median_formula": "of:=MEDIAN([.F44:.F78])",
+      "zero_target_row": 43,
+      "zero_target_reference_reading_A": 0.002
+    },
+    "firmware": {
+      "n_excluding_zero_target": 35,
+      "median_signed_pct": -0.04652194645717858,
+      "mean_signed_pct": -0.05053127865505385,
+      "mean_absolute_pct": 0.06014055492156171,
+      "maximum_absolute_pct": 0.4390009779838347,
+      "mean_absolute_error_A": 0.0008205055078535282,
+      "gain_retained": 0.997224237630222,
+      "offset_retained_in_pre_gain_units": 0.004704622,
+      "source_median_formula": "of:=MEDIAN([.G45:.G79])",
+      "zero_target_row": 44,
+      "zero_target_reference_reading_A": 0.002
+    }
+  },
+  "new_fits": 0,
+  "raw_waveform_reads": 0,
+  "network_reads": 0,
+  "limits": "Arithmetic/source validation of an archived static current verification; not a calibration certificate, complete power-uncertainty budget or dynamic measurement validation."
+}

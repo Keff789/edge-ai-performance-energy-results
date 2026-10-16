@@ -1,0 +1,37 @@
+{
+  "collector_generated_utc": "2026-10-04T05:02:59.150194+00:00",
+  "summary_locator": "SUMMARY.json $.host_scans[1]",
+  "host": "twix",
+  "limits_reached": [
+    "field_limit",
+    "text_byte_limit"
+  ],
+  "text_bytes_read": 100663296,
+  "fields": 50000,
+  "historical_completeness_claim": false,
+  "selected_issues": [
+    {
+      "locator": "data/scan_issues.csv line 56",
+      "host": "twix",
+      "code": "text_file_too_large",
+      "path": "external-analysis/edge_ai_multi_workload_v1/common_reference/per_run_common_reference.csv",
+      "detail": "8986170 bytes; cap=8388608"
+    },
+    {
+      "locator": "data/scan_issues.csv line 135",
+      "host": "twix",
+      "code": "field_limit",
+      "path": "",
+      "detail": "Scan limit reached; absence of findings is not proof of absence."
+    },
+    {
+      "locator": "data/scan_issues.csv line 216",
+      "host": "twix",
+      "code": "text_byte_limit",
+      "path": "",
+      "detail": "Scan limit reached; absence of findings is not proof of absence."
+    }
+  ],
+  "collector_code_sha256": "a30e1fe6e4630eb4897d99de9e849411e488c1b4fe53817d846feaab92e11e9a",
+  "collector_code_sha256_locator": "COLLECTOR_IDENTITY.json $.sha256"
+}

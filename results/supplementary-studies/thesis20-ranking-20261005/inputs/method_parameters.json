@@ -1,0 +1,136 @@
+{
+  "ranking_validation": {
+    "enabled": true,
+    "holdout_unit": "model_direction_runner",
+    "candidate_universe": "deterministic_audit",
+    "audit_size": 20,
+    "minimum_valid_audit_candidates": 10,
+    "audit_seed": 20260710,
+    "require_frozen_predictions": false,
+    "require_complete_candidate_universe": false,
+    "k_values": [
+      1,
+      3,
+      5
+    ],
+    "elite_q_values": [
+      1,
+      3
+    ],
+    "primary_k": 5,
+    "minimum_candidates_for_correlation": 3,
+    "near_optimal_relative_epsilon": 0.01,
+    "bootstrap_repetitions": 500,
+    "bootstrap_seed": 20260710,
+    "targets": [
+      "pipeline_cycle_ms"
+    ],
+    "methods": [
+      "cut_bytes_only",
+      "weighted_score",
+      "cycle_time_no_handover",
+      "cycle_time_with_handover",
+      "onnx_real_boundary_hardware_aware"
+    ],
+    "weighted_score": {
+      "w_comm": 1.0,
+      "w_imb": 3.0,
+      "w_tensors": 0.2,
+      "log_comm": true
+    },
+    "cycle_time_no_handover": {
+      "backend_throughput_gops": {},
+      "stage_time_models": {}
+    },
+    "cycle_time_with_handover": {
+      "backend_throughput_gops": {},
+      "stage_time_models": {},
+      "handover_models": {
+        "generic": {},
+        "native_fifo": {}
+      }
+    }
+  },
+  "source_role": "BASE",
+  "source_files": [
+    "profile.yaml",
+    "profile_source.yaml"
+  ],
+  "profile_source_sha256": "594315287e765583446df10bbfcd91746e37343ef8912215f4b5500dbf9293a3",
+  "profile_resolved_sha256": "cfe3d05da9e5f3a8f4f498f69574ef4f45d11dc9fb87da808d78e620c56cd413",
+  "ranking_model_bundle_configured": false,
+  "system_spec_by_model": {
+    "mobilenet_v3_large": null,
+    "regnet_x_1_6gf": null,
+    "resnet50": null,
+    "yolo11l": null,
+    "yolo26m": null,
+    "yolo26s": null,
+    "yolov7_paper": null
+  },
+  "candidate_provenance": [
+    {
+      "model_id": "mobilenet_v3_large",
+      "source_path": "models/mobilenet_v3_large/analysis/candidate_ranking.json",
+      "source_sha256": "6a51e08b3c25231a968c0d2fa4ab82b2148ceca1ec8c3ea7913df2d61f3d9b6a",
+      "source_artifact_id": "candidate_ranking_mobilenet_v3_large_a246ba480ba1",
+      "source_list_length": 138,
+      "system_spec_source": "models/mobilenet_v3_large/benchmark_set/legacy_benchmark_set.json",
+      "system_spec_available": false
+    },
+    {
+      "model_id": "regnet_x_1_6gf",
+      "source_path": "models/regnet_x_1_6gf/analysis/candidate_ranking.json",
+      "source_sha256": "6ebbe05bd3189ee4e3823fbc6fcc561b0cdd740fd5987662c0d12ab0d3feb7bf",
+      "source_artifact_id": "candidate_ranking_regnet_x_1_6gf_02e02315bb76",
+      "source_list_length": 133,
+      "system_spec_source": "models/regnet_x_1_6gf/benchmark_set/legacy_benchmark_set.json",
+      "system_spec_available": false
+    },
+    {
+      "model_id": "resnet50",
+      "source_path": "models/resnet50/analysis/candidate_ranking.json",
+      "source_sha256": "ad8300277a6ff6c273ea98d5d54d8b2cca21953e5f658e507baf89f56a098277",
+      "source_artifact_id": "candidate_ranking_resnet50_c5f82fba22df",
+      "source_list_length": 120,
+      "system_spec_source": "models/resnet50/benchmark_set/legacy_benchmark_set.json",
+      "system_spec_available": false
+    },
+    {
+      "model_id": "yolo11l",
+      "source_path": "models/yolo11l/analysis/candidate_ranking.json",
+      "source_sha256": "838c7484ef42eeab5d1c3dc00d320df66f81a0720ad57c35452cfd4b7abd942e",
+      "source_artifact_id": "candidate_ranking_yolo11l_a11d26c92c1d",
+      "source_list_length": 615,
+      "system_spec_source": "models/yolo11l/benchmark_set/legacy_benchmark_set.json",
+      "system_spec_available": false
+    },
+    {
+      "model_id": "yolo26m",
+      "source_path": "models/yolo26m/analysis/candidate_ranking.json",
+      "source_sha256": "19070b18cbe20deb1c3a2c7f83684a229c7cfcb3fae9ac59110808dc5dcc41a6",
+      "source_artifact_id": "candidate_ranking_yolo26m_9b133555e934",
+      "source_list_length": 416,
+      "system_spec_source": "models/yolo26m/benchmark_set/legacy_benchmark_set.json",
+      "system_spec_available": false
+    },
+    {
+      "model_id": "yolo26s",
+      "source_path": "models/yolo26s/analysis/candidate_ranking.json",
+      "source_sha256": "f2a246111455dc990f6e12543dacfd1df0fc73bdac904246775d36a0bd533271",
+      "source_artifact_id": "candidate_ranking_yolo26s_956a4a22360a",
+      "source_list_length": 382,
+      "system_spec_source": "models/yolo26s/benchmark_set/legacy_benchmark_set.json",
+      "system_spec_available": false
+    },
+    {
+      "model_id": "yolov7_paper",
+      "source_path": "models/yolov7_paper/analysis/candidate_ranking.json",
+      "source_sha256": "474991a6094c64e48c8dc1b62bfd9849c5338417a6b95cf6186efdb89185fff6",
+      "source_artifact_id": "candidate_ranking_yolov7_paper_39a616d0a29e",
+      "source_list_length": 307,
+      "system_spec_source": "models/yolov7_paper/benchmark_set/legacy_benchmark_set.json",
+      "system_spec_available": false
+    }
+  ]
+}

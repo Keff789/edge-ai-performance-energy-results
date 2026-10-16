@@ -1,0 +1,6 @@
+case,p2_rate_per_s,completed_rate_per_s,validation_images,validated_count,validation_status,endpoint,evidence_level,source_table
+YOLOv7 Hailo-8/TRT b066,95.902,95.889,32,32,exact,pipeline completed detections,reported manuscript summary,02_split_reproduction.tex:tab:native-three-stage-validation-v279
+YOLO26s Hailo-8/TRT b038,152.702,152.698,32,32,exact,pipeline completed detections,reported manuscript summary,02_split_reproduction.tex:tab:native-three-stage-validation-v279
+YOLO11l full ORT replay,,,16,16,pass,adapter verification only,reported manuscript summary,02_split_reproduction.tex:tab:native-three-stage-validation-v279
+Hailo-10H YOLO26s producer,,34.66,,300,completed work units,producer completion only,reported manuscript summary,02_split_reproduction.tex:tab:native-three-stage-validation-v279
+DEEPX YOLO26s producer,,40.49,,300,completed work units,producer completion only,reported manuscript summary,02_split_reproduction.tex:tab:native-three-stage-validation-v279

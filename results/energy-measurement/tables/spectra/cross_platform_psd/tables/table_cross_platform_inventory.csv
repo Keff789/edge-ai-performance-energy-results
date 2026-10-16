@@ -1,0 +1,5 @@
+platform,workload,window,n,duration_s,precision,measurement_boundary,status
+Hailo-10,Hailo-10 / gemm,full_record,15,102.0,unspecified,unspecified,exploratory_not_model_or_boundary_matched
+Hailo-10,Hailo-10 / gemm,matched_prefix,15,10.0,unspecified,unspecified,exploratory_not_model_or_boundary_matched
+Hailo-10,Hailo-10 / yolo,full_record,15,103.0,unspecified,unspecified,exploratory_not_model_or_boundary_matched
+Hailo-10,Hailo-10 / yolo,matched_prefix,15,10.0,unspecified,unspecified,exploratory_not_model_or_boundary_matched

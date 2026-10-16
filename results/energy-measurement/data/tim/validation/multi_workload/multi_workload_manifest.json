@@ -1,0 +1,444 @@
+{
+  "config": {
+    "analysis_template_config": "external-workspace/common_reference_psd_tool_v0.8.2/config_gemm_fp16.yaml",
+    "common_reference": {
+      "analysis_rate_sps": 1000000,
+      "cache_dtype": "float32",
+      "edge_margin_s": 0.0,
+      "enabled": true,
+      "guard_seconds": 0.5,
+      "highlighted_rate_sps": 2000,
+      "minimum_samples_per_window": 4,
+      "reconstruction_modes": [
+        "anti_alias",
+        "phase_only"
+      ],
+      "source_rate_sps": 5000000,
+      "sources": [
+        "tek",
+        "pico"
+      ],
+      "target_rates_sps": [
+        50,
+        85,
+        150,
+        240,
+        400,
+        680,
+        1200,
+        2000,
+        2500,
+        3300,
+        5500,
+        9400,
+        16000,
+        25000,
+        45000,
+        80000,
+        100000,
+        125000,
+        160000
+      ],
+      "thresholds_pct": [
+        0.1,
+        0.5,
+        1.0,
+        2.0,
+        5.0
+      ],
+      "window_durations_s": [
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.5,
+        1.0,
+        2.0,
+        5.0,
+        10.0
+      ],
+      "windows_per_duration": 16
+    },
+    "direct_validation": {
+      "enabled": true,
+      "maximum_rate_sps": 5000000,
+      "use_normalised_power": true
+    },
+    "output_root": "external-analysis/edge_ai_multi_workload_v1",
+    "paper": {
+      "generate_bundles": true,
+      "generate_macros": true,
+      "generate_pdf": true,
+      "generate_png": true,
+      "generate_tables": true,
+      "plot_max_points": 50000
+    },
+    "psd": {
+      "bands": [
+        [
+          "0\u2013100 Hz",
+          0.0,
+          100.0
+        ],
+        [
+          "100 Hz\u20131 kHz",
+          100.0,
+          1000.0
+        ],
+        [
+          "1\u201310 kHz",
+          1000.0,
+          10000.0
+        ],
+        [
+          "10\u201377 kHz",
+          10000.0,
+          77000.0
+        ],
+        [
+          "77\u2013500 kHz",
+          77000.0,
+          500000.0
+        ],
+        [
+          "500 kHz\u20132.5 MHz",
+          500000.0,
+          2500000.0
+        ]
+      ],
+      "comparison_rate_sps": 5000000,
+      "cumulative_percentiles": [
+        0.5,
+        0.9,
+        0.95,
+        0.99
+      ],
+      "dominant_peak_count": 8,
+      "enabled": true,
+      "fine_structure_enabled": true,
+      "fine_structure_windows": [
+        [
+          "0\u20131 kHz",
+          0.0,
+          1000.0
+        ],
+        [
+          "1\u20138 kHz",
+          1000.0,
+          8000.0
+        ],
+        [
+          "8\u201316 kHz",
+          8000.0,
+          16000.0
+        ],
+        [
+          "25\u201335 kHz",
+          25000.0,
+          35000.0
+        ],
+        [
+          "300\u2013700 kHz",
+          300000.0,
+          700000.0
+        ]
+      ],
+      "high_rate_coverage_threshold_hz": 2500000.0,
+      "idle_load_amplification_threshold_db": 3.0,
+      "idle_load_comparison_enabled": true,
+      "idle_load_only_threshold_db": 6.0,
+      "idle_load_ratio_bins_per_decade": 24,
+      "idle_peak_match_bins": 3,
+      "idle_record_policy": "full_record_per_run_equal_weight",
+      "log_frequency_derivative_enabled": true,
+      "maximum_peak_frequency_hz": 2500000.0,
+      "minimum_pairs": 5,
+      "minimum_peak_frequency_hz": 1.0,
+      "spectrogram_enabled": true,
+      "spectrogram_run_policy": "representative"
+    },
+    "workloads": [
+      {
+        "enabled": "auto",
+        "family": "GEMM",
+        "include_in_paper": true,
+        "label": "GEMM-FP32",
+        "notes": "Automatically discovered paired Tektronix/PicoScope campaign.",
+        "precision": "FP32",
+        "scope_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_gemmfp32.yaml",
+        "workload_id": "gemmfp32"
+      },
+      {
+        "enabled": "auto",
+        "family": "GEMM",
+        "include_in_paper": true,
+        "label": "GEMM-INT8",
+        "notes": "Automatically discovered paired Tektronix/PicoScope campaign.",
+        "precision": "INT8",
+        "scope_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_gemmint8.yaml",
+        "workload_id": "gemmint8"
+      },
+      {
+        "enabled": "auto",
+        "family": "YOLO",
+        "include_in_paper": true,
+        "label": "YOLO-FP32",
+        "notes": "Automatically discovered paired Tektronix/PicoScope campaign.",
+        "precision": "FP32",
+        "scope_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_yolofp32.yaml",
+        "workload_id": "yolofp32"
+      },
+      {
+        "enabled": "auto",
+        "family": "YOLO",
+        "include_in_paper": true,
+        "label": "YOLO-INT8",
+        "notes": "Automatically discovered paired Tektronix/PicoScope campaign.",
+        "precision": "INT8",
+        "scope_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_yoloint8.yaml",
+        "workload_id": "yoloint8"
+      },
+      {
+        "enabled": "auto",
+        "family": "Gemma3-4B",
+        "include_in_paper": true,
+        "label": "Gemma3-4B",
+        "notes": "Automatically discovered paired Tektronix/PicoScope campaign.",
+        "precision": "unspecified",
+        "scope_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_gemma3-4b.yaml",
+        "workload_id": "gemma3-4b"
+      },
+      {
+        "enabled": "auto",
+        "family": "ResNet-50",
+        "include_in_paper": true,
+        "label": "ResNet-50 FP32",
+        "notes": "Automatically discovered paired Tektronix/PicoScope campaign.",
+        "precision": "FP32",
+        "scope_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_resnet50.yaml",
+        "workload_id": "resnet50"
+      }
+    ]
+  },
+  "config_path": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_multi_workload_auto.yaml",
+  "created_utc": "2026-08-28T13:34:20.563875+00:00",
+  "method_contract": {
+    "active_idle_comparison": "Every exact-rate idle record is analysed at its full physical duration using the same Welch policy as active records. One PSD per physical idle run enters an equal-weight cross-run median. Active/idle overlap and excess are descriptive independent-record comparisons, not phase-coherent source separation.",
+    "common_reference": "Lower rates are reconstructed from each physical 5-MS/s record after VHQ conversion to the validated 1-MS/s analysis representation; rates are never treated as separate runs in this stage.",
+    "cross_workload_psd": "All workloads are compared at the same native 5-MS/s Tektronix rate using active-minus-exact-rate-external-idle current and estimated-power spectra.",
+    "direct_validation": "Directly acquired rate sweeps remain separate physical executions and are compared only as a validation of the real measurement system, not as common-reference samples."
+  },
+  "package_versions": {
+    "matplotlib": "3.8.4",
+    "numpy": "1.26.4",
+    "pyarrow": "17.0.0",
+    "python": "3.10.12",
+    "pyyaml": "6.0.2",
+    "scipy": "1.13.1",
+    "soxr": "1.1.0"
+  },
+  "schema_version": 2,
+  "scope_outputs": [
+    {
+      "family": "GEMM",
+      "label": "GEMM-FP32",
+      "precision": "FP32",
+      "scope_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_gemmfp32.yaml",
+      "scope_manifest": "external-analysis/tek_scope_comparison_gemmfp32_v1/scope_comparison_manifest.json",
+      "scope_manifest_sha256": "70071ee237bbe245424f5efc9c23628f79cd45ea5240e07f1a3f5dd35500b2f0",
+      "scope_output_root": "external-analysis/tek_scope_comparison_gemmfp32_v1",
+      "workload_id": "gemmfp32"
+    },
+    {
+      "family": "GEMM",
+      "label": "GEMM-INT8",
+      "precision": "INT8",
+      "scope_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_gemmint8.yaml",
+      "scope_manifest": "external-analysis/tek_scope_comparison_gemmint8_v1/scope_comparison_manifest.json",
+      "scope_manifest_sha256": "b6b6a419426df16c2da3a3f226303ca7f1dc508158fbbaff789e1f07aa2b1450",
+      "scope_output_root": "external-analysis/tek_scope_comparison_gemmint8_v1",
+      "workload_id": "gemmint8"
+    },
+    {
+      "family": "YOLO",
+      "label": "YOLO-FP32",
+      "precision": "FP32",
+      "scope_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_yolofp32.yaml",
+      "scope_manifest": "external-analysis/tek_scope_comparison_yolofp32_v1/scope_comparison_manifest.json",
+      "scope_manifest_sha256": "489b8588e55030ff0b5376c136a8c540485bf322c9dbeacc600b63dbfc78615f",
+      "scope_output_root": "external-analysis/tek_scope_comparison_yolofp32_v1",
+      "workload_id": "yolofp32"
+    },
+    {
+      "family": "YOLO",
+      "label": "YOLO-INT8",
+      "precision": "INT8",
+      "scope_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_yoloint8.yaml",
+      "scope_manifest": "external-analysis/tek_scope_comparison_yoloint8_v1/scope_comparison_manifest.json",
+      "scope_manifest_sha256": "65c0896d115238caf85924876fee0fda299f8045551d301d379845cb7e902e1a",
+      "scope_output_root": "external-analysis/tek_scope_comparison_yoloint8_v1",
+      "workload_id": "yoloint8"
+    },
+    {
+      "family": "Gemma3-4B",
+      "label": "Gemma3-4B",
+      "precision": "unspecified",
+      "scope_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_gemma3-4b.yaml",
+      "scope_manifest": "external-analysis/tek_scope_comparison_gemma3_4b_v1/scope_comparison_manifest.json",
+      "scope_manifest_sha256": "7fd0f6b6d9b83065c930ec7264385c4899393bf7456d5c710e53cd5ed5bc011e",
+      "scope_output_root": "external-analysis/tek_scope_comparison_gemma3_4b_v1",
+      "workload_id": "gemma3-4b"
+    },
+    {
+      "family": "ResNet-50",
+      "label": "ResNet-50 FP32",
+      "precision": "FP32",
+      "scope_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_resnet50.yaml",
+      "scope_manifest": "external-analysis/tek_scope_comparison_resnet50_v1/scope_comparison_manifest.json",
+      "scope_manifest_sha256": "e01f01e4f0dcfcdd14e920cff3c3de68dadbda24fc5a1c4e0099a970789f70b0",
+      "scope_output_root": "external-analysis/tek_scope_comparison_resnet50_v1",
+      "workload_id": "resnet50"
+    }
+  ],
+  "tool_version": "0.8.2",
+  "workload_inventory": [
+    {
+      "common_psd_rate_sps": 5000000,
+      "common_rate_valid_pairs": 10,
+      "common_reference_rate_sps": 5000000,
+      "common_reference_ready": true,
+      "configured_enabled": "auto",
+      "dataset_root": "external-measurements/tek_scope_comparison/gemmfp32",
+      "enabled": true,
+      "include_in_paper": true,
+      "notes": "Automatically discovered paired Tektronix/PicoScope campaign.",
+      "psd_ready": true,
+      "reason": "",
+      "scope_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_gemmfp32.yaml",
+      "scope_config_status": "available",
+      "scope_output_root": "external-analysis/tek_scope_comparison_gemmfp32_v1",
+      "scope_summary_available": true,
+      "status": "ready",
+      "workload_family": "GEMM",
+      "workload_id": "gemmfp32",
+      "workload_label": "GEMM-FP32",
+      "workload_precision": "FP32",
+      "zero_offset_status": "disabled"
+    },
+    {
+      "common_psd_rate_sps": 5000000,
+      "common_rate_valid_pairs": 10,
+      "common_reference_rate_sps": 5000000,
+      "common_reference_ready": true,
+      "configured_enabled": "auto",
+      "dataset_root": "external-measurements/tek_scope_comparison/gemmint8",
+      "enabled": true,
+      "include_in_paper": true,
+      "notes": "Automatically discovered paired Tektronix/PicoScope campaign.",
+      "psd_ready": true,
+      "reason": "",
+      "scope_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_gemmint8.yaml",
+      "scope_config_status": "available",
+      "scope_output_root": "external-analysis/tek_scope_comparison_gemmint8_v1",
+      "scope_summary_available": true,
+      "status": "ready",
+      "workload_family": "GEMM",
+      "workload_id": "gemmint8",
+      "workload_label": "GEMM-INT8",
+      "workload_precision": "INT8",
+      "zero_offset_status": "no_material_offset_detected"
+    },
+    {
+      "common_psd_rate_sps": 5000000,
+      "common_rate_valid_pairs": 10,
+      "common_reference_rate_sps": 5000000,
+      "common_reference_ready": true,
+      "configured_enabled": "auto",
+      "dataset_root": "external-measurements/tek_scope_comparison/yolofp32",
+      "enabled": true,
+      "include_in_paper": true,
+      "notes": "Automatically discovered paired Tektronix/PicoScope campaign.",
+      "psd_ready": true,
+      "reason": "",
+      "scope_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_yolofp32.yaml",
+      "scope_config_status": "available",
+      "scope_output_root": "external-analysis/tek_scope_comparison_yolofp32_v1",
+      "scope_summary_available": true,
+      "status": "ready",
+      "workload_family": "YOLO",
+      "workload_id": "yolofp32",
+      "workload_label": "YOLO-FP32",
+      "workload_precision": "FP32",
+      "zero_offset_status": "stable_offset_detected_and_corrected"
+    },
+    {
+      "common_psd_rate_sps": 5000000,
+      "common_rate_valid_pairs": 10,
+      "common_reference_rate_sps": 5000000,
+      "common_reference_ready": true,
+      "configured_enabled": "auto",
+      "dataset_root": "external-measurements/tek_scope_comparison/yoloint8",
+      "enabled": true,
+      "include_in_paper": true,
+      "notes": "Automatically discovered paired Tektronix/PicoScope campaign.",
+      "psd_ready": true,
+      "reason": "",
+      "scope_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_yoloint8.yaml",
+      "scope_config_status": "available",
+      "scope_output_root": "external-analysis/tek_scope_comparison_yoloint8_v1",
+      "scope_summary_available": true,
+      "status": "ready",
+      "workload_family": "YOLO",
+      "workload_id": "yoloint8",
+      "workload_label": "YOLO-INT8",
+      "workload_precision": "INT8",
+      "zero_offset_status": "no_material_offset_detected"
+    },
+    {
+      "common_psd_rate_sps": 5000000,
+      "common_rate_valid_pairs": 10,
+      "common_reference_rate_sps": 5000000,
+      "common_reference_ready": true,
+      "configured_enabled": "auto",
+      "dataset_root": "external-measurements/tek_scope_comparison/gemma3-4b",
+      "enabled": true,
+      "include_in_paper": true,
+      "notes": "Automatically discovered paired Tektronix/PicoScope campaign.",
+      "psd_ready": true,
+      "reason": "",
+      "scope_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_gemma3-4b.yaml",
+      "scope_config_status": "available",
+      "scope_output_root": "external-analysis/tek_scope_comparison_gemma3_4b_v1",
+      "scope_summary_available": true,
+      "status": "ready",
+      "workload_family": "Gemma3-4B",
+      "workload_id": "gemma3-4b",
+      "workload_label": "Gemma3-4B",
+      "workload_precision": "unspecified",
+      "zero_offset_status": "no_material_offset_detected"
+    },
+    {
+      "common_psd_rate_sps": 5000000,
+      "common_rate_valid_pairs": 9,
+      "common_reference_rate_sps": 5000000,
+      "common_reference_ready": true,
+      "configured_enabled": "auto",
+      "dataset_root": "external-measurements/tek_scope_comparison/resnet50",
+      "enabled": true,
+      "include_in_paper": true,
+      "notes": "Automatically discovered paired Tektronix/PicoScope campaign.",
+      "psd_ready": true,
+      "reason": "",
+      "scope_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_resnet50.yaml",
+      "scope_config_status": "available",
+      "scope_output_root": "external-analysis/tek_scope_comparison_resnet50_v1",
+      "scope_summary_available": true,
+      "status": "ready",
+      "workload_family": "ResNet-50",
+      "workload_id": "resnet50",
+      "workload_label": "ResNet-50 FP32",
+      "workload_precision": "FP32",
+      "zero_offset_status": "no_material_offset_detected"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+% Standalone result module; no complete dissertation has been edited.
+% Set \StageCostBundlePath to the shared study directory relative to the TeX working directory.
+\providecommand{\StageCostBundlePath}{../../../results/supplementary-studies/stage-cost-composition}
+\section{Independent stage costs explain throughput}
+\label{sec:evaluation:stage_cost_composition_20261014}
+
+A pipeline cost model has two distinct tasks: estimating the work of each stage and combining those estimates into a completion rate. This experiment isolates the second task. The prefix and consumer are measured separately, then their capacities are used to predict the throughput of a separately executed joint pipeline. No full-model scaling, pipeline-derived stage time or fitted residual enters the prediction \cite{mika2026stageCostComposition}.
+
+The four recipes cover two ResNet50 cuts on DeepX and two RegNetX-1.6GF cuts on Hailo-10H, each followed by TensorRT. Prefix completion means that the host boundary tensor is ready, including mapping or extraction. Consumer completion includes staging, host--device transfers, TensorRT execution, synchronisation and classification completion. Each recipe uses its own fixed prepared input and an independently executed serial reference. Three physical blocks contain one isolated prefix run, one isolated consumer run and one joint run apiece.
+
+For block $r$, the independent capacities give
+\begin{equation}
+ \widehat F_{\mathrm{PC},r}=\min\{F_{\mathrm P,r},F_{\mathrm C,r}\},
+ \qquad
+ \widehat c_{\mathrm{PC},r}=\max\{1000/F_{\mathrm P,r},1000/F_{\mathrm C,r}\}.
+ \label{eq:evaluation:stage_cost_oracle_20261014}
+\end{equation}
+Here $F$ is completions per second and $c$ is milliseconds per completion, not single-request latency. All modes use the same fixed central window: $8000/(t_{9000}-t_{1000})$ from the 1-based observed completion order. Each process performs 100 drained warm-up requests followed by 10000 measured completions. The joint runtime retains batch one and FIFO depth three; the configured producer limits are one for DeepX and eight for Hailo-10H.
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=\linewidth]{\StageCostBundlePath/figures/stage_costs.pdf}
+ \caption{Median effective intervals over three blocks per recipe: isolated prefix (P), isolated consumer (C) and joint pipeline (PC). The larger independent stage interval closely describes PC. Regenerated from the evaluated blockwise capacities \cite{mika2026stageCostComposition}.}
+ \label{fig:evaluation:independent_stage_costs_20261014}
+\end{figure}
+
+The model follows both observed cut orderings. For DeepX, the prefix limits both recipes: b002 supplies approximately 473 boundary tensors per second, compared with 230 for b045. Its slower consumer still has more capacity than its prefix. On Hailo-10H, the two prefixes remain near 1570 outputs per second, while the consumer improves from approximately 500 to 2000 completions per second. Moving from b059 to b123 therefore changes the limiting stage in the cost model from the consumer to the prefix (Figure~\ref{fig:evaluation:independent_stage_costs_20261014}).
+
+\input{\StageCostBundlePath/tables/stage_cost_table.tex}
+
+Across the four recipes, median absolute errors range from \num{2.24}\% to \num{5.50}\%; all twelve block errors lie below the preselected practical \num{10}\% band. The largest is \num{8.80}\%. Every prediction is slightly optimistic. Copies and classification completion are already present in the stage measurements, so the remaining difference is a composition residual rather than a separately measured transfer cost.
+
+These results support the bottleneck composition on the tested recipes, not universal independence of their physical resources. The isolated consumer replays four prepared boundary buffers, whereas the joint pipeline receives fresh producer allocations. Shared memory, CPU, DMA and thermal effects can therefore contribute to the residual. Repeating one input per recipe establishes numerical parity for that input, not dataset accuracy or arbitrary multi-input ordering. The four selected cuts are also not four independent model architectures.
+
+The CNNParted-related finding is limited to composing independent stage capacities on these recipes. It does not reproduce or validate CNNParted, Timeloop or Accelergy cost estimators, search procedures or energy models. Predicting capacities from inexpensive graph or compiler information remains a separate task. The experiment demonstrates neither a generalising ranker nor saved measurements or an energy improvement.

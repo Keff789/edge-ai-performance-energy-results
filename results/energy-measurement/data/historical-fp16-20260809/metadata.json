@@ -1,0 +1,160 @@
+{
+  "created_utc": "2026-08-09T15:39:10.717241+00:00",
+  "primary_runs": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "reference_rate_sps": 5000000,
+  "analogue_bandwidth_hz": 77000.0,
+  "psd": {
+    "active_duration_s": 10.0,
+    "analysis_rate_sps": 1000000,
+    "cumulative_percentiles": [
+      0.95,
+      0.99
+    ],
+    "full_frequency_nyquist_rates_sps": [
+      2000,
+      125000,
+      160000
+    ],
+    "highlighted_rates_sps": [
+      2000,
+      125000,
+      160000
+    ],
+    "idle_duration_s": 4.0,
+    "idle_gap_s": 0.5,
+    "low_frequency_nyquist_rates_sps": [
+      150,
+      400,
+      2000
+    ],
+    "overlap_fraction": 0.5,
+    "peak_count": 10,
+    "peak_max_frequency_hz": 10000.0,
+    "plot_max_points": 50000,
+    "segment_duration_s": 1.0,
+    "sensitivity_check_rates_sps": [
+      125000,
+      160000
+    ],
+    "sensitivity_rates_sps": [
+      250000
+    ],
+    "sensitivity_relative_frequency_tolerance": 0.02,
+    "sensitivity_variance_fraction_tolerance": 0.01,
+    "variance_bands": [
+      {
+        "high_hz": 75.0,
+        "label": "0\u201375 Hz",
+        "low_hz": 0.0
+      },
+      {
+        "high_hz": 200.0,
+        "label": "75\u2013200 Hz",
+        "low_hz": 75.0
+      },
+      {
+        "high_hz": 1000.0,
+        "label": "200 Hz\u20131 kHz",
+        "low_hz": 200.0
+      },
+      {
+        "high_hz": 5000.0,
+        "label": "1\u20135 kHz",
+        "low_hz": 1000.0
+      },
+      {
+        "high_hz": 10000.0,
+        "label": "5\u201310 kHz",
+        "low_hz": 5000.0
+      },
+      {
+        "high_hz": 20000.0,
+        "label": "10\u201320 kHz",
+        "low_hz": 10000.0
+      },
+      {
+        "high_hz": 40000.0,
+        "label": "20\u201340 kHz",
+        "low_hz": 20000.0
+      },
+      {
+        "high_hz": 77000.0,
+        "label": "40\u201377 kHz",
+        "low_hz": 40000.0
+      },
+      {
+        "high_hz": 125000.0,
+        "label": "77\u2013125 kHz",
+        "low_hz": 77000.0
+      },
+      {
+        "high_hz": 250000.0,
+        "label": "125\u2013250 kHz",
+        "low_hz": 125000.0
+      },
+      {
+        "high_hz": 500000.0,
+        "label": "250\u2013500 kHz",
+        "low_hz": 250000.0
+      }
+    ],
+    "variance_capture_rates_sps": [
+      50,
+      85,
+      150,
+      240,
+      400,
+      680,
+      1200,
+      2000,
+      3300,
+      5500,
+      9400,
+      16000,
+      27000,
+      45000,
+      80000,
+      125000,
+      160000,
+      250000,
+      400000,
+      625000,
+      800000,
+      1000000,
+      1250000,
+      2000000,
+      2500000,
+      4000000,
+      5000000
+    ],
+    "variance_capture_thresholds": [
+      0.95,
+      0.99
+    ]
+  },
+  "methodological_scope": "Archived oscilloscope.npy files contain calibrated power values. The tool therefore characterises sampling requirements of the derived power signal, not the complete separate voltage/current acquisition chain.",
+  "high_rate_extension_scope": "Nominal common-trace rates above the configured extension source are bandwidth-saturated anchors. The configured extension source has a Nyquist frequency above the configured analogue bandwidth, so those points add no measured analogue bandwidth and are not independent high-rate phase sweeps.",
+  "source_output": "gemm_fp16_common_reference_psd_v3",
+  "source_plotter": "common_reference_psd_tool_v0.9.0/commonref/plotting.py",
+  "data_role": "Historical exported per-case/per-run outcomes; PSD curves are selected exact bins of the previously aggregated 13-run spectrum, not raw waveform data.",
+  "spectrum_points_original": 500001,
+  "spectrum_points_retained": 38088,
+  "frequency_hz": "frequency in Hz; nonuniform selected original bins",
+  "power_psd_unit": "W^2/Hz (plots use 10 log10 relative to 1 W^2/Hz)",
+  "cumulative_definition": "Per-run max(active PSD - idle PSD, 0), trapezoid-integrated on the full grid and normalized before across-run median/q10/q90. Do not reintegrate the sparse plot samples.",
+  "sample_selection": "Original _spectral_plot_indices with 50000-point limit, union every 0\u20135000-Hz bin and both original bins around the median cumulative 0.95/0.99 crossings."
+}

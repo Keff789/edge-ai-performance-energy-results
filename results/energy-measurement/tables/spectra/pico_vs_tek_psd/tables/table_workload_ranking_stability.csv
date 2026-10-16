@@ -1,0 +1,9 @@
+signal,metric,n_workloads,spearman_rho,tek_order_low_to_high,pico_order_low_to_high,status
+current,f50,6,0.942857142857143,"GEMM-FP32, Gemma3-4B, ResNet-50 FP32, YOLO-INT8, YOLO-FP32, GEMM-INT8","GEMM-FP32, Gemma3-4B, YOLO-INT8, ResNet-50 FP32, YOLO-FP32, GEMM-INT8",descriptive_small_sample_no_generalisation
+current,f90,6,-0.2571428571428572,"YOLO-INT8, GEMM-FP32, YOLO-FP32, ResNet-50 FP32, Gemma3-4B, GEMM-INT8","Gemma3-4B, GEMM-FP32, ResNet-50 FP32, YOLO-FP32, GEMM-INT8, YOLO-INT8",descriptive_small_sample_no_generalisation
+current,f95,6,-0.028571428571428574,"YOLO-INT8, ResNet-50 FP32, YOLO-FP32, Gemma3-4B, GEMM-FP32, GEMM-INT8","Gemma3-4B, GEMM-FP32, ResNet-50 FP32, YOLO-FP32, YOLO-INT8, GEMM-INT8",descriptive_small_sample_no_generalisation
+current,f99,6,1.0,"GEMM-FP32, YOLO-INT8, ResNet-50 FP32, YOLO-FP32, Gemma3-4B, GEMM-INT8","GEMM-FP32, YOLO-INT8, ResNet-50 FP32, YOLO-FP32, Gemma3-4B, GEMM-INT8",descriptive_small_sample_no_generalisation
+power,f50,6,0.942857142857143,"GEMM-FP32, Gemma3-4B, ResNet-50 FP32, YOLO-INT8, YOLO-FP32, GEMM-INT8","GEMM-FP32, Gemma3-4B, YOLO-INT8, ResNet-50 FP32, YOLO-FP32, GEMM-INT8",descriptive_small_sample_no_generalisation
+power,f90,6,-0.2571428571428572,"YOLO-INT8, GEMM-FP32, YOLO-FP32, ResNet-50 FP32, Gemma3-4B, GEMM-INT8","Gemma3-4B, GEMM-FP32, ResNet-50 FP32, YOLO-FP32, GEMM-INT8, YOLO-INT8",descriptive_small_sample_no_generalisation
+power,f95,6,-0.028571428571428574,"YOLO-INT8, ResNet-50 FP32, YOLO-FP32, Gemma3-4B, GEMM-FP32, GEMM-INT8","Gemma3-4B, GEMM-FP32, ResNet-50 FP32, YOLO-FP32, YOLO-INT8, GEMM-INT8",descriptive_small_sample_no_generalisation
+power,f99,6,1.0,"GEMM-FP32, YOLO-INT8, ResNet-50 FP32, YOLO-FP32, Gemma3-4B, GEMM-INT8","GEMM-FP32, YOLO-INT8, ResNet-50 FP32, YOLO-FP32, Gemma3-4B, GEMM-INT8",descriptive_small_sample_no_generalisation

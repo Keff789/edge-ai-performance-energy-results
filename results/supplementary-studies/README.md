@@ -1,0 +1,17 @@
+# Supplementary studies
+
+These completed studies retain their original populations and dates. Their observations are separate from the current [Refresh16 split results](../split-inference/README.md).
+
+| Study | Population and scope |
+|---|---|
+| [Independent stage-cost composition, 14 October 2026](stage-cost-composition/README.md) | Four ResNet50/DeepX and RegNetX/Hailo-10H cuts; 36 performance processes, twelve independent-stage Oracle/pipeline comparisons |
+| [Split selection and energy cost, 5 October 2026](thesis20-ranking-20261005/README.md) | 204 historical THESIS20 candidates in 21 exact groups; frozen graph selectors and measured Generic rankings predict the observed Native best |
+| [MLSys split selection, 7 October 2026](mlsys-selection-20261007/README.md) | R10 reported Native overlay, 21 ranking groups, split/Full trade-offs, quality/long-window sensitivities, vendor feasibility and graph inventory |
+| [Dissertation development studies](dissertation-development-2026/README.md) | Six-stratum ranking/proxy aggregates, decoder/B500/compiler tables and the seven-row Imagenette deployment matrix |
+| [Hailo-8 HAR comparison, 12 September 2026](hailo8-har-20260912/README.md) | Six processing stages on 16 previously examined MobileNet images; a bounded numerical diagnosis |
+| [Native endpoint reconstruction](native-endpoint-reconstruction/README.md) | Archived serial completion, one-image smoke, 32-image decoder and pipeline canaries, plus reported endpoint/adapter tables |
+| [YOLOv7 completion and stage costs, 7 October 2026](yolov7-completion-20261007/README.md) | Controlled H10-b066 software diagnosis, nine historical split configurations and six Full alternatives; finite oracle evidence |
+
+The ranking study is post hoc. The HAR comparison is development diagnostics. The YOLOv7 profile isolates a bounded software change; its short instrumented windows are separate from the final throughput repeats. These studies do not establish a held-out predictor, a general causal hardware effect or final additional GPU validation.
+
+The stage-cost study reports median blockwise errors of 2.24–5.50%; all twelve Oracle predictions are optimistic and within the predeclared 10% band. Explore its [stage-capacity figure](stage-cost-composition/figures/stage_costs.png), [prediction/observation figure](stage-cost-composition/figures/prediction_observation.png), [four-case table](stage-cost-composition/tables/STAGE_COST_SUMMARY.md), [methods](stage-cost-composition/METHODS.md) and [tested offline command](stage-cost-composition/README.md#offline-reproduction). It tests composition of measured capacities, with no fitted predictor or new energy result.

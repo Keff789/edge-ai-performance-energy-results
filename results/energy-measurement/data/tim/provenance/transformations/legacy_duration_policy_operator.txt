@@ -1,0 +1,55 @@
+COLLECTED SOURCE EXCERPT, INERT DATA
+source_id: 0193c32203190d186f9f
+source_path: external-analysis/common_reference_psd_tool_v0.8.2/commonref/legacy_duration.py
+collector_recorded_whole_file_sha256: 2d3a9fe514f556b06d84f992e38a82c7910a7780cf35bd7b20656e6dca48a976
+This file is a curated excerpt, not the whole source and not historical execution proof.
+
+
+--- original lines 302-348 ---
+302:                 }
+303:             )
+304:     return raw, skipped
+305: 
+306: 
+307: def _method_summaries(
+308:     raw: list[dict[str, Any]],
+309:     correction_factor: float,
+310:     values_already_include_correction_factor: bool,
+311: ) -> list[dict[str, Any]]:
+312:     expanded = list(raw)
+313:     # The archived duration results already contain the setup-specific 0.97
+314:     # correction in the current dataset.  Applying it again would create an
+315:     # artificial ~3% bias.  Retain the optional branch only for genuinely
+316:     # uncorrected legacy trees.
+317:     if not values_already_include_correction_factor:
+318:         for row in raw:
+319:             if row["method"] == "u.RECS":
+320:                 corrected = dict(row)
+321:                 corrected["variant"] = "factor_corrected"
+322:                 corrected["energy_j"] = float(row["energy_j"]) * correction_factor
+323:                 corrected["mean_power_w"] = float(row["mean_power_w"]) * correction_factor
+324:                 expanded.append(corrected)
+325: 
+326:     groups: dict[tuple[str, float, str, str], list[float]] = defaultdict(list)
+327:     for row in expanded:
+328:         groups[
+329:             (
+330:                 str(row["workload"]),
+331:                 float(row["requested_duration_s"]),
+332:                 str(row["method"]),
+333:                 str(row["variant"]),
+334:             )
+335:         ].append(float(row["mean_power_w"]))
+336: 
+337:     result: list[dict[str, Any]] = []
+338:     for (workload, duration, method, variant), values in sorted(groups.items()):
+339:         stats = _summary(values)
+340:         result.append(
+341:             {
+342:                 "workload": workload,
+343:                 "requested_duration_s": duration,
+344:                 "method": method,
+345:                 "variant": variant,
+346:                 "n": stats["n"],
+347:                 "mean_power_w_mean": stats["mean"],
+348:                 "mean_power_w_median": stats["median"],

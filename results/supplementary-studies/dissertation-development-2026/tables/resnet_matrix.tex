@@ -1,0 +1,33 @@
+\begin{table}[H]
+\centering
+\footnotesize
+\TableSetup
+\caption{ResNet50/Imagenette development matrix retained from the supplied source. Values are fractions and observations of the listed execution paths, not an ImageNet benchmark or a B500 comparison.}
+\label{tab:evaluation:resnet50_matrix_validated}
+\begin{tabularx}{\linewidth}{@{}YR{1.1cm}R{1.1cm}R{2.3cm}R{2.4cm}@{}}
+\toprule
+\textbf{Execution path} & \textbf{Top-1} & \textbf{Top-5} & \textbf{Latency [ms]} & \textbf{Throughput [FPS]} \\
+\midrule
+TensorRT full & \num{0.82} & \num{0.96} & \num{7.5}--\num{7.8} & \num{129}--\num{134} \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} valid canonical full baseline.}\\
+\addlinespace[0.35em]
+DEEPX DX-M1 full & \num{0.84} & \num{0.94} & \num{3.2} & \num{310.9} \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} valid full-backend repeated-feed path.}\\
+\addlinespace[0.35em]
+DEEPX DX-M1$\rightarrow$TensorRT & \num{0.76}--\num{0.78} & \num{0.94} & \num{20.3}--\num{23.5} & \num{62.5}--\num{72.9} \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} Generic Runner development row.}\\
+\addlinespace[0.35em]
+Hailo-8 full/composed & \num{0.82}--\num{0.84} & \num{0.96} & \num{12}--\num{13} & -- \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} valid with quantised-interface warning.}\\
+\addlinespace[0.35em]
+Hailo-8$\rightarrow$TensorRT & \num{0.82} & \num{0.96} & \num{9}--\num{10} & -- \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} valid with interface warning.}\\
+\addlinespace[0.35em]
+TensorRT$\rightarrow$Hailo-8 & \num{0.82} & \num{0.96} & \num{8}--\num{9} & -- \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} valid activation-proxy-calibrated Stage 2.}\\
+\addlinespace[0.35em]
+TensorRT$\rightarrow$DEEPX DX-M1 & split-dep. & split-dep. & -- & -- \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} buildable and accepted only after a multi-sample contract probe.}\\
+\bottomrule
+\end{tabularx}
+\end{table}

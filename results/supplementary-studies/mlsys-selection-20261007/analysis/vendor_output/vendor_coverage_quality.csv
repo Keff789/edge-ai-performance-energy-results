@@ -1,0 +1,5 @@
+setup,quality_backend,base_planned_splits,base_generic_completed,base_build_failed,base_policy_excluded,native_runner_multi_input_exclusions,generic_completed_but_native_multi_input_excluded,native_base_completed,native_added_completed,native_reference_close,native_accuracy_loss,quality_split_results,quality_base_split_results,quality_added_split_results,quality_split_reference_close,quality_split_accuracy_loss,unique_full_quality_results,full_reference_close,full_accuracy_loss
+H8,hailo8,140,108,20,12,76,44,64,4,59,9,112,108,4,95,17,7,2,5
+H10,hailo10h,140,111,17,12,76,47,64,4,60,8,115,111,4,103,12,7,3,4
+DeepX,deepx,140,140,0,0,76,76,64,4,68,0,144,140,4,143,1,7,7,0
+TensorRT control,tensorrt,140,140,0,0,0,0,0,0,0,0,140,140,0,140,0,21,21,0

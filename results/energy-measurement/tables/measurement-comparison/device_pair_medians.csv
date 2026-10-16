@@ -1,0 +1,22 @@
+slug,workload,sensor,sensor_name,n,paired_median_pct,row_order,sensor_order
+gemm_fp32,GEMM-FP32,firmware,u.RECS,15,0.1159047827247183,0,0
+gemm_fp32,GEMM-FP32,jetson,INA3221 telemetry,15,-1.0754496824621484,0,1
+gemm_fp32,GEMM-FP32,shelly,Shelly (scaled AC),15,-2.8827606008198448,0,2
+gemm_fp16,GEMM-FP16,firmware,u.RECS,15,0.2010462219848907,1,0
+gemm_fp16,GEMM-FP16,jetson,INA3221 telemetry,15,-0.99892354656137,1,1
+gemm_fp16,GEMM-FP16,shelly,Shelly (scaled AC),15,-2.3203519532305705,1,2
+gemm_int8,GEMM-INT8,firmware,u.RECS,15,0.3818517577137692,2,0
+gemm_int8,GEMM-INT8,jetson,INA3221 telemetry,15,-1.2675723156313825,2,1
+gemm_int8,GEMM-INT8,shelly,Shelly (scaled AC),15,-3.209312423136945,2,2
+yolo_fp32,YOLO-FP32,firmware,u.RECS,15,-0.1476803971500184,3,0
+yolo_fp32,YOLO-FP32,jetson,INA3221 telemetry,15,-1.1388798485195806,3,1
+yolo_fp32,YOLO-FP32,shelly,Shelly (scaled AC),15,-4.475860146370447,3,2
+yolo_fp16,YOLO-FP16,firmware,u.RECS,15,-0.2003227160366938,4,0
+yolo_fp16,YOLO-FP16,jetson,INA3221 telemetry,15,-1.1499469295853992,4,1
+yolo_fp16,YOLO-FP16,shelly,Shelly (scaled AC),15,-4.243138924290202,4,2
+yolo_int8,YOLO-INT8,firmware,u.RECS,15,-0.4254531053075938,5,0
+yolo_int8,YOLO-INT8,jetson,INA3221 telemetry,15,-1.5181857950561928,5,1
+yolo_int8,YOLO-INT8,shelly,Shelly (scaled AC),15,-6.243771069111526,5,2
+random_pattern_yolo,Variable YOLO,firmware,u.RECS,15,2.9411477841320366,6,0
+random_pattern_yolo,Variable YOLO,jetson,INA3221 telemetry,15,-1.555169855055616,6,1
+random_pattern_yolo,Variable YOLO,shelly,Shelly (scaled AC),15,-5.7412744042828585,6,2

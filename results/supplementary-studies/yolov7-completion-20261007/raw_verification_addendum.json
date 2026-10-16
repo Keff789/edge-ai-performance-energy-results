@@ -1,0 +1,49 @@
+{
+  "schema": "yolov7-native-completion/raw-verification-addendum-v1",
+  "verified_at": "2026-10-07T08:50:14.253799+00:00",
+  "archive_filename": "YOLOV7_SPLITS_ORIN_REVIEW_20261006_234549_focused.zip",
+  "archive_sha256": "5d7336396d7d4536e5fd8b6cb0c77dd734b847dc9056765809b772d1685bef9f",
+  "status": "PASS_WITH_EXPLICIT_SCOPE",
+  "payload_files_sha256_verified": 6281,
+  "new_split_process_repeats": 27,
+  "reused_full_process_repeats": 18,
+  "separate_full_control_processes": 3,
+  "configurations": 15,
+  "quality_sources": 2,
+  "common_endpoints": 1,
+  "new_hardware_measurements_for_this_verification": 0,
+  "historical_archive_modified": false,
+  "data_deletion_performed": false,
+  "checks": [
+    {
+      "checker": "VERIFY_ARCHIVE.py",
+      "checker_sha256": "c19d94b31cf88edff6fb7241c87cd16bfdef1dc36007a72a79b521553a57c0f0",
+      "started": "2026-10-07T08:49:54.752738+00:00",
+      "completed": "2026-10-07T08:50:02.631739+00:00",
+      "exit_code": 0,
+      "stdout": "PASS 6281 SHA256-bound payload files; no external repository or hardware required"
+    },
+    {
+      "checker": "verify_paper_archive.py",
+      "checker_sha256": "98c42ace84abbcb94f1ea333c74f8707975389c33c5bc38145e3b78c5ae37989",
+      "started": "2026-10-07T08:50:02.631959+00:00",
+      "completed": "2026-10-07T08:50:13.254551+00:00",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"PASS\", \"manifest_files\": 6281, \"new_split_repeats\": 27, \"reused_full_repeats\": 18, \"configurations\": 15, \"quality_sources\": 2, \"common_endpoints\": 1, \"recovered_original_runs\": 1, \"energy_state_files_byte_verified\": 3, \"historical_energy_zip_verification\": \"unchanged SHA attested by FINAL_VERIFICATION; historical ZIP bytes intentionally not nested or independently reread\", \"hardware_used\": false, \"external_files_required\": false}"
+    },
+    {
+      "checker": "03_archive_controls_sources.py",
+      "checker_sha256": "a8383e7e59d10854c73682e83a21cbdb78a6e0e0aeb301acc9991b19942fd228",
+      "started": "2026-10-07T08:50:13.254797+00:00",
+      "completed": "2026-10-07T08:50:14.253799+00:00",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"PASS_ARCHIVED_CONTROL_AND_SOURCE_BYTES\", \"split_cases\": 9, \"unique_split_candidate_source_files\": 625, \"full_cases\": 6, \"full_control_count\": 3, \"cohort\": {\"new_split_process_repeats\": 27, \"reused_full_process_repeats\": 18, \"separate_full_control_processes\": 3}, \"hardware_accessed\": false}"
+    }
+  ],
+  "limits": [
+    "This verifies the supplied review ZIP and its bound raw/source/quality evidence, not every byte of the separate historical campaign archive.",
+    "The historical energy ZIP was not nested or independently reread by these checkers; its old digest is only attested in FINAL_VERIFICATION.",
+    "Finite saved output comparisons do not establish per-frame equality or a new full-dataset quality evaluation.",
+    "No matching energy values were measured for the October6 runtime by this read-only verification."
+  ]
+}

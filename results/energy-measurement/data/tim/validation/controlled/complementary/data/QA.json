@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "source_archives": {
+    "v1.0.1": {
+      "archive": "baseline_20261001_065752Z_c8a3cc42_review_20261001_072601Z_47c45cae.zip",
+      "archive_bytes": 1376013,
+      "archive_sha256": "ac8e7ceffad42a1bb6a9fdea86a69d825c17695368c29a00548017a4ad1f3187",
+      "manifest_files_checked": 117,
+      "version": "1.0.1",
+      "rates": [2000, 5000000, 5000000, 2000, 2000, 5000000],
+      "query_count": 250,
+      "pause_s": 120.0,
+      "engine_sha256": "67a0a0bd8b956220929f27c45e699051117ece58e5833ee7f732f8233e05859b",
+      "trtexec_sha256": "b800990508793a9bf50713d78d4fedfe475381d8cd749abda80909b9197fa1c4",
+      "collector_sha256": "5f67698d4503e8c0412f6352b9614de0c9fdb0e15d719772ebfe690d7a42f93b",
+      "power_calculations_sha256": "4f8f6a03281254f09e15480d14b73104411e87e95c06e5a3cdf913a6493a93b3",
+      "boot_id": "6497b351-012b-4197-a38c-61934f790027",
+      "analysis_path": "analysis_20261001_072422Z_3680e4"
+    },
+    "v1.0.2": {
+      "archive": "baseline_20261001_092218Z_c608e9a6_review_20261001_095028Z_4ad2b6eb.zip",
+      "archive_bytes": 1367767,
+      "archive_sha256": "038d2249a559a81693b97e22bf1cf22f33a57e98fea06f3477e1630c8db2e2db",
+      "manifest_files_checked": 117,
+      "version": "1.0.2",
+      "rates": [5000000, 2000, 2000, 5000000, 5000000, 2000],
+      "query_count": 250,
+      "pause_s": 120.0,
+      "engine_sha256": "67a0a0bd8b956220929f27c45e699051117ece58e5833ee7f732f8233e05859b",
+      "trtexec_sha256": "b800990508793a9bf50713d78d4fedfe475381d8cd749abda80909b9197fa1c4",
+      "collector_sha256": "5f67698d4503e8c0412f6352b9614de0c9fdb0e15d719772ebfe690d7a42f93b",
+      "power_calculations_sha256": "4f8f6a03281254f09e15480d14b73104411e87e95c06e5a3cdf913a6493a93b3",
+      "boot_id": "6497b351-012b-4197-a38c-61934f790027",
+      "analysis_path": "analysis_20261001_094847Z_a3a361"
+    }
+  },
+  "manifest_files_checked_total": 234,
+  "completed_measured_runs": 12,
+  "rates_per_session": {
+    "v1.0.1": [2000, 5000000, 5000000, 2000, 2000, 5000000],
+    "v1.0.2": [5000000, 2000, 2000, 5000000, 5000000, 2000]
+  },
+  "complementary_at_every_position": true,
+  "identical_engine_sha256": "67a0a0bd8b956220929f27c45e699051117ece58e5833ee7f732f8233e05859b",
+  "identical_trtexec_sha256": "b800990508793a9bf50713d78d4fedfe475381d8cd749abda80909b9197fa1c4",
+  "identical_collector_sha256": "5f67698d4503e8c0412f6352b9614de0c9fdb0e15d719772ebfe690d7a42f93b",
+  "identical_power_calculations_sha256": "4f8f6a03281254f09e15480d14b73104411e87e95c06e5a3cdf913a6493a93b3",
+  "same_jetson_boot_id": "6497b351-012b-4197-a38c-61934f790027",
+  "limits": [
+    "Two sessions and six positions; diagnostic design, not a population-level uncertainty budget.",
+    "The additive estimate assumes a common position effect plus a session offset; session-by-position interactions remain residual variation.",
+    "Pico and VDD windows are not hardware synchronized and have different measurement boundaries.",
+    "The INA225NVGPU/nvgpu scaling was unchanged but is not an independent electrical validation of the current Jetson setup.",
+    "No offset, gain, drift, time or magnitude correction was applied to source results."
+  ]
+}

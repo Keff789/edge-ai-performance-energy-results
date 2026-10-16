@@ -1,0 +1,7 @@
+# Split-inference data
+
+[PAPER_DATASET.csv](PAPER_DATASET.csv) and [JSON](PAPER_DATASET.json) contain all 450 deployments. [METRIC_SOURCES.csv](METRIC_SOURCES.csv) and [MEASUREMENT_GENERATIONS.csv](MEASUREMENT_GENERATIONS.csv) retain the existing per-metric provenance; their source strings identify records in the original archive, not files promised in this repository. [summary.json](summary.json) gives machine-readable findings.
+
+`inputs/` holds one copy of the compact selected observations, repeats, work contracts and source-limit metadata needed for reproduction and the independent checker. Its existing input manifest binds the retained compact files. The active `deepx_native_a4_20261015` cohort contains exactly 68 DeepX Native splits and seven DeepX Native Fulls with 225 selected performance repeats and 225 valid calibrated A4 energy repeats. All other 375 direct observations and all 450 original dataset-quality selections are preserved. The preservation input `baseline_cases.json` retains the 375 other direct rows and only identity and original quality-selection metadata for the 75 replacement targets; it contains no old target performance, energy or runtime variant and no historical repeat copies.
+
+Per-metric source and runtime fields distinguish the A4 replacements, accepted reuse and retained historical observations. A4 means batch 1, one engine and at most four outstanding DeepX jobs; splits use FIFO3 and a serial TensorRT/task consumer. No raw trace, private canonical archive, hardware runner or SDK is needed for offline analysis.

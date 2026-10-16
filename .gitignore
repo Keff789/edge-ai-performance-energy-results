@@ -1,0 +1,27 @@
+# Local environments, caches and generated checks
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.mplconfig/
+.cache/
+build/
+dist/
+*.egg-info/
+/local-checks/
+/local-output/
+
+# Credentials and machine-local settings
+.env
+.env.*
+!.env.example
+.aws/
+.ssh/
+*.pem
+*.key
+credentials.json
+.DS_Store

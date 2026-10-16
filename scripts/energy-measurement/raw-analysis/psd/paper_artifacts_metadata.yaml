@@ -1,0 +1,125 @@
+schema_version: 4
+paper_id: parma_ditam_2027
+manuscript_version: analysis_artifacts_v0.6.3
+artifact_output_subdir: paper_artifacts
+
+figure_captions:
+  sampling_rate_method:
+    label: fig:rate-method
+    caption: >-
+      Common-reference-trace analysis. The same calibrated 5-MS/s power recording
+      and 104-s interval are used for both reconstructions. In the unfiltered
+      branch, only the timing of the first low-rate sample is shifted within one
+      sampling period; this grid offset is not the electrical voltage-current
+      phase. A separate PSD branch determines spectral rate requirements.
+  measurement_setup_heterogeneous:
+    label: fig:setup
+    caption: >-
+      Measurement boundaries in the final study. The Jetson SoC and M.2
+      accelerator are measured through dedicated u.RECS paths. The external
+      reference is inserted at the selected DC boundary; wall and vendor
+      measurements remain complementary rather than interchangeable.
+  common_trace_results_paper:
+    label: fig:common-trace-results
+    caption: >-
+      GEMM-FP16 energy error. (a) Independently acquired executions include
+      run-to-run and acquisition effects and retain the several-percent rate
+      trend. (b) Same-run reconstruction isolates sampling. For the orange curve,
+      the low-rate grid is shifted within one sampling period while the target
+      rate remains fixed; this is a timing offset, not an electrical phase. The
+      blue curve first applies a target-rate low-pass and is a controlled best
+      case. Q0.95 and shaded regions pool runs and grid offsets.
+  psd_variance_results_paper:
+    label: fig:psd-results
+    caption: >-
+      Spectral result for the common GEMM-FP16 traces. (a) Pointwise median PSD
+      across mean-centred GEMM-active windows and mean-centred idle windows
+      recorded before GEMM. The curves show fluctuation strength by frequency,
+      not average power. (b) Fraction of the positive active-minus-idle excess
+      variance below each rate's Nyquist frequency. A rate can preserve long-run
+      energy while retaining little transient information.
+  energy_rate_duration_sufficiency_paper:
+    label: fig:duration-rate-sufficiency
+    caption: >-
+      Duration-dependent sampling requirement for exact sub-windows of the same
+      stationary GEMM-FP16 recordings. (a) At the 2-kS/s u.RECS operating rate,
+      the error increases as the integration window shortens; lines and bands
+      summarize per-run q95 grid/window errors across 13 physical runs. (b)
+      Minimum tested rate bounds for selected energy-error tolerances without a
+      target-rate low-pass. These curves isolate sampling and grid offset. The
+      separate 5--600-s campaign additionally contains benchmark start/stop,
+      threshold-window, fixed-overhead, and sensor-averaging effects.
+  duration_protocol_context_paper:
+    label: fig:duration-protocol-context
+    caption: >-
+      Benchmark-duration convergence in the independent 5--600-s campaign.
+      (a) Difference between the 5-s and 600-s mean-power results. (b) First
+      tested command duration whose mean lies within 3 percent of the 600-s
+      result. These values include workload start/stop, fixed-overhead,
+      timeout, and automatic-boundary effects and are therefore distinct from
+      the sampling-only rate-duration analysis.
+
+measurement_setup:
+  title: Heterogeneous u.RECS measurement setup
+  ac_meter: "AC wall meter\nwhole-system boundary"
+  supply: "Laboratory supply\nDC input"
+  urecs: "u.RECS power subsystem\nslot shunts + ADC"
+  jetson: "Jetson host module\nSoC boundary"
+  jetson_group: integrated SoC
+  hailo: "M.2 Hailo accelerator\ndedicated slot rail"
+  reference: "External high-rate reference\nselected DC rail"
+  host: "Acquisition host\ncontrol and analysis"
+
+static_tables:
+  measurement_paths:
+    label: tab:meters
+    caption: >-
+      Measurement paths and their role in the workshop study. The Hailo row
+      describes the fixed 2-kS/s validation plan; numerical results remain pending.
+    environment: tabularx
+    column_spec: "@{}L{2.5cm}L{2.3cm}L{1.6cm}Y@{}"
+    headers: [Path, Boundary, Acquired rate, Role and relevant temporal behaviour]
+    rows:
+      - ["PicoScope + external INA225", "selected DC input", "50~S/s--5~MS/s", "High-rate reference; current bandwidth about 77~kHz."]
+      - ["\\urecs{} firmware", "Jetson or M.2 slot rail", "2~kS/s", "Automated 2-kS/s Jetson-slot current path using the validated current-dependent voltage model; multi-rail current/voltage acquisition is planned for the revised firmware."]
+      - ["Jetson INA3221", "selected on-board rails", "about 1~kS/s new values", "Vendor telemetry with strong internal averaging."]
+      - ["Shelly Plus Plug S", "AC wall input", "about 1~S/s", "Whole-system plausibility measurement with a broader boundary."]
+      - ["Hailo campaign", "M.2 rail, host rail, combined", "2~kS/s plus reference", "Continuous and burst-oriented inference; validates the selected operating point rather than deriving $f_{\\min}$."]
+
+  jetson_rate_sweep:
+    label: tab:rate-results
+    caption: >-
+      Completed Jetson rate sweep. ``Between-rate'' is not yet the common-trace
+      error; it is the largest deviation of a rate mean from the mean of all rate
+      medians.
+    environment: tabular
+    column_spec: "@{}lrrl@{}"
+    headers: [Workload, Max. within-rate std., Max. between-rate dev., Repeatability plateau]
+    rows:
+      - ["GEMM-TF32", "0.36\\%", "0.55\\%", "2.0~kS/s"]
+      - ["GEMM-FP16", "0.40\\%", "3.50\\%", "no clear plateau"]
+      - ["GEMM-INT8", "0.35\\%", "2.60\\%", "about 2.0~kS/s"]
+      - ["YOLO-FP32", "0.36\\%", "1.40\\%", "2.0~kS/s"]
+      - ["YOLO-FP16", "0.54\\%", "0.40\\%", "about 1.2~kS/s"]
+      - ["YOLO-INT8", "0.52\\%", "0.44\\%", "about 1.2~kS/s"]
+      - ["Gemma~3 12B", "0.32\\%", "2.50\\%", "about 3.3~kS/s"]
+      - ["Variable YOLO", "0.65\\%", "2.20\\%", "2.0~kS/s"]
+
+  duration_campaign:
+    label: tab:duration
+    caption: >-
+      Range of relative differences from the PicoScope setup in the completed
+      duration campaign. Boundaries differ, so these values combine sensor
+      behaviour with real power outside the narrower path.
+    environment: tabularx
+    column_spec: "@{}L{2.6cm}L{2.3cm}L{2.3cm}Y@{}"
+    headers: [Method, Difference at 5~s, Difference at 600~s, Interpretation]
+    rows:
+      - ["\\urecs{} stored processed values", "about $\\pm0.5$\\%", "about $\\pm0.5$\\%", "The stored duration-campaign values already include the setup-specific 0.97 correction; the factor is not applied again during artifact generation."]
+      - ["Jetson INA3221", "$-4.34$ to $-1.50$\\%", "$-1.46$ to $-0.80$\\%", "On-board boundary and strong averaging; short windows increase the difference."]
+      - ["Shelly Plus Plug S", "$-7.77$ to $-3.68$\\%", "$-6.02$ to $-1.90$\\%", "AC boundary, supply losses, coarse output, and difficult boundary correction."]
+
+dynamic_tables:
+  common_trace_rates_sps: [50, 150, 2000]
+  variance_rates_sps: [2000, 125000, 160000]
+  duration_window_s: [0.1, 0.5, 1, 5, 10, 20, 50, 100, 104]

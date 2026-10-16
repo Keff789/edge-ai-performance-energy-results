@@ -1,0 +1,19 @@
+Setup,Duration [s],"Worst-case $f_{min,E}$ for 1\%",Limiting workload(s),Coverage
+PicoScope/INA225 setup,0.020,80 kS/s,"yolofp32,yoloint8",6/6
+PicoScope/INA225 setup,0.050,80 kS/s,gemma3-4b,6/6
+PicoScope/INA225 setup,0.100,25 kS/s,yoloint8,6/6
+PicoScope/INA225 setup,0.200,16 kS/s,resnet50,6/6
+PicoScope/INA225 setup,0.500,16 kS/s,resnet50,6/6
+PicoScope/INA225 setup,1.000,16 kS/s,resnet50,6/6
+PicoScope/INA225 setup,2.000,2 kS/s,yoloint8,6/6
+PicoScope/INA225 setup,5.000,680 S/s,"gemmfp32,yoloint8",6/6
+PicoScope/INA225 setup,10.000,680 S/s,gemmfp32,6/6
+Tektronix setup,0.020,160 kS/s,"gemmfp32,yoloint8",6/6
+Tektronix setup,0.050,80 kS/s,"gemma3-4b,yoloint8",6/6
+Tektronix setup,0.100,80 kS/s,gemma3-4b,6/6
+Tektronix setup,0.200,80 kS/s,gemma3-4b,6/6
+Tektronix setup,0.500,16 kS/s,resnet50,6/6
+Tektronix setup,1.000,16 kS/s,resnet50,6/6
+Tektronix setup,2.000,2 kS/s,"yolofp32,yoloint8",6/6
+Tektronix setup,5.000,680 S/s,"gemmfp32,yolofp32,yoloint8",6/6
+Tektronix setup,10.000,680 S/s,gemmfp32,6/6

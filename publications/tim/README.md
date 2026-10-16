@@ -1,0 +1,9 @@
+# IEEE TIM
+
+Explore [reconstruction](../../results/energy-measurement/galleries/reconstruction.md), [Jetson spectra](../../results/energy-measurement/galleries/spectra-jetson.md), [Hailo spectra](../../results/energy-measurement/galleries/spectra-hailo.md), [measurement comparisons](../../results/energy-measurement/galleries/measurement-comparison.md), [complete direct sweeps](../../results/energy-measurement/galleries/direct-sweeps.md) and [protocol controls](../../results/energy-measurement/galleries/protocol-controls.md). These groups include supplementary and limited results beyond a main-paper selection.
+
+The available TIM source is the v0.3 working package. Its reference limitations and outstanding GPU evidence remain explicit in the result area. No acceptance status, DOI or journal publication is asserted.
+
+The [historical FP16 spectral study](../../results/energy-measurement/galleries/historical-fp16.md) supplies reproducible active/idle PSD, cumulative variance and dense energy/coverage curves from a separately labelled 13-run snapshot. The [window and pause findings](../../results/energy-measurement/data/protocol-controls/window-pause/FINDINGS.md) retain the protocol-confound evidence and its limits.
+
+The supplied 4 October v0.1 manuscript's `energy_spectrum.pdf` uses the earlier 13-run cohort: fixed 104-s energy intervals, ten-second active and four-second idle spectral windows. Its energy-error, active/idle PSD and coverage panels are available as the generated views and numerical tables in the historical gallery. This manuscript selection is distinct from the later all-15/matched-four-second main results. The manuscript package contains typeset values and PDF figures; the reproducible curve inputs come from the completed Common-Reference PSD Tool exports identified in the gallery.

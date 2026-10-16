@@ -1,0 +1,119 @@
+{
+  "schema": "energy-evidence-sources-v1",
+  "date": "2026-09-29",
+  "archives_in_public_git": false,
+  "sources": [
+    {
+      "id": "S01",
+      "name": "jetson_timeout100_review_20260928_082244Z_a7280c89.zip",
+      "role": "primary_review",
+      "bytes": 1149649,
+      "sha256": "9f858870d41c6a6c8346378db698e5d034ea42492317c2a74427a8c6eb1e3c9e"
+    },
+    {
+      "id": "S02",
+      "name": "jetson_iterations100_review_20260928_154623Z_051c4270.zip",
+      "role": "primary_review",
+      "bytes": 1442146,
+      "sha256": "aaf1f45c31b63bff9191b1888fc9d7fe1336921929c9c498bdff0e02b8645e65"
+    },
+    {
+      "id": "S03",
+      "name": "jetson_iterations100_prozesslogs_UjUd0fLq.tar.gz",
+      "role": "primary_logs",
+      "bytes": 268986,
+      "sha256": "3190b1f8343e2977ad2e170f9f5c6a450ee31ed727b4814d10f084d7ed9c3359"
+    },
+    {
+      "id": "S04",
+      "name": "jetson_unforced_review_20260928_175640Z_331inc_w.zip",
+      "role": "remote_reintegration",
+      "bytes": 43503,
+      "sha256": "492604f238444cf9f7a78e483b0bfd4f059984d37e8730698b674a7cada588be"
+    },
+    {
+      "id": "S05",
+      "name": "pause_20260928_195147Z_ca304a17_review_20260928_201115Z_11725b2b.zip",
+      "role": "primary_review",
+      "bytes": 938900,
+      "sha256": "d88c9881cec4b03e6d70fedb44863547253ce1368fe6de6c79539b81bf979114"
+    },
+    {
+      "id": "S06",
+      "name": "jetson_ab_review_20260928.zip",
+      "role": "derived_review",
+      "bytes": 307371,
+      "sha256": "3d56bc20f0ae959530bf0b6eba697a5df2400d9b8e8139074a8854dc69cfd007"
+    },
+    {
+      "id": "S07",
+      "name": "jetson_pause_review_20260929.zip",
+      "role": "derived_review",
+      "bytes": 564032,
+      "sha256": "d9b561ebb69236179e08547c3a798d8ef908b4171415a2cbc0e8b725253eb4e5"
+    },
+    {
+      "id": "S08",
+      "name": "jetson_ab_20260928_fix2.zip",
+      "role": "software",
+      "bytes": 252040,
+      "sha256": "2a65f2effa20118db00060f56ec2f8b76e989b97e757dbf1f553a3ffebef8faa"
+    },
+    {
+      "id": "S09",
+      "name": "jetson_pause_test_20260928_v1.zip",
+      "role": "software",
+      "bytes": 49149,
+      "sha256": "70fd7471930ff74ff9443800e6d3c596f7c9bb99428cf99f35c48e50217ae0a5"
+    },
+    {
+      "id": "S10",
+      "name": "Energy_Paper_TIM_KnowledgeBase_2026-09-29.md",
+      "role": "private_knowledgebase",
+      "bytes": 170311,
+      "sha256": "0e630de86dfc0c2fce2a26d253947770cfced51f09a92020a155b2213a0c56f9"
+    },
+    {
+      "id": "S11",
+      "name": "urecs_samplerate_audit.zip",
+      "role": "historical_audit",
+      "bytes": 52786,
+      "sha256": "6534c12160d38d933dd1298719021342e329694d23e2829cbaf93380ff768eb8"
+    },
+    {
+      "id": "S12",
+      "name": "urecs_full_review_20260921.zip",
+      "role": "historical_audit",
+      "bytes": 137730,
+      "sha256": "5af6c81a5fe39d4b65f069585d57270c0a65f9a497506195452563bc18d4beb3"
+    },
+    {
+      "id": "S13",
+      "name": "urecs_sweep_metadaten_20260921_114344_ae34c1a4.zip",
+      "role": "historical_primary",
+      "bytes": 685140,
+      "sha256": "73895d6c0728364c0d8de1d8ea7d510bc09b596b82d78939a0f0cf3c77c8a9b6"
+    },
+    {
+      "id": "S14",
+      "name": "urecs_trace_pilot_20260921_104248Z_3b24c032.zip",
+      "role": "historical_derived",
+      "bytes": 1332325,
+      "sha256": "65546af61114cafcf774ba5a09fd05eb67b94cb7fc05da7f9637997be3deea98"
+    },
+    {
+      "id": "S15",
+      "name": "urecs_trace_pilot_befunde_20260921.zip",
+      "role": "historical_review",
+      "bytes": 328867,
+      "sha256": "473ef3a34892492e04ecc79bf072f53e1b4cc5623c6fcbf8606cdad0e231fc1a"
+    },
+    {
+      "id": "S16",
+      "name": "energy_paper_bestandsauswertung_20260928.zip",
+      "role": "derived_review",
+      "bytes": 11533,
+      "sha256": "c2d2d89f70e12766bbf96ae857f71ff41c60f3a8de3de161450c53c6f224d790"
+    }
+  ]
+}

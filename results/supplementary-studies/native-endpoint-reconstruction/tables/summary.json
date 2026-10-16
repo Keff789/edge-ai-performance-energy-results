@@ -1,0 +1,78 @@
+{
+  "reproduction_level": "Selected historical report fields; no raw tensor, hardware timing or COCO re-evaluation.",
+  "serial_completion_fps": {
+    "count": 3,
+    "mean": 15.852904326574565,
+    "median": 15.872171169677971,
+    "p05": 15.795246916330989,
+    "p95": 15.89707494664576,
+    "min": 15.786699777070211,
+    "max": 15.899842032975515
+  },
+  "single_image_three_stage_raw_fps": {
+    "count": 3,
+    "mean": 97.01794174366667,
+    "median": 97.077267591,
+    "p05": 96.9124940394,
+    "p95": 97.08186135480001,
+    "min": 96.894185867,
+    "max": 97.082371773
+  },
+  "single_image_three_stage_completed_fps": {
+    "count": 3,
+    "mean": 96.99964380833335,
+    "median": 97.058748157,
+    "p05": 96.89418039760001,
+    "p95": 97.063734175,
+    "min": 96.875895091,
+    "max": 97.064288177
+  },
+  "single_image_completed_raw_ratio": {
+    "count": 3,
+    "mean": 0.999811396,
+    "median": 0.999811229,
+    "p05": 0.9998094299,
+    "p95": 0.999813479,
+    "min": 0.99980923,
+    "max": 0.999813729
+  },
+  "multi_image_decoder": {
+    "images": 32,
+    "exact_parity_images": 32,
+    "oracle_median_across_image_medians_ms": 36.23512025,
+    "fast_median_across_image_medians_ms": 1.2967422499999999,
+    "fast_p95_across_image_medians_ms": 2.48567385,
+    "fast_max_image_median_ms": 4.8987025,
+    "median_speedup": 25.90369560468516
+  },
+  "multi_image_pipeline_throughput_fps": 95.888992578,
+  "multi_image_pipeline": {
+    "raw_fps": {
+      "count": 3,
+      "mean": 96.00160751100002,
+      "median": 95.901578619,
+      "p05": 95.8969029678,
+      "p95": 96.1763322786,
+      "min": 95.896383451,
+      "max": 96.206860463
+    },
+    "completed_fps": {
+      "count": 3,
+      "mean": 95.98923298733332,
+      "median": 95.888992578,
+      "p05": 95.88529098689999,
+      "p95": 96.1633432743,
+      "min": 95.884879699,
+      "max": 96.193826685
+    },
+    "completed_raw_ratio": {
+      "count": 3,
+      "mean": 0.9998711079999999,
+      "median": 0.999868761,
+      "p05": 0.9998649467999999,
+      "p95": 0.9998789121,
+      "min": 0.999864523,
+      "max": 0.99988004
+    }
+  }
+}

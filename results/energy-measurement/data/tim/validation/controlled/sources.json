@@ -1,0 +1,45 @@
+{
+  "successful_control_review_v1_0_1": {
+    "file": "baseline_20261001_065752Z_c8a3cc42_review_20261001_072601Z_47c45cae.zip",
+    "bytes": 1376013,
+    "sha256": "ac8e7ceffad42a1bb6a9fdea86a69d825c17695368c29a00548017a4ad1f3187",
+    "manifest_files_verified": 117,
+    "raw_parquet_in_public_git": false
+  },
+  "successful_complementary_review_v1_0_2": {
+    "file": "baseline_20261001_092218Z_c608e9a6_review_20261001_095028Z_4ad2b6eb.zip",
+    "bytes": 1367767,
+    "sha256": "038d2249a559a81693b97e22bf1cf22f33a57e98fea06f3477e1630c8db2e2db",
+    "manifest_files_verified": 117,
+    "raw_parquet_in_public_git": false
+  },
+  "stopped_100_query_review": {
+    "file": "baseline_20261001_064406Z_0d74d15c_review_20261001_064519Z_a68b0490.zip",
+    "sha256": "a0f40e57839696693f8642a7b66055da9b2dfc6b705a301993bc7766f28c1aec",
+    "role": "expected stop before scored capture"
+  },
+  "fixed_window_source_review": {
+    "file": "fixed_windows_20260930_202237_6c1958_review(1).zip",
+    "bytes": 5985625,
+    "sha256": "1bb32edd9218c178d82957dcfbb09ca64354958a2de931c16e3344f70f176d7a",
+    "traces": 225,
+    "workloads": 5,
+    "rates": [2000, 250000, 5000000]
+  },
+  "combined_public_review": {
+    "file": "baseline_rate_balanced_review_20261001.zip",
+    "bytes": 591882,
+    "sha256": "89bb30d10e7812f99188c5fdbcc265080584e13813ed0325aeaf58b05bb7fd82"
+  },
+  "historical_full_review": {
+    "file": "v0.2.0_preflight_8pxojcp1_review_20260929_220252_9c06eb.zip",
+    "sha256": "d922b5e214c73214994620273ad5aa04e78bdf9d5f7580b855746dd680c8ec98"
+  },
+  "limits": [
+    "Two controlled six-run sessions are diagnostic evidence, not a population-level uncertainty budget.",
+    "Pico and VDD_IN are not hardware-synchronized and have different physical boundaries.",
+    "Collector-transformed channels are not untouched ADC codes.",
+    "Pre-window subtraction is diagnostic, not an automatic calibration correction.",
+    "No raw NPY/Parquet channels or complete private review archives are stored in public Git."
+  ]
+}

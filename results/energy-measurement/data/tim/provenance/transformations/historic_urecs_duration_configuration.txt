@@ -1,0 +1,20 @@
+COLLECTED SOURCE EXCERPT, INERT DATA
+source_id: 2233f50612a8b3086561
+source_path: external-analysis/common_reference_psd_tool_v0.8.2/config_gemm_fp16.yaml
+collector_recorded_whole_file_sha256: 89b73c928e0e6440cd46be9bc148ec802fd932f7654ec3b85be1d6efd87b3b12
+Source capability/settings only; does not prove historical/current-run execution.
+
+
+--- original lines 122-133 ---
+122:     enabled: true
+123:     root: external-measurements/durations_without_filter
+124:     expected_durations_s: [5, 10, 20, 50, 100, 200, 300, 400, 500, 600]
+125:     reference_duration_s: 600
+126:     steady_state_tolerance_pct: 3.0
+127:     urecs_correction_factor: 0.97
+128:     # The stored duration-campaign firmware energies were already produced
+129:     # after the setup-specific 0.97 correction in the historic processing
+130:     # pipeline. Never multiply these values by 0.97 a second time.
+131:     urecs_values_already_include_correction_factor: true
+132:     minimum_runs_per_cell: 5
+133:     use_thesis_fallback: true

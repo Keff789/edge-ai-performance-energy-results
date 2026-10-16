@@ -1,0 +1,211 @@
+{
+  "source_package_path": "data/validation/native_spectra/spectral_sources.json",
+  "source_sha256": "b2e810488a6221a621635c7af6ec58ca9a84551024848b027ebf0661f9fad392",
+  "source_json_locator": "$[24]",
+  "selected_original_fields": {
+    "basis": "active",
+    "key": "Jetson_Orin_NX__yolofp32__tek__current__active__existing_full_record",
+    "label": "YOLO-FP32",
+    "platform": "Jetson Orin NX",
+    "setup": "tek",
+    "signal": "current",
+    "window": "existing_full_record",
+    "workload_id": "yolofp32",
+    "metadata": {
+      "duration_source": {
+        "ctime_ns": 1787874816528706366,
+        "device": 58,
+        "inode": 86164117174,
+        "mtime_ns": 1787874816520706383,
+        "path": "external-analysis/tek_scope_comparison_yolofp32_v1/5000000Sps/scope_comparison/pair_metrics.csv",
+        "sha256": "bd37ae697351f9b919931ea8be5cd89363485696febf97d8cb56ab732eaa651d",
+        "size": 55472
+      },
+      "inputs": [
+        {
+          "ctime_ns": 1787911014977036702,
+          "device": 58,
+          "inode": 107448490466,
+          "mtime_ns": 1787911014977036702,
+          "path": "external-analysis/edge_ai_multi_workload_v1/psd/per_workload/yolofp32/cross_workload_psd_summary.npz",
+          "size": 77193776
+        },
+        {
+          "ctime_ns": 1787911015069036620,
+          "device": 58,
+          "inode": 107483696455,
+          "mtime_ns": 1787911015069036620,
+          "path": "external-analysis/edge_ai_multi_workload_v1/psd/per_workload/yolofp32/psd_metrics.json",
+          "sha256": "fa33fdb3b373dfbf9108e9434591e0afbe235829f8bb9faa99834b7fee68668f",
+          "size": 24265
+        }
+      ],
+      "measurement_boundary": "jetson_dc_module_input",
+      "origin": "existing_native_multi_workload_aggregate",
+      "physical_runs": 10,
+      "power_origin": "calibrated_current",
+      "precision": "FP32",
+      "scope_config_snapshot": {
+        "alignment": {
+          "analysis_rate_sps": 20000,
+          "apply_to_waveform_metrics": true,
+          "drift_window_s": 2.0,
+          "enabled": true,
+          "lowpass_hz": 500.0,
+          "max_lag_ms": 10.0
+        },
+        "analysis_windows": {
+          "detection_smoothing_ms": 20.0,
+          "guard_after_trigger_s": 0.0,
+          "idle_duration_s": 0.0,
+          "idle_gap_s": 0.0,
+          "minimum_active_duration_s": 0.05,
+          "mode": "full",
+          "shared_anchor_mode": "fixed_time",
+          "step_detector_diagnostics": false,
+          "stop_margin_s": 0.0,
+          "threshold_fraction": 0.3,
+          "trigger_fraction": "auto",
+          "trigger_time_by_rate_s": {},
+          "trigger_time_s": 0.0
+        },
+        "averaging_windows_ms": [
+          10.0,
+          50.0,
+          100.0
+        ],
+        "dataset": {
+          "analysis_role": "paired_scope_validation",
+          "id": "yolofp32",
+          "signal_label": "estimated power derived from calibrated current",
+          "workload_label": "YOLO-FP32"
+        },
+        "dataset_root": "external-measurements/tek_scope_comparison/yolofp32",
+        "external_idle": {
+          "dataset_root": "external-measurements/tek_scope_comparison/idle",
+          "enabled": true,
+          "matching_policy": "exact_directory_rate",
+          "maximum_idle_current_difference_ma": 50.0,
+          "minimum_pairs": 5,
+          "use_for_baseline_diagnostics": true,
+          "use_for_incremental_energy": true,
+          "use_for_psd_when_same_run_unavailable": true
+        },
+        "input_policy": {
+          "duration_tolerance_samples": 2,
+          "expected_duration_s": "auto",
+          "fail_if_no_valid_rates": true,
+          "ignore_empty_rate_directories": true,
+          "ignore_invalid_pairs": true,
+          "ignore_unpaired_runs": true,
+          "minimum_rows_per_file": 2,
+          "require_equal_sample_counts": false
+        },
+        "output_root": "external-analysis/tek_scope_comparison_yolofp32_v1",
+        "rate_directories": "auto",
+        "representative_run": 0,
+        "source_rates": {
+          "directory_rate_source": "tek",
+          "duration_tolerance_relative": 1e-05,
+          "duration_tolerance_s": 2e-06,
+          "pico_max_rate_sps": 5000000,
+          "pico_policy": "capped_directory_rate",
+          "tek_policy": "directory_rate"
+        },
+        "sources": {
+          "pico": {
+            "calibration": {
+              "gain_a_per_raw": 1.99000512058047,
+              "offset_raw": 0.0004272598504
+            },
+            "column": "current",
+            "display_name": "PicoScope + INA225",
+            "file_pattern": "usb_osc_data_{run}.parquet",
+            "raw_unit": "V_at_INA225_output"
+          },
+          "tek": {
+            "calibration": {
+              "gain_a_per_raw": 1.0,
+              "offset_raw": 0.0
+            },
+            "column": "current",
+            "display_name": "Tektronix current probe",
+            "file_pattern": "tek_hsi_{run}.parquet",
+            "raw_unit": "A"
+          }
+        },
+        "spectral": {
+          "coherence_threshold": 0.8,
+          "cumulative_percentiles": [
+            0.95,
+            0.99
+          ],
+          "enabled": true,
+          "max_analysis_rate_sps": 250000000,
+          "max_nperseg": 1048576,
+          "minimum_frequency_hz": 1.0,
+          "minimum_idle_welch_segments": 2,
+          "minimum_welch_segments": 8,
+          "overlap_fraction": 0.5,
+          "paired_validation_preferred_rate_sps": 5000000,
+          "plot_max_points": 60000,
+          "primary_reference_min_active_duration_s": 2.0,
+          "primary_reference_min_idle_duration_s": 0.5,
+          "primary_reference_min_pairs": 5,
+          "primary_reference_source": "tek",
+          "psd_ratio_tolerance_db": 3.0,
+          "segment_duration_s": 0.5,
+          "variance_capture_rates_sps": [
+            2000,
+            100000,
+            125000,
+            160000,
+            1000000,
+            5000000,
+            25000000,
+            125000000,
+            250000000
+          ]
+        },
+        "validation": {
+          "low_current_threshold_a": 0.75,
+          "median_correlation_100ms": 0.99,
+          "minimum_correlation_windows": 8,
+          "minimum_pairs": 5,
+          "q95_abs_alignment_ms": 1.0,
+          "q95_abs_charge_error_pct": 1.0,
+          "q95_abs_energy_error_pct": 1.0
+        },
+        "voltage_model": {
+          "calibration_id": "jetson_module_voltage_fit_thesis_2026",
+          "intercept_v": 19.062607082705,
+          "slope_v_per_a": -0.07444582,
+          "type": "linear_current",
+          "valid_current_range_a": [
+            0.0,
+            3.5
+          ]
+        },
+        "zero_offset_correction": {
+          "application_scope": "workload_only",
+          "apply_when_detected": true,
+          "detection_source": "workload_minus_external_idle_rate_medians",
+          "enabled": true,
+          "maximum_abs_correction_ma": 500.0,
+          "maximum_rate_median_deviation_ma": 10.0,
+          "maximum_rate_q95_span_ma": 15.0,
+          "minimum_abs_offset_ma": 50.0,
+          "minimum_reference_pairs_total": 10,
+          "minimum_reference_rates": 2,
+          "minimum_sign_consistency_fraction": 1.0,
+          "preserve_raw_metrics": true,
+          "target_source": "tek"
+        }
+      },
+      "source_rate_sps": 5000000,
+      "upstream_signature": "c0ffb15f6461ab67c5eed40045270444b5e1ac60db7e857afde9a3ecf9455cea",
+      "zero_offset_policy": "unchanged_upstream_audit; no new fit or correction",
+      "independent_accuracy_validation": false
+    }
+  }
+}

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "common-reference-psd-tool"
+version = "0.9.0"
+description = "Multi-workload common-reference energy analysis, Tektronix-primary PSD comparison, and paper artifacts for Edge-AI power measurements"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy==1.26.4",
+  "scipy==1.13.1",
+  "matplotlib==3.8.4",
+  "PyYAML==6.0.2",
+  "soxr==1.1.0",
+  "pyarrow==17.0.0",
+]
+
+[project.scripts]
+common-reference-psd = "commonref.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["commonref*"]

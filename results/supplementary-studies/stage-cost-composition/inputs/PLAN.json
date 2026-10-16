@@ -1,0 +1,687 @@
+{
+  "schema": "stage-cost-composition-plan/v1",
+  "schema_version": 1,
+  "run_id": "20261014T102852Z",
+  "task_id": "stage_cost_composition_20261014",
+  "frozen": true,
+  "frozen_at_utc": "2026-10-14T10:44:26.072737+00:00",
+  "build_allowed": false,
+  "force_rebuild": false,
+  "implementation": {
+    "id": "stage_cost_v1",
+    "runner_path": "external-archive/scripts/stage_cost_runner.py",
+    "sha256": "57ad36b083d953f3067f1ca8972709ac1cf4402a1ad42216d0ad1b9b85ad4f59"
+  },
+  "cases": [
+    {
+      "case_id": "deepx_resnet50_b045",
+      "config_id": "historical_THESIS20|resnet50|DeepX|deepx_to_trt|float32_layout_fp16|deepx_python_dx_engine_fifo|classification:classification_logits:7e81637d07062cb8ef8bad5a0db478cab1a08ede42cf1c306f0e7757a4f670e1|3|UNKNOWN|UNKNOWN|UNKNOWN",
+      "candidate_id": "b045",
+      "implementation_id": "stage_cost_v1",
+      "input_recipe_id": "saved_historical_prefix_npy:9dd6149f74cf2f9c99bdc7457eec2975292cedc38f01bf1999f85d0df7474bb8",
+      "resource_descriptor_id": "deepx_sync1_trt_serial_fifo3_batch1",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "config_path": "external-archive/inputs/cases/deepx_resnet50_b045.json",
+      "sha256": "1ce8b92563c15a76d197f9f7f95021bdb0ebf6839048e12b5b63e925922998ff",
+      "required_artifacts": [
+        {
+          "path": "external-artifacts/e8c7bfab813e0166891c28e77177acfe4f037dcb691631cee8a54b6ad71bad6b/part1.dxnn",
+          "sha256": "e8c7bfab813e0166891c28e77177acfe4f037dcb691631cee8a54b6ad71bad6b"
+        },
+        {
+          "path": "external-artifacts/dbd9f6187f0e46f82fb49ea4ffc0053e0efe6e725c9f537965b7508b30737019/part2_float32_layout_fp16.engine",
+          "sha256": "dbd9f6187f0e46f82fb49ea4ffc0053e0efe6e725c9f537965b7508b30737019"
+        },
+        {
+          "path": "external-artifacts/9dd6149f74cf2f9c99bdc7457eec2975292cedc38f01bf1999f85d0df7474bb8/deepx_selected_input.npy",
+          "sha256": "9dd6149f74cf2f9c99bdc7457eec2975292cedc38f01bf1999f85d0df7474bb8"
+        },
+        {
+          "path": "external-artifacts/e422c471ebd362def4b8ad05f566342e928cef465eb475f1dbe37c761850250c/native_trt_meta.json",
+          "sha256": "e422c471ebd362def4b8ad05f566342e928cef465eb475f1dbe37c761850250c"
+        },
+        {
+          "path": "external-artifacts/1ba8b2af40bd731495d84c8dc7ceb79d89025573b4188f3910a7ec40794082c3/native_deepx_trt_e2e_from_benchmarkset.py",
+          "sha256": "1ba8b2af40bd731495d84c8dc7ceb79d89025573b4188f3910a7ec40794082c3"
+        },
+        {
+          "path": "external-artifacts/7b523df592b8a0338b1396c105e2a380aef587010c4db7fe0dc5ee368b434758/classification.py",
+          "sha256": "7b523df592b8a0338b1396c105e2a380aef587010c4db7fe0dc5ee368b434758"
+        },
+        {
+          "path": "external-artifacts/cf5b6f0f2df2be6b827c0845d27d18c19d8de4cd1515cc49dbdbfd70412b39fa/native_hailo10_trt_e2e_from_benchmarkset.py",
+          "sha256": "cf5b6f0f2df2be6b827c0845d27d18c19d8de4cd1515cc49dbdbfd70412b39fa"
+        },
+        {
+          "path": "external-artifacts/eaf2b51da1a55a56ab335f71c68da5a973818c57d89fd76c15186ea746549127/part1_boundary_metadata.json",
+          "sha256": "eaf2b51da1a55a56ab335f71c68da5a973818c57d89fd76c15186ea746549127"
+        }
+      ],
+      "family": "DeepX / ResNet50",
+      "comparison_group": "orin_nx_deepx_m1_01",
+      "split": "b045"
+    },
+    {
+      "case_id": "deepx_resnet50_b002",
+      "config_id": "historical_THESIS20|resnet50|DeepX|deepx_to_trt|float32_layout_fp16|deepx_python_dx_engine_fifo|classification:classification_logits:7e81637d07062cb8ef8bad5a0db478cab1a08ede42cf1c306f0e7757a4f670e1|3|UNKNOWN|UNKNOWN|UNKNOWN",
+      "candidate_id": "b002",
+      "implementation_id": "stage_cost_v1",
+      "input_recipe_id": "saved_historical_prefix_npy:9dd6149f74cf2f9c99bdc7457eec2975292cedc38f01bf1999f85d0df7474bb8",
+      "resource_descriptor_id": "deepx_sync1_trt_serial_fifo3_batch1",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "config_path": "external-archive/inputs/cases/deepx_resnet50_b002.json",
+      "sha256": "d4b378c1f049b31e158301238ad6e2b7911bc6f87f6f623883cd8c55cc1ff202",
+      "required_artifacts": [
+        {
+          "path": "external-artifacts/574c394db2149e79163bf25b9522b77d87a638ad68d8acc7e5ae460e55ab484f/part1.dxnn",
+          "sha256": "574c394db2149e79163bf25b9522b77d87a638ad68d8acc7e5ae460e55ab484f"
+        },
+        {
+          "path": "external-artifacts/957af0247ccd169e2cc366bcb9806136750ae49a3333edce82c051d91c8c6f1e/part2_float32_layout_fp16.engine",
+          "sha256": "957af0247ccd169e2cc366bcb9806136750ae49a3333edce82c051d91c8c6f1e"
+        },
+        {
+          "path": "external-artifacts/9dd6149f74cf2f9c99bdc7457eec2975292cedc38f01bf1999f85d0df7474bb8/deepx_selected_input.npy",
+          "sha256": "9dd6149f74cf2f9c99bdc7457eec2975292cedc38f01bf1999f85d0df7474bb8"
+        },
+        {
+          "path": "external-artifacts/524db8c5b1bda06bbd15ead01e33e6bf463be1fee87cf751ec896826315be92c/native_trt_meta.json",
+          "sha256": "524db8c5b1bda06bbd15ead01e33e6bf463be1fee87cf751ec896826315be92c"
+        },
+        {
+          "path": "external-artifacts/1ba8b2af40bd731495d84c8dc7ceb79d89025573b4188f3910a7ec40794082c3/native_deepx_trt_e2e_from_benchmarkset.py",
+          "sha256": "1ba8b2af40bd731495d84c8dc7ceb79d89025573b4188f3910a7ec40794082c3"
+        },
+        {
+          "path": "external-artifacts/7b523df592b8a0338b1396c105e2a380aef587010c4db7fe0dc5ee368b434758/classification.py",
+          "sha256": "7b523df592b8a0338b1396c105e2a380aef587010c4db7fe0dc5ee368b434758"
+        },
+        {
+          "path": "external-artifacts/cf5b6f0f2df2be6b827c0845d27d18c19d8de4cd1515cc49dbdbfd70412b39fa/native_hailo10_trt_e2e_from_benchmarkset.py",
+          "sha256": "cf5b6f0f2df2be6b827c0845d27d18c19d8de4cd1515cc49dbdbfd70412b39fa"
+        },
+        {
+          "path": "external-artifacts/1116c0c4af64d4c9477c7c039262e384e25febd63a37dbec80107fa46e5aafb1/part1_boundary_metadata.json",
+          "sha256": "1116c0c4af64d4c9477c7c039262e384e25febd63a37dbec80107fa46e5aafb1"
+        }
+      ],
+      "family": "DeepX / ResNet50",
+      "comparison_group": "orin_nx_deepx_m1_01",
+      "split": "b002"
+    },
+    {
+      "case_id": "h10_regnet_b059",
+      "config_id": "historical_THESIS20|regnet_x_1_6gf|H10|hailo10h_to_trt|uint8_dequant_fp16|hailo10_infermodel_async_fifo|classification:classification_logits:7e81637d07062cb8ef8bad5a0db478cab1a08ede42cf1c306f0e7757a4f670e1|3|8|UNKNOWN|UNKNOWN",
+      "candidate_id": "b059",
+      "implementation_id": "stage_cost_v1",
+      "input_recipe_id": "saved_historical_prefix_npy:e9b5cc457c40e8ef9a70da487009f1941273c74d19b64cbc8e18e76fc30589b5",
+      "resource_descriptor_id": "h10_infermodel_async8_trt_serial_fifo3_batch1",
+      "setup_id": "orin_nx_hailo10_01",
+      "config_path": "external-archive/inputs/cases/h10_regnet_b059.json",
+      "sha256": "25c7a7adac856eb39e25bd624dcd33a504a698613cdb56fbeff6c970cdedda7c",
+      "required_artifacts": [
+        {
+          "path": "external-artifacts/5d625ac3e307a602317f3d34b4c5e32049ea66b094a9aea83308d8044763886f/part1.hef",
+          "sha256": "5d625ac3e307a602317f3d34b4c5e32049ea66b094a9aea83308d8044763886f"
+        },
+        {
+          "path": "external-artifacts/f9f9a1d080b6808ee6f8c28e6dfd1e08a9e8963b7f0cca4cf0301bb2811711ff/part2_uint8_dequant_fp16.engine",
+          "sha256": "f9f9a1d080b6808ee6f8c28e6dfd1e08a9e8963b7f0cca4cf0301bb2811711ff"
+        },
+        {
+          "path": "external-artifacts/e9b5cc457c40e8ef9a70da487009f1941273c74d19b64cbc8e18e76fc30589b5/hailo10_prepared_input_00_input.npy",
+          "sha256": "e9b5cc457c40e8ef9a70da487009f1941273c74d19b64cbc8e18e76fc30589b5"
+        },
+        {
+          "path": "external-artifacts/3dd0ae5773917790705d1290bd96a92d3413b1e2b087b3d8c253abd9f014dd45/native_trt_meta.json",
+          "sha256": "3dd0ae5773917790705d1290bd96a92d3413b1e2b087b3d8c253abd9f014dd45"
+        },
+        {
+          "path": "external-artifacts/cf5b6f0f2df2be6b827c0845d27d18c19d8de4cd1515cc49dbdbfd70412b39fa/native_hailo10_trt_e2e_from_benchmarkset.py",
+          "sha256": "cf5b6f0f2df2be6b827c0845d27d18c19d8de4cd1515cc49dbdbfd70412b39fa"
+        },
+        {
+          "path": "external-artifacts/4d7d9fbc974953ce680f6c75bb7b19ed22115a0e4e56cf356f1c2f551ea7e472/hailo_backend.py",
+          "sha256": "4d7d9fbc974953ce680f6c75bb7b19ed22115a0e4e56cf356f1c2f551ea7e472"
+        },
+        {
+          "path": "external-artifacts/7b523df592b8a0338b1396c105e2a380aef587010c4db7fe0dc5ee368b434758/classification.py",
+          "sha256": "7b523df592b8a0338b1396c105e2a380aef587010c4db7fe0dc5ee368b434758"
+        },
+        {
+          "path": "external-artifacts/7f02b21a67a7fde4a91059bc76f9388ab4923cd8477f060b44dcca746f702ba3/part1_boundary_metadata.json",
+          "sha256": "7f02b21a67a7fde4a91059bc76f9388ab4923cd8477f060b44dcca746f702ba3"
+        },
+        {
+          "path": "external-artifacts/40ab75f11b090ed097fd45a185f415460650fb9877c9c12b45aaca8146a2c7b9/reference_manifest.json",
+          "sha256": "40ab75f11b090ed097fd45a185f415460650fb9877c9c12b45aaca8146a2c7b9"
+        },
+        {
+          "path": "external-artifacts/96ac098bd77b00e2a39e4bf3b1fb32d8951e432a7da8a5c3dab795249b48be34/add_7.npy",
+          "sha256": "96ac098bd77b00e2a39e4bf3b1fb32d8951e432a7da8a5c3dab795249b48be34"
+        }
+      ],
+      "family": "H10 / RegNetX-1.6GF",
+      "comparison_group": "orin_nx_hailo10_01",
+      "split": "b059"
+    },
+    {
+      "case_id": "h10_regnet_b123",
+      "config_id": "historical_THESIS20|regnet_x_1_6gf|H10|hailo10h_to_trt|uint8_dequant_fp16|hailo10_infermodel_async_fifo|classification:classification_logits:7e81637d07062cb8ef8bad5a0db478cab1a08ede42cf1c306f0e7757a4f670e1|3|8|UNKNOWN|UNKNOWN",
+      "candidate_id": "b123",
+      "implementation_id": "stage_cost_v1",
+      "input_recipe_id": "saved_historical_prefix_npy:e9b5cc457c40e8ef9a70da487009f1941273c74d19b64cbc8e18e76fc30589b5",
+      "resource_descriptor_id": "h10_infermodel_async8_trt_serial_fifo3_batch1",
+      "setup_id": "orin_nx_hailo10_01",
+      "config_path": "external-archive/inputs/cases/h10_regnet_b123.json",
+      "sha256": "2e67b168241c7b4838d393c52b160800a1039c592e47345a3cf6f17d80ba56e2",
+      "required_artifacts": [
+        {
+          "path": "external-artifacts/91d2dcf38ea4943870bb28734184fc2cbe61a2468573fee137a38236cef924b5/part1.hef",
+          "sha256": "91d2dcf38ea4943870bb28734184fc2cbe61a2468573fee137a38236cef924b5"
+        },
+        {
+          "path": "external-artifacts/8697decddc89abc41fd78bc6c537bfa44d74d2580a75318922971e40f4f1f63b/part2_uint8_dequant_fp16.engine",
+          "sha256": "8697decddc89abc41fd78bc6c537bfa44d74d2580a75318922971e40f4f1f63b"
+        },
+        {
+          "path": "external-artifacts/e9b5cc457c40e8ef9a70da487009f1941273c74d19b64cbc8e18e76fc30589b5/hailo10_prepared_input_00_input.npy",
+          "sha256": "e9b5cc457c40e8ef9a70da487009f1941273c74d19b64cbc8e18e76fc30589b5"
+        },
+        {
+          "path": "external-artifacts/b33c2987fa533e315d05ae7ccb3e377f837ae523aca3980d10c0ff7064f0b7ca/native_trt_meta.json",
+          "sha256": "b33c2987fa533e315d05ae7ccb3e377f837ae523aca3980d10c0ff7064f0b7ca"
+        },
+        {
+          "path": "external-artifacts/cf5b6f0f2df2be6b827c0845d27d18c19d8de4cd1515cc49dbdbfd70412b39fa/native_hailo10_trt_e2e_from_benchmarkset.py",
+          "sha256": "cf5b6f0f2df2be6b827c0845d27d18c19d8de4cd1515cc49dbdbfd70412b39fa"
+        },
+        {
+          "path": "external-artifacts/4d7d9fbc974953ce680f6c75bb7b19ed22115a0e4e56cf356f1c2f551ea7e472/hailo_backend.py",
+          "sha256": "4d7d9fbc974953ce680f6c75bb7b19ed22115a0e4e56cf356f1c2f551ea7e472"
+        },
+        {
+          "path": "external-artifacts/7b523df592b8a0338b1396c105e2a380aef587010c4db7fe0dc5ee368b434758/classification.py",
+          "sha256": "7b523df592b8a0338b1396c105e2a380aef587010c4db7fe0dc5ee368b434758"
+        },
+        {
+          "path": "external-artifacts/aa09d726f7dcc00c2c7d682cb250ad314ab52fdbd20364259318ceb3fc047a8a/part1_boundary_metadata.json",
+          "sha256": "aa09d726f7dcc00c2c7d682cb250ad314ab52fdbd20364259318ceb3fc047a8a"
+        },
+        {
+          "path": "external-artifacts/762d94e7bb6eb36bcaaabaf445733f4897f2f3ffd0c2f42af2f87d76cb909fed/reference_manifest.json",
+          "sha256": "762d94e7bb6eb36bcaaabaf445733f4897f2f3ffd0c2f42af2f87d76cb909fed"
+        },
+        {
+          "path": "external-artifacts/efc2ae7ebac448d83d2c49f7d929e02f9f0dedf25d2a4a453ba01160a5d734fa/add_16.npy",
+          "sha256": "efc2ae7ebac448d83d2c49f7d929e02f9f0dedf25d2a4a453ba01160a5d734fa"
+        }
+      ],
+      "family": "H10 / RegNetX-1.6GF",
+      "comparison_group": "orin_nx_hailo10_01",
+      "split": "b123"
+    }
+  ],
+  "devices": {
+    "orin_nx_deepx_m1_01": {
+      "temperature_sensor": "CPU",
+      "temperature_band_c": [
+        53,
+        60
+      ],
+      "stability_delta_c": 2,
+      "stability_gap_s": 5,
+      "min_rest_s": 120,
+      "max_wait_s": 300,
+      "power_mode": "MAXN_SUPER",
+      "cpu_min_max_khz": 1984000,
+      "gpu_min_max_hz": 1173000000,
+      "system_settings_policy": "observe inherited settings only; no system power/clock/fan writes",
+      "affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "affinity_policy": "inherited; record actual process affinity",
+      "thermal_band_source": "external-archive/evidence/HARDWARE_INITIAL_SNAPSHOT.json; fixed before any reference/smoke/performance result",
+      "state_problem_policy": "preserve descriptive data; no definitive causal or accuracy claim"
+    },
+    "orin_nx_hailo10_01": {
+      "temperature_sensor": "CPU",
+      "temperature_band_c": [
+        42,
+        50
+      ],
+      "stability_delta_c": 2,
+      "stability_gap_s": 5,
+      "min_rest_s": 120,
+      "max_wait_s": 300,
+      "power_mode": "MAXN_SUPER",
+      "cpu_min_max_khz": 1984000,
+      "gpu_min_max_hz": 1173000000,
+      "system_settings_policy": "observe inherited settings only; no system power/clock/fan writes",
+      "affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "affinity_policy": "inherited; record actual process affinity",
+      "thermal_band_source": "external-archive/evidence/HARDWARE_INITIAL_SNAPSHOT.json; fixed before any reference/smoke/performance result",
+      "state_problem_policy": "preserve descriptive data; no definitive causal or accuracy claim"
+    }
+  },
+  "resource_descriptors": {
+    "deepx_sync1_trt_serial_fifo3_batch1": {
+      "resource_descriptor_id": "deepx_sync1_trt_serial_fifo3_batch1",
+      "prefix_inflight": 1,
+      "fifo_depth": 3,
+      "batch_size": 1,
+      "handoff_dtype": "float32",
+      "handoff_layout": "NCHW",
+      "prefix_scope": "runtime input policy, submit/run, completion observation, mapping/extraction, owned usable host boundary",
+      "consumer_scope": "CPU pinned staging, H2D, engine, D2H, synchronization, ClassificationCompletion top1/top5",
+      "shared_resources": [
+        "CPU",
+        "host memory",
+        "GPU/EMC memory system",
+        "DMA",
+        "thermal/power envelope"
+      ],
+      "model": "two_stage_maximum",
+      "residency": "both runtimes loaded; inactive resource receives zero inference requests"
+    },
+    "h10_infermodel_async8_trt_serial_fifo3_batch1": {
+      "resource_descriptor_id": "h10_infermodel_async8_trt_serial_fifo3_batch1",
+      "prefix_inflight": 8,
+      "fifo_depth": 3,
+      "batch_size": 1,
+      "handoff_dtype": "uint8",
+      "handoff_layout": "NHWC",
+      "prefix_scope": "runtime input policy, submit/run, completion observation, mapping/extraction, owned usable host boundary",
+      "consumer_scope": "CPU pinned staging, H2D, engine, D2H, synchronization, ClassificationCompletion top1/top5",
+      "shared_resources": [
+        "CPU",
+        "host memory",
+        "GPU/EMC memory system",
+        "DMA",
+        "thermal/power envelope"
+      ],
+      "model": "two_stage_maximum",
+      "residency": "both runtimes loaded; inactive resource receives zero inference requests"
+    }
+  },
+  "schedule": [
+    {
+      "action_id": "deepx_resnet50_b045_block1_P",
+      "case_id": "deepx_resnet50_b045",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "block": 1,
+      "mode": "P",
+      "kind": "performance"
+    },
+    {
+      "action_id": "deepx_resnet50_b045_block1_C",
+      "case_id": "deepx_resnet50_b045",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "block": 1,
+      "mode": "C",
+      "kind": "performance"
+    },
+    {
+      "action_id": "deepx_resnet50_b045_block1_PC",
+      "case_id": "deepx_resnet50_b045",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "block": 1,
+      "mode": "PC",
+      "kind": "performance"
+    },
+    {
+      "action_id": "deepx_resnet50_b002_block1_P",
+      "case_id": "deepx_resnet50_b002",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "block": 1,
+      "mode": "P",
+      "kind": "performance"
+    },
+    {
+      "action_id": "deepx_resnet50_b002_block1_C",
+      "case_id": "deepx_resnet50_b002",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "block": 1,
+      "mode": "C",
+      "kind": "performance"
+    },
+    {
+      "action_id": "deepx_resnet50_b002_block1_PC",
+      "case_id": "deepx_resnet50_b002",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "block": 1,
+      "mode": "PC",
+      "kind": "performance"
+    },
+    {
+      "action_id": "h10_regnet_b059_block1_P",
+      "case_id": "h10_regnet_b059",
+      "setup_id": "orin_nx_hailo10_01",
+      "block": 1,
+      "mode": "P",
+      "kind": "performance"
+    },
+    {
+      "action_id": "h10_regnet_b059_block1_C",
+      "case_id": "h10_regnet_b059",
+      "setup_id": "orin_nx_hailo10_01",
+      "block": 1,
+      "mode": "C",
+      "kind": "performance"
+    },
+    {
+      "action_id": "h10_regnet_b059_block1_PC",
+      "case_id": "h10_regnet_b059",
+      "setup_id": "orin_nx_hailo10_01",
+      "block": 1,
+      "mode": "PC",
+      "kind": "performance"
+    },
+    {
+      "action_id": "h10_regnet_b123_block1_P",
+      "case_id": "h10_regnet_b123",
+      "setup_id": "orin_nx_hailo10_01",
+      "block": 1,
+      "mode": "P",
+      "kind": "performance"
+    },
+    {
+      "action_id": "h10_regnet_b123_block1_C",
+      "case_id": "h10_regnet_b123",
+      "setup_id": "orin_nx_hailo10_01",
+      "block": 1,
+      "mode": "C",
+      "kind": "performance"
+    },
+    {
+      "action_id": "h10_regnet_b123_block1_PC",
+      "case_id": "h10_regnet_b123",
+      "setup_id": "orin_nx_hailo10_01",
+      "block": 1,
+      "mode": "PC",
+      "kind": "performance"
+    },
+    {
+      "action_id": "deepx_resnet50_b002_block2_C",
+      "case_id": "deepx_resnet50_b002",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "block": 2,
+      "mode": "C",
+      "kind": "performance"
+    },
+    {
+      "action_id": "deepx_resnet50_b002_block2_PC",
+      "case_id": "deepx_resnet50_b002",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "block": 2,
+      "mode": "PC",
+      "kind": "performance"
+    },
+    {
+      "action_id": "deepx_resnet50_b002_block2_P",
+      "case_id": "deepx_resnet50_b002",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "block": 2,
+      "mode": "P",
+      "kind": "performance"
+    },
+    {
+      "action_id": "deepx_resnet50_b045_block2_C",
+      "case_id": "deepx_resnet50_b045",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "block": 2,
+      "mode": "C",
+      "kind": "performance"
+    },
+    {
+      "action_id": "deepx_resnet50_b045_block2_PC",
+      "case_id": "deepx_resnet50_b045",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "block": 2,
+      "mode": "PC",
+      "kind": "performance"
+    },
+    {
+      "action_id": "deepx_resnet50_b045_block2_P",
+      "case_id": "deepx_resnet50_b045",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "block": 2,
+      "mode": "P",
+      "kind": "performance"
+    },
+    {
+      "action_id": "h10_regnet_b123_block2_C",
+      "case_id": "h10_regnet_b123",
+      "setup_id": "orin_nx_hailo10_01",
+      "block": 2,
+      "mode": "C",
+      "kind": "performance"
+    },
+    {
+      "action_id": "h10_regnet_b123_block2_PC",
+      "case_id": "h10_regnet_b123",
+      "setup_id": "orin_nx_hailo10_01",
+      "block": 2,
+      "mode": "PC",
+      "kind": "performance"
+    },
+    {
+      "action_id": "h10_regnet_b123_block2_P",
+      "case_id": "h10_regnet_b123",
+      "setup_id": "orin_nx_hailo10_01",
+      "block": 2,
+      "mode": "P",
+      "kind": "performance"
+    },
+    {
+      "action_id": "h10_regnet_b059_block2_C",
+      "case_id": "h10_regnet_b059",
+      "setup_id": "orin_nx_hailo10_01",
+      "block": 2,
+      "mode": "C",
+      "kind": "performance"
+    },
+    {
+      "action_id": "h10_regnet_b059_block2_PC",
+      "case_id": "h10_regnet_b059",
+      "setup_id": "orin_nx_hailo10_01",
+      "block": 2,
+      "mode": "PC",
+      "kind": "performance"
+    },
+    {
+      "action_id": "h10_regnet_b059_block2_P",
+      "case_id": "h10_regnet_b059",
+      "setup_id": "orin_nx_hailo10_01",
+      "block": 2,
+      "mode": "P",
+      "kind": "performance"
+    },
+    {
+      "action_id": "deepx_resnet50_b045_block3_PC",
+      "case_id": "deepx_resnet50_b045",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "block": 3,
+      "mode": "PC",
+      "kind": "performance"
+    },
+    {
+      "action_id": "deepx_resnet50_b045_block3_P",
+      "case_id": "deepx_resnet50_b045",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "block": 3,
+      "mode": "P",
+      "kind": "performance"
+    },
+    {
+      "action_id": "deepx_resnet50_b045_block3_C",
+      "case_id": "deepx_resnet50_b045",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "block": 3,
+      "mode": "C",
+      "kind": "performance"
+    },
+    {
+      "action_id": "deepx_resnet50_b002_block3_PC",
+      "case_id": "deepx_resnet50_b002",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "block": 3,
+      "mode": "PC",
+      "kind": "performance"
+    },
+    {
+      "action_id": "deepx_resnet50_b002_block3_P",
+      "case_id": "deepx_resnet50_b002",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "block": 3,
+      "mode": "P",
+      "kind": "performance"
+    },
+    {
+      "action_id": "deepx_resnet50_b002_block3_C",
+      "case_id": "deepx_resnet50_b002",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "block": 3,
+      "mode": "C",
+      "kind": "performance"
+    },
+    {
+      "action_id": "h10_regnet_b059_block3_PC",
+      "case_id": "h10_regnet_b059",
+      "setup_id": "orin_nx_hailo10_01",
+      "block": 3,
+      "mode": "PC",
+      "kind": "performance"
+    },
+    {
+      "action_id": "h10_regnet_b059_block3_P",
+      "case_id": "h10_regnet_b059",
+      "setup_id": "orin_nx_hailo10_01",
+      "block": 3,
+      "mode": "P",
+      "kind": "performance"
+    },
+    {
+      "action_id": "h10_regnet_b059_block3_C",
+      "case_id": "h10_regnet_b059",
+      "setup_id": "orin_nx_hailo10_01",
+      "block": 3,
+      "mode": "C",
+      "kind": "performance"
+    },
+    {
+      "action_id": "h10_regnet_b123_block3_PC",
+      "case_id": "h10_regnet_b123",
+      "setup_id": "orin_nx_hailo10_01",
+      "block": 3,
+      "mode": "PC",
+      "kind": "performance"
+    },
+    {
+      "action_id": "h10_regnet_b123_block3_P",
+      "case_id": "h10_regnet_b123",
+      "setup_id": "orin_nx_hailo10_01",
+      "block": 3,
+      "mode": "P",
+      "kind": "performance"
+    },
+    {
+      "action_id": "h10_regnet_b123_block3_C",
+      "case_id": "h10_regnet_b123",
+      "setup_id": "orin_nx_hailo10_01",
+      "block": 3,
+      "mode": "C",
+      "kind": "performance"
+    }
+  ],
+  "budget": {
+    "reference_per_case": 2,
+    "smoke_rounds_per_case": 2,
+    "smoke_frames": 32,
+    "regular_performance": 36,
+    "technical_replacements": 4,
+    "total_performance_attempts": 40
+  },
+  "recipe": {
+    "batch": 1,
+    "warmup": 100,
+    "frames": 10000,
+    "smoke_warmup": 0,
+    "reference_frames": 1,
+    "timeout_s": 900
+  },
+  "pre_performance_export": {
+    "required": true,
+    "proof_path": "external-archive/validation/SMOKE_EXPORT_CHECK.json"
+  },
+  "replacements": [],
+  "input_selection": "one pre-existing exact prepared input per case, repeated; chosen before results",
+  "reference_policy": "prefer exact independently bound existing reference; otherwise independent serial P then C before performance",
+  "reference_binding_file": "INPUT_REFERENCE_CHECK.json",
+  "oracle": {
+    "cP_ms": "1000/fps_P_core",
+    "cC_ms": "1000/fps_C_core",
+    "cOracle_ms": "max(cP_ms,cC_ms)",
+    "fpsOracle": "min(fps_P_core,fps_C_core)",
+    "pc_labels_allowed": false,
+    "historical_pipeline_sources_allowed": false,
+    "fit_allowed": false
+  },
+  "core_rate": {
+    "completion_orders_one_based": [
+      1000,
+      9000
+    ],
+    "numerator": 8000,
+    "unit": "seconds"
+  },
+  "stability": {
+    "early_orders": [
+      1000,
+      5000
+    ],
+    "late_orders": [
+      5000,
+      9000
+    ],
+    "relative_shift_warning_pct": 5
+  },
+  "orientation_absolute_error_pct": 10,
+  "decision_policy": {
+    "minimum_complete_triplets_for_A_B_C": 2,
+    "variation_warning_pct": 5,
+    "variation_scope": [
+      "P",
+      "C",
+      "Oracle",
+      "PC"
+    ],
+    "state_comparability_required_for_definitive_classification": true,
+    "drift_or_repeat_variation": "retain all accepted rows and mark descriptive D/unclear; no repeats or exclusion"
+  },
+  "immutable_foundation": "external-archive/split_prediction_rootcause_20261013/20261013T195641Z",
+  "canonical_source": "external-archive/split_prediction_rootcause_20261013/20261013T181529Z",
+  "prohibited": [
+    "compile",
+    "engine rebuild",
+    "productive changes",
+    "new full/inflight sweeps",
+    "ranker fit"
+  ]
+}

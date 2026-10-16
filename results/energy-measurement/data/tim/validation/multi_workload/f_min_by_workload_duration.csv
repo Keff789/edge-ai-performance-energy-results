@@ -1,0 +1,1081 @@
+workload_id,workload_label,source,mode,duration_s,threshold_pct,f_min_sps,selection_rule
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.02,0.1,5500,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.02,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.02,1.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.02,2.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.02,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.05,0.1,3300,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.05,0.5,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.05,1.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.05,2.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.05,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.1,0.1,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.1,0.5,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.1,1.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.1,2.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.1,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.2,0.1,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.2,0.5,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.2,1.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.2,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.2,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.5,0.1,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.5,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.5,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.5,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,0.5,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,1.0,0.1,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,1.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,1.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,1.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,1.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,2.0,0.1,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,2.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,2.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,2.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,2.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,5.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,5.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,5.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,5.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,10.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,10.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,10.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,10.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.02,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.02,0.5,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.02,1.0,45000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.02,2.0,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.02,5.0,2000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.05,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.05,0.5,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.05,1.0,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.05,2.0,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.05,5.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.1,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.1,0.5,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.1,1.0,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.1,2.0,3300,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.1,5.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.2,0.1,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.2,0.5,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.2,1.0,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.2,2.0,3300,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.2,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.5,0.1,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.5,0.5,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.5,1.0,3300,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.5,2.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,0.5,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,1.0,0.1,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,1.0,0.5,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,1.0,1.0,3300,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,1.0,2.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,1.0,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,2.0,0.1,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,2.0,0.5,3300,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,2.0,1.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,2.0,2.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,2.0,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,5.0,0.1,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,5.0,0.5,3300,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,5.0,1.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,5.0,2.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,10.0,0.1,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,10.0,0.5,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,10.0,1.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,10.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,pico,phase_only,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.02,0.1,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.02,0.5,2000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.02,1.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.02,2.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.02,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.05,0.1,2500,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.05,0.5,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.05,1.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.05,2.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.05,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.1,0.1,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.1,0.5,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.1,1.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.1,2.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.1,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.2,0.1,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.2,0.5,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.2,1.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.2,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.2,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.5,0.1,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.5,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.5,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.5,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,0.5,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,1.0,0.1,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,1.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,1.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,1.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,1.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,2.0,0.1,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,2.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,2.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,2.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,2.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,5.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,5.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,5.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,5.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,10.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,10.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,10.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,10.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.02,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.02,0.5,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.02,1.0,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.02,2.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.02,5.0,3300,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.05,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.05,0.5,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.05,1.0,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.05,2.0,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.05,5.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.1,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.1,0.5,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.1,1.0,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.1,2.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.1,5.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.2,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.2,0.5,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.2,1.0,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.2,2.0,3300,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.2,5.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.5,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.5,0.5,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.5,1.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.5,2.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,0.5,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,1.0,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,1.0,0.5,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,1.0,1.0,3300,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,1.0,2.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,1.0,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,2.0,0.1,80000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,2.0,0.5,3300,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,2.0,1.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,2.0,2.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,2.0,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,5.0,0.1,16000,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,5.0,0.5,3300,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,5.0,1.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,5.0,2.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,10.0,0.1,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,10.0,0.5,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,10.0,1.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,10.0,2.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemma3-4b,Gemma3-4B,tek,phase_only,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.02,0.1,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.02,0.5,2000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.02,1.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.02,2.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.02,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.05,0.1,2500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.05,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.05,1.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.05,2.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.05,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.1,0.1,2000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.1,0.5,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.1,1.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.1,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.1,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.2,0.1,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.2,0.5,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.2,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.2,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.2,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.5,0.1,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.5,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.5,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.5,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,0.5,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,1.0,0.1,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,1.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,1.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,1.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,1.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,2.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,2.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,2.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,2.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,2.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,5.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,5.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,5.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,5.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,10.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,10.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,10.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,10.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,anti_alias,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.02,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.02,0.5,45000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.02,1.0,45000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.02,2.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.02,5.0,2500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.05,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.05,0.5,45000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.05,1.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.05,2.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.05,5.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.1,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.1,0.5,45000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.1,1.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.1,2.0,2500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.1,5.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.2,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.2,0.5,16000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.2,1.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.2,2.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.2,5.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.5,0.1,45000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.5,0.5,5500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.5,1.0,2500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.5,2.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,0.5,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,1.0,0.1,45000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,1.0,0.5,3300,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,1.0,1.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,1.0,2.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,1.0,5.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,2.0,0.1,45000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,2.0,0.5,2500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,2.0,1.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,2.0,2.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,2.0,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,5.0,0.1,16000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,5.0,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,5.0,1.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,5.0,2.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,10.0,0.1,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,10.0,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,10.0,1.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,10.0,2.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,pico,phase_only,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.02,0.1,5500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.02,0.5,2000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.02,1.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.02,2.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.02,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.05,0.1,3300,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.05,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.05,1.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.05,2.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.05,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.1,0.1,2000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.1,0.5,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.1,1.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.1,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.1,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.2,0.1,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.2,0.5,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.2,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.2,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.2,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.5,0.1,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.5,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.5,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.5,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,0.5,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,1.0,0.1,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,1.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,1.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,1.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,1.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,2.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,2.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,2.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,2.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,2.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,5.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,5.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,5.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,5.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,10.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,10.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,10.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,10.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,anti_alias,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.02,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.02,0.5,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.02,1.0,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.02,2.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.02,5.0,2500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.05,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.05,0.5,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.05,1.0,45000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.05,2.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.05,5.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.1,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.1,0.5,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.1,1.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.1,2.0,3300,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.1,5.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.2,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.2,0.5,45000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.2,1.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.2,2.0,2000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.2,5.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.5,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.5,0.5,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.5,1.0,2500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.5,2.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,0.5,5.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,1.0,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,1.0,0.5,5500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,1.0,1.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,1.0,2.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,1.0,5.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,2.0,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,2.0,0.5,2500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,2.0,1.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,2.0,2.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,2.0,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,5.0,0.1,45000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,5.0,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,5.0,1.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,5.0,2.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,10.0,0.1,16000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,10.0,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,10.0,1.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,10.0,2.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmfp32,GEMM-FP32,tek,phase_only,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.02,0.1,5500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.02,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.02,1.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.02,2.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.02,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.05,0.1,2000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.05,0.5,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.05,1.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.05,2.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.05,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.1,0.1,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.1,0.5,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.1,1.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.1,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.1,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.2,0.1,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.2,0.5,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.2,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.2,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.2,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.5,0.1,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.5,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.5,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.5,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,0.5,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,1.0,0.1,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,1.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,1.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,1.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,1.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,2.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,2.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,2.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,2.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,2.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,5.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,5.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,5.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,5.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,10.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,10.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,10.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,10.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,anti_alias,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.02,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.02,0.5,45000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.02,1.0,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.02,2.0,3300,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.02,5.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.05,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.05,0.5,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.05,1.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.05,2.0,2000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.05,5.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.1,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.1,0.5,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.1,1.0,2500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.1,2.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.1,5.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.2,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.2,0.5,5500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.2,1.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.2,2.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.2,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.5,0.1,25000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.5,0.5,2500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.5,1.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.5,2.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,0.5,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,1.0,0.1,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,1.0,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,1.0,1.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,1.0,2.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,1.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,2.0,0.1,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,2.0,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,2.0,1.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,2.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,2.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,5.0,0.1,5500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,5.0,0.5,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,5.0,1.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,5.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,10.0,0.1,3300,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,10.0,0.5,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,10.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,10.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,pico,phase_only,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.02,0.1,5500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.02,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.02,1.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.02,2.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.02,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.05,0.1,2000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.05,0.5,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.05,1.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.05,2.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.05,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.1,0.1,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.1,0.5,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.1,1.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.1,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.1,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.2,0.1,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.2,0.5,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.2,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.2,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.2,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.5,0.1,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.5,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.5,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.5,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,0.5,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,1.0,0.1,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,1.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,1.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,1.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,1.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,2.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,2.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,2.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,2.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,2.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,5.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,5.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,5.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,5.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,10.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,10.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,10.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,10.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,anti_alias,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.02,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.02,0.5,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.02,1.0,25000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.02,2.0,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.02,5.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.05,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.05,0.5,45000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.05,1.0,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.05,2.0,3300,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.05,5.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.1,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.1,0.5,25000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.1,1.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.1,2.0,2000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.1,5.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.2,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.2,0.5,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.2,1.0,3300,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.2,2.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.2,5.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.5,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.5,0.5,5500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.5,1.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.5,2.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,0.5,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,1.0,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,1.0,0.5,2500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,1.0,1.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,1.0,2.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,1.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,2.0,0.1,45000,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,2.0,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,2.0,1.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,2.0,2.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,2.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,5.0,0.1,9400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,5.0,0.5,680,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,5.0,1.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,5.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,10.0,0.1,5500,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,10.0,0.5,400,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,10.0,1.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,10.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+gemmint8,GEMM-INT8,tek,phase_only,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.02,0.1,9400,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.02,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.02,1.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.02,2.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.02,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.05,0.1,2000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.05,0.5,400,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.05,1.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.05,2.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.05,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.1,0.1,2000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.1,0.5,240,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.1,1.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.1,2.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.1,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.2,0.1,680,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.2,0.5,150,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.2,1.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.2,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.2,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.5,0.1,240,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.5,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.5,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.5,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,0.5,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,1.0,0.1,150,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,1.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,1.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,1.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,1.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,2.0,0.1,85,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,2.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,2.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,2.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,2.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,5.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,5.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,5.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,5.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,10.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,10.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,10.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,10.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,anti_alias,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.02,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.02,0.5,80000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.02,1.0,45000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.02,2.0,25000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.02,5.0,3300,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.05,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.05,0.5,80000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.05,1.0,25000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.05,2.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.05,5.0,2000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.1,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.1,0.5,25000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.1,1.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.1,2.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.1,5.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.2,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.2,0.5,25000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.2,1.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.2,2.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.2,5.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.5,0.1,80000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.5,0.5,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.5,1.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.5,2.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,0.5,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,1.0,0.1,80000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,1.0,0.5,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,1.0,1.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,1.0,2.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,1.0,5.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,2.0,0.1,80000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,2.0,0.5,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,2.0,1.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,2.0,2.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,2.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,5.0,0.1,25000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,5.0,0.5,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,5.0,1.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,5.0,2.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,10.0,0.1,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,10.0,0.5,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,10.0,1.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,10.0,2.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,pico,phase_only,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.02,0.1,9400,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.02,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.02,1.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.02,2.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.02,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.05,0.1,2000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.05,0.5,400,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.05,1.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.05,2.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.05,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.1,0.1,1200,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.1,0.5,240,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.1,1.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.1,2.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.1,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.2,0.1,680,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.2,0.5,150,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.2,1.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.2,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.2,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.5,0.1,240,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.5,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.5,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.5,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,0.5,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,1.0,0.1,150,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,1.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,1.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,1.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,1.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,2.0,0.1,85,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,2.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,2.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,2.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,2.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,5.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,5.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,5.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,5.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,10.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,10.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,10.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,10.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,anti_alias,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.02,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.02,0.5,160000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.02,1.0,80000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.02,2.0,25000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.02,5.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.05,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.05,0.5,80000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.05,1.0,45000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.05,2.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.05,5.0,2000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.1,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.1,0.5,80000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.1,1.0,25000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.1,2.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.1,5.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.2,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.2,0.5,45000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.2,1.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.2,2.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.2,5.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.5,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.5,0.5,25000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.5,1.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.5,2.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,0.5,5.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,1.0,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,1.0,0.5,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,1.0,1.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,1.0,2.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,1.0,5.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,2.0,0.1,80000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,2.0,0.5,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,2.0,1.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,2.0,2.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,2.0,5.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,5.0,0.1,25000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,5.0,0.5,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,5.0,1.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,5.0,2.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,10.0,0.1,16000,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,10.0,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,10.0,1.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,10.0,2.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+resnet50,ResNet-50 FP32,tek,phase_only,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.02,0.1,9400,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.02,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.02,1.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.02,2.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.02,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.05,0.1,3300,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.05,0.5,400,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.05,1.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.05,2.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.05,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.1,0.1,1200,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.1,0.5,240,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.1,1.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.1,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.1,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.2,0.1,680,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.2,0.5,150,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.2,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.2,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.2,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.5,0.1,240,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.5,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.5,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.5,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,0.5,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,1.0,0.1,150,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,1.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,1.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,1.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,1.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,2.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,2.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,2.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,2.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,2.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,5.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,5.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,5.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,5.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,10.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,10.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,10.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,10.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,anti_alias,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.02,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.02,0.5,100000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.02,1.0,80000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.02,2.0,25000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.02,5.0,3300,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.05,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.05,0.5,100000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.05,1.0,45000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.05,2.0,9400,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.05,5.0,2500,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.1,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.1,0.5,45000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.1,1.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.1,2.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.1,5.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.2,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.2,0.5,45000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.2,1.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.2,2.0,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.2,5.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.5,0.1,125000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.5,0.5,9400,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.5,1.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.5,2.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,0.5,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,1.0,0.1,100000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,1.0,0.5,5500,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,1.0,1.0,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,1.0,2.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,1.0,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,2.0,0.1,45000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,2.0,0.5,5500,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,2.0,1.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,2.0,2.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,2.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,5.0,0.1,25000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,5.0,0.5,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,5.0,1.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,5.0,2.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,10.0,0.1,16000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,10.0,0.5,680,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,10.0,1.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,10.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,pico,phase_only,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.02,0.1,9400,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.02,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.02,1.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.02,2.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.02,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.05,0.1,3300,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.05,0.5,680,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.05,1.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.05,2.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.05,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.1,0.1,1200,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.1,0.5,240,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.1,1.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.1,2.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.1,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.2,0.1,680,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.2,0.5,150,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.2,1.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.2,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.2,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.5,0.1,240,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.5,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.5,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.5,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,0.5,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,1.0,0.1,150,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,1.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,1.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,1.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,1.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,2.0,0.1,85,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,2.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,2.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,2.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,2.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,5.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,5.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,5.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,5.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,10.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,10.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,10.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,10.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,anti_alias,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.02,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.02,0.5,,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.02,1.0,100000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.02,2.0,45000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.02,5.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.05,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.05,0.5,160000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.05,1.0,45000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.05,2.0,25000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.05,5.0,2500,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.1,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.1,0.5,100000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.1,1.0,25000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.1,2.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.1,5.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.2,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.2,0.5,80000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.2,1.0,16000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.2,2.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.2,5.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.5,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.5,0.5,25000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.5,1.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.5,2.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,0.5,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,1.0,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,1.0,0.5,9400,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,1.0,1.0,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,1.0,2.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,1.0,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,2.0,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,2.0,0.5,5500,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,2.0,1.0,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,2.0,2.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,2.0,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,5.0,0.1,45000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,5.0,0.5,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,5.0,1.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,5.0,2.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,10.0,0.1,25000,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,10.0,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,10.0,1.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,10.0,2.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+yolofp32,YOLO-FP32,tek,phase_only,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.02,0.1,9400,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.02,0.5,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.02,1.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.02,2.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.02,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.05,0.1,2500,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.05,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.05,1.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.05,2.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.05,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.1,0.1,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.1,0.5,240,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.1,1.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.1,2.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.1,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.2,0.1,1200,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.2,0.5,150,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.2,1.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.2,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.2,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.5,0.1,400,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.5,0.5,85,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.5,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.5,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,0.5,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,1.0,0.1,150,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,1.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,1.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,1.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,1.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,2.0,0.1,85,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,2.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,2.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,2.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,2.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,5.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,5.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,5.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,5.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,10.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,10.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,10.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,10.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,anti_alias,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.02,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.02,0.5,160000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.02,1.0,80000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.02,2.0,25000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.02,5.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.05,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.05,0.5,100000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.05,1.0,45000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.05,2.0,9400,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.05,5.0,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.1,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.1,0.5,80000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.1,1.0,25000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.1,2.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.1,5.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.2,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.2,0.5,45000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.2,1.0,9400,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.2,2.0,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.2,5.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.5,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.5,0.5,16000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.5,1.0,3300,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.5,2.0,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,0.5,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,1.0,0.1,100000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,1.0,0.5,9400,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,1.0,1.0,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,1.0,2.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,1.0,5.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,2.0,0.1,80000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,2.0,0.5,3300,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,2.0,1.0,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,2.0,2.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,2.0,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,5.0,0.1,45000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,5.0,0.5,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,5.0,1.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,5.0,2.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,10.0,0.1,16000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,10.0,0.5,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,10.0,1.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,10.0,2.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,pico,phase_only,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.02,0.1,9400,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.02,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.02,1.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.02,2.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.02,5.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.05,0.1,3300,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.05,0.5,1200,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.05,1.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.05,2.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.05,5.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.1,0.1,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.1,0.5,400,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.1,1.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.1,2.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.1,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.2,0.1,1200,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.2,0.5,150,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.2,1.0,85,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.2,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.2,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.5,0.1,400,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.5,0.5,85,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.5,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.5,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,0.5,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,1.0,0.1,150,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,1.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,1.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,1.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,1.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,2.0,0.1,85,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,2.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,2.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,2.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,2.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,5.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,5.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,5.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,5.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,10.0,0.1,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,10.0,0.5,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,10.0,1.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,10.0,2.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,anti_alias,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.02,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.02,0.5,,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.02,1.0,160000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.02,2.0,45000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.02,5.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.05,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.05,0.5,160000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.05,1.0,80000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.05,2.0,25000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.05,5.0,2500,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.1,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.1,0.5,100000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.1,1.0,45000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.1,2.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.1,5.0,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.2,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.2,0.5,80000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.2,1.0,25000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.2,2.0,3300,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.2,5.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.5,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.5,0.5,45000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.5,1.0,5500,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.5,2.0,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,0.5,5.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,1.0,0.1,,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,1.0,0.5,16000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,1.0,1.0,3300,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,1.0,2.0,1200,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,1.0,5.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,2.0,0.1,160000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,2.0,0.5,5500,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,2.0,1.0,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,2.0,2.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,2.0,5.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,5.0,0.1,80000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,5.0,0.5,2500,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,5.0,1.0,680,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,5.0,2.0,240,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,5.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,10.0,0.1,45000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,10.0,0.5,2000,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,10.0,1.0,400,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,10.0,2.0,150,lowest tested rate for which the candidate and every higher tested rate pass
+yoloint8,YOLO-INT8,tek,phase_only,10.0,5.0,50,lowest tested rate for which the candidate and every higher tested rate pass

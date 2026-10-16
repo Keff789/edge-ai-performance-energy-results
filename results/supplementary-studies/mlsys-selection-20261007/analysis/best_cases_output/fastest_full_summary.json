@@ -1,0 +1,106 @@
+{
+  "reference_policy": "same model/setup; fastest measured Full FPS selected before quality or semantic filtering; no weaker-baseline fallback",
+  "speedup_definition": "Native split median FPS / maximum Native Full median FPS",
+  "energy_gain_definition": "Full J/task / split J/task using the same FPS-selected Full; separate energy windows; unavailable current energy is NA",
+  "main_selection_policy": "two distinct configurations per model ranked by Native speedup, with energy where available",
+  "candidate_configurations": 204,
+  "eligible_configurations": 187,
+  "energy_available_configurations": 195,
+  "energy_eligible_configurations": 178,
+  "selected_full_backend_counts": {
+    "tensorrt_full": 184,
+    "vendor_full": 20
+  },
+  "eligible_full_backend_counts": {
+    "tensorrt_full": 167,
+    "vendor_full": 20
+  },
+  "excluded_for_fastest_full_semantics": 0,
+  "excluded_for_split_quality": 17,
+  "eligible_full_accuracy_loss": 0,
+  "eligible_both_reference_close": 187,
+  "faster_native": 86,
+  "lower_energy_same_full": 102,
+  "joint_native_speed_and_energy": 67,
+  "main_rows": 14,
+  "main_rows_energy_available": 12,
+  "main_rows_joint_positive": 12,
+  "main_full_accuracy_loss": 0,
+  "max_native_speedup": 4.803499892898673,
+  "max_energy_efficiency_same_full": 4.621166564193838,
+  "per_model": [
+    {
+      "model_id": "mobilenet_v3_large",
+      "eligible": 34,
+      "energy_available": 34,
+      "faster_native": 13,
+      "lower_energy_same_full": 22,
+      "joint": 10
+    },
+    {
+      "model_id": "regnet_x_1_6gf",
+      "eligible": 60,
+      "energy_available": 60,
+      "faster_native": 42,
+      "lower_energy_same_full": 40,
+      "joint": 30
+    },
+    {
+      "model_id": "resnet50",
+      "eligible": 57,
+      "energy_available": 57,
+      "faster_native": 17,
+      "lower_energy_same_full": 26,
+      "joint": 17
+    },
+    {
+      "model_id": "yolo11l",
+      "eligible": 9,
+      "energy_available": 9,
+      "faster_native": 6,
+      "lower_energy_same_full": 7,
+      "joint": 6
+    },
+    {
+      "model_id": "yolo26m",
+      "eligible": 9,
+      "energy_available": 9,
+      "faster_native": 2,
+      "lower_energy_same_full": 4,
+      "joint": 2
+    },
+    {
+      "model_id": "yolo26s",
+      "eligible": 9,
+      "energy_available": 9,
+      "faster_native": 2,
+      "lower_energy_same_full": 3,
+      "joint": 2
+    },
+    {
+      "model_id": "yolov7_paper",
+      "eligible": 9,
+      "energy_available": 0,
+      "faster_native": 4,
+      "lower_energy_same_full": 0,
+      "joint": 0
+    }
+  ],
+  "energy_best_sensitivity": {
+    "eligible_fastest_full_cases": 178,
+    "changed_reference_among_eligible": 76,
+    "comparable_both_baseline_choices": 178,
+    "lower_energy_than_energy_best_full": 85,
+    "faster_than_fastest_full_and_lower_energy_than_energy_best_full": 64
+  },
+  "modality_caution": "Native performance and energy-window throughput are separate measurements; missing current energy is excluded, never combined with current FPS",
+  "reported_update": {
+    "model_id": "yolov7_paper",
+    "split_cases": 9,
+    "full_cases": 6,
+    "current_energy_cases": 0,
+    "verification_scope": "report_transcription_and_arithmetic_only; source archive unavailable",
+    "source": "analysis/reported_update/RESULT_REPORT.txt",
+    "source_sha256": "2ae5446d5114ea647a21ed2804ebb6ec28caab829952c58d4e045a5f49de23e5"
+  }
+}

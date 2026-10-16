@@ -1,0 +1,35 @@
+{
+  "baseline_selection": "fastest_observed_full_same_model_and_host",
+  "claim_veto": false,
+  "display_energy_unit": "mJ/image",
+  "energy_aggregation": "mean_per_repeat_E_over_completed_images",
+  "energy_basis": "calibrated_host_inclusive_raw",
+  "energy_unit": "J/image",
+  "equal_model_aggregation": "median_points_per_model_setup_then_mean_setups_per_model_then_mean_models",
+  "hash_veto": false,
+  "metric_fallback": "only_latest_completed_positive_metric_matching_exact_identity; never replace_valid_current_by_older",
+  "pareto_objectives": {
+    "energy_mj_per_image": "minimize",
+    "fps": "maximize"
+  },
+  "pareto_quality_veto": false,
+  "pareto_scope": "model_setup_all_observed_deployments",
+  "performance_aggregation": "stored_cohort_median",
+  "point_summary": "median",
+  "quality_veto": false,
+  "selection": "broad_numeric_observations",
+  "sensitivities": [
+    "broad",
+    "both_reference_close",
+    "original_strict_flags",
+    "exclude_administrative_receipt_gaps"
+  ],
+  "sensitivity_energy_bases": [
+    "raw",
+    "existing_comparison"
+  ],
+  "source_generation": "deepx_native_a4_20261015",
+  "table3_runner": "native",
+  "table3_top_n": 2,
+  "tie_break": "uid_ascending"
+}

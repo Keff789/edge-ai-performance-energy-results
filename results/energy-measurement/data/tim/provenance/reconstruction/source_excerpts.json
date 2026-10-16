@@ -1,0 +1,251 @@
+{
+  "purpose": "Read-only curated reconstruction and artifact-lineage evidence. Text is quoted data; it was not executed. These are observed 2026-10-04 source snapshots, not historical execution certificates.",
+  "sources": [
+    {
+      "source_id": "39ff7ffa8dc923f76514",
+      "host": "twix",
+      "original_path": "external-analysis/common_reference_psd_tool_v0.8.2/commonref/workload_compare.py",
+      "member": "",
+      "original_sha256": "80cb8ce7961a44769972e5cd4c2eaa0caeab955f070f27307f1f4ec402582ec5",
+      "hash_scope": "whole_file",
+      "original_bytes_read": 176934,
+      "read_scope": "whole_file",
+      "stable_during_read": true,
+      "collector_source_kind": "source_or_script_not_execution_proof",
+      "sources_csv_line": 15042,
+      "collector_exported_text": "evidence_text/39ff7ffa8dc923f76514.txt",
+      "collector_exported_text_sha256": "0e21b6b8384b7595858377553926a81233e0aa83638104f99ddc1ad07d2a607a",
+      "original_sha256_verified_by_restoring_single_terminal_newline": true,
+      "excerpts": [
+        {
+          "locator": "lines 25-27",
+          "start_line": 25,
+          "end_line": 27,
+          "text": "from .config import load_config\nfrom .duration_sensitivity import UniformLinearIntegral\nfrom .resampling import phase_count_for_target, phase_only_grid, resample_phase_grid"
+        },
+        {
+          "locator": "lines 38-43",
+          "start_line": 38,
+          "end_line": 43,
+          "text": "    LOGGER,\n    human_rate,\n    normalise_for_json,\n    package_versions,\n    quantile,\n    read_json,"
+        },
+        {
+          "locator": "lines 156-160",
+          "start_line": 156,
+          "end_line": 160,
+          "text": "def _integral(values: np.ndarray, rate_sps: float) -> float:\n    values = np.asarray(values, dtype=np.float64)\n    if values.size < 2:\n        return 0.0\n    return float(trapezoid(values, dx=1.0 / float(rate_sps)))"
+        },
+        {
+          "locator": "lines 378-421",
+          "start_line": 378,
+          "end_line": 421,
+          "text": "            if cfg.common_reference.analysis_rate_sps == source_rate:\n                reduced = power\n            else:\n                reduced = np.asarray(\n                    soxr.resample(\n                        power,\n                        float(source_rate),\n                        float(cfg.common_reference.analysis_rate_sps),\n                        quality=template_cfg.resampling_quality,\n                    ),\n                    dtype=np.float64,\n                )\n            data_path, meta_path = _cache_paths(\n                cfg, spec.workload_id, source, run\n            )\n            data_path.parent.mkdir(parents=True, exist_ok=True)\n            tmp = data_path.with_suffix(data_path.suffix + \".part\")\n            np.asarray(reduced, dtype=cfg.common_reference.cache_dtype).tofile(tmp)\n            os.replace(tmp, data_path)\n            meta = {\n                \"schema_version\": _CACHE_SCHEMA_VERSION,\n                \"signature\": signature,\n                \"workload_id\": spec.workload_id,\n                \"workload_label\": spec.label,\n                \"source\": source,\n                \"run\": int(run),\n                \"input_rate_sps\": int(source_rate),\n                \"input_samples\": int(power.size),\n                \"input_energy_j\": _integral(power, source_rate),\n                \"output_rate_sps\": int(cfg.common_reference.analysis_rate_sps),\n                \"output_samples\": int(reduced.size),\n                \"output_energy_j\": _integral(\n                    reduced, cfg.common_reference.analysis_rate_sps\n                ),\n                \"dtype\": cfg.common_reference.cache_dtype,\n                \"source_identity\": identity,\n            }\n            meta[\"energy_qc_error_pct\"] = (\n                100.0\n                * (meta[\"output_energy_j\"] - meta[\"input_energy_j\"])\n                / meta[\"input_energy_j\"]\n                if meta[\"input_energy_j\"]\n                else float(\"nan\")\n            )"
+        },
+        {
+          "locator": "lines 1424-1634",
+          "start_line": 1424,
+          "end_line": 1634,
+          "text": "def _window_starts(\n    duration_s: float,\n    total_duration_s: float,\n    count: int,\n    margin_s: float,\n    rate_sps: float,\n) -> np.ndarray:\n    duration_s = float(duration_s)\n    total_duration_s = float(total_duration_s)\n    if duration_s > total_duration_s + 1.5 / rate_sps:\n        return np.empty(0, dtype=np.float64)\n    if duration_s >= total_duration_s - 1.5 / rate_sps:\n        return np.asarray([0.0], dtype=np.float64)\n    maximum_margin = max(0.0, 0.5 * (total_duration_s - duration_s))\n    margin = min(max(0.0, margin_s), maximum_margin)\n    first = margin\n    last = total_duration_s - duration_s - margin\n    if last < first:\n        first = 0.0\n        last = total_duration_s - duration_s\n    if count <= 1 or last <= first:\n        return np.asarray([0.5 * (first + last)], dtype=np.float64)\n    starts = np.linspace(first, last, int(count), dtype=np.float64)\n    indices = np.rint(starts * rate_sps).astype(np.int64)\n    return np.unique(indices).astype(np.float64) / rate_sps\n\n\ndef _common_reference_run(\n    cfg: MultiWorkloadConfig,\n    template_cfg: Any,\n    spec: WorkloadSpec,\n    source: str,\n    run: int,\n    values: np.ndarray,\n) -> list[dict[str, Any]]:\n    source_rate = cfg.common_reference.analysis_rate_sps\n    values = np.asarray(values, dtype=np.float64)\n    # A record with N samples at fs represents the nominal interval [0, N/fs).\n    # Append one endpoint sample for the reference integral and add constant\n    # guards around the resampling source.  The guards are never reported as\n    # workload data; they only prevent FIR/phase grids from losing the first or\n    # last physical interval when the GPIO trigger is at record start.\n    total_duration = values.size / source_rate\n    reference_values = np.concatenate((values, values[-1:]))\n    reference_integral = UniformLinearIntegral(\n        reference_values,\n        sample_rate_sps=source_rate,\n        first_sample_time_s=0.0,\n    )\n    guard_samples = max(1, int(round(cfg.common_reference.guard_seconds * source_rate)))\n    padded_values = np.pad(values, (guard_samples, guard_samples), mode=\"edge\")\n    segment_start_s = -guard_samples / source_rate\n    reference: dict[float, tuple[np.ndarray, np.ndarray]] = {}\n    for duration in cfg.common_reference.window_durations_s:\n        starts = _window_starts(\n            duration,\n            total_duration,\n            cfg.common_reference.windows_per_duration,\n            cfg.common_reference.edge_margin_s,\n            source_rate,\n        )\n        if starts.size == 0:\n            continue\n        stops = np.minimum(starts + duration, total_duration)\n        energies = np.asarray(\n            [\n                reference_integral.integrate(float(start), float(stop))\n                for start, stop in zip(starts, stops)\n            ],\n            dtype=np.float64,\n        )\n        reference[float(duration)] = (starts, energies)\n\n    rows: list[dict[str, Any]] = []\n    for target_rate in cfg.common_reference.target_rates_sps:\n        if target_rate > source_rate:\n            continue\n        requested = phase_count_for_target(template_cfg, target_rate)\n        phases = max(1, min(int(requested), source_rate // int(target_rate)))\n        if target_rate * phases > source_rate:\n            continue\n        for mode in cfg.common_reference.reconstruction_modes:\n            if mode == \"anti_alias\":\n                grid, grid_rate, filter_meta = resample_phase_grid(\n                    padded_values,\n                    source_rate,\n                    target_rate,\n                    phases,\n                    template_cfg,\n                )\n            else:\n                grid, grid_rate, filter_meta = phase_only_grid(\n                    padded_values,\n                    source_rate,\n                    target_rate,\n                    phases,\n                )\n            if grid_rate != target_rate * phases:\n                raise AssertionError(\"Unexpected phase-grid rate\")\n            by_duration: dict[float, list[np.ndarray]] = {\n                duration: [] for duration in reference\n            }\n            for phase in range(phases):\n                phase_values = np.asarray(grid[phase::phases], dtype=np.float64)\n                phase_first_time = segment_start_s + phase / grid_rate\n                integral = UniformLinearIntegral(\n                    phase_values,\n                    sample_rate_sps=target_rate,\n                    first_sample_time_s=phase_first_time,\n                )\n                for duration, (starts, reference_energies) in reference.items():\n                    if duration * target_rate < cfg.common_reference.minimum_samples_per_window:\n                        continue\n                    stops = np.minimum(starts + duration, total_duration)\n                    derived = np.asarray(\n                        [\n                            integral.integrate(float(start), float(stop))\n                            for start, stop in zip(starts, stops)\n                        ],\n                        dtype=np.float64,\n                    )\n                    valid = np.isfinite(reference_energies) & (reference_energies != 0)\n                    errors = np.full(reference_energies.shape, np.nan, dtype=np.float64)\n                    errors[valid] = (\n                        (derived[valid] - reference_energies[valid])\n                        / reference_energies[valid]\n                        * 100.0\n                    )\n                    by_duration[duration].append(errors)\n                del integral\n            for duration, chunks in by_duration.items():\n                if not chunks:\n                    continue\n                errors = np.concatenate(chunks)\n                errors = errors[np.isfinite(errors)]\n                if errors.size == 0:\n                    continue\n                absolute = np.abs(errors)\n                rows.append(\n                    {\n                        \"workload_id\": spec.workload_id,\n                        \"workload_label\": spec.label,\n                        \"source\": source,\n                        \"run\": int(run),\n                        \"mode\": mode,\n                        \"target_rate_sps\": int(target_rate),\n                        \"duration_s\": float(duration),\n                        \"phase_count\": int(phases),\n                        \"window_count\": int(len(reference[duration][0])),\n                        \"observation_count\": int(errors.size),\n                        \"error_pct_median\": float(np.median(errors)),\n                        \"error_pct_q05\": quantile(errors, 0.05),\n                        \"error_pct_q95\": quantile(errors, 0.95),\n                        \"abs_error_pct_median\": float(np.median(absolute)),\n                        \"abs_error_pct_q95\": quantile(absolute, 0.95),\n                        \"abs_error_pct_max\": float(np.max(absolute)),\n                        \"filter\": str(filter_meta.get(\"filter\", \"\")),\n                    }\n                )\n            del grid\n            gc.collect()\n    del reference_integral, reference_values, padded_values\n    return rows\n\n\ndef _summarise_common_reference(\n    cfg: MultiWorkloadConfig,\n    per_run_rows: Sequence[dict[str, Any]],\n) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:\n    groups: dict[tuple[str, str, str, int, float], list[dict[str, Any]]] = {}\n    for row in per_run_rows:\n        key = (\n            str(row[\"workload_id\"]),\n            str(row[\"source\"]),\n            str(row[\"mode\"]),\n            int(row[\"target_rate_sps\"]),\n            float(row[\"duration_s\"]),\n        )\n        groups.setdefault(key, []).append(row)\n    summary: list[dict[str, Any]] = []\n    for key, rows in sorted(groups.items()):\n        workload_id, source, mode, target_rate, duration = key\n        run_q95 = np.asarray(\n            [_finite(row[\"abs_error_pct_q95\"]) for row in rows],\n            dtype=np.float64,\n        )\n        run_q95 = run_q95[np.isfinite(run_q95)]\n        run_median = np.asarray(\n            [_finite(row[\"abs_error_pct_median\"]) for row in rows],\n            dtype=np.float64,\n        )\n        run_median = run_median[np.isfinite(run_median)]\n        summary.append(\n            {\n                \"workload_id\": workload_id,\n                \"workload_label\": str(rows[0][\"workload_label\"]),\n                \"source\": source,\n                \"mode\": mode,\n                \"target_rate_sps\": target_rate,\n                \"duration_s\": duration,\n                \"physical_run_count\": int(run_q95.size),\n                \"hierarchical_abs_error_q95_pct\": quantile(run_q95, 0.95),\n                \"run_abs_error_q95_median_pct\": (\n                    float(np.median(run_q95)) if run_q95.size else float(\"nan\")\n                ),\n                \"run_abs_error_q95_q05_pct\": quantile(run_q95, 0.05),\n                \"run_abs_error_q95_q95_pct\": quantile(run_q95, 0.95),\n                \"run_abs_error_median_median_pct\": (\n                    float(np.median(run_median)) if run_median.size else float(\"nan\")\n                ),\n            }"
+        },
+        {
+          "locator": "lines 3981-3999",
+          "start_line": 3981,
+          "end_line": 3999,
+          "text": "                    ignore=(\n                        shutil.ignore_patterns(\n                            \"cache\",\n                            \"per_run_common_reference.csv\",\n                            \"*.zip\",\n                            \"*.zip.sha256\",\n                            \"*.npz\" if review else \"__never__\",\n                        )\n                    ),\n                )\n            else:\n                destination.parent.mkdir(parents=True, exist_ok=True)\n                shutil.copy2(source, destination)\n        notice = target / \"BUNDLE_NOTICE.md\"\n        notice.write_text(\n            (\n                \"# Review bundle\\n\\nLarge binary caches, per-run common-reference rows, and NPZ arrays are omitted. CSV/JSON summaries, paper figures, tables, macros, and provenance remain.\\n\"\n                if review\n                else \"# Full multi-workload analysis bundle\\n\\nThe raw Parquet measurement tree and regenerable 1-MS/s caches are not included. Aggregated NPZ arrays and all documentation artifacts are included.\\n\""
+        },
+        {
+          "locator": "lines 4106-4106",
+          "start_line": 4106,
+          "end_line": 4106,
+          "text": "    template_cfg = load_config(cfg.analysis_template_config)"
+        },
+        {
+          "locator": "lines 4187-4235",
+          "start_line": 4187,
+          "end_line": 4235,
+          "text": "        if cfg.common_reference.enabled and not artifacts_only:\n            run_rows, qc_rows = _run_common_reference_workload(\n                cfg,\n                template_cfg,\n                spec,\n                scope_cfg,\n                pairs,\n                force=force,\n            )\n            all_common_per_run.extend(run_rows)\n            all_qc_rows.extend(qc_rows)\n\n    common_root = cfg.output_root / \"common_reference\"\n    common_root.mkdir(parents=True, exist_ok=True)\n    per_run_path = common_root / \"per_run_common_reference.csv\"\n    qc_path = common_root / \"cache_energy_qc.csv\"\n    if all_common_per_run:\n        write_csv(per_run_path, all_common_per_run)\n        write_csv(qc_path, all_qc_rows)\n    elif per_run_path.is_file():\n        all_common_per_run = [\n            {key: value for key, value in row.items()} for row in _read_csv(per_run_path)\n        ]\n        for row in all_common_per_run:\n            for key in (\n                \"run\", \"target_rate_sps\", \"phase_count\", \"window_count\", \"observation_count\"\n            ):\n                if key in row:\n                    row[key] = int(float(row[key]))\n            for key in (\n                \"duration_s\", \"error_pct_median\", \"error_pct_q05\", \"error_pct_q95\",\n                \"abs_error_pct_median\", \"abs_error_pct_q95\", \"abs_error_pct_max\",\n            ):\n                if key in row:\n                    row[key] = float(row[key])\n\n    if all_common_per_run:\n        common_summary, fmin_rows, threshold_rows, worst_rows = _summarise_common_reference(\n            cfg, all_common_per_run\n        )\n        write_csv(common_root / \"common_reference_summary.csv\", common_summary)\n        write_csv(common_root / \"f_min_by_workload_duration.csv\", fmin_rows)\n        write_csv(common_root / \"highlighted_rate_thresholds.csv\", threshold_rows)\n        write_csv(common_root / \"worst_case_envelope.csv\", worst_rows)\n    else:\n        common_summary = _read_csv(common_root / \"common_reference_summary.csv\") if (common_root / \"common_reference_summary.csv\").is_file() else []\n        fmin_rows = _read_csv(common_root / \"f_min_by_workload_duration.csv\") if (common_root / \"f_min_by_workload_duration.csv\").is_file() else []\n        threshold_rows = _read_csv(common_root / \"highlighted_rate_thresholds.csv\") if (common_root / \"highlighted_rate_thresholds.csv\").is_file() else []\n        worst_rows = _read_csv(common_root / \"worst_case_envelope.csv\") if (common_root / \"worst_case_envelope.csv\").is_file() else []"
+        }
+      ]
+    },
+    {
+      "source_id": "311d790efc1799b38066",
+      "host": "twix",
+      "original_path": "external-analysis/common_reference_psd_tool_v0.8.2/commonref/config.py",
+      "member": "",
+      "original_sha256": "6cf78ea520b726cf14d1ba8caaf9b7c90a11bf453426b78bb0a0f1a31b7f3ed8",
+      "hash_scope": "whole_file",
+      "original_bytes_read": 29444,
+      "read_scope": "whole_file",
+      "stable_during_read": true,
+      "collector_source_kind": "source_or_script_not_execution_proof",
+      "sources_csv_line": 15033,
+      "collector_exported_text": "evidence_text/311d790efc1799b38066.txt",
+      "collector_exported_text_sha256": "cd0fd6dea8acbd106f8dec72b278a672ff4bc1d3280fc368d5c2b043163739c3",
+      "original_sha256_verified_by_restoring_single_terminal_newline": true,
+      "excerpts": [
+        {
+          "locator": "lines 113-128",
+          "start_line": 113,
+          "end_line": 128,
+          "text": "    resampling_quality: str\n    chunk_seconds: float\n    cache_dtype: str\n    guard_seconds: float\n    phase_plan: tuple[tuple[int | None, int], ...]\n    anti_alias: AntiAliasConfig\n    common_trace: CommonTraceConfig\n    psd: PSDConfig\n    duration_sensitivity: DurationSensitivityConfig\n    time_trace: TimeTraceConfig\n\n    def phase_count(self, target_rate: int) -> int:\n        for max_rate, phases in self.phase_plan:\n            if max_rate is None or target_rate <= max_rate:\n                return max(1, int(phases))\n        return 1"
+        },
+        {
+          "locator": "lines 287-291",
+          "start_line": 287,
+          "end_line": 291,
+          "text": "        resampling_quality=str(resampling.get(\"quality\", \"VHQ\")),\n        chunk_seconds=float(resampling.get(\"chunk_seconds\", 1.0)),\n        cache_dtype=str(resampling.get(\"cache_dtype\", \"float32\")),\n        guard_seconds=float(resampling.get(\"guard_seconds\", 3.0)),\n        phase_plan=_parse_phase_plan(resampling.get(\"phase_plan\")),"
+        }
+      ]
+    },
+    {
+      "source_id": "2233f50612a8b3086561",
+      "host": "twix",
+      "original_path": "external-analysis/common_reference_psd_tool_v0.8.2/config_gemm_fp16.yaml",
+      "member": "",
+      "original_sha256": "89b73c928e0e6440cd46be9bc148ec802fd932f7654ec3b85be1d6efd87b3b12",
+      "hash_scope": "whole_file",
+      "original_bytes_read": 6172,
+      "read_scope": "whole_file",
+      "stable_during_read": true,
+      "collector_source_kind": "configuration_not_application_proof",
+      "sources_csv_line": 15019,
+      "collector_exported_text": "evidence_text/2233f50612a8b3086561.txt",
+      "collector_exported_text_sha256": "8a823de07f64535aae31e58f92e81ea70a39dbb7f6b3bb2bf36578379d187d05",
+      "original_sha256_verified_by_restoring_single_terminal_newline": true,
+      "excerpts": [
+        {
+          "locator": "lines 24-36",
+          "start_line": 24,
+          "end_line": 36,
+          "text": "resampling:\n  quality: VHQ\n  chunk_seconds: 1.0\n  cache_dtype: float32\n  guard_seconds: 3.0\n\n  phase_plan:\n    - max_rate_sps: 2000\n      phases: 64\n    - max_rate_sps: 9400\n      phases: 32\n    - max_rate_sps: null\n      phases: 1"
+        }
+      ]
+    },
+    {
+      "source_id": "3cb261d25c58dca17610",
+      "host": "twix",
+      "original_path": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_multi_workload_auto.yaml",
+      "member": "",
+      "original_sha256": "e72b4f7913948525463185685922db199676cde2a8d03c17cfd1a000fa464493",
+      "hash_scope": "whole_file",
+      "original_bytes_read": 4255,
+      "read_scope": "whole_file",
+      "stable_during_read": true,
+      "collector_source_kind": "configuration_not_application_proof",
+      "sources_csv_line": 15126,
+      "collector_exported_text": "evidence_text/3cb261d25c58dca17610.txt",
+      "collector_exported_text_sha256": "88c005a1f0be95a14eb153934d0a78b16ca4f62947ceddb7bc126ee7a1174716",
+      "original_sha256_verified_by_restoring_single_terminal_newline": true,
+      "excerpts": [
+        {
+          "locator": "lines 1-2",
+          "start_line": 1,
+          "end_line": 2,
+          "text": "output_root: external-analysis/edge_ai_multi_workload_v1\nanalysis_template_config: external-workspace/common_reference_psd_tool_v0.8.2/config_gemm_fp16.yaml"
+        },
+        {
+          "locator": "lines 110-161",
+          "start_line": 110,
+          "end_line": 161,
+          "text": "common_reference:\n  enabled: true\n  sources:\n  - tek\n  - pico\n  source_rate_sps: 5000000\n  analysis_rate_sps: 1000000\n  target_rates_sps:\n  - 50\n  - 85\n  - 150\n  - 240\n  - 400\n  - 680\n  - 1200\n  - 2000\n  - 2500\n  - 3300\n  - 5500\n  - 9400\n  - 16000\n  - 25000\n  - 45000\n  - 80000\n  - 100000\n  - 125000\n  - 160000\n  window_durations_s:\n  - 0.02\n  - 0.05\n  - 0.1\n  - 0.2\n  - 0.5\n  - 1\n  - 2\n  - 5\n  - 10\n  windows_per_duration: 16\n  edge_margin_s: 0.0\n  guard_seconds: 0.5\n  reconstruction_modes:\n  - anti_alias\n  - phase_only\n  thresholds_pct:\n  - 0.1\n  - 0.5\n  - 1.0\n  - 2.0\n  - 5.0\n  highlighted_rate_sps: 2000\n  minimum_samples_per_window: 4\n  cache_dtype: float32"
+        }
+      ]
+    },
+    {
+      "source_id": "98bfc5bccef62f5b3761",
+      "host": "twix",
+      "original_path": "external-analysis/common_reference_psd_tool_v0.8.2/commonref/auto_pipeline.py",
+      "member": "",
+      "original_sha256": "1668dc534b9f8d5c077801f83cc260122b383496690bb11e6f93375eda25eef1",
+      "hash_scope": "whole_file",
+      "original_bytes_read": 42690,
+      "read_scope": "whole_file",
+      "stable_during_read": true,
+      "collector_source_kind": "source_or_script_not_execution_proof",
+      "sources_csv_line": 15031,
+      "collector_exported_text": "evidence_text/98bfc5bccef62f5b3761.txt",
+      "collector_exported_text_sha256": "6006f4e879f381db299efb4298fb9d78cc74cac252cf0eec260fab972e2f2ba5",
+      "original_sha256_verified_by_restoring_single_terminal_newline": true,
+      "excerpts": [
+        {
+          "locator": "lines 534-574",
+          "start_line": 534,
+          "end_line": 574,
+          "text": "def _file_stat_rows(root: Path, patterns: Sequence[str]) -> list[dict[str, Any]]:\n    if not root.is_dir():\n        return []\n    rows: list[dict[str, Any]] = []\n    for pattern in patterns:\n        for path in root.rglob(pattern):\n            if not path.is_file():\n                continue\n            stat = path.stat()\n            rows.append(\n                {\n                    \"path\": str(path.relative_to(root)),\n                    \"size\": int(stat.st_size),\n                    \"mtime_ns\": int(stat.st_mtime_ns),\n                    \"ctime_ns\": int(stat.st_ctime_ns),\n                    \"inode\": int(stat.st_ino),\n                    \"device\": int(stat.st_dev),\n                }\n            )\n    unique = {row[\"path\"]: row for row in rows}\n    return [unique[key] for key in sorted(unique)]\n\n\ndef _scope_fingerprint(cfg: AutoPipelineConfig, workload: DiscoveredWorkload) -> str:\n    scope_yaml = load_yaml(workload.scope_config)\n    idle_root = cfg.dataset_root / cfg.idle_directory_name\n    return stable_hash(\n        {\n            \"schema\": _AUTO_PIPELINE_SCHEMA_VERSION,\n            \"tool_version\": __version__,\n            \"scope_config\": scope_yaml,\n            \"dataset_files\": _file_stat_rows(\n                workload.dataset_root,\n                [\"tek_hsi_*.parquet\", \"usb_osc_data_*.parquet\", \"workload_metadata.yaml\"],\n            ),\n            \"idle_files\": _file_stat_rows(\n                idle_root,\n                [\"tek_hsi_*.parquet\", \"usb_osc_data_*.parquet\"],\n            ),\n        }\n    )"
+        },
+        {
+          "locator": "lines 695-715",
+          "start_line": 695,
+          "end_line": 715,
+          "text": "def _multi_fingerprint(\n    cfg: AutoPipelineConfig,\n    multi_config: Path,\n    scope_results: Sequence[PipelineStageResult],\n) -> str:\n    return stable_hash(\n        {\n            \"schema\": _AUTO_PIPELINE_SCHEMA_VERSION,\n            \"tool_version\": __version__,\n            \"multi_config\": load_yaml(multi_config),\n            \"scope_results\": [\n                {\n                    \"workload_id\": row.workload_id,\n                    \"source_fingerprint\": row.source_fingerprint,\n                    \"usable\": row.status in {\"completed\", \"fresh_reused\"},\n                }\n                for row in scope_results\n                if row.stage == \"scope\"\n            ],\n        }\n    )"
+        },
+        {
+          "locator": "lines 797-814",
+          "start_line": 797,
+          "end_line": 814,
+          "text": "    command = [\n        sys.executable,\n        \"-m\",\n        \"commonref.cli\",\n        \"workload-compare\",\n        \"--config\",\n        str(multi_config),\n    ]\n    if force:\n        command.append(\"--force\")\n    if artifacts_only:\n        command.append(\"--artifacts-only\")\n    if verbose:\n        command.append(\"--verbose\")\n    returncode, reason = _run_subprocess(command, cfg.tool_root)\n    status = \"completed\" if returncode == 0 else \"failed\"\n    if returncode == 0:\n        _write_multi_state(cfg, multi_config, output_root, fingerprint, command)"
+        }
+      ]
+    },
+    {
+      "source_id": "a30ef8fbfb41035a5b88",
+      "host": "twix",
+      "original_path": "external-analysis/common_reference_psd_tool_v0.8.2/commonref/__init__.py",
+      "member": "",
+      "original_sha256": "649283ccc483282e3b87fb3c53947e111014877cdd622a1e769b89b920e2d2bd",
+      "hash_scope": "whole_file",
+      "original_bytes_read": 98,
+      "read_scope": "whole_file",
+      "stable_during_read": true,
+      "collector_source_kind": "source_or_script_not_execution_proof",
+      "sources_csv_line": 15030,
+      "collector_exported_text": "evidence_text/a30ef8fbfb41035a5b88.txt",
+      "collector_exported_text_sha256": "a1662c605ec58b9364ba6a7bdd6592284078b2fc9f6ccc8c8825f3cd582bc4fa",
+      "original_sha256_verified_by_restoring_single_terminal_newline": true,
+      "excerpts": [
+        {
+          "locator": "lines 1-3",
+          "start_line": 1,
+          "end_line": 3,
+          "text": "\"\"\"Common-reference-trace and PSD analysis for calibrated power traces.\"\"\"\n\n__version__ = \"0.8.2\""
+        }
+      ]
+    },
+    {
+      "source_id": "6c93d1e09f93c2a5f1d0",
+      "host": "twix",
+      "original_path": "external-analysis/edge_ai_auto_pipeline_v1/auto_pipeline_manifest.json",
+      "member": "",
+      "original_sha256": "27f964bea60df731296be82ddc2542022a91ce9575835548517fdf03010cd536",
+      "hash_scope": "whole_file",
+      "original_bytes_read": 42430,
+      "read_scope": "whole_file",
+      "stable_during_read": true,
+      "collector_source_kind": "result_or_log_candidate",
+      "sources_csv_line": 15119,
+      "collector_exported_text": "evidence_text/6c93d1e09f93c2a5f1d0.txt",
+      "collector_exported_text_sha256": "f19afde90f0b9ad3f4d31def63673305b01c05374fe9a4090bf7c4054bb81ad1",
+      "original_sha256_verified_by_restoring_single_terminal_newline": true,
+      "excerpts": [
+        {
+          "locator": "lines 2-3",
+          "start_line": 2,
+          "end_line": 3,
+          "text": "  \"config\": \"external-workspace/common_reference_psd_tool_v0.8.2/config_auto_pipeline.yaml\",\n  \"created_utc\": \"2026-08-28T13:34:44.147274+00:00\","
+        },
+        {
+          "locator": "lines 5-5",
+          "start_line": 5,
+          "end_line": 5,
+          "text": "  \"generated_multi_workload_config\": \"external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_multi_workload_auto.yaml\","
+        },
+        {
+          "locator": "lines 67-87",
+          "start_line": 67,
+          "end_line": 87,
+          "text": "    {\n      \"command\": [\n        \"external-workspace/venvs/common-trace/bin/python\",\n        \"-m\",\n        \"commonref.cli\",\n        \"workload-compare\",\n        \"--config\",\n        \"external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_multi_workload_auto.yaml\",\n        \"--artifacts-only\"\n      ],\n      \"label\": \"Multi-workload\",\n      \"output_root\": \"external-analysis/edge_ai_multi_workload_v1\",\n      \"reason\": \"completed\",\n      \"source_fingerprint\": \"2b8c9e92da7646eb7a1b9faedabd01d9d24dfed1aad156400a2d905f76c67205\",\n      \"stage\": \"multi_workload\",\n      \"status\": \"completed\",\n      \"workload_id\": \"__multi__\"\n    }\n  ],\n  \"schema_version\": 1,\n  \"tool_version\": \"0.8.2\","
+        }
+      ]
+    }
+  ]
+}

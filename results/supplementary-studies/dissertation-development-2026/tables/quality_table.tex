@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering\small\TableSetup
+\caption{Internal paired-quality results for the nine B500 deployment identities. These $Q$ metrics are distinct from the official COCO metrics above. Recorded decisions use the unrounded data.}
+\label{tab:evaluation:yolov7_standard_quality}
+\begin{tabularx}{\linewidth}{@{}L{1.55cm}Y S[table-format=1.3] S[table-format=1.3] S[table-format=1.3]l@{}}
+\toprule
+\textbf{Setup} & \textbf{Path} & {$Q$} & {$Q^{50}$} & {$Q^{75}$} & \textbf{Quality} \\
+\midrule
+DEEPX & Split b044 & 0.460 & 0.610 & 0.498 & pass \\
+ & Accelerator Full & 0.456 & 0.605 & 0.493 & pass \\
+ & TensorRT Full & 0.461 & 0.610 & 0.499 & pass \\
+\addlinespace[.3em]
+Hailo-10H & Split b044 & 0.458 & 0.608 & 0.494 & pass \\
+ & Accelerator Full & 0.420 & 0.610 & 0.472 & fail \\
+ & TensorRT Full & 0.461 & 0.610 & 0.499 & pass \\
+\addlinespace[.3em]
+Hailo-8 & Split b044 & 0.460 & 0.607 & 0.497 & pass \\
+ & Accelerator Full & 0.415 & 0.598 & 0.467 & fail \\
+ & TensorRT Full & 0.461 & 0.610 & 0.499 & pass \\
+\bottomrule
+\end{tabularx}
+\end{table}

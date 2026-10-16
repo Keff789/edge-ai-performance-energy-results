@@ -1,0 +1,43 @@
+{
+  "version": "1.1.0",
+  "finite_candidate_filter": "only finite E,P and positive T; never filter by magnitude, scatter or eligibility",
+  "outlier_cut": false,
+  "sensitivity_excludes": false,
+  "flags_retained": true,
+  "paper_window_policy": {
+    "default": "envelope_0.5",
+    "hailo_random_pattern": "reported_legacy",
+    "llm": "envelope_0.5"
+  },
+  "paper_legacy_comparison": false,
+  "missing_window": "light-grey N/A; no invented value, no mean imputation and no fallback except the frozen Hailo Random Pattern policy",
+  "quality_note_marker": "small corner dot; no full-cell hatching",
+  "axis_units": "human-readable seconds, milliseconds, kS/s and MS/s; no exponential notation",
+  "llm": "new NPY-derived envelope results in paper views; legacy/new provenance debate remains audit-only",
+  "hailo_random_pattern": "historical explicit window in paper-selected figures",
+  "all_candidates": "all finite f=0.5 candidates remain in detailed tables and individual figures; no result-dependent exclusion",
+  "duration_standard_box": "Joris 1.5-IQR whiskers, showfliers=False; all values used in quartiles",
+  "duration_full_range_companion": "whiskers min/max, all observed extrema visible",
+  "samplerate_box": "whiskers min/max; all native rate labels; no simulated points invented",
+  "cross_sensor": "same record_id within source series; own windows, not synchronized instrument error",
+  "rate_reference": 2000,
+  "duration_reference": 600,
+  "duration_summary_metric": "per-run E/T, then group summaries",
+  "threshold_criterion": "empirical q95 absolute per-run deviation from fixed reference median",
+  "threshold_tolerances_pct": [
+    1,
+    2,
+    5
+  ],
+  "threshold_persistence": "all subsequent observed settings; >=2 levels; n>=2 per group",
+  "threshold_is_accuracy_requirement": false,
+  "reference_is_ground_truth": false,
+  "controlled_rate_evidence": "two complementary GEMM-FP16 sessions included as a separate diagnostic figure; no retroactive correction",
+  "summary_pooling": "no pooling physical repetitions across workloads or source roots",
+  "summary_colour": "based on user-supplied colour PSD examples; no claim of original PSD style source",
+  "future_gpu": "requires an updated offline-result snapshot; rerunning this frozen package alone does not discover new raw measurements",
+  "raw_data_reads": 0,
+  "new_measurements": 0,
+  "calibration_changes": 0,
+  "writes_to_old_cache": 0
+}
