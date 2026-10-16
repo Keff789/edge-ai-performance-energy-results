@@ -149,6 +149,110 @@ def ratio(a, b):
     return a / b if positive(a) and positive(b) else None
 
 
+def select_fastest_deployments(rows, model_order):
+    """Select one absolute-FPS split and its two concrete Full baselines.
+
+    Selection uses the unrounded stored cohort FPS, across Native and Generic.
+    Energy, quality, endpoint and admission flags never select or veto a point.
+    Both table views and both new figures consume these same joined rows.
+    """
+    observed_models = {r['model_id'] for r in rows}
+    models = list(dict.fromkeys(m for m in model_order if m in observed_models))
+    models += sorted(observed_models - set(models))
+
+    def fastest(candidates):
+        valid = [r for r in candidates if positive(r.get('fps'))]
+        return (min(valid, key=lambda r: (-r['fps'], r['uid'])) if valid else None,
+                len(valid))
+
+    def host(row):
+        if not row:
+            return None
+        return row.get('physical_host') or HOSTS.get(row.get('setup_id'), row.get('setup_id')) or None
+
+    def safe_record(value):
+        # Strict JSON represents nonfinite missing observations as null. The
+        # source rows remain unchanged; missing-energy reasons stay explicit.
+        if isinstance(value, dict):
+            return {k: safe_record(v) for k, v in value.items()}
+        if isinstance(value, (list, tuple)):
+            return [safe_record(v) for v in value]
+        if isinstance(value, float) and not math.isfinite(value):
+            return None
+        return value
+
+    def energy_reason(value):
+        if value is None:
+            return 'missing_energy_j_per_image'
+        if not isinstance(value, (int, float)) or isinstance(value, bool):
+            return 'invalid_energy_j_per_image'
+        if not math.isfinite(value):
+            return 'nonfinite_energy_j_per_image'
+        if value <= 0:
+            return 'nonpositive_energy_j_per_image'
+        return None
+
+    def selected_fields(prefix, selected, missing_reason):
+        record = selected or {}
+        energy = record.get('energy_j_per_image')
+        reason = energy_reason(energy) if selected else missing_reason
+        return {
+            prefix + '_uid': record.get('uid'),
+            prefix + '_runner': record.get('runner'),
+            prefix + '_backend': record.get('backend'),
+            prefix + '_setup': record.get('setup_id'),
+            prefix + '_physical_host': host(selected),
+            prefix + '_case': record.get('case_id'),
+            prefix + '_fps': record.get('fps'),
+            prefix + '_energy_j_per_image': energy if positive(energy) else None,
+            prefix + '_mj_per_image': 1000 * energy if positive(energy) else None,
+            prefix + '_missing_reason': missing_reason,
+            prefix + '_energy_missing_reason': reason,
+            # All recorded runtime/endpoints, quality, classes, flags and
+            # provenance remain inspectable in JSON and the JSON-valued CSV cell.
+            prefix + '_record': safe_record(selected),
+        }
+
+    selected = []
+    for model in models:
+        group = [r for r in rows if r['model_id'] == model]
+        split, split_n = fastest([r for r in group if r['kind'] == 'split'
+                                  and r['runner'] in {'native', 'generic'}])
+        fulls = [r for r in group if r['kind'] == 'full']
+        global_full, global_n = fastest(fulls)
+        split_host = host(split)
+        host_full, host_n = fastest([r for r in fulls if split_host is not None
+                                    and host(r) == split_host])
+        split_reason = None if split else 'no_valid_positive_fps_split'
+        global_reason = None if global_full else 'no_valid_positive_fps_full'
+        host_reason = (None if host_full else
+                       'no_selected_split' if split is None else
+                       'missing_split_host_identity' if split_host is None else
+                       'no_valid_positive_fps_full_on_split_host')
+        row = {
+            'model': model,
+            'split_candidate_count': split_n,
+            'global_full_candidate_count': global_n,
+            'host_full_candidate_count': host_n,
+            **selected_fields('split', split, split_reason),
+            **selected_fields('global_full', global_full, global_reason),
+            **selected_fields('host_full', host_full, host_reason),
+            'selection': 'retrospective_maximum_unrounded_observed_FPS; native_and_generic; exact_ties_uid_ascending',
+            'comparison_scope': 'observed deployments; no equal-quality, endpoint-equivalence or isolated-split-effect claim',
+        }
+        for name in ['global', 'host']:
+            prefix = name + '_full'
+            row['R_' + name] = ratio(row['split_fps'], row[prefix + '_fps'])
+            row['G_' + name] = ratio(row[prefix + '_energy_j_per_image'], row['split_energy_j_per_image'])
+            energy_ratio = ratio(row['split_energy_j_per_image'], row[prefix + '_energy_j_per_image'])
+            row['energy_ratio_' + name] = energy_ratio
+            row['delta_E_' + name + '_pct'] = 100 * (energy_ratio - 1) if energy_ratio is not None else None
+        if row['R_global'] is not None and row['R_host'] is not None:
+            assert row['R_global'] <= row['R_host'], ('Full baseline ordering', model)
+        selected.append(row)
+    return selected
+
+
 def dist(v, prefix):
     v = [x for x in v if numeric(x)]
     return {prefix + '_' + name: quantile(v, q) for name, q in [('min', 0), ('q25', .25), ('median', .5), ('q75', .75), ('max', 1)]}
@@ -440,6 +544,9 @@ def build(inputs, output, config):
         for rank,r in enumerate(sorted(rs,key=lambda r:(-r['speedup'],r['split_uid']))[:config['table3_top_n']],1):
             top.append(dict(r,rank=rank,native_candidate_count=len(rs),selection='retrospective_top_FPS_ratio; energy never selects or vetoes'))
     emit(T/'table3_top2_native',top)
+    fastest_deployments = select_fastest_deployments(data, config['model_order'])
+    emit(T/'table3_fastest_deployments', fastest_deployments)
+    emit(T/'fastest_split_baselines', fastest_deployments)
     t2=[]
     for (model,),rs in grouped(fulls,['model_id']):
         trt=[r for r in rs if r['backend']=='native_full_tensorrt']

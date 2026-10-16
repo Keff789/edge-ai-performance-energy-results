@@ -2,7 +2,7 @@
 
 [Result overview](../README.md) · [Tables](../tables/README.md) · [Full captions](../CAPTIONS.md)
 
-All 21 current figure families are included. Each has a vector PDF/SVG and a PNG preview. Throughput is images/s and calibrated energy includes the host. The figures compare observed deployments with their recorded quality and timed-work differences.
+All 23 current figure families are included. Each has a vector PDF/SVG and a PNG preview. Throughput is images/s and calibrated energy includes the host. The figures compare observed deployments with their recorded quality and timed-work differences.
 
 ## Complete model views and empirical Pareto fronts
 
@@ -14,7 +14,25 @@ All 21 current figure families are included. Each has a vector PDF/SVG and a PNG
 - [YOLO26s: performance, energy and dataset quality](models/yolo26s.md)
 - [YOLOv7: performance, energy and dataset quality](models/yolov7_paper.md)
 
-The seven model views retain all observations, both Full alternatives and dataset quality. Outlines mark the joint performance–energy front within each model/setup; lines connect discrete front coordinates only. [All 450 points and front flags](../tables/PARETO_POINTS.csv) distinguish the 33 joint front points from runner-specific split fronts. See [methods](../METHODS.md) for dominance and interpretation limits.
+The 7 model views retain all observations, both Full alternatives and dataset quality. Outlines mark the joint performance–energy front within each model/setup; lines connect discrete front coordinates only. [All 450 points and front flags](../tables/PARETO_POINTS.csv) distinguish the 33 joint front points from runner-specific split fronts. See [methods](../METHODS.md) for dominance and interpretation limits.
+
+[Recommended Table 3: global fastest Full and split](../tables/table3_fastest_deployments.md) · [Same split, two Full baselines](../tables/fastest_split_baselines.md) · [Supplementary relative same-host Top-2](../tables/table3_top2_native.md)
+
+## Baseline effect: the same selected split, two Full references
+
+![Baseline effect: the same selected split, two Full references](fastest_split_baseline_comparison.png)
+
+[PDF](fastest_split_baseline_comparison.pdf) · [SVG](fastest_split_baseline_comparison.svg) · [PNG](fastest_split_baseline_comparison.png)
+
+Same selected split, different Full baselines: each row reuses the globally fastest observed split from table3_fastest_deployments, across Native and Generic runners. Blue circles divide its FPS by the globally fastest observed Full; open orange diamonds use the fastest Full on that split's physical host. Both markers remain at their exact ratio coordinates, including overlap. Labels show factors to two decimal places; table exports retain unrounded ratios and absolute FPS. The linear reference at one denotes equal throughput. Each connecting segment illustrates only the changed denominator, not time or a measured optimization step. Selection is retrospective over the observed candidate set; quality, timed endpoints and parallel execution can differ. Small differences are not significance tests. Missing candidates or baselines are recorded explicitly.
+
+## Fastest deployments: throughput and energy relative to global Full
+
+![Fastest deployments: throughput and energy relative to global Full](fastest_deployment_tradeoff.png)
+
+[PDF](fastest_deployment_tradeoff.pdf) · [SVG](fastest_deployment_tradeoff.svg) · [PNG](fastest_deployment_tradeoff.png)
+
+One point per model compares the throughput-selected split with the throughput-selected global Full from table3_fastest_deployments. The horizontal coordinate is split FPS / Full FPS; the vertical coordinate is split J/image / Full J/image, always using exactly the same Full UID. Right of one is faster, below one uses less energy per completed image. Energy is calibrated host-inclusive mean per-repeat E/N; it never changes the FPS selection. Text alone is displaced for readability; measured coordinates are unchanged. Circles denote Native splits and triangles Generic splits; color carries no quality-pass meaning. This is a retrospective overview of fastest observed configurations, not the full Pareto front or a minimum-energy selection. Quality, timed endpoints and parallel execution differ; quadrants do not establish equal accuracy or a causally isolated efficiency gain. Small differences are not significance tests. Models missing a required ratio remain in the tables and omission records.
 
 ## All Full deployments: throughput
 

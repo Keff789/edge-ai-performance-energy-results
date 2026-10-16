@@ -1,4 +1,4 @@
-# Table 3: Native configurations with the largest observed speedup
+# Supplement: Top-2 Native splits by largest relative same-host speedup
 
 Two Native splits per model ranked from unrounded FPS ratios against the fastest measured Full on the same host; ties use ascending UID. Energy does not alter this ranking. G_n = energy of that same Full / split energy. Selection is retrospective; quality and endpoint differences remain in the dataset.
 

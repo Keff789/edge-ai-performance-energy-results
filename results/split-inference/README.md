@@ -4,6 +4,10 @@
 
 [All figures](figures/README.md) · [Tables](tables/README.md) · [Complete CSV](data/PAPER_DATASET.csv) · [Findings](FINDINGS.md) · [Methods](METHODS.md)
 
+The recommended [Table 3: global fastest Full and split](tables/table3_fastest_deployments.md) selects the highest observed unrounded FPS per model across all measured setups, including both split runners, and reports the energy of those exact configurations. [The same selected split with two Full baselines](tables/fastest_split_baselines.md) adds the fastest Full on its own physical host. Global fastest describes the strongest observed alternative when setup choice is open; same-host describes that split relative to its own host's Full options. The supplementary [Top-2 Native splits by relative same-host speedup](tables/table3_top2_native.md) retains its historical selection method and numerical results and may select different splits.
+
+The [baseline-effect figure](figures/fastest_split_baseline_comparison.pdf) shows the denominator change for the same split. The [fastest-deployment throughput–energy figure](figures/fastest_deployment_tradeoff.pdf) compares throughput and energy with the same global Full UID. Both are generated from the table selections. The second is an overview of throughput-selected deployments; the complete observed-space Pareto views remain below.
+
 ![All Full throughput observations](figures/01_full_throughput.png)
 
 [Throughput PDF](figures/01_full_throughput.pdf) · [SVG](figures/01_full_throughput.svg) · [Full energy](figures/02_full_energy.pdf)
@@ -16,7 +20,7 @@ Throughput is the stored repeat median in images/s. Energy is the mean of calibr
 
 Native is faster in 186/204 paired points and uses less energy in 196/204; 186/204 improve both. Against the fastest measured Full on the same host, 105/204 Native splits are faster. The [findings](FINDINGS.md) retain the detailed summaries. These are retrospective deployment comparisons. They preserve differences in timed work: Native detector splits use an oracle outside timing, while Generic detector splits include decoded NMS. Hailo Full accuracy losses and 53 discrepancies between cached quality loss and selected numerical quality evidence remain visible. Historical source-version gaps and three unknown old clock profiles remain documented in [methods](METHODS.md).
 
-Recreate the numerical exports and all 21 figures from compact inputs with [these offline instructions](../../scripts/split-inference/README.md). This does not repeat sensor acquisition, inference or dataset evaluation. Raw traces, models and datasets are outside its scope.
+Recreate the numerical exports, both fastest-deployment tables and all 23 figures from compact inputs with [these offline instructions](../../scripts/split-inference/README.md). The same invocation regenerates methods, findings, captions and gallery/table indices. This does not repeat sensor acquisition, inference or dataset evaluation. Raw traces, models and datasets are outside its scope.
 
 Source: the active `deepx_native_a4_20261015` selection replaces performance and energy for exactly 68 DeepX Native splits and seven DeepX Native Full configurations. It retains the 375 other direct observations and all 450 original quality selections from the completed [Refresh16/Pareto analysis](https://github.com/Keff789/onnx-splitpoint-results/tree/380dfa09aa6740acdc71908cb6e5dd5c8fc115ad/results/evaluation/paper_after_refresh16_20261013). The 225 selected performance repeats and 225 valid calibrated energy repeats include accepted reused cohorts; existing dataset quality was not remeasured.
 

@@ -11,9 +11,10 @@ a = p.parse_args()
 
 def exports(root, include_figures):
     files = list((root/'data').glob('*.json')) + list((root/'data').glob('*.csv'))
-    files += [f for f in (root/'tables').iterdir() if f.is_file() and f.name != 'README.md']
+    files += [f for f in (root/'tables').iterdir() if f.is_file()]
     if include_figures:
         files += [f for f in (root/'figures').iterdir() if f.is_file() and f.suffix in {'.png', '.pdf', '.svg', '.json'}]
+        files += list((root/'figures').rglob('*.md'))
         files += [root/n for n in ['CAPTIONS.md', 'METHODS.md', 'METHODS_PARAGRAPH.tex', 'FINDINGS.md']]
     return {str(f.relative_to(root)): f.read_bytes() for f in files}
 

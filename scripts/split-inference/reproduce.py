@@ -27,6 +27,8 @@ def validate_config(c):
                 'point_summary':'median',
                 'equal_model_aggregation':'median_points_per_model_setup_then_mean_setups_per_model_then_mean_models',
                 'tie_break':'uid_ascending',
+                'fastest_split_selection':'maximum_observed_fps_native_and_generic_all_setups',
+                'fastest_full_selection':'maximum_observed_fps_concrete_full_uid',
                 'pareto_scope':'model_setup_all_observed_deployments',
                 'pareto_objectives':{'fps':'maximize','energy_mj_per_image':'minimize'},
                 'pareto_quality_veto':False}
@@ -37,6 +39,152 @@ def validate_config(c):
     assert isinstance(c['table3_top_n'],int) and c['table3_top_n']>0
     assert set(c['sensitivities']) <= {'broad','both_reference_close','original_strict_flags','exclude_administrative_receipt_gaps'}
     assert set(c['sensitivity_energy_bases']) <= {'raw','existing_comparison'}
+    assert isinstance(c['model_order'], list) and all(isinstance(m, str) for m in c['model_order'])
+    assert len(c['model_order']) == len(set(c['model_order'])), 'Duplicate configured model'
+
+
+def format_fastest_tables(rows):
+    """Readable views of the shared absolute-FPS selections; round only here."""
+    labels={'mobilenet_v3_large':'MobileNetV3-L','regnet_x_1_6gf':'RegNet-X 1.6GF','resnet50':'ResNet-50',
+            'yolo11l':'YOLO11l','yolo26m':'YOLO26m','yolo26s':'YOLO26s','yolov7_paper':'YOLOv7'}
+    backends={'native_full_tensorrt':'TRT','native_full_deepx':'DeepX',
+              'native_full_hailo8':'H8','native_full_hailo10h':'H10'}
+
+    def fmt(value, places=0):
+        return 'NA' if value is None else f'{value:.{places}f}'
+
+    def tex(value):
+        return str(value).replace('_', r'\_').replace('%', r'\%').replace('&', r'\&')
+
+    def deployment(row, prefix, latex=False):
+        if row[prefix + '_uid'] is None:
+            return 'NA'
+        setup = row[prefix + '_setup'] or row[prefix + '_physical_host'] or 'unknown'
+        if prefix == 'split':
+            parts = [row['split_runner'].title(), setup + '/' + (row['split_case'] or 'unknown cut')]
+        else:
+            backend = row[prefix + '_backend'] or 'unknown backend'
+            parts = [backends.get(backend, backend), '(' + setup + ' host)']
+        if latex:
+            return r'\shortstack[l]{' + r'\\'.join(tex(part) for part in parts) + '}'
+        return ' '.join(parts)
+
+    common = ('Selection uses unrounded observed cohort FPS across all setups and Native/Generic splits; '
+              'exact ties use ascending UID. Energy is the mean calibrated host-inclusive J/image, displayed as mJ/image, '
+              'of each exact FPS-selected UID. Energy and quality never veto the FPS selection. '
+              'NA denotes a missing candidate or metric, with explicit reasons and full original records in CSV/JSON. '
+              'These retrospective deployment comparisons do not imply equal quality, equal timed endpoints, '
+              'an isolated split effect or statistically significant differences.')
+    a_caption = ('Globally fastest observed Full versus globally fastest observed split, one row per model. '
+                 'R_global = split FPS / global Full FPS; delta_E_global (%) = 100 (split energy / global Full energy - 1). '
+                 + common)
+    b_caption = ('The SAME split selected in Table 3, compared with the fastest Full on its physical host and '
+                 'with the globally fastest Full. This table does not reselect the largest relative gain. '
+                 'R_host and R_global use the explicitly named Full denominators. ' + common)
+    definitions = [
+        ('table3_fastest_deployments', 'Table 3: Globally fastest observed deployments', a_caption,
+         ['Model','Fastest Full (backend, host)','Full FPS','Full mJ/image','Fastest split (runner, setup/cut)',
+          'Split FPS','Split mJ/image','R_global','delta_E_global (%)'],
+         'l l r r l r r r r', 'tab:fastest-deployments'),
+        ('fastest_split_baselines', 'Selected fastest split: same-host and global Full baselines', b_caption,
+         ['Model','Selected split','Split FPS','Fastest same-host Full','Host Full FPS',
+          'Globally fastest Full','Global Full FPS','R_host','R_global'],
+         'l l r l r l r r r', 'tab:fastest-split-baselines'),
+    ]
+    output = {}
+    tex_headers = {
+        'Fastest Full (backend, host)': r'\shortstack{Fastest Full\\(backend, host)}',
+        'Fastest split (runner, setup/cut)': r'\shortstack{Fastest split\\(runner, setup/cut)}',
+        'Full mJ/image': r'\shortstack{Full\\mJ/image}',
+        'Split mJ/image': r'\shortstack{Split\\mJ/image}',
+        'Fastest same-host Full': r'\shortstack{Fastest Full\\same host}',
+        'Host Full FPS': r'\shortstack{Host Full\\FPS}',
+        'Globally fastest Full': r'\shortstack{Globally fastest\\Full}',
+        'Global Full FPS': r'\shortstack{Global Full\\FPS}',
+        'R_global': r'$R_{\mathrm{global}}$',
+        'R_host': r'$R_{\mathrm{host}}$',
+        'delta_E_global (%)': r'\shortstack{$\Delta E_{\mathrm{global}}$\\(\%)}',
+    }
+    for name, title, caption, headers, columns, label in definitions:
+        md = ['# ' + title, '', caption, '', '| ' + ' | '.join(headers) + ' |',
+              '| ' + ' | '.join('---' if c == 'l' else '---:' for c in columns.split()) + ' |']
+        tx = [r'% Requires booktabs. Input inside a table/table* environment after its caption.',
+              '% ' + caption, r'\label{' + label + '}',
+              r'\begingroup\small\setlength{\tabcolsep}{3pt}',
+              r'\begin{tabular}{' + columns + '}', r'\toprule',
+              ' & '.join(tex_headers.get(h, tex(h)) for h in headers) + r' \\', r'\midrule']
+        for row in rows:
+            model = labels.get(row['model'], row['model'])
+            if name == 'table3_fastest_deployments':
+                values = [model, deployment(row, 'global_full'), fmt(row['global_full_fps']),
+                          fmt(row['global_full_mj_per_image'], 2), deployment(row, 'split'),
+                          fmt(row['split_fps']), fmt(row['split_mj_per_image'], 2),
+                          fmt(row['R_global'], 2), fmt(row['delta_E_global_pct'], 1)]
+            else:
+                values = [model, deployment(row, 'split'), fmt(row['split_fps']),
+                          deployment(row, 'host_full'), fmt(row['host_full_fps']),
+                          deployment(row, 'global_full'), fmt(row['global_full_fps']),
+                          fmt(row['R_host'], 2), fmt(row['R_global'], 2)]
+            md.append('| ' + ' | '.join(values) + ' |')
+            tex_values = [tex(value) for value in values]
+            deployment_columns = ([(1, 'global_full'), (4, 'split')]
+                                  if name == 'table3_fastest_deployments' else
+                                  [(1, 'split'), (3, 'host_full'), (5, 'global_full')])
+            for column, prefix in deployment_columns:
+                tex_values[column] = deployment(row, prefix, latex=True)
+            tx.append(' & '.join(tex_values) + r' \\')
+        tx += [r'\bottomrule', r'\end{tabular}', r'\endgroup']
+        output[name + '.md'] = '\n'.join(md) + '\n'
+        output[name + '.tex'] = '\n'.join(tx) + '\n'
+    return output
+
+
+def format_table_index(output):
+    """Keep the table catalog part of full and numeric-only reproduction."""
+    tables = [
+        ('table3_fastest_deployments', 'Recommended Table 3: globally fastest Full versus globally fastest split'),
+        ('fastest_split_baselines', 'Same selected fastest split: same-host and global Full baselines'),
+        ('baseline_selection', 'Fastest Full and separately minimum-energy Full'),
+        ('boundary_cases', 'Actual timed-work boundaries and limits'),
+        ('coverage', 'Model/setup/runner coverage'),
+        ('energy_repeats', 'Every recorded energy repeat'),
+        ('equal_model_summary', 'Equal model weighting'),
+        ('full_configurations', 'All host-specific Full deployments'),
+        ('model_setup_optima', 'Fastest and minimum-energy configurations by group'),
+        ('native_generic_groups', 'Native generic groups'),
+        ('native_generic_models', 'Native generic models'),
+        ('native_generic_pairs', 'All Native/Generic pairs'),
+        ('native_split_full_pairs', 'All Native split/Full comparisons'),
+        ('negative_quality', 'Negative quality observations'),
+        ('PARETO_POINTS', 'All points: joint model/setup and separate runner fronts'),
+        ('pareto', 'Descriptive two-objective front within recorded work cohorts'),
+        ('pipeline_repeats', 'Recorded pipeline repeat metadata'),
+        ('quality_comparison', 'Quality comparison'),
+        ('repeat_uncertainty', 'Repeat counts, ranges, dispersion and energy intervals'),
+        ('sensitivity', 'Quality, original flags and energy-basis sensitivities'),
+        ('split_full_groups', 'Split full groups'),
+        ('split_full_pairs', 'All split/Full comparisons'),
+        ('table2_full', 'Full model/backend summary (all host values retained)'),
+        ('table3_top2_native', 'Supplement: Top-2 Native splits by relative same-host speedup (historical selection method)'),
+    ]
+    md = ['# Split-inference tables', '',
+          '[Result overview](../README.md) · [Figure gallery](../figures/README.md)', '',
+          'CSV is the convenient interchange format; JSON preserves structured fields and exact identities. '
+          'Energy is J/image unless a column explicitly uses mJ/image, throughput is images/s, duration is s and power is W. '
+          'Quality values are fractions; percentage-point columns are explicitly named. '
+          'Existing counts, exclusions and source identifiers are retained.', '',
+          'Table 3 and the baseline supplement share the same absolute fastest observed split per model. '
+          'The supplement changes only the Full denominator. The separately retained historical Top-2 method '
+          'ranks relative same-host speedup and can select different splits.', '',
+          '| Table | CSV | JSON | Readable / LaTeX |', '|---|---|---|---|']
+    for name, title in tables:
+        readable = ('[md](' + name + '.md) · [tex](' + name + '.tex)'
+                    if (output/'tables'/(name + '.md')).exists() else '—')
+        md.append(f'| {title} | [CSV]({name}.csv) | [JSON]({name}.json) | {readable} |')
+    md += ['', 'The complete [deployment dataset](../data/PAPER_DATASET.csv), '
+           '[metric sources](../data/METRIC_SOURCES.csv), [measurement generations](../data/MEASUREMENT_GENERATIONS.csv) '
+           'and [summary](../data/summary.json) use the same broad selection.']
+    (output/'tables'/'README.md').write_text('\n'.join(md) + '\n')
 
 
 def format_tables(output):
@@ -62,7 +210,7 @@ def format_tables(output):
         tx.append(' & '.join(tv)+r' \\')
     tx += [r'\bottomrule',r'\end{tabular}']
     (T/'table2_full.md').write_text('\n'.join(md)+'\n');(T/'table2_full.tex').write_text('\n'.join(tx)+'\n')
-    md=['# Table 3: Native configurations with the largest observed speedup','',
+    md=['# Supplement: Top-2 Native splits by largest relative same-host speedup','',
         'Two Native splits per model ranked from unrounded FPS ratios against the fastest measured Full on the same host; ties use ascending UID. Energy does not alter this ranking. G_n = energy of that same Full / split energy. Selection is retrospective; quality and endpoint differences remain in the dataset.','',
         '| Model | Rank | Setup/cut | Full | Full FPS | Split FPS | Speedup | Split mJ/image | G_n |',
         '|---|---:|---|---|---:|---:|---:|---:|---:|']
@@ -119,6 +267,11 @@ def format_tables(output):
         tx.append(' & '.join(['{NA}' if x=='NA' else tex(x) for x in v])+r' \\')
     tx += [r'\bottomrule',r'\end{longtable}',r'\endgroup']
     (T/'native_generic_groups.md').write_text('\n'.join(md)+'\n');(T/'native_generic_groups.tex').write_text('\n'.join(tx)+'\n')
+    fastest = read(T/'table3_fastest_deployments.json')
+    assert fastest == read(T/'fastest_split_baselines.json'), 'Both tables must share the selected splits and baselines'
+    for name, content in format_fastest_tables(fastest).items():
+        (T/name).write_text(content)
+    format_table_index(output)
 
 
 def main():

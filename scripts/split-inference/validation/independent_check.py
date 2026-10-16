@@ -256,6 +256,83 @@ def check_pareto(paper, output):
                       'algorithm': 'exhaustive pairwise comparison of original unrounded PAPER_DATASET coordinates'}
 
 
+def check_fastest_deployments(source, paper, fps, energy, output):
+    """Select absolute maxima independently from the original repeat aggregates.
+
+    Both exports and every ratio must name the actual measured denominators;
+    neither agreement between two tables nor agreement with plots is sufficient.
+    """
+    table_a = read(output/'tables/table3_fastest_deployments.json')
+    table_b = read(output/'tables/fastest_split_baselines.json')
+    assert table_a == table_b, 'A/B must share the exact selected splits and Full references'
+    selected = unique(table_a, 'model')
+    models = {r['model_id'] for r in source.values()}
+    order = read(output/'data/analysis_config.json')['model_order']
+    expected_order = [m for m in order if m in models] + sorted(models-set(order))
+    assert [r['model'] for r in table_a] == expected_order
+    host_names = {'DeepX':'orin_nx_deepx_m1_01', 'H8':'orin_nx_hailo8_01',
+                  'H10':'orin_nx_hailo10_01'}
+
+    def valid(value):
+        return finite_number(value) and value > 0
+
+    def host(uid):
+        return host_names.get(source[uid]['setup_id'], source[uid]['setup_id'])
+
+    def maximum(ids):
+        candidates = [u for u in ids if valid(fps[u])]
+        return min(candidates, key=lambda u: (-fps[u], u)) if candidates else None
+
+    def divide(a, b):
+        return a/b if valid(a) and valid(b) else None
+
+    for model in expected_order:
+        row = selected[model]
+        split = maximum(u for u,r in source.items()
+                        if r['model_id']==model and r['kind']=='split'
+                        and r['runner'] in {'native','generic'})
+        full_ids = [u for u,r in source.items() if r['model_id']==model and r['kind']=='full']
+        global_full = maximum(full_ids)
+        host_full = maximum(u for u in full_ids if split and host(u)==host(split))
+        for prefix,uid in [('split',split), ('global_full',global_full), ('host_full',host_full)]:
+            assert row[prefix+'_uid'] == uid, ('Absolute FPS selection',model,prefix)
+            if uid is None:
+                assert row[prefix+'_missing_reason'], ('Missing candidate must be explicit',model,prefix)
+                continue
+            assert row[prefix+'_record'] == paper[uid], ('Selected metadata/flags changed',uid)
+            for field, original in [('setup','setup_id'),('case','case_id'),('backend','backend'),('runner','runner')]:
+                assert row[prefix+'_'+field] == source[uid][original], (uid,field)
+            assert row[prefix+'_physical_host'] == host(uid), ('Physical host',uid)
+            close(row[prefix+'_fps'],fps[uid],uid+' fastest FPS')
+            close(row[prefix+'_energy_j_per_image'],energy[uid],uid+' selected Full/split energy')
+            close(row[prefix+'_mj_per_image'],1000*energy[uid] if valid(energy[uid]) else None,uid+' selected mJ/image')
+        sf = fps.get(split)
+        se = energy.get(split)
+        for scope,uid in [('global',global_full),('host',host_full)]:
+            bf, be = fps.get(uid), energy.get(uid)
+            er = divide(se,be)
+            expected = {'R_'+scope:divide(sf,bf), 'G_'+scope:divide(be,se),
+                        'energy_ratio_'+scope:er,
+                        'delta_E_'+scope+'_pct':100*(er-1) if er is not None else None}
+            for field,value in expected.items():
+                close(row[field],value,model+' '+field+' from exact UIDs')
+        if row['R_host'] is not None:
+            assert row['R_global'] <= row['R_host'], ('Global maximum denominator',model)
+        if global_full == host_full:
+            for metric in ['R','G','energy_ratio']:
+                assert row[metric+'_global'] == row[metric+'_host'], ('Identical denominator',model,metric)
+            assert row['delta_E_global_pct'] == row['delta_E_host_pct']
+
+    # Check complete CSV payloads, including serialized original metadata.
+    for name,rows in [('table3_fastest_deployments',table_a), ('fastest_split_baselines',table_b)]:
+        with (output/'tables'/(name+'.csv')).open(newline='') as stream:
+            csv_rows = list(csv.DictReader(stream))
+        expected_csv = [{k:json.dumps(v,sort_keys=True) if isinstance(v,(dict,list,tuple))
+                        else '' if v is None else str(v) for k,v in row.items()} for row in rows]
+        assert csv_rows == expected_csv, ('CSV/JSON agreement',name)
+    return selected
+
+
 def check(inputs, output, baseline_inputs=None, canonical_inputs=None):
     source = unique(read(inputs/'cases.json'))
     paper = unique(read(output/'data/PAPER_DATASET.json'))
@@ -443,6 +520,7 @@ def check(inputs, output, baseline_inputs=None, canonical_inputs=None):
                 expected=statistics.mean(vals[metric] for (m,s),vals in medians.items() if s==row['setup'])
             close(row[metric],expected,row['setup']+' equal-model '+metric)
 
+    fastest_deployments = check_fastest_deployments(source, paper, fps, energy, output)
     summary=read(output/'data/summary.json')
     # Independently select every split optimum; plot/table agreement alone is insufficient.
     optima=read(output/'tables/model_setup_optima.json')
@@ -478,6 +556,57 @@ def check(inputs, output, baseline_inputs=None, canonical_inputs=None):
     if figure_path.exists():
         figures=read(figure_path)
         figure_count=len(figures)
+        baseline_figure = figures['fastest_split_baseline_comparison']
+        tradeoff_figure = figures['fastest_deployment_tradeoff']
+        for figure in [baseline_figure, tradeoff_figure]:
+            assert figure['source_table'] == 'tables/table3_fastest_deployments.json'
+            assert figure['reference_x'] == 1
+        assert baseline_figure['x_scale'] == 'linear'
+        assert tradeoff_figure['reference_y'] == 1
+        assert tradeoff_figure['x_coordinate'] == 'R_global'
+        assert tradeoff_figure['y_coordinate'] == 'energy_ratio_global'
+        assert [p['model'] for p in baseline_figure['points']] == list(fastest_deployments)
+        expected_missing = set()
+        identity_fields = ['split_uid','global_full_uid','host_full_uid',
+                           'split_setup','split_case','split_runner']
+        for index,point in enumerate(baseline_figure['points']):
+            row = fastest_deployments[point['model']]
+            assert point['y'] == index
+            assert all(point[k] == row[k] for k in identity_fields)
+            missing = set()
+            for scope in ['global','host']:
+                metric = 'R_'+scope
+                assert point[metric] == row[metric], ('Baseline plot coordinate',point['model'],metric)
+                present = row[metric] is not None
+                assert point[scope+'_plotted'] is present
+                if not present:
+                    missing.add(metric)
+                    expected_missing.add((point['model'],scope,metric))
+            assert {m['metric'] for m in point['missing_values']} == missing
+            assert all(m['reason'] for m in point['missing_values'])
+        assert {(p['model'],p['baseline'],p['coordinate']) for p in baseline_figure['omitted_points']} == expected_missing
+        assert all(p['reason'] for p in baseline_figure['omitted_points'])
+        plotted = unique(tradeoff_figure['points'], 'model')
+        omitted = unique(tradeoff_figure['omitted_points'], 'model')
+        expected_plotted = {m for m,r in fastest_deployments.items()
+                            if r['R_global'] is not None and r['energy_ratio_global'] is not None}
+        assert set(plotted) == expected_plotted
+        assert set(omitted) == set(fastest_deployments)-expected_plotted
+        for model,point in {**plotted,**omitted}.items():
+            row = fastest_deployments[model]
+            assert all(point[k] == row[k] for k in identity_fields)
+            assert point['x'] == point['R_global'] == row['R_global'], ('Tradeoff FPS coordinate',model)
+            assert point['y'] == point['energy_ratio_global'] == row['energy_ratio_global'], ('Tradeoff energy coordinate',model)
+            if model in omitted:
+                assert {v['metric'] for v in point['missing_values']} == {
+                    k for k in ['R_global','energy_ratio_global'] if row[k] is None}
+                assert all(v['reason'] for v in point['missing_values'])
+        annotations = unique(tradeoff_figure['annotations'], 'model')
+        assert set(annotations) == expected_plotted
+        for model,annotation in annotations.items():
+            assert annotation['split_uid'] == fastest_deployments[model]['split_uid']
+            assert len(annotation['text_offset_points']) == 2
+            assert all(finite_number(v) for v in annotation['text_offset_points'])
         full_ids={u for ids in fulls.values() for u in ids}
         for name,key,values in [('01_full_throughput','fps',fps),('02_full_energy','energy_mj_per_image',{u:1000*v for u,v in energy.items()})]:
             f=figures[name]
@@ -579,7 +708,7 @@ def check(inputs, output, baseline_inputs=None, canonical_inputs=None):
                                                    if a4 else 'original quality and metric-admission gates preserved'),
             'full_configurations':sum(map(len,fulls.values())), 'table2_model_rows':len(table2),'table3_rows':len(table3),
             'native_generic_pairs':len(ng),'split_full_pairs':len(pairs),'verified_split_optima_groups':len(optima),
-            'figure_payloads_checked':figure_count,
+            'figure_payloads_checked':figure_count, 'fastest_deployment_models_checked':len(fastest_deployments),
             'pareto':pareto_report,'a4_repeats':a4_report,
             'external_migration_preservation':preservation,'canonical_selection_comparison':canonical,
             'restored_full_pairs_checked':len(required28), 'restored_h10_trt_classifier_values_checked':len(required3)}

@@ -124,6 +124,198 @@ def annotate_tradeoff(ax, selected, points, renderer):
     return annotations
 
 
+def annotate_fastest_deployments(ax, points, reserved, renderer):
+    """Deterministically move labels only; keep every ratio coordinate intact."""
+    fontsize = 10
+    font = FontProperties(size=fontsize)
+    px_per_pt = ax.figure.dpi / 72
+    occupied = [tuple(text.get_window_extent(renderer).extents) for text in reserved]
+    plotted = [ax.transData.transform((point['x'], point['y'])) for point in points]
+    axes_box = ax.get_window_extent(renderer)
+    inside = (axes_box.x0 + 4, axes_box.y0 + 4, axes_box.x1 - 4, axes_box.y1 - 4)
+    annotations = []
+
+    def overlap(a, b):
+        return max(0, min(a[2], b[2]) - max(a[0], b[0])) * max(0, min(a[3], b[3]) - max(a[1], b[1]))
+
+    for point in points:
+        text = point['label']
+        x, y = ax.transData.transform((point['x'], point['y']))
+        lines = text.split('\n')
+        width = max(renderer.get_text_width_height_descent(line, font, False)[0]
+                    for line in lines) + 6 * px_per_pt
+        height = (fontsize * 1.2 * len(lines) + 4) * px_per_pt
+        candidates = []
+        for radius in [9, 18, 30, 44, 62, 82, 108]:
+            for sx, sy in [(1, 1), (-1, 1), (1, -1), (-1, -1), (0, 1), (0, -1), (1, 0), (-1, 0)]:
+                dx, dy = sx * radius, sy * radius
+                left = x + dx * px_per_pt - (width if dx < 0 else width / 2 if dx == 0 else 0)
+                bottom = y + dy * px_per_pt - (height if dy < 0 else height / 2 if dy == 0 else 0)
+                box = (left, bottom, left + width, bottom + height)
+                outside = width * height - overlap(box, inside)
+                labels = sum(overlap(box, other) for other in occupied)
+                markers = sum(overlap(box, (xx - 6, yy - 6, xx + 6, yy + 6)) for xx, yy in plotted)
+                score = outside * 10000 + labels * 1000 + markers * 100 + math.hypot(dx, dy)
+                candidates.append((score, dx, dy, box))
+        _, dx, dy, box = min(candidates, key=lambda candidate: candidate[:3])
+        occupied.append(box)
+        ax.annotate(text, (point['x'], point['y']), xytext=(dx, dy),
+                    textcoords='offset points', fontsize=fontsize,
+                    ha='right' if dx < 0 else 'center' if dx == 0 else 'left',
+                    va='top' if dy < 0 else 'center' if dy == 0 else 'bottom',
+                    bbox={'facecolor': 'white', 'edgecolor': 'none', 'alpha': .94, 'pad': 1.3},
+                    arrowprops={'arrowstyle': '-', 'color': '#777777', 'linewidth': .6,
+                                'shrinkA': 2, 'shrinkB': 5}, zorder=8)
+        annotations.append({'model': point['model'], 'split_uid': point['split_uid'],
+                            'label': text, 'text_offset_points': [dx, dy]})
+    return annotations
+
+
+def render_fastest_deployments(output, save):
+    """Render both comparisons from the already-selected, unrounded table rows."""
+    source_table = 'tables/table3_fastest_deployments.json'
+    selected = read(output / source_table)
+    identity_keys = ['model', 'split_uid', 'split_setup', 'split_case', 'split_runner',
+                     'global_full_uid', 'host_full_uid']
+
+    def identities(row):
+        return {key: row.get(key) for key in identity_keys}
+
+    def split_label(row):
+        if not row.get('split_uid'):
+            return 'No eligible split'
+        return f'{row["split_setup"]}/{row["split_case"]} · {row["split_runner"].title()}'
+
+    def missing_reason(row, baseline, energy=False):
+        reasons = [row.get('split_missing_reason'), row.get(baseline + '_full_missing_reason')]
+        if energy:
+            reasons += [row.get('split_energy_missing_reason'),
+                        row.get(baseline + '_full_energy_missing_reason')]
+        return '; '.join(str(reason) for reason in reasons if reason) or (
+            'Missing or nonpositive finite energy for the selected Split or Full'
+            if energy else 'Missing positive finite FPS for the selected Split or Full')
+
+    fig, ax = plt.subplots(figsize=(9.8, max(4.8, .64 * len(selected) + 1.2)), layout='constrained')
+    payload, omitted = [], []
+    ratios = [row[key] for row in selected for key in ['R_global', 'R_host']
+              if measured(row, key)]
+    lo, hi = min(ratios + [1.0]), max(ratios + [1.0])
+    span = max(hi - lo, .8)
+    ax.set_xlim(max(0, lo - .15 * span), hi + .15 * span)
+    for y, row in enumerate(selected):
+        point = dict(identities(row), R_global=row.get('R_global'), R_host=row.get('R_host'),
+                     y=y, row_label=SHORT.get(row['model'], row['model']) + '\n' + split_label(row),
+                     global_plotted=measured(row, 'R_global'), host_plotted=measured(row, 'R_host'),
+                     missing_values=[])
+        if point['global_plotted'] and point['host_plotted']:
+            ax.plot([point['R_global'], point['R_host']], [y, y], color='#aaaaaa', linewidth=1, zorder=1)
+        for baseline, key, marker, color, dy, size in [
+                ('global', 'R_global', 'o', COLORS['native'], 8, 44),
+                ('host', 'R_host', 'D', COLORS['generic'], -9, 90)]:
+            if point[baseline + '_plotted']:
+                ax.scatter(point[key], y, marker=marker, s=size,
+                           facecolor=color if baseline == 'global' else 'none',
+                           edgecolor=color, linewidth=1.4, zorder=4 if baseline == 'global' else 3)
+                ax.annotate(f'{point[key]:.2f}×', (point[key], y), xytext=(0, dy),
+                            textcoords='offset points', ha='center',
+                            va='bottom' if dy > 0 else 'top', fontsize=10, color=color)
+            else:
+                reason = missing_reason(row, baseline)
+                point['missing_values'].append({'metric': key, 'reason': reason})
+                omitted.append(dict(identities(row), baseline=baseline, coordinate=key, reason=reason))
+                ax.text(.98, y + (-.21 if baseline == 'global' else .21),
+                        ('Global' if baseline == 'global' else 'Same-host') + ' Full: missing',
+                        transform=ax.get_yaxis_transform(), ha='right', va='center', fontsize=8, color=color)
+        payload.append(point)
+    ax.set_yticks(range(len(payload)), [point['row_label'] for point in payload], fontsize=10)
+    ax.set_ylim(len(payload) - .45, -.55)
+    ax.axvline(1, color='#555555', linewidth=.9, linestyle='--', zorder=0)
+    ax.set_xlabel('Selected split throughput / reference Full throughput', fontsize=11)
+    ax.tick_params(axis='x', labelsize=10)
+    ax.grid(axis='x', alpha=.15)
+    ax.set_axisbelow(True)
+    ax.set_title('Baseline effect for the fastest observed split\nSame selected split, different Full baselines', fontsize=12, pad=12)
+    fig.legend(handles=[
+        Line2D([], [], marker='o', color=COLORS['native'], linestyle='none', markersize=6,
+               label='Global fastest Full'),
+        Line2D([], [], marker='D', markerfacecolor='none', markeredgecolor=COLORS['generic'],
+               color=COLORS['generic'], linestyle='none', markersize=8, label='Fastest Full on the split host')],
+        loc='outside lower center', ncol=2, frameon=False, fontsize=10)
+    save(fig, 'fastest_split_baseline_comparison',
+         'Same selected split, different Full baselines: each row reuses the globally fastest observed split '
+         'from table3_fastest_deployments, across Native and Generic runners. Blue circles divide its FPS by '
+         'the globally fastest observed Full; open orange diamonds use the fastest Full on that split\'s physical host. '
+         'Both markers remain at their exact ratio coordinates, including overlap. Labels show factors to two decimal places; '
+         'table exports retain unrounded ratios and absolute FPS. The linear reference at one denotes equal throughput. '
+         'Each connecting segment illustrates only the changed denominator, not time or a measured optimization step. '
+         'Selection is retrospective over the observed candidate set; quality, timed endpoints and parallel execution '
+         'can differ. Small differences are not significance tests. Missing candidates or baselines are recorded explicitly.',
+         {'source_table': source_table, 'points': payload, 'omitted_points': omitted,
+          'x_coordinate': 'split_fps / selected_full_fps', 'x_scale': 'linear', 'reference_x': 1.0}, main=True)
+
+    points, omitted = [], []
+    for row in selected:
+        point = dict(identities(row), x=row.get('R_global'), y=row.get('energy_ratio_global'),
+                     R_global=row.get('R_global'), energy_ratio_global=row.get('energy_ratio_global'),
+                     label=SHORT.get(row['model'], row['model']) + '\n' + split_label(row))
+        missing = []
+        if not measured(row, 'R_global'):
+            missing.append({'metric': 'R_global', 'reason': missing_reason(row, 'global')})
+        if not measured(row, 'energy_ratio_global'):
+            missing.append({'metric': 'energy_ratio_global', 'reason': missing_reason(row, 'global', energy=True)})
+        if missing:
+            omitted.append(dict(point, missing_values=missing))
+        else:
+            points.append(point)
+    fig, ax = plt.subplots(figsize=(8.4, 5.6), layout='constrained')
+    xs, ys = [point['x'] for point in points], [point['y'] for point in points]
+    xlo, xhi = min(xs + [1.0]), max(xs + [1.0])
+    ylo, yhi = min(ys + [1.0]), max(ys + [1.0])
+    xspan, yspan = max(xhi - xlo, .6), max(yhi - ylo, .6)
+    ax.set_xlim(max(0, min(.55, xlo - .12 * xspan)), max(1.65, xhi + .16 * xspan))
+    ax.set_ylim(max(0, min(.35, ylo - .15 * yspan)), max(1.6, yhi + .16 * yspan))
+    for point in points:
+        ax.scatter(point['x'], point['y'], marker=MARKERS.get(point['split_runner'], 'o'),
+                   s=64, facecolor=COLORS['native'], edgecolor='white', linewidth=.7, zorder=5)
+    ax.axvline(1, color='#555555', linewidth=.9, linestyle='--')
+    ax.axhline(1, color='#555555', linewidth=.9, linestyle='--')
+    ax.set_xlabel('Throughput ratio: selected split / global fastest Full →', fontsize=11)
+    ax.set_ylabel('Energy per image ratio: selected split / global fastest Full', fontsize=11)
+    ax.tick_params(axis='both', labelsize=10)
+    ax.grid(alpha=.12)
+    ax.set_axisbelow(True)
+    ax.set_title('Fastest observed deployments: throughput and energy\nBoth ratios use the same global Full configuration', fontsize=12, pad=12)
+    reserved = []
+    for x, y, text, ha, va in [
+            (.02, .98, 'Slower\nmore energy', 'left', 'top'),
+            (.98, .98, 'Faster\nmore energy', 'right', 'top'),
+            (.02, .02, 'Slower\nless energy', 'left', 'bottom'),
+            (.98, .02, 'Faster\nless energy', 'right', 'bottom')]:
+        reserved.append(ax.text(x, y, text, transform=ax.transAxes, ha=ha, va=va,
+                                color='#666666', fontsize=9,
+                                bbox={'facecolor': 'white', 'edgecolor': 'none', 'alpha': .85, 'pad': 2}))
+    if omitted:
+        fig.text(.5, .005, f'{len(omitted)} selected model(s) lack a required ratio; see FIGURE_DATA.json.',
+                 ha='center', fontsize=8)
+    fig.canvas.draw()
+    fig.set_layout_engine('none')
+    annotations = annotate_fastest_deployments(ax, points, reserved, fig.canvas.get_renderer())
+    save(fig, 'fastest_deployment_tradeoff',
+         'One point per model compares the throughput-selected split with the throughput-selected global Full '
+         'from table3_fastest_deployments. The horizontal coordinate is split FPS / Full FPS; the vertical '
+         'coordinate is split J/image / Full J/image, always using exactly the same Full UID. '
+         'Right of one is faster, below one uses less energy per completed image. Energy is calibrated host-inclusive '
+         'mean per-repeat E/N; it never changes the FPS selection. Text alone is displaced for readability; measured '
+         'coordinates are unchanged. Circles denote Native splits and triangles Generic splits; color carries no '
+         'quality-pass meaning. This is a retrospective overview of fastest observed configurations, not the full '
+         'Pareto front or a minimum-energy selection. Quality, timed endpoints and parallel execution differ; '
+         'quadrants do not establish equal accuracy or a causally isolated efficiency gain. Small differences are '
+         'not significance tests. Models missing a required ratio remain in the tables and omission records.',
+         {'source_table': source_table, 'points': points, 'omitted_points': omitted,
+          'x_coordinate': 'R_global', 'y_coordinate': 'energy_ratio_global',
+          'reference_x': 1.0, 'reference_y': 1.0, 'annotations': annotations}, main=True)
+
+
 def render(output):
     output = Path(output)
     dataset_path = output / 'data' / 'PAPER_DATASET.json'
@@ -583,6 +775,8 @@ def render(output):
         save(fig,'06_quality_'+model,
              'Absolute selected dataset quality for '+NAMES.get(model,model)+'. Every available split evaluation is shown; gray ticks are its recorded model reference. Horizontal lines show the matching host Vendor Full and TRT Full when numerical quality exists. No missing Full quality is inferred. Percent values denote Top-1 accuracy or COCO mAP as labeled, not relative loss. Exact quality sample counts are in FIGURE_DATA.json.',
              {'scope_uids':[r['uid'] for r in mr],'points':payload})
+
+    render_fastest_deployments(output, save)
 
     write(out/'FIGURE_DATA.json',figure_data)
     write(out/'INDEX.json',index)

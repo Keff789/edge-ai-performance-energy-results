@@ -11,6 +11,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 import build_paper_dataset as tool
+import reproduce
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 import independent_check as oracle
 
@@ -129,7 +130,7 @@ class ScientificEdgeCases(unittest.TestCase):
             no_energy=add('a','deepx_to_trt','split','native',120,None)
             second=add('b','deepx_to_trt','split','native',110,.2)
             add('c','deepx_to_trt','split','native',110,.4)
-            add('a','deepx_to_trt','split','generic',60,.15)
+            generic_fastest=add('a','deepx_to_trt','split','generic',130,.15)
             for name,value in [('cases',rows),('selected_evidence',evidence),('energy_repeats',er),('pipeline_repeats',[]),('split_full_contracts',[])]:
                 (inp/(name+'.json')).write_text(json.dumps(value))
             config=json.loads((ROOT/'config.json').read_text())
@@ -149,6 +150,18 @@ class ScientificEdgeCases(unittest.TestCase):
             self.assertIsNone(top[0]['energy_gain_same_full'])
             self.assertEqual(top[1]['energy_gain_same_full'],.5)
             self.assertEqual(top[1]['lowest_energy_full_uid'],vendor)
+            fastest=json.loads((a/'tables/table3_fastest_deployments.json').read_text())
+            baselines=json.loads((a/'tables/fastest_split_baselines.json').read_text())
+            self.assertEqual(fastest, baselines)
+            self.assertEqual(len(fastest), 1)
+            self.assertEqual(fastest[0]['split_uid'], generic_fastest)
+            self.assertEqual(fastest[0]['global_full_uid'], trt)
+            self.assertEqual(fastest[0]['host_full_uid'], trt)
+            self.assertEqual(fastest[0]['global_full_record'], data[trt])
+            self.assertEqual(fastest[0]['R_global'], 1.3)
+            reproduce.format_tables(a)
+            reproduce.format_tables(b)
+            self.assertTrue((a/'tables/fastest_split_baselines.tex').is_file())
             self.assertEqual(summary['performance_coverage'],6)
             self.assertEqual(summary['energy_coverage'],5)
             self.assertEqual(summary['native_generic']['n_performance'],1)
@@ -166,6 +179,145 @@ class ScientificEdgeCases(unittest.TestCase):
             for path in a.rglob('*'):
                 if path.is_file():
                     self.assertEqual(path.read_bytes(),(b/path.relative_to(a)).read_bytes(),str(path.relative_to(a)))
+
+
+class FastestDeploymentEdgeCases(unittest.TestCase):
+    @staticmethod
+    def point(uid, fps, energy=.1, **changes):
+        row = dict(uid=uid, model_id='model', setup_id='H8', runner='native',
+                   kind='split', backend='split_backend', case_id=uid, fps=fps,
+                   energy_j_per_image=energy, energy_mj_per_image=1000*energy if tool.positive(energy) else None,
+                   quality_value=.7, quality_metric='top1', quality_class='accuracy_loss',
+                   normal_performance_claim=False, normal_energy=False, energy_claim=False,
+                   runtime='recorded_runtime', endpoint_notes=['recorded endpoint limitation'])
+        row.update(changes)
+        return row
+
+    def calculate(self, rows, model_order=('model',)):
+        return tool.select_fastest_deployments(rows, model_order)
+
+    def test_absolute_generic_winner_differs_from_largest_relative_gain_and_keeps_exact_full_energy(self):
+        rows = [self.point('relative_native', 100, .01, setup_id='H8'),
+                self.point('absolute_generic', 200, .2, setup_id='H10', runner='generic'),
+                self.point('full_h8', 10, .03, setup_id='H8', kind='full'),
+                self.point('full_h10', 190, .04, setup_id='H10', kind='full'),
+                self.point('full_global', 250, .8, setup_id='DeepX', kind='full'),
+                self.point('full_lowest_energy', 240, .001, setup_id='DeepX', kind='full')]
+        original = copy.deepcopy(rows)
+        row = self.calculate(rows)[0]
+        self.assertGreater(100 / 10, 200 / 190)
+        self.assertEqual(row['split_uid'], 'absolute_generic')
+        self.assertEqual(row['split_runner'], 'generic')
+        self.assertEqual(row['global_full_uid'], 'full_global')
+        self.assertEqual(row['host_full_uid'], 'full_h10')
+        self.assertEqual(row['global_full_energy_j_per_image'], .8)
+        self.assertEqual(row['R_global'], .8)
+        self.assertAlmostEqual(row['R_host'], 200 / 190)
+        self.assertLessEqual(row['R_global'], row['R_host'])
+        for name, full_uid in [('global', 'full_global'), ('host', 'full_h10')]:
+            full = next(r for r in rows if r['uid'] == full_uid)
+            split = next(r for r in rows if r['uid'] == row['split_uid'])
+            self.assertEqual(row[name + '_full_record'], full)
+            self.assertEqual(row['R_' + name], split['fps'] / full['fps'])
+            self.assertEqual(row['G_' + name], full['energy_j_per_image'] / split['energy_j_per_image'])
+            self.assertEqual(row['energy_ratio_' + name], split['energy_j_per_image'] / full['energy_j_per_image'])
+            self.assertEqual(row['delta_E_' + name + '_pct'], 100 * (row['energy_ratio_' + name] - 1))
+        self.assertEqual(row['split_record']['quality_class'], 'accuracy_loss')
+        self.assertFalse(row['split_record']['normal_performance_claim'])
+        self.assertEqual(row['split_record']['endpoint_notes'], ['recorded endpoint limitation'])
+        self.assertEqual(rows, original)
+
+    def test_same_physical_host_is_used_even_with_different_setup_aliases(self):
+        rows = [self.point('split', 120, setup_id='alias_h8', physical_host=tool.HOSTS['H8']),
+                self.point('same_host', 100, setup_id='H8', kind='full'),
+                self.point('other_host_same_backend', 200, setup_id='H10', kind='full')]
+        row = self.calculate(rows)[0]
+        self.assertEqual(row['host_full_uid'], 'same_host')
+        self.assertEqual(row['global_full_uid'], 'other_host_same_backend')
+        self.assertEqual(row['R_host'], 1.2)
+        self.assertEqual(row['R_global'], .6)
+
+    def test_missing_host_identity_cannot_match_another_missing_identity(self):
+        row = self.calculate([self.point('split', 120, setup_id=None),
+                              self.point('full', 100, setup_id=None, kind='full')])[0]
+        self.assertEqual(row['global_full_uid'], 'full')
+        self.assertIsNone(row['host_full_uid'])
+        self.assertEqual(row['host_full_missing_reason'], 'missing_split_host_identity')
+        self.assertIsNone(row['R_host'])
+        self.assertIn('unknown host', reproduce.format_fastest_tables([row])['table3_fastest_deployments.md'])
+
+    def test_unrounded_selection_exact_uid_ties_and_config_order_ignore_input_order(self):
+        rows = [self.point('a_lower_same_display', 100.0001),
+                self.point('z_exact_tie', 100.0002), self.point('b_exact_tie', 100.0002),
+                self.point('z_full', 90, kind='full'), self.point('a_full', 90, kind='full'),
+                self.point('other', 1, model_id='other')]
+        selected = self.calculate(rows, ['other', 'model'])
+        self.assertEqual([r['model'] for r in selected], ['other', 'model'])
+        self.assertEqual(selected, self.calculate(list(reversed(rows)), ['other', 'model']))
+        row = selected[1]
+        self.assertEqual(row['split_uid'], 'b_exact_tie')
+        self.assertEqual(row['global_full_uid'], 'a_full')
+        self.assertEqual(row['host_full_uid'], 'a_full')
+        for prefix in ['R_', 'G_', 'energy_ratio_', 'delta_E_']:
+            suffix = '_pct' if prefix == 'delta_E_' else ''
+            self.assertEqual(row[prefix + 'global' + suffix], row[prefix + 'host' + suffix])
+
+    def test_missing_energy_retains_fps_winner_and_null_energy_ratios(self):
+        for energy, reason in [(None, 'missing'), (float('nan'), 'nonfinite'),
+                               (float('inf'), 'nonfinite'), (0, 'nonpositive'),
+                               (-1, 'nonpositive'), (True, 'invalid')]:
+            with self.subTest(energy=energy):
+                selected = self.calculate([self.point('winner', 150, energy),
+                                           self.point('slower', 120),
+                                           self.point('full', 100, kind='full')])
+                row = selected[0]
+                self.assertEqual(row['split_uid'], 'winner')
+                self.assertEqual(row['R_global'], 1.5)
+                self.assertEqual(row['split_energy_missing_reason'], reason + '_energy_j_per_image')
+                for field in ['split_energy_j_per_image', 'split_mj_per_image', 'G_global',
+                              'G_host', 'energy_ratio_global', 'energy_ratio_host',
+                              'delta_E_global_pct', 'delta_E_host_pct']:
+                    self.assertIsNone(row[field], field)
+                json.dumps(selected, allow_nan=False)
+        row = self.calculate([self.point('split', 150),
+                              self.point('fast_full_missing_energy', 100, None, kind='full'),
+                              self.point('slow_full_has_energy', 80, .01, kind='full')])[0]
+        self.assertEqual(row['global_full_uid'], 'fast_full_missing_energy')
+        self.assertEqual(row['global_full_energy_missing_reason'], 'missing_energy_j_per_image')
+        self.assertIsNone(row['energy_ratio_global'])
+
+    def test_invalid_fps_and_absent_fulls_are_explicit(self):
+        invalid = [None, float('nan'), float('inf'), float('-inf'), 0, -1, True, '100']
+        rows = [self.point('bad_' + str(i), fps) for i, fps in enumerate(invalid)]
+        rows += [self.point('bad_full_' + str(i), fps, kind='full') for i, fps in enumerate(invalid)]
+        row = self.calculate(rows)[0]
+        self.assertIsNone(row['split_uid'])
+        self.assertIsNone(row['global_full_uid'])
+        self.assertEqual(row['split_missing_reason'], 'no_valid_positive_fps_split')
+        self.assertEqual(row['global_full_missing_reason'], 'no_valid_positive_fps_full')
+        self.assertEqual(row['host_full_missing_reason'], 'no_selected_split')
+        row = self.calculate(rows + [self.point('valid', 1)])[0]
+        self.assertEqual(row['split_uid'], 'valid')
+        self.assertIsNone(row['R_global'])
+        self.assertEqual(row['host_full_missing_reason'], 'no_valid_positive_fps_full_on_split_host')
+        self.assertEqual(self.calculate([]), [])
+
+    def test_real_formatter_rounds_only_display_and_labels_both_views(self):
+        row = self.calculate([self.point('cut', 123.456, .0123456, runner='generic'),
+                              self.point('full', 100.1234, .02, kind='full', backend='native_full_tensorrt')])[0]
+        original = copy.deepcopy(row)
+        text = reproduce.format_fastest_tables([row])
+        a, b = text['table3_fastest_deployments.md'], text['fastest_split_baselines.md']
+        self.assertIn('Generic H8/cut', a)
+        self.assertIn('Generic H8/cut', b)
+        self.assertIn('| 123 | 12.35 | 1.23 | -38.3 |', a)
+        self.assertIn('TRT (H8 host)', a)
+        self.assertIn('| 1.23 | 1.23 |', b)
+        self.assertIn(r'\label{tab:fastest-deployments}', text['table3_fastest_deployments.tex'])
+        self.assertIn(r'\label{tab:fastest-split-baselines}', text['fastest_split_baselines.tex'])
+        self.assertEqual(row, original)
+        missing = self.calculate([self.point('split', 1, None)])
+        self.assertIn('NA', reproduce.format_fastest_tables(missing)['table3_fastest_deployments.md'])
 
 
 class A4IndependentChecks(unittest.TestCase):

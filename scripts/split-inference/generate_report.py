@@ -11,6 +11,58 @@ def tex(value):
                     '#': r'\#', '_': r'\_\allowbreak{}', '/': r'/\allowbreak{}', '{': r'\{', '}': r'\}', '~': r'\textasciitilde{}'}
     return ''.join(replacements.get(c, c) for c in str(value))
 
+
+def render_gallery(out, summary, fastest):
+    """Build navigation from the same current figure index and table selection."""
+    index = read(out/'figures/INDEX.json')
+    by_name = {item['name']: item for item in index}
+    names = {'mobilenet_v3_large': 'MobileNetV3 Large', 'regnet_x_1_6gf': 'RegNet X 1.6GF',
+             'resnet50': 'ResNet-50', 'yolo11l': 'YOLO11l', 'yolo26m': 'YOLO26m',
+             'yolo26s': 'YOLO26s', 'yolov7_paper': 'YOLOv7'}
+    models = [row['model'] for row in fastest]
+    gallery = ['# Split-inference gallery', '',
+               '[Result overview](../README.md) · [Tables](../tables/README.md) · [Full captions](../CAPTIONS.md)', '',
+               f'All {len(index)} current figure families are included. Each has a vector PDF/SVG and a PNG preview. Throughput is images/s and calibrated energy includes the host. The figures compare observed deployments with their recorded quality and timed-work differences.', '',
+               '## Complete model views and empirical Pareto fronts', '']
+    model_dir = out/'figures/models'
+    model_dir.mkdir(exist_ok=True)
+    for model in models:
+        name = names.get(model, model)
+        gallery += [f'- [{name}: performance, energy and dataset quality](models/{model}.md)']
+        page = [f'# {name}', '',
+                '[All figures](../README.md) · [Methods](../../METHODS.md) · [Complete data](../../data/PAPER_DATASET.csv)', '']
+        for basename, title, alt in [
+                ('04_tradeoff_'+model, 'Throughput, energy, empirical Pareto front and quality', 'Throughput, energy and quality'),
+                ('06_quality_'+model, 'All split and Full quality observations', 'All split and Full quality observations')]:
+            item = by_name[basename]
+            page += ['## '+title, '', f'![{alt}](../{basename}.png)', '',
+                     ' · '.join(f'[{fmt.upper()}](../{basename}.{fmt})' for fmt in item['formats']), '',
+                     item['caption'], '']
+        (model_dir/(model+'.md')).write_text('\n'.join(page)+'\n')
+    pareto = read(out/'tables/PARETO_POINTS.json')
+    front_count = sum(row['pareto_all'] is True for row in pareto)
+    gallery += ['',
+                f'The {len(models)} model views retain all observations, both Full alternatives and dataset quality. Outlines mark the joint performance–energy front within each model/setup; lines connect discrete front coordinates only. [All {summary["cases"]} points and front flags](../tables/PARETO_POINTS.csv) distinguish the {front_count} joint front points from runner-specific split fronts. See [methods](../METHODS.md) for dominance and interpretation limits.', '']
+    titles = {
+        'fastest_split_baseline_comparison': 'Baseline effect: the same selected split, two Full references',
+        'fastest_deployment_tradeoff': 'Fastest deployments: throughput and energy relative to global Full',
+        '01_full_throughput': 'All Full deployments: throughput',
+        '02_full_energy': 'All Full deployments: energy per image',
+        '03a_native_generic_pooled': 'Native and Generic: pooled operating points',
+        '03b_native_generic_equal_model': 'Native and Generic: equal model weighting',
+        '03c_native_generic_model_setup': 'Native and Generic: every model and setup',
+        '05_fastest_vs_min_energy': 'Fastest and lowest-energy splits',
+        '06_quality_reference_comparison': 'Dataset quality relative to model references',
+    }
+    gallery += ['[Recommended Table 3: global fastest Full and split](../tables/table3_fastest_deployments.md) · [Same split, two Full baselines](../tables/fastest_split_baselines.md) · [Supplementary relative same-host Top-2](../tables/table3_top2_native.md)', '']
+    for basename, title in titles.items():
+        item = by_name[basename]
+        gallery += ['## '+title, '', f'![{title}]({basename}.png)', '',
+                    ' · '.join(f'[{fmt.upper()}]({basename}.{fmt})' for fmt in item['formats']), '',
+                    item['caption'], '']
+    (out/'figures/README.md').write_text('\n'.join(gallery)+'\n')
+
+
 def render(output):
     out = Path(output)
     s = read(out/'data/summary.json')
@@ -20,6 +72,19 @@ def render(output):
     ec = s['lowest_full_energy_comparison']
     opt = s['optima']
     top = read(out/'tables/table3_top2_native.json')
+    fastest = read(out/'tables/table3_fastest_deployments.json')
+    global_compared = [r for r in fastest if r['R_global'] is not None]
+    joint_compared = [r for r in global_compared if r['energy_ratio_global'] is not None]
+    global_faster = sum(r['R_global'] > 1 for r in global_compared)
+    global_both = sum(r['R_global'] > 1 and r['energy_ratio_global'] < 1 for r in joint_compared)
+    denominator_changed = sum(r['host_full_uid'] is not None and r['global_full_uid'] is not None
+                              and r['host_full_uid'] != r['global_full_uid'] for r in fastest)
+    slower = [r for r in global_compared if r['R_global'] < 1]
+    slower_description = ('Selected splits below their global Full reference: '+
+                          '; '.join(f"{r['model']} {r['split_setup']}/{r['split_case']} (R_global={r['R_global']:.2f}, R_host={r['R_host']:.2f})"
+                                    if r['R_host'] is not None else
+                                    f"{r['model']} {r['split_setup']}/{r['split_case']} (R_global={r['R_global']:.2f}; same-host Full missing)"
+                                    for r in slower)+'.') if slower else 'No selected split is below its observed global Full reference.'
     best = max(top, key=lambda r: r['speedup'])
     n_single = sum(r['performance_observations']==1 for r in data)
     mismatches = [r for r in data if r.get('quality_cached_loss_disagrees')]
@@ -43,9 +108,23 @@ The descriptive repeat range and sample coefficient of variation remain visible.
 
 ## Comparisons and weighting
 
-All ratios are computed from unrounded inputs. Native/Generic pairs match model, host and cut. All split rows are compared to both measured Full alternatives on the same host, with winners and nonwinners retained. Table 2 reports TRT ranges across the three host aggregates; these ranges are not repeat confidence intervals. Host values and arithmetic means are separately available. Table 3 selects the two Native configurations with the largest FPS ratio to the fastest observed Full on the same host for each model. Stable ascending UID breaks ties. Energy never changes this FPS ranking. Energy gain G_n=e_full/e_split uses exactly the same Full identity as that row's speedup; values greater than one indicate lower split energy. The independently lowest-energy Full is kept separately.
+All ratios are computed from unrounded inputs. Native/Generic pairs match model, host and cut. All split rows are compared to both measured Full alternatives on the same host, with winners and nonwinners retained. Table 2 reports TRT ranges across the three host aggregates; these ranges are not repeat confidence intervals. Host values and arithmetic means are separately available.
 
-Point-pooled summaries are separate from equal-model summaries. The latter first take the point median within each model/setup, then average setups within each model, then average those model values. Classifiers with many cuts therefore receive no extra model weight. Fastest and lowest-energy splits are selected within each model/setup/runner. Shared optima are one configuration; groups with a single candidate are distinguished from multiple-candidate groups. All optimum and Top-2 selections are retrospective, with no prediction or causal interpretation.
+Recommended Table 3, `table3_fastest_deployments`, selects one split per model by the highest unrounded observed FPS cohort median across every measured setup and both Native and Generic runners. Its global Full reference is the fastest concrete Full configuration for that model across all measured hosts. Each selected Full remains one measured UID; host-specific TensorRT Fulls are not averaged before selection. The table reports throughput and energy from these exact two configurations. Global fastest asks for the strongest observed deployment alternative when setup choice is open.
+
+The companion table `fastest_split_baselines` retains exactly the same selected split UID and adds the fastest Full on that split's normalized physical host. Same-host asks how that selected split compares with the available Full alternatives on its own host. It does not choose a new split by relative gain. For b in {{global, host}}, R_b=FPS(split)/FPS(Full_b), G_b=E(Full_b)/E(split), and delta_E_b_pct=100*(E(split)/E(Full_b)-1). Energy is taken from the exact Full selected by FPS, never from a separately energy-minimizing Full. R_b>1 indicates higher split throughput; G_b>1 and negative delta_E_b_pct indicate lower split energy. Where both denominators exist, R_global<=R_host because the same-host Full is among the global candidates. Equal denominator UIDs produce equal ratios.
+
+Only finite, strictly positive FPS observations are selection candidates. Exact ties use ascending UID without a rounding tolerance; model order follows the configuration. Missing energy leaves the FPS winner selected and its energy fields missing. Missing split or Full candidates and unavailable ratios are explicit in the exports. Selection does not use an accuracy, claim or energy veto. CSV/JSON retain all selected UIDs, source records, quality values, classes, runtime/endpoints and restriction flags. Display alone rounds FPS to integers, factors and mJ/image to two decimals, and percentage energy changes to one decimal.
+
+The separate supplementary `table3_top2_native` retains the historical selection method and its numerical results: two Native splits per model with the largest relative FPS gain over the fastest Full on the same host. That method can select a different split from the absolute fastest selection. Its G_n=E(Full)/E(split) still uses the exact Full chosen for its own speedup. Energy never changes either FPS ranking. The independently lowest-energy Full remains a separate export.
+
+Point-pooled summaries are separate from equal-model summaries. The latter first take the point median within each model/setup, then average setups within each model, then average those model values. Classifiers with many cuts therefore receive no extra model weight. Fastest and lowest-energy splits are also selected within each model/setup/runner in the separate group-optimum analysis. Shared optima are one configuration; groups with a single candidate are distinguished from multiple-candidate groups. All optimum and Top-2 selections are retrospective over the finite measured candidate space. They do not establish a general hardware limit, matched quality, a prediction or a causal splitting effect. Small differences are not significance tests, and no confidence interval for a selected maximum is invented.
+
+## Fastest-deployment overview figures
+
+`fastest_split_baseline_comparison` plots R_global and R_host for the same split UID selected in both tables. A thin connection joins only the two denominator choices in one model row; it is neither a time series nor a measured optimization step. The linear ratio axis and reference at one retain observations below one. Absolute FPS remain in the tables.
+
+`fastest_deployment_tradeoff` plots one selected split per model at x=R_global and y=E(split)/E(global Full). Both coordinates use the same concrete global Full UID from Table 3. Right of one means faster and below one means less host-inclusive energy per image. Missing coordinates are recorded rather than replaced or selected around. Labels may move for readability; data coordinates do not. These are throughput-selected configurations, not a complete Pareto front or a minimum-energy selection. Neither quadrant position nor marker color asserts quality PASS, equal endpoint work, equal parallelism or causal efficiency. The full observed-space Pareto views remain separate.
 
 ## Empirical performance–energy fronts
 
@@ -72,25 +151,31 @@ This report is generated from the same selected rows as Tables 2/3 and all figur
 
 Native exceeds Generic throughput in {ng['faster']}/{ng['n_performance']} paired points and uses less raw energy in {ng['energy_lower']}/{ng['n_energy']}; {ng['both_better']}/{ng['n_joint']} improve both. The point-pooled median Native/Generic ratios are {ng['fps_ratio_median']:.4f} for throughput and {ng['energy_ratio_median']:.4f} for energy. Separate equal-model results in `tables/equal_model_summary.json` avoid weighting models by their number of cuts.
 
-Against the fastest Full on the same host, {fc['faster']}/{fc['splits']} Native splits are faster. Against the separately selected minimum-energy Full, {ec['lower']}/{ec['splits']} use less energy. The largest observed speedup is {best['speedup']:.3f}x for {best['model']} {best['setup']}/{best['case']}; its energy gain against that exact same Full is {best['energy_gain_same_full']:.3f}. Table 3 reports the Top-2 for every model, selected from unrounded FPS ratios without energy filtering. These are retrospective results.
+Recommended Table 3 compares each model's global fastest observed Full with its global fastest observed split, selected across both runners and all setups. {global_faster}/{len(global_compared)} selected splits exceed the global Full's throughput; {global_both}/{len(joint_compared)} are both faster and lower in energy per image. The companion baseline table uses those exact same split UIDs with the same-host Full as a second denominator; {denominator_changed}/{len(fastest)} rows use different Full UIDs for the two baselines. {slower_description} Counts use only the available ratios; missing candidates or metrics remain explicit in the tables. Both new figures use these same unrounded selections and denominators.
+
+Across the separate full set of Native splits, {fc['faster']}/{fc['splits']} are faster than the fastest Full on the same host. Against the separately selected minimum-energy Full, {ec['lower']}/{ec['splits']} use less energy. The largest relative same-host speedup is {best['speedup']:.3f}x for {best['model']} {best['setup']}/{best['case']}; its energy gain against that exact same Full is {best['energy_gain_same_full']:.3f}. The supplementary `table3_top2_native` retains two Native splits per model selected by this relative same-host gain. It is the historical selection method, distinct from the absolute fastest selection in the new Table 3. These are retrospective results over the measured candidate space.
 
 The fastest and minimum-energy Native split differ in {opt['multi_candidate_conflicts']}/{opt['multi_candidate_groups']} groups with more than one candidate. Shared optima and the candidate counts are shown explicitly. A small ratio above one is described as a small observed advantage; the analysis does not infer statistical significance from it.
 
 Quality is a separate result axis. The original {s['quality_loss'].get('native',0)} Native and {s['quality_loss'].get('generic',0)} Generic accuracy-loss flags remain visible. Vendor Full quality, model reference quality and every available split score appear in the quality figures. {len(mismatches)} cached Current losses differ from the numerical selected quality reports; both are retained. The Full and split figures display actual deployments with their quality and timed-work differences, including the YOLO26s fast-oracle versus host-tail distinction described in `METHODS.md`.
 
-See [Table 2](tables/table2_full.md), [Table 3](tables/table3_top2_native.md), [methods](METHODS.md), [figure captions](CAPTIONS.md), and [all machine-readable findings](data/summary.json). Missing values, if any, are enumerated by UID in `data/summary.json`. Historical source-version and clock-profile limitations remain; these do not trigger a new measurement campaign.
+See [Table 2](tables/table2_full.md), [recommended Table 3: global fastest deployments](tables/table3_fastest_deployments.md), [same split with two Full baselines](tables/fastest_split_baselines.md), [supplementary relative same-host Top-2](tables/table3_top2_native.md), [methods](METHODS.md), [figure captions](CAPTIONS.md), and [all machine-readable findings](data/summary.json). Missing values, if any, are enumerated by UID in `data/summary.json`. Historical source-version and clock-profile limitations remain; these do not trigger a new measurement campaign.
 '''
     (out/'FINDINGS.md').write_text(findings)
     # Source paragraphs are supplied separately from any private manuscript.
     paragraph = ('We report the broad measured deployment selection, retaining quality-loss, single-repeat and screening observations with their original flags. '
                  'Throughput is the recorded cohort median in images/s. Energy is calibrated host-inclusive energy per completed image, averaged as the mean of per-repeat E/N and displayed in mJ/image. '
                  'Dataset Top-1 accuracy or COCO mAP is reused from the selected existing evidence and shown separately. '
-                 'Table 3 ranks Native splits retrospectively against the fastest measured Full on the same host and uses that exact Full for both speedup and energy gain. '
+                 'Table 3 selects the highest unrounded FPS split across all setups and both runners and compares it with the highest FPS concrete Full configuration across all hosts. Each configuration retains its own measured energy. '
+                 'A companion table retains the identical selected split and adds the fastest Full on its physical host; the separate historical Top-2 method ranks Native splits by relative same-host speedup. Exact ties use ascending UID; energy and quality do not veto throughput selection. '
+                 'For either Full baseline, R=FPS(split)/FPS(Full), G=E(Full)/E(split), and the percentage energy change is 100*(E(split)/E(Full)-1). Missing energy leaves the FPS selection intact. '
+                 'The baseline figure shows the same split under these two denominators. The deployment overview uses R and E(split)/E(global Full) for the exact global Full UID; it is not the full Pareto front or a minimum-energy selection. All selections are retrospective over the finite observed candidates, not general hardware limits or significance tests. '
                  'Source generations and numerical quality/cache discrepancies are recorded per metric. '
                  'Empirical performance--energy fronts maximize throughput and minimize host-inclusive energy within each model/setup, including both Full alternatives; quality is shown by color and is not a dominance objective. '
                  'The 75 updated Native DeepX observations use batch-one, single-engine A4 with at most four outstanding jobs; splits use FIFO depth three and a serial TensorRT consumer through task completion. The other 375 direct observations and all 450 selected dataset-quality observations are retained. '
                  'Native detector splits record a correctness oracle outside timing, whereas Generic detector splits record decoded NMS; Full paths retain their recorded host-tail or integrated normalization work. These ratios compare observed deployments with their recorded parallelism and do not isolate a causal effect of splitting at identical work.')
     (out/'METHODS_PARAGRAPH.tex').write_text(tex(paragraph)+'\n')
+    render_gallery(out, s, fastest)
 
 if __name__ == '__main__':
     import argparse

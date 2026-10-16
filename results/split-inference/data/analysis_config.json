@@ -6,8 +6,19 @@
   "energy_basis": "calibrated_host_inclusive_raw",
   "energy_unit": "J/image",
   "equal_model_aggregation": "median_points_per_model_setup_then_mean_setups_per_model_then_mean_models",
+  "fastest_full_selection": "maximum_observed_fps_concrete_full_uid",
+  "fastest_split_selection": "maximum_observed_fps_native_and_generic_all_setups",
   "hash_veto": false,
   "metric_fallback": "only_latest_completed_positive_metric_matching_exact_identity; never replace_valid_current_by_older",
+  "model_order": [
+    "mobilenet_v3_large",
+    "regnet_x_1_6gf",
+    "resnet50",
+    "yolo11l",
+    "yolo26m",
+    "yolo26s",
+    "yolov7_paper"
+  ],
   "pareto_objectives": {
     "energy_mj_per_image": "minimize",
     "fps": "maximize"
