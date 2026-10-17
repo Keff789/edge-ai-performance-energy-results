@@ -1,9 +1,11 @@
 # Supplementary studies
 
-These completed studies retain their original populations and dates. Their observations are separate from the current [Refresh16 split results](../split-inference/README.md).
+These completed studies retain their original populations and dates. Their populations and relationship to the current [Refresh16 split results](../split-inference/README.md) are stated separately. The 17 October evidence audit reuses the R14 deployment snapshot; its fresh scheduling processes form separate experimental series.
 
 | Study | Population and scope |
 |---|---|
+| [Quality audit, calibration and scheduling intervention, 17 October 2026](mlsys-evidence-mechanism-20261017/README.md) | Audit of 450 R14 configurations, fixed grouped calibration on 151 classifier pairs, 40 new RegNet processes and a separate 20-process ResNet Native series |
+| [Full ResNet scheduling replication, 17 October 2026](mlsys-resnet-replication-20261017/README.md) | Forty fresh processes in five jointly randomized eight-cell blocks; Generic/Native productive and one-task schedules, without pooling earlier Native data |
 | [Independent stage-cost composition, 14 October 2026](stage-cost-composition/README.md) | Four ResNet50/DeepX and RegNetX/Hailo-10H cuts; 36 performance processes, twelve independent-stage Oracle/pipeline comparisons |
 | [Split selection and energy cost, 5 October 2026](thesis20-ranking-20261005/README.md) | 204 historical THESIS20 candidates in 21 exact groups; frozen graph selectors and measured Generic rankings predict the observed Native best |
 | [MLSys split selection, 7 October 2026](mlsys-selection-20261007/README.md) | R10 reported Native overlay, 21 ranking groups, split/Full trade-offs, quality/long-window sensitivities, vendor feasibility and graph inventory |

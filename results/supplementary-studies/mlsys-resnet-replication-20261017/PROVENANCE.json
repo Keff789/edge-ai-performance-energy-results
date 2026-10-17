@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "export_date": "2026-10-17",
+  "source_task_id": "mlsys_r14_resnet_full_replication_20261017_sm2",
+  "deployment_snapshot_commit": "1b01b220b2a80af7e2e3fa186f777a0676582854",
+  "source_package": {
+    "filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+    "bytes": 10786385,
+    "sha256": "7e0bd1c86f57184cd6c53cc5122a20d664ca1f8a05b57eeb8d8d3a3807ae5056"
+  },
+  "source_files": [
+    {
+      "path": "REPORT.md",
+      "sha256": "6dedf054fae2385628df8cfc3ea54701f93fb4de33bfcd4d0ce3caf31c10b1c9",
+      "bytes": 9999
+    },
+    {
+      "path": "README.md",
+      "sha256": "1392d044689c65dba02a0ec56b61e5efa75bd306521516e86eb94fcc6ccf460f",
+      "bytes": 3838
+    },
+    {
+      "path": "PROTOCOL.json",
+      "sha256": "c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601",
+      "bytes": 307115
+    },
+    {
+      "path": "SHA256SUMS",
+      "sha256": "e3f34b166c701a7d3d854352c4ce46a90b0fa720841f2bb802111101c4c03878",
+      "bytes": 112872
+    },
+    {
+      "path": "INVENTORY.json",
+      "sha256": "32d57a0e79478dbc6195d26714cb8814fd2aa0e20a799ad2884a210987e5921d",
+      "bytes": 2367
+    },
+    {
+      "path": "PROTOCOL.md",
+      "sha256": "e5cc6d1bee38aa184c4b9406acfe1322f7ec5ce9214709086ca77419442da187",
+      "bytes": 3668
+    },
+    {
+      "path": "CLAIM_STATUS_DELTA.md",
+      "sha256": "d34dbc3bc012145e93f3351961da6afb49df2529a338ef8b76c1405873894567",
+      "bytes": 2894
+    },
+    {
+      "path": "results/replication_analysis.json",
+      "sha256": "3de8d4f6954b3991e95afd0704476bee376d921edf5482cc9f1f4621224a4d34",
+      "bytes": 213627
+    },
+    {
+      "path": "results/final_progress.json",
+      "sha256": "68fdf16f018d47b964d93bfbc085a6b4089a7852626b3f325e3f621b49bd4aa9",
+      "bytes": 241853
+    }
+  ],
+  "exports": [
+    {
+      "source_relative_path": "results/replication_analysis_summaries.csv",
+      "source_sha256": "f9e79d58f718bfbeb931949b97bcdd9fe1b9ab26c2739ce32698da28f7eee61d",
+      "export_relative_path": "tables/replication_summaries.csv",
+      "export_sha256": "f9e79d58f718bfbeb931949b97bcdd9fe1b9ab26c2739ce32698da28f7eee61d",
+      "transformation": "exact_copy",
+      "rows": null
+    },
+    {
+      "source_relative_path": "results/replication_analysis_blocks.csv",
+      "source_sha256": "652718266551c9bd18a8b8ae7e56ce49439e15f455ada34b58704e6a24661b8f",
+      "export_relative_path": "tables/replication_blocks.csv",
+      "export_sha256": "652718266551c9bd18a8b8ae7e56ce49439e15f455ada34b58704e6a24661b8f",
+      "transformation": "exact_copy",
+      "rows": null
+    },
+    {
+      "source_relative_path": "results/replication_analysis_cells.csv",
+      "source_sha256": "1643a666dec650aa83f4574781aca391841e7a9692cb7412631ffe5ddabfc64d",
+      "export_relative_path": "tables/replication_cells.csv",
+      "export_sha256": "b78282d27d5629706254003a5f387623a2de49beac360f268708dfadf6858db3",
+      "transformation": "compact fields; all 40 rows",
+      "rows": 40
+    }
+  ],
+  "scope": "Compact summary export. Source package and external raw dependencies must be archived separately. No claim that Git contains the complete raw-data archive.",
+  "external_raw_archive_verification": "Pending execution of the separate SM2-to-Sprite archival task; do not infer completion from this Git export."
+}

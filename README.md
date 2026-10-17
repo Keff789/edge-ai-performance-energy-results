@@ -6,7 +6,7 @@ Measured split-inference performance, energy and quality, together with energy-m
 |---|---|
 | [Split inference](results/split-inference/README.md) | 450 deployments, including 42 Full baselines; throughput, host-inclusive energy, dataset quality, repeats and sensitivity comparisons |
 | [Energy measurement](results/energy-measurement/README.md) | Reconstruction, spectra, historical FP16 rate curves, measurement comparisons, calibration and protocol controls |
-| [Supplementary studies](results/supplementary-studies/README.md) | Independent stage costs, historical THESIS20/MLSys selection, dissertation ranking and reported tables, YOLOv7 completion, native endpoints and Hailo-8 diagnosis, each with its own cohort |
+| [Supplementary studies](results/supplementary-studies/README.md) | Quality audit, fixed calibration, scheduling intervention and full ResNet replication, alongside independent stage costs and earlier THESIS20/MLSys and diagnostic studies, each with its own scope |
 | [Analysis scripts](scripts/README.md) | Offline reanalysis and plotting from the supplied inputs |
 | [Software and measurement tools](software/README.md) | Offline evaluators, measurement tools and the selected ONNX source |
 

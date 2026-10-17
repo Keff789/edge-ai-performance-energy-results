@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "export_date": "2026-10-17",
+  "source_task_id": "mlsys_r14_evidence_mechanism_20261017_sm2",
+  "deployment_snapshot_commit": "1b01b220b2a80af7e2e3fa186f777a0676582854",
+  "source_package": {
+    "filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+    "bytes": 42481560,
+    "sha256": "703c1824b64659bea6e06feb403301fc9d86fe0175d9d7725a5a37c988429b68"
+  },
+  "source_files": [
+    {
+      "path": "REPORT.md",
+      "sha256": "8817288a1cb9fc53d076350ed078d221da3bb713f2547395ebf6c3d0e6a46cd2",
+      "bytes": 21544
+    },
+    {
+      "path": "README.md",
+      "sha256": "1160d383012a5029a2ca394aa6d2264cb91d76e0da5f9b11347e8e3e03fc4aa4",
+      "bytes": 8493
+    },
+    {
+      "path": "PROTOCOL.json",
+      "sha256": "bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd",
+      "bytes": 494839
+    },
+    {
+      "path": "SHA256SUMS",
+      "sha256": "87776dba403ea575eecdea16d39627175b7e67cfcd3a579af866453a52da049a",
+      "bytes": 262047
+    },
+    {
+      "path": "INVENTORY.json",
+      "sha256": "11a88178333d469fdff77fa1cbbb31e61e46680970d04845aaf7abcfd48a4d31",
+      "bytes": 51460
+    },
+    {
+      "path": "EVIDENCE_AUDIT.csv",
+      "sha256": "dbb415827fd453d908d82b00b4d12952bdd9cc21a46568c0fb40d46a6f68175d",
+      "bytes": 5004159
+    },
+    {
+      "path": "FLAG_RESOLUTION.csv",
+      "sha256": "b7d866acf1dfa6df7ea300cb6fafe1df461987bcb1b05aeb0ba0cffed3bfca2f",
+      "bytes": 529954
+    },
+    {
+      "path": "CLAIM_STATUS.csv",
+      "sha256": "5c40615f1f30a2922edd4dcde1419eae1d9a34cd6cd64563e87d75d933063b4e",
+      "bytes": 25359
+    },
+    {
+      "path": "results/calibration_protocol.json",
+      "sha256": "be80a3f9e7e9662da907e438271ae564330ea7b3c0e648212c674828fecf637c",
+      "bytes": 2991
+    },
+    {
+      "path": "results/mechanism_confirmation.json",
+      "sha256": "c2528044a6ce114773b7839ffcf56eccfc24fef22202e236cfe71dd80134e7c1",
+      "bytes": 60973
+    },
+    {
+      "path": "receipts/ANALYSIS_CODE_PIN.json",
+      "sha256": "c6adc6867ed0a9aea07116bbfe8178419cd422a6345a43734883261c9f34d16e",
+      "bytes": 816
+    }
+  ],
+  "exports": [
+    {
+      "source_relative_path": "results/calibration_summary.csv",
+      "source_sha256": "e12b533eaf7e3af76a562ac5c7e9a699cb1294e0747f7515861defbeaaa4b250",
+      "export_relative_path": "tables/calibration_summary.csv",
+      "export_sha256": "37d01d4ac956420c1fb98cc3d1da33c15f2c9e37626e839c03df9a66bd0f048f",
+      "transformation": "confirmed cohort only; original column values retained",
+      "rows": 24
+    },
+    {
+      "source_relative_path": "results/calibration_device_summary.csv",
+      "source_sha256": "ba21f11e5fc2dba68f1d8eac46bd6b08a056f70847bf1903844793557094dce4",
+      "export_relative_path": "tables/calibration_device_summary.csv",
+      "export_sha256": "113d38672faa7d678612f36c6365230bcaecaea8e3fa5991f71251deaa298066",
+      "transformation": "confirmed cohort only; original column values retained",
+      "rows": 72
+    },
+    {
+      "source_relative_path": "results/calibration_costs.csv",
+      "source_sha256": "ad694191ee99c5e13fef57d1d5860f03c27e98386bb38d7dc4b34f02c5572df3",
+      "export_relative_path": "tables/calibration_costs.csv",
+      "export_sha256": "03617bb6f47b2690c7b736c44c468c1cf039fa5d619d39e2885fbf7e002b6b85",
+      "transformation": "confirmed cohort only; original column values retained",
+      "rows": 9
+    },
+    {
+      "source_relative_path": "results/calibration_protocol.json",
+      "source_sha256": "be80a3f9e7e9662da907e438271ae564330ea7b3c0e648212c674828fecf637c",
+      "export_relative_path": "methods/calibration_protocol.json",
+      "export_sha256": "be80a3f9e7e9662da907e438271ae564330ea7b3c0e648212c674828fecf637c",
+      "transformation": "exact_copy",
+      "rows": null
+    },
+    {
+      "source_relative_path": "results/audit_summary.json",
+      "source_sha256": "4fffb5c9fcd6cf613f29f5816dd8c5ee0ef09c9e922fc7729b46fb48af2be88d",
+      "export_relative_path": "tables/audit_summary.json",
+      "export_sha256": "4fffb5c9fcd6cf613f29f5816dd8c5ee0ef09c9e922fc7729b46fb48af2be88d",
+      "transformation": "exact_copy",
+      "rows": null
+    },
+    {
+      "source_relative_path": "results/r14_full_comparison_summary.csv",
+      "source_sha256": "cfd8736d00e3be794eb95e8bdb4473b556845a4a026fa72ecfa6dd463807ba55",
+      "export_relative_path": "tables/quality_constrained_full_comparison.csv",
+      "export_sha256": "cfd8736d00e3be794eb95e8bdb4473b556845a4a026fa72ecfa6dd463807ba55",
+      "transformation": "exact_copy",
+      "rows": null
+    },
+    {
+      "source_relative_path": "results/r14_global_winners.csv",
+      "source_sha256": "a2a96139a440175d6130bb2fdec61ba87cbf1ea96bfac63b735d425ef314c27c",
+      "export_relative_path": "tables/global_winner_quality.csv",
+      "export_sha256": "a2a96139a440175d6130bb2fdec61ba87cbf1ea96bfac63b735d425ef314c27c",
+      "transformation": "exact_copy",
+      "rows": null
+    },
+    {
+      "source_relative_path": "results/mechanism_confirmation_summary.csv",
+      "source_sha256": "d758e511fd3de80785306213be12bf18ef3b0a237e7777860e682f8a04e539e4",
+      "export_relative_path": "tables/mechanism_summary.csv",
+      "export_sha256": "d758e511fd3de80785306213be12bf18ef3b0a237e7777860e682f8a04e539e4",
+      "transformation": "exact_copy",
+      "rows": null
+    },
+    {
+      "source_relative_path": "results/mechanism_confirmation_blocks.csv",
+      "source_sha256": "5df7f7950d5ac77a410ec47d22f8c679508cd111d62010e9f9d7fcfee984c769",
+      "export_relative_path": "tables/mechanism_blocks.csv",
+      "export_sha256": "2661aa9e3cad22aa90a793f57febb2fc2e34085383b6a84c71974d3cbcc6265d",
+      "transformation": "complete blocks only; unrun extension omitted",
+      "rows": 50
+    },
+    {
+      "source_relative_path": "results/mechanism_confirmation_cells.csv",
+      "source_sha256": "91ea87fb69a4e52bea13ff337c55e8567eea63297c13ce3e2aaff96f4c0b9782",
+      "export_relative_path": "tables/mechanism_cells.csv",
+      "export_sha256": "be6c462b2a038a1c43000fc113e47cb532c4311add01e4075044175bf101eb43",
+      "transformation": "included rows; compact fields; report path relative to source package",
+      "rows": 60
+    }
+  ],
+  "scope": "Compact summary export. Source package and external raw dependencies must be archived separately. No claim that Git contains the complete raw-data archive.",
+  "external_raw_archive_verification": "Pending execution of the separate SM2-to-Sprite archival task; do not infer completion from this Git export."
+}
