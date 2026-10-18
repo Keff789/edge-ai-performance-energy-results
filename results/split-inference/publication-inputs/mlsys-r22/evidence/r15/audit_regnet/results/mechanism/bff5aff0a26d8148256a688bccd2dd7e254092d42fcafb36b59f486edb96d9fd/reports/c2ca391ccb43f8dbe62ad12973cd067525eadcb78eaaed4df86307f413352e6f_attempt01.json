@@ -1,0 +1,135 @@
+{
+  "schema": "mechanism-product-workers-v1",
+  "protocol_sha256": "bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd",
+  "identity": {
+    "model_id": "regnet_x_1_6gf",
+    "case_id": "b123",
+    "direction": "hailo10h_to_trt",
+    "precision": "uint8_dequant_fp16",
+    "setup_id": "orin_nx_hailo10_01",
+    "comparison_backend": "hailo10h",
+    "output_endpoint_id": "classification:classification_logits:7e81637d07062cb8ef8bad5a0db478cab1a08ede42cf1c306f0e7757a4f670e1"
+  },
+  "artifact_identity": {
+    "part1_runtime": {
+      "path": "/home/nx/splitpoint_runs/_onnx_splitpoint_cache/tensorrt_managed_v27516/regnet_x_1_6gf-aa35339d03c9ebf4/native_split_quality/orin_nx_hailo10_01/regnet_x_1_6gf/b123/hailo10h_to_trt/a78aa9a4d358e9d2e97030deb7bf0e1be2dbc4f3205d4c228c792f41826415f2/part1.hef",
+      "sha256": "91d2dcf38ea4943870bb28734184fc2cbe61a2468573fee137a38236cef924b5"
+    },
+    "engine": {
+      "path": "/home/nx/splitpoint_runs/_onnx_splitpoint_cache/tensorrt_managed_v27516/regnet_x_1_6gf-aa35339d03c9ebf4/native_split_quality/orin_nx_hailo10_01/regnet_x_1_6gf/b123/hailo10h_to_trt/a78aa9a4d358e9d2e97030deb7bf0e1be2dbc4f3205d4c228c792f41826415f2/engine_cache/b123/part2/uint8_dequant_fp16/part2_uint8_dequant_fp16.engine",
+      "sha256": "8697decddc89abc41fd78bc6c537bfa44d74d2580a75318922971e40f4f1f63b"
+    }
+  },
+  "chain": "generic",
+  "schedule": "single",
+  "block": 5,
+  "mode": "duration",
+  "run_id": "afe74968b73f77d47374b22c82fa5ae54463fc0a4790d15e9dbfa811c48d7f87",
+  "adapter_sha256": "74ff208b55bd31001cb7f45bef449a0d395d64ae84c6a6e8da64cd6b63ae18d5",
+  "product_runner": "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/product_generic/runner/run_split_onnxruntime.py",
+  "product_runner_sha256": "524fb473061a922d5fadec3a1f517f1d1cc40f1d89a266523055296e54699c55",
+  "config_sha256": "1976343cd68254db5e2abfe14af89c15a36d8df881b45af9e4b041acb94fb256",
+  "pid": 1964382,
+  "worker_cpu_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "status": "complete",
+  "started_time_ns": 1792249848291145929,
+  "energy_measured": false,
+  "diagnostic_adapter": true,
+  "schedule_description": "one_global_outstanding_task_until_classification_tail_complete",
+  "F2_scope": "whole_Generic_Native_runtime_and_handoff_chain_bundle",
+  "deviations": [
+    "60_second_admission_window_instead_of_1000_fixed_tasks",
+    "independent_process_diagnostic_report_no_product_import",
+    "30_second_warmup_fully_drained_then_measurement_workers_recreated"
+  ],
+  "completed_work_units": 12064,
+  "measurement_time_seconds": 60.00100141,
+  "completed_task_fps": 201.06331088649742,
+  "warmup_completed_count": 6015,
+  "metrics": {
+    "producer": "generic_split",
+    "status": "ok",
+    "measurement_boundary": "prepared_input_before_p1_to_completed_pipeline_drain",
+    "clock": "perf_counter_ns",
+    "fill_and_drain_included": true,
+    "preprocessing_timed": false,
+    "handoff_timed": true,
+    "preprocessing_scope": "image_decode_resize_letterbox_before_prepared_input",
+    "prepared_input_adapter_timed": true,
+    "postprocess_timed": true,
+    "output_materialization_timed": true,
+    "worker_count": 2,
+    "queue_depth": 2,
+    "handoff_payload_copy": false,
+    "requested_warmup_count": 0,
+    "warmup_completed_count": 0,
+    "requested_task_count": null,
+    "completed_task_count": 12064,
+    "processor_count_delta": 12064,
+    "warmup_end_ns": 3696192561113128,
+    "measurement_start_ns": 3696192571134189,
+    "admission_deadline_ns": 3696252571134189,
+    "admission_stopped_ns": 3696252571297241,
+    "measurement_end_ns": 3696252572135599,
+    "measured_makespan_seconds": 60.00100141,
+    "completed_task_fps": 201.06331088649742,
+    "measurement_mode": "generic_completed_task_energy",
+    "requested_duration_s": 60.0,
+    "admitted_task_count": 12064,
+    "completed_work_units": 12064,
+    "energy_work_units_source": "completed_work_units",
+    "energy_work_units_exact": true,
+    "admission_stopped_at_deadline": true,
+    "accepted_work_drained": true
+  },
+  "warmup_duration_s": 30.0,
+  "accepted_work_drained": true,
+  "admission_window_seconds": 60.0,
+  "runtime_artifacts": {
+    "part1_runtime": {
+      "path": "/home/nx/splitpoint_runs/_onnx_splitpoint_cache/tensorrt_managed_v27516/regnet_x_1_6gf-aa35339d03c9ebf4/native_split_quality/orin_nx_hailo10_01/regnet_x_1_6gf/b123/hailo10h_to_trt/a78aa9a4d358e9d2e97030deb7bf0e1be2dbc4f3205d4c228c792f41826415f2/part1.hef",
+      "sha256": "91d2dcf38ea4943870bb28734184fc2cbe61a2468573fee137a38236cef924b5"
+    },
+    "engine": {
+      "path": "/home/nx/splitpoint_runs/_onnx_splitpoint_cache/tensorrt_managed_v27516/regnet_x_1_6gf-aa35339d03c9ebf4/native_split_quality/orin_nx_hailo10_01/regnet_x_1_6gf/b123/hailo10h_to_trt/a78aa9a4d358e9d2e97030deb7bf0e1be2dbc4f3205d4c228c792f41826415f2/engine_cache/b123/part2/uint8_dequant_fp16/part2_uint8_dequant_fp16.engine",
+      "sha256": "8697decddc89abc41fd78bc6c537bfa44d74d2580a75318922971e40f4f1f63b"
+    }
+  },
+  "finished_time_ns": 1792249939608679091,
+  "loaded_source_hashes": {
+    "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/product_generic/runner/run_split_onnxruntime.py": "524fb473061a922d5fadec3a1f517f1d1cc40f1d89a266523055296e54699c55",
+    "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/product_generic/splitpoint_runners/_types.py": "50251a53b4de0c3bb5ac4e28bba7101691a88b412fe8703c51b47f050af87232",
+    "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/product_generic/splitpoint_runners/__init__.py": "470cbbd32fdcf5324896bb072fff2f7a413ca6a50af6d03a36c7a6603aa87066",
+    "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/product_generic/splitpoint_runners/native_command_contract.py": "b9761162f979efd3931797b2b33e31f3fc219de11484ef43aafadfe1eb1a4744",
+    "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/product_generic/splitpoint_runners/native_split_quality.py": "4df006a9d50b675ec955bc518510ffcd7200ba9c675ecbc5a723fe1570b51af4",
+    "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/product_generic/splitpoint_runners/native_split_quality_runtime.py": "0e97f0640686a227519920eb51952413d35ab5c2cd8deca5d30809d235249264",
+    "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/product_generic/splitpoint_runners/artifacts.py": "57ec7aee2bd8e6d94f2fc7e5b2c7f2663ea82435219d64320007ef90fc970ce5",
+    "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/product_generic/splitpoint_runners/backends/base.py": "9528ee48a9daa4e503f537efd92d8611785d1c76182a182f5ef48a5091471d95",
+    "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/product_generic/splitpoint_runners/backends/__init__.py": "43fd76f0f2048a270920b27535de86deff4af91301c0df41fe064471b0a3ab65",
+    "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/product_generic/splitpoint_runners/interface_transfer.py": "fcdc990edc2727e5dd9f789b43c45be40a93f264f8d994969b25e6de34d65e40",
+    "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/product_generic/splitpoint_runners/harness/base.py": "938b3713f32e412dd1f57fcc07a397fa1f3b26ed30afbc945d22f1bb082db06c",
+    "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/product_generic/splitpoint_runners/harness/classification.py": "7b523df592b8a0338b1396c105e2a380aef587010c4db7fe0dc5ee368b434758",
+    "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/product_generic/splitpoint_runners/harness/yolo.py": "ef63cbc2ce549fcde0926456d5a0269c583aef29ba7f031980e0241f00ca5965",
+    "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/product_generic/splitpoint_runners/harness/__init__.py": "37ba36a48e4f620bb6541a94df2dd856b4730ebd2ce5aa5641caf16c058d29d2",
+    "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/product_generic/splitpoint_runners/graph_runner.py": "c032de30403135c37b0813c5a48489d888a1ffade72fc20f8d6cdd329fc12012",
+    "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/product_generic/splitpoint_runners/task_completion.py": "4088d7e7b88cf19d0f9f3098770521f0326dcc6ac31fe08ab55a9e7c7066de51"
+  },
+  "product_argv": [
+    "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/product_generic/runner/run_split_onnxruntime.py",
+    "--generic-completion-config",
+    "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/results/mechanism_source_cases/regnet_b123_generic_config.json",
+    "--generic-completion-repetition",
+    "1",
+    "--out-dir",
+    "/home/nx/Reports/mlsys_r14_evidence_mechanism_20261017_sm2/confirmation_v1/runs/primary/c2ca391ccb43f8dbe62ad12973cd067525eadcb78eaaed4df86307f413352e6f_attempt01"
+  ]
+}

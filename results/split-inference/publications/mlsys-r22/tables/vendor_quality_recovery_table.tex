@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{MobileNetV3 Top1 on the same 5,000 images, CPU ONNX reference 73.70\%. Current A4-bound b027 with TensorRT suffix. This current view preserves the separate historical vendor table and its older source generation.}
+\label{tab:vendor-quality}
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}l r r r@{}}
+\toprule
+Host & Accel. Full (\%) & Split b027 (\%) & Recovered (pp) \\
+\midrule
+H8 & 60.62 & 71.58 & +10.96 \\
+H10 & 59.42 & 72.22 & +12.80 \\
+DeepX & 71.72 & 72.18 & +0.46 \\
+\bottomrule
+\end{tabular*}
+\endgroup
+\end{table}

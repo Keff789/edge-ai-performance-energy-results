@@ -1,0 +1,32 @@
+{
+  "configurations": 450,
+  "eligible_fulls": 33,
+  "eligible_generic_splits": 187,
+  "eligible_native_splits": 187,
+  "energy_repeat_count": 48,
+  "family_selection": {
+    "classification": {
+      "exact_hits": 1,
+      "groups": 9,
+      "mean_loss_pct": 32.80433865060003,
+      "pairs": 151
+    },
+    "detection": {
+      "exact_hits": 8,
+      "groups": 12,
+      "mean_loss_pct": 1.7817217153686513,
+      "pairs": 36
+    }
+  },
+  "fps_repeat_count": 48,
+  "global_winners_unchanged_at_5pct": true,
+  "globally_faster_and_less_energy_models": 3,
+  "globally_faster_models": 6,
+  "paired_candidates": 204,
+  "quality_eligible": 407,
+  "quality_exact_hits": 9,
+  "quality_groups": 21,
+  "quality_mean_loss_pct": 15.077128973324957,
+  "quality_paired_candidates": 187,
+  "source_generation": "deepx_native_a4_20261015"
+}

@@ -1,0 +1,87 @@
+{
+  "bar_baseline": 0,
+  "caption": "YOLOv7 on the same H8 host. The selected Native split is compared with Hailo8 Full and TensorRT Full. The dashed AP line marks at most 5% relative quality loss against CPU ONNX. Bars are point estimates; available CPU-relative quality intervals are not paired split-minus-Full AP intervals and are not plotted as such. The global DeepX Full comparison remains a separate denominator in the winner tables.",
+  "cohort": "current_deployments",
+  "data_generation": "deepx_native_a4_20261015",
+  "error_bars": "none; CPU-relative quality intervals do not provide paired Split-minus-Full AP intervals",
+  "input_files": [
+    "results/split-inference/data/inputs/cases.json",
+    "results/split-inference/data/inputs/selected_evidence.json",
+    "results/split-inference/data/inputs/energy_repeats.json"
+  ],
+  "input_uids": [
+    "native|yolov7_paper|H8|hailo8_to_trt|b066",
+    "native|yolov7_paper|H8|native_full_hailo8|full",
+    "native|yolov7_paper|H8|native_full_tensorrt|full"
+  ],
+  "kind": "measurement",
+  "omitted_points": [],
+  "panel_order": [
+    "throughput_fps",
+    "system_energy_mj_per_image",
+    "coco_ap_50_95_percent"
+  ],
+  "points": [
+    {
+      "case": "full",
+      "coco_ap_50_95_percent": 40.77616377244088,
+      "configuration": "Hailo8 Full",
+      "energy_claim": true,
+      "model": "yolov7_paper",
+      "normal_performance_claim": true,
+      "passes_5pct": false,
+      "quality_bound_result_sha256": "5669e8739a8d2307e4f5c741b5e2d6ed270fcef4ffdf6727839ce96bc792be2e",
+      "quality_n": 5000,
+      "reference_coco_ap_50_95_percent": 46.0346586685622,
+      "relative_quality_loss": 0.11422904064481373,
+      "runner": "native",
+      "setup": "H8",
+      "system_energy_mj_per_image": 549.8435630511002,
+      "throughput_fps": 32.0712613037562,
+      "uid": "native|yolov7_paper|H8|native_full_hailo8|full"
+    },
+    {
+      "case": "full",
+      "coco_ap_50_95_percent": 46.02158790020155,
+      "configuration": "TensorRT Full",
+      "energy_claim": true,
+      "model": "yolov7_paper",
+      "normal_performance_claim": true,
+      "passes_5pct": true,
+      "quality_bound_result_sha256": "5669e8739a8d2307e4f5c741b5e2d6ed270fcef4ffdf6727839ce96bc792be2e",
+      "quality_n": 5000,
+      "reference_coco_ap_50_95_percent": 46.0346586685622,
+      "relative_quality_loss": 0.00028393320899276,
+      "runner": "native",
+      "setup": "H8",
+      "system_energy_mj_per_image": 598.4064624597721,
+      "throughput_fps": 53.055325348859675,
+      "uid": "native|yolov7_paper|H8|native_full_tensorrt|full"
+    },
+    {
+      "case": "b066",
+      "coco_ap_50_95_percent": 45.74084155464624,
+      "configuration": "Split b066",
+      "energy_claim": true,
+      "model": "yolov7_paper",
+      "normal_performance_claim": true,
+      "passes_5pct": true,
+      "quality_bound_result_sha256": "12bf2227e6ec762a6a3daad5a599106050d4b8341f4548ef5f527a988b10851f",
+      "quality_n": 5000,
+      "reference_coco_ap_50_95_percent": 46.0346586685622,
+      "relative_quality_loss": 0.006382519658315923,
+      "runner": "native",
+      "setup": "H8",
+      "system_energy_mj_per_image": 330.140070508485,
+      "throughput_fps": 112.86778421355565,
+      "uid": "native|yolov7_paper|H8|hailo8_to_trt|b066"
+    }
+  ],
+  "quality_threshold_percent": 43.73292573513409,
+  "schema": "mlsys-r22-figure-v1",
+  "units": [
+    "FPS",
+    "mJ/image",
+    "%"
+  ]
+}

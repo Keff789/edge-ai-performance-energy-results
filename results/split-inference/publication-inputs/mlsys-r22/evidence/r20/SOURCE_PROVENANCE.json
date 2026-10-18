@@ -1,0 +1,88 @@
+{
+  "source_archive": {
+    "path": "/workspace/scratch/94932e4d99c4/upload/MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+    "sha256": "703c1824b64659bea6e06feb403301fc9d86fe0175d9d7725a5a37c988429b68",
+    "size_bytes": 42481560
+  },
+  "source_files": [
+    {
+      "local_source_path": "/workspace/scratch/94932e4d99c4/sm2_results_review/results/endpoint_contracts.csv",
+      "archive_member": "results/endpoint_contracts.csv",
+      "sha256": "50ff6680f0fe4672152b6b2a4813845475a5c071cd579143ac35391ff894c881",
+      "size_bytes": 31914,
+      "local_is_byte_identical_to_archive_member": true
+    },
+    {
+      "local_source_path": "/workspace/scratch/94932e4d99c4/sm2_results_review/analysis/audit_inputs/source_extracts.json.gz",
+      "archive_member": "analysis/audit_inputs/source_extracts.json.gz",
+      "sha256": "94335701e93ae2876eccba08f320a36e5d4b9ecfbefc0ff55598f7b9c20dbcdd",
+      "size_bytes": 13302046,
+      "local_is_byte_identical_to_archive_member": true
+    },
+    {
+      "local_source_path": "/workspace/scratch/94932e4d99c4/sm2_results_review/analysis/audit_independent_inputs.json",
+      "archive_member": "analysis/audit_independent_inputs.json",
+      "sha256": "d41d577613c388909b414fce94d364813258c21c70e540ee660862bded2b7e6f",
+      "size_bytes": 6651912,
+      "local_is_byte_identical_to_archive_member": true
+    }
+  ],
+  "bundled_files": [
+    {
+      "file": "README.md",
+      "sha256": "346bdd6f11931474c5608b4cc40f07e72bd2d1fa7769c23a549b6d3a656781d4",
+      "size_bytes": 2660,
+      "relationship": "reproduction code or interpretation notes"
+    },
+    {
+      "file": "VALIDATION.json",
+      "sha256": "b77c7ff1dd9d82346a3408d6aea5d2574ec121b69be50003f6125fc83ba26e98",
+      "size_bytes": 726,
+      "relationship": "deterministic selected projection or validation of sources"
+    },
+    {
+      "file": "deepx_energy_window_projection.json",
+      "sha256": "03eb5f88351327cfb48b8a059a181f36bbd3c6f6cd19155cccb396c08570fd16",
+      "size_bytes": 411450,
+      "relationship": "deterministic selected projection or validation of sources"
+    },
+    {
+      "file": "detector_endpoint_projection.json",
+      "sha256": "d863ca66ff593f793050155f89711a67454bc95c328e1a5de56114197f5f5ba4",
+      "size_bytes": 723995,
+      "relationship": "deterministic selected projection or validation of sources"
+    },
+    {
+      "file": "endpoint_contracts.csv",
+      "sha256": "50ff6680f0fe4672152b6b2a4813845475a5c071cd579143ac35391ff894c881",
+      "size_bytes": 31914,
+      "relationship": "unchanged copy"
+    },
+    {
+      "file": "extract.py",
+      "sha256": "2347e89669d5873314ef75b17151b6489dc4ae5bb66c9da149f06b0f74fc0473",
+      "size_bytes": 12829,
+      "relationship": "reproduction code or interpretation notes"
+    },
+    {
+      "file": "workload_contract_projection.json",
+      "sha256": "0529a7f97dd216e19bd0b6fe3282d235c363c6d4361b01927d73ece2cd720920",
+      "size_bytes": 1140081,
+      "relationship": "deterministic selected projection or validation of sources"
+    },
+    {
+      "file": "yolov7_h8_quality_projection.json",
+      "sha256": "43e420ed1bd30bde0926706a09c5d391da4d43a4b1ac254abfe45b7bc49a8b23",
+      "size_bytes": 11603,
+      "relationship": "deterministic selected projection or validation of sources"
+    }
+  ],
+  "projection_policy": "Values are copied from source JSON; per-row source index and original source metadata retained. Projections are not byte-identical original files. No hardware runs, parameter fitting or new quality evaluation.",
+  "endpoint_contracts_scope": "20 central endpoint rows including 14 global winner/reference configurations and six additional mechanism configurations.",
+  "generator": {
+    "file": "extract.py",
+    "sha256": "2347e89669d5873314ef75b17151b6489dc4ae5bb66c9da149f06b0f74fc0473",
+    "size_bytes": 12829,
+    "mode": "default read-only bundled verification; --archive reconstructs source projections in memory and compares exact bytes"
+  }
+}

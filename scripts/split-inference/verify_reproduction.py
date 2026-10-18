@@ -16,6 +16,10 @@ def exports(root, include_figures):
         files += [f for f in (root/'figures').iterdir() if f.is_file() and f.suffix in {'.png', '.pdf', '.svg', '.json'}]
         files += list((root/'figures').rglob('*.md'))
         files += [root/n for n in ['CAPTIONS.md', 'METHODS.md', 'METHODS_PARAGRAPH.tex', 'FINDINGS.md']]
+    profile=root/'publications/mlsys-r22'
+    assert profile.is_dir(), ('Missing registered publication profile',str(profile))
+    files += [f for f in profile.rglob('*') if f.is_file()
+              and (include_figures or f.suffix not in {'.pdf','.svg','.png'})]
     return {str(f.relative_to(root)): f.read_bytes() for f in files}
 
 full = (a.actual/'figures').is_dir()

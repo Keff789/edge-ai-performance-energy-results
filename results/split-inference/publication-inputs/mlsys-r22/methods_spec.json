@@ -1,0 +1,135 @@
+{
+  "tab:experimental-scope": {
+    "headers": [
+      "Aspect",
+      "Scope"
+    ],
+    "kind": "methods_description",
+    "reference_file": "sections/03_system.tex",
+    "rows": [
+      [
+        "Platforms",
+        "Three Orin NX hosts with H8, H10, or DX."
+      ],
+      [
+        "Models",
+        "MobileNetV3-L, RegNet-X 1.6GF, ResNet-50, YOLO11l, YOLO26m, YOLO26s, YOLOv7."
+      ],
+      [
+        "Coverage",
+        "204 paired Native/Generic cuts and 42 host-specific Full alternatives."
+      ],
+      [
+        "Inputs",
+        "ImageNet validation at $224\\times224$ and COCO 2017 validation at $640\\times640$."
+      ],
+      [
+        "Precision",
+        "TensorRT Full builds enable FP16. Split bridges use float32 layout conversion or uint8 dequantization to FP16. Accelerator precision follows the compiled artifact."
+      ],
+      [
+        "Performance",
+        "Three independent process runs of 1,000 completed tasks. Available path records specify batch 1 and 100 drained warmups."
+      ],
+      [
+        "Energy",
+        "Input shunt with INA225 acquisition. Three 60-s repetitions at the calibrated DC system input, without idle subtraction."
+      ],
+      [
+        "Quality",
+        "Shared 5,000-image evaluation sets, bound by dataset hashes. 1,000 paired-bootstrap replicates."
+      ]
+    ],
+    "scope": "Recorded R22 methods and contracts, not new measurement observations. Reference scope limitations are retained.",
+    "source_sha256": "64e54ae56b1c89933aacac0427a33d22b8571cd08ba1d0f67c2616ee004fe3c3",
+    "stem": "experimental_scope"
+  },
+  "tab:supp-endpoint-contracts": {
+    "headers": [
+      "Model or output path",
+      "Completed result",
+      "Required processing"
+    ],
+    "kind": "methods_description",
+    "reference_file": "sections/r20_endpoint_contracts.tex",
+    "rows": [
+      [
+        "MobileNet, RegNet, ResNet",
+        "Synchronized classifier outputs and ordered Top1/Top5",
+        "Output materialization and Top1/Top5 processing."
+      ],
+      [
+        "YOLO11l and YOLOv7",
+        "Original-image boxes, probability scores, and class indices",
+        "Model-specific decoding and class-aware NMS where not already completed by the model, followed by materialization."
+      ],
+      [
+        "YOLO26m/s, raw-head paths",
+        "The same detection record format",
+        "Decode raw heads and apply the required NMS. This includes Hailo Full paths."
+      ],
+      [
+        "YOLO26m/s, integrated outputs",
+        "The same detection record format",
+        "Filter and normalize integrated detections, undo letterboxing, and materialize outputs. No additional NMS pass is applied to valid integrated outputs."
+      ]
+    ],
+    "scope": "Recorded R22 methods and contracts, not new measurement observations. Reference scope limitations are retained.",
+    "source_sha256": "7f562d625b2e368dc0f72b5a4788b0a2a9e0f538e0f7e945ccc60d04b7fb3012",
+    "stem": "r20_endpoint_contracts"
+  },
+  "tab:supp-setup": {
+    "headers": [
+      "Item",
+      "Recorded setting",
+      "Evidence scope"
+    ],
+    "kind": "methods_description",
+    "reference_file": "sections/supplement_setup.tex",
+    "rows": [
+      [
+        "Performance workload",
+        "Three repetitions and 1,000 completed tasks per repetition",
+        "204 split and 42 Full configurations. YOLOv7 combines 27 new split and 18 preserved Full repetitions"
+      ],
+      [
+        "Batch and Generic queues",
+        "Batch 1. two workers. queue depth 2. 100 warmups. one exactly prepared feed repeated",
+        "Nine targeted pathway records, not all 204 splits"
+      ],
+      [
+        "Native queues",
+        "Queue depth 3. 100 warmups. H10 paths additionally record 8 prefix requests in flight",
+        "The same nine targeted pathway records. runtime organization remains case-specific"
+      ],
+      [
+        "Nominal spatial inputs",
+        "ImageNet validation $224\\times224$ and COCO 2017 validation $640\\times640$",
+        "Dataset identities and available preprocessing contracts, described below"
+      ],
+      [
+        "Orin configuration",
+        "NX 16\\,GB. L4T 36.4.7. matching active \\texttt{MAXN\\_SUPER} definition",
+        "YOLOv7 setup comparison"
+      ],
+      [
+        "Clock and link observations",
+        "CPU 1984\\,MHz. GPU 1173\\,MHz. no observed OC-counter increments. accelerator PCIe snapshots 8.0\\,GT/s $\\times4$",
+        "Approximately 1-Hz YOLOv7 load samples and separate link snapshots. EMC unobserved"
+      ],
+      [
+        "TensorRT Full build",
+        "Same model, FP16 option, static FLOAT input/output shapes and workspace setting",
+        "YOLOv7 Full comparison. serialized engines and internal tactics need not be identical"
+      ],
+      [
+        "DC energy boundary",
+        "Calibrated full-system input energy. no idle subtraction in the primary comparison",
+        "231 cases / 693 repetitions over six models. calibration detail in Section~\\ref{sec:supp-energy}"
+      ]
+    ],
+    "scope": "Recorded R22 methods and contracts, not new measurement observations. Reference scope limitations are retained.",
+    "source_sha256": "b63b42e7e9cf60bd0b07b11ddf9f9c1e93974730b2716805297c730a7e46ce13",
+    "stem": "supplement_setup"
+  }
+}

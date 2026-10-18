@@ -1,0 +1,641 @@
+{
+  "audit_commit": "820f6ecaf3e1e4cba2796a7418ff42913cf43e51",
+  "inventory_method": "Recursive active input traversal of main.tex and supplement.tex, comments removed; individual labelled table/figure environments; reference manuscript is not a runtime input.",
+  "occurrences": [
+    {
+      "description": "Generic and Native execution schematic",
+      "document": "main.tex",
+      "graphic_paths": [
+        "figures/system_overview.pdf"
+      ],
+      "include_chain": [
+        "main.tex",
+        "sections/03_system.tex"
+      ],
+      "kind": "figure",
+      "label": "fig:runners",
+      "reference_caption": "Generic and Native execute the same one-input cut. Generic also supports multi-tensor boundaries beyond this paired comparison. Native is tailored to the accelerator--GPU combination. The shared cut does not imply equal runtime costs.",
+      "reference_graphic_sha256": {
+        "figures/system_overview.pdf": "c93d29f65088e8b60bf36f5c21bed4c940a66e806640c5d44f92cec94955416c"
+      },
+      "reference_number": "1",
+      "reference_tex_sha256": "64e54ae56b1c89933aacac0427a33d22b8571cd08ba1d0f67c2616ee004fe3c3",
+      "tex_path": "sections/03_system.tex"
+    },
+    {
+      "description": "Deployment platforms, datasets and protocol",
+      "document": "main.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "main.tex",
+        "sections/03_system.tex"
+      ],
+      "kind": "table",
+      "label": "tab:experimental-scope",
+      "reference_caption": "Platforms, dataset, and measurement protocol for the deployment comparison.",
+      "reference_graphic_sha256": {},
+      "reference_number": "1",
+      "reference_tex_sha256": "64e54ae56b1c89933aacac0427a33d22b8571cd08ba1d0f67c2616ee004fe3c3",
+      "tex_path": "sections/03_system.tex"
+    },
+    {
+      "description": "Effect of Full-reference choice",
+      "document": "main.tex",
+      "graphic_paths": [
+        "figures/fastest_split_baseline_comparison.pdf"
+      ],
+      "include_chain": [
+        "main.tex",
+        "sections/04_protocol.tex"
+      ],
+      "kind": "figure",
+      "label": "fig:baseline-effect",
+      "reference_caption": "The same selected split with two Full references. A connection changes only the denominator, not the split or its speed. YOLO11l benefits on its own host but loses to the global Full alternative. Supplement Section~B lists the exact ratios and hosts.",
+      "reference_graphic_sha256": {
+        "figures/fastest_split_baseline_comparison.pdf": "e5250dcfb5f8e0048d6fa4587ed9c636417fb118e5eaab2dd514a67706221f18"
+      },
+      "reference_number": "2",
+      "reference_tex_sha256": "1331b8eb12c76501e720d4d312b36d09fb9dbad7749724128428f58e3b978705",
+      "tex_path": "sections/04_protocol.tex"
+    },
+    {
+      "description": "Full throughput and energy overview",
+      "document": "main.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "main.tex",
+        "sections/05_benefits.tex",
+        "sections/full_performance_table.tex"
+      ],
+      "kind": "table",
+      "label": "tab:full-performance",
+      "reference_caption": "Full-model throughput and calibrated system energy. Orin/TensorRT values are arithmetic means of the three host-specific FPS medians and mean energies. Individual hosts are listed in the supplement. Split comparisons use the fastest actual Full configuration. $\\dagger$ marks more than 5\\% relative quality loss. All TensorRT Fulls pass this rule.",
+      "reference_graphic_sha256": {},
+      "reference_number": "2",
+      "reference_tex_sha256": "ca8a39a3bc70d8fdef041582e13a203dc672902b6c3a13221e95c3a79c998418",
+      "tex_path": "sections/full_performance_table.tex"
+    },
+    {
+      "description": "Global fastest split and Full per model",
+      "document": "main.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "main.tex",
+        "sections/05_benefits.tex",
+        "sections/best_cases_table.tex"
+      ],
+      "kind": "table",
+      "label": "tab:best-cases",
+      "reference_caption": "Fastest observed Full and split across all setups. All selected splits are Native, and all configurations pass the 5\\% quality rule. Throughput gain is $100(R_{\\mathrm{split}}/R_{\\mathrm{Full}}-1)$. Energy change is $100(e_{\\mathrm{split}}/e_{\\mathrm{Full}}-1)$, so negative values mean less energy per image. Changes use unrounded values. Parentheses identify the TensorRT host. Absolute energies are in the supplement.",
+      "reference_graphic_sha256": {},
+      "reference_number": "3",
+      "reference_tex_sha256": "8eea642c427a387fcb396dadcaf2f30a9672704c58293be363917b61b4358245",
+      "tex_path": "sections/best_cases_table.tex"
+    },
+    {
+      "description": "Quality of winners and same-host Hailo comparisons",
+      "document": "main.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "main.tex",
+        "sections/05_benefits.tex",
+        "sections/r14_winner_quality.tex"
+      ],
+      "kind": "table",
+      "label": "tab:winner-quality",
+      "reference_caption": "Task quality $q$ (\\%): Top1 for classifiers and AP$_{50:95}$ for detectors. $\\Delta q=q_{\\mathrm{split}}-q_{\\mathrm{Full}}$ is in percentage points, computed before rounding. Upper block: all global winners pass the 5\\% quality rule. Lower block: same-setup Hailo comparisons, whose Fulls fail the rule while the splits pass.",
+      "reference_graphic_sha256": {},
+      "reference_number": "4",
+      "reference_tex_sha256": "b2fafd53448c1dc993684918f045ef866ea628ed670071b454b262a72867bae0",
+      "tex_path": "sections/r14_winner_quality.tex"
+    },
+    {
+      "description": "YOLOv7/H8 quality, throughput and energy",
+      "document": "main.tex",
+      "graphic_paths": [
+        "figures/yolov7_h8_case.pdf"
+      ],
+      "include_chain": [
+        "main.tex",
+        "sections/05_benefits.tex",
+        "sections/yolov7_case.tex"
+      ],
+      "kind": "figure",
+      "label": "fig:yolov7-case",
+      "reference_caption": "YOLOv7 on the same H8 host. Native split b066 improves throughput, energy per image, and task quality over Hailo8 Full. TensorRT Full retains slightly higher task quality than the split, but is slower and uses more energy. The dashed line is the 5\\% relative-quality-loss limit against the CPU reference. Only Hailo8 Full falls below it. Bars show point estimates under the measurement protocol in Section~\\ref{sec:protocol}. Text comparisons use unrounded values.",
+      "reference_graphic_sha256": {
+        "figures/yolov7_h8_case.pdf": "2cde869206b7f8f91b259a54e7854bf55c8dc6f117dfc4991fd3d726d66dca86"
+      },
+      "reference_number": "3",
+      "reference_tex_sha256": "13088c9f1de13d8a941576498731e77a3119e3fad8386f0cb67bd7698b42a8d9",
+      "tex_path": "sections/yolov7_case.tex"
+    },
+    {
+      "description": "Current ResNet/H8 throughput-energy scatter",
+      "document": "main.tex",
+      "graphic_paths": [
+        "figures/resnet_h8_energy_current.pdf"
+      ],
+      "include_chain": [
+        "main.tex",
+        "sections/05_benefits.tex",
+        "sections/07_energy.tex"
+      ],
+      "kind": "figure",
+      "label": "fig:resnet-energy",
+      "reference_caption": "ResNet-50/H8: throughput and energy for all Native splits and both Full alternatives. b038 is fastest, while b060 uses less energy for a small throughput reduction. FPS and energy come from separate runs of the same configuration.",
+      "reference_graphic_sha256": {
+        "figures/resnet_h8_energy_current.pdf": "91d931008a26a36e6fdc5b7e5e59ff5781d1e2cbc204dacd8454e0becc31c0ce"
+      },
+      "reference_number": "4",
+      "reference_tex_sha256": "10d337a038c29d97b860509078d710145980a6be91ba15fca62f5b3083a82eac",
+      "tex_path": "sections/07_energy.tex"
+    },
+    {
+      "description": "Quality-filtered Generic-to-Native loss, 187 pairs",
+      "document": "main.tex",
+      "graphic_paths": [
+        "figures/quality_generic_selection_loss.pdf"
+      ],
+      "include_chain": [
+        "main.tex",
+        "sections/06_selection.tex"
+      ],
+      "kind": "figure",
+      "label": "fig:selectors",
+      "reference_caption": "Generic-to-Native selection after the 5\\% quality filter, using the same 187 paired cuts as Table~\\ref{tab:budget}. Each marker shows the Native throughput lost by choosing the Generic winner in one model/setup group. Zero means no loss. Generic finds the Native winner in nine of 21 groups. The equally weighted group mean loss is 15.08\\%.",
+      "reference_graphic_sha256": {
+        "figures/quality_generic_selection_loss.pdf": "bab4621e85c075ec9b222adb6495015ad4808e7e66724e90d1c9f697174b9600"
+      },
+      "reference_number": "5",
+      "reference_tex_sha256": "385043e22c5e65b81c02c8122cf1ed198baa324df57f82003a84cbbdf7228135",
+      "tex_path": "sections/06_selection.tex"
+    },
+    {
+      "description": "Quality-filtered shortlist budget outcomes",
+      "document": "main.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "main.tex",
+        "sections/06_selection.tex",
+        "sections/r15_budget_table.tex"
+      ],
+      "kind": "table",
+      "label": "tab:budget",
+      "reference_caption": "Mean lost Native throughput (\\%) after the numerical 5\\% quality filter. Each method selects $k$ candidates and retains their fastest Native result. Groups have equal weight. Random values are exact expectations for sampling without replacement. Detector groups contain only three candidates, so $k=5$ is unavailable.",
+      "reference_graphic_sha256": {},
+      "reference_number": "5",
+      "reference_tex_sha256": "e9bd5a71a370380aa3f0ce819537308541c1610b0b7c3d054910fe32a2621ddf",
+      "tex_path": "sections/r15_budget_table.tex"
+    },
+    {
+      "description": "RegNet and ResNet scheduling cut ratios",
+      "document": "main.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "main.tex",
+        "sections/09_vendor_toolchains.tex",
+        "sections/r15_mechanism_table.tex"
+      ],
+      "kind": "table",
+      "label": "tab:scheduling",
+      "reference_caption": "Cut-throughput ratios under two scheduling conditions on H10. Values above one favor the numerator cut. Each column is a separate forty-process experiment with five randomized blocks. Entries give geometric means of within-block ratios with nominal 95\\% intervals below. Block values are in Supplement Section~I.",
+      "reference_graphic_sha256": {},
+      "reference_number": "6",
+      "reference_tex_sha256": "1881595577f8d4bf60750b01ec039c498954516a8a498aee983d18f16a063e2a",
+      "tex_path": "sections/r15_mechanism_table.tex"
+    },
+    {
+      "description": "Four-cut independent stage-composition experiment",
+      "document": "main.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "main.tex",
+        "sections/09_vendor_toolchains.tex",
+        "sections/stage_cost_summary.tex"
+      ],
+      "kind": "table",
+      "label": "tab:stage-costs",
+      "reference_caption": "Independent stage-cost experiment on four known cuts. Median steady-state producer, consumer, and pipeline rates (completions/s) over three blocks. Prediction is $\\min(F_P,F_C)$. Error is the median of the blockwise absolute percentage errors.",
+      "reference_graphic_sha256": {},
+      "reference_number": "7",
+      "reference_tex_sha256": "e38d52ae5359ef98d52655ef874045dff8259a763984570e8f3bed2920e2d6bf",
+      "tex_path": "sections/stage_cost_summary.tex"
+    },
+    {
+      "description": "Deployment cohort counts",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex"
+      ],
+      "kind": "table",
+      "label": "tab:cohorts",
+      "reference_caption": "Deployment-comparison scope. A split measured with two runners contributes two configurations.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "3949dfe691473303f693ccdf1b484778cfcbc3e5e92d6343f0a4ed74fa402dde",
+      "tex_path": "supplement.tex"
+    },
+    {
+      "description": "Host and global Full denominators for same split",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/fastest_split_baselines.tex"
+      ],
+      "kind": "table",
+      "label": "tab:fastest-split-baselines",
+      "reference_caption": "The same split selected in the main Table~3, with two Full references. The split is not reselected by relative gain. $R_h$ uses the fastest Full on its physical host and $R_g$ the globally fastest Full. Consequently $R_g\\leq R_h$. This comparison describes the baseline choice, not an optimization step.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "3203c4545e7824935b23b61cfac1fa94e0bb31b76e8cb1442ed4352f1b111b14",
+      "tex_path": "sections/fastest_split_baselines.tex"
+    },
+    {
+      "description": "Global throughput-winner energy/throughput ratios",
+      "document": "supplement.tex",
+      "graphic_paths": [
+        "figures/fastest_deployment_tradeoff.pdf"
+      ],
+      "include_chain": [
+        "supplement.tex"
+      ],
+      "kind": "figure",
+      "label": "fig:fastest-tradeoff",
+      "reference_caption": "Throughput and energy of each model's fastest split relative to its globally fastest Full. Both axes use the same Full configuration. Right of one is faster and below one uses less energy per image. These throughput-selected points are not the full Pareto front or an energy-minimum selection.",
+      "reference_graphic_sha256": {
+        "figures/fastest_deployment_tradeoff.pdf": "6246ac3e05e7abba4b31b6af8f5c7160244732dc10bc7533357e1d8db95e6a23"
+      },
+      "reference_number": null,
+      "reference_tex_sha256": "3949dfe691473303f693ccdf1b484778cfcbc3e5e92d6343f0a4ed74fa402dde",
+      "tex_path": "supplement.tex"
+    },
+    {
+      "description": "All host-specific Full configurations",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/current_full_details.tex"
+      ],
+      "kind": "table",
+      "label": "tab:current-full-details",
+      "reference_caption": "Full alternatives on all three hosts. $q$ is Top1 accuracy for classifiers and COCO AP$_{50:95}$ for detectors, both displayed in percent.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "32e9a0f65ae80cd303d2f70be805182d648bcc906d600db5406f4c750d4aa8f4",
+      "tex_path": "sections/current_full_details.tex"
+    },
+    {
+      "description": "Absolute energy of global winners and Full references",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/r16_winner_energy_details.tex"
+      ],
+      "kind": "table",
+      "label": "tab:winner-energy",
+      "reference_caption": "Absolute calibrated system energy for the same global throughput-selected Full and Native split configurations as the main Table~3. These are actual configurations, not averages across hosts. Negative energy change means less split energy per image.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "8a78772aa637fa354280b1f315e8f8bc02a642b03aaaabeb2fa0ece65baecc1d",
+      "tex_path": "sections/r16_winner_energy_details.tex"
+    },
+    {
+      "description": "Observed repeat ranges for global winners",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/r21_winner_repeat_ranges.tex"
+      ],
+      "kind": "table",
+      "label": "tab:winner-repeat-ranges",
+      "reference_caption": "Observed minimum--maximum over three repetitions for the global winners in the main Table~3 and the additional Full references in the YOLOv7 case. FPS comes from performance runs and energy from separate runs. These are ranges, not confidence intervals. FPS endpoints are rounded to integers.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "f70b5c8446c2e0a9ea791665c0d47c60a9d2e20b9185cbb0feff08f9319f68d7",
+      "tex_path": "sections/r21_winner_repeat_ranges.tex"
+    },
+    {
+      "description": "Two largest Native gains within each group",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/current_top2_relative.tex"
+      ],
+      "kind": "table",
+      "label": "tab:current-top2-relative",
+      "reference_caption": "Two Native splits per model with the largest relative throughput gain over the fastest Full on the same host. Unlike the main Table~3, selection maximizes relative gain rather than absolute FPS. $G=e_{\\mathrm{Full}}/e_{\\mathrm{split}}$ uses that same Full. Quality is reported separately.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "5206a396020b21a5e947f0182c0fca17b9bb5fb32c42e3cc5a8edf9614d15f51",
+      "tex_path": "sections/current_top2_relative.tex"
+    },
+    {
+      "description": "Selected quality losses and gains",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/current_quality_highlights.tex"
+      ],
+      "kind": "table",
+      "label": "tab:current-quality",
+      "reference_caption": "Dataset quality of the globally fastest Full and split configurations. Relative loss is measured against the CPU reference. Negative loss means a higher point estimate, not a significant improvement. Throughput alone selects these configurations.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "94619e866c9db93cc9b2a3b61a7764c48f69b11ceda2579836f281615c61cbe7",
+      "tex_path": "sections/current_quality_highlights.tex"
+    },
+    {
+      "description": "Recorded setup and workload metadata with scope",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/supplement_setup.tex"
+      ],
+      "kind": "table",
+      "label": "tab:supp-setup",
+      "reference_caption": "Recorded setup and workload metadata. The YOLOv7 platform observations describe its setup comparison. Other deployments retain their own recorded settings.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "b63b42e7e9cf60bd0b07b11ddf9f9c1e93974730b2716805297c730a7e46ce13",
+      "tex_path": "sections/supplement_setup.tex"
+    },
+    {
+      "description": "Task-completion contracts by model/output path",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/r20_endpoint_contracts.tex"
+      ],
+      "kind": "table",
+      "label": "tab:supp-endpoint-contracts",
+      "reference_caption": "Required task outputs and completion work. Generic, Native, and Full use the same model-specific comparison contract. The compiled graph determines whether decoding and suppression occur in the model or in host code. Required output processing and materialization precede task completion.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "7f562d625b2e368dc0f72b5a4788b0a2a9e0f538e0f7e945ccc60d04b7fb3012",
+      "tex_path": "sections/r20_endpoint_contracts.tex"
+    },
+    {
+      "description": "YOLOv7 Generic/Native completed-task rates",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/yolov7_completed_table.tex"
+      ],
+      "kind": "table",
+      "label": "tab:yolov7-completion",
+      "reference_caption": "YOLOv7 deployment comparison on three cuts per setup. G and N denote Generic and Native. The final column reports Native energy.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "7340e8057f98fa7262c9ab4fb763c77e940bcd52ab312d053661dcd1a7da374d",
+      "tex_path": "sections/yolov7_completed_table.tex"
+    },
+    {
+      "description": "Unfiltered Generic-to-Native group outcomes",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/current_selection_groups.tex"
+      ],
+      "kind": "table",
+      "label": "tab:current-selection-groups",
+      "reference_caption": "Generic-to-Native selection in the deployment comparison. Each row is one model/setup group. $L_R$ is the Native throughput lost by choosing the Generic winner. Choices use unrounded FPS.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "a97c5cb915328d4011798abcc36160d364cfe414ff2751e054c453656b2eaa05",
+      "tex_path": "sections/current_selection_groups.tex"
+    },
+    {
+      "description": "Unfiltered Generic-to-Native loss, 204 pairs",
+      "document": "supplement.tex",
+      "graphic_paths": [
+        "figures/current_generic_selection_loss.pdf"
+      ],
+      "include_chain": [
+        "supplement.tex"
+      ],
+      "kind": "figure",
+      "label": "fig:supp-unfiltered-selection",
+      "reference_caption": "Generic-to-Native selection before quality filtering, using all 204 paired cuts. The equally weighted mean loss across 21 groups is 15.16\\%. The main paper shows the corresponding 187-pair quality-filtered result.",
+      "reference_graphic_sha256": {
+        "figures/current_generic_selection_loss.pdf": "98326baaa96e7f283c5fc1cd8587752d93987a09d7395dc3e586acfbfdbf4a0d"
+      },
+      "reference_number": null,
+      "reference_tex_sha256": "3949dfe691473303f693ccdf1b484778cfcbc3e5e92d6343f0a4ed74fa402dde",
+      "tex_path": "supplement.tex"
+    },
+    {
+      "description": "Native split/Full benefits under quality thresholds",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/r14_quality_advantages.tex"
+      ],
+      "kind": "table",
+      "label": "tab:quality-advantages",
+      "reference_caption": "Quality-constrained Native advantages on the same host. Each row filters both Native splits and Full alternatives using the numeric quality loss against the CPU reference, then reselects the fastest and minimum-energy Full. Faster and Lower energy compare against the same fastest Full. Both requires both advantages. Below min. Full compares energy against the lowest-energy admitted Full. These are retrospective point-estimate comparisons.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "a5f5dd953af87cf050055c78cf926e26679a12167d2308610779577db5795702",
+      "tex_path": "sections/r14_quality_advantages.tex"
+    },
+    {
+      "description": "Uncalibrated Generic and exact random shortlist sensitivity",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/r14_budget_details.tex"
+      ],
+      "kind": "table",
+      "label": "tab:budget-details",
+      "reference_caption": "Finite-budget selection over the deployment-comparison observations. Generic (G) orders every available cut, after which $k$ Native measurements select the fastest shortlisted cut. Uniform sampling (U) uses exact subset probabilities without replacement. Loss is measured against the fastest Native candidate in the same eligible set. Hits for U are expected counts, not observed trials. Budgets are capped at the number of available candidates. The quality filter uses known Native quality retrospectively. Requiring Generic quality as well gives identical sets at 5\\%.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "dfe2bcaf23ec5bf2515c4ae9d79ad6b2463c0be9dba0f66bdc4c6ea368261250",
+      "tex_path": "sections/r14_budget_details.tex"
+    },
+    {
+      "description": "Classifier calibration regret and coverage",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/r15_supplement_studies.tex",
+        "sections/r15_supp_calibration_tables.tex"
+      ],
+      "kind": "table",
+      "label": "tab:supp-calibration-summary",
+      "reference_caption": "Classifier selection loss (\\%) after the 5\\% quality filter. Nine groups receive equal weight. Random values are exact expectations. Budgets count held-out Native measurements only.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "a101dfeebed53aaafbb0b7ec20bf672fdc93aa5d30928914b049a6454dc78123",
+      "tex_path": "sections/r15_supp_calibration_tables.tex"
+    },
+    {
+      "description": "Calibration results by held-out model/setup",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/r15_supplement_studies.tex",
+        "sections/r15_supp_calibration_tables.tex"
+      ],
+      "kind": "table",
+      "label": "tab:supp-calibration-groups",
+      "reference_caption": "Complete classifier selection losses (\\%) by group and budget. All four methods use the same eligible cuts. Each triplet is $k=1/3/5$. $n$ is the number of eligible cuts. The calibrated method holds out the entire named architecture during fitting on the indicated setup.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "a101dfeebed53aaafbb0b7ec20bf672fdc93aa5d30928914b049a6454dc78123",
+      "tex_path": "sections/r15_supp_calibration_tables.tex"
+    },
+    {
+      "description": "Scheduling contrasts and nominal intervals",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/r15_supplement_studies.tex",
+        "sections/r15_supp_mechanism_tables.tex"
+      ],
+      "kind": "table",
+      "label": "tab:supp-scheduling-summary",
+      "reference_caption": "Complete contrasts from the separate 40-process RegNet and 40-process full ResNet experiments. Values are geometric means with nominal 95\\% intervals over five complete blocks. SD is the sample standard deviation of block log contrasts. RegNet ratios use b123/b052 and ResNet ratios use b095/b002.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "d8524d819ee74be83d937791303b42beae5decc151360aa600a8ef27f976b2e1",
+      "tex_path": "sections/r15_supp_mechanism_tables.tex"
+    },
+    {
+      "description": "Scheduling ratios in each randomized block",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/r15_supplement_studies.tex",
+        "sections/r15_supp_mechanism_tables.tex"
+      ],
+      "kind": "table",
+      "label": "tab:supp-scheduling-blocks",
+      "reference_caption": "Blockwise contrasts in the two full experiments. Each row contains eight independent worker processes measured in randomized order. Scheduling columns divide the productive cut ratio by the single-task cut ratio. The final column divides the Native scheduling contrast by the Generic scheduling contrast.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "d8524d819ee74be83d937791303b42beae5decc151360aa600a8ef27f976b2e1",
+      "tex_path": "sections/r15_supp_mechanism_tables.tex"
+    },
+    {
+      "description": "Earlier Native-only scheduling replication",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/r15_supplement_studies.tex",
+        "sections/r15_supp_mechanism_tables.tex"
+      ],
+      "kind": "table",
+      "label": "tab:supp-scheduling-native-only",
+      "reference_caption": "Earlier Native-only ResNet series, retained separately. These 20 processes are not part of the full replication. Values use five four-cell blocks and b095/b002.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "d8524d819ee74be83d937791303b42beae5decc151360aa600a8ef27f976b2e1",
+      "tex_path": "sections/r15_supp_mechanism_tables.tex"
+    },
+    {
+      "description": "Historical six-selector comparison",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/ranking_tables.tex"
+      ],
+      "kind": "table",
+      "label": "tab:selectors",
+      "reference_caption": "Graph-score comparison on 21 fixed model/setup groups. Classification groups contain 17--20 candidates and detection groups contain three. All methods use the same Native reference measurements. Energy excess is evaluated in the 18 groups with matching energy measurements, excluding YOLOv7. Each group has equal weight.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "5245cb47d4eb1bc1a94c85b7ae75e8d7b619922f400311a0ae2df12ebbfd0e06",
+      "tex_path": "sections/ranking_tables.tex"
+    },
+    {
+      "description": "Historical six-selector loss heatmap",
+      "document": "supplement.tex",
+      "graphic_paths": [
+        "figures/selector_loss_heatmap.pdf"
+      ],
+      "include_chain": [
+        "supplement.tex"
+      ],
+      "kind": "figure",
+      "label": "fig:historical-selectors",
+      "reference_caption": "Throughput loss in the graph-score comparison. Each column is a selector and each row a model/setup group. All columns use the same Native reference measurements. The H10-fit profile is shared across setups.",
+      "reference_graphic_sha256": {
+        "figures/selector_loss_heatmap.pdf": "9efefdc1953138e9916099d9f374ab59dfdc053c287ba091d3beb856bab5289d"
+      },
+      "reference_number": null,
+      "reference_tex_sha256": "3949dfe691473303f693ccdf1b484778cfcbc3e5e92d6343f0a4ed74fa402dde",
+      "tex_path": "supplement.tex"
+    },
+    {
+      "description": "Graph-boundary universe and Native counts",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex"
+      ],
+      "kind": "table",
+      "label": "tab:models",
+      "reference_caption": "Graph inventory and completed Native splits per setup. The graph-cut count includes multi-tensor frontiers. Native counts are the measured supported subset, including the additional detector candidates.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "3949dfe691473303f693ccdf1b484778cfcbc3e5e92d6343f0a4ed74fa402dde",
+      "tex_path": "supplement.tex"
+    },
+    {
+      "description": "Four-cut independent stage-composition experiment",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/stage_cost_summary.tex"
+      ],
+      "kind": "table",
+      "label": "tab:stage-costs",
+      "reference_caption": "Independent stage-cost experiment on four known cuts. Median steady-state producer, consumer, and pipeline rates (completions/s) over three blocks. Prediction is $\\min(F_P,F_C)$. Error is the median of the blockwise absolute percentage errors.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "e38d52ae5359ef98d52655ef874045dff8259a763984570e8f3bed2920e2d6bf",
+      "tex_path": "sections/stage_cost_summary.tex"
+    },
+    {
+      "description": "MobileNet b027 quality recovery on H8/H10/DX",
+      "document": "supplement.tex",
+      "graphic_paths": [],
+      "include_chain": [
+        "supplement.tex",
+        "sections/vendor_quality_recovery_table.tex"
+      ],
+      "kind": "table",
+      "label": "tab:vendor-quality",
+      "reference_caption": "Splitting can recover task quality lost in a full accelerator deployment. MobileNetV3 Top1 on the same 5,000 images. CPU ONNX reference: 73.70\\%. The split uses b027 and a TensorRT suffix.",
+      "reference_graphic_sha256": {},
+      "reference_number": null,
+      "reference_tex_sha256": "fb8dd9516fc84a0854a1dbce44097b0f91f2c10760ea65da408cfa5f694011de",
+      "tex_path": "sections/vendor_quality_recovery_table.tex"
+    }
+  ],
+  "profile": "mlsys-r22",
+  "reference_archive": "MLSys_Split_Selection_20261018_LaTeX_R22.zip",
+  "reference_sha256": "da510863479b8bfc7096d41e017e77879a8df3db1e1c0cad1bf952c35179c5a7"
+}
