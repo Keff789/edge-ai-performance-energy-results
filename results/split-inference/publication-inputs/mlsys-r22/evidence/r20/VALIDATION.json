@@ -1,0 +1,26 @@
+{
+  "detector_contracts": {
+    "detector_rows": 96,
+    "explicit_quality_contracts": 65,
+    "explicit_performance_contracts": 52
+  },
+  "all_available_quality_and_performance_contracts_match_runtime": true,
+  "detector_thresholds": {
+    "score_threshold": 0.25,
+    "iou_threshold": 0.45,
+    "max_detections": 300,
+    "class_aware": true,
+    "input_hw": [
+      640,
+      640
+    ]
+  },
+  "threshold_note": "Comparison policy; NMS need not execute on integrated/NMS-free graphs. Runtime endpoint fields preserve physical distinction.",
+  "energy": {
+    "DeepX_configurations": 75,
+    "command_windows": 225,
+    "sample_rate_hz": 2000
+  },
+  "new_measurements": false,
+  "old_admission_flags_reinterpreted": false
+}

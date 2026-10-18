@@ -1,0 +1,72 @@
+[
+  {
+    "graph_cuts": 138,
+    "model": "mobilenet_v3_large",
+    "native_counts_by_setup": {
+      "DeepX": 17,
+      "H10": 17,
+      "H8": 17
+    },
+    "native_splits_per_setup": 17
+  },
+  {
+    "graph_cuts": 133,
+    "model": "regnet_x_1_6gf",
+    "native_counts_by_setup": {
+      "DeepX": 20,
+      "H10": 20,
+      "H8": 20
+    },
+    "native_splits_per_setup": 20
+  },
+  {
+    "graph_cuts": 120,
+    "model": "resnet50",
+    "native_counts_by_setup": {
+      "DeepX": 19,
+      "H10": 19,
+      "H8": 19
+    },
+    "native_splits_per_setup": 19
+  },
+  {
+    "graph_cuts": 615,
+    "model": "yolo11l",
+    "native_counts_by_setup": {
+      "DeepX": 3,
+      "H10": 3,
+      "H8": 3
+    },
+    "native_splits_per_setup": 3
+  },
+  {
+    "graph_cuts": 416,
+    "model": "yolo26m",
+    "native_counts_by_setup": {
+      "DeepX": 3,
+      "H10": 3,
+      "H8": 3
+    },
+    "native_splits_per_setup": 3
+  },
+  {
+    "graph_cuts": 382,
+    "model": "yolo26s",
+    "native_counts_by_setup": {
+      "DeepX": 3,
+      "H10": 3,
+      "H8": 3
+    },
+    "native_splits_per_setup": 3
+  },
+  {
+    "graph_cuts": 307,
+    "model": "yolov7_paper",
+    "native_counts_by_setup": {
+      "DeepX": 3,
+      "H10": 3,
+      "H8": 3
+    },
+    "native_splits_per_setup": 3
+  }
+]
