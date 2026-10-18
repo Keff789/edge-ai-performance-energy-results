@@ -1,0 +1,51 @@
+{
+  "archive_layout_scope": "The manifest also binds external originals at existing canonical diss_results paths; the entrypoint is not the entire archive layout.",
+  "archive_manifest_sha256": "c35a2ad750c64c58f801344c922703f7522e9cb353e3e2be43be3f14b8bcb7fc",
+  "complete_private_source_inventory": {
+    "logical_manifest_path": "_supplements/mlsys_r15_20261017/_archive_evidence/ARCHIVE_MANIFEST.jsonl",
+    "manifest_sha256": "c35a2ad750c64c58f801344c922703f7522e9cb353e3e2be43be3f14b8bcb7fc",
+    "scope": "Complete source inventory and restoration/byte-verification bindings; raw files remain outside Git."
+  },
+  "count_scope": "Logical verified counts/bytes include historically restored required sources. Byte-verified required sources and distinct physical Sprite paths/bytes are separate. Missing/mismatch are byte gaps; historical implementation unprovenness is a separate, potentially overlapping dimension. Cross-study counts must not be added without deduplication.",
+  "gap_summary": {
+    "all_reason_and_marker_groups_represented": true,
+    "byte_gap_category_counts": {
+      "mismatch": 0,
+      "missing": 0
+    },
+    "byte_gap_reason_counts": {},
+    "current_byte_archive_verified_sources_among_gaps": 0,
+    "example_count": 0,
+    "example_selection": "Deterministic greedy primary-reason/restoration-marker coverage, then canonical-order fill; at most 32 examples.",
+    "examples_limit": 32,
+    "examples_truncated": false,
+    "historically_unproven_sources": 0,
+    "primary_reason_counts": {},
+    "primary_reasons_represented": 0,
+    "required_logical_source_gap_count": 0,
+    "restoration_marker_counts": {},
+    "restoration_markers_represented": 0,
+    "scope": "Counts cover every required logical-source gap. The example array is not exhaustive when examples_truncated is true. Historical and byte dimensions can overlap and must not be added."
+  },
+  "logical_archive_entrypoint": "_supplements/mlsys_r15_20261017/studies/mlsys-resnet-replication-20261017/tree",
+  "raw_data_outside_git": true,
+  "required_restoration_gaps": [],
+  "required_restoration_gaps_scope": "Representative examples; use gap_summary for complete counts and the referenced private master for all source bindings.",
+  "schema_version": 1,
+  "status": "confirmed",
+  "study": "mlsys-resnet-replication-20261017",
+  "verification_date_utc": "2026-10-18",
+  "verified_inventory": {
+    "byte_verified_required_sources": 1430,
+    "historically_unproven_required_sources": 0,
+    "logical_required_sources": 1430,
+    "logical_verified_required_file_bytes": 783032947,
+    "logical_verified_required_sources": 1430,
+    "mismatched_required_sources": 0,
+    "missing_or_mismatched_required_sources": 0,
+    "missing_required_sources": 0,
+    "physical_unique_verified_sprite_bytes": 906754497,
+    "physical_unique_verified_sprite_paths": 1173,
+    "unrestored_required_sources": 0
+  }
+}
