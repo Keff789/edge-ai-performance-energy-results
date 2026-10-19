@@ -2,6 +2,7 @@
 
 | Analysis | Instructions |
 |---|---|
+| v49 hardware confirmation and energy supplements | [Separate R3 tables, own-interval energy supplements and offline paired-quality analysis](supplementary-studies/thesis-v49-confirmation-20261019/README.md) |
 | Split inference | [Reproduce the tables and figures](../results/split-inference/README.md) |
 | Independent stage-cost composition | [Numerical reproduction, summary tables and vector figures from 36 supplied reports](supplementary-studies/stage-cost-composition/README.md) |
 | Historical split selection | [THESIS20 methods and compact reproduction](../results/supplementary-studies/thesis20-ranking-20261005/README.md) |

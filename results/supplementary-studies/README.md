@@ -4,6 +4,7 @@ These completed studies retain their original populations and dates. Their popul
 
 | Study | Population and scope |
 |---|---|
+| [v49 hardware confirmation and energy supplements, 18–19 October 2026](thesis-v49-confirmation-20261019/README.md) | Separate R3 confirmation: 70 primary throughput runs, 68 primary conditional energies and two separate energy supplements; physical measurement-chain qualification remains open |
 | [Quality audit, calibration and scheduling intervention, 17 October 2026](mlsys-evidence-mechanism-20261017/README.md) | Audit of 450 R14 configurations, fixed grouped calibration on 151 classifier pairs, 40 new RegNet processes and a separate 20-process ResNet Native series |
 | [Full ResNet scheduling replication, 17 October 2026](mlsys-resnet-replication-20261017/README.md) | Forty fresh processes in five jointly randomized eight-cell blocks; Generic/Native productive and one-task schedules, without pooling earlier Native data |
 | [Independent stage-cost composition, 14 October 2026](stage-cost-composition/README.md) | Four ResNet50/DeepX and RegNetX/Hailo-10H cuts; 36 performance processes, twelve independent-stage Oracle/pipeline comparisons |

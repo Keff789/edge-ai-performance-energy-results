@@ -1,0 +1,42 @@
+{
+  "model": "resnet50",
+  "split_uid": "native|resnet50|H10|hailo10h_to_trt|b095",
+  "full_uid": "native|resnet50|DeepX|native_full_deepx|full",
+  "status": "bestätigt",
+  "scope": "new offline numerical analysis on already selected historical winner pair; conditional on selection, no simultaneous coverage correction",
+  "n_images": 5000,
+  "B": 1000,
+  "seed": 7819623125839627889,
+  "components": {
+    "top1_accuracy": {
+      "full": 0.8054,
+      "split": 0.8016,
+      "delta_split_minus_full": -0.0038000000000000256,
+      "percentile_95_low": -0.009199999999999986,
+      "percentile_95_high": 0.0011999999999999789,
+      "delta_percentage_points": -0.38000000000000256,
+      "low_percentage_points": -0.9199999999999986,
+      "high_percentage_points": 0.11999999999999789
+    }
+  },
+  "inputs": [
+    {
+      "uid": "native|resnet50|DeepX|native_full_deepx|full",
+      "path": "external-sha256:ff40385d9a6d390a3675c018271e4ea5904c5d99c08482c3b7b73589a6764966",
+      "sha256": "ff40385d9a6d390a3675c018271e4ea5904c5d99c08482c3b7b73589a6764966"
+    },
+    {
+      "uid": "native|resnet50|H10|hailo10h_to_trt|b095",
+      "path": "external-sha256:f54a7f5ee034855898792f33c584752fbeecbd0082f240fe0b9a0fe27d0be630",
+      "sha256": "f54a7f5ee034855898792f33c584752fbeecbd0082f240fe0b9a0fe27d0be630"
+    }
+  ],
+  "exact_image_ids_paired": true,
+  "ground_truth_equal": true,
+  "historical_point_max_abs_difference": 0.0,
+  "elapsed_s": 0.01973442593589425,
+  "plan_path": "archive:evidence/history_quality/resnet50/frozen_plan.json",
+  "plan_sha256": "0ab507d0911670c4f3817cb2af7721bae5e68f77437fb66e61affbddb9b07acd",
+  "bootstrap_values_sha256": "82a1c607bccd728fa60227a96fe11366b3ed8aec0f27ff68b457abb46ed6269f",
+  "cpu_relative_intervals_subtracted": false
+}

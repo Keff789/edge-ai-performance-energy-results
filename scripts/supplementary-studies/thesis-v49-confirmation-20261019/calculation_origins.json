@@ -1,0 +1,59 @@
+{
+  "schema": "v49-reused-calculation-functions-v1",
+  "scope": "Exact function source segments; imports limited to Python standard library; no original campaign Git history imported.",
+  "sources": [
+    {
+      "archive_member": "scripts/build_energy_supplement_report.py",
+      "source_file_sha256": "119e45cf0e931e44b6943c5e77c0c5195c26e3ad45a01bbbfa69e0a360afa77e",
+      "functions": [
+        {
+          "name": "require",
+          "source_segment_sha256": "3fdec831bc6a8b34347d709354ae8fde3c062ad2c902f070ba93171e01685951"
+        },
+        {
+          "name": "canonical",
+          "source_segment_sha256": "d34e91696b8725e85edb3c23d0322d2d7f3331b50c71ec0c920be1e2dd021204"
+        },
+        {
+          "name": "number",
+          "source_segment_sha256": "8f111a73335276faf9d799db3f94836832bcf05c93561ced4024995eba4e411d"
+        },
+        {
+          "name": "direction",
+          "source_segment_sha256": "1353e19ec89c59901d84e7b78e305ec0b24076320ac411dd521a281c60f7ec4e"
+        },
+        {
+          "name": "direction_effect",
+          "source_segment_sha256": "dcdc458e4afb8bfbbdb6d58eaedaffb7065b49af5f1787759dbb831d59283948"
+        },
+        {
+          "name": "summary",
+          "source_segment_sha256": "45de75d33a6827793d17d77d18a6424c479d5730f872e0c638d826a97964ebfd"
+        },
+        {
+          "name": "session",
+          "source_segment_sha256": "4072a1ddeebeca402557dbda5396c39318f60d22123cba08c2561021cce38d1b"
+        },
+        {
+          "name": "binding_identity",
+          "source_segment_sha256": "7c0f6cce45fac23d25b14be84c9fa1bb643eaaa8784ea6f870395be449565972"
+        },
+        {
+          "name": "aggregate",
+          "source_segment_sha256": "5d77b1473289df8a394280d027428ee639a18ffd3300243fa9ef10d0792c9c6e"
+        }
+      ]
+    },
+    {
+      "archive_member": "scripts/build_delivery_report.py",
+      "source_file_sha256": "c50010db0992fefdc965192ad213f8ad240fc6e59ab2d33979235089592ab4a2",
+      "functions": [
+        {
+          "name": "split_full_impacts",
+          "source_segment_sha256": "e421aa1055626b67e2abc76c874db97c3253325987acc9ca4deca9dbdd8b49fc"
+        }
+      ]
+    }
+  ],
+  "generated_module_sha256": "4157dc845a1abdb701a2bdb676bb11c56690d98ca853cda0618193c9f22091e3"
+}

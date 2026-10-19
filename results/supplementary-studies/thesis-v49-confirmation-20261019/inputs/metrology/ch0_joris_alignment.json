@@ -1,0 +1,1343 @@
+{
+  "created_utc": "2026-10-19T16:08:16.162275+00:00",
+  "analysis_revision": "ch0-joris-evidence-alignment-20261019-v2",
+  "source_task": {
+    "path": "external-sha256:06a02eab8a1cd3d34e42f818db05ae3b926baf6ad3ac3d6ab486af085acf7ebc",
+    "sha256": "06a02eab8a1cd3d34e42f818db05ae3b926baf6ad3ac3d6ab486af085acf7ebc",
+    "bytes": 14922
+  },
+  "pdf": {
+    "bibliography": {
+      "author": "Joris Wachsmuth",
+      "title": "Entwicklung und Validierung eines Messsystems zur energetischen Bewertung eingebetteter KI-Beschleuniger",
+      "type": "Masterarbeit",
+      "institution": "Universität Bielefeld, Technische Fakultät, Intelligente Interaktive Systeme",
+      "research_group": "AG Kognitronik & Sensorik",
+      "date": "July 2026",
+      "title_page_physical_pdf_page_one_based": 1,
+      "pdf_sha256": "897428afa66e9674f8e3ef9b2356bba2cf565fda471803bb9a2ed28de8001191",
+      "pdf_source_path": "private-path-id:e434da656044ca9f70adbcd649dbca286f9d47db5162c7fa464a5998f1b95ccf"
+    },
+    "sha256": "897428afa66e9674f8e3ef9b2356bba2cf565fda471803bb9a2ed28de8001191",
+    "source_path": "external-sha256:897428afa66e9674f8e3ef9b2356bba2cf565fda471803bb9a2ed28de8001191",
+    "public_full_PDF_publication_authorized": false
+  },
+  "evidence_inputs": [
+    {
+      "path": "evidence/electrical/ch0_joris_20261019/literature.json",
+      "sha256": "e3bf50fe6414accca6f9b7737a59e5a474efb796301595457286f9b0dec01228",
+      "bytes": 41221,
+      "role": "literature"
+    },
+    {
+      "path": "evidence/electrical/ch0_joris_20261019/identity.json",
+      "sha256": "6a8406c57a50fbf5df0c600867d320803f692f78d56390b233b4c86f29c8ffb5",
+      "bytes": 32565,
+      "role": "identity"
+    },
+    {
+      "path": "evidence/electrical/ch0_joris_20261019/calibration.json",
+      "sha256": "395515f6ccb3ae4850fb263dd6c3626f2b769fbeb2aebd0bb84cf205f716de6a",
+      "bytes": 88354,
+      "role": "calibration"
+    },
+    {
+      "path": "evidence/electrical/ch0_joris_20261019/calibration_source_manifest.json",
+      "sha256": "041583371bce3fb99299a51dc00589987a0deeae32b694ccd3fc03ecf853bebd",
+      "bytes": 32225,
+      "role": "calibration_source_manifest"
+    },
+    {
+      "path": "evidence/electrical/ch0_joris_20261019/runtime_source_map.json",
+      "sha256": "660cd8175be7b9654ca11df136b985a7bb9312d1f1079c6e13f8f222f5c29ddb",
+      "bytes": 160547,
+      "role": "runtime_source_map"
+    },
+    {
+      "path": "evidence/electrical/ch0_joris_20261019/runtime_application.json",
+      "sha256": "945dd433807e8ce96fc387d7dbd312d5acb1c49ef8dd216508db448dfb7e210e",
+      "bytes": 304793,
+      "role": "runtime_application"
+    },
+    {
+      "path": "evidence/electrical/ch0_joris_20261019/runtime_checks.json",
+      "sha256": "9d2b12859f32bb1a8d408e59d61328ed2ec8416f77fe1c3f4089ff5f571643af",
+      "bytes": 20384,
+      "role": "runtime_checks"
+    },
+    {
+      "path": "evidence/electrical/ch0_joris_20261019/runtime_conclusions.json",
+      "sha256": "7ef800cd69ebdbda51b2e044dca32540160998fbac92c0986fe6ce6820d78ca0",
+      "bytes": 3013,
+      "role": "runtime_conclusions"
+    }
+  ],
+  "channel_confirmation": {
+    "channel": 0,
+    "label": "CH0",
+    "source_task": {
+      "path": "external-sha256:06a02eab8a1cd3d34e42f818db05ae3b926baf6ad3ac3d6ab486af085acf7ebc",
+      "sha256": "06a02eab8a1cd3d34e42f818db05ae3b926baf6ad3ac3d6ab486af085acf7ebc",
+      "bytes": 14922
+    },
+    "current_records_checked": 72,
+    "historical_records_checked": 42
+  },
+  "nominal_scaling": {
+    "A_per_count": 0.001,
+    "mA_per_count": 1.0,
+    "design_parameters": {
+      "adc_reference_V": 2.048,
+      "adc_steps": 4096,
+      "gain_V_per_V": 25,
+      "shunt_ohm": 0.02
+    },
+    "derivation": "2.048 V / (4096 * 25 * 0.020 ohm) = 0.001 A/count",
+    "scope": "documented nominal design; installed configuration separate",
+    "maximum_12bit_code": 4095,
+    "nominal_max_code_A": 4.095,
+    "nominal_full_scale_boundary_A": 4.096,
+    "provenance": [
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/literature.json",
+        "sha256": "e3bf50fe6414accca6f9b7737a59e5a474efb796301595457286f9b0dec01228",
+        "printed_pages": [
+          27,
+          29,
+          30
+        ],
+        "physical_PDF_pages_one_based": [
+          33,
+          35,
+          36
+        ]
+      },
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/runtime_checks.json",
+        "sha256": "9d2b12859f32bb1a8d408e59d61328ed2ec8416f77fe1c3f4089ff5f571643af"
+      }
+    ]
+  },
+  "evidence_status": {
+    "nominal_1mA_per_count_explained": true,
+    "CH0_user_confirmed": true,
+    "calibration_36_points_documented": true,
+    "separate_original_verification_documented": true,
+    "rc_filter_77kHz_design_documented": true,
+    "installed_firmware_build_bound": false,
+    "combined_physical_uncertainty_available": false
+  },
+  "per_path_calibration_chain": [
+    {
+      "setup_id": "orin_nx_deepx_m1_01",
+      "path_id": "legacy_FAST_FW_Rust_and_import",
+      "function": [
+        "fast_firmware_row_to_power",
+        "estimate_voltage_from_current",
+        "apply_full_system_current_scale_to_summary",
+        "extract_power_calculation_summary"
+      ],
+      "parameters": {
+        "g": 0.997224237630222,
+        "o": 0.004704622,
+        "a": 19.062607082705,
+        "b": -0.07444582,
+        "c": 0.9705324920014426,
+        "s": 0.9035075097142278,
+        "model_current_domain_a": [
+          0.0,
+          3.5
+        ],
+        "channel": 0,
+        "sample_rate_hz": 2000,
+        "calibration_started_at": "2026-09-04T19:53:09.060896+00:00",
+        "calibration_finished_at": "2026-09-04T19:59:27.536313+00:00",
+        "setup_scale_role": "Power/energy multiplier outside calibrated I and U(I)",
+        "profile_warning_reasons": []
+      },
+      "units": {
+        "raw_numeric": "ADC count, nominally numerically mA",
+        "raw_mA_div_1000": "A",
+        "o": "A",
+        "g": "dimensionless",
+        "a": "V",
+        "b": "V/A",
+        "c_and_s": "dimensionless power/energy multipliers",
+        "power": "W",
+        "energy": "J",
+        "E_over_N": "J/completion"
+      },
+      "order": [
+        "Unchanged numeric UDP/Parquet payload; no collector gain/offset",
+        "Nominal current: raw_mA / 1000, once",
+        "Calibrated I = g * (raw_mA / 1000 + o)",
+        "Voltage U = a + b * I",
+        "Power P = c * I * U",
+        "Historical trapezoidal integration",
+        "Imported E = s * E_unscaled, once",
+        "Divide energy by this acquisition’s own completed N"
+      ],
+      "provenance": [
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_source_map.json",
+          "sha256": "660cd8175be7b9654ca11df136b985a7bb9312d1f1079c6e13f8f222f5c29ddb"
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_application.json",
+          "sha256": "945dd433807e8ce96fc387d7dbd312d5acb1c49ef8dd216508db448dfb7e210e"
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_checks.json",
+          "sha256": "9d2b12859f32bb1a8d408e59d61328ed2ec8416f77fe1c3f4089ff5f571643af"
+        },
+        {
+          "bytes": 1245,
+          "path": "campaign-member:evidence/electrical/new_acquisition_models/orin_nx_deepx_m1_01.json",
+          "sha256": "ba079a02a464b6965fc6f2addc4f506a4546824e6071790744cd034e8b71fbe6"
+        },
+        {
+          "bytes": 278292,
+          "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_deepx_m1_01_original_calibration.json",
+          "sha256": "9494eea7de1d18167f73854e276bf6f9bba0066c51ff2c81c49737486235cfd1"
+        },
+        {
+          "bytes": 4491,
+          "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_deepx_m1_01_binding.json",
+          "sha256": "111a8744745c80e772f081ed2f2d2b50f4a6f90120e92b538e34465b129c7027"
+        }
+      ]
+    },
+    {
+      "setup_id": "orin_nx_deepx_m1_01",
+      "path_id": "new_inner_Python_v2_v3",
+      "function": [
+        "trace_export::main",
+        "power_model",
+        "overlap_integral"
+      ],
+      "parameters": {
+        "g": 0.997224237630222,
+        "o": 0.004704622,
+        "a": 19.062607082705,
+        "b": -0.07444582,
+        "c": 0.9705324920014426,
+        "s": 0.9035075097142278,
+        "model_current_domain_a": [
+          0.0,
+          3.5
+        ],
+        "channel": 0,
+        "sample_rate_hz": 2000,
+        "calibration_started_at": "2026-09-04T19:53:09.060896+00:00",
+        "calibration_finished_at": "2026-09-04T19:59:27.536313+00:00",
+        "setup_scale_role": "Power/energy multiplier outside calibrated I and U(I)",
+        "profile_warning_reasons": []
+      },
+      "units": {
+        "raw_numeric": "ADC count, nominally numerically mA",
+        "raw_mA_div_1000": "A",
+        "o": "A",
+        "g": "dimensionless",
+        "a": "V",
+        "b": "V/A",
+        "c_and_s": "dimensionless power/energy multipliers",
+        "power": "W",
+        "energy": "J",
+        "E_over_N": "J/completion"
+      },
+      "order": [
+        "Unchanged numeric UDP/Parquet payload; no collector gain/offset",
+        "CSV current_mA copies the same numeric value",
+        "Nominal current: raw_mA / 1000, once",
+        "Calibrated I = g * (raw_mA / 1000 + o)",
+        "Voltage U = a + b * I",
+        "Power P = c * s * I * U",
+        "Sample-centered piecewise-constant integration over the bound native interval",
+        "Divide energy by this acquisition’s own completed N"
+      ],
+      "provenance": [
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_source_map.json",
+          "sha256": "660cd8175be7b9654ca11df136b985a7bb9312d1f1079c6e13f8f222f5c29ddb"
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_application.json",
+          "sha256": "945dd433807e8ce96fc387d7dbd312d5acb1c49ef8dd216508db448dfb7e210e"
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_checks.json",
+          "sha256": "9d2b12859f32bb1a8d408e59d61328ed2ec8416f77fe1c3f4089ff5f571643af"
+        },
+        {
+          "bytes": 1245,
+          "path": "campaign-member:evidence/electrical/new_acquisition_models/orin_nx_deepx_m1_01.json",
+          "sha256": "ba079a02a464b6965fc6f2addc4f506a4546824e6071790744cd034e8b71fbe6"
+        },
+        {
+          "bytes": 278292,
+          "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_deepx_m1_01_original_calibration.json",
+          "sha256": "9494eea7de1d18167f73854e276bf6f9bba0066c51ff2c81c49737486235cfd1"
+        },
+        {
+          "bytes": 4491,
+          "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_deepx_m1_01_binding.json",
+          "sha256": "111a8744745c80e772f081ed2f2d2b50f4a6f90120e92b538e34465b129c7027"
+        }
+      ]
+    },
+    {
+      "setup_id": "orin_nx_hailo10_01",
+      "path_id": "legacy_FAST_FW_Rust_and_import",
+      "function": [
+        "fast_firmware_row_to_power",
+        "estimate_voltage_from_current",
+        "apply_full_system_current_scale_to_summary",
+        "extract_power_calculation_summary"
+      ],
+      "parameters": {
+        "g": 0.997224237630222,
+        "o": 0.004704622,
+        "a": 19.062607082705,
+        "b": -0.07444582,
+        "c": 0.9705324920014426,
+        "s": 0.8963972779781232,
+        "model_current_domain_a": [
+          0.0,
+          3.5
+        ],
+        "channel": 0,
+        "sample_rate_hz": 2000,
+        "calibration_started_at": "2026-09-04T20:09:10.626761+00:00",
+        "calibration_finished_at": "2026-09-04T20:15:15.094688+00:00",
+        "setup_scale_role": "Power/energy multiplier outside calibrated I and U(I)",
+        "profile_warning_reasons": [
+          "point_factor_spread_too_high",
+          "scale_factor_outside_configured_range"
+        ]
+      },
+      "units": {
+        "raw_numeric": "ADC count, nominally numerically mA",
+        "raw_mA_div_1000": "A",
+        "o": "A",
+        "g": "dimensionless",
+        "a": "V",
+        "b": "V/A",
+        "c_and_s": "dimensionless power/energy multipliers",
+        "power": "W",
+        "energy": "J",
+        "E_over_N": "J/completion"
+      },
+      "order": [
+        "Unchanged numeric UDP/Parquet payload; no collector gain/offset",
+        "Nominal current: raw_mA / 1000, once",
+        "Calibrated I = g * (raw_mA / 1000 + o)",
+        "Voltage U = a + b * I",
+        "Power P = c * I * U",
+        "Historical trapezoidal integration",
+        "Imported E = s * E_unscaled, once",
+        "Divide energy by this acquisition’s own completed N"
+      ],
+      "provenance": [
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_source_map.json",
+          "sha256": "660cd8175be7b9654ca11df136b985a7bb9312d1f1079c6e13f8f222f5c29ddb"
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_application.json",
+          "sha256": "945dd433807e8ce96fc387d7dbd312d5acb1c49ef8dd216508db448dfb7e210e"
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_checks.json",
+          "sha256": "9d2b12859f32bb1a8d408e59d61328ed2ec8416f77fe1c3f4089ff5f571643af"
+        },
+        {
+          "bytes": 1241,
+          "path": "campaign-member:evidence/electrical/new_acquisition_models/orin_nx_hailo10_01.json",
+          "sha256": "52a6ebe093b7134c640ae03fd24d6a74dc9fe970ed7ea759246e878cd223f558"
+        },
+        {
+          "bytes": 278253,
+          "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_hailo10_01_original_calibration.json",
+          "sha256": "b3fe9eb8c7ac6e7ffc78edabf834910b699bed0f766d9d7b2eddddde9ce8e946"
+        },
+        {
+          "bytes": 4615,
+          "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_hailo10_01_binding.json",
+          "sha256": "243890992b2121bfbd65a1ac8e79445438ff5f60a7391a6e3c937e432d16f188"
+        }
+      ]
+    },
+    {
+      "setup_id": "orin_nx_hailo10_01",
+      "path_id": "new_inner_Python_v2_v3",
+      "function": [
+        "trace_export::main",
+        "power_model",
+        "overlap_integral"
+      ],
+      "parameters": {
+        "g": 0.997224237630222,
+        "o": 0.004704622,
+        "a": 19.062607082705,
+        "b": -0.07444582,
+        "c": 0.9705324920014426,
+        "s": 0.8963972779781232,
+        "model_current_domain_a": [
+          0.0,
+          3.5
+        ],
+        "channel": 0,
+        "sample_rate_hz": 2000,
+        "calibration_started_at": "2026-09-04T20:09:10.626761+00:00",
+        "calibration_finished_at": "2026-09-04T20:15:15.094688+00:00",
+        "setup_scale_role": "Power/energy multiplier outside calibrated I and U(I)",
+        "profile_warning_reasons": [
+          "point_factor_spread_too_high",
+          "scale_factor_outside_configured_range"
+        ]
+      },
+      "units": {
+        "raw_numeric": "ADC count, nominally numerically mA",
+        "raw_mA_div_1000": "A",
+        "o": "A",
+        "g": "dimensionless",
+        "a": "V",
+        "b": "V/A",
+        "c_and_s": "dimensionless power/energy multipliers",
+        "power": "W",
+        "energy": "J",
+        "E_over_N": "J/completion"
+      },
+      "order": [
+        "Unchanged numeric UDP/Parquet payload; no collector gain/offset",
+        "CSV current_mA copies the same numeric value",
+        "Nominal current: raw_mA / 1000, once",
+        "Calibrated I = g * (raw_mA / 1000 + o)",
+        "Voltage U = a + b * I",
+        "Power P = c * s * I * U",
+        "Sample-centered piecewise-constant integration over the bound native interval",
+        "Divide energy by this acquisition’s own completed N"
+      ],
+      "provenance": [
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_source_map.json",
+          "sha256": "660cd8175be7b9654ca11df136b985a7bb9312d1f1079c6e13f8f222f5c29ddb"
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_application.json",
+          "sha256": "945dd433807e8ce96fc387d7dbd312d5acb1c49ef8dd216508db448dfb7e210e"
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_checks.json",
+          "sha256": "9d2b12859f32bb1a8d408e59d61328ed2ec8416f77fe1c3f4089ff5f571643af"
+        },
+        {
+          "bytes": 1241,
+          "path": "campaign-member:evidence/electrical/new_acquisition_models/orin_nx_hailo10_01.json",
+          "sha256": "52a6ebe093b7134c640ae03fd24d6a74dc9fe970ed7ea759246e878cd223f558"
+        },
+        {
+          "bytes": 278253,
+          "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_hailo10_01_original_calibration.json",
+          "sha256": "b3fe9eb8c7ac6e7ffc78edabf834910b699bed0f766d9d7b2eddddde9ce8e946"
+        },
+        {
+          "bytes": 4615,
+          "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_hailo10_01_binding.json",
+          "sha256": "243890992b2121bfbd65a1ac8e79445438ff5f60a7391a6e3c937e432d16f188"
+        }
+      ]
+    },
+    {
+      "setup_id": "orin_nx_hailo8_01",
+      "path_id": "legacy_FAST_FW_Rust_and_import",
+      "function": [
+        "fast_firmware_row_to_power",
+        "estimate_voltage_from_current",
+        "apply_full_system_current_scale_to_summary",
+        "extract_power_calculation_summary"
+      ],
+      "parameters": {
+        "g": 0.997224237630222,
+        "o": 0.004704622,
+        "a": 19.062607082705,
+        "b": -0.07444582,
+        "c": 0.9705324920014426,
+        "s": 0.9136343897390969,
+        "model_current_domain_a": [
+          0.0,
+          3.5
+        ],
+        "channel": 0,
+        "sample_rate_hz": 2000,
+        "calibration_started_at": "2026-09-04T19:59:50.777893+00:00",
+        "calibration_finished_at": "2026-09-04T20:08:48.231301+00:00",
+        "setup_scale_role": "Power/energy multiplier outside calibrated I and U(I)",
+        "profile_warning_reasons": []
+      },
+      "units": {
+        "raw_numeric": "ADC count, nominally numerically mA",
+        "raw_mA_div_1000": "A",
+        "o": "A",
+        "g": "dimensionless",
+        "a": "V",
+        "b": "V/A",
+        "c_and_s": "dimensionless power/energy multipliers",
+        "power": "W",
+        "energy": "J",
+        "E_over_N": "J/completion"
+      },
+      "order": [
+        "Unchanged numeric UDP/Parquet payload; no collector gain/offset",
+        "Nominal current: raw_mA / 1000, once",
+        "Calibrated I = g * (raw_mA / 1000 + o)",
+        "Voltage U = a + b * I",
+        "Power P = c * I * U",
+        "Historical trapezoidal integration",
+        "Imported E = s * E_unscaled, once",
+        "Divide energy by this acquisition’s own completed N"
+      ],
+      "provenance": [
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_source_map.json",
+          "sha256": "660cd8175be7b9654ca11df136b985a7bb9312d1f1079c6e13f8f222f5c29ddb"
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_application.json",
+          "sha256": "945dd433807e8ce96fc387d7dbd312d5acb1c49ef8dd216508db448dfb7e210e"
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_checks.json",
+          "sha256": "9d2b12859f32bb1a8d408e59d61328ed2ec8416f77fe1c3f4089ff5f571643af"
+        },
+        {
+          "bytes": 1237,
+          "path": "campaign-member:evidence/electrical/new_acquisition_models/orin_nx_hailo8_01.json",
+          "sha256": "e8a300f76126a031b69ace4d315ff2a00fe67f9026f318c3140addccfce3d314"
+        },
+        {
+          "bytes": 282961,
+          "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_hailo8_01_original_calibration.json",
+          "sha256": "90a559f5467c0fef13409d472f14b797f4cf44b1038f0e491f62c5436ea2b5f6"
+        },
+        {
+          "bytes": 4481,
+          "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_hailo8_01_binding.json",
+          "sha256": "d850a7b1856a9f4ccb3d41a57bfde785306c4918fb2c736eabecc9e2d29a4942"
+        }
+      ]
+    },
+    {
+      "setup_id": "orin_nx_hailo8_01",
+      "path_id": "new_inner_Python_v2_v3",
+      "function": [
+        "trace_export::main",
+        "power_model",
+        "overlap_integral"
+      ],
+      "parameters": {
+        "g": 0.997224237630222,
+        "o": 0.004704622,
+        "a": 19.062607082705,
+        "b": -0.07444582,
+        "c": 0.9705324920014426,
+        "s": 0.9136343897390969,
+        "model_current_domain_a": [
+          0.0,
+          3.5
+        ],
+        "channel": 0,
+        "sample_rate_hz": 2000,
+        "calibration_started_at": "2026-09-04T19:59:50.777893+00:00",
+        "calibration_finished_at": "2026-09-04T20:08:48.231301+00:00",
+        "setup_scale_role": "Power/energy multiplier outside calibrated I and U(I)",
+        "profile_warning_reasons": []
+      },
+      "units": {
+        "raw_numeric": "ADC count, nominally numerically mA",
+        "raw_mA_div_1000": "A",
+        "o": "A",
+        "g": "dimensionless",
+        "a": "V",
+        "b": "V/A",
+        "c_and_s": "dimensionless power/energy multipliers",
+        "power": "W",
+        "energy": "J",
+        "E_over_N": "J/completion"
+      },
+      "order": [
+        "Unchanged numeric UDP/Parquet payload; no collector gain/offset",
+        "CSV current_mA copies the same numeric value",
+        "Nominal current: raw_mA / 1000, once",
+        "Calibrated I = g * (raw_mA / 1000 + o)",
+        "Voltage U = a + b * I",
+        "Power P = c * s * I * U",
+        "Sample-centered piecewise-constant integration over the bound native interval",
+        "Divide energy by this acquisition’s own completed N"
+      ],
+      "provenance": [
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_source_map.json",
+          "sha256": "660cd8175be7b9654ca11df136b985a7bb9312d1f1079c6e13f8f222f5c29ddb"
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_application.json",
+          "sha256": "945dd433807e8ce96fc387d7dbd312d5acb1c49ef8dd216508db448dfb7e210e"
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_checks.json",
+          "sha256": "9d2b12859f32bb1a8d408e59d61328ed2ec8416f77fe1c3f4089ff5f571643af"
+        },
+        {
+          "bytes": 1237,
+          "path": "campaign-member:evidence/electrical/new_acquisition_models/orin_nx_hailo8_01.json",
+          "sha256": "e8a300f76126a031b69ace4d315ff2a00fe67f9026f318c3140addccfce3d314"
+        },
+        {
+          "bytes": 282961,
+          "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_hailo8_01_original_calibration.json",
+          "sha256": "90a559f5467c0fef13409d472f14b797f4cf44b1038f0e491f62c5436ea2b5f6"
+        },
+        {
+          "bytes": 4481,
+          "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_hailo8_01_binding.json",
+          "sha256": "d850a7b1856a9f4ccb3d41a57bfde785306c4918fb2c736eabecc9e2d29a4942"
+        }
+      ]
+    }
+  ],
+  "claim_matrix": [
+    {
+      "id": "CH0",
+      "status": "closed",
+      "previous_issue": "Verwendeter Messkanal pauschal offen.",
+      "new_evidence": [
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/calibration.json",
+          "sha256": "395515f6ccb3ae4850fb263dd6c3626f2b769fbeb2aebd0bb84cf205f716de6a"
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_application.json",
+          "sha256": "945dd433807e8ce96fc387d7dbd312d5acb1c49ef8dd216508db448dfb7e210e"
+        }
+      ],
+      "campaign_application": "CH0 durch Nutzerherkunft bestätigt und in 72 aktuellen sowie 42 historischen Datensätzen ohne Konflikt abgeglichen.",
+      "remaining_gap": "Keine erneute allgemeine Kanalbestätigung erforderlich; physische Board-/Versorgungspfadzuordnung ist ein anderer Anspruch."
+    },
+    {
+      "id": "nominal_scale",
+      "status": "closed",
+      "previous_issue": "Unveränderte ADC-Rohcodes ließen die nominale mA-Konvention grundsätzlich ungeklärt.",
+      "new_evidence": [
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/literature.json",
+          "sha256": "e3bf50fe6414accca6f9b7737a59e5a474efb796301595457286f9b0dec01228",
+          "printed_pages": [
+            27,
+            29,
+            30
+          ],
+          "physical_PDF_pages_one_based": [
+            33,
+            35,
+            36
+          ],
+          "claim_ids": [
+            "J01-explicit-nominal-current-step",
+            "J02-adc-design",
+            "J03-shunt-gain-and-full-scale"
+          ]
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_checks.json",
+          "sha256": "9d2b12859f32bb1a8d408e59d61328ed2ec8416f77fe1c3f4089ff5f571643af"
+        }
+      ],
+      "campaign_application": "1 mA pro Count ist für das dokumentierte Design hergeleitet. Die einmalige Umrechnung mA nach A ist im tatsächlichen Rechenweg vorhanden.",
+      "remaining_gap": "Die konkrete installierte ADC-/Range-/Vref-Konfiguration wird aus der Designherleitung nicht abgeleitet."
+    },
+    {
+      "id": "original_calibration_verification",
+      "status": "closed",
+      "previous_issue": "Ursprüngliche Kalibrier- und unabhängige Verifikationsbelege pauschal als fehlend bezeichnet.",
+      "new_evidence": [
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/literature.json",
+          "sha256": "e3bf50fe6414accca6f9b7737a59e5a474efb796301595457286f9b0dec01228",
+          "printed_pages": [
+            53,
+            54,
+            55,
+            56
+          ],
+          "physical_PDF_pages_one_based": [
+            59,
+            60,
+            61,
+            62
+          ],
+          "claim_ids": [
+            "J14-36-load-points-and-reference",
+            "J15-two-endpoint-fit",
+            "J16-separate-calibration-verification",
+            "J17-linear-voltage-estimate"
+          ]
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/calibration.json",
+          "sha256": "395515f6ccb3ae4850fb263dd6c3626f2b769fbeb2aebd0bb84cf205f716de6a"
+        }
+      ],
+      "campaign_application": "36 Lastpunkte, Endpunktfit und zweiter getrennter Verifikationsdurchlauf sind dokumentiert; diese Belege werden ausdrücklich anerkannt.",
+      "remaining_gap": "Keine Übertragung als zeitgenössischer Oktober-Vorher-/Nachher- oder Vollunsicherheitsnachweis."
+    },
+    {
+      "id": "applied_calibration_chain",
+      "status": "closed",
+      "previous_issue": "Kalibrieranwendung und Gefahr einer mehrfachen Skalierung unzureichend zugeordnet.",
+      "new_evidence": [
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_source_map.json",
+          "sha256": "660cd8175be7b9654ca11df136b985a7bb9312d1f1079c6e13f8f222f5c29ddb"
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_application.json",
+          "sha256": "945dd433807e8ce96fc387d7dbd312d5acb1c49ef8dd216508db448dfb7e210e"
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_checks.json",
+          "sha256": "9d2b12859f32bb1a8d408e59d61328ed2ec8416f77fe1c3f4089ff5f571643af"
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/calibration.json",
+          "sha256": "395515f6ccb3ae4850fb263dd6c3626f2b769fbeb2aebd0bb84cf205f716de6a"
+        }
+      ],
+      "campaign_application": "Drei konkrete FS-Profile und die beiden tatsächlichen Rechenwege sind einschließlich I, U, c, s, Integrationsmethode und eigenem N belegt.",
+      "remaining_gap": "Keine neue Umrechnung. H10-Warnungen bleiben erhalten; physische Übertragbarkeit bleibt ein eigener offener Punkt."
+    },
+    {
+      "id": "post_power_c",
+      "status": "partially_clarified",
+      "previous_issue": "Rolle des historischen Faktors c unzureichend erklärt.",
+      "new_evidence": [
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/literature.json",
+          "sha256": "e3bf50fe6414accca6f9b7737a59e5a474efb796301595457286f9b0dec01228",
+          "printed_pages": [
+            65,
+            66
+          ],
+          "physical_PDF_pages_one_based": [
+            71,
+            72
+          ],
+          "claim_ids": [
+            "J18-systematic-post-power-correction"
+          ]
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/calibration.json",
+          "sha256": "395515f6ccb3ae4850fb263dd6c3626f2b769fbeb2aebd0bb84cf205f716de6a"
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_source_map.json",
+          "sha256": "660cd8175be7b9654ca11df136b985a7bb9312d1f1079c6e13f8f222f5c29ddb"
+        }
+      ],
+      "campaign_application": "Ungefähr 0,97 und die Anwendung nach der Leistungsberechnung sind dokumentiert. Der verwendete genaue c-Wert ist im gebundenen Code lokalisiert.",
+      "remaining_gap": "Exakter historischer Fit und physische Übertragung dieses Faktors auf spätere FS-Aufbauten werden aus der gerundeten Quellenangabe nicht hergeleitet."
+    },
+    {
+      "id": "RC_design_origin",
+      "status": "closed",
+      "previous_issue": "Herkunft der 77-kHz-Angabe pauschal unbekannt.",
+      "new_evidence": [
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/literature.json",
+          "sha256": "e3bf50fe6414accca6f9b7737a59e5a474efb796301595457286f9b0dec01228",
+          "printed_pages": [
+            30,
+            48
+          ],
+          "physical_PDF_pages_one_based": [
+            36,
+            54
+          ],
+          "claim_ids": [
+            "J04-differential-RC-77kHz"
+          ]
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/identity.json",
+          "sha256": "6a8406c57a50fbf5df0c600867d320803f692f78d56390b233b4c86f29c8ffb5"
+        }
+      ],
+      "campaign_application": "77 kHz sind eine dokumentierte differenzielle RC-Designangabe.",
+      "remaining_gap": "Tatsächliche Bestückung und komplette Übertragungsfunktion werden separat offen geführt."
+    },
+    {
+      "id": "ADC_and_RC_population",
+      "status": "open",
+      "previous_issue": "ADC-Typ, aktiver Range-Modus und reale Filterbestückung fehlen.",
+      "new_evidence": [
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/literature.json",
+          "sha256": "e3bf50fe6414accca6f9b7737a59e5a474efb796301595457286f9b0dec01228",
+          "printed_pages": [
+            29,
+            48
+          ],
+          "physical_PDF_pages_one_based": [
+            35,
+            54
+          ],
+          "claim_ids": [
+            "J13-ADC-part-number-conflict"
+          ]
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/identity.json",
+          "sha256": "6a8406c57a50fbf5df0c600867d320803f692f78d56390b233b4c86f29c8ffb5"
+        }
+      ],
+      "campaign_application": "Der konkrete ADS7953-/ADS7952-Widerspruch und die nominale Designgrenze sind eingegrenzt.",
+      "remaining_gap": "Eindeutige BOM/Schaltplan-/Bestückungsbindung, aktive Register/Range/Vref, reale R-/C-Werte und Clippingbeleg fehlen weiterhin."
+    },
+    {
+      "id": "installed_firmware",
+      "status": "open",
+      "previous_issue": "Gefundene passende Firmwarequelle ist nicht an den installierten Build gebunden.",
+      "new_evidence": [
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/identity.json",
+          "sha256": "6a8406c57a50fbf5df0c600867d320803f692f78d56390b233b4c86f29c8ffb5"
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_source_map.json",
+          "sha256": "660cd8175be7b9654ca11df136b985a7bb9312d1f1079c6e13f8f222f5c29ddb"
+        }
+      ],
+      "campaign_application": "Quellhashes und unveränderte 12-Bit-Payloadübertragung sind nachvollzogen.",
+      "remaining_gap": "Ein entsprechender Installations-/Buildbeleg der tatsächlich verwendeten Messboards fehlt weiterhin."
+    },
+    {
+      "id": "boundary_and_U_model",
+      "status": "partially_clarified",
+      "previous_issue": "Joris-Messgrenze und spätere FS-Anwendung waren zu pauschal oder als 5 V/19 V gleichgesetzt.",
+      "new_evidence": [
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/literature.json",
+          "sha256": "e3bf50fe6414accca6f9b7737a59e5a474efb796301595457286f9b0dec01228",
+          "printed_pages": [
+            34,
+            35,
+            54,
+            56
+          ],
+          "physical_PDF_pages_one_based": [
+            40,
+            41,
+            60,
+            62
+          ],
+          "claim_ids": [
+            "J10-original-supply-and-reference-boundary",
+            "J17-linear-voltage-estimate"
+          ]
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/calibration.json",
+          "sha256": "395515f6ccb3ae4850fb263dd6c3626f2b769fbeb2aebd0bb84cf205f716de6a"
+        }
+      ],
+      "campaign_application": "Joris: Jetson-Slot-Strompfad bei ungefähr 19 V. Spätere FS-Profile: after_R16-Eingang und spezifische Lastreferenzen. Benutzte U(I)-Koeffizienten sind belegt.",
+      "remaining_gap": "Identische Versorgung/Verkabelung/Verbrauchergrenze und vollständige physische Modellübertragbarkeit sind nicht allein durch diese Dateizuordnung bewiesen."
+    },
+    {
+      "id": "October_drift_reference",
+      "status": "open",
+      "previous_issue": "Unabhängige Idle-/Lastreferenzen vor und nach der Oktoberbelastung fehlen.",
+      "new_evidence": [
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/literature.json",
+          "sha256": "e3bf50fe6414accca6f9b7737a59e5a474efb796301595457286f9b0dec01228",
+          "printed_pages": [
+            53,
+            54,
+            55,
+            56
+          ],
+          "physical_PDF_pages_one_based": [
+            59,
+            60,
+            61,
+            62
+          ]
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/calibration.json",
+          "sha256": "395515f6ccb3ae4850fb263dd6c3626f2b769fbeb2aebd0bb84cf205f716de6a"
+        }
+      ],
+      "campaign_application": "Die dokumentierte ursprüngliche separate Verifikation und spezifische September-Referenzpunkte sind vorhanden und bleiben als solche anerkannt.",
+      "remaining_gap": "Zeitgenössischer Oktober-Vorher-/Nachher-Driftnachweis samt Referenzgerät/Seriennummer/Bereich/Zertifikat ist weiterhin ungebunden."
+    },
+    {
+      "id": "combined_uncertainty",
+      "status": "open",
+      "previous_issue": "Vollständiges physisches Unsicherheitsbudget für E/N fehlt.",
+      "new_evidence": [
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/literature.json",
+          "sha256": "e3bf50fe6414accca6f9b7737a59e5a474efb796301595457286f9b0dec01228",
+          "printed_pages": [
+            46,
+            47,
+            48,
+            55,
+            56
+          ],
+          "physical_PDF_pages_one_based": [
+            52,
+            53,
+            54,
+            61,
+            62
+          ]
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/calibration.json",
+          "sha256": "395515f6ccb3ae4850fb263dd6c3626f2b769fbeb2aebd0bb84cf205f716de6a"
+        },
+        {
+          "path": "evidence/electrical/ch0_joris_20261019/runtime_conclusions.json",
+          "sha256": "7ef800cd69ebdbda51b2e044dca32540160998fbac92c0986fe6ce6820d78ca0"
+        }
+      ],
+      "campaign_application": "Komponentenbasierte Abschätzung, Kalibrierresiduen, bestehende Sensitivitäten und Grenzen relativer Vergleiche sind unterscheidbar.",
+      "remaining_gap": "Referenz-, Messgrenzen-, Takt-/Dynamik-, Drift- und Kovarianzbeiträge fehlen für ein Gesamtintervall; C bleibt 0."
+    }
+  ],
+  "acceptance_alignment": [
+    {
+      "id": "3.3a.S",
+      "status": "bestätigt",
+      "substatus": "partially_clarified",
+      "scope": "68 primäre bedingte Integrale und zwei getrennte Supplements bleiben mit eigenem N/Intervall erhalten. Die nominale mA-Skalierung ist durch Joris erklärt und CH0 bestätigt; affine Zeitabbildung, physische Modellübertragung und C bleiben getrennt.",
+      "partial_aspects": [
+        "documented_nominal_scale",
+        "CH0_confirmed",
+        "no_numeric_change",
+        "physical_C_open"
+      ]
+    },
+    {
+      "id": "3.4c",
+      "status": "nicht verfügbar",
+      "substatus": "partially_clarified",
+      "scope": "Verlust-/Zählerprüfungen und CH0 sind belegt. Nominales 12-Bit-Design mit 1 mA/Count ist erklärt; die tatsächlich installierte ADC-/Range-/Vref- und Boardzuordnung sowie Clippinggrenzen bleiben ungebunden.",
+      "partial_aspects": [
+        "CH0_confirmed",
+        "documented_nominal_ADC_range",
+        "installed_configuration_open"
+      ]
+    },
+    {
+      "id": "4.1a",
+      "status": "nicht verfügbar",
+      "substatus": "partially_clarified",
+      "scope": "CH0 ist nutzerbestätigt und in den Aufnahmeparametern konsistent. Joris dokumentiert 20 mOhm, INA225 Gain 25, REF3020 und nominales 12-Bit-Design. Konkrete Board-/Bestückungs-/Registerbindung und der ADS7953-/ADS7952-Konflikt bleiben offen.",
+      "partial_aspects": [
+        "channel_closed",
+        "documented_design_closed",
+        "actual_board_configuration_open"
+      ]
+    },
+    {
+      "id": "4.1b",
+      "status": "bestätigt",
+      "substatus": "partially_clarified",
+      "scope": "Deklarierte Abtastraten, spezifische FS-Profile und angewandtes g/o/U(I)/c/s sind belegt. mA nach A und s werden jeweils einmal angewendet; dies charakterisiert keine kalibrierte ADC-Zeitbasis.",
+      "partial_aspects": [
+        "applied_model_and_profile_bound",
+        "single_conversion_verified",
+        "timebase_characterization_open"
+      ]
+    },
+    {
+      "id": "4.1c",
+      "status": "bestätigt",
+      "substatus": "closed",
+      "scope": "Andere historische 5-V-Modul- und 19-V-Systemeingangsgrenzen bleiben getrennt. Joris’ Jetson-Slot-Kurve liegt selbst ungefähr bei 19 V; sie wird nicht pauschal als 5-V-Pfad bezeichnet.",
+      "partial_aspects": [
+        "historical_boundaries_distinguished",
+        "Joris_slot_not_mislabeled_5V"
+      ]
+    },
+    {
+      "id": "4.1d",
+      "status": "nicht verfügbar",
+      "substatus": "partially_clarified",
+      "scope": "Joris’ Jetson-Slot-Strompfad und die späteren FS-after_R16-Profile sind beschrieben. Tatsächlicher Verbraucherumfang, Versorgung und Verkabelung sowie die vollständige U(I)/c-Modellübertragbarkeit sind nicht allein aus ähnlichem Spannungsniveau bewiesen.",
+      "partial_aspects": [
+        "recorded_FS_boundary_and_load_connection",
+        "Joris_slot_design_scope",
+        "physical_equivalence_open"
+      ]
+    },
+    {
+      "id": "4.2a",
+      "status": "nicht verfügbar",
+      "substatus": "partially_clarified",
+      "scope": "Die ungefähr 77 kHz stammen belegt aus dem differenziellen RC-Design (S. 30/48). Konkrete reale R-/C-Bestückung, vollständige Übertragungsfunktion und Abtasttaktcharakterisierung sind weiterhin ungebunden.",
+      "partial_aspects": [
+        "RC_design_origin_closed",
+        "populated_filter_and_full_transfer_open"
+      ]
+    },
+    {
+      "id": "4.2b",
+      "status": "bestätigt",
+      "substatus": "closed",
+      "scope": "77 kHz werden dem dokumentierten differenziellen RC-Filter zugeordnet. Die separate INA225-Komponentenbandbreite ist keine Herleitung dieses Filters oder einer vollständigen Messkettenbandbreite.",
+      "partial_aspects": [
+        "RC_source_attribution_corrected",
+        "component_bandwidth_distinguished"
+      ]
+    },
+    {
+      "id": "4.3b",
+      "status": "nicht verfügbar",
+      "substatus": "partially_clarified",
+      "scope": "ADC-Rohcodes sind im dokumentierten Design nominal zahlenmäßig mA; dies ist kein belegter Einheitenfehler. Designcode 4095 entspricht 4,095 A bei Vollskalengrenze 4,096 A. Tatsächliche ADC-Typ-/Range-/Vref-/Boardbindung und ein Clippingnachweis bleiben offen.",
+      "partial_aspects": [
+        "nominal_unit_derivation_closed",
+        "installed_range_and_clipping_open"
+      ]
+    },
+    {
+      "id": "4.3c",
+      "status": "bestätigt",
+      "substatus": "partially_clarified",
+      "scope": "Der bestehende Domänenaudit bleibt unverändert. Das konkrete H10-FS-Profil besteht softwareseitig, behält aber s=0,8963972779781232 unter 0,9 und Punktfaktorspreizung 2,026054648 % über 2 % als Warnungen; diese sind kein unabhängiges Unsicherheitsbudget.",
+      "partial_aspects": [
+        "existing_domain_observations_retained",
+        "H10_profile_warnings_retained"
+      ]
+    },
+    {
+      "id": "4.3d",
+      "status": "nicht verfügbar",
+      "substatus": "partially_clarified",
+      "scope": "36 ursprüngliche Lastpunkte und ein zweiter getrennter Verifikationsdurchlauf sind vorhanden. Die drei spezifischen September-FS-Profile besitzen Referenz-/Idlebelege. Zeitgenössische unabhängige Idle-/Aktivpunkte vor und nach der Oktoberbelastung sind dadurch weiterhin nicht belegt.",
+      "partial_aspects": [
+        "original_36_points_and_verification_closed",
+        "specific_FS_reference_records_bound",
+        "October_before_after_drift_open"
+      ]
+    },
+    {
+      "id": "4.3e",
+      "status": "nicht verfügbar",
+      "substatus": "partially_clarified",
+      "scope": "Joris benennt EA-EL 9080-60 DT, Fluke 179 und PicoScope; spezifische FS-Referenzpunkte sind erhalten. Seriennummer, Zertifikat, konkrete Bereichs-/Unsicherheitszuordnung und zeitgenössische Oktoberreferenzen bleiben unvollständig.",
+      "partial_aspects": [
+        "documented_reference_instruments",
+        "specific_recorded_reference_points",
+        "campaign_reference_uncertainty_open"
+      ]
+    },
+    {
+      "id": "4.4a",
+      "status": "bestätigt",
+      "substatus": "partially_clarified",
+      "scope": "Verfügbare Wiederholstreuung, Kalibrierresiduen, komponentenbasierte Abschätzung und Sensitivitäten bleiben getrennt. Weder 0,025–0,037 % noch illustrative ±5 % werden als vollständige aktuelle E/N-Unsicherheit übernommen.",
+      "partial_aspects": [
+        "documented_component_and_residual_evidence",
+        "complete_uncertainty_not_inferred"
+      ]
+    },
+    {
+      "id": "4.4c",
+      "status": "nicht verfügbar",
+      "substatus": "open",
+      "scope": "Konkrete Installations-/Messgrenzenbindung, Oktoberdrift, Referenz-, Zeitbasis-/Dynamik- und Kovarianzbeiträge reichen weiterhin nicht für ein kombiniertes physisches E/N-Intervall aus. Die nominale Designskalierung und ursprüngliche Verifikation werden deshalb nicht erneut als fehlend bezeichnet.",
+      "partial_aspects": [
+        "documented_design_and_verification_acknowledged",
+        "physical_C_remains_0"
+      ]
+    }
+  ],
+  "report_summary": [
+    "CH0 ist als Betriebsangabe durch Kevins Nutzerbestätigung vom 19.10.2026 belegt. Alle 70 primären und zwei separaten Supplementaufnahmen sowie die 42 ausgewählten historischen Wiederholungen stimmen in den vorhandenen Kanalparametern mit CH0 überein. Die physische Boardidentität und der Verbraucherumfang sind davon getrennte Zuordnungen.",
+    "Joris dokumentiert 12 Bit, 2,048 V, 20 mOhm und Gain 25. Daraus folgen nominal 2,048 V / (4096 · 25 · 0,020 Ohm) = 0,001 A je Count = 1 mA je Count; Tabelle 4.1 nennt den 1-mA-Schritt ausdrücklich. Code 4095 entspricht nominal 4,095 A, die Vollskalengrenze 4,096 A. Unveränderte ADC-Codes sind damit zahlenmäßig mit der mA-Konvention vereinbar. Die vorhandene Division durch 1000 bleibt einmalig; es wird kein weiterer Faktor eingeführt.",
+    "Die Arbeit dokumentiert 36 Lastpunkte von 0 bis 3,5 A in ungefähr 0,1-A-Schritten, jeweils zehn Sekunden, mit EA-EL 9080-60 DT, Fluke 179, u.RECS bei 2 kS/s und PicoScope bei 5 MS/s. Die Anpassung nutzt die Endpunkte; dies waren nicht nur zwei gemessene Lastpunkte. Ein zweiter getrennter Verifikationsdurchlauf ist ausdrücklich dokumentiert (S. 53–56). Diese ursprüngliche Verifikation ist kein rückwirkender Vorher-/Nachher-Driftnachweis der Oktoberkampagne.",
+    "Drei konkrete FS-Skalierungsprofile vom 04.09.2026 mit eigenen Zeitpunkten, Referenzpunkten, Hashes und Aufbauzuordnungen sind erhalten. Ihre Anwendung ist für die aktuellen 72 Aufnahmen und die 42 historischen Wiederholungen nachvollzogen; leere generische Kalibriermanifestfelder heben diese spezifischen Belege nicht auf. Beim H10-Profil bleiben trotz softwareseitigem Pass die Warnungen s < 0,9 und Punktfaktorspreizung 2,026054648 % > 2 % bestehen.",
+    "Der belegte Rechenweg lautet: I = g · (raw_mA / 1000 + o), U = a + b · I, P = c · s · I · U; anschließend erfolgt die jeweilige Intervallintegration und Division durch das N derselben Aufnahme. Im historischen Pfad wird s einmal nach der ursprünglichen Integration beim Import angewendet; im aktuellen Innerintervallpfad einmal in der Leistung. s ist ein Leistungs-/Energieskalierer außerhalb von I und U, auch wenn ein Feld current_scale heißt. c liegt bereits nach der Leistungsberechnung; die Rolle eines Faktors von ungefähr 0,97 wird auf S. 65–66 erklärt, die exakte Zahl stammt aus dem erhaltenen Code. Keine doppelte Kalibrierung und keine Zahlenänderung sind erforderlich.",
+    "Die ungefähr 77 kHz sind als Designangabe des differenziellen RC-Filters dokumentiert (S. 30 und 48), nicht aus der allgemeinen INA225-Bandbreite abgeleitet. Exakte reale R-/C-Bestückung, vollständige Übertragungsfunktion und Abtasttaktcharakterisierung bleiben ungebunden. Der ADC-Typ ist in der Quelle widersprüchlich: ADS7953 auf S. 29, ADS7952 auf S. 48. Ohne eindeutige Hardwareunterlage bleibt genau dieser Typkonflikt offen; passende Firmwarequellen sind weiterhin kein Installationsbeleg.",
+    "Joris beschreibt den Jetson-Slot-Strompfad; die U(I)-Grafik zeigt ungefähr 19 V und wird hier nicht als 5-V-Messung bezeichnet. Die späteren FS-Profile benennen den Eingang 9V_20V_IN_after_R16_to_GND. Die Gleichheit von Versorgung, Verkabelung und eingeschlossenen Verbrauchern mit dem ursprünglichen Modell ist damit nicht vollständig bewiesen. Andere historische 5-V-Modul-/19-V-Systemgrenzen bleiben als eigener Quellenkontext getrennt.",
+    "A=70, primär B=68 und zwei eigene B-Supplements bleiben unverändert; C bleibt 0. Nominale Designskalierung, dokumentierte ursprüngliche Verifikation und tatsächlich benutzte Parameter sind jetzt zugeordnet. Aktiver ADC-/Range-/Vref-Stand, installierter Build, konkrete physische Messgrenze, Oktoberdrift, Referenzunsicherheit, Takt-/Dynamikbeiträge und Kovarianzen reichen weiterhin nicht für eine kombinierte physische E/N-Unsicherheit. Komponentenabschätzungen von 0,025–0,037 % und illustrative ±5 % werden nicht als Gesamtunsicherheit übernommen; relative Verhältnisse können Offset, Nichtlinearität, Drift und Kanalfehler enthalten."
+  ],
+  "invariant_scopes": {
+    "primary_A": 70,
+    "primary_B": 68,
+    "separate_supplements": 2,
+    "primary_C": 0,
+    "primary_throughput_pairs": 35,
+    "primary_energy_pairs": 33,
+    "new_cross_session_energy_pairs": 2
+  },
+  "numerical_results_changed": false,
+  "additional_conversion_applied": false,
+  "remaining_report_requirements": [
+    {
+      "id": "1.2b",
+      "requirement": "Vollständigen historischen Runtime- und Compiler-Versionsstand binden",
+      "status": "nicht verfügbar",
+      "detail": "Die erhaltenen Code- und Artefakthashes schließen die historischen Paket-, Bibliotheks- und Firmwarestände nicht vollständig. Aktuelle Versionen werden nicht rückwirkend zugewiesen.",
+      "evidence_files": [
+        "evidence/identity_verification.json",
+        "evidence/quality_historical_source.json"
+      ]
+    },
+    {
+      "id": "1.2c",
+      "requirement": "Vollständige Präzision je Stage einschließlich interner NPU-Layer",
+      "status": "nicht verfügbar",
+      "detail": "Belegte Adapter- und Stage-Datentypen sind dokumentiert. Fehlende interne NPU-Präzision wird weder aus Dateinamen noch aus dem UINT8-FIFO abgeleitet.",
+      "evidence_files": [
+        "evidence/identity_runtime_manifest.json"
+      ]
+    },
+    {
+      "id": "1.3a",
+      "requirement": "Historische Evaluator-Quellrevision je UID binden",
+      "status": "nicht verfügbar",
+      "detail": "13/14 gebunden; der zeitgenössische Evaluatorhash des MobileNetV3-b135-Replays bleibt offen.",
+      "evidence_files": [
+        "evidence/quality_historical_source.json"
+      ]
+    },
+    {
+      "id": "1.3c",
+      "requirement": "Jeden historisch ausgeführten NMS-/Adapter-Helperzweig nachweisen",
+      "status": "nicht verfügbar",
+      "detail": "Exakte Runnerbytes und Vertragsparameter sind vorhanden. Historische Verfügbarkeit importierter Helper und tatsächlich gewählter optionaler Decoderzweig sind nicht vollständig nachgewiesen.",
+      "evidence_files": [
+        "evidence/quality_historical_source.json"
+      ]
+    },
+    {
+      "id": "1.3d",
+      "requirement": "Historische pycocotools-Version binden",
+      "status": "nicht verfügbar",
+      "detail": "Die Replay-Version wird ausschließlich als heutige Offlineumgebung ausgewiesen; historische Drittanbieter-Version bzw. Binärdatei fehlt.",
+      "evidence_files": [
+        "evidence/quality_historical_source.json"
+      ]
+    },
+    {
+      "id": "3.3a.T",
+      "requirement": "ADC-Abtastwerte bedingt demselben Pipelineintervall zuordnen",
+      "status": "nicht verfügbar",
+      "detail": "68/70 akzeptierte Prozesse mit konsistenter bedingter ADC-Zeitabbildung, vollständigem Sample-Support und ohne beobachtete Verluste im Zielintervall. Annahmen: affine Hostzeitabbildung und nominal konstante ADC-Periode. Uncharakterisierte Drift und Nichtlinearität bleiben offen.",
+      "evidence_files": [
+        "runs",
+        "tables/delivery_interval_evidence.json"
+      ]
+    },
+    {
+      "id": "3.3a.E",
+      "requirement": "Energie desselben Intervalls vollständig physisch qualifizieren",
+      "status": "nicht verfügbar",
+      "detail": "0/70 vollständig physisch qualifizierte Energieintervalle. Daneben liegen 70 tatsächliche N-/Ereignisbindungen und 68 bedingte ADC-Zeitabbildungen vor. Fehlende absolute Energie und Unsicherheit bleiben null; sie werden nicht als Nullenergie interpretiert.",
+      "evidence_files": [
+        "runs",
+        "scripts/summarize_confirmations.py"
+      ]
+    },
+    {
+      "id": "3.4c",
+      "requirement": "Sampleverluste und Kanalgrenzen je Prozess speichern",
+      "status": "nicht verfügbar",
+      "detail": "Verlust-/Zählerprüfungen und CH0 sind belegt. Nominales 12-Bit-Design mit 1 mA/Count ist erklärt; die tatsächlich installierte ADC-/Range-/Vref- und Boardzuordnung sowie Clippinggrenzen bleiben ungebunden.",
+      "evidence_files": [
+        "runs",
+        "scripts/collector_interval/analyze_interval.py"
+      ],
+      "substatus": "partially_clarified",
+      "partial_aspects": [
+        "CH0_confirmed",
+        "documented_nominal_ADC_range",
+        "installed_configuration_open"
+      ]
+    },
+    {
+      "id": "3.5a.E",
+      "requirement": "Physisch qualifizierte Energiereplikate und Blockstatistik berichten",
+      "status": "nicht verfügbar",
+      "detail": "0 vollständig physisch qualifizierte Energieintervalle; 68 bedingte nominale Integrale werden mit eigener Spanne und eigenen Blockpaaren separat berichtet. Das offene absolute Energiebudget sperrt keine gültige Ratenstatistik.",
+      "evidence_files": [
+        "runs",
+        "tables/delivery_conditional_nominal_energy.json"
+      ]
+    },
+    {
+      "id": "4.1a",
+      "requirement": "Boardrevision, Schaltplan/Kanal, Shunt, Verstärker, ADC, Gain und Vref je Kampagne verknüpfen",
+      "status": "nicht verfügbar",
+      "detail": "CH0 ist nutzerbestätigt und in den Aufnahmeparametern konsistent. Joris dokumentiert 20 mOhm, INA225 Gain 25, REF3020 und nominales 12-Bit-Design. Konkrete Board-/Bestückungs-/Registerbindung und der ADS7953-/ADS7952-Konflikt bleiben offen.",
+      "evidence_files": [
+        "evidence/electrical/physical_prerequisites.json"
+      ],
+      "substatus": "partially_clarified",
+      "partial_aspects": [
+        "channel_closed",
+        "documented_design_closed",
+        "actual_board_configuration_open"
+      ]
+    },
+    {
+      "id": "4.1d",
+      "requirement": "Versorgungspunkt und eingeschlossene Verbraucher je Kampagne physisch binden",
+      "status": "nicht verfügbar",
+      "detail": "Joris’ Jetson-Slot-Strompfad und die späteren FS-after_R16-Profile sind beschrieben. Tatsächlicher Verbraucherumfang, Versorgung und Verkabelung sowie die vollständige U(I)/c-Modellübertragbarkeit sind nicht allein aus ähnlichem Spannungsniveau bewiesen.",
+      "evidence_files": [
+        "tables/electrical_raw_trace_audit.csv",
+        "evidence/electrical/physical_prerequisites.json"
+      ],
+      "substatus": "partially_clarified",
+      "partial_aspects": [
+        "recorded_FS_boundary_and_load_connection",
+        "Joris_slot_design_scope",
+        "physical_equivalence_open"
+      ]
+    },
+    {
+      "id": "4.2a",
+      "requirement": "77-kHz-Angabe anhand tatsächlicher Filter oder Charakterisierung auflösen",
+      "status": "nicht verfügbar",
+      "detail": "Die ungefähr 77 kHz stammen belegt aus dem differenziellen RC-Design (S. 30/48). Konkrete reale R-/C-Bestückung, vollständige Übertragungsfunktion und Abtasttaktcharakterisierung sind weiterhin ungebunden.",
+      "evidence_files": [
+        "evidence/electrical/physical_prerequisites.json"
+      ],
+      "substatus": "partially_clarified",
+      "partial_aspects": [
+        "RC_design_origin_closed",
+        "populated_filter_and_full_transfer_open"
+      ]
+    },
+    {
+      "id": "4.3b",
+      "requirement": "ADC-Clipping ausschließen oder quantifizieren",
+      "status": "nicht verfügbar",
+      "detail": "ADC-Rohcodes sind im dokumentierten Design nominal zahlenmäßig mA; dies ist kein belegter Einheitenfehler. Designcode 4095 entspricht 4,095 A bei Vollskalengrenze 4,096 A. Tatsächliche ADC-Typ-/Range-/Vref-/Boardbindung und ein Clippingnachweis bleiben offen.",
+      "evidence_files": [
+        "evidence/electrical/summary.json",
+        "evidence/resume_20261018/metrology/candidate_firmware_metrology_review.json",
+        "MANUELLE_RESTPUNKTE.txt"
+      ],
+      "substatus": "partially_clarified",
+      "partial_aspects": [
+        "nominal_unit_derivation_closed",
+        "installed_range_and_clipping_open"
+      ]
+    },
+    {
+      "id": "4.3d",
+      "requirement": "Unabhängige Idle-/Aktivpunkte vor und nach Belastung aufnehmen",
+      "status": "nicht verfügbar",
+      "detail": "36 ursprüngliche Lastpunkte und ein zweiter getrennter Verifikationsdurchlauf sind vorhanden. Die drei spezifischen September-FS-Profile besitzen Referenz-/Idlebelege. Zeitgenössische unabhängige Idle-/Aktivpunkte vor und nach der Oktoberbelastung sind dadurch weiterhin nicht belegt.",
+      "evidence_files": [
+        "evidence/electrical/physical_prerequisites.json"
+      ],
+      "substatus": "partially_clarified",
+      "partial_aspects": [
+        "original_36_points_and_verification_closed",
+        "specific_FS_reference_records_bound",
+        "October_before_after_drift_open"
+      ]
+    },
+    {
+      "id": "4.3e",
+      "requirement": "Referenzunsicherheit und Quelle dokumentieren",
+      "status": "nicht verfügbar",
+      "detail": "Joris benennt EA-EL 9080-60 DT, Fluke 179 und PicoScope; spezifische FS-Referenzpunkte sind erhalten. Seriennummer, Zertifikat, konkrete Bereichs-/Unsicherheitszuordnung und zeitgenössische Oktoberreferenzen bleiben unvollständig.",
+      "evidence_files": [
+        "evidence/electrical/conditional_reference_accuracy.json",
+        "evidence/electrical/physical_prerequisites.json"
+      ],
+      "substatus": "partially_clarified",
+      "partial_aspects": [
+        "documented_reference_instruments",
+        "specific_recorded_reference_points",
+        "campaign_reference_uncertainty_open"
+      ]
+    },
+    {
+      "id": "4.4c",
+      "requirement": "Kalibrierte kombinierte E/N-Unsicherheit angeben",
+      "status": "nicht verfügbar",
+      "detail": "Konkrete Installations-/Messgrenzenbindung, Oktoberdrift, Referenz-, Zeitbasis-/Dynamik- und Kovarianzbeiträge reichen weiterhin nicht für ein kombiniertes physisches E/N-Intervall aus. Die nominale Designskalierung und ursprüngliche Verifikation werden deshalb nicht erneut als fehlend bezeichnet.",
+      "evidence_files": [
+        "evidence/electrical/uncertainty_model.json"
+      ],
+      "substatus": "open",
+      "partial_aspects": [
+        "documented_design_and_verification_acknowledged",
+        "physical_C_remains_0"
+      ]
+    },
+    {
+      "id": "5.1b",
+      "requirement": "Drei Originalreplikate und exakte B500-Generatorbindung finden",
+      "status": "nicht verfügbar",
+      "detail": "Neun gespeicherte B500-Tabellenzeilen bleiben ohne ihre drei nachgewiesenen Originalbeobachtungen und ohne exakte Generator-/Seedzuordnung.",
+      "evidence_files": [
+        "evidence/history_b500_audit.json"
+      ]
+    },
+    {
+      "id": "6.1a",
+      "requirement": "Ergebnisarchiv erzeugen und prüfen",
+      "status": "nicht verfügbar",
+      "detail": "Archiverzeugung und Veröffentlichung erfolgen außerhalb dieses Generators. Bestätigung erst mit existierender SHA-geprüfter Archivquittung.",
+      "evidence_files": [
+        "review/archive_receipt.json"
+      ]
+    }
+  ],
+  "predecessor_acceptance": {
+    "path": "external-sha256:608ff1033dab08b8c1d2231058e635d6e31f45f8ab041ddc2200e4205a987e8b",
+    "sha256": "608ff1033dab08b8c1d2231058e635d6e31f45f8ab041ddc2200e4205a987e8b",
+    "bytes": 11023442
+  },
+  "parent_archive": {
+    "filename": "thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz",
+    "bytes": 2857836513,
+    "sha256": "edbd618ad91ef658a866c73c61defd00389e3ca9218c33ea22d87a6ec3721915",
+    "source_campaign_commit": "64c1f487645d20a844d66ccdf8f65dcc80b96065"
+  },
+  "schema": "thesis-v49-ch0-joris-evidence-alignment-v1",
+  "source_spec": {
+    "path": "evidence/electrical/ch0_joris_20261019/report_spec.json",
+    "sha256": "274d3068e9d911c21b55399ec6010acce19ae140149b834085e1094c9c253d6a"
+  },
+  "predecessor_documents": {
+    "MANUELLE_RESTPUNKTE.txt": {
+      "path": "evidence/electrical/ch0_joris_20261019/prior_MANUELLE_RESTPUNKTE.txt",
+      "sha256": "da105973557373c88ffe6e0e85ac2882e3370d418bafbb3b6cc2ca58f51b74b2",
+      "bytes": 39121
+    },
+    "REPRODUCTION.txt": {
+      "path": "evidence/electrical/ch0_joris_20261019/prior_REPRODUCTION.txt",
+      "sha256": "4931d228e2039c7405c6b544f0fccb5b1a1b7c15d8a49ef788df8e6fdb47d95a",
+      "bytes": 47349
+    }
+  },
+  "generator": {
+    "path": "scripts/build_ch0_joris_addendum.py",
+    "sha256": "cf74d304a2d71738c3db844087cc04740a654beaf80853b0a10971b95ba4d11b"
+  }
+}

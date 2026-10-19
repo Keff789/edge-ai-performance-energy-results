@@ -1,0 +1,171 @@
+{
+  "schema": "thesis-v49-candidate-metrology-readonly-v1",
+  "candidate_only": true,
+  "installed_firmware_identity_bound": false,
+  "reviewed_extracted_source_bytes_match_candidate_archive": true,
+  "source_observations": [
+    {
+      "path": "archive:evidence/resume_20261018/protocol/firmware_candidate_source/src/ADCSingleChannelInterrupt.cpp",
+      "line": 30,
+      "text": "data_ptr->value = SPI_SWAP_DATA_RX(*reinterpret_cast<const uint32_t *>(t->rx_data), 16) & 0xFFF;"
+    },
+    {
+      "path": "archive:evidence/resume_20261018/protocol/firmware_candidate_source/src/ADCSingleChannelInterrupt.cpp",
+      "line": 55,
+      "text": "//data_ptr->value = SPI_SWAP_DATA_RX(*reinterpret_cast<const uint32_t *>(t.rx_data), 16) & 0xFFF;"
+    },
+    {
+      "path": "archive:evidence/resume_20261018/protocol/firmware_candidate_source/src/NetconnUDP.cpp",
+      "line": 152,
+      "text": "*reinterpret_cast<decltype(ADCSingleChannelInterrupt::Sample().value) *>(buffer + offset + index_size) = current_sample->value;"
+    },
+    {
+      "path": "archive:evidence/resume_20261018/protocol/firmware_candidate_source/include/ADCSingleChannel.h",
+      "line": 33,
+      "text": "static constexpr uint8_t initStr[2] = {0x10, 0x00};"
+    },
+    {
+      "path": "archive:evidence/resume_20261018/protocol/firmware_candidate_source/src/ADCSingleChannelInterrupt.cpp",
+      "line": 63,
+      "text": ": channel(channel), pwm_freq(pwm_freq), channelStr{static_cast<uint8_t>(0x10 | channel >> 1), static_cast<uint8_t>(0x00 | channel << 7)}, buffer(buf) {"
+    },
+    {
+      "path": "archive:evidence/resume_20261018/protocol/firmware_candidate_source/src/ADCSingleChannelInterrupt.cpp",
+      "line": 125,
+      "text": ".freq_hz = pwm_freq,"
+    },
+    {
+      "path": "archive:evidence/resume_20261018/protocol/firmware_candidate_source/src/ADCSingleChannelInterrupt.cpp",
+      "line": 167,
+      "text": ".freq_hz = pwm_freq,"
+    },
+    {
+      "path": "archive:evidence/resume_20261018/protocol/firmware_candidate_source/include/ADCSingleChannelInterrupt.h",
+      "line": 21,
+      "text": "// channel 2 -> jetson current"
+    },
+    {
+      "path": "archive:evidence/resume_20261018/protocol/firmware_candidate_source/src/NetconnUDP.cpp",
+      "line": 87,
+      "text": "channel = 2; // default channel is the jetson channel"
+    },
+    {
+      "path": "archive:evidence/resume_20261018/protocol/firmware_candidate_source/src/NetconnUDP.cpp",
+      "line": 105,
+      "text": "//adc_pointer = initAdcSingle(0); // this channel is used to measure jetson current"
+    }
+  ],
+  "source_claims": {
+    "fast_ISR_value_is_lower_12_bits_of_SPI_response": true,
+    "fast_UDP_value_is_copied_without_unit_conversion": true,
+    "ADC_init_command_hex": "0x1000",
+    "requested_channel_command_formula": "0x1000 | (channel << 7)",
+    "sample_clock_source_selected": "LEDC_AUTO_CLK; pwm_freq from request",
+    "actual_sample_clock_accuracy_established": false,
+    "explicit_Vref_shunt_gain_or_current_unit_definitions_found": [],
+    "targeted_source_members_examined": [
+      "urecs_adc_web-main/include/ADCSingleChannel.h",
+      "urecs_adc_web-main/include/ADCSingleChannelInterrupt.h",
+      "urecs_adc_web-main/include/Config.h",
+      "urecs_adc_web-main/include/Ethernet.h",
+      "urecs_adc_web-main/include/IGpioListener.h",
+      "urecs_adc_web-main/include/IoExpander.h",
+      "urecs_adc_web-main/include/NetconnUDP.h",
+      "urecs_adc_web-main/include/Network.h",
+      "urecs_adc_web-main/include/PinNames.h",
+      "urecs_adc_web-main/include/Ringbuffer.h",
+      "urecs_adc_web-main/include/SPIISR.h",
+      "urecs_adc_web-main/include/Wifi.h",
+      "urecs_adc_web-main/src/ADCSingleChannel.cpp",
+      "urecs_adc_web-main/src/ADCSingleChannelInterrupt.cpp",
+      "urecs_adc_web-main/src/CMakeLists.txt",
+      "urecs_adc_web-main/src/Config.cpp",
+      "urecs_adc_web-main/src/Ethernet.cpp",
+      "urecs_adc_web-main/src/IoExpander.cpp",
+      "urecs_adc_web-main/src/NetconnUDP.cpp",
+      "urecs_adc_web-main/src/Network.cpp",
+      "urecs_adc_web-main/src/Wifi.cpp",
+      "urecs_adc_web-main/src/main.cpp"
+    ],
+    "component_model_or_active_register_range_decoded": false
+  },
+  "observed_saved_payloads": [
+    {
+      "run_id": "b01_p01",
+      "trace_path": "archive:runs/confirmation_r3_20261018/slots/b01_p01/energy/run_000/collector_storage/fast_firmware.parquet",
+      "column_name": "current",
+      "column_type": "uint16",
+      "physical_unit_established_by_this_check": null,
+      "payload_rows": 379904,
+      "minimum_encoded_value": 753,
+      "maximum_encoded_value": 1409,
+      "encoded_values_above_4095": 0,
+      "encoded_values_equal_4095": 0,
+      "encoded_values_equal_zero": 0,
+      "compatible_with_unscaled_12bit_values": true,
+      "compatible_with_existing_nominal_mA_convention": true,
+      "installed_candidate_firmware_proven": false,
+      "analog_or_ADC_clipping_excluded": false
+    },
+    {
+      "run_id": "b01_p02",
+      "trace_path": "archive:runs/confirmation_r3_20261018/slots/b01_p02/energy/run_000/collector_storage/fast_firmware.parquet",
+      "column_name": "current",
+      "column_type": "uint16",
+      "physical_unit_established_by_this_check": null,
+      "payload_rows": 379968,
+      "minimum_encoded_value": 752,
+      "maximum_encoded_value": 2228,
+      "encoded_values_above_4095": 0,
+      "encoded_values_equal_4095": 0,
+      "encoded_values_equal_zero": 0,
+      "compatible_with_unscaled_12bit_values": true,
+      "compatible_with_existing_nominal_mA_convention": true,
+      "installed_candidate_firmware_proven": false,
+      "analog_or_ADC_clipping_excluded": false
+    },
+    {
+      "run_id": "b01_p03",
+      "trace_path": "archive:runs/confirmation_r3_20261018/slots/b01_p03/energy/run_000/collector_storage/fast_firmware.parquet",
+      "column_name": "current",
+      "column_type": "uint16",
+      "physical_unit_established_by_this_check": null,
+      "payload_rows": 380032,
+      "minimum_encoded_value": 727,
+      "maximum_encoded_value": 2943,
+      "encoded_values_above_4095": 0,
+      "encoded_values_equal_4095": 0,
+      "encoded_values_equal_zero": 0,
+      "compatible_with_unscaled_12bit_values": true,
+      "compatible_with_existing_nominal_mA_convention": true,
+      "installed_candidate_firmware_proven": false,
+      "analog_or_ADC_clipping_excluded": false
+    },
+    {
+      "run_id": "b01_p04",
+      "trace_path": "archive:runs/confirmation_r3_20261018/slots/b01_p04/energy/run_000/collector_storage/fast_firmware.parquet",
+      "column_name": "current",
+      "column_type": "uint16",
+      "physical_unit_established_by_this_check": null,
+      "payload_rows": 110272,
+      "minimum_encoded_value": 774,
+      "maximum_encoded_value": 3030,
+      "encoded_values_above_4095": 0,
+      "encoded_values_equal_4095": 0,
+      "encoded_values_equal_zero": 0,
+      "compatible_with_unscaled_12bit_values": true,
+      "compatible_with_existing_nominal_mA_convention": true,
+      "installed_candidate_firmware_proven": false,
+      "analog_or_ADC_clipping_excluded": false
+    }
+  ],
+  "interpretation": [
+    "The candidate establishes an unscaled12-bit payload for its own fast ISR/UDP path only.",
+    "All four actual R3 stored domains are compatible with that candidate, but numeric range alone cannot distinguish ADC codes from the nominal mA convention used by the existing postprocessor.",
+    "Candidate channel comments/defaults are not a board wiring map: comments identify channel2 as Jetson and an older commented call mentions channel0; recordedFS requests explicitly use0.",
+    "No original calibration, trace, energy model or archived result has been changed or reinterpreted.",
+    "Existing energy remains a conditional numerical integral under its declared nominal payload conversion. Physical payload units, reference/fullscale and installed firmware must be bound independently.",
+    "Zero exact4095 values do not exclude analogue saturation, alternative firmware scaling or another active ADC range."
+  ],
+  "newly_closed_physical_review_points": []
+}

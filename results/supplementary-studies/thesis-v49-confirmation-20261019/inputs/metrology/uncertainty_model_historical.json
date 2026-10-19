@@ -1,0 +1,22 @@
+{
+  "measurement_model": "e = c*s/N * integral[I*(a+b*I) dt]; I=g*(mA/1000+o)",
+  "coefficients": {
+    "g": 0.997224237630222,
+    "o_a": 0.004704622,
+    "a_v": 19.062607082705,
+    "b_v_per_a": -0.07444582,
+    "c": 0.9705324920014426
+  },
+  "current_scale_semantics": "The setup factor s multiplies POWER/ENERGY in the stored summaries; it is not reapplied inside I or U(I).",
+  "formula": "u(e)^2 = J Sigma_theta J^T + u_independent_repeat^2 + u_boundary^2 + (e*u(N)/N)^2, retaining all covariance terms.",
+  "ratio_formula": "For R=eS/eF and shared theta, J_R=R*(J_S/eS-J_F/eF). Covariance across channels/references is required.",
+  "shared_power_gain": "An identical stable multiplicative power/reference scale cancels exactly in a same-channel energy ratio; across channels common reference and channel-specific errors must be separated.",
+  "current_gain": "A common current gain does not in general cancel under U=a+bI. Its residual ratio sensitivity is retained in the derivative table.",
+  "offset": "One shared offset produces correlated unequal relative errors because integral power slopes and rates differ.",
+  "block_covariance": "Historical repeat ordinal is not evidence of randomised paired blocks; no historical covariance is invented.",
+  "repeat_se_interpretation": "Reported s/sqrt(3) is the conventional standard error under independent exchangeable repeats; independence is not established and no total coverage interval is inferred.",
+  "combined_uncertainty_status": "nicht verfügbar",
+  "combined_uncertainty_value": null,
+  "illustrative_5_percent_used_as_uncertainty": false,
+  "new_acquisition": false
+}
