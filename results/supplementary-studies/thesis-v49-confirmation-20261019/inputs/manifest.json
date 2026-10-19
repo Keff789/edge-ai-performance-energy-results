@@ -1,0 +1,221 @@
+{
+  "files": [
+    {
+      "bytes": 528126,
+      "path": "attempt_history.json",
+      "sha256": "d8a0f2401fe80b79af3a60a7a7fe277936a831cfcddf4b91a321f900b35ed752"
+    },
+    {
+      "bytes": 201684,
+      "path": "design.json",
+      "sha256": "7bab246ab404815c0b4239d5ffa8cbe75da346409051d383c4d144dea3aa2f14"
+    },
+    {
+      "bytes": 73930,
+      "path": "external_sources.json",
+      "sha256": "4af00f16cd29e4b3c8fb037bb31a882f03ef416e8a15b369d8a44a089cc2359a"
+    },
+    {
+      "bytes": 55609,
+      "path": "history_repeats.json",
+      "sha256": "b9ea5f7f3668436b5b6d026b1a5366188a9b0acf30355974bdb69d8c55c2bf13"
+    },
+    {
+      "bytes": 188489,
+      "path": "measurements.json",
+      "sha256": "fd1738074cb182ebefdbb1ed5fa669506d9dd9bc12eafa713bacb58cc0be56ef"
+    },
+    {
+      "bytes": 4005,
+      "path": "metrology/calibration_records.json",
+      "sha256": "d6e598e4bcf8f9aa48cbc269ee3cec8dbf0c21e4918a2addd8428887b0e6327d"
+    },
+    {
+      "bytes": 8112,
+      "path": "metrology/candidate_firmware.json",
+      "sha256": "32fd3965005244aacfed88283942c214235d814af784f1f90b776a5b1bb46c65"
+    },
+    {
+      "bytes": 9605,
+      "path": "metrology/configuration_and_reference_gaps.json",
+      "sha256": "bc3b168ba42a7fc6d682f9fd35be31db01cbdeae8d858630263536a70a556512"
+    },
+    {
+      "bytes": 15869,
+      "path": "metrology/export_inputs.py",
+      "sha256": "8741e6a3121c412e54783c8620ce1cd4db42340d99382f792ef426c7a89aa12e"
+    },
+    {
+      "bytes": 9028,
+      "path": "metrology/historical_b500_provenance.json",
+      "sha256": "3521325e67578dd5722afd080d036f721ea6dc9a682614c2835f22bd342e1b15"
+    },
+    {
+      "bytes": 10633,
+      "path": "metrology/index.json",
+      "sha256": "909021480d84fce4a5018391a6a9082ec2e4cda4a5b29c4a239a1ed5f41bba56"
+    },
+    {
+      "bytes": 1120,
+      "path": "metrology/models/orin_nx_deepx_m1_01.json",
+      "sha256": "c1b3c5301aa2ca8698044b861f9b575e8ae17057e41d875423ea5f489b0b859f"
+    },
+    {
+      "bytes": 1117,
+      "path": "metrology/models/orin_nx_hailo10_01.json",
+      "sha256": "9126709109f7035a66383394e8d4fd2d02ff6b0cc9d728def3a3393f35f66f68"
+    },
+    {
+      "bytes": 1114,
+      "path": "metrology/models/orin_nx_hailo8_01.json",
+      "sha256": "c525d3ef3f5ce81e4627158731068492e5ab7a5c01188c3dec4364fdbd19d38e"
+    },
+    {
+      "bytes": 1271,
+      "path": "metrology/physical_prerequisites.json",
+      "sha256": "c880d977a2b6d6d13e5dd646973cbeab371cae636f9c5214e4473e24c267ec1b"
+    },
+    {
+      "bytes": 4941,
+      "path": "metrology/primary_nominal_current_ranges.json",
+      "sha256": "8e3c655283e1ff0346877c3adcb02c91b971389d44be154d347b47276c01d639"
+    },
+    {
+      "bytes": 945,
+      "path": "metrology/primary_reference_documents.json",
+      "sha256": "f5129896188a36ebc75d0590732b8f9dd90d2636d28576bcbab73526a046f583"
+    },
+    {
+      "bytes": 7315,
+      "path": "metrology/supplement_nominal_current_ranges.json",
+      "sha256": "5938c8e9ce76bf8920243ccb7311f73dcda68408ae0bb27aba04d74c74d8acd5"
+    },
+    {
+      "bytes": 1638,
+      "path": "metrology/uncertainty_model_historical.json",
+      "sha256": "a537faed67a6ea5680e2d2cad74cc43236530181f9d9a3eb6604db2fc701bb67"
+    },
+    {
+      "bytes": 82195,
+      "path": "metrology/version_and_precision_bindings.json",
+      "sha256": "d2337581b6b66f68900d4b1d7d2724efa3e9581c787cee557743f3fb0a05a7b3"
+    },
+    {
+      "bytes": 239200,
+      "path": "origin_provenance.json",
+      "sha256": "af14a7f0ddd08ab283b8bbcc8c66dc556b0bafc1d3ff03ec38e9108149993913"
+    },
+    {
+      "bytes": 11310,
+      "path": "quality/index.json",
+      "sha256": "f25f10c25597c46ddd45248d654a51afc34478e7af4bb69f00f00cb2ea68c49f"
+    },
+    {
+      "bytes": 6326,
+      "path": "quality/mobilenet_v3_large/absolute_full_split_bootstrap_values.npz",
+      "sha256": "9d361b241075b21248b53b197c6b2e71a48a1deed37990747d33365c3b9fea1f"
+    },
+    {
+      "bytes": 181383,
+      "path": "quality/mobilenet_v3_large/frozen_plan.json",
+      "sha256": "4c73db5dd2340ca8fd949679bc3a08a578f73994b3e76e8cc661d0453c74a1fb"
+    },
+    {
+      "bytes": 1835,
+      "path": "quality/mobilenet_v3_large/result.json",
+      "sha256": "1d79ae568ce87acf0b52ac25257244e4119196975498ff9b83666e73f58b9c34"
+    },
+    {
+      "bytes": 6507,
+      "path": "quality/regnet_x_1_6gf/absolute_full_split_bootstrap_values.npz",
+      "sha256": "26a3537eaa73702b9ff7acf480c24fda7d67c0f8497b89accd280f5389252b6b"
+    },
+    {
+      "bytes": 181364,
+      "path": "quality/regnet_x_1_6gf/frozen_plan.json",
+      "sha256": "e1e70fe9a53c23ddc695afbd624ce6a3f6ec79c441bc9d0cbabf0d8e9fba876f"
+    },
+    {
+      "bytes": 1809,
+      "path": "quality/regnet_x_1_6gf/result.json",
+      "sha256": "ba326d4dd25bbad8b43fc4e0ec74b654708192dec3a22373c9affd144e18eb99"
+    },
+    {
+      "bytes": 6420,
+      "path": "quality/resnet50/absolute_full_split_bootstrap_values.npz",
+      "sha256": "82a1c607bccd728fa60227a96fe11366b3ed8aec0f27ff68b457abb46ed6269f"
+    },
+    {
+      "bytes": 181334,
+      "path": "quality/resnet50/frozen_plan.json",
+      "sha256": "4852a27c190b4880fe54dc9de657e0ad490b8cfbd062556c9c69d346af5b8c6d"
+    },
+    {
+      "bytes": 1776,
+      "path": "quality/resnet50/result.json",
+      "sha256": "f844b2a25419bb5fa6b1ed9354f3a0192b0f1bb5c06837a44fa9e53919f30eba"
+    },
+    {
+      "bytes": 65980,
+      "path": "quality/yolo11l/absolute_full_split_bootstrap_values.npz",
+      "sha256": "bb6cfa593a5d392720bba79434dd3a46e2e421ed0c421741d0557f6341775294"
+    },
+    {
+      "bytes": 121330,
+      "path": "quality/yolo11l/frozen_plan.json",
+      "sha256": "8b584eaa79c65f45551066ee8b9a19779316574be0025f2ce086438f5562acd3"
+    },
+    {
+      "bytes": 5492,
+      "path": "quality/yolo11l/result.json",
+      "sha256": "96020ab8f41ec8fb854088aab439a8e076646597eb32f2917b6ba6af9a21c448"
+    },
+    {
+      "bytes": 65754,
+      "path": "quality/yolo26m/absolute_full_split_bootstrap_values.npz",
+      "sha256": "46acfa750fd926c3153acc63d7db1a76fb9ae46a9de764e2c78853a5c6bb991f"
+    },
+    {
+      "bytes": 121329,
+      "path": "quality/yolo26m/frozen_plan.json",
+      "sha256": "c20e7dee51d5321620bb2a6d16888ce398d6fa33aa50ccbd5af2974edd9414ae"
+    },
+    {
+      "bytes": 5197,
+      "path": "quality/yolo26m/result.json",
+      "sha256": "0d5e56fd1d4572925731ac8830c2399acbd9caaaf5428abd4af509d33d91a615"
+    },
+    {
+      "bytes": 65732,
+      "path": "quality/yolo26s/absolute_full_split_bootstrap_values.npz",
+      "sha256": "3287cbe76f4b160de24bed78862ec9e145d33303e9c70d5cb8ade6d4ffb0095d"
+    },
+    {
+      "bytes": 121329,
+      "path": "quality/yolo26s/frozen_plan.json",
+      "sha256": "722195da7d1c75d9bb9a72edbca29b4606ac38ae35e9a88c4a0fa5a64bf06764"
+    },
+    {
+      "bytes": 5196,
+      "path": "quality/yolo26s/result.json",
+      "sha256": "deb0152f11f5819de8411315661f3ab57181dec8a761f5687ce30abea7c2da10"
+    },
+    {
+      "bytes": 65188,
+      "path": "quality/yolov7_paper/absolute_full_split_bootstrap_values.npz",
+      "sha256": "d74896a1cb7f008bda48a1295cf348ad681314088c0dfab55d4caa1060c9e850"
+    },
+    {
+      "bytes": 121348,
+      "path": "quality/yolov7_paper/frozen_plan.json",
+      "sha256": "5866e0baa52757f220369547d785bf9bdc51a5b0119ca953bb68ff53e022f0ef"
+    },
+    {
+      "bytes": 5240,
+      "path": "quality/yolov7_paper/result.json",
+      "sha256": "28c2cfade170b7b5ac5a0a7dfd80f9d1e4ff4367ed6ac6b57f3876bd0e37012d"
+    }
+  ],
+  "manifest_self_excluded": true,
+  "schema": "v49-confirmation-input-package-manifest-v1"
+}

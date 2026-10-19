@@ -1,0 +1,173 @@
+{
+  "schema": "v49-confirmation-metrology-inputs-v1",
+  "sources": [
+    {
+      "source_id": "candidate_firmware",
+      "scope": "candidate source only; installation and physical payload units unproven",
+      "path": "metrology/candidate_firmware.json",
+      "sha256": "32fd3965005244aacfed88283942c214235d814af784f1f90b776a5b1bb46c65",
+      "bytes": 8112,
+      "origin_sha256": "f6fe1e6a3d2735b9e77d70fd9254d4dcabfb92195e46b74bb117e00dd783bb8b",
+      "origin_archive_member": "evidence/resume_20261018/metrology/candidate_firmware_metrology_review.json",
+      "origin_bytes": 12473,
+      "transformation": "scientific fields retained; private provenance locators projected"
+    },
+    {
+      "source_id": "configuration_and_reference_gaps",
+      "scope": "saved setup/fit configuration; no physical board identity or independent reference certification",
+      "path": "metrology/configuration_and_reference_gaps.json",
+      "sha256": "bc3b168ba42a7fc6d682f9fd35be31db01cbdeae8d858630263536a70a556512",
+      "bytes": 9605,
+      "origin_sha256": "1aa937eb079f13fe3ebfc66bd9a21745a018e860a1ffc1462a3f3def7dfe7c9e",
+      "origin_archive_member": "evidence/resume_20261018/metrology/targeted_electrical_followup.json",
+      "origin_bytes": 66805,
+      "transformation": "scientific fields retained; private provenance locators projected"
+    },
+    {
+      "source_id": "calibration_records",
+      "scope": "historical fit points and own-channel idle observations; not independent held-out validation",
+      "path": "metrology/calibration_records.json",
+      "sha256": "d6e598e4bcf8f9aa48cbc269ee3cec8dbf0c21e4918a2addd8428887b0e6327d",
+      "bytes": 4005,
+      "origin_sha256": "00743ba61ee69c85fb82f354afc570bfed31394a1c46d5c6022c394e60cadd76",
+      "origin_archive_member": "evidence/electrical/calibration_records.json",
+      "origin_bytes": 4215,
+      "transformation": "scientific fields retained; private provenance locators projected"
+    },
+    {
+      "source_id": "physical_prerequisites",
+      "scope": "still missing physical reference, board/channel, timebase and filter evidence",
+      "path": "metrology/physical_prerequisites.json",
+      "sha256": "c880d977a2b6d6d13e5dd646973cbeab371cae636f9c5214e4473e24c267ec1b",
+      "bytes": 1271,
+      "origin_sha256": "a5f762cf96ef4b0b36e16287a9b1fca55d0b387b2f6a223dd816bdc6babd296d",
+      "origin_archive_member": "evidence/electrical/physical_prerequisites.json",
+      "origin_bytes": 1275,
+      "transformation": "scientific fields retained; private provenance locators projected"
+    },
+    {
+      "source_id": "uncertainty_model_historical",
+      "scope": "historical model/Jacobian/covariance interpretation only; old missing-inner-marker list intentionally not republished as current status",
+      "path": "metrology/uncertainty_model_historical.json",
+      "sha256": "a537faed67a6ea5680e2d2cad74cc43236530181f9d9a3eb6604db2fc701bb67",
+      "bytes": 1638,
+      "origin_sha256": "afb0026f3471714019af2a6d8d95dcec7ee78c4306455ecb68b78ecb732214b5",
+      "origin_archive_member": "evidence/electrical/uncertainty_model.json",
+      "origin_bytes": 2097,
+      "transformation": "scientific fields retained; private provenance locators projected"
+    },
+    {
+      "source_id": "primary_reference_documents",
+      "scope": "manufacturer specifications do not identify the three installed measurement paths",
+      "path": "metrology/primary_reference_documents.json",
+      "sha256": "f5129896188a36ebc75d0590732b8f9dd90d2636d28576bcbab73526a046f583",
+      "bytes": 945,
+      "origin_sha256": "f5129896188a36ebc75d0590732b8f9dd90d2636d28576bcbab73526a046f583",
+      "origin_archive_member": "evidence/electrical/primary_source_records.json",
+      "origin_bytes": 945,
+      "transformation": "scientific fields retained; private provenance locators projected"
+    },
+    {
+      "source_id": "primary_nominal_current_ranges",
+      "scope": "final primary S04 nominal ranges: 70 full captures, 68 admitted target intervals and boundary hulls; not calibration evidence",
+      "path": "metrology/primary_nominal_current_ranges.json",
+      "sha256": "8e3c655283e1ff0346877c3adcb02c91b971389d44be154d347b47276c01d639",
+      "bytes": 4941,
+      "origin_sha256": "1b025ede96bf6a7e713392dd8f2dda6e8b7c30cd7e8c905660d6a8a1c55f4f78",
+      "origin_archive_member": "evidence/resume_20261018/metrology/postcampaign_ranges_20261019T060248092718Z/ranges.json",
+      "origin_bytes": 306604,
+      "transformation": "scientific fields retained; private provenance locators projected"
+    },
+    {
+      "source_id": "supplement_nominal_current_ranges",
+      "scope": "two separate completed supplements only; exact partial-cell nominal reintegration, not physical qualification",
+      "path": "metrology/supplement_nominal_current_ranges.json",
+      "sha256": "5938c8e9ce76bf8920243ccb7311f73dcda68408ae0bb27aba04d74c74d8acd5",
+      "bytes": 7315,
+      "origin_sha256": "7eedec5304018b76f35d914e9881c35746c4b266a6298694345d044a0e03d148",
+      "origin_archive_member": "evidence/energy_supplement_20261019/electrical/post_supplement_ranges_20261019T081337605542Z/ranges_and_energy.json",
+      "origin_bytes": 13398,
+      "transformation": "scientific fields retained; private provenance locators projected"
+    },
+    {
+      "source_id": "historical_b500_provenance",
+      "scope": "nine historical stored_bounds; no verified original three replicates or exact invocation/seed",
+      "path": "metrology/historical_b500_provenance.json",
+      "sha256": "3521325e67578dd5722afd080d036f721ea6dc9a682614c2835f22bd342e1b15",
+      "bytes": 9028,
+      "origin_sha256": "5038a14a4450c47ba84f03bdc351964b171088399b1c5d510781e61389a7623b",
+      "origin_archive_member": "evidence/history_b500_audit.json",
+      "origin_bytes": 832962,
+      "transformation": "scientific fields retained; private provenance locators projected"
+    },
+    {
+      "source_id": "version_and_precision_bindings",
+      "scope": "historical version nulls retained; current NPU/compiler observations are separate and do not establish measurement-board firmware",
+      "path": "metrology/version_and_precision_bindings.json",
+      "sha256": "d2337581b6b66f68900d4b1d7d2724efa3e9581c787cee557743f3fb0a05a7b3",
+      "bytes": 82195,
+      "origin_sha256": "96af4b40f011957d849fb22d3d6031ffbf8a0df186904238af9f112b50d231d0",
+      "origin_archive_member": "evidence/identity_versions_precision.json",
+      "origin_bytes": 180575,
+      "transformation": "scientific fields retained; private provenance locators projected"
+    }
+  ],
+  "models": [
+    {
+      "setup_id": "orin_nx_deepx_m1_01",
+      "path": "metrology/models/orin_nx_deepx_m1_01.json",
+      "sha256": "c1b3c5301aa2ca8698044b861f9b575e8ae17057e41d875423ea5f489b0b859f",
+      "bytes": 1120,
+      "origin_sha256": "ba079a02a464b6965fc6f2addc4f506a4546824e6071790744cd034e8b71fbe6",
+      "origin_archive_member": "evidence/electrical/new_acquisition_models/orin_nx_deepx_m1_01.json",
+      "origin_bytes": 1245,
+      "transformation": "scientific fields retained; private provenance locators projected"
+    },
+    {
+      "setup_id": "orin_nx_hailo10_01",
+      "path": "metrology/models/orin_nx_hailo10_01.json",
+      "sha256": "9126709109f7035a66383394e8d4fd2d02ff6b0cc9d728def3a3393f35f66f68",
+      "bytes": 1117,
+      "origin_sha256": "52a6ebe093b7134c640ae03fd24d6a74dc9fe970ed7ea759246e878cd223f558",
+      "origin_archive_member": "evidence/electrical/new_acquisition_models/orin_nx_hailo10_01.json",
+      "origin_bytes": 1241,
+      "transformation": "scientific fields retained; private provenance locators projected"
+    },
+    {
+      "setup_id": "orin_nx_hailo8_01",
+      "path": "metrology/models/orin_nx_hailo8_01.json",
+      "sha256": "c525d3ef3f5ce81e4627158731068492e5ab7a5c01188c3dec4364fdbd19d38e",
+      "bytes": 1114,
+      "origin_sha256": "e8a300f76126a031b69ace4d315ff2a00fe67f9026f318c3140addccfce3d314",
+      "origin_archive_member": "evidence/electrical/new_acquisition_models/orin_nx_hailo8_01.json",
+      "origin_bytes": 1237,
+      "transformation": "scientific fields retained; private provenance locators projected"
+    }
+  ],
+  "provenance_paths_are_dependencies": false,
+  "origin_archive_member_base": "preserved campaign root inside the external delivery archive",
+  "current_status": {
+    "fully_physically_qualified_energy_intervals": 0,
+    "combined_physical_energy_uncertainty": null,
+    "installed_measurement_firmware_identity_bound": false,
+    "nominal_mA_interpretation_physically_confirmed": false,
+    "unit_error_established_from_candidate": false,
+    "new_independent_calibration": false,
+    "ADC_clipping_proven": false,
+    "ADC_clipping_excluded": false,
+    "scope": "70 primary A, 68 primary conditional B plus two separate conditional B; no physical C qualification",
+    "payload": "Candidate forwards masked 12-bit SPI values without conversion; its installation is unproven. Neither a unit error nor the nominal mA convention is established.",
+    "power_boundary": "Upstream nominal 19-V full-system input and downstream 5-V module rail are different boundaries.",
+    "filter": "INA225 component bandwidth at gain 25 is 250 kHz; no retained complete-path evidence establishes the 77-kHz claim.",
+    "historical_b500": "Generic percentile functions were found; nine rows retain stored_bounds because original replicates and exact invocation/seed are unbound.",
+    "historical_versions": "Current package/NPU firmware observations are not retroactively assigned; measurement-source firmware is a separate identity."
+  },
+  "minimum_remaining_evidence": [
+    "Bind the actual measurement-board firmware/build and ADC register/payload configuration to board serial/revision, schematic/BOM and the requested input channel.",
+    "Record populated shunt value/tolerance/temperature coefficient, amplifier gain, ADC Vref/full-scale, saturation treatment and upstream supply/consumer wiring.",
+    "Obtain independent simultaneous DC voltage/current idle and representative high-load references before/after thermal exposure, with instrument serial/ranges/certificate/uncertainty, covering the used current range.",
+    "Supply the actual filter topology/components or complete-path transfer function, and characterize actual ADC sampling period/drift.",
+    "Retain offset, nonlinearity, session drift and channel covariance; unknown systematic uncertainty is not zero and is not divided by sample count.",
+    "Any later conversion correction requires a new versioned analysis of unchanged archived raw samples."
+  ]
+}

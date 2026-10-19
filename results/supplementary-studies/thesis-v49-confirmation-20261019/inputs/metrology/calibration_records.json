@@ -1,0 +1,113 @@
+[
+  {
+    "setup_id": "orin_nx_deepx_m1_01",
+    "path": "external-sha256:9494eea7de1d18167f73854e276bf6f9bba0066c51ff2c81c49737486235cfd1",
+    "sha256": "9494eea7de1d18167f73854e276bf6f9bba0066c51ff2c81c49737486235cfd1",
+    "started_at": "2026-09-04T19:53:09.060896+00:00",
+    "finished_at": "2026-09-04T19:59:27.536313+00:00",
+    "channel": 0,
+    "sample_rate_hz": 2000,
+    "load_connection": "9V_20V_IN_after_R16_to_GND",
+    "measure_s": 30.0,
+    "scale_factor": 0.9035075097142278,
+    "reference_current_a": [
+      0.508,
+      1.009
+    ],
+    "reference_voltage_v": [
+      18.27,
+      18.14
+    ],
+    "point_factors": [
+      0.9083989359824973,
+      0.9022667154640309
+    ],
+    "point_spread_pct": 0.6773443251179382,
+    "max_fit_residual_pct": 0.5384667544749122,
+    "idle_before_w": 4.480561061995618,
+    "idle_after_w": 4.485460138226497,
+    "idle_drift_w": 0.004899076230878485,
+    "software_gate_pass": true,
+    "warnings": [],
+    "independent_absolute_idle_reference": false,
+    "independent_post_fit_validation": false,
+    "reference_instrument_id": null,
+    "reference_uncertainty": null,
+    "interpretation": "Two fit points and three own-channel idle baselines. Fit residual/spread is not an independent validation or a reference uncertainty."
+  },
+  {
+    "setup_id": "orin_nx_hailo10_01",
+    "path": "external-sha256:b3fe9eb8c7ac6e7ffc78edabf834910b699bed0f766d9d7b2eddddde9ce8e946",
+    "sha256": "b3fe9eb8c7ac6e7ffc78edabf834910b699bed0f766d9d7b2eddddde9ce8e946",
+    "started_at": "2026-09-04T20:09:10.626761+00:00",
+    "finished_at": "2026-09-04T20:15:15.094688+00:00",
+    "channel": 0,
+    "sample_rate_hz": 2000,
+    "load_connection": "9V_20V_IN_after_R16_to_GND",
+    "measure_s": 30.0,
+    "scale_factor": 0.8963972779781232,
+    "reference_current_a": [
+      0.509,
+      1.01
+    ],
+    "reference_voltage_v": [
+      18.55,
+      18.29
+    ],
+    "point_factors": [
+      0.9110049552175209,
+      0.8927326009198592
+    ],
+    "point_spread_pct": 2.0260546480820762,
+    "max_fit_residual_pct": 1.6034684724530235,
+    "idle_before_w": 4.044788099691444,
+    "idle_after_w": 4.049844660786823,
+    "idle_drift_w": 0.005056561095378775,
+    "software_gate_pass": true,
+    "warnings": [
+      "The two point factors differ by 2.026% (limit 2.000%).",
+      "The fitted factor 0.896397 is outside 0.900000..1.100000."
+    ],
+    "independent_absolute_idle_reference": false,
+    "independent_post_fit_validation": false,
+    "reference_instrument_id": null,
+    "reference_uncertainty": null,
+    "interpretation": "Two fit points and three own-channel idle baselines. Fit residual/spread is not an independent validation or a reference uncertainty."
+  },
+  {
+    "setup_id": "orin_nx_hailo8_01",
+    "path": "external-sha256:90a559f5467c0fef13409d472f14b797f4cf44b1038f0e491f62c5436ea2b5f6",
+    "sha256": "90a559f5467c0fef13409d472f14b797f4cf44b1038f0e491f62c5436ea2b5f6",
+    "started_at": "2026-09-04T19:59:50.777893+00:00",
+    "finished_at": "2026-09-04T20:08:48.231301+00:00",
+    "channel": 0,
+    "sample_rate_hz": 2000,
+    "load_connection": "9V_20V_IN_after_R16_to_GND",
+    "measure_s": 30.0,
+    "scale_factor": 0.9136343897390969,
+    "reference_current_a": [
+      0.509,
+      1.01
+    ],
+    "reference_voltage_v": [
+      18.67,
+      18.37
+    ],
+    "point_factors": [
+      0.9271069182062317,
+      0.9102275433456429
+    ],
+    "point_spread_pct": 1.837376396492545,
+    "max_fit_residual_pct": 1.4531795850689386,
+    "idle_before_w": 4.235005124494594,
+    "idle_after_w": 4.237667102524505,
+    "idle_drift_w": 0.002661978029911083,
+    "software_gate_pass": true,
+    "warnings": [],
+    "independent_absolute_idle_reference": false,
+    "independent_post_fit_validation": false,
+    "reference_instrument_id": null,
+    "reference_uncertainty": null,
+    "interpretation": "Two fit points and three own-channel idle baselines. Fit residual/spread is not an independent validation or a reference uncertainty."
+  }
+]

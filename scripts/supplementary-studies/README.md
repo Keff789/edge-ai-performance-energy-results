@@ -1,5 +1,7 @@
 # Supplementary analysis scripts
 
+The [v49 confirmation evaluator](thesis-v49-confirmation-20261019/README.md) reproduces the separately dated R3 throughput, conditional-energy and paired-quality tables from compact inputs. It preserves seventy primary throughput rows, sixty-eight primary energy records and two distinct energy supplements; full raw-archive checks and physical measurement-chain qualification remain separate.
+
 The [historical split-selection package](../../results/supplementary-studies/thesis20-ranking-20261005/README.md) includes its existing offline score, ranking and plotting scripts with all compact inputs. From the repository root:
 
 ```bash

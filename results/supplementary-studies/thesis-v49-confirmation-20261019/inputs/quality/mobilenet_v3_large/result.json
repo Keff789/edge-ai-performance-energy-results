@@ -1,0 +1,42 @@
+{
+  "model": "mobilenet_v3_large",
+  "split_uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135",
+  "full_uid": "native|mobilenet_v3_large|DeepX|native_full_deepx|full",
+  "status": "bestätigt",
+  "scope": "new offline numerical analysis on already selected historical winner pair; conditional on selection, no simultaneous coverage correction",
+  "n_images": 5000,
+  "B": 1000,
+  "seed": 12864988057532855294,
+  "components": {
+    "top1_accuracy": {
+      "full": 0.7172,
+      "split": 0.7202,
+      "delta_split_minus_full": 0.0030000000000000027,
+      "percentile_95_low": -0.00039999999999995595,
+      "percentile_95_high": 0.006199999999999983,
+      "delta_percentage_points": 0.30000000000000027,
+      "low_percentage_points": -0.039999999999995595,
+      "high_percentage_points": 0.6199999999999983
+    }
+  },
+  "inputs": [
+    {
+      "uid": "native|mobilenet_v3_large|DeepX|native_full_deepx|full",
+      "path": "external-sha256:3a568460409e14939dbccfedf28a836b85d5a2c205045857cad8b6be1f603be1",
+      "sha256": "3a568460409e14939dbccfedf28a836b85d5a2c205045857cad8b6be1f603be1"
+    },
+    {
+      "uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135",
+      "path": "external-sha256:1d6913772b0e814a52f0ae38498e93e4b84ef997f0e13a4672a961df06ca723a",
+      "sha256": "1d6913772b0e814a52f0ae38498e93e4b84ef997f0e13a4672a961df06ca723a"
+    }
+  ],
+  "exact_image_ids_paired": true,
+  "ground_truth_equal": true,
+  "historical_point_max_abs_difference": 0.0,
+  "elapsed_s": 0.02214676095172763,
+  "plan_path": "archive:evidence/history_quality/mobilenet_v3_large/frozen_plan.json",
+  "plan_sha256": "0ad5c06195c210e3b5d7b6236fa9720d611e03c29cc813f2f66d832cf52e8596",
+  "bootstrap_values_sha256": "9d361b241075b21248b53b197c6b2e71a48a1deed37990747d33365c3b9fea1f",
+  "cpu_relative_intervals_subtracted": false
+}
