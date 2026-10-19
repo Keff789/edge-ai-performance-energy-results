@@ -1,0 +1,75 @@
+{
+  "schema": "thesis-v49-documentation-followup-reference-v1",
+  "documentation_date": "2026-10-19",
+  "scope": "Dated operator confirmations and numerical source provenance; no new measurements, fits or coefficient changes.",
+  "base_origin_main_commit": "16e6e88012b6ba9a0953f62cc448dcf4585a81f3",
+  "preceding_pull_request": "https://github.com/Keff789/edge-ai-performance-energy-results/pull/2",
+  "preceding_pull_request_state": "merged",
+  "operator_confirmation": {
+    "path": "inputs/metrology/operator_confirmation_20261019.json",
+    "sha256": "1050fb00df5b1fa77db7f0731726d1b7a6d5de35688f39f1fae5af4ae3f0ed2d",
+    "bytes": 2555
+  },
+  "voltage_model_origin": {
+    "path": "inputs/metrology/voltage_model_origin.json",
+    "sha256": "12b84e0c1e3a6d95b4be696cef7875ac8905cb04e2c198ecd7b7cca6c4b969c4",
+    "bytes": 5381
+  },
+  "previous_CH0_addendum_reference": "METROLOGY_ADDENDUM_REFERENCE.json",
+  "previous_public_alignment": {
+    "commit": "16e6e88012b6ba9a0953f62cc448dcf4585a81f3",
+    "repository_path": "results/supplementary-studies/thesis-v49-confirmation-20261019/inputs/metrology/ch0_joris_alignment.json",
+    "sha256": "3c1c57a2699cb2223b41ff835cb8ef7a25cf765249c9b896671d94501c87bbf2",
+    "bytes": 59228
+  },
+  "source_review_preservation": {
+    "status": "previously_verified_SHA256_readback",
+    "sprite_relative_directory": "diss_results/_supplements/thesis_v49_confirmation_energy_supplement_20261019/addenda/ch0_joris_evidence_alignment_20261019_869519b5ff9bbad275c09c951940e789159baede/closeout_followup_revision2_ec662b090186",
+    "manifest": {
+      "path": "manifest.json",
+      "sha256": "8b857c914a8541c8c3d916178dda2772a23c67148768de6f191abcd2cd2dad3d"
+    },
+    "completion": {
+      "path": "COMPLETE.json",
+      "sha256": "5d139abd41059c16a7499224f3469c5bde348879e60e278d992cc2bed6d15d9e"
+    },
+    "voltage_review_member": "evidence/voltage_origin_independent.json",
+    "remaining_actions_review_member": "evidence/remaining_evidence_actions.json",
+    "closeout_revision2_member": "task_closeout.json",
+    "workbook_member": "source_calibration/jetson_calibration.ods",
+    "relationship": "This separate later preservation directory is not a member of the original CH0 addendum archive."
+  },
+  "publication_preservation": {
+    "sprite_relative_directory": "diss_results/_supplements/thesis_v49_confirmation_energy_supplement_20261019/addenda/operator_voltage_documentation_20261019_16e6e88012b6",
+    "receipt": "COMPLETE.json",
+    "manifest": "manifest.json",
+    "scope": "The exact follow-up commit and PR, updated private closeout, Git bundle, publication delta and SHA256 readback receipts are preserved together at this separate append-only location. Receipt files bind the final commit without a self-referential hash in this document."
+  },
+  "historical_snapshots": "Earlier literature, campaign inputs, archives and receipts retain their historical meaning. The new operator confirmation resolves the actual ADC part; it does not rewrite the ADS7952 literature statement.",
+  "full_third_party_PDF_published": false,
+  "numerical_results_changed": false,
+  "coefficients_changed": false,
+  "fully_physically_qualified_C": 0,
+  "combined_physical_uncertainty": null,
+  "further_general_campaign_triggered": false,
+  "targeted_reproduction": {
+    "status": "pass",
+    "reproduction_executions": 1,
+    "base_commit": "16e6e88012b6ba9a0953f62cc448dcf4585a81f3",
+    "generated_outputs": 38,
+    "scientific_and_accounting_outputs_byte_unchanged": 33,
+    "calibration_conversion_path_outputs_byte_unchanged": true,
+    "changed_documentation_outputs": [
+      "metrology_claims.csv",
+      "metrology_claims.json",
+      "reproduction_manifest.json"
+    ],
+    "generator_and_calculation_sources_changed": false,
+    "private_receipt": {
+      "filename": "reproduction_verification.json",
+      "sha256": "1c14260357fa809058ade780bcad854bd7493ff0e7d1a9d18d6bc4ca8364cd34",
+      "bytes": 14263
+    },
+    "hardware_runs_flash_calibration_or_refit": false
+  }
+}

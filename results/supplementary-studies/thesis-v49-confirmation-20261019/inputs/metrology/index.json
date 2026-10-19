@@ -133,17 +133,47 @@
     },
     {
       "source_id": "ch0_joris_alignment",
-      "scope": "current follow-up; supersedes overbroad missing-design/channel/calibration statements",
+      "scope": "Current CH0 alignment including separate operator-confirmed ADC type/firmware continuity and traced voltage coefficient origin; combined configuration/uncertainty claims remain partial or open.",
       "snapshot_role": "current_follow_up_evidence",
       "path": "metrology/ch0_joris_alignment.json",
-      "sha256": "3c1c57a2699cb2223b41ff835cb8ef7a25cf765249c9b896671d94501c87bbf2",
-      "bytes": 59228,
-      "origin_addendum_member": "evidence/electrical/ch0_joris_evidence_alignment_20261019.json",
-      "origin_sha256": "db61fe26c17e5ca0279f2e312c9a8948e52e3640963af5f6a0e4773e60ce3019",
-      "origin_bytes": 60245,
-      "origin_reference": "../../METROLOGY_ADDENDUM_REFERENCE.json",
-      "origin_scope": "new CH0/Joris follow-up; not a member of the original edbd618a archive",
-      "transformation": "scientific fields retained; private provenance locators projected"
+      "sha256": "d2a9c1e79580f9cd7c3aeffda76bb7f2b27bb7c1330de70d8e90124d307abd68",
+      "bytes": 79807,
+      "origin_reference": "../../DOCUMENTATION_FOLLOWUP_REFERENCE.json",
+      "origin_scope": "Public documentation revision of the preceding projected CH0 alignment with separately hash-bound operator confirmation and voltage-model source evidence.",
+      "transformation": "Current claim/status interpretation updated; prior numeric model parameters and historical source records retained.",
+      "previous_public_snapshot": {
+        "commit": "16e6e88012b6ba9a0953f62cc448dcf4585a81f3",
+        "path": "metrology/ch0_joris_alignment.json",
+        "sha256": "3c1c57a2699cb2223b41ff835cb8ef7a25cf765249c9b896671d94501c87bbf2",
+        "bytes": 59228,
+        "historical_campaign_source": {
+          "origin_addendum_member": "evidence/electrical/ch0_joris_evidence_alignment_20261019.json",
+          "origin_sha256": "db61fe26c17e5ca0279f2e312c9a8948e52e3640963af5f6a0e4773e60ce3019",
+          "origin_bytes": 60245,
+          "origin_reference": "../../METROLOGY_ADDENDUM_REFERENCE.json",
+          "origin_scope": "new CH0/Joris follow-up; not a member of the original edbd618a archive"
+        }
+      }
+    },
+    {
+      "source_id": "operator_confirmation_20261019",
+      "scope": "Dated explicit operator confirmation of CH0, populated ADS7953 and unchanged firmware between the relevant measurements; exact build identity and active ADC configuration are separate.",
+      "snapshot_role": "current_documentation_follow_up_evidence",
+      "path": "metrology/operator_confirmation_20261019.json",
+      "sha256": "1050fb00df5b1fa77db7f0731726d1b7a6d5de35688f39f1fae5af4ae3f0ed2d",
+      "bytes": 2555,
+      "origin_reference": "../../DOCUMENTATION_FOLLOWUP_REFERENCE.json",
+      "origin_scope": "New public documentation source; not part of the original campaign or CH0 addendum archive."
+    },
+    {
+      "source_id": "voltage_model_origin",
+      "scope": "Numerical origin of the unchanged voltage coefficients in jetson_calibration.ods, Voltage B39 and the nominal index-to-ampere mapping; no new physical transfer qualification.",
+      "snapshot_role": "current_documentation_follow_up_evidence",
+      "path": "metrology/voltage_model_origin.json",
+      "sha256": "12b84e0c1e3a6d95b4be696cef7875ac8905cb04e2c198ecd7b7cca6c4b969c4",
+      "bytes": 5381,
+      "origin_reference": "../../DOCUMENTATION_FOLLOWUP_REFERENCE.json",
+      "origin_scope": "New public documentation source; not part of the original campaign or CH0 addendum archive."
     }
   ],
   "models": [
@@ -189,11 +219,11 @@
     "ADC_clipping_proven": false,
     "ADC_clipping_excluded": false,
     "scope": "70 primary A, 68 primary conditional B plus two separate conditional B; no physical C qualification",
-    "payload": "The documented 2.048-V/12-bit/20-mOhm/gain-25 design gives 1 mA per count. Raw ADC-code transmission is consistent with the nominal mA convention; it does not demonstrate a unit error. Installed component/range and calibration applicability remain separate bindings.",
+    "payload": "The documented 2.048-V/12-bit/20-mOhm/gain-25 design gives 1 mA per count. Raw ADC-code transmission is consistent with the nominal mA convention. Actual ADS7953 population is operator-confirmed; active range/reference/register configuration and calibration applicability remain separate bindings.",
     "power_boundary": "The master thesis studies the Jetson-slot path. Its supply voltage is not assumed to be 5 V. Later CH0 full-system-input calibration and U(I) applicability must follow their own profiles and wiring evidence.",
     "filter": "Approximately 77 kHz is a documented differential-RC design value before INA225, not its general component bandwidth or a newly measured complete-path transfer function.",
     "historical_b500": "Generic percentile functions were found; nine rows retain stored_bounds because original replicates and exact invocation/seed are unbound.",
-    "historical_versions": "Current package/NPU firmware observations are not retroactively assigned; measurement-source firmware is a separate identity.",
+    "historical_versions": "Firmware continuity between the relevant measurements is operator-confirmed. The exact historical installed measurement-firmware build remains unbound; current package/NPU firmware observations are not retroactively assigned.",
     "operating_channel": 0,
     "CH0_user_confirmed": true,
     "current_CH0_capture_records_checked": 72,
@@ -203,31 +233,54 @@
     "historical_separate_verification_documented": true,
     "differential_RC_77kHz_design_documented": true,
     "exact_RC_values_and_populated_board_binding_established": false,
-    "ADC7953_vs_ADC7952_type_inconsistency_resolved": false,
+    "ADC7953_vs_ADC7952_type_inconsistency_resolved": true,
     "per_path_calibration_chain_reference": "metrology/ch0_joris_alignment.json",
     "full_system_scale_factor_application": "The setup-specific full-system factor s multiplies the completed power model. Historical Joris/Jetson power correction c remains a separate factor; neither denotes an additional ADC/current calibration. See each bound conversion path.",
     "historical_calibration": "36 load points across 0..3.5 A and a separate verification are documented for the original work. This does not retroactively provide a before/after drift or validation record for each October setup.",
-    "U_I_mapping": "The later setup-specific full-system input models and original Jetson-slot U(I) boundary are distinct; exact board/supply/wiring applicability remains partial."
+    "U_I_mapping": "The numerical origin is traced to jetson_calibration.ods, Voltage B39 and the nominal index mapping of 0.1 A per step. The later full-system input models and original Jetson-slot boundary remain distinct; physical supply/wiring/consumer applicability is not established by coefficient provenance.",
+    "ADC_type_resolution_scope": "The actual populated part is operator-confirmed ADS7953; the ADS7952 wording on thesis printed page 48 remains a deviating historical literature statement.",
+    "installed_ADC_part": "ADS7953",
+    "ADC_population_operator_confirmed": true,
+    "firmware_unchanged_between_relevant_measurements_operator_confirmed": true,
+    "operator_confirmation_date": "2026-10-19",
+    "operator_confirmation_reference": "metrology/operator_confirmation_20261019.json",
+    "historical_literature_ADC_discrepancy_retained": true,
+    "active_ADC_range_bound": false,
+    "voltage_coefficient_numerical_origin_traced": true,
+    "voltage_coefficient_origin_reference": "metrology/voltage_model_origin.json",
+    "physical_voltage_model_transfer_established": false,
+    "documentation_task_scope": "Complete after publication preparation and verified preservation; open physical uncertainty does not trigger a further campaign."
   },
   "minimum_remaining_evidence": [
-    "Resolve ADS7953 versus ADS7952 using an existing unambiguous schematic/BOM or population record; retain the documented nominal design meanwhile.",
-    "Bind the populated board/revision, active ADC range/reference, actual firmware build and exact CH0 circuit without treating channel confirmation as missing.",
-    "Document the exact differential R/C topology and values and complete-path/timebase/alias limits; the 77-kHz design origin is already documented.",
-    "Bind each existing current/voltage model and full-system factor to its supply, wiring, consumers and operating range; do not transfer the original slot U(I) model blindly.",
-    "Retain the original separate verification while distinguishing missing October before/after drift, reference-instrument uncertainty and combined E/N uncertainty.",
-    "Any future proven conversion correction requires a new versioned analysis of unchanged raw data; this documentation alignment changes no conversion factors."
+    "Exact historical installed firmware build identity remains separate from the confirmed firmware continuity; neither a build hash nor active ADC range is inferred from the operator statement.",
+    "Detailed board/revision, active ADC range/reference/register configuration and CH0 circuit assignments remain incomplete. Actual ADS7953 population and CH0 are confirmed and need no further confirmation, photographs or measurements.",
+    "Actual differential R/C topology and values, complete-path dynamics, timebase and alias contributions remain unbound; the 77-kHz design origin is documented.",
+    "Physical applicability of current/voltage models and full-system factors to each supply, wiring, consumers and operating range remains separate. The existing U(I) coefficient origin is traced; exact historical c derivation and physical transfer are not established.",
+    "Original separate verification remains acknowledged. October before/after drift, reference-instrument uncertainty and the combined E/N uncertainty remain incomplete.",
+    "These are documented limits, not outstanding execution steps for this documentation-only task. No new measurement, flash operation, calibration or general verification campaign is triggered."
   ],
   "ch0_joris_alignment": {
     "path": "metrology/ch0_joris_alignment.json",
-    "sha256": "3c1c57a2699cb2223b41ff835cb8ef7a25cf765249c9b896671d94501c87bbf2",
-    "bytes": 59228,
-    "origin_addendum_member": "evidence/electrical/ch0_joris_evidence_alignment_20261019.json",
-    "origin_sha256": "db61fe26c17e5ca0279f2e312c9a8948e52e3640963af5f6a0e4773e60ce3019",
-    "origin_bytes": 60245,
-    "origin_reference": "../../METROLOGY_ADDENDUM_REFERENCE.json",
-    "origin_scope": "new CH0/Joris follow-up; not a member of the original edbd618a archive",
-    "transformation": "scientific fields retained; private provenance locators projected"
+    "sha256": "d2a9c1e79580f9cd7c3aeffda76bb7f2b27bb7c1330de70d8e90124d307abd68",
+    "bytes": 79807,
+    "origin_reference": "../../DOCUMENTATION_FOLLOWUP_REFERENCE.json",
+    "origin_scope": "Public documentation revision of the preceding projected CH0 alignment with separately hash-bound operator confirmation and voltage-model source evidence.",
+    "transformation": "Current claim/status interpretation updated; prior numeric model parameters and historical source records retained.",
+    "previous_public_snapshot": {
+      "commit": "16e6e88012b6ba9a0953f62cc448dcf4585a81f3",
+      "path": "metrology/ch0_joris_alignment.json",
+      "sha256": "3c1c57a2699cb2223b41ff835cb8ef7a25cf765249c9b896671d94501c87bbf2",
+      "bytes": 59228,
+      "historical_campaign_source": {
+        "origin_addendum_member": "evidence/electrical/ch0_joris_evidence_alignment_20261019.json",
+        "origin_sha256": "db61fe26c17e5ca0279f2e312c9a8948e52e3640963af5f6a0e4773e60ce3019",
+        "origin_bytes": 60245,
+        "origin_reference": "../../METROLOGY_ADDENDUM_REFERENCE.json",
+        "origin_scope": "new CH0/Joris follow-up; not a member of the original edbd618a archive"
+      }
+    }
   },
   "metrology_addendum_reference": "../../METROLOGY_ADDENDUM_REFERENCE.json",
-  "follow_up_locator_scope": "campaign-member: labels in the new capsule identify relative campaign paths; they do not assert membership of the original archive. Use the separate addendum reference."
+  "follow_up_locator_scope": "campaign-member: labels in the new capsule identify relative campaign paths; they do not assert membership of the original archive. Use the separate addendum reference.",
+  "documentation_followup_reference": "../../DOCUMENTATION_FOLLOWUP_REFERENCE.json"
 }

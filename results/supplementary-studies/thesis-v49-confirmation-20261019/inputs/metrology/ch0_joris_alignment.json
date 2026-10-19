@@ -1,6 +1,6 @@
 {
   "created_utc": "2026-10-19T16:08:16.162275+00:00",
-  "analysis_revision": "ch0-joris-evidence-alignment-20261019-v2",
+  "analysis_revision": "ch0-joris-evidence-alignment-20261019-v3-operator-and-voltage-origin",
   "source_task": {
     "path": "external-sha256:06a02eab8a1cd3d34e42f818db05ae3b926baf6ad3ac3d6ab486af085acf7ebc",
     "sha256": "06a02eab8a1cd3d34e42f818db05ae3b926baf6ad3ac3d6ab486af085acf7ebc",
@@ -27,49 +27,71 @@
       "path": "evidence/electrical/ch0_joris_20261019/literature.json",
       "sha256": "e3bf50fe6414accca6f9b7737a59e5a474efb796301595457286f9b0dec01228",
       "bytes": 41221,
-      "role": "literature"
+      "role": "literature",
+      "interpretation_scope": "Retained source evidence from the historical predecessor revision; current composite-claim status is defined by this revision."
     },
     {
       "path": "evidence/electrical/ch0_joris_20261019/identity.json",
       "sha256": "6a8406c57a50fbf5df0c600867d320803f692f78d56390b233b4c86f29c8ffb5",
       "bytes": 32565,
-      "role": "identity"
+      "role": "identity",
+      "interpretation_scope": "Retained source evidence from the historical predecessor revision; current composite-claim status is defined by this revision."
     },
     {
       "path": "evidence/electrical/ch0_joris_20261019/calibration.json",
       "sha256": "395515f6ccb3ae4850fb263dd6c3626f2b769fbeb2aebd0bb84cf205f716de6a",
       "bytes": 88354,
-      "role": "calibration"
+      "role": "calibration",
+      "interpretation_scope": "Retained source evidence from the historical predecessor revision; current composite-claim status is defined by this revision."
     },
     {
       "path": "evidence/electrical/ch0_joris_20261019/calibration_source_manifest.json",
       "sha256": "041583371bce3fb99299a51dc00589987a0deeae32b694ccd3fc03ecf853bebd",
       "bytes": 32225,
-      "role": "calibration_source_manifest"
+      "role": "calibration_source_manifest",
+      "interpretation_scope": "Retained source evidence from the historical predecessor revision; current composite-claim status is defined by this revision."
     },
     {
       "path": "evidence/electrical/ch0_joris_20261019/runtime_source_map.json",
       "sha256": "660cd8175be7b9654ca11df136b985a7bb9312d1f1079c6e13f8f222f5c29ddb",
       "bytes": 160547,
-      "role": "runtime_source_map"
+      "role": "runtime_source_map",
+      "interpretation_scope": "Retained source evidence from the historical predecessor revision; current composite-claim status is defined by this revision."
     },
     {
       "path": "evidence/electrical/ch0_joris_20261019/runtime_application.json",
       "sha256": "945dd433807e8ce96fc387d7dbd312d5acb1c49ef8dd216508db448dfb7e210e",
       "bytes": 304793,
-      "role": "runtime_application"
+      "role": "runtime_application",
+      "interpretation_scope": "Retained source evidence from the historical predecessor revision; current composite-claim status is defined by this revision."
     },
     {
       "path": "evidence/electrical/ch0_joris_20261019/runtime_checks.json",
       "sha256": "9d2b12859f32bb1a8d408e59d61328ed2ec8416f77fe1c3f4089ff5f571643af",
       "bytes": 20384,
-      "role": "runtime_checks"
+      "role": "runtime_checks",
+      "interpretation_scope": "Retained source evidence from the historical predecessor revision; current composite-claim status is defined by this revision."
     },
     {
       "path": "evidence/electrical/ch0_joris_20261019/runtime_conclusions.json",
       "sha256": "7ef800cd69ebdbda51b2e044dca32540160998fbac92c0986fe6ce6820d78ca0",
       "bytes": 3013,
-      "role": "runtime_conclusions"
+      "role": "runtime_conclusions",
+      "interpretation_scope": "Retained source evidence from the historical predecessor revision; current composite-claim status is defined by this revision."
+    },
+    {
+      "path": "metrology/operator_confirmation_20261019.json",
+      "sha256": "1050fb00df5b1fa77db7f0731726d1b7a6d5de35688f39f1fae5af4ae3f0ed2d",
+      "bytes": 2555,
+      "path_base": "study_inputs_root",
+      "role": "current_operator_confirmation"
+    },
+    {
+      "path": "metrology/voltage_model_origin.json",
+      "sha256": "12b84e0c1e3a6d95b4be696cef7875ac8905cb04e2c198ecd7b7cca6c4b969c4",
+      "bytes": 5381,
+      "path_base": "study_inputs_root",
+      "role": "current_voltage_coefficient_source_provenance"
     }
   ],
   "channel_confirmation": {
@@ -81,7 +103,14 @@
       "bytes": 14922
     },
     "current_records_checked": 72,
-    "historical_records_checked": 42
+    "historical_records_checked": 42,
+    "operator_confirmation": {
+      "path": "metrology/operator_confirmation_20261019.json",
+      "sha256": "1050fb00df5b1fa77db7f0731726d1b7a6d5de35688f39f1fae5af4ae3f0ed2d",
+      "bytes": 2555,
+      "path_base": "study_inputs_root"
+    },
+    "confirmation_date": "2026-10-19"
   },
   "nominal_scaling": {
     "A_per_count": 0.001,
@@ -93,7 +122,7 @@
       "shunt_ohm": 0.02
     },
     "derivation": "2.048 V / (4096 * 25 * 0.020 ohm) = 0.001 A/count",
-    "scope": "documented nominal design; installed configuration separate",
+    "scope": "Documented nominal design; the actual ADS7953 type is operator-confirmed separately. Active range/reference/register state is not inferred from the nominal design or firmware continuity.",
     "maximum_12bit_code": 4095,
     "nominal_max_code_A": 4.095,
     "nominal_full_scale_boundary_A": 4.096,
@@ -125,7 +154,12 @@
     "separate_original_verification_documented": true,
     "rc_filter_77kHz_design_documented": true,
     "installed_firmware_build_bound": false,
-    "combined_physical_uncertainty_available": false
+    "combined_physical_uncertainty_available": false,
+    "ADC_type_operator_confirmed": true,
+    "firmware_continuity_operator_confirmed": true,
+    "voltage_coefficient_origin_source_confirmed": true,
+    "active_ADC_range_or_register_state_inferred": false,
+    "physical_voltage_model_transfer_established": false
   },
   "per_path_calibration_chain": [
     {
@@ -619,10 +653,17 @@
         {
           "path": "evidence/electrical/ch0_joris_20261019/runtime_application.json",
           "sha256": "945dd433807e8ce96fc387d7dbd312d5acb1c49ef8dd216508db448dfb7e210e"
+        },
+        {
+          "path": "metrology/operator_confirmation_20261019.json",
+          "sha256": "1050fb00df5b1fa77db7f0731726d1b7a6d5de35688f39f1fae5af4ae3f0ed2d",
+          "bytes": 2555,
+          "path_base": "study_inputs_root"
         }
       ],
-      "campaign_application": "CH0 durch Nutzerherkunft bestätigt und in 72 aktuellen sowie 42 historischen Datensätzen ohne Konflikt abgeglichen.",
-      "remaining_gap": "Keine erneute allgemeine Kanalbestätigung erforderlich; physische Board-/Versorgungspfadzuordnung ist ein anderer Anspruch."
+      "campaign_application": "CH0 ist durch Kevins ausdrückliche Betreiberbestätigung vom 19.10.2026 belegt und in 72 aktuellen sowie 42 historischen Datensätzen ohne Konflikt abgeglichen.",
+      "remaining_gap": "Keine erneute allgemeine Kanalbestätigung erforderlich; physische Board-/Versorgungspfadzuordnung ist ein anderer Anspruch.",
+      "previous_issue_scope": "Historical predecessor finding; not a statement of the current unresolved claims."
     },
     {
       "id": "nominal_scale",
@@ -654,7 +695,8 @@
         }
       ],
       "campaign_application": "1 mA pro Count ist für das dokumentierte Design hergeleitet. Die einmalige Umrechnung mA nach A ist im tatsächlichen Rechenweg vorhanden.",
-      "remaining_gap": "Die konkrete installierte ADC-/Range-/Vref-Konfiguration wird aus der Designherleitung nicht abgeleitet."
+      "remaining_gap": "Aktiver Range-Modus, Vref und Registerzustand werden aus der Designherleitung nicht abgeleitet. Der tatsächlich bestückte ADC-Typ ist separat durch den Betreiber als ADS7953 bestätigt.",
+      "previous_issue_scope": "Historical predecessor finding; not a statement of the current unresolved claims."
     },
     {
       "id": "original_calibration_verification",
@@ -689,7 +731,8 @@
         }
       ],
       "campaign_application": "36 Lastpunkte, Endpunktfit und zweiter getrennter Verifikationsdurchlauf sind dokumentiert; diese Belege werden ausdrücklich anerkannt.",
-      "remaining_gap": "Keine Übertragung als zeitgenössischer Oktober-Vorher-/Nachher- oder Vollunsicherheitsnachweis."
+      "remaining_gap": "Keine Übertragung als zeitgenössischer Oktober-Vorher-/Nachher- oder Vollunsicherheitsnachweis.",
+      "previous_issue_scope": "Historical predecessor finding; not a statement of the current unresolved claims."
     },
     {
       "id": "applied_calibration_chain",
@@ -714,7 +757,8 @@
         }
       ],
       "campaign_application": "Drei konkrete FS-Profile und die beiden tatsächlichen Rechenwege sind einschließlich I, U, c, s, Integrationsmethode und eigenem N belegt.",
-      "remaining_gap": "Keine neue Umrechnung. H10-Warnungen bleiben erhalten; physische Übertragbarkeit bleibt ein eigener offener Punkt."
+      "remaining_gap": "Keine neue Umrechnung. H10-Warnungen bleiben erhalten; physische Übertragbarkeit bleibt ein eigener offener Punkt.",
+      "previous_issue_scope": "Historical predecessor finding; not a statement of the current unresolved claims."
     },
     {
       "id": "post_power_c",
@@ -743,10 +787,17 @@
         {
           "path": "evidence/electrical/ch0_joris_20261019/runtime_source_map.json",
           "sha256": "660cd8175be7b9654ca11df136b985a7bb9312d1f1079c6e13f8f222f5c29ddb"
+        },
+        {
+          "path": "metrology/voltage_model_origin.json",
+          "sha256": "12b84e0c1e3a6d95b4be696cef7875ac8905cb04e2c198ecd7b7cca6c4b969c4",
+          "bytes": 5381,
+          "path_base": "study_inputs_root"
         }
       ],
       "campaign_application": "Ungefähr 0,97 und die Anwendung nach der Leistungsberechnung sind dokumentiert. Der verwendete genaue c-Wert ist im gebundenen Code lokalisiert.",
-      "remaining_gap": "Exakter historischer Fit und physische Übertragung dieses Faktors auf spätere FS-Aufbauten werden aus der gerundeten Quellenangabe nicht hergeleitet."
+      "remaining_gap": "Die exakte historische Herleitung bzw. Schätzregel und die physische Übertragung dieses Faktors auf spätere FS-Aufbauten werden aus der gerundeten Quellenangabe nicht hergeleitet. Ohne entsprechenden Quellenbeleg wird kein statistischer Fit behauptet.",
+      "previous_issue_scope": "Historical predecessor finding; not a statement of the current unresolved claims."
     },
     {
       "id": "RC_design_origin",
@@ -774,11 +825,12 @@
         }
       ],
       "campaign_application": "77 kHz sind eine dokumentierte differenzielle RC-Designangabe.",
-      "remaining_gap": "Tatsächliche Bestückung und komplette Übertragungsfunktion werden separat offen geführt."
+      "remaining_gap": "Tatsächliche Bestückung und komplette Übertragungsfunktion werden separat offen geführt.",
+      "previous_issue_scope": "Historical predecessor finding; not a statement of the current unresolved claims."
     },
     {
       "id": "ADC_and_RC_population",
-      "status": "open",
+      "status": "partially_clarified",
       "previous_issue": "ADC-Typ, aktiver Range-Modus und reale Filterbestückung fehlen.",
       "new_evidence": [
         {
@@ -799,10 +851,20 @@
         {
           "path": "evidence/electrical/ch0_joris_20261019/identity.json",
           "sha256": "6a8406c57a50fbf5df0c600867d320803f692f78d56390b233b4c86f29c8ffb5"
+        },
+        {
+          "path": "metrology/operator_confirmation_20261019.json",
+          "sha256": "1050fb00df5b1fa77db7f0731726d1b7a6d5de35688f39f1fae5af4ae3f0ed2d",
+          "bytes": 2555,
+          "path_base": "study_inputs_root"
         }
       ],
-      "campaign_application": "Der konkrete ADS7953-/ADS7952-Widerspruch und die nominale Designgrenze sind eingegrenzt.",
-      "remaining_gap": "Eindeutige BOM/Schaltplan-/Bestückungsbindung, aktive Register/Range/Vref, reale R-/C-Werte und Clippingbeleg fehlen weiterhin."
+      "campaign_application": "Kevin Mika bestätigt am 19.10.2026 ausdrücklich den tatsächlich bestückten ADS7953. Damit ist der reale ADC-Typ geklärt. ADS7952 auf S. 48 bleibt als abweichende historische Literaturstelle neben ADS7953 auf S. 29 erhalten; daraus folgt keine weitere offene Typenfrage. Nominales Design und ungefähr 77 kHz sind dokumentiert.",
+      "remaining_gap": "Konkrete Boardrevision und deren Schaltplan-/Messpunktzuordnung, aktive Range-/Vref-/Gain-/Registerkonfiguration, reale R-/C-Bestückung sowie analoger Messbereich und Clipping-/Übertragungsnachweis bleiben getrennt offen. Für den bestätigten ADC-Typ sind keine erneute Bestätigung, Fotos oder Messungen erforderlich.",
+      "previous_issue_scope": "Historical predecessor finding; not a statement of the current unresolved claims.",
+      "closed_subclaims": [
+        "ADC_type"
+      ]
     },
     {
       "id": "installed_firmware",
@@ -816,10 +878,20 @@
         {
           "path": "evidence/electrical/ch0_joris_20261019/runtime_source_map.json",
           "sha256": "660cd8175be7b9654ca11df136b985a7bb9312d1f1079c6e13f8f222f5c29ddb"
+        },
+        {
+          "path": "metrology/operator_confirmation_20261019.json",
+          "sha256": "1050fb00df5b1fa77db7f0731726d1b7a6d5de35688f39f1fae5af4ae3f0ed2d",
+          "bytes": 2555,
+          "path_base": "study_inputs_root"
         }
       ],
-      "campaign_application": "Quellhashes und unveränderte 12-Bit-Payloadübertragung sind nachvollzogen.",
-      "remaining_gap": "Ein entsprechender Installations-/Buildbeleg der tatsächlich verwendeten Messboards fehlt weiterhin."
+      "campaign_application": "Die untersuchte Kandidatenquelle und ihre unveränderte 12-Bit-Payloadübertragung sind nachvollzogen. Kevin Mika bestätigt ausdrücklich, dass die Firmware zwischen den betreffenden Messungen nicht geändert wurde. Diese Kontinuität identifiziert keinen exakten historischen Build und bindet die Kandidatenquelle nicht nachträglich an eine Installation.",
+      "remaining_gap": "Offen bleibt allein die exakte historische Installations-/Buildidentität der tatsächlich eingesetzten Messboards, sofern ein entsprechender datierter Versions-/Binary-/Installationsbeleg vorliegt. Aus der bestätigten Kontinuität werden weder Buildhash noch aktiver ADC-Bereich abgeleitet; eine erneute Kontinuitätsbestätigung ist nicht erforderlich.",
+      "previous_issue_scope": "Historical predecessor finding; not a statement of the current unresolved claims.",
+      "closed_subclaims": [
+        "firmware_continuity"
+      ]
     },
     {
       "id": "boundary_and_U_model",
@@ -849,10 +921,20 @@
         {
           "path": "evidence/electrical/ch0_joris_20261019/calibration.json",
           "sha256": "395515f6ccb3ae4850fb263dd6c3626f2b769fbeb2aebd0bb84cf205f716de6a"
+        },
+        {
+          "path": "metrology/voltage_model_origin.json",
+          "sha256": "12b84e0c1e3a6d95b4be696cef7875ac8905cb04e2c198ecd7b7cca6c4b969c4",
+          "bytes": 5381,
+          "path_base": "study_inputs_root"
         }
       ],
-      "campaign_application": "Joris: Jetson-Slot-Strompfad bei ungefähr 19 V. Spätere FS-Profile: after_R16-Eingang und spezifische Lastreferenzen. Benutzte U(I)-Koeffizienten sind belegt.",
-      "remaining_gap": "Identische Versorgung/Verkabelung/Verbrauchergrenze und vollständige physische Modellübertragbarkeit sind nicht allein durch diese Dateizuordnung bewiesen."
+      "campaign_application": "Joris beschreibt den Jetson-Slot-Strompfad bei ungefähr 19 V; spätere FS-Profile benennen after_R16-Eingang und spezifische Lastreferenzen. Die numerische Herkunft der verwendeten U(I)-Koeffizienten ist im vorhandenen ODS-Blatt Voltage geschlossen: B2 liefert den Achsenabschnitt, B39 speichert (B37-B2)/35, und C2 bis C37 verwenden den nominalen Index mit gerundetem Steigungswert. Der Helper verwendet denselben Index als current_mA/100. Dies ist vorhandene Modellprovenienz, kein neuer Fit gegen die aufgezeichneten Ströme.",
+      "remaining_gap": "Die numerische Koeffizientenherkunft ist geklärt. Identische Versorgung, Verkabelung und Verbrauchergrenze sowie physische Übertragbarkeit von U(I) und c auf die späteren FS-Aufbauten sind dadurch weiterhin nicht bewiesen.",
+      "previous_issue_scope": "Historical predecessor finding; not a statement of the current unresolved claims.",
+      "closed_subclaims": [
+        "voltage_coefficient_origin"
+      ]
     },
     {
       "id": "October_drift_reference",
@@ -881,7 +963,8 @@
         }
       ],
       "campaign_application": "Die dokumentierte ursprüngliche separate Verifikation und spezifische September-Referenzpunkte sind vorhanden und bleiben als solche anerkannt.",
-      "remaining_gap": "Zeitgenössischer Oktober-Vorher-/Nachher-Driftnachweis samt Referenzgerät/Seriennummer/Bereich/Zertifikat ist weiterhin ungebunden."
+      "remaining_gap": "Zeitgenössischer Oktober-Vorher-/Nachher-Driftnachweis samt Referenzgerät/Seriennummer/Bereich/Zertifikat ist weiterhin ungebunden.",
+      "previous_issue_scope": "Historical predecessor finding; not a statement of the current unresolved claims."
     },
     {
       "id": "combined_uncertainty",
@@ -916,7 +999,56 @@
         }
       ],
       "campaign_application": "Komponentenbasierte Abschätzung, Kalibrierresiduen, bestehende Sensitivitäten und Grenzen relativer Vergleiche sind unterscheidbar.",
-      "remaining_gap": "Referenz-, Messgrenzen-, Takt-/Dynamik-, Drift- und Kovarianzbeiträge fehlen für ein Gesamtintervall; C bleibt 0."
+      "remaining_gap": "Referenz-, Messgrenzen-, Takt-/Dynamik-, Drift- und Kovarianzbeiträge fehlen für ein Gesamtintervall; C bleibt 0.",
+      "previous_issue_scope": "Historical predecessor finding; not a statement of the current unresolved claims."
+    },
+    {
+      "id": "ADC_type",
+      "status": "closed",
+      "evidence_kind": "operator_confirmation",
+      "confirmed_value": "ADS7953",
+      "new_evidence": [
+        {
+          "path": "metrology/operator_confirmation_20261019.json",
+          "sha256": "1050fb00df5b1fa77db7f0731726d1b7a6d5de35688f39f1fae5af4ae3f0ed2d",
+          "bytes": 2555,
+          "path_base": "study_inputs_root"
+        }
+      ],
+      "campaign_application": "Kevin Mika bestätigt am 19.10.2026 den tatsächlich bestückten ADS7953 für die betreffenden Messungen.",
+      "literature_context": "ADS7953 auf gedruckter S. 29 und ADS7952 auf gedruckter S. 48 der Masterarbeit bleiben als historisch unterschiedliche Textangaben erhalten; die tatsächliche Bestückung ist durch die Betreiberbestätigung geklärt.",
+      "remaining_gap": "Keine weitere Bestätigung, Fotos oder Messungen für diese Typenfrage erforderlich. Aktive Range-/Referenz-/Registerkonfiguration und konkrete Board-/RC-Zuordnung sind separate Ansprüche."
+    },
+    {
+      "id": "firmware_continuity",
+      "status": "closed",
+      "evidence_kind": "operator_confirmation",
+      "confirmed_value": "unchanged_between_the_relevant_measurements",
+      "new_evidence": [
+        {
+          "path": "metrology/operator_confirmation_20261019.json",
+          "sha256": "1050fb00df5b1fa77db7f0731726d1b7a6d5de35688f39f1fae5af4ae3f0ed2d",
+          "bytes": 2555,
+          "path_base": "study_inputs_root"
+        }
+      ],
+      "campaign_application": "Kevin Mika bestätigt am 19.10.2026, dass die Firmware zwischen den betreffenden Messungen unverändert blieb.",
+      "remaining_gap": "Keine weitere Kontinuitätsbestätigung erforderlich. Exakter historischer Buildhash bzw. Versionsstand, Zuordnung der Kandidatenquelle zur Installation und aktiver ADC-Bereich werden daraus nicht abgeleitet."
+    },
+    {
+      "id": "voltage_coefficient_origin",
+      "status": "closed",
+      "evidence_kind": "existing_source_workbook_and_arithmetic_verification",
+      "new_evidence": [
+        {
+          "path": "metrology/voltage_model_origin.json",
+          "sha256": "12b84e0c1e3a6d95b4be696cef7875ac8905cb04e2c198ecd7b7cca6c4b969c4",
+          "bytes": 5381,
+          "path_base": "study_inputs_root"
+        }
+      ],
+      "campaign_application": "Die unveränderten Spannungskoeffizienten stammen aus dem vorhandenen ODS-Blatt Voltage: B2 als Achsenabschnitt, B39 als Endpunktquotient (B37-B2)/35 und C2 bis C37 als gespeicherte Formeln über den Index D. Der aktive Helper bildet calibrated_current_mA/100 auf diesen nominalen Modellindex ab. Es wurde kein neuer Fit und keine Messwertsubstitution vorgenommen.",
+      "remaining_gap": "Keine offene numerische Herkunftsfrage für diese U(I)-Koeffizienten. Physische Anwendbarkeit auf spätere Versorgung, Verkabelung und Verbrauchergrenze bleibt separat offen."
     }
   ],
   "acceptance_alignment": [
@@ -924,45 +1056,53 @@
       "id": "3.3a.S",
       "status": "bestätigt",
       "substatus": "partially_clarified",
-      "scope": "68 primäre bedingte Integrale und zwei getrennte Supplements bleiben mit eigenem N/Intervall erhalten. Die nominale mA-Skalierung ist durch Joris erklärt und CH0 bestätigt; affine Zeitabbildung, physische Modellübertragung und C bleiben getrennt.",
+      "scope": "68 primäre bedingte Integrale und zwei getrennte Supplements bleiben mit eigenem N/Intervall erhalten. Nominale mA-Skalierung und CH0 sind belegt; tatsächlicher ADS7953 und Firmwarekontinuität sind betreiberbestätigt, die numerische Herkunft der U(I)-Koeffizienten ist quellengebunden. Affine Zeitabbildung, physische Modellübertragung und C bleiben getrennt.",
       "partial_aspects": [
         "documented_nominal_scale",
         "CH0_confirmed",
         "no_numeric_change",
-        "physical_C_open"
+        "physical_C_open",
+        "ADC_type_operator_confirmed",
+        "firmware_continuity_operator_confirmed",
+        "voltage_coefficient_origin_closed"
       ]
     },
     {
       "id": "3.4c",
       "status": "nicht verfügbar",
       "substatus": "partially_clarified",
-      "scope": "Verlust-/Zählerprüfungen und CH0 sind belegt. Nominales 12-Bit-Design mit 1 mA/Count ist erklärt; die tatsächlich installierte ADC-/Range-/Vref- und Boardzuordnung sowie Clippinggrenzen bleiben ungebunden.",
+      "scope": "Verlust-/Zählerprüfungen und CH0 sind belegt. Nominales 12-Bit-Design mit 1 mA/Count ist erklärt, tatsächlicher ADS7953 und unveränderte Firmware zwischen den betreffenden Messungen sind betreiberbestätigt. Aktive Range-/Vref-/Registerkonfiguration, konkrete Boardzuordnung und Clippinggrenzen bleiben getrennt ungebunden.",
       "partial_aspects": [
         "CH0_confirmed",
         "documented_nominal_ADC_range",
-        "installed_configuration_open"
+        "installed_configuration_open",
+        "ADC_type_operator_confirmed",
+        "firmware_continuity_operator_confirmed"
       ]
     },
     {
       "id": "4.1a",
       "status": "nicht verfügbar",
       "substatus": "partially_clarified",
-      "scope": "CH0 ist nutzerbestätigt und in den Aufnahmeparametern konsistent. Joris dokumentiert 20 mOhm, INA225 Gain 25, REF3020 und nominales 12-Bit-Design. Konkrete Board-/Bestückungs-/Registerbindung und der ADS7953-/ADS7952-Konflikt bleiben offen.",
+      "scope": "CH0, tatsächlich bestückter ADS7953 und Firmwarekontinuität sind durch den Betreiber bestätigt. Joris dokumentiert 20 mOhm, INA225 Gain 25, REF3020 und nominales 12-Bit-Design. ADS7952 auf S. 48 bleibt abweichende historische Literaturangabe; die reale Typenfrage ist geklärt. Konkrete Boardrevision, weitere Bestückung sowie aktive Range-/Vref-/Gain-/Registerbindung bleiben getrennt offen.",
       "partial_aspects": [
         "channel_closed",
         "documented_design_closed",
-        "actual_board_configuration_open"
+        "actual_board_configuration_open",
+        "ADC_type_closed_operator",
+        "firmware_continuity_closed_operator"
       ]
     },
     {
       "id": "4.1b",
       "status": "bestätigt",
       "substatus": "partially_clarified",
-      "scope": "Deklarierte Abtastraten, spezifische FS-Profile und angewandtes g/o/U(I)/c/s sind belegt. mA nach A und s werden jeweils einmal angewendet; dies charakterisiert keine kalibrierte ADC-Zeitbasis.",
+      "scope": "Deklarierte Abtastraten, spezifische FS-Profile und angewandtes g/o/U(I)/c/s sind belegt. Die numerische Herkunft der unveränderten U(I)-Koeffizienten ist am vorhandenen ODS-Blatt Voltage gebunden. mA nach A und s werden jeweils einmal angewendet; dies charakterisiert keine kalibrierte ADC-Zeitbasis.",
       "partial_aspects": [
         "applied_model_and_profile_bound",
         "single_conversion_verified",
-        "timebase_characterization_open"
+        "timebase_characterization_open",
+        "voltage_coefficient_origin_closed"
       ]
     },
     {
@@ -979,11 +1119,12 @@
       "id": "4.1d",
       "status": "nicht verfügbar",
       "substatus": "partially_clarified",
-      "scope": "Joris’ Jetson-Slot-Strompfad und die späteren FS-after_R16-Profile sind beschrieben. Tatsächlicher Verbraucherumfang, Versorgung und Verkabelung sowie die vollständige U(I)/c-Modellübertragbarkeit sind nicht allein aus ähnlichem Spannungsniveau bewiesen.",
+      "scope": "Joris’ Jetson-Slot-Strompfad und die späteren FS-after_R16-Profile sind beschrieben. Die numerische Herkunft der verwendeten U(I)-Koeffizienten ist im vorhandenen ODS-Blatt Voltage geklärt. Tatsächlicher Verbraucherumfang, Versorgung und Verkabelung sowie die physische U(I)/c-Modellübertragbarkeit sind damit nicht bewiesen.",
       "partial_aspects": [
         "recorded_FS_boundary_and_load_connection",
         "Joris_slot_design_scope",
-        "physical_equivalence_open"
+        "physical_equivalence_open",
+        "voltage_coefficient_origin_closed"
       ]
     },
     {
@@ -1010,10 +1151,11 @@
       "id": "4.3b",
       "status": "nicht verfügbar",
       "substatus": "partially_clarified",
-      "scope": "ADC-Rohcodes sind im dokumentierten Design nominal zahlenmäßig mA; dies ist kein belegter Einheitenfehler. Designcode 4095 entspricht 4,095 A bei Vollskalengrenze 4,096 A. Tatsächliche ADC-Typ-/Range-/Vref-/Boardbindung und ein Clippingnachweis bleiben offen.",
+      "scope": "ADC-Rohcodes sind im dokumentierten Design nominal zahlenmäßig mA; dies ist kein belegter Einheitenfehler. Designcode 4095 entspricht 4,095 A bei Vollskalengrenze 4,096 A. Der tatsächliche ADS7953 ist betreiberbestätigt. Aktive Range-/Vref-/Registerkonfiguration, konkrete Boardzuordnung und ein Clippingnachweis bleiben getrennt offen.",
       "partial_aspects": [
         "nominal_unit_derivation_closed",
-        "installed_range_and_clipping_open"
+        "installed_range_and_clipping_open",
+        "ADC_type_closed_operator"
       ]
     },
     {
@@ -1062,22 +1204,25 @@
       "id": "4.4c",
       "status": "nicht verfügbar",
       "substatus": "open",
-      "scope": "Konkrete Installations-/Messgrenzenbindung, Oktoberdrift, Referenz-, Zeitbasis-/Dynamik- und Kovarianzbeiträge reichen weiterhin nicht für ein kombiniertes physisches E/N-Intervall aus. Die nominale Designskalierung und ursprüngliche Verifikation werden deshalb nicht erneut als fehlend bezeichnet.",
+      "scope": "Exakte historische Buildidentität, konkrete Messgrenzen-/Modellübertragungsbindung, Oktoberdrift, Referenz-, Zeitbasis-/Dynamik- und Kovarianzbeiträge reichen weiterhin nicht für ein kombiniertes physisches E/N-Intervall aus. CH0, tatsächlicher ADS7953, Firmwarekontinuität, numerische U(I)-Koeffizientenherkunft, nominale Designskalierung und ursprüngliche Verifikation werden ausdrücklich als geklärt anerkannt.",
       "partial_aspects": [
         "documented_design_and_verification_acknowledged",
-        "physical_C_remains_0"
+        "physical_C_remains_0",
+        "ADC_type_closed_operator",
+        "firmware_continuity_closed_operator",
+        "voltage_coefficient_origin_closed"
       ]
     }
   ],
   "report_summary": [
-    "CH0 ist als Betriebsangabe durch Kevins Nutzerbestätigung vom 19.10.2026 belegt. Alle 70 primären und zwei separaten Supplementaufnahmen sowie die 42 ausgewählten historischen Wiederholungen stimmen in den vorhandenen Kanalparametern mit CH0 überein. Die physische Boardidentität und der Verbraucherumfang sind davon getrennte Zuordnungen.",
+    "CH0 ist durch Kevins ausdrückliche Betreiberbestätigung vom 19.10.2026 belegt. Alle 70 primären und zwei separaten Supplementaufnahmen sowie die 42 ausgewählten historischen Wiederholungen stimmen in den vorhandenen Kanalparametern mit CH0 überein. Dieselbe Bestätigung klärt den tatsächlich bestückten ADS7953 und unveränderte Firmware zwischen den betreffenden Messungen. Physische Boardrevision und Verbraucherumfang sind davon getrennte Zuordnungen.",
     "Joris dokumentiert 12 Bit, 2,048 V, 20 mOhm und Gain 25. Daraus folgen nominal 2,048 V / (4096 · 25 · 0,020 Ohm) = 0,001 A je Count = 1 mA je Count; Tabelle 4.1 nennt den 1-mA-Schritt ausdrücklich. Code 4095 entspricht nominal 4,095 A, die Vollskalengrenze 4,096 A. Unveränderte ADC-Codes sind damit zahlenmäßig mit der mA-Konvention vereinbar. Die vorhandene Division durch 1000 bleibt einmalig; es wird kein weiterer Faktor eingeführt.",
     "Die Arbeit dokumentiert 36 Lastpunkte von 0 bis 3,5 A in ungefähr 0,1-A-Schritten, jeweils zehn Sekunden, mit EA-EL 9080-60 DT, Fluke 179, u.RECS bei 2 kS/s und PicoScope bei 5 MS/s. Die Anpassung nutzt die Endpunkte; dies waren nicht nur zwei gemessene Lastpunkte. Ein zweiter getrennter Verifikationsdurchlauf ist ausdrücklich dokumentiert (S. 53–56). Diese ursprüngliche Verifikation ist kein rückwirkender Vorher-/Nachher-Driftnachweis der Oktoberkampagne.",
     "Drei konkrete FS-Skalierungsprofile vom 04.09.2026 mit eigenen Zeitpunkten, Referenzpunkten, Hashes und Aufbauzuordnungen sind erhalten. Ihre Anwendung ist für die aktuellen 72 Aufnahmen und die 42 historischen Wiederholungen nachvollzogen; leere generische Kalibriermanifestfelder heben diese spezifischen Belege nicht auf. Beim H10-Profil bleiben trotz softwareseitigem Pass die Warnungen s < 0,9 und Punktfaktorspreizung 2,026054648 % > 2 % bestehen.",
     "Der belegte Rechenweg lautet: I = g · (raw_mA / 1000 + o), U = a + b · I, P = c · s · I · U; anschließend erfolgt die jeweilige Intervallintegration und Division durch das N derselben Aufnahme. Im historischen Pfad wird s einmal nach der ursprünglichen Integration beim Import angewendet; im aktuellen Innerintervallpfad einmal in der Leistung. s ist ein Leistungs-/Energieskalierer außerhalb von I und U, auch wenn ein Feld current_scale heißt. c liegt bereits nach der Leistungsberechnung; die Rolle eines Faktors von ungefähr 0,97 wird auf S. 65–66 erklärt, die exakte Zahl stammt aus dem erhaltenen Code. Keine doppelte Kalibrierung und keine Zahlenänderung sind erforderlich.",
-    "Die ungefähr 77 kHz sind als Designangabe des differenziellen RC-Filters dokumentiert (S. 30 und 48), nicht aus der allgemeinen INA225-Bandbreite abgeleitet. Exakte reale R-/C-Bestückung, vollständige Übertragungsfunktion und Abtasttaktcharakterisierung bleiben ungebunden. Der ADC-Typ ist in der Quelle widersprüchlich: ADS7953 auf S. 29, ADS7952 auf S. 48. Ohne eindeutige Hardwareunterlage bleibt genau dieser Typkonflikt offen; passende Firmwarequellen sind weiterhin kein Installationsbeleg.",
-    "Joris beschreibt den Jetson-Slot-Strompfad; die U(I)-Grafik zeigt ungefähr 19 V und wird hier nicht als 5-V-Messung bezeichnet. Die späteren FS-Profile benennen den Eingang 9V_20V_IN_after_R16_to_GND. Die Gleichheit von Versorgung, Verkabelung und eingeschlossenen Verbrauchern mit dem ursprünglichen Modell ist damit nicht vollständig bewiesen. Andere historische 5-V-Modul-/19-V-Systemgrenzen bleiben als eigener Quellenkontext getrennt.",
-    "A=70, primär B=68 und zwei eigene B-Supplements bleiben unverändert; C bleibt 0. Nominale Designskalierung, dokumentierte ursprüngliche Verifikation und tatsächlich benutzte Parameter sind jetzt zugeordnet. Aktiver ADC-/Range-/Vref-Stand, installierter Build, konkrete physische Messgrenze, Oktoberdrift, Referenzunsicherheit, Takt-/Dynamikbeiträge und Kovarianzen reichen weiterhin nicht für eine kombinierte physische E/N-Unsicherheit. Komponentenabschätzungen von 0,025–0,037 % und illustrative ±5 % werden nicht als Gesamtunsicherheit übernommen; relative Verhältnisse können Offset, Nichtlinearität, Drift und Kanalfehler enthalten."
+    "Die ungefähr 77 kHz sind als Designangabe des differenziellen RC-Filters dokumentiert (S. 30 und 48), nicht aus der allgemeinen INA225-Bandbreite abgeleitet. Exakte reale R-/C-Bestückung, vollständige Übertragungsfunktion und Abtasttaktcharakterisierung bleiben ungebunden. Tatsächlich bestückt ist laut Kevin Mika ein ADS7953; ADS7952 auf S. 48 bleibt lediglich als abweichende historische Literaturstelle neben ADS7953 auf S. 29 erhalten. Der reale ADC-Typ und die Firmwarekontinuität erfordern keine neue Bestätigung, Fotos oder Messungen. Ein exakter historischer Buildhash und aktiver ADC-Bereich werden daraus nicht abgeleitet; passende Kandidatenquellen bleiben vom Installationsbeleg getrennt.",
+    "Joris beschreibt den Jetson-Slot-Strompfad; die U(I)-Grafik zeigt ungefähr 19 V und wird hier nicht als 5-V-Messung bezeichnet. Die späteren FS-Profile benennen den Eingang 9V_20V_IN_after_R16_to_GND. Die numerische Herkunft der unveränderten Spannungskoeffizienten ist am vorhandenen ODS-Blatt Voltage belegt: B2 ist der Achsenabschnitt, B39 der Endpunktquotient (B37-B2)/35, und die Formeln C2 bis C37 verwenden den gespeicherten Index D. Der Helper current_mA/100 entspricht dessen nominalem 0,1-A-Modellschritt; aufgezeichnete tatsächliche Stromwerte wurden weder ersetzt noch neu angepasst. Versorgung, Verkabelung und eingeschlossene Verbraucher müssen für die physische Modellübertragung weiterhin separat zugeordnet sein. Andere historische 5-V-Modul-/19-V-Systemgrenzen bleiben als eigener Quellenkontext getrennt.",
+    "A=70, primär B=68 und zwei eigene B-Supplements bleiben unverändert; C bleibt 0. CH0, tatsächlicher ADS7953 und Firmwarekontinuität sind betreiberbestätigt; nominale Designskalierung, ursprüngliche Verifikation, tatsächlich benutzte Parameter und numerische U(I)-Koeffizientenherkunft sind zugeordnet. Aktive Range-/Vref-/Registerkonfiguration, exakte historische Buildidentität, physische Messgrenze und Modellübertragung, Oktoberdrift, Referenzunsicherheit, Takt-/Dynamikbeiträge und Kovarianzen reichen weiterhin nicht für eine kombinierte physische E/N-Unsicherheit. Die exakte historische Herleitung bzw. Schätzregel des separaten Faktors c und seine physische Übertragbarkeit bleiben getrennt offen; ein statistischer Fit wird dafür nicht ohne Quelle behauptet. Komponentenabschätzungen von 0,025–0,037 % und illustrative ±5 % werden nicht als Gesamtunsicherheit übernommen; relative Verhältnisse können Offset, Nichtlinearität, Drift und Kanalfehler enthalten."
   ],
   "invariant_scopes": {
     "primary_A": 70,
@@ -1095,10 +1240,18 @@
       "id": "1.2b",
       "requirement": "Vollständigen historischen Runtime- und Compiler-Versionsstand binden",
       "status": "nicht verfügbar",
-      "detail": "Die erhaltenen Code- und Artefakthashes schließen die historischen Paket-, Bibliotheks- und Firmwarestände nicht vollständig. Aktuelle Versionen werden nicht rückwirkend zugewiesen.",
+      "detail": "Die erhaltenen Code- und Artefakthashes schließen die historischen Paket-, Bibliotheks- und exakten Firmwareversionsstände nicht vollständig. Die unveränderte Messboard-Firmware zwischen den betreffenden Messungen ist inzwischen betreiberbestätigt; daraus folgen weder exakter historischer Buildhash noch aktive ADC-Konfiguration. Aktuelle Versionen werden nicht rückwirkend zugewiesen.",
       "evidence_files": [
         "evidence/identity_verification.json",
         "evidence/quality_historical_source.json"
+      ],
+      "current_followup_evidence": [
+        {
+          "path": "metrology/operator_confirmation_20261019.json",
+          "sha256": "1050fb00df5b1fa77db7f0731726d1b7a6d5de35688f39f1fae5af4ae3f0ed2d",
+          "bytes": 2555,
+          "path_base": "study_inputs_root"
+        }
       ]
     },
     {
@@ -1161,7 +1314,7 @@
       "id": "3.4c",
       "requirement": "Sampleverluste und Kanalgrenzen je Prozess speichern",
       "status": "nicht verfügbar",
-      "detail": "Verlust-/Zählerprüfungen und CH0 sind belegt. Nominales 12-Bit-Design mit 1 mA/Count ist erklärt; die tatsächlich installierte ADC-/Range-/Vref- und Boardzuordnung sowie Clippinggrenzen bleiben ungebunden.",
+      "detail": "Verlust-/Zählerprüfungen und CH0 sind belegt. Nominales 12-Bit-Design mit 1 mA/Count ist erklärt, tatsächlicher ADS7953 und unveränderte Firmware zwischen den betreffenden Messungen sind betreiberbestätigt. Aktive Range-/Vref-/Registerkonfiguration, konkrete Boardzuordnung und Clippinggrenzen bleiben getrennt ungebunden.",
       "evidence_files": [
         "runs",
         "scripts/collector_interval/analyze_interval.py"
@@ -1170,7 +1323,17 @@
       "partial_aspects": [
         "CH0_confirmed",
         "documented_nominal_ADC_range",
-        "installed_configuration_open"
+        "installed_configuration_open",
+        "ADC_type_operator_confirmed",
+        "firmware_continuity_operator_confirmed"
+      ],
+      "current_followup_evidence": [
+        {
+          "path": "metrology/operator_confirmation_20261019.json",
+          "sha256": "1050fb00df5b1fa77db7f0731726d1b7a6d5de35688f39f1fae5af4ae3f0ed2d",
+          "bytes": 2555,
+          "path_base": "study_inputs_root"
+        }
       ]
     },
     {
@@ -1187,7 +1350,7 @@
       "id": "4.1a",
       "requirement": "Boardrevision, Schaltplan/Kanal, Shunt, Verstärker, ADC, Gain und Vref je Kampagne verknüpfen",
       "status": "nicht verfügbar",
-      "detail": "CH0 ist nutzerbestätigt und in den Aufnahmeparametern konsistent. Joris dokumentiert 20 mOhm, INA225 Gain 25, REF3020 und nominales 12-Bit-Design. Konkrete Board-/Bestückungs-/Registerbindung und der ADS7953-/ADS7952-Konflikt bleiben offen.",
+      "detail": "CH0, tatsächlich bestückter ADS7953 und Firmwarekontinuität sind durch den Betreiber bestätigt. Joris dokumentiert 20 mOhm, INA225 Gain 25, REF3020 und nominales 12-Bit-Design. ADS7952 auf S. 48 bleibt abweichende historische Literaturangabe; die reale Typenfrage ist geklärt. Konkrete Boardrevision, weitere Bestückung sowie aktive Range-/Vref-/Gain-/Registerbindung bleiben getrennt offen.",
       "evidence_files": [
         "evidence/electrical/physical_prerequisites.json"
       ],
@@ -1195,14 +1358,24 @@
       "partial_aspects": [
         "channel_closed",
         "documented_design_closed",
-        "actual_board_configuration_open"
+        "actual_board_configuration_open",
+        "ADC_type_closed_operator",
+        "firmware_continuity_closed_operator"
+      ],
+      "current_followup_evidence": [
+        {
+          "path": "metrology/operator_confirmation_20261019.json",
+          "sha256": "1050fb00df5b1fa77db7f0731726d1b7a6d5de35688f39f1fae5af4ae3f0ed2d",
+          "bytes": 2555,
+          "path_base": "study_inputs_root"
+        }
       ]
     },
     {
       "id": "4.1d",
       "requirement": "Versorgungspunkt und eingeschlossene Verbraucher je Kampagne physisch binden",
       "status": "nicht verfügbar",
-      "detail": "Joris’ Jetson-Slot-Strompfad und die späteren FS-after_R16-Profile sind beschrieben. Tatsächlicher Verbraucherumfang, Versorgung und Verkabelung sowie die vollständige U(I)/c-Modellübertragbarkeit sind nicht allein aus ähnlichem Spannungsniveau bewiesen.",
+      "detail": "Joris’ Jetson-Slot-Strompfad und die späteren FS-after_R16-Profile sind beschrieben. Die numerische Herkunft der verwendeten U(I)-Koeffizienten ist im vorhandenen ODS-Blatt Voltage geklärt. Tatsächlicher Verbraucherumfang, Versorgung und Verkabelung sowie die physische U(I)/c-Modellübertragbarkeit sind damit nicht bewiesen.",
       "evidence_files": [
         "tables/electrical_raw_trace_audit.csv",
         "evidence/electrical/physical_prerequisites.json"
@@ -1211,7 +1384,16 @@
       "partial_aspects": [
         "recorded_FS_boundary_and_load_connection",
         "Joris_slot_design_scope",
-        "physical_equivalence_open"
+        "physical_equivalence_open",
+        "voltage_coefficient_origin_closed"
+      ],
+      "current_followup_evidence": [
+        {
+          "path": "metrology/voltage_model_origin.json",
+          "sha256": "12b84e0c1e3a6d95b4be696cef7875ac8905cb04e2c198ecd7b7cca6c4b969c4",
+          "bytes": 5381,
+          "path_base": "study_inputs_root"
+        }
       ]
     },
     {
@@ -1232,7 +1414,7 @@
       "id": "4.3b",
       "requirement": "ADC-Clipping ausschließen oder quantifizieren",
       "status": "nicht verfügbar",
-      "detail": "ADC-Rohcodes sind im dokumentierten Design nominal zahlenmäßig mA; dies ist kein belegter Einheitenfehler. Designcode 4095 entspricht 4,095 A bei Vollskalengrenze 4,096 A. Tatsächliche ADC-Typ-/Range-/Vref-/Boardbindung und ein Clippingnachweis bleiben offen.",
+      "detail": "ADC-Rohcodes sind im dokumentierten Design nominal zahlenmäßig mA; dies ist kein belegter Einheitenfehler. Designcode 4095 entspricht 4,095 A bei Vollskalengrenze 4,096 A. Der tatsächliche ADS7953 ist betreiberbestätigt. Aktive Range-/Vref-/Registerkonfiguration, konkrete Boardzuordnung und ein Clippingnachweis bleiben getrennt offen.",
       "evidence_files": [
         "evidence/electrical/summary.json",
         "evidence/resume_20261018/metrology/candidate_firmware_metrology_review.json",
@@ -1241,7 +1423,16 @@
       "substatus": "partially_clarified",
       "partial_aspects": [
         "nominal_unit_derivation_closed",
-        "installed_range_and_clipping_open"
+        "installed_range_and_clipping_open",
+        "ADC_type_closed_operator"
+      ],
+      "current_followup_evidence": [
+        {
+          "path": "metrology/operator_confirmation_20261019.json",
+          "sha256": "1050fb00df5b1fa77db7f0731726d1b7a6d5de35688f39f1fae5af4ae3f0ed2d",
+          "bytes": 2555,
+          "path_base": "study_inputs_root"
+        }
       ]
     },
     {
@@ -1279,14 +1470,31 @@
       "id": "4.4c",
       "requirement": "Kalibrierte kombinierte E/N-Unsicherheit angeben",
       "status": "nicht verfügbar",
-      "detail": "Konkrete Installations-/Messgrenzenbindung, Oktoberdrift, Referenz-, Zeitbasis-/Dynamik- und Kovarianzbeiträge reichen weiterhin nicht für ein kombiniertes physisches E/N-Intervall aus. Die nominale Designskalierung und ursprüngliche Verifikation werden deshalb nicht erneut als fehlend bezeichnet.",
+      "detail": "Exakte historische Buildidentität, konkrete Messgrenzen-/Modellübertragungsbindung, Oktoberdrift, Referenz-, Zeitbasis-/Dynamik- und Kovarianzbeiträge reichen weiterhin nicht für ein kombiniertes physisches E/N-Intervall aus. CH0, tatsächlicher ADS7953, Firmwarekontinuität, numerische U(I)-Koeffizientenherkunft, nominale Designskalierung und ursprüngliche Verifikation werden ausdrücklich als geklärt anerkannt.",
       "evidence_files": [
         "evidence/electrical/uncertainty_model.json"
       ],
       "substatus": "open",
       "partial_aspects": [
         "documented_design_and_verification_acknowledged",
-        "physical_C_remains_0"
+        "physical_C_remains_0",
+        "ADC_type_closed_operator",
+        "firmware_continuity_closed_operator",
+        "voltage_coefficient_origin_closed"
+      ],
+      "current_followup_evidence": [
+        {
+          "path": "metrology/operator_confirmation_20261019.json",
+          "sha256": "1050fb00df5b1fa77db7f0731726d1b7a6d5de35688f39f1fae5af4ae3f0ed2d",
+          "bytes": 2555,
+          "path_base": "study_inputs_root"
+        },
+        {
+          "path": "metrology/voltage_model_origin.json",
+          "sha256": "12b84e0c1e3a6d95b4be696cef7875ac8905cb04e2c198ecd7b7cca6c4b969c4",
+          "bytes": 5381,
+          "path_base": "study_inputs_root"
+        }
       ]
     },
     {
@@ -1311,7 +1519,8 @@
   "predecessor_acceptance": {
     "path": "external-sha256:608ff1033dab08b8c1d2231058e635d6e31f45f8ab041ddc2200e4205a987e8b",
     "sha256": "608ff1033dab08b8c1d2231058e635d6e31f45f8ab041ddc2200e4205a987e8b",
-    "bytes": 11023442
+    "bytes": 11023442,
+    "interpretation_scope": "Historical acceptance snapshot before this operator/voltage-origin revision; it is retained as provenance, not current open-claim authority."
   },
   "parent_archive": {
     "filename": "thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz",
@@ -1322,22 +1531,110 @@
   "schema": "thesis-v49-ch0-joris-evidence-alignment-v1",
   "source_spec": {
     "path": "evidence/electrical/ch0_joris_20261019/report_spec.json",
-    "sha256": "274d3068e9d911c21b55399ec6010acce19ae140149b834085e1094c9c253d6a"
+    "sha256": "274d3068e9d911c21b55399ec6010acce19ae140149b834085e1094c9c253d6a",
+    "interpretation_scope": "Historical source specification for the predecessor-generated addendum; this documentary revision adds the explicitly bound operator and voltage-origin evidence."
   },
   "predecessor_documents": {
     "MANUELLE_RESTPUNKTE.txt": {
       "path": "evidence/electrical/ch0_joris_20261019/prior_MANUELLE_RESTPUNKTE.txt",
       "sha256": "da105973557373c88ffe6e0e85ac2882e3370d418bafbb3b6cc2ca58f51b74b2",
-      "bytes": 39121
+      "bytes": 39121,
+      "interpretation_scope": "Historical predecessor document retained unchanged; current claim status follows this revision and its two follow-up sources."
     },
     "REPRODUCTION.txt": {
       "path": "evidence/electrical/ch0_joris_20261019/prior_REPRODUCTION.txt",
       "sha256": "4931d228e2039c7405c6b544f0fccb5b1a1b7c15d8a49ef788df8e6fdb47d95a",
-      "bytes": 47349
+      "bytes": 47349,
+      "interpretation_scope": "Historical predecessor document retained unchanged; current claim status follows this revision and its two follow-up sources."
     }
   },
   "generator": {
     "path": "scripts/build_ch0_joris_addendum.py",
-    "sha256": "cf74d304a2d71738c3db844087cc04740a654beaf80853b0a10971b95ba4d11b"
+    "sha256": "cf74d304a2d71738c3db844087cc04740a654beaf80853b0a10971b95ba4d11b",
+    "interpretation_scope": "Historical generator of the predecessor addendum, not a claim that this revised capsule is its unchanged output."
+  },
+  "updated_utc": "2026-10-19T18:19:36.665241+00:00",
+  "followup_provenance": {
+    "revision": "ch0-joris-evidence-alignment-20261019-v3-operator-and-voltage-origin",
+    "updated_utc": "2026-10-19T18:19:36.665241+00:00",
+    "origin_scope": "Documentary revision of the predecessor public capsule with two new bound follow-up sources. This is not an unchanged projection of the historical private campaign addendum.",
+    "predecessor_public_capsule": {
+      "reference_type": "historical-public-capsule-sha256",
+      "path": "metrology/ch0_joris_alignment.json",
+      "path_base": "study_inputs_root",
+      "sha256": "3c1c57a2699cb2223b41ff835cb8ef7a25cf765249c9b896671d94501c87bbf2",
+      "bytes": 59228,
+      "analysis_revision": "ch0-joris-evidence-alignment-20261019-v2",
+      "role": "Historical predecessor bytes, not the current capsule bytes."
+    },
+    "predecessor_private_addendum": {
+      "reference_type": "external-sha256",
+      "source_name": "evidence/electrical/ch0_joris_evidence_alignment_20261019.json",
+      "sha256": "db61fe26c17e5ca0279f2e312c9a8948e52e3640963af5f6a0e4773e60ce3019",
+      "bytes": 60245,
+      "origin_reference": "../../METROLOGY_ADDENDUM_REFERENCE.json",
+      "role": "Historical origin of the predecessor public projection; no assertion that the current revision is its unchanged projection."
+    },
+    "current_source_bindings": [
+      {
+        "path": "metrology/operator_confirmation_20261019.json",
+        "sha256": "1050fb00df5b1fa77db7f0731726d1b7a6d5de35688f39f1fae5af4ae3f0ed2d",
+        "bytes": 2555,
+        "path_base": "study_inputs_root"
+      },
+      {
+        "path": "metrology/voltage_model_origin.json",
+        "sha256": "12b84e0c1e3a6d95b4be696cef7875ac8905cb04e2c198ecd7b7cca6c4b969c4",
+        "bytes": 5381,
+        "path_base": "study_inputs_root"
+      }
+    ],
+    "supporting_historical_sources": [
+      {
+        "reference_type": "external-sha256",
+        "source_name": "followup_closeout_review/voltage_origin_independent.json",
+        "sha256": "8deb22d79ee021cb0e842a52b3ff03bf0b96b23704cdc01cd9ada17d32d470ac",
+        "bytes": 19816,
+        "interpretation_scope": "Historical bounded review/closeout source supporting numerical-origin evidence; older ADC-type and firmware-continuity requests are superseded by the current operator confirmation."
+      },
+      {
+        "reference_type": "external-sha256",
+        "source_name": "followup_closeout_review/remaining_evidence_actions.json",
+        "sha256": "d2be11c61ff03fc89d42042889903efe1898e442e9702619147ec67400cb6aa2",
+        "bytes": 26627,
+        "interpretation_scope": "Historical bounded review/closeout source supporting numerical-origin evidence; older ADC-type and firmware-continuity requests are superseded by the current operator confirmation."
+      },
+      {
+        "reference_type": "external-sha256",
+        "source_name": "task_closeout.json",
+        "sha256": "ec662b09018697ca2e8898d37c3e9025d573f0c5fc4c8532e5cf261e4e9cbc96",
+        "bytes": 26803,
+        "interpretation_scope": "Historical bounded review/closeout source supporting numerical-origin evidence; older ADC-type and firmware-continuity requests are superseded by the current operator confirmation."
+      }
+    ],
+    "closed_atomic_claims": [
+      "ADC_type",
+      "firmware_continuity",
+      "voltage_coefficient_origin"
+    ],
+    "composite_claim_interpretation": {
+      "ADC_and_RC_population": "partially_clarified; actual ADC type closed by operator; board/RC and active configuration separate",
+      "installed_firmware": "open for exact historical build identity; firmware continuity closed by operator",
+      "boundary_and_U_model": "partially_clarified; numerical coefficient origin closed by source; physical transfer open"
+    },
+    "historical_literature_retained": {
+      "ADS7953_printed_page": 29,
+      "ADS7952_printed_page": 48,
+      "interpretation": "Different historical literature statements are retained; they no longer represent an unresolved actual-population question after the operator-confirmed ADS7953."
+    },
+    "no_new_inference": [
+      "Exact historical firmware build hash or binary identity",
+      "Active ADC range, reference or register state",
+      "Physical U(I)/c transfer or complete electrical uncertainty"
+    ],
+    "reconfirmation_for_ADC_type_or_firmware_continuity_required": false,
+    "new_measurement_fit_conversion_or_reintegration": false,
+    "numerical_results_changed": false,
+    "per_path_parameters_changed": false
   }
 }
