@@ -1,0 +1,121 @@
+{
+  "schema": "v49-confirmation-voltage-model-origin-v1",
+  "scope": "Numerical source provenance of the retained voltage coefficients; arithmetic verification of stored formulas.",
+  "result": "numerical_coefficient_origin_confirmed_physical_transfer_separate",
+  "source_workbook": {
+    "reference_type": "external-sha256",
+    "private_source_name": "original-exports/Ergebnisse_Joris/power_measurements_plots/calibration/jetson_calibration.ods",
+    "sha256": "1f4c154806426dd2db193ce4cff7b7c7b88b8c778954cdf9058f44c498bf1e16",
+    "bytes": 535206
+  },
+  "source_workbook_member": {
+    "name": "content.xml",
+    "sha256": "4adaea65b4aeaf77fdde510dea4200677d0c3cfabd8a01b2c7ea1a732d97bdc8",
+    "bytes": 1278525
+  },
+  "sheet": "Voltage",
+  "stored_data": {
+    "explicit_recorded_current_voltage_pairs": 36,
+    "columns": {
+      "A": "actual_value: recorded current in amperes",
+      "B": "pico_voltage in volts",
+      "C": "estimated voltage in volts",
+      "D": "stored model index",
+      "E": "second msmt: second voltage measurement"
+    },
+    "endpoint_cells": {
+      "A2_actual_current_A": "0.002",
+      "A37_actual_current_A": "3.497",
+      "B2_voltage_V": "19.062607082705",
+      "B37_voltage_V": "18.8020467173489",
+      "D2_index": "0",
+      "D37_index": "35"
+    },
+    "B39": {
+      "formula": "of:=([.B37]-[.B2])/35",
+      "cached_value_V_per_index": "-0.00744458186731712",
+      "endpoint_quotient_from_exported_decimal_cells_V_per_index": "-0.00744458186731714285714285714285714285714285714285714285714286",
+      "interpretation": "Endpoint quotient (B37-B2)/35 stored in the workbook; not a newly estimated regression."
+    },
+    "C2_through_C37": {
+      "formula_pattern": "of:=[.D{row}]*-0.007444582 + 19.062607082705",
+      "all_36_formulas_reference_same_row_D": true,
+      "all_36_cached_values_equal_decimal_formula": true,
+      "rounded_literal_slope_V_per_index": "-0.007444582",
+      "intercept_V": "19.062607082705"
+    }
+  },
+  "index_to_current_mapping": {
+    "stored_index_endpoints": [
+      "0",
+      "35"
+    ],
+    "nominal_model_step_A_per_index": "0.1",
+    "helper_mapping": "index = calibrated_current_mA / 100",
+    "equivalent_mapping": "index = calibrated_current_A / 0.1",
+    "equivalent_slope_V_per_A": "-0.07444582",
+    "actual_recorded_A_values_used_as_C_formula_abscissae": false,
+    "interpretation": "The stored estimated-voltage formulas use the nominal model index, not the separately recorded currents in column A. Their difference alone does not demonstrate a conversion error."
+  },
+  "retained_active_model": {
+    "formula": "U_V = a_V + b_V_per_A * calibrated_current_A",
+    "a_V": "19.062607082705",
+    "b_V_per_A": "-0.07444582",
+    "same_retained_coefficients_in": [
+      "DeepX",
+      "H8",
+      "H10"
+    ],
+    "helper_source": {
+      "reference_type": "external-sha256",
+      "private_source_name": "campaign/evidence/electrical/new_acquisition_models/sources/helper_data_actions.rs",
+      "sha256": "d6d9e9cb22e9cc897de7a13b95f7d2fecbaa4e697dbbb2750af45e9f8a7d9399",
+      "bytes": 22708,
+      "lines_one_based": [
+        511,
+        515
+      ]
+    },
+    "coefficients_changed": false
+  },
+  "interpretation_limits": {
+    "new_fit_performed": false,
+    "new_measurement_performed": false,
+    "conversion_error_proven": false,
+    "physical_transfer_to_later_full_system_supply_wiring_and_consumer_boundary_proven_by_this_finding": false,
+    "complete_electrical_uncertainty_established": false,
+    "firmware_binary_hash_or_active_ADC_range_inferred": false,
+    "separate_remaining_questions": [
+      "Physical applicability to the later supply, wiring and consumer boundary.",
+      "Exact historical derivation or estimation rule of the separate post-power factor c.",
+      "Contemporary drift and a complete uncertainty budget."
+    ],
+    "historical_verification": "The documented original calibration and separate second verification remain acknowledged; the second voltage-measurement column is preserved as source evidence."
+  },
+  "provenance": {
+    "transformation": "Selected scientific facts and source identities from the two bound private review documents; private absolute locators replaced by relative source names and SHA256 references.",
+    "external_source_documents": [
+      {
+        "reference_type": "external-sha256",
+        "private_source_name": "followup_closeout_review/voltage_origin_independent.json",
+        "sha256": "8deb22d79ee021cb0e842a52b3ff03bf0b96b23704cdc01cd9ada17d32d470ac",
+        "bytes": 19816
+      },
+      {
+        "reference_type": "external-sha256",
+        "private_source_name": "followup_closeout_review/remaining_evidence_actions.json",
+        "sha256": "d2be11c61ff03fc89d42042889903efe1898e442e9702619147ec67400cb6aa2",
+        "bytes": 26627
+      },
+      {
+        "reference_type": "external-sha256",
+        "private_source_name": "task_closeout.json",
+        "sha256": "ec662b09018697ca2e8898d37c3e9025d573f0c5fc4c8532e5cf261e4e9cbc96",
+        "bytes": 26803,
+        "revision": 2,
+        "role": "Historical closeout snapshot supporting this numerical-origin finding; not a current operator-confirmation statement."
+      }
+    ],
+    "private_source_archive_reference": "External document hashes bind the evidence here; the private source-archive locator is recorded separately."
+  }
+}

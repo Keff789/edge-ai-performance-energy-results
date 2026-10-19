@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 """Export small quality/metrology capsules from a preserved v49 campaign.
 
+Historical extraction utility for the preceding campaign/addendum snapshot.
+Later operator confirmations and voltage-model provenance are maintained in
+the authoritative public inputs, not regenerated from that older campaign.
+Use reproduce.py with the current input manifest to render the publication;
+this exporter is not the update path for those later documentation changes.
+
 JSON scientific fields are retained; private absolute provenance paths are
 replaced by explicit archive/external locators. NPZ bytes are copied unchanged.
 The complete original path map is written only to --private-origin-registry,

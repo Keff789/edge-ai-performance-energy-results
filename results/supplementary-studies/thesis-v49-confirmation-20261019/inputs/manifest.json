@@ -36,9 +36,9 @@
       "sha256": "32fd3965005244aacfed88283942c214235d814af784f1f90b776a5b1bb46c65"
     },
     {
-      "bytes": 59228,
+      "bytes": 79807,
       "path": "metrology/ch0_joris_alignment.json",
-      "sha256": "3c1c57a2699cb2223b41ff835cb8ef7a25cf765249c9b896671d94501c87bbf2"
+      "sha256": "d2a9c1e79580f9cd7c3aeffda76bb7f2b27bb7c1330de70d8e90124d307abd68"
     },
     {
       "bytes": 9605,
@@ -46,9 +46,9 @@
       "sha256": "bc3b168ba42a7fc6d682f9fd35be31db01cbdeae8d858630263536a70a556512"
     },
     {
-      "bytes": 26148,
+      "bytes": 26528,
       "path": "metrology/export_inputs.py",
-      "sha256": "d9d2f0d0aab56111ab8b6eab3a3d18cd7647d34619cb80e97feab76568865063"
+      "sha256": "4c589cf9ea0eaa5ee201cf198a0b80540c6c47fa1cc3cb2494d54887dafc26ed"
     },
     {
       "bytes": 9028,
@@ -56,9 +56,9 @@
       "sha256": "3521325e67578dd5722afd080d036f721ea6dc9a682614c2835f22bd342e1b15"
     },
     {
-      "bytes": 15627,
+      "bytes": 19928,
       "path": "metrology/index.json",
-      "sha256": "a155904c92ef5f37bd8c6104a748ab05ee0b858d49f78bc586939c0fd206509a"
+      "sha256": "35cfbb8e6af23b7746b7af5214178e5e71bd7fcd38654ce55e542d7ca0c4b238"
     },
     {
       "bytes": 1120,
@@ -74,6 +74,11 @@
       "bytes": 1114,
       "path": "metrology/models/orin_nx_hailo8_01.json",
       "sha256": "c525d3ef3f5ce81e4627158731068492e5ab7a5c01188c3dec4364fdbd19d38e"
+    },
+    {
+      "bytes": 2555,
+      "path": "metrology/operator_confirmation_20261019.json",
+      "sha256": "1050fb00df5b1fa77db7f0731726d1b7a6d5de35688f39f1fae5af4ae3f0ed2d"
     },
     {
       "bytes": 1271,
@@ -104,6 +109,11 @@
       "bytes": 82195,
       "path": "metrology/version_and_precision_bindings.json",
       "sha256": "d2337581b6b66f68900d4b1d7d2724efa3e9581c787cee557743f3fb0a05a7b3"
+    },
+    {
+      "bytes": 5381,
+      "path": "metrology/voltage_model_origin.json",
+      "sha256": "12b84e0c1e3a6d95b4be696cef7875ac8905cb04e2c198ecd7b7cca6c4b969c4"
     },
     {
       "bytes": 239200,
