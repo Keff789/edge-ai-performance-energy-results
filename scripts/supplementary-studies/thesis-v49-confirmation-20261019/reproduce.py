@@ -369,6 +369,32 @@ def history_tables(history):
     return rows, accounting
 
 
+def metrology_tables(inputs):
+    """Reproduce an optional, explicitly hash-bound CH0 evidence addendum.
+
+    These are evidence and calibration-path rows, separate from every numeric
+    measurement table. An older input package without the binding still works.
+    """
+    if not (inputs.root / 'metrology/index.json').is_file():
+        return {}
+    index = inputs.json('metrology/index.json')
+    if 'ch0_joris_alignment' not in index:
+        return {}
+    core.require(index.get('schema') == 'v49-confirmation-metrology-inputs-v1', 'metrology_index_schema_invalid')
+    binding = index['ch0_joris_alignment']
+    core.require(isinstance(binding, dict), 'explicit_CH0_alignment_binding_required')
+    alignment = inputs.bound(binding)
+    core.require(alignment.get('schema') == 'thesis-v49-ch0-joris-evidence-alignment-v1', 'CH0_alignment_schema_invalid')
+    claims = alignment.get('claim_matrix')
+    paths = alignment.get('per_path_calibration_chain')
+    core.require(isinstance(claims, list) and claims
+                 and all(isinstance(row, dict) and row.get('status') in {'closed', 'partially_clarified', 'open'} for row in claims),
+                 'CH0_claim_matrix_status_invalid')
+    core.require(isinstance(paths, list) and paths and all(isinstance(row, dict) for row in paths),
+                 'CH0_calibration_chain_rows_required')
+    return {'metrology_claims': claims, 'metrology_conversion_paths': paths}
+
+
 def generate(input_root, output_root):
     output_root = Path(output_root).resolve()
     core.require(not output_root.exists(), 'fresh_external_output_directory_required')
@@ -397,6 +423,7 @@ def generate(input_root, output_root):
         'direct_quality_primary': q_primary, 'historical_energy_repeats': data['historical_energy'],
         'historical_performance_repeats': data['historical_performance'], 'historical_uid_statistics': data['historical_statistics'],
         'attempt_history': h_rows, 'attempt_accounting': h_accounting}
+    tables.update(metrology_tables(inputs))
     rendered = {}
     for name, rows in tables.items():
         rendered[name+'.json'] = json.dumps(rows, indent=2, sort_keys=True, ensure_ascii=False, allow_nan=False)+'\n'

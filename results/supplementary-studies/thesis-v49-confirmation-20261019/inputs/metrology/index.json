@@ -10,7 +10,9 @@
       "origin_sha256": "f6fe1e6a3d2735b9e77d70fd9254d4dcabfb92195e46b74bb117e00dd783bb8b",
       "origin_archive_member": "evidence/resume_20261018/metrology/candidate_firmware_metrology_review.json",
       "origin_bytes": 12473,
-      "transformation": "scientific fields retained; private provenance locators projected"
+      "transformation": "scientific fields retained; private provenance locators projected",
+      "snapshot_role": "previous_evidence_snapshot_before_CH0_Joris_alignment",
+      "current_interpretation_reference": "metrology/ch0_joris_alignment.json"
     },
     {
       "source_id": "configuration_and_reference_gaps",
@@ -21,7 +23,9 @@
       "origin_sha256": "1aa937eb079f13fe3ebfc66bd9a21745a018e860a1ffc1462a3f3def7dfe7c9e",
       "origin_archive_member": "evidence/resume_20261018/metrology/targeted_electrical_followup.json",
       "origin_bytes": 66805,
-      "transformation": "scientific fields retained; private provenance locators projected"
+      "transformation": "scientific fields retained; private provenance locators projected",
+      "snapshot_role": "previous_evidence_snapshot_before_CH0_Joris_alignment",
+      "current_interpretation_reference": "metrology/ch0_joris_alignment.json"
     },
     {
       "source_id": "calibration_records",
@@ -32,7 +36,9 @@
       "origin_sha256": "00743ba61ee69c85fb82f354afc570bfed31394a1c46d5c6022c394e60cadd76",
       "origin_archive_member": "evidence/electrical/calibration_records.json",
       "origin_bytes": 4215,
-      "transformation": "scientific fields retained; private provenance locators projected"
+      "transformation": "scientific fields retained; private provenance locators projected",
+      "snapshot_role": "previous_evidence_snapshot_before_CH0_Joris_alignment",
+      "current_interpretation_reference": "metrology/ch0_joris_alignment.json"
     },
     {
       "source_id": "physical_prerequisites",
@@ -43,7 +49,9 @@
       "origin_sha256": "a5f762cf96ef4b0b36e16287a9b1fca55d0b387b2f6a223dd816bdc6babd296d",
       "origin_archive_member": "evidence/electrical/physical_prerequisites.json",
       "origin_bytes": 1275,
-      "transformation": "scientific fields retained; private provenance locators projected"
+      "transformation": "scientific fields retained; private provenance locators projected",
+      "snapshot_role": "previous_evidence_snapshot_before_CH0_Joris_alignment",
+      "current_interpretation_reference": "metrology/ch0_joris_alignment.json"
     },
     {
       "source_id": "uncertainty_model_historical",
@@ -54,7 +62,9 @@
       "origin_sha256": "afb0026f3471714019af2a6d8d95dcec7ee78c4306455ecb68b78ecb732214b5",
       "origin_archive_member": "evidence/electrical/uncertainty_model.json",
       "origin_bytes": 2097,
-      "transformation": "scientific fields retained; private provenance locators projected"
+      "transformation": "scientific fields retained; private provenance locators projected",
+      "snapshot_role": "previous_evidence_snapshot_before_CH0_Joris_alignment",
+      "current_interpretation_reference": "metrology/ch0_joris_alignment.json"
     },
     {
       "source_id": "primary_reference_documents",
@@ -65,7 +75,9 @@
       "origin_sha256": "f5129896188a36ebc75d0590732b8f9dd90d2636d28576bcbab73526a046f583",
       "origin_archive_member": "evidence/electrical/primary_source_records.json",
       "origin_bytes": 945,
-      "transformation": "scientific fields retained; private provenance locators projected"
+      "transformation": "scientific fields retained; private provenance locators projected",
+      "snapshot_role": "previous_evidence_snapshot_before_CH0_Joris_alignment",
+      "current_interpretation_reference": "metrology/ch0_joris_alignment.json"
     },
     {
       "source_id": "primary_nominal_current_ranges",
@@ -76,7 +88,9 @@
       "origin_sha256": "1b025ede96bf6a7e713392dd8f2dda6e8b7c30cd7e8c905660d6a8a1c55f4f78",
       "origin_archive_member": "evidence/resume_20261018/metrology/postcampaign_ranges_20261019T060248092718Z/ranges.json",
       "origin_bytes": 306604,
-      "transformation": "scientific fields retained; private provenance locators projected"
+      "transformation": "scientific fields retained; private provenance locators projected",
+      "snapshot_role": "previous_evidence_snapshot_before_CH0_Joris_alignment",
+      "current_interpretation_reference": "metrology/ch0_joris_alignment.json"
     },
     {
       "source_id": "supplement_nominal_current_ranges",
@@ -87,7 +101,9 @@
       "origin_sha256": "7eedec5304018b76f35d914e9881c35746c4b266a6298694345d044a0e03d148",
       "origin_archive_member": "evidence/energy_supplement_20261019/electrical/post_supplement_ranges_20261019T081337605542Z/ranges_and_energy.json",
       "origin_bytes": 13398,
-      "transformation": "scientific fields retained; private provenance locators projected"
+      "transformation": "scientific fields retained; private provenance locators projected",
+      "snapshot_role": "previous_evidence_snapshot_before_CH0_Joris_alignment",
+      "current_interpretation_reference": "metrology/ch0_joris_alignment.json"
     },
     {
       "source_id": "historical_b500_provenance",
@@ -98,7 +114,9 @@
       "origin_sha256": "5038a14a4450c47ba84f03bdc351964b171088399b1c5d510781e61389a7623b",
       "origin_archive_member": "evidence/history_b500_audit.json",
       "origin_bytes": 832962,
-      "transformation": "scientific fields retained; private provenance locators projected"
+      "transformation": "scientific fields retained; private provenance locators projected",
+      "snapshot_role": "previous_evidence_snapshot_before_CH0_Joris_alignment",
+      "current_interpretation_reference": "metrology/ch0_joris_alignment.json"
     },
     {
       "source_id": "version_and_precision_bindings",
@@ -109,6 +127,22 @@
       "origin_sha256": "96af4b40f011957d849fb22d3d6031ffbf8a0df186904238af9f112b50d231d0",
       "origin_archive_member": "evidence/identity_versions_precision.json",
       "origin_bytes": 180575,
+      "transformation": "scientific fields retained; private provenance locators projected",
+      "snapshot_role": "previous_evidence_snapshot_before_CH0_Joris_alignment",
+      "current_interpretation_reference": "metrology/ch0_joris_alignment.json"
+    },
+    {
+      "source_id": "ch0_joris_alignment",
+      "scope": "current follow-up; supersedes overbroad missing-design/channel/calibration statements",
+      "snapshot_role": "current_follow_up_evidence",
+      "path": "metrology/ch0_joris_alignment.json",
+      "sha256": "3c1c57a2699cb2223b41ff835cb8ef7a25cf765249c9b896671d94501c87bbf2",
+      "bytes": 59228,
+      "origin_addendum_member": "evidence/electrical/ch0_joris_evidence_alignment_20261019.json",
+      "origin_sha256": "db61fe26c17e5ca0279f2e312c9a8948e52e3640963af5f6a0e4773e60ce3019",
+      "origin_bytes": 60245,
+      "origin_reference": "../../METROLOGY_ADDENDUM_REFERENCE.json",
+      "origin_scope": "new CH0/Joris follow-up; not a member of the original edbd618a archive",
       "transformation": "scientific fields retained; private provenance locators projected"
     }
   ],
@@ -145,29 +179,55 @@
     }
   ],
   "provenance_paths_are_dependencies": false,
-  "origin_archive_member_base": "preserved campaign root inside the external delivery archive",
+  "origin_archive_member_base": "Only legacy origin_archive_member fields refer to the campaign root in the original archive. New origin_addendum_member fields use the separate metrology addendum reference.",
   "current_status": {
     "fully_physically_qualified_energy_intervals": 0,
     "combined_physical_energy_uncertainty": null,
     "installed_measurement_firmware_identity_bound": false,
-    "nominal_mA_interpretation_physically_confirmed": false,
     "unit_error_established_from_candidate": false,
     "new_independent_calibration": false,
     "ADC_clipping_proven": false,
     "ADC_clipping_excluded": false,
     "scope": "70 primary A, 68 primary conditional B plus two separate conditional B; no physical C qualification",
-    "payload": "Candidate forwards masked 12-bit SPI values without conversion; its installation is unproven. Neither a unit error nor the nominal mA convention is established.",
-    "power_boundary": "Upstream nominal 19-V full-system input and downstream 5-V module rail are different boundaries.",
-    "filter": "INA225 component bandwidth at gain 25 is 250 kHz; no retained complete-path evidence establishes the 77-kHz claim.",
+    "payload": "The documented 2.048-V/12-bit/20-mOhm/gain-25 design gives 1 mA per count. Raw ADC-code transmission is consistent with the nominal mA convention; it does not demonstrate a unit error. Installed component/range and calibration applicability remain separate bindings.",
+    "power_boundary": "The master thesis studies the Jetson-slot path. Its supply voltage is not assumed to be 5 V. Later CH0 full-system-input calibration and U(I) applicability must follow their own profiles and wiring evidence.",
+    "filter": "Approximately 77 kHz is a documented differential-RC design value before INA225, not its general component bandwidth or a newly measured complete-path transfer function.",
     "historical_b500": "Generic percentile functions were found; nine rows retain stored_bounds because original replicates and exact invocation/seed are unbound.",
-    "historical_versions": "Current package/NPU firmware observations are not retroactively assigned; measurement-source firmware is a separate identity."
+    "historical_versions": "Current package/NPU firmware observations are not retroactively assigned; measurement-source firmware is a separate identity.",
+    "operating_channel": 0,
+    "CH0_user_confirmed": true,
+    "current_CH0_capture_records_checked": 72,
+    "nominal_mA_per_ADC_count": 1.0,
+    "nominal_mA_interpretation_design_documented": true,
+    "historical_36_point_calibration_documented": true,
+    "historical_separate_verification_documented": true,
+    "differential_RC_77kHz_design_documented": true,
+    "exact_RC_values_and_populated_board_binding_established": false,
+    "ADC7953_vs_ADC7952_type_inconsistency_resolved": false,
+    "per_path_calibration_chain_reference": "metrology/ch0_joris_alignment.json",
+    "full_system_scale_factor_application": "The setup-specific full-system factor s multiplies the completed power model. Historical Joris/Jetson power correction c remains a separate factor; neither denotes an additional ADC/current calibration. See each bound conversion path.",
+    "historical_calibration": "36 load points across 0..3.5 A and a separate verification are documented for the original work. This does not retroactively provide a before/after drift or validation record for each October setup.",
+    "U_I_mapping": "The later setup-specific full-system input models and original Jetson-slot U(I) boundary are distinct; exact board/supply/wiring applicability remains partial."
   },
   "minimum_remaining_evidence": [
-    "Bind the actual measurement-board firmware/build and ADC register/payload configuration to board serial/revision, schematic/BOM and the requested input channel.",
-    "Record populated shunt value/tolerance/temperature coefficient, amplifier gain, ADC Vref/full-scale, saturation treatment and upstream supply/consumer wiring.",
-    "Obtain independent simultaneous DC voltage/current idle and representative high-load references before/after thermal exposure, with instrument serial/ranges/certificate/uncertainty, covering the used current range.",
-    "Supply the actual filter topology/components or complete-path transfer function, and characterize actual ADC sampling period/drift.",
-    "Retain offset, nonlinearity, session drift and channel covariance; unknown systematic uncertainty is not zero and is not divided by sample count.",
-    "Any later conversion correction requires a new versioned analysis of unchanged archived raw samples."
-  ]
+    "Resolve ADS7953 versus ADS7952 using an existing unambiguous schematic/BOM or population record; retain the documented nominal design meanwhile.",
+    "Bind the populated board/revision, active ADC range/reference, actual firmware build and exact CH0 circuit without treating channel confirmation as missing.",
+    "Document the exact differential R/C topology and values and complete-path/timebase/alias limits; the 77-kHz design origin is already documented.",
+    "Bind each existing current/voltage model and full-system factor to its supply, wiring, consumers and operating range; do not transfer the original slot U(I) model blindly.",
+    "Retain the original separate verification while distinguishing missing October before/after drift, reference-instrument uncertainty and combined E/N uncertainty.",
+    "Any future proven conversion correction requires a new versioned analysis of unchanged raw data; this documentation alignment changes no conversion factors."
+  ],
+  "ch0_joris_alignment": {
+    "path": "metrology/ch0_joris_alignment.json",
+    "sha256": "3c1c57a2699cb2223b41ff835cb8ef7a25cf765249c9b896671d94501c87bbf2",
+    "bytes": 59228,
+    "origin_addendum_member": "evidence/electrical/ch0_joris_evidence_alignment_20261019.json",
+    "origin_sha256": "db61fe26c17e5ca0279f2e312c9a8948e52e3640963af5f6a0e4773e60ce3019",
+    "origin_bytes": 60245,
+    "origin_reference": "../../METROLOGY_ADDENDUM_REFERENCE.json",
+    "origin_scope": "new CH0/Joris follow-up; not a member of the original edbd618a archive",
+    "transformation": "scientific fields retained; private provenance locators projected"
+  },
+  "metrology_addendum_reference": "../../METROLOGY_ADDENDUM_REFERENCE.json",
+  "follow_up_locator_scope": "campaign-member: labels in the new capsule identify relative campaign paths; they do not assert membership of the original archive. Use the separate addendum reference."
 }

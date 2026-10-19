@@ -1,0 +1,479 @@
+[
+  {
+    "function": [
+      "fast_firmware_row_to_power",
+      "estimate_voltage_from_current",
+      "apply_full_system_current_scale_to_summary",
+      "extract_power_calculation_summary"
+    ],
+    "order": [
+      "Unchanged numeric UDP/Parquet payload; no collector gain/offset",
+      "Nominal current: raw_mA / 1000, once",
+      "Calibrated I = g * (raw_mA / 1000 + o)",
+      "Voltage U = a + b * I",
+      "Power P = c * I * U",
+      "Historical trapezoidal integration",
+      "Imported E = s * E_unscaled, once",
+      "Divide energy by this acquisition’s own completed N"
+    ],
+    "parameters": {
+      "a": 19.062607082705,
+      "b": -0.07444582,
+      "c": 0.9705324920014426,
+      "calibration_finished_at": "2026-09-04T19:59:27.536313+00:00",
+      "calibration_started_at": "2026-09-04T19:53:09.060896+00:00",
+      "channel": 0,
+      "g": 0.997224237630222,
+      "model_current_domain_a": [
+        0.0,
+        3.5
+      ],
+      "o": 0.004704622,
+      "profile_warning_reasons": [],
+      "s": 0.9035075097142278,
+      "sample_rate_hz": 2000,
+      "setup_scale_role": "Power/energy multiplier outside calibrated I and U(I)"
+    },
+    "path_id": "legacy_FAST_FW_Rust_and_import",
+    "provenance": [
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/runtime_source_map.json",
+        "sha256": "660cd8175be7b9654ca11df136b985a7bb9312d1f1079c6e13f8f222f5c29ddb"
+      },
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/runtime_application.json",
+        "sha256": "945dd433807e8ce96fc387d7dbd312d5acb1c49ef8dd216508db448dfb7e210e"
+      },
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/runtime_checks.json",
+        "sha256": "9d2b12859f32bb1a8d408e59d61328ed2ec8416f77fe1c3f4089ff5f571643af"
+      },
+      {
+        "bytes": 1245,
+        "path": "campaign-member:evidence/electrical/new_acquisition_models/orin_nx_deepx_m1_01.json",
+        "sha256": "ba079a02a464b6965fc6f2addc4f506a4546824e6071790744cd034e8b71fbe6"
+      },
+      {
+        "bytes": 278292,
+        "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_deepx_m1_01_original_calibration.json",
+        "sha256": "9494eea7de1d18167f73854e276bf6f9bba0066c51ff2c81c49737486235cfd1"
+      },
+      {
+        "bytes": 4491,
+        "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_deepx_m1_01_binding.json",
+        "sha256": "111a8744745c80e772f081ed2f2d2b50f4a6f90120e92b538e34465b129c7027"
+      }
+    ],
+    "setup_id": "orin_nx_deepx_m1_01",
+    "units": {
+      "E_over_N": "J/completion",
+      "a": "V",
+      "b": "V/A",
+      "c_and_s": "dimensionless power/energy multipliers",
+      "energy": "J",
+      "g": "dimensionless",
+      "o": "A",
+      "power": "W",
+      "raw_mA_div_1000": "A",
+      "raw_numeric": "ADC count, nominally numerically mA"
+    }
+  },
+  {
+    "function": [
+      "trace_export::main",
+      "power_model",
+      "overlap_integral"
+    ],
+    "order": [
+      "Unchanged numeric UDP/Parquet payload; no collector gain/offset",
+      "CSV current_mA copies the same numeric value",
+      "Nominal current: raw_mA / 1000, once",
+      "Calibrated I = g * (raw_mA / 1000 + o)",
+      "Voltage U = a + b * I",
+      "Power P = c * s * I * U",
+      "Sample-centered piecewise-constant integration over the bound native interval",
+      "Divide energy by this acquisition’s own completed N"
+    ],
+    "parameters": {
+      "a": 19.062607082705,
+      "b": -0.07444582,
+      "c": 0.9705324920014426,
+      "calibration_finished_at": "2026-09-04T19:59:27.536313+00:00",
+      "calibration_started_at": "2026-09-04T19:53:09.060896+00:00",
+      "channel": 0,
+      "g": 0.997224237630222,
+      "model_current_domain_a": [
+        0.0,
+        3.5
+      ],
+      "o": 0.004704622,
+      "profile_warning_reasons": [],
+      "s": 0.9035075097142278,
+      "sample_rate_hz": 2000,
+      "setup_scale_role": "Power/energy multiplier outside calibrated I and U(I)"
+    },
+    "path_id": "new_inner_Python_v2_v3",
+    "provenance": [
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/runtime_source_map.json",
+        "sha256": "660cd8175be7b9654ca11df136b985a7bb9312d1f1079c6e13f8f222f5c29ddb"
+      },
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/runtime_application.json",
+        "sha256": "945dd433807e8ce96fc387d7dbd312d5acb1c49ef8dd216508db448dfb7e210e"
+      },
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/runtime_checks.json",
+        "sha256": "9d2b12859f32bb1a8d408e59d61328ed2ec8416f77fe1c3f4089ff5f571643af"
+      },
+      {
+        "bytes": 1245,
+        "path": "campaign-member:evidence/electrical/new_acquisition_models/orin_nx_deepx_m1_01.json",
+        "sha256": "ba079a02a464b6965fc6f2addc4f506a4546824e6071790744cd034e8b71fbe6"
+      },
+      {
+        "bytes": 278292,
+        "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_deepx_m1_01_original_calibration.json",
+        "sha256": "9494eea7de1d18167f73854e276bf6f9bba0066c51ff2c81c49737486235cfd1"
+      },
+      {
+        "bytes": 4491,
+        "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_deepx_m1_01_binding.json",
+        "sha256": "111a8744745c80e772f081ed2f2d2b50f4a6f90120e92b538e34465b129c7027"
+      }
+    ],
+    "setup_id": "orin_nx_deepx_m1_01",
+    "units": {
+      "E_over_N": "J/completion",
+      "a": "V",
+      "b": "V/A",
+      "c_and_s": "dimensionless power/energy multipliers",
+      "energy": "J",
+      "g": "dimensionless",
+      "o": "A",
+      "power": "W",
+      "raw_mA_div_1000": "A",
+      "raw_numeric": "ADC count, nominally numerically mA"
+    }
+  },
+  {
+    "function": [
+      "fast_firmware_row_to_power",
+      "estimate_voltage_from_current",
+      "apply_full_system_current_scale_to_summary",
+      "extract_power_calculation_summary"
+    ],
+    "order": [
+      "Unchanged numeric UDP/Parquet payload; no collector gain/offset",
+      "Nominal current: raw_mA / 1000, once",
+      "Calibrated I = g * (raw_mA / 1000 + o)",
+      "Voltage U = a + b * I",
+      "Power P = c * I * U",
+      "Historical trapezoidal integration",
+      "Imported E = s * E_unscaled, once",
+      "Divide energy by this acquisition’s own completed N"
+    ],
+    "parameters": {
+      "a": 19.062607082705,
+      "b": -0.07444582,
+      "c": 0.9705324920014426,
+      "calibration_finished_at": "2026-09-04T20:15:15.094688+00:00",
+      "calibration_started_at": "2026-09-04T20:09:10.626761+00:00",
+      "channel": 0,
+      "g": 0.997224237630222,
+      "model_current_domain_a": [
+        0.0,
+        3.5
+      ],
+      "o": 0.004704622,
+      "profile_warning_reasons": [
+        "point_factor_spread_too_high",
+        "scale_factor_outside_configured_range"
+      ],
+      "s": 0.8963972779781232,
+      "sample_rate_hz": 2000,
+      "setup_scale_role": "Power/energy multiplier outside calibrated I and U(I)"
+    },
+    "path_id": "legacy_FAST_FW_Rust_and_import",
+    "provenance": [
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/runtime_source_map.json",
+        "sha256": "660cd8175be7b9654ca11df136b985a7bb9312d1f1079c6e13f8f222f5c29ddb"
+      },
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/runtime_application.json",
+        "sha256": "945dd433807e8ce96fc387d7dbd312d5acb1c49ef8dd216508db448dfb7e210e"
+      },
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/runtime_checks.json",
+        "sha256": "9d2b12859f32bb1a8d408e59d61328ed2ec8416f77fe1c3f4089ff5f571643af"
+      },
+      {
+        "bytes": 1241,
+        "path": "campaign-member:evidence/electrical/new_acquisition_models/orin_nx_hailo10_01.json",
+        "sha256": "52a6ebe093b7134c640ae03fd24d6a74dc9fe970ed7ea759246e878cd223f558"
+      },
+      {
+        "bytes": 278253,
+        "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_hailo10_01_original_calibration.json",
+        "sha256": "b3fe9eb8c7ac6e7ffc78edabf834910b699bed0f766d9d7b2eddddde9ce8e946"
+      },
+      {
+        "bytes": 4615,
+        "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_hailo10_01_binding.json",
+        "sha256": "243890992b2121bfbd65a1ac8e79445438ff5f60a7391a6e3c937e432d16f188"
+      }
+    ],
+    "setup_id": "orin_nx_hailo10_01",
+    "units": {
+      "E_over_N": "J/completion",
+      "a": "V",
+      "b": "V/A",
+      "c_and_s": "dimensionless power/energy multipliers",
+      "energy": "J",
+      "g": "dimensionless",
+      "o": "A",
+      "power": "W",
+      "raw_mA_div_1000": "A",
+      "raw_numeric": "ADC count, nominally numerically mA"
+    }
+  },
+  {
+    "function": [
+      "trace_export::main",
+      "power_model",
+      "overlap_integral"
+    ],
+    "order": [
+      "Unchanged numeric UDP/Parquet payload; no collector gain/offset",
+      "CSV current_mA copies the same numeric value",
+      "Nominal current: raw_mA / 1000, once",
+      "Calibrated I = g * (raw_mA / 1000 + o)",
+      "Voltage U = a + b * I",
+      "Power P = c * s * I * U",
+      "Sample-centered piecewise-constant integration over the bound native interval",
+      "Divide energy by this acquisition’s own completed N"
+    ],
+    "parameters": {
+      "a": 19.062607082705,
+      "b": -0.07444582,
+      "c": 0.9705324920014426,
+      "calibration_finished_at": "2026-09-04T20:15:15.094688+00:00",
+      "calibration_started_at": "2026-09-04T20:09:10.626761+00:00",
+      "channel": 0,
+      "g": 0.997224237630222,
+      "model_current_domain_a": [
+        0.0,
+        3.5
+      ],
+      "o": 0.004704622,
+      "profile_warning_reasons": [
+        "point_factor_spread_too_high",
+        "scale_factor_outside_configured_range"
+      ],
+      "s": 0.8963972779781232,
+      "sample_rate_hz": 2000,
+      "setup_scale_role": "Power/energy multiplier outside calibrated I and U(I)"
+    },
+    "path_id": "new_inner_Python_v2_v3",
+    "provenance": [
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/runtime_source_map.json",
+        "sha256": "660cd8175be7b9654ca11df136b985a7bb9312d1f1079c6e13f8f222f5c29ddb"
+      },
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/runtime_application.json",
+        "sha256": "945dd433807e8ce96fc387d7dbd312d5acb1c49ef8dd216508db448dfb7e210e"
+      },
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/runtime_checks.json",
+        "sha256": "9d2b12859f32bb1a8d408e59d61328ed2ec8416f77fe1c3f4089ff5f571643af"
+      },
+      {
+        "bytes": 1241,
+        "path": "campaign-member:evidence/electrical/new_acquisition_models/orin_nx_hailo10_01.json",
+        "sha256": "52a6ebe093b7134c640ae03fd24d6a74dc9fe970ed7ea759246e878cd223f558"
+      },
+      {
+        "bytes": 278253,
+        "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_hailo10_01_original_calibration.json",
+        "sha256": "b3fe9eb8c7ac6e7ffc78edabf834910b699bed0f766d9d7b2eddddde9ce8e946"
+      },
+      {
+        "bytes": 4615,
+        "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_hailo10_01_binding.json",
+        "sha256": "243890992b2121bfbd65a1ac8e79445438ff5f60a7391a6e3c937e432d16f188"
+      }
+    ],
+    "setup_id": "orin_nx_hailo10_01",
+    "units": {
+      "E_over_N": "J/completion",
+      "a": "V",
+      "b": "V/A",
+      "c_and_s": "dimensionless power/energy multipliers",
+      "energy": "J",
+      "g": "dimensionless",
+      "o": "A",
+      "power": "W",
+      "raw_mA_div_1000": "A",
+      "raw_numeric": "ADC count, nominally numerically mA"
+    }
+  },
+  {
+    "function": [
+      "fast_firmware_row_to_power",
+      "estimate_voltage_from_current",
+      "apply_full_system_current_scale_to_summary",
+      "extract_power_calculation_summary"
+    ],
+    "order": [
+      "Unchanged numeric UDP/Parquet payload; no collector gain/offset",
+      "Nominal current: raw_mA / 1000, once",
+      "Calibrated I = g * (raw_mA / 1000 + o)",
+      "Voltage U = a + b * I",
+      "Power P = c * I * U",
+      "Historical trapezoidal integration",
+      "Imported E = s * E_unscaled, once",
+      "Divide energy by this acquisition’s own completed N"
+    ],
+    "parameters": {
+      "a": 19.062607082705,
+      "b": -0.07444582,
+      "c": 0.9705324920014426,
+      "calibration_finished_at": "2026-09-04T20:08:48.231301+00:00",
+      "calibration_started_at": "2026-09-04T19:59:50.777893+00:00",
+      "channel": 0,
+      "g": 0.997224237630222,
+      "model_current_domain_a": [
+        0.0,
+        3.5
+      ],
+      "o": 0.004704622,
+      "profile_warning_reasons": [],
+      "s": 0.9136343897390969,
+      "sample_rate_hz": 2000,
+      "setup_scale_role": "Power/energy multiplier outside calibrated I and U(I)"
+    },
+    "path_id": "legacy_FAST_FW_Rust_and_import",
+    "provenance": [
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/runtime_source_map.json",
+        "sha256": "660cd8175be7b9654ca11df136b985a7bb9312d1f1079c6e13f8f222f5c29ddb"
+      },
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/runtime_application.json",
+        "sha256": "945dd433807e8ce96fc387d7dbd312d5acb1c49ef8dd216508db448dfb7e210e"
+      },
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/runtime_checks.json",
+        "sha256": "9d2b12859f32bb1a8d408e59d61328ed2ec8416f77fe1c3f4089ff5f571643af"
+      },
+      {
+        "bytes": 1237,
+        "path": "campaign-member:evidence/electrical/new_acquisition_models/orin_nx_hailo8_01.json",
+        "sha256": "e8a300f76126a031b69ace4d315ff2a00fe67f9026f318c3140addccfce3d314"
+      },
+      {
+        "bytes": 282961,
+        "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_hailo8_01_original_calibration.json",
+        "sha256": "90a559f5467c0fef13409d472f14b797f4cf44b1038f0e491f62c5436ea2b5f6"
+      },
+      {
+        "bytes": 4481,
+        "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_hailo8_01_binding.json",
+        "sha256": "d850a7b1856a9f4ccb3d41a57bfde785306c4918fb2c736eabecc9e2d29a4942"
+      }
+    ],
+    "setup_id": "orin_nx_hailo8_01",
+    "units": {
+      "E_over_N": "J/completion",
+      "a": "V",
+      "b": "V/A",
+      "c_and_s": "dimensionless power/energy multipliers",
+      "energy": "J",
+      "g": "dimensionless",
+      "o": "A",
+      "power": "W",
+      "raw_mA_div_1000": "A",
+      "raw_numeric": "ADC count, nominally numerically mA"
+    }
+  },
+  {
+    "function": [
+      "trace_export::main",
+      "power_model",
+      "overlap_integral"
+    ],
+    "order": [
+      "Unchanged numeric UDP/Parquet payload; no collector gain/offset",
+      "CSV current_mA copies the same numeric value",
+      "Nominal current: raw_mA / 1000, once",
+      "Calibrated I = g * (raw_mA / 1000 + o)",
+      "Voltage U = a + b * I",
+      "Power P = c * s * I * U",
+      "Sample-centered piecewise-constant integration over the bound native interval",
+      "Divide energy by this acquisition’s own completed N"
+    ],
+    "parameters": {
+      "a": 19.062607082705,
+      "b": -0.07444582,
+      "c": 0.9705324920014426,
+      "calibration_finished_at": "2026-09-04T20:08:48.231301+00:00",
+      "calibration_started_at": "2026-09-04T19:59:50.777893+00:00",
+      "channel": 0,
+      "g": 0.997224237630222,
+      "model_current_domain_a": [
+        0.0,
+        3.5
+      ],
+      "o": 0.004704622,
+      "profile_warning_reasons": [],
+      "s": 0.9136343897390969,
+      "sample_rate_hz": 2000,
+      "setup_scale_role": "Power/energy multiplier outside calibrated I and U(I)"
+    },
+    "path_id": "new_inner_Python_v2_v3",
+    "provenance": [
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/runtime_source_map.json",
+        "sha256": "660cd8175be7b9654ca11df136b985a7bb9312d1f1079c6e13f8f222f5c29ddb"
+      },
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/runtime_application.json",
+        "sha256": "945dd433807e8ce96fc387d7dbd312d5acb1c49ef8dd216508db448dfb7e210e"
+      },
+      {
+        "path": "evidence/electrical/ch0_joris_20261019/runtime_checks.json",
+        "sha256": "9d2b12859f32bb1a8d408e59d61328ed2ec8416f77fe1c3f4089ff5f571643af"
+      },
+      {
+        "bytes": 1237,
+        "path": "campaign-member:evidence/electrical/new_acquisition_models/orin_nx_hailo8_01.json",
+        "sha256": "e8a300f76126a031b69ace4d315ff2a00fe67f9026f318c3140addccfce3d314"
+      },
+      {
+        "bytes": 282961,
+        "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_hailo8_01_original_calibration.json",
+        "sha256": "90a559f5467c0fef13409d472f14b797f4cf44b1038f0e491f62c5436ea2b5f6"
+      },
+      {
+        "bytes": 4481,
+        "path": "campaign-member:evidence/electrical/new_acquisition_models/sources/orin_nx_hailo8_01_binding.json",
+        "sha256": "d850a7b1856a9f4ccb3d41a57bfde785306c4918fb2c736eabecc9e2d29a4942"
+      }
+    ],
+    "setup_id": "orin_nx_hailo8_01",
+    "units": {
+      "E_over_N": "J/completion",
+      "a": "V",
+      "b": "V/A",
+      "c_and_s": "dimensionless power/energy multipliers",
+      "energy": "J",
+      "g": "dimensionless",
+      "o": "A",
+      "power": "W",
+      "raw_mA_div_1000": "A",
+      "raw_numeric": "ADC count, nominally numerically mA"
+    }
+  }
+]
