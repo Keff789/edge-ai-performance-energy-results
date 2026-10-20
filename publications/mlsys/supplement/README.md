@@ -1,6 +1,6 @@
 # Complete MLSys supplement
 
-[Read the supplement](MLSys_Supplement.pdf) or download its [LaTeX build sources](source.zip). This R30 working revision includes the all-seven-model Weighted analysis alongside the runtime settings, quality and artifact audits, scheduling protocols and energy acquisition.
+[Read the supplement](MLSys_Supplement.pdf) or download its [LaTeX build sources](source.zip). This R31 working revision includes the all-seven-model Weighted analysis alongside the runtime settings, quality and artifact audits, scheduling protocols and energy acquisition.
 
 Section H.2 documents full-workflow graph normalization, the 15-node analytic operation-count extension, the weight-fitting objective, seven model-held-out folds and fixed-weight sensitivity checks. Section H.1 retains the earlier complete shortlist-budget analysis. Section J retains the five fixed graph rules and their original Native reference rates.
 
