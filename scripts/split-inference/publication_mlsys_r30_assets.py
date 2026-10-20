@@ -204,11 +204,11 @@ def render_weighted(output: Path, study_results: Path, numeric_only=False):
         ax.set_xticks([1, 3, 5, 10, 15, 20])
         ax.set_xlabel('Maximum Native trials per group')
         ax.set_ylabel('Mean Native throughput loss (%)')
-        ax.set_title('All seven models · 21 model/device groups', fontsize=8.5, pad=7)
+        # Cohort and group counts belong in the publication caption.
         ax.grid(axis='y', color='#dddddd', linewidth=.45)
         ax.legend(loc='upper right', frameon=False, handlelength=2.2,
                   labelspacing=.30, fontsize=7.1)
-        fig.subplots_adjust(left=.15, right=.985, bottom=.16, top=.91)
+        fig.subplots_adjust(left=.15, right=.985, bottom=.16, top=.985)
         _save_figure(fig, directory, stem)
         plt.close(fig)
     return asset
