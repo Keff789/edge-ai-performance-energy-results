@@ -1,0 +1,460 @@
+{
+  "budget_protocol": "For every k, keep all groups equally weighted and test min(k,n_group). Detector groups have n=3 and remain at zero loss for k>=3.",
+  "caption": "Native throughput loss after testing up to k ranked cuts per model/device group. All 21 groups receive equal weight at every budget. A group with fewer than k candidates tests all its candidates. Weighted (default) uses (1, 3, 0.2). Weighted (fit on all models) is a pooled in-sample result. Weighted (model held-out) fits six models and evaluates the seventh on all three devices. Calibrated Generic is omitted because its frozen predictions cover classifiers only.",
+  "default_weights": {
+    "w_comm": 1.0,
+    "w_imb": 3.0,
+    "w_tensors": 0.2
+  },
+  "held_out_status": "Leave one entire model out, including all three devices. Each displayed group uses only its held-out prediction.",
+  "kind": "measurement",
+  "method_labels": {
+    "bytes": "Bytes",
+    "generic": "Generic",
+    "weighted_cv": "Weighted (model held-out)",
+    "weighted_default": "Weighted (default)",
+    "weighted_pooled": "Weighted (fit on all models)"
+  },
+  "operation_feature_contract": "analytic-operation-proxy-r29-extended-v1",
+  "optimized_status": "Retrospective in-sample optimization on every evaluated model/device group.",
+  "optimized_weights": {
+    "w_comm": 1.0,
+    "w_imb": 0.15799266978091375,
+    "w_tensors": 0.2
+  },
+  "schema": "mlsys-r30-weighted-figure-v1",
+  "scope": {
+    "all_source_pairs": 204,
+    "all_source_quality_eligible_pairs": 187,
+    "classifier_pairs": 151,
+    "detector_pairs": 36,
+    "evaluated_quality_pairs": 187,
+    "missing_models_due_incomplete_features": [],
+    "model_device_groups": 21,
+    "models": [
+      "mobilenet_v3_large",
+      "regnet_x_1_6gf",
+      "resnet50",
+      "yolo11l",
+      "yolo26m",
+      "yolo26s",
+      "yolov7_paper"
+    ]
+  },
+  "series": {
+    "bytes": [
+      {
+        "k": 1,
+        "mean_loss_pct": 17.226542799168698
+      },
+      {
+        "k": 2,
+        "mean_loss_pct": 13.263532061914768
+      },
+      {
+        "k": 3,
+        "mean_loss_pct": 9.320355445001738
+      },
+      {
+        "k": 4,
+        "mean_loss_pct": 7.021127873523854
+      },
+      {
+        "k": 5,
+        "mean_loss_pct": 3.798185625435318
+      },
+      {
+        "k": 6,
+        "mean_loss_pct": 2.0065375593344235
+      },
+      {
+        "k": 7,
+        "mean_loss_pct": 1.806104393603521
+      },
+      {
+        "k": 8,
+        "mean_loss_pct": 1.806104393603521
+      },
+      {
+        "k": 9,
+        "mean_loss_pct": 1.4803332837157352
+      },
+      {
+        "k": 10,
+        "mean_loss_pct": 1.3492200381238724
+      },
+      {
+        "k": 11,
+        "mean_loss_pct": 0.4173007670784313
+      },
+      {
+        "k": 12,
+        "mean_loss_pct": 0.09229258286492581
+      },
+      {
+        "k": 13,
+        "mean_loss_pct": 0.006463021353029336
+      },
+      {
+        "k": 14,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 15,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 16,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 17,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 18,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 19,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 20,
+        "mean_loss_pct": 0.0
+      }
+    ],
+    "generic": [
+      {
+        "k": 1,
+        "mean_loss_pct": 15.077128973324953
+      },
+      {
+        "k": 2,
+        "mean_loss_pct": 10.84438501265191
+      },
+      {
+        "k": 3,
+        "mean_loss_pct": 10.18637400727791
+      },
+      {
+        "k": 4,
+        "mean_loss_pct": 9.73814989272105
+      },
+      {
+        "k": 5,
+        "mean_loss_pct": 8.763314163809524
+      },
+      {
+        "k": 6,
+        "mean_loss_pct": 8.130010473007053
+      },
+      {
+        "k": 7,
+        "mean_loss_pct": 7.281853890205785
+      },
+      {
+        "k": 8,
+        "mean_loss_pct": 6.457429091520407
+      },
+      {
+        "k": 9,
+        "mean_loss_pct": 6.133807059759467
+      },
+      {
+        "k": 10,
+        "mean_loss_pct": 6.002693814167604
+      },
+      {
+        "k": 11,
+        "mean_loss_pct": 5.8914018365331415
+      },
+      {
+        "k": 12,
+        "mean_loss_pct": 5.067793925325314
+      },
+      {
+        "k": 13,
+        "mean_loss_pct": 3.9460661798007344
+      },
+      {
+        "k": 14,
+        "mean_loss_pct": 3.3454669248978623
+      },
+      {
+        "k": 15,
+        "mean_loss_pct": 2.9715565651201503
+      },
+      {
+        "k": 16,
+        "mean_loss_pct": 1.5934465139851521
+      },
+      {
+        "k": 17,
+        "mean_loss_pct": 0.9965580403706563
+      },
+      {
+        "k": 18,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 19,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 20,
+        "mean_loss_pct": 0.0
+      }
+    ],
+    "weighted_cv": [
+      {
+        "k": 1,
+        "mean_loss_pct": 18.767915133798745
+      },
+      {
+        "k": 2,
+        "mean_loss_pct": 11.664138518616793
+      },
+      {
+        "k": 3,
+        "mean_loss_pct": 11.341651572896938
+      },
+      {
+        "k": 4,
+        "mean_loss_pct": 10.473864212290154
+      },
+      {
+        "k": 5,
+        "mean_loss_pct": 4.899698159042557
+      },
+      {
+        "k": 6,
+        "mean_loss_pct": 2.956797629292007
+      },
+      {
+        "k": 7,
+        "mean_loss_pct": 2.930523149236076
+      },
+      {
+        "k": 8,
+        "mean_loss_pct": 2.6010022617192723
+      },
+      {
+        "k": 9,
+        "mean_loss_pct": 1.3492200381238724
+      },
+      {
+        "k": 10,
+        "mean_loss_pct": 0.9849551142396612
+      },
+      {
+        "k": 11,
+        "mean_loss_pct": 0.2440515968155659
+      },
+      {
+        "k": 12,
+        "mean_loss_pct": 0.09229258286492581
+      },
+      {
+        "k": 13,
+        "mean_loss_pct": 0.09229258286492581
+      },
+      {
+        "k": 14,
+        "mean_loss_pct": 0.09229258286492581
+      },
+      {
+        "k": 15,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 16,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 17,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 18,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 19,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 20,
+        "mean_loss_pct": 0.0
+      }
+    ],
+    "weighted_default": [
+      {
+        "k": 1,
+        "mean_loss_pct": 15.73266038918571
+      },
+      {
+        "k": 2,
+        "mean_loss_pct": 10.542100915249593
+      },
+      {
+        "k": 3,
+        "mean_loss_pct": 10.014221592283993
+      },
+      {
+        "k": 4,
+        "mean_loss_pct": 8.767383968294084
+      },
+      {
+        "k": 5,
+        "mean_loss_pct": 7.3671314867793285
+      },
+      {
+        "k": 6,
+        "mean_loss_pct": 6.666745068193654
+      },
+      {
+        "k": 7,
+        "mean_loss_pct": 6.570702707699711
+      },
+      {
+        "k": 8,
+        "mean_loss_pct": 6.082255259963039
+      },
+      {
+        "k": 9,
+        "mean_loss_pct": 5.481656005060167
+      },
+      {
+        "k": 10,
+        "mean_loss_pct": 5.105330570660042
+      },
+      {
+        "k": 11,
+        "mean_loss_pct": 3.5096718834327345
+      },
+      {
+        "k": 12,
+        "mean_loss_pct": 3.5096718834327345
+      },
+      {
+        "k": 13,
+        "mean_loss_pct": 2.208901080116366
+      },
+      {
+        "k": 14,
+        "mean_loss_pct": 2.1954005440458624
+      },
+      {
+        "k": 15,
+        "mean_loss_pct": 0.9965580403706563
+      },
+      {
+        "k": 16,
+        "mean_loss_pct": 0.670340242808652
+      },
+      {
+        "k": 17,
+        "mean_loss_pct": 0.670340242808652
+      },
+      {
+        "k": 18,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 19,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 20,
+        "mean_loss_pct": 0.0
+      }
+    ],
+    "weighted_pooled": [
+      {
+        "k": 1,
+        "mean_loss_pct": 16.670899967822407
+      },
+      {
+        "k": 2,
+        "mean_loss_pct": 6.005063303066712
+      },
+      {
+        "k": 3,
+        "mean_loss_pct": 5.084223371258263
+      },
+      {
+        "k": 4,
+        "mean_loss_pct": 4.2029354745809755
+      },
+      {
+        "k": 5,
+        "mean_loss_pct": 2.956797629292007
+      },
+      {
+        "k": 6,
+        "mean_loss_pct": 2.956797629292007
+      },
+      {
+        "k": 7,
+        "mean_loss_pct": 2.930523149236076
+      },
+      {
+        "k": 8,
+        "mean_loss_pct": 2.6010022617192723
+      },
+      {
+        "k": 9,
+        "mean_loss_pct": 1.3492200381238724
+      },
+      {
+        "k": 10,
+        "mean_loss_pct": 0.9849551142396612
+      },
+      {
+        "k": 11,
+        "mean_loss_pct": 0.2440515968155659
+      },
+      {
+        "k": 12,
+        "mean_loss_pct": 0.09229258286492581
+      },
+      {
+        "k": 13,
+        "mean_loss_pct": 0.09229258286492581
+      },
+      {
+        "k": 14,
+        "mean_loss_pct": 0.09229258286492581
+      },
+      {
+        "k": 15,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 16,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 17,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 18,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 19,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 20,
+        "mean_loss_pct": 0.0
+      }
+    ]
+  },
+  "source_sha256": {
+    "aggregate_curves.csv": "fbafa273eede4166fcb54dc6f9384f0b8923f27e43ebc8eeafc55b2bfa621140",
+    "summary.json": "15f1a2238c3346b96f46b98c90dc116c81ae0660e7efd7f59b7e5f584cad8220"
+  }
+}

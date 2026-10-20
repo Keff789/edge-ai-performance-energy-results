@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\caption{Mean Native throughput loss (\%) over all 21 model/device groups. The budget is $k$ trials per group, capped by the available cuts. The pooled fit uses all seven models. Model-held-out weights exclude the evaluated model on all three devices.}
+\label{tab:weighted-budget}
+\begin{tabular}{@{}l*{3}{D{.}{.}{2}}@{}}
+\toprule
+Method & \multicolumn{1}{c}{$k=1$} & \multicolumn{1}{c}{$k=3$} & \multicolumn{1}{c}{$k=5$} \\
+\midrule
+Bytes & 17.23 & 9.32 & 3.80 \\
+Generic & 15.08 & 10.19 & 8.76 \\
+Weighted (default) & 15.73 & 10.01 & 7.37 \\
+Weighted (joint fit) & 16.67 & 5.08 & 2.96 \\
+Weighted (model held-out) & 18.77 & 11.34 & 4.90 \\
+\bottomrule
+\end{tabular}
+\end{table}

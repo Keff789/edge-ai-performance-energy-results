@@ -1,0 +1,144 @@
+{
+  "scenarios": [
+    {
+      "output": ".",
+      "scenario": "base",
+      "totals": [
+        {
+          "F_total": 237896112,
+          "added_operations": 0,
+          "model": "mobilenet_v3_large"
+        },
+        {
+          "F_total": 1627596184,
+          "added_operations": 0,
+          "model": "regnet_x_1_6gf"
+        },
+        {
+          "F_total": 4128304744,
+          "added_operations": 0,
+          "model": "resnet50"
+        },
+        {
+          "F_total": 44137361696,
+          "added_operations": 10795200,
+          "model": "yolo11l"
+        },
+        {
+          "F_total": 34679176196,
+          "added_operations": 37887000,
+          "model": "yolo26m"
+        },
+        {
+          "F_total": 10719060996,
+          "added_operations": 37887000,
+          "model": "yolo26s"
+        },
+        {
+          "F_total": 53503643440,
+          "added_operations": 0,
+          "model": "yolov7_paper"
+        }
+      ]
+    },
+    {
+      "output": "sensitivity/new_ops_x0_1",
+      "scenario": "new_ops_x0_1",
+      "totals": [
+        {
+          "F_total": 237896112,
+          "added_operations": 0,
+          "model": "mobilenet_v3_large"
+        },
+        {
+          "F_total": 1627596184,
+          "added_operations": 0,
+          "model": "regnet_x_1_6gf"
+        },
+        {
+          "F_total": 4128304744,
+          "added_operations": 0,
+          "model": "resnet50"
+        },
+        {
+          "F_total": 44127646016,
+          "added_operations": 1079520,
+          "model": "yolo11l"
+        },
+        {
+          "F_total": 34645077896,
+          "added_operations": 3788700,
+          "model": "yolo26m"
+        },
+        {
+          "F_total": 10684962696,
+          "added_operations": 3788700,
+          "model": "yolo26s"
+        },
+        {
+          "F_total": 53503643440,
+          "added_operations": 0,
+          "model": "yolov7_paper"
+        }
+      ]
+    },
+    {
+      "output": "sensitivity/new_ops_x10",
+      "scenario": "new_ops_x10",
+      "totals": [
+        {
+          "F_total": 237896112,
+          "added_operations": 0,
+          "model": "mobilenet_v3_large"
+        },
+        {
+          "F_total": 1627596184,
+          "added_operations": 0,
+          "model": "regnet_x_1_6gf"
+        },
+        {
+          "F_total": 4128304744,
+          "added_operations": 0,
+          "model": "resnet50"
+        },
+        {
+          "F_total": 44234518496,
+          "added_operations": 107952000,
+          "model": "yolo11l"
+        },
+        {
+          "F_total": 35020159196,
+          "added_operations": 378870000,
+          "model": "yolo26m"
+        },
+        {
+          "F_total": 11060043996,
+          "added_operations": 378870000,
+          "model": "yolo26s"
+        },
+        {
+          "F_total": 53503643440,
+          "added_operations": 0,
+          "model": "yolov7_paper"
+        }
+      ]
+    }
+  ],
+  "semantic_sources": {
+    "Mod": "https://onnx.ai/onnx/operators/onnx__Mod.html#mod-13",
+    "ReduceMax": "https://onnx.ai/onnx/operators/onnx__ReduceMax.html#reducemax-18",
+    "Softmax": "https://onnx.ai/onnx/operators/onnx__Softmax.html#softmax-13",
+    "TopK": "https://onnx.ai/onnx/operators/onnx__TopK.html#topk-11"
+  },
+  "source_inputs_sha256": {
+    "current_pair_feature_bindings.csv": "1a430b568d760db6a72c4c7a23a39bfe36518b6ea623ef270b7bd3233bb979f5",
+    "graph_boundary_features.csv": "e1cc87972a3abc0deb37c32f4750a1bd6dbbeb35a8042e872d3f80d6442ec395",
+    "inputs/graphs.json": "6c77b14bfd6ed76e635873e4f753f31631cdf0db7584aa06761aaaa927c0cb84",
+    "normalization_universes.json": "45886aec9681f5900636f200a709d65891996bc41adc9313ec0042c7238d4628",
+    "scripts/graph_features.py": "3834a0d5cd75fb8d67e333317dcb0e831f9c5bf39da41197589224cf3924783a",
+    "scripts/operation_counter.py": "2bba4fe68edea4dee57de7e9b62ff38a8f1fd3ddeefddbfa67e65d45511d1a5d",
+    "validation.json": "6a52b9eb84130b645c6421edc8d7f7395c3ea2fe3cf39a7ff1290d8652968ddc"
+  },
+  "source_inputs_unchanged": true,
+  "version": "analytic-operation-proxy-r29-extended-v1"
+}

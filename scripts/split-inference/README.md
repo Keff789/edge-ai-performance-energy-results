@@ -31,3 +31,28 @@ The [reference differences](../../results/split-inference/publications/mlsys-r22
 The selection rules, including throughput maximization and energy minimization within each model/setup, are in [config.json](config.json). Scripts preserve the source calculation and rendering logic; the export changes relative data paths, extracts the unchanged quantile helper, and omits duplicate manuscript ZIPs, report matrices and output-hash registries. [Results and interpretation limits](../../results/split-inference/README.md) describe actual timed-work differences, quality losses, original flags and unresolved source limitations. Existing archive identifiers in the data are metadata, not dependencies on private files.
 
 The analysis retains the selection, aggregation and Pareto rules of [Results revision 380dfa09](https://github.com/Keff789/onnx-splitpoint-results/tree/380dfa09aa6740acdc71908cb6e5dd5c8fc115ad/results/evaluation/paper_after_refresh16_20261013), with the current `deepx_native_a4_20261015` replacement cohort. Exactly 75 DeepX Native identities use 225 selected performance and 225 calibrated energy repeats; the remaining direct observations and all original quality selections are retained. The offline evaluator reads these compact inputs, independently of the [ONNX Splitpoint Tool sources](../../software/README.md).
+
+## Current MLSys R30 publication profile
+
+Install `scripts/split-inference/requirements-r30.txt` in a separate environment
+and run:
+
+```sh
+python -I -B scripts/split-inference/reproduce.py --publication mlsys-r30 \
+  --output ../mlsys-r30-output --verify
+```
+
+The profile regenerates the existing measurement tables and figures, the maintained
+boundary illustration, the seven-model Weighted comparison and an additional
+single-column YOLOv7 case figure. The wide YOLO view remains available.
+`--numeric-only` omits image rendering. Unlike the frozen R22 render-byte gate,
+R30 verification checks exact scientific CSV/JSON/TeX payloads while allowing
+the documented common figure style. It also checks seven disjoint model folds,
+187 eligible pairs in 21 groups, unchanged baseline selections, original R22
+measurement coordinates and unchanged YOLO case values. The default R22 command
+and its reference results are unchanged.
+
+See [Weighted study](../supplementary-studies/rq2-weighted-20261020/README.md)
+for original inputs, full-graph normalization, operation proxy version, fitting
+objective and sensitivity checks. Generated assets are under
+`publications/mlsys-r30` in the requested output directory.

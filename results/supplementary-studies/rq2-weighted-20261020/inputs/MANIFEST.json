@@ -1,0 +1,84 @@
+{
+  "schema": "rq2-weighted-inputs-v1",
+  "scope": "Compact exact subset of the current graph-feature export needed for offline recomputation. Original missing operator counts are retained here and extended by versioned source code.",
+  "archive": "current_graph_feature_inputs.zip",
+  "archive_sha256": "c9fe64b0a67ff74c987b030d9db412dbaa5008a293d85dbf9fb05b504b1ace1a",
+  "members": [
+    {
+      "path": "binding_audit.json",
+      "sha256": "8154c67e921cdc2c4936e6398fbab01119dbf0c95d12cc76040162813b8fb8cc",
+      "bytes": 1799208
+    },
+    {
+      "path": "current_pair_feature_bindings.csv",
+      "sha256": "1a430b568d760db6a72c4c7a23a39bfe36518b6ea623ef270b7bd3233bb979f5",
+      "bytes": 719388
+    },
+    {
+      "path": "graph_boundary_features.csv",
+      "sha256": "e1cc87972a3abc0deb37c32f4750a1bd6dbbeb35a8042e872d3f80d6442ec395",
+      "bytes": 1760512
+    },
+    {
+      "path": "inputs/counter_audit_reference.json",
+      "sha256": "94dbe59c7ebf87d6877137c7201bfe78f65812b7dc4b1ad9e8acdfb85c612faa",
+      "bytes": 3172613
+    },
+    {
+      "path": "inputs/graphs.json",
+      "sha256": "6c77b14bfd6ed76e635873e4f753f31631cdf0db7584aa06761aaaa927c0cb84",
+      "bytes": 1817040
+    },
+    {
+      "path": "inputs/graphs_LICENSE.tool",
+      "sha256": "7ad6d60baf1708b786bcfb8810006cb1c078460ed3a87b2cef6544583aba02b7",
+      "bytes": 1064
+    },
+    {
+      "path": "inputs/graphs_archive_bindings.json",
+      "sha256": "28ebd1eb309c18bab57d2e2048ddaf473f557b75d36067294922a667872b4c7f",
+      "bytes": 3673
+    },
+    {
+      "path": "inputs/graphs_bound_tool_functions.py.txt",
+      "sha256": "4a2e1420abd80bb9826099d4be277b93c740f04bbbf117243d5d708201723f29",
+      "bytes": 5577
+    },
+    {
+      "path": "inputs/graphs_capture_validation.json",
+      "sha256": "dd366d4f240c0a2b27917bef2b1880bb92ddfe49959645b6db8c2adf56c35fa9",
+      "bytes": 4951
+    },
+    {
+      "path": "inputs/graphs_manifest.json",
+      "sha256": "8355840d83023d3063c9a1fd9f00d83b28593012c4e266504b0f4bdcfa06a9dc",
+      "bytes": 8197
+    },
+    {
+      "path": "normalization_universes.json",
+      "sha256": "45886aec9681f5900636f200a709d65891996bc41adc9313ec0042c7238d4628",
+      "bytes": 1374818
+    },
+    {
+      "path": "scripts/graph_features.py",
+      "sha256": "3834a0d5cd75fb8d67e333317dcb0e831f9c5bf39da41197589224cf3924783a",
+      "bytes": 21811
+    },
+    {
+      "path": "scripts/operation_counter.py",
+      "sha256": "2bba4fe68edea4dee57de7e9b62ff38a8f1fd3ddeefddbfa67e65d45511d1a5d",
+      "bytes": 9604
+    },
+    {
+      "path": "source_manifest.json",
+      "sha256": "3a78859f164c434b2d726f08e98e048c4195f6446a40c145e2b49833853bf776",
+      "bytes": 16173
+    },
+    {
+      "path": "validation.json",
+      "sha256": "6a52b9eb84130b645c6421edc8d7f7395c3ea2fe3cf39a7ff1290d8652968ddc",
+      "bytes": 17643
+    }
+  ],
+  "provenance_scope": "Original source and graph manifests are retained verbatim as provenance; their full-export inventories include files outside this intentionally compact subset. The present members list defines the required offline inputs."
+}

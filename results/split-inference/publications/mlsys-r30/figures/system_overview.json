@@ -1,0 +1,34 @@
+{
+  "kind": "conceptual_illustration",
+  "source": "publications/mlsys/figure1/source.zip",
+  "archive_sha256": "957b2906d095bfe4dfc2262eb6751e36e5bb6df5e3532747e11926fb6395adca",
+  "svg_sha256": "d632d13987a633c4d22a2662dde2ea20aaac232da119b59274197bc6ae28586f",
+  "scope": "Supported boundary capabilities. Paired measurements use the same single-input cut.",
+  "source_provenance": {
+    "source_document": "MLSys_Split_Selection.pdf",
+    "source_sha256": "8194bc423a24b220f05654f782a2b09c6de42fdeb9490ff46d73a60932ea2848",
+    "source_page": 2,
+    "clip_points": [
+      54.94,
+      63.0,
+      291.01,
+      248.0
+    ],
+    "edits": [
+      "Replace the two Task Competition labels with Task Completion.",
+      "Align Accelerator, GPU and cut colors with the shared manuscript palette. Preserve all text and geometry."
+    ],
+    "scope": "Retains the user-provided schematic showing different supported cut positions. Paired measurement semantics are specified in the caption.",
+    "palette": {
+      "accelerator": "#4477AA",
+      "gpu": "#EE7733",
+      "cut": "#228833"
+    },
+    "palette_source": "scripts/split-inference/publication_mlsys_figures.py",
+    "palette_revision": "R26",
+    "previous_svg_sha256": "205ecbbaa70431cca8d7a58bb0f87d00465c28c2e3c66350508d2e585367c90b",
+    "render_source_sha256": "d632d13987a633c4d22a2662dde2ea20aaac232da119b59274197bc6ae28586f",
+    "renderer_sha256": "6698c214d64375f517524653aee0b9b183eb1c36300b42063a7f46c518db1930",
+    "text_and_geometry_unchanged": true
+  }
+}

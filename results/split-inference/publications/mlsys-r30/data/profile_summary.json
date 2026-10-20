@@ -1,0 +1,37 @@
+{
+  "profile": "mlsys-r30",
+  "frozen_numerical_profile": "mlsys-r22",
+  "weighted_scope": {
+    "all_source_pairs": 204,
+    "all_source_quality_eligible_pairs": 187,
+    "evaluated_quality_pairs": 187,
+    "classifier_pairs": 151,
+    "detector_pairs": 36,
+    "model_device_groups": 21,
+    "models": [
+      "mobilenet_v3_large",
+      "regnet_x_1_6gf",
+      "resnet50",
+      "yolo11l",
+      "yolo26m",
+      "yolo26s",
+      "yolov7_paper"
+    ],
+    "missing_models_due_incomplete_features": []
+  },
+  "weighted_weights": {
+    "w_comm": 1.0,
+    "w_imb": 0.15799266978091375,
+    "w_tensors": 0.2
+  },
+  "new_asset_ids": [
+    "r30_weighted_budget_table",
+    "r30_weighted_fold_table",
+    "r30_weighted_macros",
+    "r30_weighted_operations_table",
+    "rq2_weighted_all_models",
+    "yolov7_h8_case_single_column"
+  ],
+  "measurement_changes": false,
+  "old_evidence_reference": "results/split-inference/publications/mlsys-r22/data/r15_evidence_validation.json"
+}

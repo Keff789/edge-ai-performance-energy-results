@@ -1,0 +1,572 @@
+{
+  "nodes": [
+    {
+      "classification": "modeled_r29_extension",
+      "complete": true,
+      "detail": {
+        "algorithm": "Numerically stabilized softmax: maximum, subtract, exp, sum, divide",
+        "axis": 3,
+        "count_is_hardware_independent_analysis_convention": true,
+        "divisions": 640000,
+        "exponentials": 640000,
+        "formula": "vectors * (6 * vector_length - 3)",
+        "input_shape": [
+          1,
+          4,
+          400,
+          400
+        ],
+        "maximum_comparisons": 638400,
+        "maximum_selections": 638400,
+        "output_elements": 640000,
+        "output_shape": [
+          1,
+          4,
+          400,
+          400
+        ],
+        "proxy_version": "analytic-operation-proxy-r29-extended-v1",
+        "semantic_reference": "https://onnx.ai/onnx/operators/onnx__Softmax.html#softmax-13",
+        "subtractions": 640000,
+        "sum_additions": 638400,
+        "vector_count": 1600,
+        "vector_length": 400
+      },
+      "known_operations": 3835200,
+      "model": "yolo11l",
+      "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+      "node_index": 261,
+      "node_name": "/model.10/m/m.0/attn/Softmax",
+      "operations": 3835200,
+      "operator": "Softmax",
+      "reason": ""
+    },
+    {
+      "classification": "modeled_r29_extension",
+      "complete": true,
+      "detail": {
+        "algorithm": "Numerically stabilized softmax: maximum, subtract, exp, sum, divide",
+        "axis": 3,
+        "count_is_hardware_independent_analysis_convention": true,
+        "divisions": 640000,
+        "exponentials": 640000,
+        "formula": "vectors * (6 * vector_length - 3)",
+        "input_shape": [
+          1,
+          4,
+          400,
+          400
+        ],
+        "maximum_comparisons": 638400,
+        "maximum_selections": 638400,
+        "output_elements": 640000,
+        "output_shape": [
+          1,
+          4,
+          400,
+          400
+        ],
+        "proxy_version": "analytic-operation-proxy-r29-extended-v1",
+        "semantic_reference": "https://onnx.ai/onnx/operators/onnx__Softmax.html#softmax-13",
+        "subtractions": 640000,
+        "sum_additions": 638400,
+        "vector_count": 1600,
+        "vector_length": 400
+      },
+      "known_operations": 3835200,
+      "model": "yolo11l",
+      "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+      "node_index": 281,
+      "node_name": "/model.10/m/m.1/attn/Softmax",
+      "operations": 3835200,
+      "operator": "Softmax",
+      "reason": ""
+    },
+    {
+      "classification": "modeled_r29_extension",
+      "complete": true,
+      "detail": {
+        "algorithm": "Numerically stabilized softmax: maximum, subtract, exp, sum, divide",
+        "axis": 1,
+        "count_is_hardware_independent_analysis_convention": true,
+        "divisions": 537600,
+        "exponentials": 537600,
+        "formula": "vectors * (6 * vector_length - 3)",
+        "input_shape": [
+          1,
+          16,
+          4,
+          8400
+        ],
+        "maximum_comparisons": 504000,
+        "maximum_selections": 504000,
+        "output_elements": 537600,
+        "output_shape": [
+          1,
+          16,
+          4,
+          8400
+        ],
+        "proxy_version": "analytic-operation-proxy-r29-extended-v1",
+        "semantic_reference": "https://onnx.ai/onnx/operators/onnx__Softmax.html#softmax-13",
+        "subtractions": 537600,
+        "sum_additions": 504000,
+        "vector_count": 33600,
+        "vector_length": 16
+      },
+      "known_operations": 3124800,
+      "model": "yolo11l",
+      "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+      "node_index": 600,
+      "node_name": "/model.23/dfl/Softmax",
+      "operations": 3124800,
+      "operator": "Softmax",
+      "reason": ""
+    },
+    {
+      "classification": "modeled_r29_extension",
+      "complete": true,
+      "detail": {
+        "algorithm": "Numerically stabilized softmax: maximum, subtract, exp, sum, divide",
+        "axis": 3,
+        "count_is_hardware_independent_analysis_convention": true,
+        "divisions": 640000,
+        "exponentials": 640000,
+        "formula": "vectors * (6 * vector_length - 3)",
+        "input_shape": [
+          1,
+          4,
+          400,
+          400
+        ],
+        "maximum_comparisons": 638400,
+        "maximum_selections": 638400,
+        "output_elements": 640000,
+        "output_shape": [
+          1,
+          4,
+          400,
+          400
+        ],
+        "proxy_version": "analytic-operation-proxy-r29-extended-v1",
+        "semantic_reference": "https://onnx.ai/onnx/operators/onnx__Softmax.html#softmax-13",
+        "subtractions": 640000,
+        "sum_additions": 638400,
+        "vector_count": 1600,
+        "vector_length": 400
+      },
+      "known_operations": 3835200,
+      "model": "yolo26m",
+      "model_sha256": "d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897",
+      "node_index": 164,
+      "node_name": "/model.10/m/m.0/attn/Softmax",
+      "operations": 3835200,
+      "operator": "Softmax",
+      "reason": ""
+    },
+    {
+      "classification": "modeled_r29_extension",
+      "complete": true,
+      "detail": {
+        "algorithm": "Numerically stabilized softmax: maximum, subtract, exp, sum, divide",
+        "axis": 3,
+        "count_is_hardware_independent_analysis_convention": true,
+        "divisions": 640000,
+        "exponentials": 640000,
+        "formula": "vectors * (6 * vector_length - 3)",
+        "input_shape": [
+          1,
+          4,
+          400,
+          400
+        ],
+        "maximum_comparisons": 638400,
+        "maximum_selections": 638400,
+        "output_elements": 640000,
+        "output_shape": [
+          1,
+          4,
+          400,
+          400
+        ],
+        "proxy_version": "analytic-operation-proxy-r29-extended-v1",
+        "semantic_reference": "https://onnx.ai/onnx/operators/onnx__Softmax.html#softmax-13",
+        "subtractions": 640000,
+        "sum_additions": 638400,
+        "vector_count": 1600,
+        "vector_length": 400
+      },
+      "known_operations": 3835200,
+      "model": "yolo26m",
+      "model_sha256": "d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897",
+      "node_index": 351,
+      "node_name": "/model.22/m.0/m.0.1/attn/Softmax",
+      "operations": 3835200,
+      "operator": "Softmax",
+      "reason": ""
+    },
+    {
+      "classification": "modeled_r29_extension",
+      "complete": true,
+      "detail": {
+        "axes": [
+          2
+        ],
+        "axes_source": "uniquely_inferred_from_captured_input_output_shapes_and_axes_tensor_length",
+        "comparisons": 663600,
+        "count_is_hardware_independent_analysis_convention": true,
+        "formula": "output_elements * 2 * (reduced_elements - 1)",
+        "input_shape": [
+          1,
+          8400,
+          80
+        ],
+        "keepdims": 0,
+        "output_elements": 8400,
+        "output_shape": [
+          1,
+          8400
+        ],
+        "proxy_version": "analytic-operation-proxy-r29-extended-v1",
+        "selections": 663600,
+        "semantic_reference": "https://onnx.ai/onnx/operators/onnx__ReduceMax.html#reducemax-18"
+      },
+      "known_operations": 1327200,
+      "model": "yolo26m",
+      "model_sha256": "d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897",
+      "node_index": 401,
+      "node_name": "/model.23/ReduceMax",
+      "operations": 1327200,
+      "operator": "ReduceMax",
+      "reason": ""
+    },
+    {
+      "classification": "modeled_r29_extension",
+      "complete": true,
+      "detail": {
+        "K": 300,
+        "K_source": "captured_value_and_index_output_shapes",
+        "N": 8400,
+        "algorithm": "Repeated maximum selection without replacement, scanning remaining original indices in ascending order; strict > preserves lower-index ties",
+        "algorithm_is_not_an_observed_runtime_implementation": true,
+        "axis": 1,
+        "comparisons": 2474850,
+        "count_is_hardware_independent_analysis_convention": true,
+        "formula": "vectors * 3 * sum(N-j-1 for j in range(K))",
+        "index_selections": 2474850,
+        "input_shape": [
+          1,
+          8400
+        ],
+        "output_elements": 300,
+        "output_shape": [
+          1,
+          300
+        ],
+        "proxy_version": "analytic-operation-proxy-r29-extended-v1",
+        "semantic_reference": "https://onnx.ai/onnx/operators/onnx__TopK.html#topk-11",
+        "structural_moves_and_loop_control_excluded": true,
+        "value_selections": 2474850,
+        "vector_count": 1
+      },
+      "known_operations": 7424550,
+      "model": "yolo26m",
+      "model_sha256": "d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897",
+      "node_index": 402,
+      "node_name": "/model.23/TopK",
+      "operations": 7424550,
+      "operator": "TopK",
+      "reason": ""
+    },
+    {
+      "classification": "modeled_r29_extension",
+      "complete": true,
+      "detail": {
+        "K": 300,
+        "K_source": "captured_value_and_index_output_shapes",
+        "N": 24000,
+        "algorithm": "Repeated maximum selection without replacement, scanning remaining original indices in ascending order; strict > preserves lower-index ties",
+        "algorithm_is_not_an_observed_runtime_implementation": true,
+        "axis": 1,
+        "comparisons": 7154850,
+        "count_is_hardware_independent_analysis_convention": true,
+        "formula": "vectors * 3 * sum(N-j-1 for j in range(K))",
+        "index_selections": 7154850,
+        "input_shape": [
+          1,
+          24000
+        ],
+        "output_elements": 300,
+        "output_shape": [
+          1,
+          300
+        ],
+        "proxy_version": "analytic-operation-proxy-r29-extended-v1",
+        "semantic_reference": "https://onnx.ai/onnx/operators/onnx__TopK.html#topk-11",
+        "structural_moves_and_loop_control_excluded": true,
+        "value_selections": 7154850,
+        "vector_count": 1
+      },
+      "known_operations": 21464550,
+      "model": "yolo26m",
+      "model_sha256": "d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897",
+      "node_index": 408,
+      "node_name": "/model.23/TopK_1",
+      "operations": 21464550,
+      "operator": "TopK",
+      "reason": ""
+    },
+    {
+      "classification": "modeled_r29_extension",
+      "complete": true,
+      "detail": {
+        "count_is_hardware_independent_analysis_convention": true,
+        "fmod": 0,
+        "formula": "output_elements; one scalar remainder primitive each",
+        "input_shape": [
+          1,
+          300
+        ],
+        "integer_remainder_primitives": 300,
+        "output_elements": 300,
+        "output_shape": [
+          1,
+          300
+        ],
+        "proxy_version": "analytic-operation-proxy-r29-extended-v1",
+        "semantic_reference": "https://onnx.ai/onnx/operators/onnx__Mod.html#mod-13"
+      },
+      "known_operations": 300,
+      "model": "yolo26m",
+      "model_sha256": "d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897",
+      "node_index": 411,
+      "node_name": "/model.23/Mod",
+      "operations": 300,
+      "operator": "Mod",
+      "reason": ""
+    },
+    {
+      "classification": "modeled_r29_extension",
+      "complete": true,
+      "detail": {
+        "algorithm": "Numerically stabilized softmax: maximum, subtract, exp, sum, divide",
+        "axis": 3,
+        "count_is_hardware_independent_analysis_convention": true,
+        "divisions": 640000,
+        "exponentials": 640000,
+        "formula": "vectors * (6 * vector_length - 3)",
+        "input_shape": [
+          1,
+          4,
+          400,
+          400
+        ],
+        "maximum_comparisons": 638400,
+        "maximum_selections": 638400,
+        "output_elements": 640000,
+        "output_shape": [
+          1,
+          4,
+          400,
+          400
+        ],
+        "proxy_version": "analytic-operation-proxy-r29-extended-v1",
+        "semantic_reference": "https://onnx.ai/onnx/operators/onnx__Softmax.html#softmax-13",
+        "subtractions": 640000,
+        "sum_additions": 638400,
+        "vector_count": 1600,
+        "vector_length": 400
+      },
+      "known_operations": 3835200,
+      "model": "yolo26s",
+      "model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+      "node_index": 130,
+      "node_name": "/model.10/m/m.0/attn/Softmax",
+      "operations": 3835200,
+      "operator": "Softmax",
+      "reason": ""
+    },
+    {
+      "classification": "modeled_r29_extension",
+      "complete": true,
+      "detail": {
+        "algorithm": "Numerically stabilized softmax: maximum, subtract, exp, sum, divide",
+        "axis": 3,
+        "count_is_hardware_independent_analysis_convention": true,
+        "divisions": 640000,
+        "exponentials": 640000,
+        "formula": "vectors * (6 * vector_length - 3)",
+        "input_shape": [
+          1,
+          4,
+          400,
+          400
+        ],
+        "maximum_comparisons": 638400,
+        "maximum_selections": 638400,
+        "output_elements": 640000,
+        "output_shape": [
+          1,
+          4,
+          400,
+          400
+        ],
+        "proxy_version": "analytic-operation-proxy-r29-extended-v1",
+        "semantic_reference": "https://onnx.ai/onnx/operators/onnx__Softmax.html#softmax-13",
+        "subtractions": 640000,
+        "sum_additions": 638400,
+        "vector_count": 1600,
+        "vector_length": 400
+      },
+      "known_operations": 3835200,
+      "model": "yolo26s",
+      "model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+      "node_index": 317,
+      "node_name": "/model.22/m.0/m.0.1/attn/Softmax",
+      "operations": 3835200,
+      "operator": "Softmax",
+      "reason": ""
+    },
+    {
+      "classification": "modeled_r29_extension",
+      "complete": true,
+      "detail": {
+        "axes": [
+          2
+        ],
+        "axes_source": "uniquely_inferred_from_captured_input_output_shapes_and_axes_tensor_length",
+        "comparisons": 663600,
+        "count_is_hardware_independent_analysis_convention": true,
+        "formula": "output_elements * 2 * (reduced_elements - 1)",
+        "input_shape": [
+          1,
+          8400,
+          80
+        ],
+        "keepdims": 0,
+        "output_elements": 8400,
+        "output_shape": [
+          1,
+          8400
+        ],
+        "proxy_version": "analytic-operation-proxy-r29-extended-v1",
+        "selections": 663600,
+        "semantic_reference": "https://onnx.ai/onnx/operators/onnx__ReduceMax.html#reducemax-18"
+      },
+      "known_operations": 1327200,
+      "model": "yolo26s",
+      "model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+      "node_index": 367,
+      "node_name": "/model.23/ReduceMax",
+      "operations": 1327200,
+      "operator": "ReduceMax",
+      "reason": ""
+    },
+    {
+      "classification": "modeled_r29_extension",
+      "complete": true,
+      "detail": {
+        "K": 300,
+        "K_source": "captured_value_and_index_output_shapes",
+        "N": 8400,
+        "algorithm": "Repeated maximum selection without replacement, scanning remaining original indices in ascending order; strict > preserves lower-index ties",
+        "algorithm_is_not_an_observed_runtime_implementation": true,
+        "axis": 1,
+        "comparisons": 2474850,
+        "count_is_hardware_independent_analysis_convention": true,
+        "formula": "vectors * 3 * sum(N-j-1 for j in range(K))",
+        "index_selections": 2474850,
+        "input_shape": [
+          1,
+          8400
+        ],
+        "output_elements": 300,
+        "output_shape": [
+          1,
+          300
+        ],
+        "proxy_version": "analytic-operation-proxy-r29-extended-v1",
+        "semantic_reference": "https://onnx.ai/onnx/operators/onnx__TopK.html#topk-11",
+        "structural_moves_and_loop_control_excluded": true,
+        "value_selections": 2474850,
+        "vector_count": 1
+      },
+      "known_operations": 7424550,
+      "model": "yolo26s",
+      "model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+      "node_index": 368,
+      "node_name": "/model.23/TopK",
+      "operations": 7424550,
+      "operator": "TopK",
+      "reason": ""
+    },
+    {
+      "classification": "modeled_r29_extension",
+      "complete": true,
+      "detail": {
+        "K": 300,
+        "K_source": "captured_value_and_index_output_shapes",
+        "N": 24000,
+        "algorithm": "Repeated maximum selection without replacement, scanning remaining original indices in ascending order; strict > preserves lower-index ties",
+        "algorithm_is_not_an_observed_runtime_implementation": true,
+        "axis": 1,
+        "comparisons": 7154850,
+        "count_is_hardware_independent_analysis_convention": true,
+        "formula": "vectors * 3 * sum(N-j-1 for j in range(K))",
+        "index_selections": 7154850,
+        "input_shape": [
+          1,
+          24000
+        ],
+        "output_elements": 300,
+        "output_shape": [
+          1,
+          300
+        ],
+        "proxy_version": "analytic-operation-proxy-r29-extended-v1",
+        "semantic_reference": "https://onnx.ai/onnx/operators/onnx__TopK.html#topk-11",
+        "structural_moves_and_loop_control_excluded": true,
+        "value_selections": 7154850,
+        "vector_count": 1
+      },
+      "known_operations": 21464550,
+      "model": "yolo26s",
+      "model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+      "node_index": 374,
+      "node_name": "/model.23/TopK_1",
+      "operations": 21464550,
+      "operator": "TopK",
+      "reason": ""
+    },
+    {
+      "classification": "modeled_r29_extension",
+      "complete": true,
+      "detail": {
+        "count_is_hardware_independent_analysis_convention": true,
+        "fmod": 0,
+        "formula": "output_elements; one scalar remainder primitive each",
+        "input_shape": [
+          1,
+          300
+        ],
+        "integer_remainder_primitives": 300,
+        "output_elements": 300,
+        "output_shape": [
+          1,
+          300
+        ],
+        "proxy_version": "analytic-operation-proxy-r29-extended-v1",
+        "semantic_reference": "https://onnx.ai/onnx/operators/onnx__Mod.html#mod-13"
+      },
+      "known_operations": 300,
+      "model": "yolo26s",
+      "model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+      "node_index": 377,
+      "node_name": "/model.23/Mod",
+      "operations": 300,
+      "operator": "Mod",
+      "reason": ""
+    }
+  ],
+  "proxy_version": "analytic-operation-proxy-r29-extended-v1"
+}

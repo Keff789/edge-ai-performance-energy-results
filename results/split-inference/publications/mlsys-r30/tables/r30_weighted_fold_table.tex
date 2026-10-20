@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Weights fitted with one complete model held out. Each fit uses the other six models on all three devices. The communication weight fixes the scale. The tensor weight remains fixed because all measured cuts have zero tensor penalty.}
+\label{tab:weighted-folds}
+\begin{tabular}{@{}lrD{.}{.}{6}D{.}{.}{1}@{}}
+\toprule
+Held-out model & {$w_{\rm comm}$} & \multicolumn{1}{c}{$w_{\rm imb}$} & \multicolumn{1}{c}{$w_{\rm ten}$} \\
+\midrule
+MobileNetV3-L & 1 & 0.569343 & 0.2 \\
+RegNet-X & 1 & 0.157993 & 0.2 \\
+ResNet-50 & 1 & 0.025085 & 0.2 \\
+YOLO11l & 1 & 0.157993 & 0.2 \\
+YOLO26m & 1 & 0.157993 & 0.2 \\
+YOLO26s & 1 & 0.157993 & 0.2 \\
+YOLOv7 & 1 & 0.157993 & 0.2 \\
+\bottomrule
+\end{tabular}
+\end{table}

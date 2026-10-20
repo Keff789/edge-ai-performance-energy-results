@@ -1,0 +1,70 @@
+{
+  "checks": {
+    "added_operation_nodes": 15,
+    "all_operation_features_complete": true,
+    "graph_boundary_rows": 2118,
+    "graphs": 7,
+    "original_nonoperation_fields_unchanged": true,
+    "pair_binding_file_byte_identical": true,
+    "previously_complete_models_unchanged": [
+      "mobilenet_v3_large",
+      "regnet_x_1_6gf",
+      "resnet50",
+      "yolov7_paper"
+    ],
+    "reduction_axes_uniquely_inferred": true,
+    "topk_k_validated_from_both_output_shapes": true,
+    "topk_reference_algorithm_ties_and_counts_checked": true
+  },
+  "model_operation_totals": [
+    {
+      "F_total": 237896112,
+      "added_operations": 0,
+      "model": "mobilenet_v3_large"
+    },
+    {
+      "F_total": 1627596184,
+      "added_operations": 0,
+      "model": "regnet_x_1_6gf"
+    },
+    {
+      "F_total": 4128304744,
+      "added_operations": 0,
+      "model": "resnet50"
+    },
+    {
+      "F_total": 44137361696,
+      "added_operations": 10795200,
+      "model": "yolo11l"
+    },
+    {
+      "F_total": 34679176196,
+      "added_operations": 37887000,
+      "model": "yolo26m"
+    },
+    {
+      "F_total": 10719060996,
+      "added_operations": 37887000,
+      "model": "yolo26s"
+    },
+    {
+      "F_total": 53503643440,
+      "added_operations": 0,
+      "model": "yolov7_paper"
+    }
+  ],
+  "new_operation_sensitivity_scale": "1",
+  "operation_proxy_version": "analytic-operation-proxy-r29-extended-v1",
+  "schema": "r29-derived-operation-features-validation-v1",
+  "scope": "New analytic operation proxy extension. Original measurements, pair bindings, graph identities, topology, bytes and tensor counts are unchanged.",
+  "source_inputs_sha256": {
+    "current_pair_feature_bindings.csv": "1a430b568d760db6a72c4c7a23a39bfe36518b6ea623ef270b7bd3233bb979f5",
+    "graph_boundary_features.csv": "e1cc87972a3abc0deb37c32f4750a1bd6dbbeb35a8042e872d3f80d6442ec395",
+    "inputs/graphs.json": "6c77b14bfd6ed76e635873e4f753f31631cdf0db7584aa06761aaaa927c0cb84",
+    "normalization_universes.json": "45886aec9681f5900636f200a709d65891996bc41adc9313ec0042c7238d4628",
+    "scripts/graph_features.py": "3834a0d5cd75fb8d67e333317dcb0e831f9c5bf39da41197589224cf3924783a",
+    "scripts/operation_counter.py": "2bba4fe68edea4dee57de7e9b62ff38a8f1fd3ddeefddbfa67e65d45511d1a5d",
+    "validation.json": "6a52b9eb84130b645c6421edc8d7f7395c3ea2fe3cf39a7ff1290d8652968ddc"
+  },
+  "status": "passed"
+}
