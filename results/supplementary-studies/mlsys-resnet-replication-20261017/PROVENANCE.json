@@ -81,6 +81,24 @@
       "rows": 40
     }
   ],
-  "scope": "Compact summary export. Source package and external raw dependencies must be archived separately. No claim that Git contains the complete raw-data archive.",
-  "external_raw_archive_verification": "Confirmed Sprite raw-data archive verified on 2026-10-18; see ARCHIVE_STATUS.json. Raw data remain outside Git."
+  "scope": "Summary tables and selected unchanged original evidence. The public extracts contain protocol-bound runtime sources, process reports and state records. External model, benchmark and hardware dependencies are not a complete public raw-data archive.",
+  "external_raw_archive_verification": "Confirmed Sprite raw-data archive verified on 2026-10-18; see ARCHIVE_STATUS.json. Raw data remain outside Git.",
+  "public_evidence_release": {
+    "date": "2026-10-20",
+    "description": "Unchanged original scheduling records and runtime source copies selected from the bound source archive. Original member paths and hashes are retained; generated extract metadata are identified separately.",
+    "reproduction": "../mlsys-public-evidence-20261020/README.md",
+    "packages": [
+      {
+        "path": "evidence/resnet_scheduling_evidence.tar.xz",
+        "bytes": 2994736,
+        "sha256": "12396ba35732127608bb8ed7c41ac33db719851c32b3ef8851004b7324dd3f6b",
+        "member_manifest_path": "evidence/resnet_scheduling_evidence.manifest.json",
+        "member_manifest_sha256": "68a063a1988fa3ba1be43dbaf03129e4254e4dfb85971e96505918fe151e3967",
+        "source_archive_sha256": "7e0bd1c86f57184cd6c53cc5122a20d664ca1f8a05b57eeb8d8d3a3807ae5056",
+        "original_member_count": 582,
+        "transformation": "Selected original members copied byte-for-byte; EXTRACT_MANIFEST.json and EXTRACT_README.md are generated packaging metadata."
+      }
+    ],
+    "container": "Deterministic tar.xz; selected member bytes and paths are unchanged."
+  }
 }

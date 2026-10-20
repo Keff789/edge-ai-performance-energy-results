@@ -145,8 +145,42 @@
       "export_sha256": "be6c462b2a038a1c43000fc113e47cb532c4311add01e4075044175bf101eb43",
       "transformation": "included rows; compact fields; report path relative to source package",
       "rows": 60
+    },
+    {
+      "source_relative_path": "EVIDENCE_AUDIT.csv",
+      "source_sha256": "dbb415827fd453d908d82b00b4d12952bdd9cc21a46568c0fb40d46a6f68175d",
+      "export_relative_path": "EVIDENCE_AUDIT.csv",
+      "export_sha256": "dbb415827fd453d908d82b00b4d12952bdd9cc21a46568c0fb40d46a6f68175d",
+      "transformation": "exact_copy",
+      "rows": 450
+    },
+    {
+      "source_relative_path": "FLAG_RESOLUTION.csv",
+      "source_sha256": "b7d866acf1dfa6df7ea300cb6fafe1df461987bcb1b05aeb0ba0cffed3bfca2f",
+      "export_relative_path": "FLAG_RESOLUTION.csv",
+      "export_sha256": "b7d866acf1dfa6df7ea300cb6fafe1df461987bcb1b05aeb0ba0cffed3bfca2f",
+      "transformation": "exact_copy",
+      "rows": 972
     }
   ],
-  "scope": "Compact summary export. Source package and external raw dependencies must be archived separately. No claim that Git contains the complete raw-data archive.",
-  "external_raw_archive_verification": "Partial Sprite raw-data archive verified on 2026-10-18; see ARCHIVE_STATUS.json. Raw data remain outside Git."
+  "scope": "Summary tables and selected unchanged original evidence. The public extracts contain protocol-bound runtime sources, process reports and state records. External model, benchmark and hardware dependencies are not a complete public raw-data archive.",
+  "external_raw_archive_verification": "Partial Sprite raw-data archive verified on 2026-10-18; see ARCHIVE_STATUS.json. Raw data remain outside Git.",
+  "public_evidence_release": {
+    "date": "2026-10-20",
+    "description": "Unchanged original scheduling records and runtime source copies selected from the bound source archive. Original member paths and hashes are retained; generated extract metadata are identified separately.",
+    "reproduction": "../mlsys-public-evidence-20261020/README.md",
+    "packages": [
+      {
+        "path": "evidence/regnet_scheduling_evidence.tar.xz",
+        "bytes": 3025628,
+        "sha256": "1ffdac7ee1cce4940ba3874cb426ca9a8a7f16f1e6221ea28a11fc55dc238549",
+        "member_manifest_path": "evidence/regnet_scheduling_evidence.manifest.json",
+        "member_manifest_sha256": "6e2048ab5c28324be0bf491f3658420f4758d353be2ec94623ccb22971752927",
+        "source_archive_sha256": "703c1824b64659bea6e06feb403301fc9d86fe0175d9d7725a5a37c988429b68",
+        "original_member_count": 760,
+        "transformation": "Selected original members copied byte-for-byte; EXTRACT_MANIFEST.json and EXTRACT_README.md are generated packaging metadata."
+      }
+    ],
+    "container": "Deterministic tar.xz; selected member bytes and paths are unchanged."
+  }
 }

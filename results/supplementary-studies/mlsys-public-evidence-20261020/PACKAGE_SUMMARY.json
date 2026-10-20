@@ -1,0 +1,62 @@
+{
+  "audit": {
+    "files": {
+      "EVIDENCE_AUDIT.csv": {
+        "bytes": 5004159,
+        "distinct_config_ids": 450,
+        "rows": 450,
+        "sha256": "dbb415827fd453d908d82b00b4d12952bdd9cc21a46568c0fb40d46a6f68175d"
+      },
+      "FLAG_RESOLUTION.csv": {
+        "bytes": 529954,
+        "distinct_config_ids": 450,
+        "rows": 972,
+        "sha256": "b7d866acf1dfa6df7ea300cb6fafe1df461987bcb1b05aeb0ba0cffed3bfca2f"
+      }
+    },
+    "numeric_quality_rule": {
+      "False": 43,
+      "True": 407
+    },
+    "same_450_config_ids_in_both_files": true,
+    "source_archive": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+    "source_archive_sha256": "703c1824b64659bea6e06feb403301fc9d86fe0175d9d7725a5a37c988429b68"
+  },
+  "bundles": [
+    {
+      "bytes": 3025628,
+      "filename": "regnet_scheduling_evidence.tar.xz",
+      "original_member_count": 760,
+      "original_uncompressed_bytes": 76041603,
+      "process_counts": {
+        "earlier_resnet_native_only": 20,
+        "regnet_confirmed_factorial": 40
+      },
+      "sha256": "1ffdac7ee1cce4940ba3874cb426ca9a8a7f16f1e6221ea28a11fc55dc238549",
+      "snapshot_counts": {
+        "after": 60,
+        "before": 60,
+        "stability": 60
+      },
+      "source_archive": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "source_deploy_files_verified": 316
+    },
+    {
+      "bytes": 2994736,
+      "filename": "resnet_scheduling_evidence.tar.xz",
+      "original_member_count": 582,
+      "original_uncompressed_bytes": 56842309,
+      "process_counts": {
+        "resnet_fresh_factorial": 40
+      },
+      "sha256": "12396ba35732127608bb8ed7c41ac33db719851c32b3ef8851004b7324dd3f6b",
+      "snapshot_counts": {
+        "after": 40,
+        "before": 40,
+        "stability": 40
+      },
+      "source_archive": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "source_deploy_files_verified": 312
+    }
+  ]
+}
