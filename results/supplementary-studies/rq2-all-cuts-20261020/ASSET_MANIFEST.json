@@ -6,7 +6,7 @@
       "tex_label": "fig:rq2-shortlists",
       "kind": "figure",
       "generator": "scripts/supplementary-studies/rq2-all-cuts-20261020/paper_assets.py:run",
-      "style": "scripts/supplementary-studies/rq2-all-cuts-20261020/figure_style.py, reusing scripts/split-inference/publication_mlsys_figures.py:PAPER_STYLE",
+      "style": "scripts/supplementary-studies/rq2-all-cuts-20261020/figure_style.py, reusing scripts/split-inference/publication_mlsys_figures.py:PAPER_STYLE and PAPER_PALETTE",
       "inputs": [
         "current/fixed_group_budget_curves.csv"
       ],
@@ -24,7 +24,7 @@
       "tex_label": "fig:selectors",
       "kind": "figure",
       "generator": "scripts/supplementary-studies/rq2-all-cuts-20261020/paper_assets.py:run",
-      "style": "scripts/supplementary-studies/rq2-all-cuts-20261020/figure_style.py, reusing scripts/split-inference/publication_mlsys_figures.py:PAPER_STYLE",
+      "style": "scripts/supplementary-studies/rq2-all-cuts-20261020/figure_style.py, reusing scripts/split-inference/publication_mlsys_figures.py:PAPER_STYLE and PAPER_PALETTE",
       "inputs": [
         "current/all_k_group_curves.csv",
         "current/group_correlations.csv",
@@ -44,7 +44,7 @@
       "tex_label": "fig:supp-graph-analysis",
       "kind": "figure",
       "generator": "scripts/supplementary-studies/rq2-all-cuts-20261020/paper_assets.py:run",
-      "style": "scripts/supplementary-studies/rq2-all-cuts-20261020/figure_style.py, reusing scripts/split-inference/publication_mlsys_figures.py:PAPER_STYLE",
+      "style": "scripts/supplementary-studies/rq2-all-cuts-20261020/figure_style.py, reusing scripts/split-inference/publication_mlsys_figures.py:PAPER_STYLE and PAPER_PALETTE",
       "inputs": [
         "historical/historical_rank_correlations.csv",
         "historical/historical_shortlist_summary.csv",
@@ -64,7 +64,7 @@
       "tex_label": "fig:supp-native-search-success",
       "kind": "figure",
       "generator": "scripts/supplementary-studies/rq2-all-cuts-20261020/paper_assets.py:run",
-      "style": "scripts/supplementary-studies/rq2-all-cuts-20261020/figure_style.py, reusing scripts/split-inference/publication_mlsys_figures.py:PAPER_STYLE",
+      "style": "scripts/supplementary-studies/rq2-all-cuts-20261020/figure_style.py, reusing scripts/split-inference/publication_mlsys_figures.py:PAPER_STYLE and PAPER_PALETTE",
       "inputs": [
         "success/current/fixed_group_success_curves.csv"
       ],

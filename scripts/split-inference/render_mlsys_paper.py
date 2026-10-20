@@ -20,7 +20,7 @@ REPO_ROOT = SCRIPT_ROOT.parents[1]
 sys.path.insert(0, str(SCRIPT_ROOT))
 
 from publication_mlsys_data import build
-from publication_mlsys_figures import PAPER_STYLE, render
+from publication_mlsys_figures import PAPER_PALETTE, PAPER_STYLE, render
 
 
 def digest(path):
@@ -45,7 +45,7 @@ def main():
     # this entry point only exports figures and their numerical payloads.
     with tempfile.TemporaryDirectory(prefix='.figure-context-', dir=output) as temp:
         context = build(REPO_ROOT, data_root, Path(temp))
-    _, payload = render(output, context, uniform_typography=True)
+    _, payload = render(output, context, uniform_typography=True, uniform_palette=True)
 
     actual = output / 'figures/FIGURE_DATA.json'
     reference = REPO_ROOT / 'results/split-inference/publications/mlsys-r22/figures/FIGURE_DATA.json'
@@ -60,11 +60,13 @@ def main():
         'scripts/split-inference/publication_mlsys_figures.py',
     })
     provenance = {
-        'schema': 'mlsys-r25-presentation-v1',
+        'schema': 'mlsys-r26-presentation-v1',
         'generator': 'scripts/split-inference/render_mlsys_paper.py',
         'python': platform.python_version(),
         'uniform_statistical_typography': True,
         'paper_style': PAPER_STYLE,
+        'uniform_categorical_palette': True,
+        'paper_palette': PAPER_PALETTE,
         'measurement_changes': False,
         'figure_data_equal_to_r22': exact,
         'figure_data_sha256': digest(actual),
@@ -75,10 +77,16 @@ def main():
                           for path in sorted((output / 'figures').iterdir()) if path.is_file()},
     }
     (output / 'PROVENANCE.json').write_text(json.dumps(provenance, indent=2, sort_keys=True) + '\n')
-    (output / 'README.md').write_text('''# MLSys R25 figure presentation
+    (output / 'README.md').write_text('''# MLSys R26 figure presentation
 
 These figures use the existing MLSys publication calculations and a common
-STIXGeneral style for statistical plots. The numerical figure payload is
+STIXGeneral style and a shared categorical palette for statistical plots.
+Blue is `#4477AA`, orange `#EE7733`, green `#228833`, and gray `#A7A7A7`.
+Device plots use blue for H8, orange for H10, and green for DeepX. Both ResNet
+and YOLO case studies use green for Native splits, gray for accelerator Full,
+and blue for TensorRT Full. RQ2 uses the same green for Bytes, blue for Generic,
+orange for Calibrated, and dark gray `#777777` for Random. Continuous heatmaps
+retain their separate quantitative color scales. The numerical figure payload is
 unchanged from the frozen R22 profile. No measurements, selections, quality
 filters or calibration fits are added or changed.
 
@@ -101,7 +109,7 @@ dataset, renders PDF/SVG/PNG files, and exports all plotted coordinates and inpu
 identities. `--verify` requires byte-identical numerical figure data against R22.
 The conceptual schematic and historical graph-rule heatmap retain their own
 documented scope. `PROVENANCE.json` records input, source and output hashes.
-The original R22 entry point and outputs remain unchanged.
+The original R22 entry point and the R22/R25 output snapshots remain unchanged.
 ''')
     print(json.dumps({'output': str(output), 'figure_count': len(payload),
                       'figure_data_equal_to_r22': exact,

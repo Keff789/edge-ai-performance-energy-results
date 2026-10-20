@@ -45,6 +45,8 @@ The main-paper shortlist figure shows only the current 151 quality-eligible clas
 
 The companion main-paper scatter retains all 21 model/device groups and the exact point values from the quality-filtered R22 figure. Device colors and markers follow the same publication style. [PDF](figures/rq2_generic_selection_loss.pdf) · [SVG](figures/rq2_generic_selection_loss.svg).
 
+All categorical figures reuse the central publication palette: Bytes is green (`#228833`), Generic blue (`#4477AA`), Calibrated orange (`#EE7733`), and Random dark gray (`#777777`). The graph-rule curves use the same colors for shared methods and distinct markers and line styles. Continuous heatmaps retain their quantitative color scales.
+
 ![Complete graph-rule ranking and success analysis](figures/rq2_graph_analysis.png)
 
 The supplement adds rank correlations and exact/near-optimal success for all five graph rules. [PDF](figures/rq2_graph_analysis.pdf) · [SVG](figures/rq2_graph_analysis.svg).

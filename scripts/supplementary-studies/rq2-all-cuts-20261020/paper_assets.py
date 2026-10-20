@@ -11,20 +11,30 @@ import os
 import math
 import importlib.util
 
+
+def load_style():
+    path=Path(__file__).resolve().parent/'figure_style.py'
+    spec=importlib.util.spec_from_file_location('rq2_figure_style',path)
+    style=importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(style)
+    return style
+
+
+PALETTE = load_style().PALETTE
 METHODS = [
-    ('cut_bytes_only', 'Bytes', '#007f73', '-', 'o'),
-    ('weighted_score', 'Weighted', '#d68b0f', '-', 's'),
-    ('onnx_real_boundary_hardware_aware', 'Fit-H10', '#ae4779', '--', '^'),
-    ('cycle_time_no_handover', 'Cycle', '#7553aa', ':', 'v'),
-    ('stored_predicted_stream_fps', 'Stream', '#cd563b', '-.', 'D'),
-    ('measured_generic_completion', 'Generic', '#3555a2', '-', 'P'),
-    ('uniform_random', 'Random', '#676c72', '--', None),
+    ('cut_bytes_only', 'Bytes', PALETTE['green'], '-', 'o'),
+    ('weighted_score', 'Weighted', PALETTE['yellow'], '-', 's'),
+    ('onnx_real_boundary_hardware_aware', 'Fit-H10', PALETTE['orange'], '--', '^'),
+    ('cycle_time_no_handover', 'Cycle', PALETTE['purple'], ':', 'v'),
+    ('stored_predicted_stream_fps', 'Stream', PALETTE['red'], '-.', 'D'),
+    ('measured_generic_completion', 'Generic', PALETTE['blue'], '-', 'P'),
+    ('uniform_random', 'Random', PALETTE['dark_gray'], '--', None),
 ]
 CURRENT = [
-    ('boundary_bytes', 'Bytes', '#007f73', '-', 'o'),
-    ('generic', 'Generic', '#3555a2', '-', 'P'),
-    ('calibrated_generic', 'Calibrated', '#b55e32', '-.', 's'),
-    ('uniform_random', 'Random', '#676c72', '--', None),
+    ('boundary_bytes', 'Bytes', PALETTE['green'], '-', 'o'),
+    ('generic', 'Generic', PALETTE['blue'], '-', 'P'),
+    ('calibrated_generic', 'Calibrated', PALETTE['orange'], '-.', 's'),
+    ('uniform_random', 'Random', PALETTE['dark_gray'], '--', None),
 ]
 
 def read(root, name):
@@ -157,14 +167,6 @@ def figure_payload(data_root):
     }
 
 
-def load_style():
-    path=Path(__file__).resolve().parent/'figure_style.py'
-    spec=importlib.util.spec_from_file_location('rq2_figure_style',path)
-    style=importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(style)
-    return style
-
-
 def run(data_root, output_dir, numeric_only=False):
     data_root,output_dir=Path(data_root),Path(output_dir)
     write_table(data_root,output_dir)
@@ -187,7 +189,7 @@ def run(data_root, output_dir, numeric_only=False):
         _,label,color,ls,marker=definition
         ax.plot(data['k'],data['values'],label=label,color=color,ls=ls,
                 lw=1.6 if label=='Bytes' else 1.2,marker=marker,ms=3,
-                markevery=(phase%3,3),alpha=.98,zorder=3)
+                markevery=(phase%3,3),zorder=3)
 
     def axis(ax,success=False):
         ax.set_xlim(.7,20.3)

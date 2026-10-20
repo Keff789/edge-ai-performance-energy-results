@@ -18,7 +18,13 @@ MODEL_LABELS = {
     'yolo26s': 'YOLO26s', 'yolov7_paper': 'YOLOv7',
 }
 SETUPS = ['H8', 'H10', 'DeepX']
-COLORS = {'H8': '#4477AA', 'H10': '#EE7733', 'DeepX': '#228833'}
+PAPER_PALETTE = {
+    'blue': '#4477AA', 'orange': '#EE7733', 'green': '#228833',
+    'gray': '#A7A7A7', 'dark_gray': '#777777',
+    'yellow': '#CCBB44', 'purple': '#AA3377', 'red': '#CC3311',
+}
+COLORS = {'H8': PAPER_PALETTE['blue'], 'H10': PAPER_PALETTE['orange'],
+          'DeepX': PAPER_PALETTE['green']}
 MARKERS = {'H8': 'o', 'H10': 's', 'DeepX': '^'}
 PAPER_STYLE = {
     'font.family': 'serif', 'font.serif': ['STIXGeneral'], 'mathtext.fontset': 'stix',
@@ -317,10 +323,11 @@ def write_figure_data(profile_output, context):
     return index, payload
 
 
-def render(profile_output, context, uniform_typography=False):
-    """Render paper figures; preserve the frozen R22 typography by default.
+def render(profile_output, context, uniform_typography=False, uniform_palette=False):
+    """Render paper figures; preserve the frozen R22 presentation by default.
 
     uniform_typography applies PAPER_STYLE to the statistical heatmap too.
+    uniform_palette uses the shared categorical colors for the current paper.
     The conceptual runner schematic keeps its separate sans-serif labels.
     """
     import matplotlib
@@ -390,7 +397,9 @@ def render(profile_output, context, uniform_typography=False):
             ax = fig.add_axes([0, 0, 1, 1])
             ax.set(xlim=(0, spec['canvas'][0]), ylim=(0, spec['canvas'][1]))
             ax.axis('off')
-            ink, blue, orange, cut_color = '#292929', '#236fa4', '#ba6400', '#466258'
+            ink = '#292929'
+            blue, orange, cut_color = ([PAPER_PALETTE[key] for key in ['blue', 'orange', 'green']]
+                                      if uniform_palette else ['#236fa4', '#ba6400', '#466258'])
             cut_x = spec['cut_x']
             ax.text(120, 180, spec['heading'], ha='center', va='center', fontsize=7.5, color=ink)
             for runner in spec['runners']:
@@ -431,9 +440,9 @@ def render(profile_output, context, uniform_typography=False):
             if point['global_plotted'] and point['host_plotted']:
                 ax.plot([xg, xh], [y, y], color='#8c8c8c', lw=.8, zorder=1)
             if point['global_plotted']:
-                ax.scatter(xg, y, s=22, color='#4477AA', zorder=3)
+                ax.scatter(xg, y, s=22, color=PAPER_PALETTE['blue'], zorder=3)
             if point['host_plotted']:
-                ax.plot(xh, y, ls='none', marker='|', ms=10, mew=1.5, color='#EE7733', zorder=4)
+                ax.plot(xh, y, ls='none', marker='|', ms=10, mew=1.5, color=PAPER_PALETTE['orange'], zorder=4)
             if point['global_plotted'] and point['host_plotted']:
                 if xg == xh:
                     ax.annotate(f'{xg:.2f}', (xg, y), xytext=(7, 0), textcoords='offset points', va='center', fontsize=7.5)
@@ -453,8 +462,8 @@ def render(profile_output, context, uniform_typography=False):
                ylim=(-.6, len(data['points']) - .5), xlabel='Split throughput / Full throughput')
         ax.xaxis.set_major_locator(MaxNLocator(5, integer=True))
         ax.xaxis.set_major_formatter(FuncFormatter(lambda x, _: f'{x:g}×'))
-        ax.legend(handles=[Line2D([], [], ls='none', marker='o', color='#4477AA', ms=4.5, label='Global Full'),
-                           Line2D([], [], ls='none', marker='|', color='#EE7733', ms=8, mew=1.5, label='Same-host Full')],
+        ax.legend(handles=[Line2D([], [], ls='none', marker='o', color=PAPER_PALETTE['blue'], ms=4.5, label='Global Full'),
+                           Line2D([], [], ls='none', marker='|', color=PAPER_PALETTE['orange'], ms=8, mew=1.5, label='Same-host Full')],
                   loc='lower left', bbox_to_anchor=(-.02, 1.01), ncol=2, frameon=False,
                   columnspacing=.8, handletextpad=.35, borderaxespad=0)
         ax.grid(axis='x', alpha=.13)
@@ -464,7 +473,7 @@ def render(profile_output, context, uniform_typography=False):
         name = 'fastest_deployment_tradeoff'
         points = payload[name]['points']
         fig, ax = plt.subplots(figsize=dimensions[name])
-        ax.scatter([p['x'] for p in points], [p['y'] for p in points], s=24, color='#4477AA', zorder=3)
+        ax.scatter([p['x'] for p in points], [p['y'] for p in points], s=24, color=PAPER_PALETTE['blue'], zorder=3)
         ax.axvline(1, ls='--', lw=.65, color='#777777')
         ax.axhline(1, ls='--', lw=.65, color='#777777')
         xs, ys = [p['x'] for p in points], [p['y'] for p in points]
@@ -482,10 +491,12 @@ def render(profile_output, context, uniform_typography=False):
         data = payload[name]
         points = data['points']
         fig, ax = plt.subplots(figsize=dimensions[name])
+        resnet_colors = ([PAPER_PALETTE[key] for key in ['green', 'gray', 'blue']]
+                         if uniform_palette else ['#4477AA', '#e69f00', '#d55e00'])
         for predicate, label, marker, color, size in [
-                (lambda p: p['kind'] == 'split', 'Native splits', 'o', '#4477AA', 16),
-                (lambda p: p['kind'] != 'split' and 'tensorrt' not in p['backend'], 'H8 Full', 's', '#e69f00', 27),
-                (lambda p: p['kind'] != 'split' and 'tensorrt' in p['backend'], 'TensorRT Full', 'D', '#d55e00', 27)]:
+                (lambda p: p['kind'] == 'split', 'Native splits', 'o', resnet_colors[0], 16),
+                (lambda p: p['kind'] != 'split' and 'tensorrt' not in p['backend'], 'H8 Full', 's', resnet_colors[1], 27),
+                (lambda p: p['kind'] != 'split' and 'tensorrt' in p['backend'], 'TensorRT Full', 'D', resnet_colors[2], 27)]:
             group = [p for p in points if predicate(p)]
             ax.scatter([p['x'] for p in group], [p['y'] for p in group], s=size, marker=marker,
                        color=color, label=label, zorder=3)
@@ -506,7 +517,7 @@ def render(profile_output, context, uniform_typography=False):
         points = data['points']
         fig, axes = plt.subplots(1, 3, figsize=dimensions[name])
         fig.subplots_adjust(left=.055, right=.99, bottom=.22, top=.78, wspace=.32)
-        colors = ['#A7A7A7', '#4477AA', '#228833']
+        colors = [PAPER_PALETTE[key] for key in ['gray', 'blue', 'green']]
         labels = [p['configuration'].replace(' Full', '\nFull').replace('Split ', 'Split\n') for p in points]
         panels = [
             ('throughput_fps', '(a) Throughput', 'FPS · higher is better', [0, 40, 80, 120], 130, 0),

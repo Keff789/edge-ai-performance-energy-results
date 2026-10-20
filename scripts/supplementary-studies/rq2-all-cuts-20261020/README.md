@@ -45,10 +45,14 @@ classifier cuts. The companion scatter uses the exact frozen R22 coordinates
 and checks all 21 model/device groups against the current analysis. The full
 graph-score analysis remains in the supplement figures.
 
-`figure_style.py` reuses the central `PAPER_STYLE` plus device colors and markers
+`figure_style.py` reuses the central `PAPER_STYLE` and `PAPER_PALETTE` plus device markers
 from `scripts/split-inference/publication_mlsys_figures.py`. All RQ2 statistics
 therefore use the same STIXGeneral typography as the paper. Frozen R22 outputs
-are not changed.
+are not changed. Bytes uses green `#228833`, Generic blue `#4477AA`, Calibrated
+orange `#EE7733`, and Random dark gray `#777777`. Shared graph-score methods
+retain those colors. Weighted, Cycle and Stream use distinct yellow, purple
+and red, while Fit-H10 uses orange. Markers and line styles also distinguish
+the methods. The rank-correlation heatmap retains its quantitative color scale.
 
 `ASSET_MANIFEST.json` binds each asset to its numerical sources. Verification
 compares the exact plotted coordinates in `figures/RQ2_FIGURE_DATA.json` in both

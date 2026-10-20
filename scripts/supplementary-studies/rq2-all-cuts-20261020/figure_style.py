@@ -13,6 +13,7 @@ _spec.loader.exec_module(_profile)
 MODEL_LABELS=dict(_profile.MODEL_LABELS)
 SETUPS=list(_profile.SETUPS)
 COLORS=dict(_profile.COLORS)
+PALETTE=dict(_profile.PAPER_PALETTE)
 MARKERS=dict(_profile.MARKERS)
 STYLE=dict(_profile.PAPER_STYLE,**{'svg.hashsalt':'rq2-all-cuts-20261020'})
 

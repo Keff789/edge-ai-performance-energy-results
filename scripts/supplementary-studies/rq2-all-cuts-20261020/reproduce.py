@@ -119,7 +119,7 @@ def asset_manifest(output, numeric_only):
     for name,label,inputs,scope in figures:
         assets.append({'name':name,'tex_label':label,'kind':'figure',
             'generator':'scripts/supplementary-studies/rq2-all-cuts-20261020/paper_assets.py:run',
-            'style':'scripts/supplementary-studies/rq2-all-cuts-20261020/figure_style.py, reusing scripts/split-inference/publication_mlsys_figures.py:PAPER_STYLE',
+            'style':'scripts/supplementary-studies/rq2-all-cuts-20261020/figure_style.py, reusing scripts/split-inference/publication_mlsys_figures.py:PAPER_STYLE and PAPER_PALETTE',
             'inputs':inputs,'scope':scope,'outputs':[] if numeric_only else
             ['figures/'+name+'.'+extension for extension in ['pdf','svg','png']],
             'coordinates':'figures/RQ2_FIGURE_DATA.json',
