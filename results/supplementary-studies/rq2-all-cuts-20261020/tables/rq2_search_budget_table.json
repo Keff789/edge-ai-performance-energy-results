@@ -1,0 +1,74 @@
+[
+  {
+    "measurement_set": "Graph-score comparison",
+    "method": "Bytes",
+    "exact_8of9": 12,
+    "exact_9of9": 13,
+    "within_1pct_9of9": 13,
+    "within_5pct_9of9": 11
+  },
+  {
+    "measurement_set": "Graph-score comparison",
+    "method": "Weighted",
+    "exact_8of9": 18,
+    "exact_9of9": 19,
+    "within_1pct_9of9": 19,
+    "within_5pct_9of9": 19
+  },
+  {
+    "measurement_set": "Graph-score comparison",
+    "method": "Fit-H10",
+    "exact_8of9": 15,
+    "exact_9of9": 19,
+    "within_1pct_9of9": 19,
+    "within_5pct_9of9": 19
+  },
+  {
+    "measurement_set": "Graph-score comparison",
+    "method": "Cycle",
+    "exact_8of9": 18,
+    "exact_9of9": 18,
+    "within_1pct_9of9": 18,
+    "within_5pct_9of9": 18
+  },
+  {
+    "measurement_set": "Graph-score comparison",
+    "method": "Stream",
+    "exact_8of9": 18,
+    "exact_9of9": 18,
+    "within_1pct_9of9": 18,
+    "within_5pct_9of9": 18
+  },
+  {
+    "measurement_set": "Graph-score comparison",
+    "method": "Generic",
+    "exact_8of9": 15,
+    "exact_9of9": 18,
+    "within_1pct_9of9": 18,
+    "within_5pct_9of9": 18
+  },
+  {
+    "measurement_set": "Deployment comparison, quality-filtered",
+    "method": "Bytes",
+    "exact_8of9": 12,
+    "exact_9of9": 14,
+    "within_1pct_9of9": 13,
+    "within_5pct_9of9": 11
+  },
+  {
+    "measurement_set": "Deployment comparison, quality-filtered",
+    "method": "Generic",
+    "exact_8of9": 17,
+    "exact_9of9": 18,
+    "within_1pct_9of9": 18,
+    "within_5pct_9of9": 18
+  },
+  {
+    "measurement_set": "Deployment comparison, quality-filtered",
+    "method": "Calibrated",
+    "exact_8of9": 13,
+    "exact_9of9": 18,
+    "within_1pct_9of9": 18,
+    "within_5pct_9of9": 18
+  }
+]

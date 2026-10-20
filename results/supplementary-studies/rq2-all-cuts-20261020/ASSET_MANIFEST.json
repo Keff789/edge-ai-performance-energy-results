@@ -1,0 +1,77 @@
+{
+  "analysis": "rq2-all-cuts-20261020",
+  "assets": [
+    {
+      "name": "rq2_shortlist_curves",
+      "tex_label": "fig:rq2-shortlists",
+      "kind": "figure",
+      "generator": "scripts/supplementary-studies/rq2-all-cuts-20261020/paper_assets.py:run",
+      "inputs": [
+        "historical/historical_shortlist_summary.csv",
+        "current/fixed_group_budget_curves.csv"
+      ],
+      "scope": "Separate nine-group classifier curves: 168 graph-score cuts and 151 quality-eligible current cuts.",
+      "outputs": [
+        "figures/rq2_shortlist_curves.pdf",
+        "figures/rq2_shortlist_curves.svg",
+        "figures/rq2_shortlist_curves.png"
+      ],
+      "coordinates": "figures/RQ2_FIGURE_DATA.json",
+      "rendered": true
+    },
+    {
+      "name": "rq2_graph_analysis",
+      "tex_label": "fig:supp-graph-analysis",
+      "kind": "figure",
+      "generator": "scripts/supplementary-studies/rq2-all-cuts-20261020/paper_assets.py:run",
+      "inputs": [
+        "historical/historical_rank_correlations.csv",
+        "historical/historical_shortlist_summary.csv",
+        "success/graph_rules/success_summary.csv"
+      ],
+      "scope": "Nine fixed graph-score classifier groups with all 168 measured cuts.",
+      "outputs": [
+        "figures/rq2_graph_analysis.pdf",
+        "figures/rq2_graph_analysis.svg",
+        "figures/rq2_graph_analysis.png"
+      ],
+      "coordinates": "figures/RQ2_FIGURE_DATA.json",
+      "rendered": true
+    },
+    {
+      "name": "rq2_native_success",
+      "tex_label": "fig:supp-native-search-success",
+      "kind": "figure",
+      "generator": "scripts/supplementary-studies/rq2-all-cuts-20261020/paper_assets.py:run",
+      "inputs": [
+        "success/current/fixed_group_success_curves.csv"
+      ],
+      "scope": "Nine current quality-eligible classifier groups with 151 cuts.",
+      "outputs": [
+        "figures/rq2_native_success.pdf",
+        "figures/rq2_native_success.svg",
+        "figures/rq2_native_success.png"
+      ],
+      "coordinates": "figures/RQ2_FIGURE_DATA.json",
+      "rendered": true
+    },
+    {
+      "name": "rq2_search_budget_table",
+      "tex_label": "tab:rq2-search-budgets",
+      "kind": "table",
+      "generator": "scripts/supplementary-studies/rq2-all-cuts-20261020/paper_assets.py:write_table",
+      "inputs": [
+        "success/graph_rules/required_budgets.csv",
+        "success/current/minimum_budgets_for_target_success.csv"
+      ],
+      "scope": "Both classifier measurement sets reported separately.",
+      "outputs": [
+        "tables/rq2_search_budget_table.csv",
+        "tables/rq2_search_budget_table.json",
+        "tables/rq2_search_budget_table.tex"
+      ]
+    }
+  ],
+  "verification": "Regenerated scientific values are checked against committed files with --verify. Figure coordinates are included in full mode.",
+  "scope": "Exact and near-optimal success use each measurement set's own Native optimum. Neither dataset is a complete graph survey."
+}

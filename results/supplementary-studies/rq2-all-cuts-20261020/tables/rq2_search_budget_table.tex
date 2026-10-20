@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering\small
+\caption{Minimum maximum Native-trial budget per classifier group. Each measurement set contains nine groups. Columns require an exact optimum in eight or nine groups, or a cut within 1\% or 5\% of the Native optimum in all nine. Budgets are capped at each group\textquotesingle s candidate count. Throughput tolerances are separate from the deployment quality filter.}
+\label{tab:rq2-search-budgets}
+\begin{tabular}{llrrrr}
+\toprule
+Measurement set & Selector & Exact, 8/9 & Exact, 9/9 & $\leq1\%$, 9/9 & $\leq5\%$, 9/9\\
+\midrule
+Graph-score comparison & Bytes & 12 & 13 & 13 & 11\\
+ & Weighted & 18 & 19 & 19 & 19\\
+ & Fit-H10 & 15 & 19 & 19 & 19\\
+ & Cycle & 18 & 18 & 18 & 18\\
+ & Stream & 18 & 18 & 18 & 18\\
+ & Generic & 15 & 18 & 18 & 18\\
+\midrule
+Deployment comparison & Bytes & 12 & 14 & 13 & 11\\
+ & Generic & 17 & 18 & 18 & 18\\
+ & Calibrated & 13 & 18 & 18 & 18\\
+\bottomrule
+\end{tabular}
+\end{table*}

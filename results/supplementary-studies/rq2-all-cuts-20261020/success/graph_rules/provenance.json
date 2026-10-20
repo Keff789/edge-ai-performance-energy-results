@@ -1,0 +1,38 @@
+{
+  "experiment_display": "Graph rules on a shared measured set",
+  "experiment_identity": "historical_204_technical_pairs_with_9_YOLOv7_report_overlays",
+  "source_commit": "b10d15992d0ce45d0f81329a5e961cb6207a1d09",
+  "pairs": 204,
+  "classifier_pairs": 168,
+  "detector_pairs": 36,
+  "classifier_groups": 9,
+  "detector_groups": 12,
+  "scope": "Separate fixed campaign from current Native/A4 analysis. No new experiments or parameter fitting.",
+  "exact_optimum": "strict equality of recorded unrounded Native FPS with maximum; ties count; no numerical epsilon",
+  "tolerances": "At least 99% or 95% of the within-group best recorded Native FPS.",
+  "random_formula": "1 - binom(n-m,k)/binom(n,k), where m is the acceptable-cut count; exact Fraction arithmetic",
+  "aggregation": "Each group equal weight. Actual k=min(requested_k,n). Deterministic observed success or exact random expected success fraction.",
+  "generalization": "Observed empirical coverage is not a probability guarantee for unseen models/devices. Random probabilities are exact only for the fixed measured candidate sets.",
+  "inputs": [
+    {
+      "file": "graph_rule_cuts.csv",
+      "sha256": "93d76ba1947af93bfa685831299b3a5effd77018a3970deb1f51844fe055b4d4"
+    },
+    {
+      "file": "method_availability.csv",
+      "sha256": "7d7341ace16917609d3aeffd7a7d188e8234d8a80232a3a97717ffb431e960f3"
+    },
+    {
+      "file": "method_parameters.json",
+      "sha256": "c04c39464973ed03c491aace59933e0a34f1f765c80f7ad7414a8571a59dbff0"
+    },
+    {
+      "file": "source_provenance.json",
+      "sha256": "98df996b754ba571500417518f7c0246f47086f1cf838f676e820478cfe89a5b"
+    },
+    {
+      "file": "stage_cost_source_README.md",
+      "sha256": "03fed1a058f40bb731b7977ab73effa9cb6581555654fdfd6983c525e18c1de9"
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "measured_pairs": 204,
+  "quality_eligible_pairs": 187,
+  "classifier_pairs_all": 168,
+  "classifier_pairs_quality": 151,
+  "detector_pairs": 36,
+  "detector_boundary_features_available": 0,
+  "full_ranking_rows": 391,
+  "group_correlations": 42,
+  "all_k_group_curve_rows": 1386,
+  "published_k135_comparisons": 108,
+  "max_published_absolute_error_pp": 2.4868995751603507e-14,
+  "boundary_score": "ascending logical boundary bytes; ties use ascending configuration identity",
+  "rank_correlation": "Spearman average ranks; corr(-boundary_bytes,FPS), so positive means smaller boundary accompanies higher throughput",
+  "aggregation": "Equal weight across fixed nine classifier groups (or twelve detector groups). k_eff=min(max_native_trials,n). No aggregate over a reduced subset when a method lacks any group.",
+  "budget_scope": "Native trials in the evaluated group only. Generic acquisition, calibration training, compilation and quality evaluation are additional and excluded. Uniform-random values are exact expectations over all distinct subsets.",
+  "calibrated_scope": "Frozen published architecture-held-out predictions; no new fitting or extrapolation to the 17 quality-excluded classifier cuts or any detector.",
+  "source_commit": "b10d15992d0ce45d0f81329a5e961cb6207a1d09",
+  "input_sha256": {
+    "calibration_candidate_audit.csv": "cba79522f785c3e844910795fcb90bd2504938b5d7aef403db96702e79cac8ed",
+    "calibration_predictions.csv": "7b9c920580ff9bb6f2bf6a15d93c929fd3650949c81eb008b29766d0cef4534f",
+    "published_calibration_groups.csv": "3cf84119fa52cbc220d77e2b941523eee6a2fe2e0a9d97300053842fc834f040"
+  }
+}
+                             rho_bytes_native_count  rho_bytes_native_mean  rho_bytes_native_median  rho_bytes_native_min  rho_bytes_native_max  rho_bytes_generic_count  rho_bytes_generic_mean  rho_bytes_generic_median  rho_bytes_generic_min  rho_bytes_generic_max  rho_generic_native_count  rho_generic_native_mean  rho_generic_native_median  rho_generic_native_min  rho_generic_native_max
+view         task                                                                                                                                                                                                                                                                                                                                                                                     
+all_measured classification                       9               0.245134                 0.411085             -0.677013              0.902402                        9               -0.118241                  -0.25393              -0.663399               0.808968                         9                 0.310065                   0.457895               -0.542857                0.997549
+             detection                            0                    NaN                      NaN                   NaN                   NaN                        0                     NaN                       NaN                    NaN                    NaN                        12                 0.583333                   0.500000               -0.500000                1.000000
+quality_5pct classification                       9               0.386750                 0.764889             -0.711991              0.953065                        9               -0.104755                  -0.25393              -0.626061               0.808968                         9                 0.208128                   0.457895               -0.542857                0.976190
+             detection                            0                    NaN                      NaN                   NaN                   NaN                        0                     NaN                       NaN                    NaN                    NaN                        12                 0.583333                   0.500000               -0.500000                1.000000
+        view             method  max_native_trials  available_group_count  mean_loss_pct  effective_trials_min  effective_trials_max
+all_measured     boundary_bytes                  1                      9      45.246753                     1                     1
+all_measured     boundary_bytes                  3                      9      32.171073                     3                     3
+all_measured     boundary_bytes                  5                      9      14.691109                     5                     5
+all_measured     boundary_bytes                 10                      9       7.886808                    10                    10
+all_measured     boundary_bytes                 15                      9       0.273813                    15                    15
+all_measured     boundary_bytes                 20                      9       0.000000                    17                    20
+all_measured            generic                  1                      9      33.007641                     1                     1
+all_measured            generic                  3                      9      23.991199                     3                     3
+all_measured            generic                  5                      9      20.694005                     5                     5
+all_measured            generic                 10                      9      14.280099                    10                    10
+all_measured            generic                 15                      9       6.933632                    15                    15
+all_measured            generic                 20                      9       0.000000                    17                    20
+all_measured calibrated_generic                  1                      7            NaN                     1                     1
+all_measured calibrated_generic                  3                      7            NaN                     3                     3
+all_measured calibrated_generic                  5                      7            NaN                     5                     5
+all_measured calibrated_generic                 10                      7            NaN                    10                    10
+all_measured calibrated_generic                 15                      7            NaN                    15                    15
+all_measured calibrated_generic                 20                      7            NaN                    17                    20
+all_measured     uniform_random                  1                      9      36.706463                     1                     1
+all_measured     uniform_random                  3                      9      17.514706                     3                     3
+all_measured     uniform_random                  5                      9      10.340919                     5                     5
+all_measured     uniform_random                 10                      9       3.360702                    10                    10
+all_measured     uniform_random                 15                      9       0.935028                    15                    15
+all_measured     uniform_random                 20                      9       0.000000                    17                    20
+quality_5pct     boundary_bytes                  1                      9      32.965759                     1                     1
+quality_5pct     boundary_bytes                  3                      9      21.747496                     3                     3
+quality_5pct     boundary_bytes                  5                      9       8.862433                     5                     5
+quality_5pct     boundary_bytes                 10                      9       3.148180                     8                    10
+quality_5pct     boundary_bytes                 15                      9       0.000000                     8                    15
+quality_5pct     boundary_bytes                 20                      9       0.000000                     8                    20
+quality_5pct            generic                  1                      9      32.804339                     1                     1
+quality_5pct            generic                  3                      9      23.768206                     3                     3
+quality_5pct            generic                  5                      9      20.447733                     5                     5
+quality_5pct            generic                 10                      9      14.006286                     8                    10
+quality_5pct            generic                 15                      9       6.933632                     8                    15
+quality_5pct            generic                 20                      9       0.000000                     8                    20
+quality_5pct calibrated_generic                  1                      9      28.318821                     1                     1
+quality_5pct calibrated_generic                  3                      9      23.145584                     3                     3
+quality_5pct calibrated_generic                  5                      9      15.431393                     5                     5
+quality_5pct calibrated_generic                 10                      9      10.057439                     8                    10
+quality_5pct calibrated_generic                 15                      9       4.728544                     8                    15
+quality_5pct calibrated_generic                 20                      9       0.000000                     8                    20
+quality_5pct     uniform_random                  1                      9      32.290325                     1                     1
+quality_5pct     uniform_random                  3                      9      15.406460                     3                     3
+quality_5pct     uniform_random                  5                      9       9.104218                     5                     5
+quality_5pct     uniform_random                 10                      9       2.967341                     8                    10
+quality_5pct     uniform_random                 15                      9       0.868555                     8                    15
+quality_5pct     uniform_random                 20                      9       0.000000                     8                    20
+{
+  "pairs": 204,
+  "correlations": 126,
+  "group_curve_rows": 1428,
+  "summary_rows": 420,
+  "published_top1_check": "PASS"
+}
+{'family': 'classification', 'method': 'cut_bytes_only', 'groups': 9, 'mean_spearman_native': 0.06887156899430533, 'median_spearman_native': 0.09928248825135269, 'mean_spearman_generic': -0.03348119107390521, 'median_spearman_generic': -0.12134526341831993}
+{'family': 'detection', 'method': 'cut_bytes_only', 'groups': 12, 'mean_spearman_native': 0.649519052838329, 'median_spearman_native': 0.8660254037844387, 'mean_spearman_generic': 0.5773502691896258, 'median_spearman_generic': 0.8660254037844387}
+{'family': 'all', 'method': 'cut_bytes_only', 'groups': 21, 'mean_spearman_native': 0.4006701311908903, 'median_spearman_native': 0.8595289492130995, 'mean_spearman_generic': 0.3155653576481125, 'median_spearman_generic': 0.349050114066776}
+{'family': 'classification', 'method': 'cut_bytes_only', 'requested_k': 1, 'groups': 9, 'candidate_count': 168, 'actual_k_min': 1, 'actual_k_max': 1, 'mean_native_loss_pct': 51.77429970822041, 'median_native_loss_pct': 44.99068623182756, 'native_winner_groups_or_expectation': 0.0, 'mean_generic_loss_pct': 44.88013615768015, 'median_generic_loss_pct': 41.77222076132183, 'generic_winner_groups_or_expectation': 0.0, 'aggregation': 'equal group weight; actual_k=min(requested_k,n); fixed group population'}
+{'family': 'classification', 'method': 'measured_generic_completion', 'requested_k': 1, 'groups': 9, 'candidate_count': 168, 'actual_k_min': 1, 'actual_k_max': 1, 'mean_native_loss_pct': 19.756070003297786, 'median_native_loss_pct': 8.03369206156994, 'native_winner_groups_or_expectation': 3.0, 'mean_generic_loss_pct': 0.0, 'median_generic_loss_pct': 0.0, 'generic_winner_groups_or_expectation': 9.0, 'aggregation': 'equal group weight; actual_k=min(requested_k,n); fixed group population'}
+{'family': 'classification', 'method': 'uniform_random', 'requested_k': 1, 'groups': 9, 'candidate_count': 168, 'actual_k_min': 1, 'actual_k_max': 1, 'mean_native_loss_pct': 35.76088336099954, 'median_native_loss_pct': 37.44029530549932, 'native_winner_groups_or_expectation': 0.4843653250773997, 'mean_generic_loss_pct': 27.92165787449982, 'median_generic_loss_pct': 29.660571742702537, 'generic_winner_groups_or_expectation': 0.4843653250773997, 'aggregation': 'equal group weight; actual_k=min(requested_k,n); fixed group population'}
+{'family': 'classification', 'method': 'cut_bytes_only', 'requested_k': 3, 'groups': 9, 'candidate_count': 168, 'actual_k_min': 3, 'actual_k_max': 3, 'mean_native_loss_pct': 35.48503339711148, 'median_native_loss_pct': 23.187731860019912, 'native_winner_groups_or_expectation': 2.0, 'mean_generic_loss_pct': 26.065500102200737, 'median_generic_loss_pct': 26.707143119393972, 'generic_winner_groups_or_expectation': 2.0, 'aggregation': 'equal group weight; actual_k=min(requested_k,n); fixed group population'}
+{'family': 'classification', 'method': 'measured_generic_completion', 'requested_k': 3, 'groups': 9, 'candidate_count': 168, 'actual_k_min': 3, 'actual_k_max': 3, 'mean_native_loss_pct': 12.514116431739682, 'median_native_loss_pct': 0.0, 'native_winner_groups_or_expectation': 6.0, 'mean_generic_loss_pct': 0.0, 'median_generic_loss_pct': 0.0, 'generic_winner_groups_or_expectation': 9.0, 'aggregation': 'equal group weight; actual_k=min(requested_k,n); fixed group population'}
+{'family': 'classification', 'method': 'uniform_random', 'requested_k': 3, 'groups': 9, 'candidate_count': 168, 'actual_k_min': 3, 'actual_k_max': 3, 'mean_native_loss_pct': 18.487861042306914, 'median_native_loss_pct': 15.741417997007034, 'native_winner_groups_or_expectation': 1.4530959752321984, 'mean_generic_loss_pct': 14.579489524082483, 'median_generic_loss_pct': 13.363807379564708, 'generic_winner_groups_or_expectation': 1.4530959752321984, 'aggregation': 'equal group weight; actual_k=min(requested_k,n); fixed group population'}
+{'family': 'classification', 'method': 'cut_bytes_only', 'requested_k': 5, 'groups': 9, 'candidate_count': 168, 'actual_k_min': 5, 'actual_k_max': 5, 'mean_native_loss_pct': 14.903619772888248, 'median_native_loss_pct': 8.03369206156994, 'native_winner_groups_or_expectation': 4.0, 'mean_generic_loss_pct': 5.552850449576747, 'median_generic_loss_pct': 0.0, 'generic_winner_groups_or_expectation': 6.0, 'aggregation': 'equal group weight; actual_k=min(requested_k,n); fixed group population'}
+{'family': 'classification', 'method': 'measured_generic_completion', 'requested_k': 5, 'groups': 9, 'candidate_count': 168, 'actual_k_min': 5, 'actual_k_max': 5, 'mean_native_loss_pct': 11.045897495440563, 'median_native_loss_pct': 0.0, 'native_winner_groups_or_expectation': 6.0, 'mean_generic_loss_pct': 0.0, 'median_generic_loss_pct': 0.0, 'generic_winner_groups_or_expectation': 9.0, 'aggregation': 'equal group weight; actual_k=min(requested_k,n); fixed group population'}
+{'family': 'classification', 'method': 'uniform_random', 'requested_k': 5, 'groups': 9, 'candidate_count': 168, 'actual_k_min': 5, 'actual_k_max': 5, 'mean_native_loss_pct': 12.103610951269893, 'median_native_loss_pct': 9.574575993770452, 'native_winner_groups_or_expectation': 2.4218266253869967, 'mean_generic_loss_pct': 9.830291074077254, 'median_generic_loss_pct': 8.246600494510748, 'generic_winner_groups_or_expectation': 2.4218266253869967, 'aggregation': 'equal group weight; actual_k=min(requested_k,n); fixed group population'}
+{'family': 'classification', 'method': 'cut_bytes_only', 'requested_k': 10, 'groups': 9, 'candidate_count': 168, 'actual_k_min': 10, 'actual_k_max': 10, 'mean_native_loss_pct': 5.633906717353297, 'median_native_loss_pct': 0.0, 'native_winner_groups_or_expectation': 6.0, 'mean_generic_loss_pct': 5.455155711774934, 'median_generic_loss_pct': 0.0, 'generic_winner_groups_or_expectation': 7.0, 'aggregation': 'equal group weight; actual_k=min(requested_k,n); fixed group population'}
+{'family': 'classification', 'method': 'measured_generic_completion', 'requested_k': 10, 'groups': 9, 'candidate_count': 168, 'actual_k_min': 10, 'actual_k_max': 10, 'mean_native_loss_pct': 8.495817856474293, 'median_native_loss_pct': 0.0, 'native_winner_groups_or_expectation': 6.0, 'mean_generic_loss_pct': 0.0, 'median_generic_loss_pct': 0.0, 'generic_winner_groups_or_expectation': 9.0, 'aggregation': 'equal group weight; actual_k=min(requested_k,n); fixed group population'}
+{'family': 'classification', 'method': 'uniform_random', 'requested_k': 10, 'groups': 9, 'candidate_count': 168, 'actual_k_min': 10, 'actual_k_max': 10, 'mean_native_loss_pct': 5.234426273819073, 'median_native_loss_pct': 3.9680978365266517, 'native_winner_groups_or_expectation': 4.843653250773994, 'mean_generic_loss_pct': 4.533682796839892, 'median_generic_loss_pct': 3.2267277306767705, 'generic_winner_groups_or_expectation': 4.843653250773994, 'aggregation': 'equal group weight; actual_k=min(requested_k,n); fixed group population'}
+{
+  "measured_pairs": 204,
+  "quality_eligible_pairs": 187,
+  "byte_feature_pairs_all": 168,
+  "byte_feature_pairs_quality": 151,
+  "group_curve_rows": 4158,
+  "fixed_group_curve_rows": 552,
+  "thresholds_pct": [
+    0.0,
+    1.0,
+    5.0
+  ],
+  "targets": [
+    0.5,
+    0.8,
+    0.8888888888888888,
+    0.9,
+    0.95,
+    1.0
+  ],
+  "success_definition": "At least one tested cut has Native FPS >= (1-tolerance/100)*the best measured Native FPS in the same group and view.",
+  "exact_random_probability": "1 - C(n-m,k)/C(n,k), where m is the number of acceptable candidates; sampled without replacement.",
+  "deterministic_interpretation": "Observed coverage across these fixed model/device groups, not a statistical estimate of future-model success probability.",
+  "average_random_interpretation": "Exact random success probability averaged equally over these finite groups; every_group_probability uses the worst group instead.",
+  "actual_budget": "k_effective=min(max_native_trials,n). Counts evaluated Native trials only, not failed compilations or graph-universe candidates.",
+  "additional_costs": "Generic acquisition, frozen calibration training, quality evaluation and compilation are additional and excluded.",
+  "calibrated_scope": "Published frozen eligible-classifier predictions only. No fitting or extrapolation.",
+  "tie_handling": "Ascending configuration identity after byte size or descending predicted/measured FPS. No future-outcome tie breaking.",
+  "source_commit": "b10d15992d0ce45d0f81329a5e961cb6207a1d09",
+  "input_sha256": {
+    "calibration_candidate_audit.csv": "cba79522f785c3e844910795fcb90bd2504938b5d7aef403db96702e79cac8ed",
+    "calibration_predictions.csv": "7b9c920580ff9bb6f2bf6a15d93c929fd3650949c81eb008b29766d0cef4534f"
+  },
+  "validation": "All success curves complete, bounded, monotone, and equal to one at exhaustive measurement. Random k=1 equals m/n."
+}
+            method  loss_tolerance_pct  target_success_fraction  minimum_max_budget  mean_success_fraction  actual_trials_mean  actual_trials_sum
+    boundary_bytes                 0.0                 0.500000                 4.0               0.555556            4.000000               36.0
+    boundary_bytes                 0.0                 0.800000                12.0               0.888889           11.222222              101.0
+    boundary_bytes                 0.0                 0.888889                12.0               0.888889           11.222222              101.0
+    boundary_bytes                 0.0                 0.900000                14.0               1.000000           12.777778              115.0
+    boundary_bytes                 0.0                 0.950000                14.0               1.000000           12.777778              115.0
+    boundary_bytes                 0.0                 1.000000                14.0               1.000000           12.777778              115.0
+    boundary_bytes                 1.0                 0.500000                 4.0               0.555556            4.000000               36.0
+    boundary_bytes                 1.0                 0.800000                12.0               0.888889           11.222222              101.0
+    boundary_bytes                 1.0                 0.888889                12.0               0.888889           11.222222              101.0
+    boundary_bytes                 1.0                 0.900000                13.0               1.000000           12.000000              108.0
+    boundary_bytes                 1.0                 0.950000                13.0               1.000000           12.000000              108.0
+    boundary_bytes                 1.0                 1.000000                13.0               1.000000           12.000000              108.0
+    boundary_bytes                 5.0                 0.500000                 4.0               0.555556            4.000000               36.0
+    boundary_bytes                 5.0                 0.800000                11.0               1.000000           10.444444               94.0
+    boundary_bytes                 5.0                 0.888889                11.0               1.000000           10.444444               94.0
+    boundary_bytes                 5.0                 0.900000                11.0               1.000000           10.444444               94.0
+    boundary_bytes                 5.0                 0.950000                11.0               1.000000           10.444444               94.0
+    boundary_bytes                 5.0                 1.000000                11.0               1.000000           10.444444               94.0
+calibrated_generic                 0.0                 0.500000                 6.0               0.555556            6.000000               54.0
+calibrated_generic                 0.0                 0.800000                13.0               0.888889           12.000000              108.0
+calibrated_generic                 0.0                 0.888889                13.0               0.888889           12.000000              108.0
+calibrated_generic                 0.0                 0.900000                18.0               1.000000           15.777778              142.0
+calibrated_generic                 0.0                 0.950000                18.0               1.000000           15.777778              142.0
+calibrated_generic                 0.0                 1.000000                18.0               1.000000           15.777778              142.0
+calibrated_generic                 1.0                 0.500000                 6.0               0.555556            6.000000               54.0
+calibrated_generic                 1.0                 0.800000                13.0               0.888889           12.000000              108.0
+calibrated_generic                 1.0                 0.888889                13.0               0.888889           12.000000              108.0
+calibrated_generic                 1.0                 0.900000                18.0               1.000000           15.777778              142.0
+calibrated_generic                 1.0                 0.950000                18.0               1.000000           15.777778              142.0
+calibrated_generic                 1.0                 1.000000                18.0               1.000000           15.777778              142.0
+calibrated_generic                 5.0                 0.500000                 6.0               0.555556            6.000000               54.0
+calibrated_generic                 5.0                 0.800000                12.0               0.888889           11.222222              101.0
+calibrated_generic                 5.0                 0.888889                12.0               0.888889           11.222222              101.0
+calibrated_generic                 5.0                 0.900000                18.0               1.000000           15.777778              142.0
+calibrated_generic                 5.0                 0.950000                18.0               1.000000           15.777778              142.0
+calibrated_generic                 5.0                 1.000000                18.0               1.000000           15.777778              142.0
+           generic                 0.0                 0.500000                 9.0               0.555556            8.888889               80.0
+           generic                 0.0                 0.800000                17.0               0.888889           15.111111              136.0
+           generic                 0.0                 0.888889                17.0               0.888889           15.111111              136.0
+           generic                 0.0                 0.900000                18.0               1.000000           15.777778              142.0
+           generic                 0.0                 0.950000                18.0               1.000000           15.777778              142.0
+           generic                 0.0                 1.000000                18.0               1.000000           15.777778              142.0
+           generic                 1.0                 0.500000                 9.0               0.555556            8.888889               80.0
+           generic                 1.0                 0.800000                17.0               0.888889           15.111111              136.0
+           generic                 1.0                 0.888889                17.0               0.888889           15.111111              136.0
+           generic                 1.0                 0.900000                18.0               1.000000           15.777778              142.0
+           generic                 1.0                 0.950000                18.0               1.000000           15.777778              142.0
+           generic                 1.0                 1.000000                18.0               1.000000           15.777778              142.0
+           generic                 5.0                 0.500000                 9.0               0.555556            8.888889               80.0
+           generic                 5.0                 0.800000                16.0               0.888889           14.333333              129.0
+           generic                 5.0                 0.888889                16.0               0.888889           14.333333              129.0
+           generic                 5.0                 0.900000                18.0               1.000000           15.777778              142.0
+           generic                 5.0                 0.950000                18.0               1.000000           15.777778              142.0
+           generic                 5.0                 1.000000                18.0               1.000000           15.777778              142.0
+    uniform_random                 0.0                 0.500000                 8.0               0.535848            8.000000               72.0
+    uniform_random                 0.0                 0.800000                15.0               0.833419           13.555556              122.0
+    uniform_random                 0.0                 0.888889                17.0               0.914912           15.111111              136.0
+    uniform_random                 0.0                 0.900000                17.0               0.914912           15.111111              136.0
+    uniform_random                 0.0                 0.950000                19.0               0.983333           16.444444              148.0
+    uniform_random                 0.0                 1.000000                20.0               1.000000           16.777778              151.0
+    uniform_random                 1.0                 0.500000                 6.0               0.507316            6.000000               54.0
+    uniform_random                 1.0                 0.800000                12.0               0.806473           11.222222              101.0
+    uniform_random                 1.0                 0.888889                15.0               0.898205           13.555556              122.0
+    uniform_random                 1.0                 0.900000                16.0               0.926018           14.333333              129.0
+    uniform_random                 1.0                 0.950000                17.0               0.952567           15.111111              136.0
+    uniform_random                 1.0                 1.000000                20.0               1.000000           16.777778              151.0
+    uniform_random                 5.0                 0.500000                 5.0               0.576743            5.000000               45.0
+    uniform_random                 5.0                 0.800000                 9.0               0.801152            8.888889               80.0
+    uniform_random                 5.0                 0.888889                13.0               0.903675           12.000000              108.0
+    uniform_random                 5.0                 0.900000                13.0               0.903675           12.000000              108.0
+    uniform_random                 5.0                 0.950000                16.0               0.953216           14.333333              129.0
+    uniform_random                 5.0                 1.000000                20.0               1.000000           16.777778              151.0
+{
+  "first_hit_rows": 378,
+  "group_curve_rows": 4284,
+  "summary_rows": 903,
+  "budget_rows": 378
+}
+
+CLASSIFICATION exact_optimum budgets 50/80/8-of-9/90/95/100
+Boundary bytes [6, 12, 12, 13, 13, 13]
+Weighted score [9, 18, 18, 19, 19, 19]
+H10 fit [7, 15, 15, 19, 19, 19]
+Cycle without handover [9, 18, 18, 18, 18, 18]
+Stored stream rate [8, 18, 18, 18, 18, 18]
+Generic [2, 15, 15, 18, 18, 18]
+Uniform random [10, 15, 17, 17, 19, 20]
+
+CLASSIFICATION within_1pct budgets 50/80/8-of-9/90/95/100
+Boundary bytes [6, 11, 11, 13, 13, 13]
+Weighted score [7, 18, 18, 19, 19, 19]
+H10 fit [7, 14, 14, 19, 19, 19]
+Cycle without handover [7, 18, 18, 18, 18, 18]
+Stored stream rate [6, 18, 18, 18, 18, 18]
+Generic [2, 13, 13, 18, 18, 18]
+Uniform random [8, 14, 16, 17, 18, 20]
+
+CLASSIFICATION within_5pct budgets 50/80/8-of-9/90/95/100
+Boundary bytes [6, 11, 11, 11, 11, 11]
+Weighted score [5, 18, 18, 19, 19, 19]
+H10 fit [7, 14, 14, 19, 19, 19]
+Cycle without handover [5, 18, 18, 18, 18, 18]
+Stored stream rate [5, 18, 18, 18, 18, 18]
+Generic [2, 13, 13, 18, 18, 18]
+Uniform random [7, 14, 16, 16, 18, 20]

@@ -1,0 +1,35 @@
+{
+  "measured_pairs": 204,
+  "quality_eligible_pairs": 187,
+  "byte_feature_pairs_all": 168,
+  "byte_feature_pairs_quality": 151,
+  "group_curve_rows": 4158,
+  "fixed_group_curve_rows": 552,
+  "thresholds_pct": [
+    0.0,
+    1.0,
+    5.0
+  ],
+  "targets": [
+    0.5,
+    0.8,
+    0.8888888888888888,
+    0.9,
+    0.95,
+    1.0
+  ],
+  "success_definition": "At least one tested cut has Native FPS >= (1-tolerance/100)*the best measured Native FPS in the same group and view.",
+  "exact_random_probability": "1 - C(n-m,k)/C(n,k), where m is the number of acceptable candidates; sampled without replacement.",
+  "deterministic_interpretation": "Observed coverage across these fixed model/device groups, not a statistical estimate of future-model success probability.",
+  "average_random_interpretation": "Exact random success probability averaged equally over these finite groups; every_group_probability uses the worst group instead.",
+  "actual_budget": "k_effective=min(max_native_trials,n). Counts evaluated Native trials only, not failed compilations or graph-universe candidates.",
+  "additional_costs": "Generic acquisition, frozen calibration training, quality evaluation and compilation are additional and excluded.",
+  "calibrated_scope": "Published frozen eligible-classifier predictions only. No fitting or extrapolation.",
+  "tie_handling": "Ascending configuration identity after byte size or descending predicted/measured FPS. No future-outcome tie breaking.",
+  "source_commit": "b10d15992d0ce45d0f81329a5e961cb6207a1d09",
+  "input_sha256": {
+    "calibration_candidate_audit.csv": "cba79522f785c3e844910795fcb90bd2504938b5d7aef403db96702e79cac8ed",
+    "calibration_predictions.csv": "7b9c920580ff9bb6f2bf6a15d93c929fd3650949c81eb008b29766d0cef4534f"
+  },
+  "validation": "All success curves complete, bounded, monotone, and equal to one at exhaustive measurement. Random k=1 equals m/n."
+}

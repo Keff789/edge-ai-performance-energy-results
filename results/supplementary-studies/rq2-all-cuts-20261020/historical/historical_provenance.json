@@ -1,0 +1,50 @@
+{
+  "dataset": "historical_204_technical_pairs",
+  "pairs": 204,
+  "groups": 21,
+  "source_commit": "b10d15992d0ce45d0f81329a5e961cb6207a1d09",
+  "classifier_pairs": 168,
+  "detector_pairs": 36,
+  "relation_to_current": "Separate historical measurements; not current Native/A4 deployment comparison.",
+  "quality_filter": "Historical technical-transfer admission only; all 204 pairs; no new 5% gate.",
+  "rank_ties": "Spearman uses average ranks for exact score or FPS ties.",
+  "selection_ties": "Static: frozen original_order (boundary order), then original pair order. Generic: original pair order.",
+  "random": "Exact expected maximum of uniform k-subsets without replacement, combinatorial weights.",
+  "summary_population": "Fixed nine classifier and twelve detector groups. k capped to group size. Every group equal weight.",
+  "verified_published_top1_groups": 126,
+  "verified_published_summary_methods": 6,
+  "score_formulas": {
+    "cut_bytes_only": "graph-estimated boundary bytes; lower better",
+    "weighted_score": "minmax(log10(1+bytes)) + 3*minmax(imbalance) + 0.2*minmax(max(tensors-1,0)); full saved model universe normalization",
+    "onnx_real_boundary_hardware_aware": "frozen Hailo10-to-TensorRT accelerator fit shared across setups; lower better",
+    "cycle_time_no_handover": "stored heuristic total latency times max(left,right) compute share; lower better",
+    "stored_predicted_stream_fps": "1000/(stored bottleneck + stored handover term); higher better",
+    "measured_generic_completion": "paired measured Generic completion FPS; higher better"
+  },
+  "sources": [
+    {
+      "path": "results/supplementary-studies/mlsys-selection-20261007/inputs/analysis/evidence/tables/rank_cases.csv",
+      "sha256": "037ce56b7dce20ffe4385aaaa005d3c17211df2b7128fed80e06d178c03ad892"
+    },
+    {
+      "path": "results/supplementary-studies/mlsys-selection-20261007/inputs/analysis/reported_update/reported_results.csv",
+      "sha256": "d9ccd544423bef45cc8f0ccbbd2d93cdf12687f7d6c0b17c7879169fd33b68c1"
+    },
+    {
+      "path": "results/supplementary-studies/thesis20-ranking-20261005/inputs/method_candidate_scores.csv",
+      "sha256": "98c523f4f06f2ebfe8feba065806b9acf32c973b0eec4a1a8c6135db0fc8868b"
+    },
+    {
+      "path": "results/supplementary-studies/thesis20-ranking-20261005/inputs/method_parameters.json",
+      "sha256": "c04c39464973ed03c491aace59933e0a34f1f765c80f7ad7414a8571a59dbff0"
+    },
+    {
+      "path": "results/split-inference/publications/mlsys-r22/data/historical_selector_groups.csv",
+      "sha256": "c0d74fbdef973013612128b6f88bba4c22147cd293e863a4a3a45ac09604c94b"
+    },
+    {
+      "path": "results/split-inference/publications/mlsys-r22/tables/ranking_tables.csv",
+      "sha256": "7018701927c3ab5ce494cb0a285f794e304f1d03786b96ea3586f36dbfa6b5bc"
+    }
+  ]
+}

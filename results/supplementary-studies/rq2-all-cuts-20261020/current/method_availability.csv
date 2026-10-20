@@ -1,0 +1,169 @@
+view,model,setup,task,n,method,available,reason
+all_measured,mobilenet_v3_large,DeepX,classification,17,boundary_bytes,True,
+all_measured,mobilenet_v3_large,DeepX,classification,17,generic,True,
+all_measured,mobilenet_v3_large,DeepX,classification,17,calibrated_generic,True,
+all_measured,mobilenet_v3_large,DeepX,classification,17,uniform_random,True,
+all_measured,mobilenet_v3_large,H10,classification,17,boundary_bytes,True,
+all_measured,mobilenet_v3_large,H10,classification,17,generic,True,
+all_measured,mobilenet_v3_large,H10,classification,17,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+all_measured,mobilenet_v3_large,H10,classification,17,uniform_random,True,
+all_measured,mobilenet_v3_large,H8,classification,17,boundary_bytes,True,
+all_measured,mobilenet_v3_large,H8,classification,17,generic,True,
+all_measured,mobilenet_v3_large,H8,classification,17,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+all_measured,mobilenet_v3_large,H8,classification,17,uniform_random,True,
+all_measured,regnet_x_1_6gf,DeepX,classification,20,boundary_bytes,True,
+all_measured,regnet_x_1_6gf,DeepX,classification,20,generic,True,
+all_measured,regnet_x_1_6gf,DeepX,classification,20,calibrated_generic,True,
+all_measured,regnet_x_1_6gf,DeepX,classification,20,uniform_random,True,
+all_measured,regnet_x_1_6gf,H10,classification,20,boundary_bytes,True,
+all_measured,regnet_x_1_6gf,H10,classification,20,generic,True,
+all_measured,regnet_x_1_6gf,H10,classification,20,calibrated_generic,True,
+all_measured,regnet_x_1_6gf,H10,classification,20,uniform_random,True,
+all_measured,regnet_x_1_6gf,H8,classification,20,boundary_bytes,True,
+all_measured,regnet_x_1_6gf,H8,classification,20,generic,True,
+all_measured,regnet_x_1_6gf,H8,classification,20,calibrated_generic,True,
+all_measured,regnet_x_1_6gf,H8,classification,20,uniform_random,True,
+all_measured,resnet50,DeepX,classification,19,boundary_bytes,True,
+all_measured,resnet50,DeepX,classification,19,generic,True,
+all_measured,resnet50,DeepX,classification,19,calibrated_generic,True,
+all_measured,resnet50,DeepX,classification,19,uniform_random,True,
+all_measured,resnet50,H10,classification,19,boundary_bytes,True,
+all_measured,resnet50,H10,classification,19,generic,True,
+all_measured,resnet50,H10,classification,19,calibrated_generic,True,
+all_measured,resnet50,H10,classification,19,uniform_random,True,
+all_measured,resnet50,H8,classification,19,boundary_bytes,True,
+all_measured,resnet50,H8,classification,19,generic,True,
+all_measured,resnet50,H8,classification,19,calibrated_generic,True,
+all_measured,resnet50,H8,classification,19,uniform_random,True,
+all_measured,yolo11l,DeepX,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+all_measured,yolo11l,DeepX,detection,3,generic,True,
+all_measured,yolo11l,DeepX,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+all_measured,yolo11l,DeepX,detection,3,uniform_random,True,
+all_measured,yolo11l,H10,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+all_measured,yolo11l,H10,detection,3,generic,True,
+all_measured,yolo11l,H10,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+all_measured,yolo11l,H10,detection,3,uniform_random,True,
+all_measured,yolo11l,H8,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+all_measured,yolo11l,H8,detection,3,generic,True,
+all_measured,yolo11l,H8,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+all_measured,yolo11l,H8,detection,3,uniform_random,True,
+all_measured,yolo26m,DeepX,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+all_measured,yolo26m,DeepX,detection,3,generic,True,
+all_measured,yolo26m,DeepX,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+all_measured,yolo26m,DeepX,detection,3,uniform_random,True,
+all_measured,yolo26m,H10,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+all_measured,yolo26m,H10,detection,3,generic,True,
+all_measured,yolo26m,H10,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+all_measured,yolo26m,H10,detection,3,uniform_random,True,
+all_measured,yolo26m,H8,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+all_measured,yolo26m,H8,detection,3,generic,True,
+all_measured,yolo26m,H8,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+all_measured,yolo26m,H8,detection,3,uniform_random,True,
+all_measured,yolo26s,DeepX,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+all_measured,yolo26s,DeepX,detection,3,generic,True,
+all_measured,yolo26s,DeepX,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+all_measured,yolo26s,DeepX,detection,3,uniform_random,True,
+all_measured,yolo26s,H10,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+all_measured,yolo26s,H10,detection,3,generic,True,
+all_measured,yolo26s,H10,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+all_measured,yolo26s,H10,detection,3,uniform_random,True,
+all_measured,yolo26s,H8,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+all_measured,yolo26s,H8,detection,3,generic,True,
+all_measured,yolo26s,H8,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+all_measured,yolo26s,H8,detection,3,uniform_random,True,
+all_measured,yolov7_paper,DeepX,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+all_measured,yolov7_paper,DeepX,detection,3,generic,True,
+all_measured,yolov7_paper,DeepX,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+all_measured,yolov7_paper,DeepX,detection,3,uniform_random,True,
+all_measured,yolov7_paper,H10,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+all_measured,yolov7_paper,H10,detection,3,generic,True,
+all_measured,yolov7_paper,H10,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+all_measured,yolov7_paper,H10,detection,3,uniform_random,True,
+all_measured,yolov7_paper,H8,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+all_measured,yolov7_paper,H8,detection,3,generic,True,
+all_measured,yolov7_paper,H8,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+all_measured,yolov7_paper,H8,detection,3,uniform_random,True,
+quality_5pct,mobilenet_v3_large,DeepX,classification,17,boundary_bytes,True,
+quality_5pct,mobilenet_v3_large,DeepX,classification,17,generic,True,
+quality_5pct,mobilenet_v3_large,DeepX,classification,17,calibrated_generic,True,
+quality_5pct,mobilenet_v3_large,DeepX,classification,17,uniform_random,True,
+quality_5pct,mobilenet_v3_large,H10,classification,9,boundary_bytes,True,
+quality_5pct,mobilenet_v3_large,H10,classification,9,generic,True,
+quality_5pct,mobilenet_v3_large,H10,classification,9,calibrated_generic,True,
+quality_5pct,mobilenet_v3_large,H10,classification,9,uniform_random,True,
+quality_5pct,mobilenet_v3_large,H8,classification,8,boundary_bytes,True,
+quality_5pct,mobilenet_v3_large,H8,classification,8,generic,True,
+quality_5pct,mobilenet_v3_large,H8,classification,8,calibrated_generic,True,
+quality_5pct,mobilenet_v3_large,H8,classification,8,uniform_random,True,
+quality_5pct,regnet_x_1_6gf,DeepX,classification,20,boundary_bytes,True,
+quality_5pct,regnet_x_1_6gf,DeepX,classification,20,generic,True,
+quality_5pct,regnet_x_1_6gf,DeepX,classification,20,calibrated_generic,True,
+quality_5pct,regnet_x_1_6gf,DeepX,classification,20,uniform_random,True,
+quality_5pct,regnet_x_1_6gf,H10,classification,20,boundary_bytes,True,
+quality_5pct,regnet_x_1_6gf,H10,classification,20,generic,True,
+quality_5pct,regnet_x_1_6gf,H10,classification,20,calibrated_generic,True,
+quality_5pct,regnet_x_1_6gf,H10,classification,20,uniform_random,True,
+quality_5pct,regnet_x_1_6gf,H8,classification,20,boundary_bytes,True,
+quality_5pct,regnet_x_1_6gf,H8,classification,20,generic,True,
+quality_5pct,regnet_x_1_6gf,H8,classification,20,calibrated_generic,True,
+quality_5pct,regnet_x_1_6gf,H8,classification,20,uniform_random,True,
+quality_5pct,resnet50,DeepX,classification,19,boundary_bytes,True,
+quality_5pct,resnet50,DeepX,classification,19,generic,True,
+quality_5pct,resnet50,DeepX,classification,19,calibrated_generic,True,
+quality_5pct,resnet50,DeepX,classification,19,uniform_random,True,
+quality_5pct,resnet50,H10,classification,19,boundary_bytes,True,
+quality_5pct,resnet50,H10,classification,19,generic,True,
+quality_5pct,resnet50,H10,classification,19,calibrated_generic,True,
+quality_5pct,resnet50,H10,classification,19,uniform_random,True,
+quality_5pct,resnet50,H8,classification,19,boundary_bytes,True,
+quality_5pct,resnet50,H8,classification,19,generic,True,
+quality_5pct,resnet50,H8,classification,19,calibrated_generic,True,
+quality_5pct,resnet50,H8,classification,19,uniform_random,True,
+quality_5pct,yolo11l,DeepX,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+quality_5pct,yolo11l,DeepX,detection,3,generic,True,
+quality_5pct,yolo11l,DeepX,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+quality_5pct,yolo11l,DeepX,detection,3,uniform_random,True,
+quality_5pct,yolo11l,H10,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+quality_5pct,yolo11l,H10,detection,3,generic,True,
+quality_5pct,yolo11l,H10,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+quality_5pct,yolo11l,H10,detection,3,uniform_random,True,
+quality_5pct,yolo11l,H8,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+quality_5pct,yolo11l,H8,detection,3,generic,True,
+quality_5pct,yolo11l,H8,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+quality_5pct,yolo11l,H8,detection,3,uniform_random,True,
+quality_5pct,yolo26m,DeepX,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+quality_5pct,yolo26m,DeepX,detection,3,generic,True,
+quality_5pct,yolo26m,DeepX,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+quality_5pct,yolo26m,DeepX,detection,3,uniform_random,True,
+quality_5pct,yolo26m,H10,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+quality_5pct,yolo26m,H10,detection,3,generic,True,
+quality_5pct,yolo26m,H10,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+quality_5pct,yolo26m,H10,detection,3,uniform_random,True,
+quality_5pct,yolo26m,H8,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+quality_5pct,yolo26m,H8,detection,3,generic,True,
+quality_5pct,yolo26m,H8,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+quality_5pct,yolo26m,H8,detection,3,uniform_random,True,
+quality_5pct,yolo26s,DeepX,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+quality_5pct,yolo26s,DeepX,detection,3,generic,True,
+quality_5pct,yolo26s,DeepX,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+quality_5pct,yolo26s,DeepX,detection,3,uniform_random,True,
+quality_5pct,yolo26s,H10,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+quality_5pct,yolo26s,H10,detection,3,generic,True,
+quality_5pct,yolo26s,H10,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+quality_5pct,yolo26s,H10,detection,3,uniform_random,True,
+quality_5pct,yolo26s,H8,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+quality_5pct,yolo26s,H8,detection,3,generic,True,
+quality_5pct,yolo26s,H8,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+quality_5pct,yolo26s,H8,detection,3,uniform_random,True,
+quality_5pct,yolov7_paper,DeepX,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+quality_5pct,yolov7_paper,DeepX,detection,3,generic,True,
+quality_5pct,yolov7_paper,DeepX,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+quality_5pct,yolov7_paper,DeepX,detection,3,uniform_random,True,
+quality_5pct,yolov7_paper,H10,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+quality_5pct,yolov7_paper,H10,detection,3,generic,True,
+quality_5pct,yolov7_paper,H10,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+quality_5pct,yolov7_paper,H10,detection,3,uniform_random,True,
+quality_5pct,yolov7_paper,H8,detection,3,boundary_bytes,False,No artifact-bound boundary-byte features for every candidate in this group.
+quality_5pct,yolov7_paper,H8,detection,3,generic,True,
+quality_5pct,yolov7_paper,H8,detection,3,calibrated_generic,False,Frozen calibrated predictions cover only quality-eligible classifiers; incomplete group coverage.
+quality_5pct,yolov7_paper,H8,detection,3,uniform_random,True,

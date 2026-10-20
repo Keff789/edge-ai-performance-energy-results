@@ -1,0 +1,63 @@
+{
+  "source_commit": "b10d15992d0ce45d0f81329a5e961cb6207a1d09",
+  "source_binding": "Existing public compact inputs; no external model or measurement files.",
+  "sources": [
+    {
+      "path": "results/split-inference/publication-inputs/mlsys-r22/evidence/r15/audit_regnet/results/calibration_candidate_audit.csv",
+      "sha256": "cba79522f785c3e844910795fcb90bd2504938b5d7aef403db96702e79cac8ed"
+    },
+    {
+      "path": "results/split-inference/publication-inputs/mlsys-r22/evidence/r15/audit_regnet/results/calibration_predictions.csv",
+      "sha256": "7b9c920580ff9bb6f2bf6a15d93c929fd3650949c81eb008b29766d0cef4534f"
+    },
+    {
+      "path": "results/split-inference/publications/mlsys-r22/data/historical_selector_groups.csv",
+      "sha256": "c0d74fbdef973013612128b6f88bba4c22147cd293e863a4a3a45ac09604c94b"
+    },
+    {
+      "path": "results/split-inference/publications/mlsys-r22/data/r15_calibration_groups.csv",
+      "sha256": "3cf84119fa52cbc220d77e2b941523eee6a2fe2e0a9d97300053842fc834f040"
+    },
+    {
+      "path": "results/split-inference/publications/mlsys-r22/tables/ranking_tables.csv",
+      "sha256": "7018701927c3ab5ce494cb0a285f794e304f1d03786b96ea3586f36dbfa6b5bc"
+    },
+    {
+      "path": "results/supplementary-studies/mlsys-selection-20261007/inputs/analysis/evidence/tables/rank_cases.csv",
+      "sha256": "037ce56b7dce20ffe4385aaaa005d3c17211df2b7128fed80e06d178c03ad892"
+    },
+    {
+      "path": "results/supplementary-studies/mlsys-selection-20261007/inputs/analysis/reported_update/reported_results.csv",
+      "sha256": "d9ccd544423bef45cc8f0ccbbd2d93cdf12687f7d6c0b17c7879169fd33b68c1"
+    },
+    {
+      "path": "results/supplementary-studies/stage-cost-composition/README.md",
+      "sha256": "03fed1a058f40bb731b7977ab73effa9cb6581555654fdfd6983c525e18c1de9"
+    },
+    {
+      "path": "results/supplementary-studies/thesis20-ranking-20261005/inputs/method_availability.csv",
+      "sha256": "7d7341ace16917609d3aeffd7a7d188e8234d8a80232a3a97717ffb431e960f3"
+    },
+    {
+      "path": "results/supplementary-studies/thesis20-ranking-20261005/inputs/method_candidate_scores.csv",
+      "sha256": "98c523f4f06f2ebfe8feba065806b9acf32c973b0eec4a1a8c6135db0fc8868b"
+    },
+    {
+      "path": "results/supplementary-studies/thesis20-ranking-20261005/inputs/method_parameters.json",
+      "sha256": "c04c39464973ed03c491aace59933e0a34f1f765c80f7ad7414a8571a59dbff0"
+    }
+  ],
+  "derived_input_bindings": [
+    {
+      "consumer": "success/graph_rules",
+      "input": "graph_rule_cuts.csv",
+      "generated_from": "historical/historical_cuts.csv"
+    },
+    {
+      "consumer": "success/graph_rules",
+      "input": "source_provenance.json",
+      "generated_from": "historical/historical_provenance.json"
+    }
+  ],
+  "cohorts": "Graph-score and current Native/A4 results use separate runtime references."
+}
