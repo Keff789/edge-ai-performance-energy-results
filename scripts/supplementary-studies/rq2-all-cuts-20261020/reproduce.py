@@ -101,8 +101,12 @@ def verify_published(output):
 def asset_manifest(output, numeric_only):
     figures = [
         ('rq2_shortlist_curves', 'fig:rq2-shortlists',
-         ['historical/historical_shortlist_summary.csv','current/fixed_group_budget_curves.csv'],
-         'Separate nine-group classifier curves: 168 graph-score cuts and 151 quality-eligible current cuts.'),
+         ['current/fixed_group_budget_curves.csv'],
+         'Nine current quality-eligible classifier groups with 151 cuts; four selectors.'),
+        ('rq2_generic_selection_loss','fig:selectors',
+         ['current/all_k_group_curves.csv','current/group_correlations.csv',
+          'results/split-inference/publications/mlsys-r22/figures/FIGURE_DATA.json#quality_generic_selection_loss'],
+         'Current quality-eligible deployment comparison: all seven models, 21 model/device groups and 187 cuts.'),
         ('rq2_graph_analysis','fig:supp-graph-analysis',
          ['historical/historical_rank_correlations.csv','historical/historical_shortlist_summary.csv',
           'success/graph_rules/success_summary.csv'],
@@ -115,9 +119,10 @@ def asset_manifest(output, numeric_only):
     for name,label,inputs,scope in figures:
         assets.append({'name':name,'tex_label':label,'kind':'figure',
             'generator':'scripts/supplementary-studies/rq2-all-cuts-20261020/paper_assets.py:run',
+            'style':'scripts/supplementary-studies/rq2-all-cuts-20261020/figure_style.py, reusing scripts/split-inference/publication_mlsys_figures.py:PAPER_STYLE',
             'inputs':inputs,'scope':scope,'outputs':[] if numeric_only else
             ['figures/'+name+'.'+extension for extension in ['pdf','svg','png']],
-            'coordinates':None if numeric_only else 'figures/RQ2_FIGURE_DATA.json',
+            'coordinates':'figures/RQ2_FIGURE_DATA.json',
             'rendered':not numeric_only})
     assets.append({'name':'rq2_search_budget_table','tex_label':'tab:rq2-search-budgets',
         'kind':'table','generator':'scripts/supplementary-studies/rq2-all-cuts-20261020/paper_assets.py:write_table',
@@ -125,7 +130,7 @@ def asset_manifest(output, numeric_only):
         'scope':'Both classifier measurement sets reported separately.',
         'outputs':['tables/rq2_search_budget_table.'+extension for extension in ['csv','json','tex']]})
     manifest={'analysis':'rq2-all-cuts-20261020','assets':assets,
-        'verification':'Regenerated scientific values are checked against committed files with --verify. Figure coordinates are included in full mode.',
+        'verification':'Regenerated scientific values and figure coordinates are checked against committed files with --verify in both modes. The restored scatter also verifies all 21 selections and losses against the frozen R22 payload.',
         'scope':'Exact and near-optimal success use each measurement set\'s own Native optimum. Neither dataset is a complete graph survey.'}
     (output/'ASSET_MANIFEST.json').write_text(json.dumps(manifest,indent=2)+'\n')
 
@@ -150,6 +155,7 @@ def run(output, numeric_only=False, verify=False):
         REPO/GRAPH/'inputs/method_candidate_scores.csv',
         REPO/PUB/'data/historical_selector_groups.csv',
         REPO/PUB/'tables/ranking_tables.csv',
+        REPO/PUB/'figures/FIGURE_DATA.json',
     }
     manifest = {
         'source_commit':SOURCE_COMMIT,
@@ -201,6 +207,8 @@ def run(output, numeric_only=False, verify=False):
     module('documentation').run(output)
     renderer = module('paper_assets')
     renderer.run(output,output,numeric_only)
+    figure_data=json.loads((output/'figures/RQ2_FIGURE_DATA.json').read_text())
+    checks['generic_scatter_reference']=figure_data['rq2_generic_selection_loss']['verification']
     asset_manifest(output,numeric_only)
     if verify:
         checks['published_reference'] = verify_published(output)

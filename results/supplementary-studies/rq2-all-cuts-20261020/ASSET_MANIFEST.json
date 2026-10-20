@@ -6,11 +6,11 @@
       "tex_label": "fig:rq2-shortlists",
       "kind": "figure",
       "generator": "scripts/supplementary-studies/rq2-all-cuts-20261020/paper_assets.py:run",
+      "style": "scripts/supplementary-studies/rq2-all-cuts-20261020/figure_style.py, reusing scripts/split-inference/publication_mlsys_figures.py:PAPER_STYLE",
       "inputs": [
-        "historical/historical_shortlist_summary.csv",
         "current/fixed_group_budget_curves.csv"
       ],
-      "scope": "Separate nine-group classifier curves: 168 graph-score cuts and 151 quality-eligible current cuts.",
+      "scope": "Nine current quality-eligible classifier groups with 151 cuts; four selectors.",
       "outputs": [
         "figures/rq2_shortlist_curves.pdf",
         "figures/rq2_shortlist_curves.svg",
@@ -20,10 +20,31 @@
       "rendered": true
     },
     {
+      "name": "rq2_generic_selection_loss",
+      "tex_label": "fig:selectors",
+      "kind": "figure",
+      "generator": "scripts/supplementary-studies/rq2-all-cuts-20261020/paper_assets.py:run",
+      "style": "scripts/supplementary-studies/rq2-all-cuts-20261020/figure_style.py, reusing scripts/split-inference/publication_mlsys_figures.py:PAPER_STYLE",
+      "inputs": [
+        "current/all_k_group_curves.csv",
+        "current/group_correlations.csv",
+        "results/split-inference/publications/mlsys-r22/figures/FIGURE_DATA.json#quality_generic_selection_loss"
+      ],
+      "scope": "Current quality-eligible deployment comparison: all seven models, 21 model/device groups and 187 cuts.",
+      "outputs": [
+        "figures/rq2_generic_selection_loss.pdf",
+        "figures/rq2_generic_selection_loss.svg",
+        "figures/rq2_generic_selection_loss.png"
+      ],
+      "coordinates": "figures/RQ2_FIGURE_DATA.json",
+      "rendered": true
+    },
+    {
       "name": "rq2_graph_analysis",
       "tex_label": "fig:supp-graph-analysis",
       "kind": "figure",
       "generator": "scripts/supplementary-studies/rq2-all-cuts-20261020/paper_assets.py:run",
+      "style": "scripts/supplementary-studies/rq2-all-cuts-20261020/figure_style.py, reusing scripts/split-inference/publication_mlsys_figures.py:PAPER_STYLE",
       "inputs": [
         "historical/historical_rank_correlations.csv",
         "historical/historical_shortlist_summary.csv",
@@ -43,6 +64,7 @@
       "tex_label": "fig:supp-native-search-success",
       "kind": "figure",
       "generator": "scripts/supplementary-studies/rq2-all-cuts-20261020/paper_assets.py:run",
+      "style": "scripts/supplementary-studies/rq2-all-cuts-20261020/figure_style.py, reusing scripts/split-inference/publication_mlsys_figures.py:PAPER_STYLE",
       "inputs": [
         "success/current/fixed_group_success_curves.csv"
       ],
@@ -72,6 +94,6 @@
       ]
     }
   ],
-  "verification": "Regenerated scientific values are checked against committed files with --verify. Figure coordinates are included in full mode.",
+  "verification": "Regenerated scientific values and figure coordinates are checked against committed files with --verify in both modes. The restored scatter also verifies all 21 selections and losses against the frozen R22 payload.",
   "scope": "Exact and near-optimal success use each measurement set's own Native optimum. Neither dataset is a complete graph survey."
 }

@@ -53,7 +53,9 @@ def run(output):
         'For detectors, Weighted, Fit-H10, Cycle, Stream and Generic find all twelve exact winners after two tests. Boundary bytes needs three. These small groups are reported separately from classifiers.', '',
         '## Figures', '',
         '![Retained Native throughput over all shortlist budgets](figures/rq2_shortlist_curves.png)', '',
-        'The main-paper figure compares full classifier loss curves within each measurement set. [PDF](figures/rq2_shortlist_curves.pdf) · [SVG](figures/rq2_shortlist_curves.svg).', '',
+        'The main-paper shortlist figure shows only the current 151 quality-eligible classifier cuts and four selectors. [PDF](figures/rq2_shortlist_curves.pdf) · [SVG](figures/rq2_shortlist_curves.svg).', '',
+        '![Generic-to-Native loss by model and device](figures/rq2_generic_selection_loss.png)', '',
+        'The companion main-paper scatter retains all 21 model/device groups and the exact point values from the quality-filtered R22 figure. Device colors and markers follow the same publication style. [PDF](figures/rq2_generic_selection_loss.pdf) · [SVG](figures/rq2_generic_selection_loss.svg).', '',
         '![Complete graph-rule ranking and success analysis](figures/rq2_graph_analysis.png)', '',
         'The supplement adds rank correlations and exact/near-optimal success for all five graph rules. [PDF](figures/rq2_graph_analysis.pdf) · [SVG](figures/rq2_graph_analysis.svg).', '',
         '![Current Native exact and near-optimal success](figures/rq2_native_success.png)', '',
@@ -75,7 +77,7 @@ def run(output):
         '| `historical/` | Graph-rule candidate scores, complete rankings, correlations and loss curves; directory name preserves the existing machine-readable schema |',
         '| `success/current/` | Current first-hit ranks, exact and near-optimal success curves, required budgets and actual test counts |',
         '| `success/graph_rules/` | Corresponding curves and budgets for all five graph rules, Generic and random sampling |',
-        '| `figures/` | English publication figures rendered from these derived tables |',
+        '| `figures/` | English publication figures, including the independently verified restored Generic scatter |',
         '| `INPUT_MANIFEST.json` | Canonical repository paths, input SHA-256 hashes and derived-input relationships |',
         '| `ASSET_MANIFEST.json` | Each publication figure/table, its generator, numerical sources and output formats |',
         '| `VALIDATION.json` | Exact-optimum cross-check counts and optional published-file verification |',
@@ -87,6 +89,6 @@ def run(output):
         '  --output ../rq2-all-cuts-reproduced --verify',
         '```', '',
         'Choose an empty output directory. Add `--numeric-only` to omit Matplotlib and figure rendering. Numerical mode still requires NumPy, pandas and SciPy. The tested environment uses Python 3.12.14 with the pinned versions in the requirements file. The command reads the existing canonical compact evidence, temporarily stages engine inputs, and leaves source files unchanged. No network, model files, accelerator hardware, new calibration or random simulation is needed.', '',
-        'Verification checks all 108 previously published classifier k=1/3/5 comparisons, 126 graph-rule Top-1 group comparisons and six graph-rule summary methods. The independent success calculations agree with all 1,386 current and 1,428 graph-rule exact-optimum budget rows. `--verify` additionally compares regenerated scientific CSV/JSON/TeX files byte for byte with the committed copies, including the budget table and exact plotted coordinates in full mode. Figure rendering is regenerated from the same tables; this check does not require byte-identical PDF metadata.', '',
+        'Verification checks all 108 previously published classifier k=1/3/5 comparisons, 126 graph-rule Top-1 group comparisons and six graph-rule summary methods. The independent success calculations agree with all 1,386 current and 1,428 graph-rule exact-optimum budget rows. The restored scatter checks all 21 selected identities, candidate counts and losses against the frozen R22 payload, then preserves its exact plotted values. `--verify` additionally compares regenerated scientific CSV/JSON/TeX files byte for byte with the committed copies, including the budget table and exact plotted coordinates in both modes. Figure rendering is regenerated from the same tables; this check does not require byte-identical PDF metadata.', '',
         'Source evidence revision: `b10d15992d0ce45d0f81329a5e961cb6207a1d09`. Existing [rights and notices](../../../RIGHTS_AND_NOTICES.md) apply. The frozen R22 profile remains unchanged.', '']
     (output/'README.md').write_text('\n'.join(text))

@@ -20,6 +20,16 @@ MODEL_LABELS = {
 SETUPS = ['H8', 'H10', 'DeepX']
 COLORS = {'H8': '#4477AA', 'H10': '#EE7733', 'DeepX': '#228833'}
 MARKERS = {'H8': 'o', 'H10': 's', 'DeepX': '^'}
+PAPER_STYLE = {
+    'font.family': 'serif', 'font.serif': ['STIXGeneral'], 'mathtext.fontset': 'stix',
+    'font.size': 8.5, 'axes.titlesize': 9, 'axes.labelsize': 8.5,
+    'xtick.labelsize': 8, 'ytick.labelsize': 8, 'legend.fontsize': 7.5,
+    'axes.linewidth': .65, 'axes.spines.top': False, 'axes.spines.right': False,
+    'axes.grid': False, 'axes.axisbelow': True, 'pdf.fonttype': 42, 'ps.fonttype': 42,
+    'pdf.use14corefonts': False, 'ps.useafm': False, 'svg.fonttype': 'none',
+    'svg.hashsalt': 'mlsys-r22-publication-20261018', 'savefig.facecolor': 'white',
+    'figure.facecolor': 'white', 'text.usetex': False,
+}
 METHODS = ['cut_bytes_only', 'weighted_score', 'onnx_real_boundary_hardware_aware',
            'cycle_time_no_handover', 'stored_predicted_stream_fps', 'measured_generic_completion']
 METHOD_LABELS = ['Cut\npayload', 'Weighted\nscore', 'HW fit\n(H10)',
@@ -307,8 +317,12 @@ def write_figure_data(profile_output, context):
     return index, payload
 
 
-def render(profile_output, context):
-    """Render all registered paper figures, with no LaTeX/network/hardware calls."""
+def render(profile_output, context, uniform_typography=False):
+    """Render paper figures; preserve the frozen R22 typography by default.
+
+    uniform_typography applies PAPER_STYLE to the statistical heatmap too.
+    The conceptual runner schematic keeps its separate sans-serif labels.
+    """
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
@@ -320,14 +334,7 @@ def render(profile_output, context):
 
     index, payload = write_figure_data(profile_output, context)
     output = Path(profile_output) / 'figures'
-    styles = {'font.family': 'serif', 'font.serif': ['STIXGeneral'], 'mathtext.fontset': 'stix',
-              'font.size': 8.5, 'axes.titlesize': 9, 'axes.labelsize': 8.5,
-              'xtick.labelsize': 8, 'ytick.labelsize': 8, 'legend.fontsize': 7.5,
-              'axes.linewidth': .65, 'axes.spines.top': False, 'axes.spines.right': False,
-              'axes.grid': False, 'axes.axisbelow': True, 'pdf.fonttype': 42, 'ps.fonttype': 42,
-              'pdf.use14corefonts': False, 'ps.useafm': False, 'svg.fonttype': 'none',
-              'svg.hashsalt': 'mlsys-r22-publication-20261018', 'savefig.facecolor': 'white',
-              'figure.facecolor': 'white', 'text.usetex': False}
+    styles = PAPER_STYLE
     dimensions = {name: (width, height) for name, _, _, width, height in FIGURES}
 
     def save(fig, name):
@@ -551,7 +558,9 @@ def render(profile_output, context):
         name = 'selector_loss_heatmap'
         data = payload[name]
         groups, methods = data['group_order'], data['methods']
-        with plt.rc_context({'font.family': 'DejaVu Sans', 'font.size': 8, 'axes.labelsize': 8}):
+        heatmap_style = PAPER_STYLE if uniform_typography else {
+            'font.family': 'DejaVu Sans', 'font.size': 8, 'axes.labelsize': 8}
+        with plt.rc_context(heatmap_style):
             matrix = np.full((len(groups), len(methods)), np.nan)
             lookup = {}
             for point in data['points']:

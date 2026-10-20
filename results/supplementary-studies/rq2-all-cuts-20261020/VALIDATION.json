@@ -2,6 +2,11 @@
   "current_exact_optimum_rows": 1386,
   "graph_exact_optimum_rows": 1428,
   "result": "PASS",
+  "generic_scatter_reference": {
+    "exact_frozen_point_values_preserved": true,
+    "current_group_count": 21,
+    "maximum_csv_rounding_difference_pp": 4.618527782440651e-14
+  },
   "published_reference": {
     "result": "PASS",
     "mode": "byte comparison of scientific CSV/JSON/TeX, including figure coordinates",

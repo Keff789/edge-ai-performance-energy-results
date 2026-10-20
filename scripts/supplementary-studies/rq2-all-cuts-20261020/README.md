@@ -40,7 +40,17 @@ published reference files. Figure bytes are not a verification target.
 `success_graph_rules.py` are internal engines invoked by `reproduce.py`.
 `documentation.py` generates the results index from the derived budget tables.
 `paper_assets.py` renders the English publication figures and generates the
-budget table. `ASSET_MANIFEST.json` binds each asset to its numerical sources.
-Full-mode verification also compares the exact plotted coordinates in
-`figures/RQ2_FIGURE_DATA.json`; numerical mode includes the CSV/JSON/TeX budget
-table without loading Matplotlib.
+budget table. The main shortlist view contains only the 151 current eligible
+classifier cuts. The companion scatter uses the exact frozen R22 coordinates
+and checks all 21 model/device groups against the current analysis. The full
+graph-score analysis remains in the supplement figures.
+
+`figure_style.py` reuses the central `PAPER_STYLE` plus device colors and markers
+from `scripts/split-inference/publication_mlsys_figures.py`. All RQ2 statistics
+therefore use the same STIXGeneral typography as the paper. Frozen R22 outputs
+are not changed.
+
+`ASSET_MANIFEST.json` binds each asset to its numerical sources. Verification
+compares the exact plotted coordinates in `figures/RQ2_FIGURE_DATA.json` in both
+modes. Numerical mode includes this payload and the CSV/JSON/TeX budget table
+without loading Matplotlib.
