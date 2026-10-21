@@ -1,5 +1,20 @@
 # Dissertation
 
+## Deutsche Split-Grafiken und Tabellen
+
+Die [deutsche Sammlung](de/README.md) enthält 58 Grafikfamilien und die verfügbaren
+Tabellen aus der vollständigen Split-Auswertung, den Publikationsprofilen und den
+ergänzenden Split-Studien. PDF/SVG und LaTeX sind für die Dissertation vorgesehen,
+PNG und Markdown für die Vorschau. Die Auswahl ist nicht auf die im Paper
+verwendeten Darstellungen beschränkt.
+
+Die Sammlung verwendet die vorhandenen Messwerte. Englische Daten und Ergebnisse
+bleiben erhalten. Aktuelle und frühere Messreihen sind in eigenen Ordnern abgelegt.
+Die [Exportanleitung](../../scripts/dissertation/README.md) beschreibt die lokale
+Erzeugung auf twix ohne administrative Rechte. Der zusätzliche Export umfasst
+Split-Inferenz. Für Energiemessungen gilt weiterhin die separate Auswertung unten.
+
+
 Use both [split-inference results](../../results/split-inference/README.md) and [energy-measurement results](../../results/energy-measurement/README.md). Complete model views, supplementary comparisons, protocol controls, negative results and scientific limitations are retained beyond individual paper selections.
 
 Additional entry points: [Hailo-10 format microbenchmarks](../../results/split-inference/microbenchmarks/README.md), [complete measurement sweeps](../../results/energy-measurement/galleries/direct-sweeps.md), [spectral analysis](../../results/energy-measurement/galleries/spectra-jetson.md) and [calibration](../../results/energy-measurement/galleries/calibration.md).

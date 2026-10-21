@@ -1,0 +1,26 @@
+% Erzeugt durch analysis/build_best_cases.py.
+\begin{table*}[t]
+\centering
+\caption{Zwei Konfigurationen mit der höchsten Energieeffizienz je Modell relativ zum schnellsten Full, ausgewählt nach dem Durchsatz vollständig abgeschlossener Aufgaben. Energie wird separat gemessen. Die Identität des nach FPS ausgewählten Full bleibt fest. Für YOLOv7 liegt keine aktuelle Energierangfolge vor.}
+\label{tab:energy-leaders}
+\small
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllrrrr@{}}
+\toprule
+Modell & System/Cut & Full & Full J/Aufgabe & Split J/Aufgabe & $G_\eta$ & Einsparung\\
+\midrule
+MobileNet-V3-L & H8/b027 & TRT & 0.0290 & 0.0210 & 1.38$\times$ & 27.42\%\\
+ & H10/b074 & TRT & 0.0268 & 0.0197 & 1.36$\times$ & 26.42\%\\
+RegNet-X & H10/b123 & TRT & 0.0720 & 0.0156 & 4.62$\times$ & 78.36\%\\
+ & H10/b132 & TRT & 0.0720 & 0.0169 & 4.27$\times$ & 76.59\%\\
+ResNet-50 & H10/b095 & TRT & 0.0536 & 0.0293 & 1.83$\times$ & 45.37\%\\
+ & H10/b088 & TRT & 0.0536 & 0.0303 & 1.77$\times$ & 43.55\%\\
+YOLO11l & H8/b120 & TRT & 0.7074 & 0.5490 & 1.29$\times$ & 22.39\%\\
+ & H8/b062 & TRT & 0.7074 & 0.5736 & 1.23$\times$ & 18.91\%\\
+YOLO26m & H10/b043 & TRT & 0.3837 & 0.3268 & 1.17$\times$ & 14.83\%\\
+ & H10/b038 & TRT & 0.3837 & 0.3316 & 1.16$\times$ & 13.58\%\\
+YOLO26s & H8/b021 & TRT & 0.2001 & 0.1558 & 1.28$\times$ & 22.15\%\\
+ & H10/b021 & TRT & 0.1903 & 0.1760 & 1.08$\times$ & 7.53\%\\
+YOLOv7 & \multicolumn{6}{l}{NA: Energie nicht verfügbar}\\
+\bottomrule
+\end{tabular*}
+\end{table*}

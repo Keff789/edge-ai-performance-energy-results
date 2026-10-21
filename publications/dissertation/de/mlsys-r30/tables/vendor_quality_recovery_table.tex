@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{MobileNetV3-Top1 auf denselben 5,000 Bildern, CPU-ONNX-Referenz 73.70\%. Aktuelles an A4 gebundenes b027 mit TensorRT-Suffix. Diese aktuelle Darstellung erhält die separate historische Herstellertabelle und deren älteren Datenstand.}
+\label{tab:vendor-quality}
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}l r r r@{}}
+\toprule
+Host & Beschl.-Full (\%) & Split b027 (\%) & Zugewinn (pp) \\
+\midrule
+H8 & 60.62 & 71.58 & +10.96 \\
+H10 & 59.42 & 72.22 & +12.80 \\
+DeepX & 71.72 & 72.18 & +0.46 \\
+\bottomrule
+\end{tabular*}
+\endgroup
+\end{table}

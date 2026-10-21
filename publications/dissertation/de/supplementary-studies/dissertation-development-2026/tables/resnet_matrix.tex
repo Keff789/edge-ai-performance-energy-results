@@ -1,0 +1,33 @@
+\begin{table}[H]
+\centering
+\footnotesize
+\TableSetup
+\caption{Aus der Quelle übernommene ResNet50/Imagenette-Entwicklungsmatrix. Werte sind Anteile und Beobachtungen der aufgeführten Ausführungspfade. Es handelt sich weder um einen ImageNet-Benchmark noch um einen B500-Vergleich.}
+\label{tab:evaluation:resnet50_matrix_validated}
+\begin{tabularx}{\linewidth}{@{}YR{1.1cm}R{1.1cm}R{2.3cm}R{2.4cm}@{}}
+\toprule
+\textbf{Ausführungspfad} & \textbf{Top-1} & \textbf{Top-5} & \textbf{Latenz [ms]} & \textbf{Durchsatz [FPS]} \\
+\midrule
+TensorRT Full & \num{0.82} & \num{0.96} & \num{7.5}--\num{7.8} & \num{129}--\num{134} \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} gültige kanonische Full-Referenz.}\\
+\addlinespace[0.35em]
+DEEPX DX-M1 Full & \num{0.84} & \num{0.94} & \num{3.2} & \num{310.9} \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} gültiger Full-Backend-Pfad mit wiederholter Eingabe.}\\
+\addlinespace[0.35em]
+DEEPX DX-M1$\rightarrow$TensorRT & \num{0.76}--\num{0.78} & \num{0.94} & \num{20.3}--\num{23.5} & \num{62.5}--\num{72.9} \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} Entwicklungsstand des Generic-Runners.}\\
+\addlinespace[0.35em]
+Hailo-8 Full/zusammengesetzt & \num{0.82}--\num{0.84} & \num{0.96} & \num{12}--\num{13} & -- \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} gültig mit Warnung zur quantisierten Schnittstelle.}\\
+\addlinespace[0.35em]
+Hailo-8$\rightarrow$TensorRT & \num{0.82} & \num{0.96} & \num{9}--\num{10} & -- \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} gültig mit Schnittstellenwarnung.}\\
+\addlinespace[0.35em]
+TensorRT$\rightarrow$Hailo-8 & \num{0.82} & \num{0.96} & \num{8}--\num{9} & -- \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} gültige, mit Aktivierungs-Proxys kalibrierte Stufe 2.}\\
+\addlinespace[0.35em]
+TensorRT$\rightarrow$DEEPX DX-M1 & splitabh. & splitabh. & -- & -- \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} kompilierbar und erst nach einer Vertragsprüfung mit mehreren Eingaben zugelassen.}\\
+\bottomrule
+\end{tabularx}
+\end{table}

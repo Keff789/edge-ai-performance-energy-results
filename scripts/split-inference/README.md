@@ -56,3 +56,27 @@ See [Weighted study](../supplementary-studies/rq2-weighted-20261020/README.md)
 for original inputs, full-graph normalization, operation proxy version, fitting
 objective and sensitivity checks. Generated assets are under
 `publications/mlsys-r30` in the requested output directory.
+
+
+## Deutsche Grafiken und Tabellen für die Dissertation
+
+Mit dem R30-Profil lässt sich zusätzlich eine deutsche Ausgabe erzeugen:
+
+```sh
+python -I -B scripts/split-inference/reproduce.py \
+  --publication mlsys-r30 --languages en de \
+  --output ../split-auswertung-zweisprachig --verify
+```
+
+Dafür die Umgebung aus `requirements-r30.txt` verwenden und ein leeres
+Ausgabeverzeichnis wählen. Die englische Ausgabe bleibt erhalten. Unter `de/`
+stehen zusätzlich deutsche Grafiken als PDF/SVG/PNG und Tabellen als TeX/Markdown,
+einschließlich der ergänzenden Split-Studien. Numerische CSV-/JSON-Daten,
+Auswahlregeln und die Trennung der Messreihen bleiben unverändert.
+
+Die [Anleitung zum deutschen Export](../dissertation/README.md) beschreibt auch
+den schnelleren Aufruf aus bereits vorhandenen Ergebnissen, Tabellen ohne
+Grafikrendering und die festen Übersetzungskataloge. Die
+[deutsche Sammlung](../../publications/dissertation/de/README.md) enthält
+58 Grafikfamilien und einen Tabellenindex. Das separate Energiemessungs-Tool
+gehört nicht zu diesem Export.
