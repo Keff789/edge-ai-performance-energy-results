@@ -11,6 +11,10 @@ Use `--paired-study PATH` to evaluate a newly regenerated paired study. Candidat
 
 The command exports all budget points, per-group selected cuts, task breakdowns, English/German figures and tables, and source hashes. It checks the direct-graph calculations against the published paired-study curves before reporting a verified build. Required plotting dependency: Matplotlib. The analysis itself uses the Python standard library.
 
+The `staged_selection_budget` figure compares one and two final Native tests on identical graph-selected Generic shortlists. Both series are exported in its CSV and JSON.
+
+The additional `staged_selection_flow` schematic places a horizontal process chain below exact square counts for an illustrative 615-to-5-to-2-to-1 workflow. Its YOLO11l graph-size example comes from the recorded graph metadata, selected with `--graph-metadata`. This count is not the measured Native pool. The default paired detector groups contain three cuts each. The five Generic and two Native tests are an illustrative budget, not a measured YOLO11l full-graph trial. Each square represents one option; process boxes have no quantitative scale.
+
 Run the targeted tests with:
 
 ```sh

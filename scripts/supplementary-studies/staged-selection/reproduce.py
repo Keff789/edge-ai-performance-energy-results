@@ -18,8 +18,11 @@ import statistics
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[2]
 DEFAULT_STUDY = REPO / 'results/supplementary-studies/rq2-native-scope-20261027'
+DEFAULT_GRAPH_METADATA = REPO / 'results/supplementary-studies/rq3-generic420-detector-corrected-20261027/inputs/feature_metadata.json'
 METHODS = ('bytes', 'weighted_default', 'weighted_cv')
 PRIMARY_BUDGETS = (5, 12)
+WORKFLOW_EXAMPLE_GENERIC_TESTS = 5
+WORKFLOW_EXAMPLE_NATIVE_TESTS = 2
 
 
 def read_csv(path):
@@ -243,13 +246,21 @@ def export_figure(output, summaries, language):
     style = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(style)
     plt.rcParams.update(style.PAPER_STYLE)
-    plt.rcParams['svg.hashsalt'] = 'staged-selection-r39'
-    rows = [row for row in summaries if row['task'] == 'all' and row['method'] == 'bytes' and row['policy'] == 'cascade_native2' and row['k'] >= 2]
-    rows.sort(key=lambda row: row['k'])
-    fig, ax = plt.subplots(figsize=(3.35, 2.38))
-    fig.subplots_adjust(left=.18, bottom=.24, right=.97, top=.97)
-    ax.plot([row['k'] for row in rows], [row['mean_retained_native_pct'] for row in rows],
-            color=style.PAPER_PALETTE['blue'], linewidth=1.45, marker='o', markersize=2.3, zorder=3)
+    plt.rcParams['svg.hashsalt'] = 'staged-selection-r41'
+    rows = [row for row in summaries if row['task'] == 'all' and row['method'] == 'bytes'
+            and row['policy'] in ('cascade_native1', 'cascade_native2') and row['k'] >= 2]
+    rows.sort(key=lambda row: (row['native_budget'], row['k']))
+    fig, ax = plt.subplots(figsize=(3.35, 2.55))
+    fig.subplots_adjust(left=.18, bottom=.225, right=.97, top=.86)
+    for budget, color, linestyle, marker in [(2, 'blue', '-', 'o'), (1, 'orange', '--', 's')]:
+        series = [row for row in rows if row['native_budget'] == budget]
+        label = (f'{budget} Native tests' if budget == 2 else '1 Native test') if language == 'en' else (f'{budget} Native-Tests' if budget == 2 else '1 Native-Test')
+        ax.plot([row['k'] for row in series], [row['mean_retained_native_pct'] for row in series],
+                color=style.PAPER_PALETTE[color], linewidth=1.35, linestyle=linestyle,
+                marker=marker, markersize=2.3, label=label, zorder=4 if budget == 2 else 3)
+    ax.legend(loc='lower center', bbox_to_anchor=(.5, 1.01), ncol=2, frameon=False,
+              fontsize=7.2, handlelength=1.7, columnspacing=1.1, handletextpad=.45, borderpad=0)
+
     ax.axhline(100, color='#a7a7a7', linewidth=.6, linestyle=(0, (3, 3)), zorder=1)
     ax.grid(axis='y', color='#dddddd', linewidth=.45, zorder=0)
     minimum = min(row['mean_retained_native_pct'] for row in rows)
@@ -266,7 +277,7 @@ def export_figure(output, summaries, language):
         ax.set_ylabel('Mittlerer Native-Durchsatzanteil (%)')
         connector = 'Generic + 2 Native'
     for k in PRIMARY_BUDGETS:
-        row = next(row for row in rows if row['k'] == k)
+        row = next(row for row in rows if row['k'] == k and row['native_budget'] == 2)
         xtext = 9.8 if k == 5 else 14.2
         ytext = lower + (101.5 - lower) * (.31 if k == 5 else .51)
         label = f"{k} {connector}\n{number(row['mean_retained_native_pct'], language)}%"
@@ -285,14 +296,114 @@ def export_figure(output, summaries, language):
     plt.close(fig)
     write_csv(folder / 'staged_selection_budget.csv', rows)
     write_json(folder / 'staged_selection_budget.json', dict(
-        method='bytes', maximum_native_tests=2, target='best measured Native throughput within each paired group',
+        schema='staged-selection-budget-v2', method='bytes', native_test_budgets=[1, 2],
+        target='best measured Native throughput within each paired group',
         aggregation='unweighted mean of per-group throughput ratios', language=language,
         points=rows, note='Budgets 2–20 are shown without smoothing or removing non-monotonic changes. Budget 1 is included in the analysis data.'))
+
+
+def flow_spec(source):
+    """Use a recorded graph size as context, without claiming full-graph testing."""
+    source = Path(source).resolve()
+    metadata = json.loads(source.read_text())
+    model = 'yolo11l'
+    count = metadata['prediction_sources'][model]['candidate_count']
+    if not isinstance(count, int) or isinstance(count, bool) or count <= 0:
+        raise ValueError('Graph candidate count must be a positive integer')
+    try:
+        source_name = str(source.relative_to(REPO))
+    except ValueError:
+        source_name = source.name
+    return dict(schema='staged-selection-flow-v2', kind='illustrative_budget_workflow',
+                example_model=model, example_model_label='YOLO11l', graph_candidates=count,
+                source=dict(path=source_name, sha256=sha(source)),
+                pool_count=None, generic_budget=WORKFLOW_EXAMPLE_GENERIC_TESTS,
+                maximum_native_tests=WORKFLOW_EXAMPLE_NATIVE_TESTS, selected_splits=1,
+                stage_counts=[count, WORKFLOW_EXAMPLE_GENERIC_TESTS, WORKFLOW_EXAMPLE_NATIVE_TESTS, 1],
+                example_budget_measured_for_this_model=False,
+                graph_count_scope='Complete workflow graph candidates, before backend support and quality checks.',
+                evaluation_scope='Selection outcomes are evaluated separately on the paired candidate pools. The paired detector pools contain three cuts each.',
+                geometry_note='Each square represents one option at that illustrative stage. All squares have equal size; process boxes do not encode quantity.')
+
+
+def export_flow(output, spec_data, language):
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
+    from matplotlib.colors import to_rgb
+    style_path = REPO / 'scripts/split-inference/publication_mlsys_figures.py'
+    spec = importlib.util.spec_from_file_location('staged_flow_style', style_path)
+    style = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(style)
+    plt.rcParams.update(style.PAPER_STYLE)
+    plt.rcParams['svg.hashsalt'] = 'staged-selection-flow-r41'
+    count, model = spec_data['graph_candidates'], spec_data['example_model_label']
+    if language == 'en':
+        labels = [
+            ('Graph preselection', 'Pool selection + Bytes'),
+            ('Generic', 'Measure throughput'),
+            ('Native', 'Test the two fastest'),
+            ('Selected split', 'Faster Native result'),
+        ]
+        count_labels = [f'{count} possible cuts', '5 cuts to test', '2 cuts to test', '1 selected cut']
+    else:
+        labels = [
+            ('Graph-Vorauswahl', 'Kandidatenmenge + Bytes'),
+            ('Generic', 'Durchsatz messen'),
+            ('Native', 'Die zwei schnellsten prüfen'),
+            ('Gewählter Split', 'Schnelleres Native-Ergebnis'),
+        ]
+        count_labels = [f'{count} mögliche Cuts', '5 Cuts testen', '2 Cuts testen', '1 gewählter Cut']
+    fig, ax = plt.subplots(figsize=(7.0, 2.48))
+    fig.subplots_adjust(left=.005, right=.995, bottom=.015, top=.985)
+    ax.set_xlim(0, 7)
+    ax.set_ylim(0, 2.48)
+    ax.set_aspect('equal')
+    ax.axis('off')
+    centers = [.875, 2.625, 4.375, 6.125]
+    palette = ['blue', 'orange', 'green', 'dark_gray']
+    counts = spec_data['stage_counts']
+    grid_bottom, step = .95, .038
+    for i, (center, n, color_name, lines) in enumerate(zip(centers, counts, palette, labels)):
+        color = style.PAPER_PALETTE[color_name]
+        columns = 25 if i == 0 else n
+        rows = math.ceil(n / columns)
+        xs = [center + ((j % columns) - (columns - 1) / 2) * step for j in range(n)]
+        ys = [grid_bottom + (j // columns) * step for j in range(n)]
+        ax.scatter(xs, ys, s=3.2, marker='s', c=color, linewidths=0, zorder=2)
+        label_y = grid_bottom + rows * step + .12
+        ax.text(center, label_y, count_labels[i], ha='center', va='bottom', fontsize=10.5, fontweight='bold')
+        if i == 0:
+            ax.text(center, label_y + .22, model, ha='center', va='bottom', fontsize=9)
+        pale = tuple(.94 + .06 * component for component in to_rgb(color))
+        width, height, y = 1.43, .48, .14
+        ax.add_patch(FancyBboxPatch((center - width / 2, y), width, height,
+                                   boxstyle='round,pad=0.025,rounding_size=0.045',
+                                   linewidth=.8, edgecolor=color, facecolor=pale))
+        ax.text(center, y + .32, lines[0], ha='center', va='center', fontsize=9.5, fontweight='bold')
+        ax.text(center, y + .13, lines[1], ha='center', va='center', fontsize=7.4)
+    for left, right in zip(centers[:-1], centers[1:]):
+        ax.add_patch(FancyArrowPatch((left + .77, .38), (right - .77, .38), arrowstyle='-|>',
+                                    mutation_scale=9, linewidth=.8,
+                                    color=style.PAPER_PALETTE['dark_gray']))
+    folder = output / 'artifacts' / language / 'figures'
+    folder.mkdir(parents=True, exist_ok=True)
+    for suffix in ('pdf', 'svg', 'png'):
+        options = {'metadata': {'CreationDate': None, 'ModDate': None}} if suffix == 'pdf' else {}
+        if suffix == 'svg':
+            options = {'metadata': {'Date': None}}
+        fig.savefig(folder / f'staged_selection_flow.{suffix}', dpi=220, **options)
+    plt.close(fig)
+    write_json(folder / 'staged_selection_flow.json', dict(spec_data, language=language,
+                                                          labels=labels, count_labels=count_labels))
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--paired-study', type=Path, default=DEFAULT_STUDY)
+    parser.add_argument('--graph-metadata', type=Path, default=DEFAULT_GRAPH_METADATA,
+                        help='Graph metadata supplying the YOLO11l size example in the workflow diagram.')
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--languages', nargs='+', choices=('en', 'de'), default=['en', 'de'])
     parser.add_argument('--verify', action='store_true', help='Check against the paired study direct graph curves.')
@@ -310,9 +421,11 @@ def main():
     write_csv(output / 'data/summary.csv', summaries)
     write_json(output / 'data/summary.json', summaries)
     write_json(output / 'VALIDATION.json', validation)
+    schematic = flow_spec(args.graph_metadata)
     for language in dict.fromkeys(args.languages):
         export_tables(output, summaries, details, language)
         export_figure(output, summaries, language)
+        export_flow(output, schematic, language)
     groups = {(row['model'], row['setup']) for row in pairs}
     primary = [row for row in summaries if row['task'] == 'all' and row['method'] == 'bytes' and row['policy'] == 'cascade_native2' and row['k'] in PRIMARY_BUDGETS]
     info = ['# Graph–Generic–Native selection', '',
@@ -325,7 +438,8 @@ def main():
     info += ['', 'The throughput percentage is the equally weighted mean of per-group ratios to the best measured Native cut. It is not the probability of finding that cut. Exact-winner counts are observed successes in this paired set.', '',
              'A group with fewer than k candidates tests all of them. The paired detector groups contain only three cuts. The broader Generic study remains a separate assessment of graph preselection on more detector candidates.', '',
              'The calculation uses previously measured FPS and quality-admissible candidates. Test counts exclude compilation, quality evaluation, fitting and engineering. No total search-time saving is measured.', '',
-             'The primary figure shows budgets 2–20 with at most two Native tests. The data also include budget one. Non-monotonic changes are retained: a new Generic favourite can displace a stronger Native candidate from the two-test shortlist.', '',
+             'The primary figure compares one and two Native tests over Generic budgets 2–20. The data also include budget one. Non-monotonic changes are retained: a new Generic favourite can displace a stronger Native candidate from the two-test shortlist.', '',
+             f'The workflow diagram uses the {schematic["graph_candidates"]} graph boundaries of YOLO11l and an illustrative budget of five Generic tests, two Native tests and one selected split. The bottom row shows the processing stages; equal-sized squares above it show the number of options. Candidate-pool construction and Bytes ranking precede Generic testing. This budget is an illustration, not a measured full-graph selection trial for YOLO11l.', '',
              '[English artifacts](artifacts/en/) · [German artifacts](artifacts/de/) · [Unrounded group data](data/group_budgets.csv) · [Aggregate results](data/summary.csv)', '',
              'Reproduce from the repository root:', '', '```sh',
              'python3 scripts/supplementary-studies/staged-selection/reproduce.py --output local-output/staged-selection --languages en de --verify',
@@ -335,6 +449,7 @@ def main():
                     primary_method='bytes', primary_generic_budgets=list(PRIMARY_BUDGETS), maximum_native_tests=2,
                     languages=list(dict.fromkeys(args.languages)), fitting_performed=False, hardware_measurements=False,
                     inputs={str(path.relative_to(source)): sha(path) for path in sources},
+                    schematic_source=schematic['source'],
                     generator_sha256=sha(Path(__file__)),
                     style_sha256=sha(REPO / 'scripts/split-inference/publication_mlsys_figures.py'),
                     files={str(path.relative_to(output)): sha(path) for path in sorted(output.rglob('*')) if path.is_file() and path.name != 'MANIFEST.json'})

@@ -15,5 +15,4 @@ Ein leeres Ausgabeverzeichnis verwenden. Die Prüfung der Zahlen und Übersetzun
 
 Der [vollständige Dateikatalog](ASSET_CATALOG.md) enthält zusätzliche Darstellungen. `ASSET_MANIFEST.json` verknüpft jede Ausgabe mit ihren Quelldaten.
 
-
-[Auswahl mit Graph, Generic und Native](../staged-selection/artifacts/de/): deutsche Budgetgrafiken und Tabellen aus denselben Messpaaren.
+[Auswahl mit Graph, Generic und Native](../staged-selection/artifacts/de/): [Ablaufgrafik](../staged-selection/artifacts/de/figures/staged_selection_flow.pdf), Budgetgrafiken und Tabellen aus denselben Messpaaren.

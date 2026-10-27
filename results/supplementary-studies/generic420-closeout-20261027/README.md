@@ -18,7 +18,7 @@ Each model–device group contributes equally. Loss is measured against its fast
 | Classifiers | 151 | 9 | 3.1189 |
 | Detectors | 36 | 12 | 0.0176 |
 
-The [staged selection analysis](../staged-selection/README.md) combines graph-based preselection, Generic measurements, and two final Native tests. Its budget curves and tables use the same paired candidates.
+The [staged selection analysis](../staged-selection/README.md) combines graph-based preselection, Generic measurements, and one or two final Native tests. Its budget curves and tables use the same paired candidates.
 
 
 ## Coverage and interpretation

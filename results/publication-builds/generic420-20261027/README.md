@@ -8,7 +8,7 @@ The paired comparison contains 187 quality-admissible cuts in 21 model–device 
 |---|---|
 | Split benefits and paired runner selection | [Paper assets](paper/publications/mlsys-r30/) |
 | Graph-selected shortlists | [English artifacts](paper/rq3-generic420/en/) |
-| Graph–Generic–Native selection | [Budget curves and tables](staged-selection/artifacts/en/) |
+| Graph–Generic–Native selection | [Workflow, budget curves and tables](staged-selection/artifacts/en/) |
 | German dissertation artifacts | [German collection](dissertation-de/README.md) |
 
 Reproduce the entire study from the repository root:
