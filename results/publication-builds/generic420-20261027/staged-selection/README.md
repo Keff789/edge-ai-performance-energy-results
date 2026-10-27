@@ -15,9 +15,9 @@ A group with fewer than k candidates tests all of them. The paired detector grou
 
 The calculation uses previously measured FPS and quality-admissible candidates. Test counts exclude compilation, quality evaluation, fitting and engineering. No total search-time saving is measured.
 
-The primary figure shows budgets 2–20 with at most two Native tests. The data also include budget one. Non-monotonic changes are retained: a new Generic favourite can displace a stronger Native candidate from the two-test shortlist.
+The primary figure compares one and two Native tests over Generic budgets 2–20. The data also include budget one. Non-monotonic changes are retained: a new Generic favourite can displace a stronger Native candidate from the two-test shortlist.
 
-The workflow diagram uses the 615 graph boundaries of YOLO11l to illustrate model size. Candidate-pool construction precedes the Generic and Native tests. It does not claim that the staged selection was measured over all of these graph boundaries. Box widths are schematic.
+The workflow diagram uses the 615 graph boundaries of YOLO11l and an illustrative budget of five Generic tests, two Native tests and one selected split. The bottom row shows the processing stages; equal-sized squares above it show the number of options. Candidate-pool construction and Bytes ranking precede Generic testing. This budget is an illustration, not a measured full-graph selection trial for YOLO11l.
 
 [English artifacts](artifacts/en/) · [German artifacts](artifacts/de/) · [Unrounded group data](data/group_budgets.csv) · [Aggregate results](data/summary.csv)
 

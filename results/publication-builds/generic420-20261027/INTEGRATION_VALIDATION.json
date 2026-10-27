@@ -66,7 +66,7 @@
   ],
   "current_r30_output_targets_verified": true,
   "english_dissertation_source_files": 440,
-  "finalization_source_sha256": "ab8c16d05263bbd38f7d382d5cf6f2c3124ad376ed68493a67b1c05454203f56",
+  "finalization_source_sha256": "443547a0f432b74c144430a75bbd78a6b37bc7e082caf6261c03d43e0f31fca5",
   "frozen_r22_numerical_files_checked": 126,
   "new_measurements_by_publication_build": 0,
   "private_paths_found": [],
@@ -309,14 +309,20 @@
   "rq3_manifest_sha256": "af640e9ac01b4c0197eac8ec5999be3e3db3560db1bbafe9586c734df30cb91e",
   "rq3_study": "results/supplementary-studies/rq3-generic420-detector-corrected-20261027",
   "schema": "bilingual-publication-integration-verification-v1",
+  "staged_selection_curve_native_test_budgets": [
+    1,
+    2
+  ],
+  "staged_selection_curve_points_verified": 38,
   "staged_selection_en_de_numerics_identical": true,
+  "staged_selection_flow_is_illustrative": true,
   "staged_selection_input_hashes": {
     "analysis/aggregate_curves.csv": "0ce131051506a8552ec7693dc7823ef7e1c506a4a3c0693ccea4780c43eade58",
     "analysis/complete_rankings.csv": "8cb4bb7e9d7c50f1ace706d2199470567b8864097d3bc1a44828dff9777d37ee",
     "data/quality_pairs.csv": "69540a82cc648213168ce9cfe9f9aa6206ba31ae4b57ba37ea38d352488796ce"
   },
   "staged_selection_manifest_files_verified": 70,
-  "staged_selection_manifest_sha256": "e79b6f7c602fec5a41cd8059177bbe4809ebe076942f4421f32a61e064954550",
+  "staged_selection_manifest_sha256": "9e2e2a99995b31193226781b92c470e0b57c42300939bd4b89720013c93763b0",
   "staged_selection_primary_budgets": [
     {
       "candidates": 187,

@@ -1,6 +1,6 @@
 {
-  "schema": "staged-selection-flow-v1",
-  "kind": "workflow_illustration",
+  "schema": "staged-selection-flow-v2",
+  "kind": "illustrative_budget_workflow",
   "example_model": "yolo11l",
   "example_model_label": "YOLO11l",
   "graph_candidates": 615,
@@ -9,29 +9,42 @@
     "sha256": "af4acf61eb65dbf3d75b2fd77011a22867fb339ab3f9b9643663832de6af36a8"
   },
   "pool_count": null,
-  "generic_budget": "k",
+  "generic_budget": 5,
   "maximum_native_tests": 2,
+  "selected_splits": 1,
+  "stage_counts": [
+    615,
+    5,
+    2,
+    1
+  ],
+  "example_budget_measured_for_this_model": false,
   "graph_count_scope": "Complete workflow graph candidates, before backend support and quality checks.",
   "evaluation_scope": "Selection outcomes are evaluated separately on the paired candidate pools. The paired detector pools contain three cuts each.",
-  "geometry_note": "Box widths illustrate narrowing; they are not proportional to candidate counts.",
+  "geometry_note": "Each square represents one option at that illustrative stage. All squares have equal size; process boxes do not encode quantity.",
   "language": "en",
   "labels": [
     [
-      "Graph candidates",
-      "615 boundaries in YOLO11l"
+      "Graph preselection",
+      "Pool selection + Bytes"
     ],
     [
-      "Candidate pool",
-      "Window selection and backend support"
+      "Generic",
+      "Measure throughput"
     ],
     [
-      "Up to $k$ Generic tests",
-      "Start with the smallest boundaries"
+      "Native",
+      "Test the two fastest"
     ],
     [
-      "Up to 2 Native tests",
-      "Test the two fastest Generic cuts",
-      "Select the faster Native result"
+      "Selected split",
+      "Faster Native result"
     ]
+  ],
+  "count_labels": [
+    "615 possible cuts",
+    "5 cuts to test",
+    "2 cuts to test",
+    "1 selected cut"
   ]
 }

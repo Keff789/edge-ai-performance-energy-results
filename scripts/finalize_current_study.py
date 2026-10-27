@@ -52,7 +52,7 @@ def main():
     for row in families:
         lines.append(f"| {labels[row['family']]} | {row['paired_candidates']} | {row['model_device_groups']} | {row['mean_loss_pct']:.4f} |")
     lines += ['', 'The [staged selection analysis](../staged-selection/README.md) combines graph-based preselection, '
-        'Generic measurements, and two final Native tests. Its budget curves and tables use the same paired candidates.', '']
+        'Generic measurements, and one or two final Native tests. Its budget curves and tables use the same paired candidates.', '']
     lines += ['', '## Coverage and interpretation', '',
         f"The paired set contains {q2['original_native_population']} cuts. The quality rule excludes {q2['excluded_candidates']}. "
         'The broader graph-score set selects 20 cuts per model and accelerator, including multi-tensor boundaries. '

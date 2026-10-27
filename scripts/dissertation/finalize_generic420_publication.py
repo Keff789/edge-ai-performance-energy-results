@@ -51,10 +51,30 @@ def main():
             staged_verified_files += 1
     for source in sorted((staged / 'artifacts/en').rglob('*.csv')):
         assert source.read_bytes() == (staged / 'artifacts/de' / source.relative_to(staged / 'artifacts/en')).read_bytes()
-    staged_primary = [row for row in json.loads((staged / 'data/summary.json').read_text())
+    staged_summary = json.loads((staged / 'data/summary.json').read_text())
+    staged_primary = [row for row in staged_summary
         if row['task'] == 'all' and row['method'] == staged_manifest['primary_method']
         and row['policy'] == 'cascade_native2' and row['k'] in staged_manifest['primary_generic_budgets']]
     assert len(staged_primary) == len(staged_manifest['primary_generic_budgets'])
+    budget_payloads = [json.loads((staged / f'artifacts/{language}/figures/staged_selection_budget.json').read_text())
+        for language in ['en', 'de']]
+    assert {key: value for key, value in budget_payloads[0].items() if key != 'language'} == {
+        key: value for key, value in budget_payloads[1].items() if key != 'language'}
+    assert budget_payloads[0]['native_test_budgets'] == [1, 2]
+    points = budget_payloads[0]['points']
+    assert {(row['native_budget'], row['k']) for row in points} == {
+        (budget, k) for budget in [1, 2] for k in range(2, 21)}
+    assert len(points) == 38 and all(row in staged_summary for row in points)
+    flow_payloads = [json.loads((staged / f'artifacts/{language}/figures/staged_selection_flow.json').read_text())
+        for language in ['en', 'de']]
+    translated = {'language', 'labels', 'count_labels'}
+    assert {key: value for key, value in flow_payloads[0].items() if key not in translated} == {
+        key: value for key, value in flow_payloads[1].items() if key not in translated}
+    flow = flow_payloads[0]
+    assert flow['source'] == staged_manifest['schematic_source']
+    assert flow['graph_candidates'] == json.loads(graph_metadata.read_text())['prediction_sources'][flow['example_model']]['candidate_count']
+    assert flow['stage_counts'] == [flow['graph_candidates'], 5, 2, 1]
+    assert not flow['example_budget_measured_for_this_model']
     archived = paper / 'publications/mlsys-r22/data/r15_evidence_validation.json'
     archived_source = repo / 'results/split-inference/publications/mlsys-r22/data/r15_evidence_validation.json'
     assert archived.read_bytes() == archived_source.read_bytes()
@@ -177,6 +197,9 @@ def main():
         'staged_selection_validation': staged_validation,
         'staged_selection_primary_budgets': staged_primary,
         'staged_selection_en_de_numerics_identical': True,
+        'staged_selection_curve_native_test_budgets': [1, 2],
+        'staged_selection_curve_points_verified': len(points),
+        'staged_selection_flow_is_illustrative': not flow['example_budget_measured_for_this_model'],
         'frozen_r22_numerical_files_checked': len(checked), 'rq2_current_files_exact': len(copied_rq2),
         'b066_wide_single_numerical_payload_unchanged': True,
         'current_r30_output_targets_verified': True,
