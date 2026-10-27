@@ -67,6 +67,7 @@ def render(output):
     out = Path(output)
     s = read(out/'data/summary.json')
     data = read(out/'data/PAPER_DATASET.json')
+    current = read(out/'data/current_observation_binding.json') if (out/'data/current_observation_binding.json').is_file() else None
     ng = s['native_generic']
     fc = s['fastest_full_comparison']
     ec = s['lowest_full_energy_comparison']
@@ -144,6 +145,33 @@ All 36 Native detector split configurations record an oracle outside timing, whe
 
 Other recorded completion modes, prepared-input identities and work boundaries are retained per identity. Missing contract hashes alone are not evidence of different executed work; unknown entries remain unknown. Missing historical clock profiles remain unknown for their original dated records; the new A4 cohorts retain their normal verified runtime and source evidence. Contextual comparisons are retained. Strict recorded claim/provenance and reference-close views are optional sensitivities, never the hidden main selection. Broad plots show raw throughput, host-inclusive energy and quality. The recorded-work Pareto sensitivity retains its cohorts; the broad empirical front uses the model/setup population defined above. Neither establishes equal quality or universal endpoint equivalence.
 '''
+    if current:
+        captures = s['current_external_captures']
+        intro = (f"# Methods: current deployment observations\n\n"
+                 f"The established selection contains {s['cases']} deployments ({s['native']} Native and {s['generic']} Generic), "
+                 f"including {s['full_coverage']['configurations']} host-specific Full configurations. "
+                 f"The source-bound current input admits {len(current['accepted_packages'])}/{len(current['expected_packages'])} declared measurement packages. "
+                 f"These comprise {captures['performance']} new performance cohorts, {captures['quality']} new quality evaluations and "
+                 f"{captures['energy']} new energy cohorts; reused observations remain explicitly identified. "
+                 "Original input rows and replaced observations remain archived in data/current_observation_history.json. "
+                 "Only declared, normally admitted metrics change; Full measurements and the literal b066 records are retained. "
+                 "This offline generator performs no hardware measurement, model build or dataset evaluation.\n\n"
+                 "Unchanged DeepX Native A4 observations retain their recorded batch-one, single-engine regime, at most four outstanding jobs, "
+                 "FIFO depth three and serial TensorRT completion. Current replacements and the added Generic deployment retain their own "
+                 "runtime, quality and source epochs. The broad RQ1 dataset retains unchanged Generic FPS/energy generations separately "
+                 "from the current Generic FPS used by RQ2. These observed deployment comparisons do not isolate a causal effect "
+                 "of splitting at equal executed work or parallelism. Own metric admission and Full-baseline comparison "
+                 "authority are reported separately in the retained normal source records.\n\n")
+        methods = intro + '## Selection and coverage\n\n' + methods.split('## Selection and coverage\n\n', 1)[1]
+        methods = methods.replace('No such fallback is needed for the current complete FPS/energy matrix.',
+            'Replacing FPS clears prior energy unless the normal source binds energy to that exact performance observation. Missing current energy remains unavailable.')
+        start = methods.index('All 36 Native detector split configurations')
+        end = methods.index('\n\nOther recorded completion modes', start)
+        methods = methods[:start] + ('Completion mode, oracle placement, prepared inputs and endpoint contracts remain explicit per observation. '
+            'The declared current Native quality replacements evaluate actual timed completion records; earlier quality evaluations '
+            'with additional NMS remain archived and do not establish the current timed endpoint quality. Unchanged A4 and Full '
+            'observations retain their recorded oracle, host-tail or integrated normalization scope. No blanket equality of executed '
+            'work or cross-backend endpoint equivalence is inferred from an administrative hash or numerical quality value.') + methods[end:]
     (out/'METHODS.md').write_text(methods)
     findings = f'''# Findings from the broad Native A4 selection
 
@@ -161,6 +189,9 @@ Quality is a separate result axis. The original {s['quality_loss'].get('native',
 
 See [Table 2](tables/table2_full.md), [recommended Table 3: global fastest deployments](tables/table3_fastest_deployments.md), [same split with two Full baselines](tables/fastest_split_baselines.md), [supplementary relative same-host Top-2](tables/table3_top2_native.md), [methods](METHODS.md), [figure captions](CAPTIONS.md), and [all machine-readable findings](data/summary.json). Missing values, if any, are enumerated by UID in `data/summary.json`. Historical source-version and clock-profile limitations remain; these do not trigger a new measurement campaign.
 '''
+    if current:
+        findings = findings.replace('# Findings from the broad Native A4 selection', '# Findings from the current deployment selection')
+        findings = findings.replace('The original ', 'The recorded ')
     (out/'FINDINGS.md').write_text(findings)
     # Source paragraphs are supplied separately from any private manuscript.
     paragraph = ('We report the broad measured deployment selection, retaining quality-loss, single-repeat and screening observations with their original flags. '
@@ -174,8 +205,42 @@ See [Table 2](tables/table2_full.md), [recommended Table 3: global fastest deplo
                  'Empirical performance--energy fronts maximize throughput and minimize host-inclusive energy within each model/setup, including both Full alternatives; quality is shown by color and is not a dominance objective. '
                  'The 75 updated Native DeepX observations use batch-one, single-engine A4 with at most four outstanding jobs; splits use FIFO depth three and a serial TensorRT consumer through task completion. The other 375 direct observations and all 450 selected dataset-quality observations are retained. '
                  'Native detector splits record a correctness oracle outside timing, whereas Generic detector splits record decoded NMS; Full paths retain their recorded host-tail or integrated normalization work. These ratios compare observed deployments with their recorded parallelism and do not isolate a causal effect of splitting at identical work.')
+    if current:
+        paragraph = paragraph.replace('Dataset Top-1 accuracy or COCO mAP is reused from the selected existing evidence and shown separately.',
+            'Dataset Top-1 accuracy or COCO AP50-95 comes from the selected own quality evidence, including explicitly declared new evaluations; prior values and bootstrap statistics remain archived.')
+        begin = paragraph.index('The 75 updated Native DeepX observations')
+        paragraph = paragraph[:begin] + ('Unchanged A4 observations retain their recorded runtime regime. Only declared current metrics are '
+            'replaced by normally admitted sources; prior observations remain archived. Fulls and literal b066 are unchanged. '
+            'Current Generic FPS does not inherit energy from a different performance observation. Completion and oracle placement '
+            'remain explicit per identity, and current Native quality replacements evaluate their actual timed outputs. '
+            'The comparisons retain their recorded work and parallelism and do not establish a causal splitting effect at identical work.')
     (out/'METHODS_PARAGRAPH.tex').write_text(tex(paragraph)+'\n')
     render_gallery(out, s, fastest)
+    if current:
+        native_splits = sum(row['runner']=='native' and row['kind']=='split' for row in data)
+        generic_splits = sum(row['runner']=='generic' and row['kind']=='split' for row in data)
+        (out/'README.md').write_text(
+            '# Split inference: performance, energy and quality\n\n'
+            f"{s['cases']} observed deployments cover {len(fastest)} models, with {native_splits} Native splits, "
+            f"{generic_splits} Generic splits and {s['full_coverage']['configurations']} host-specific Full configurations. "
+            f"The current inputs admit {len(current['accepted_packages'])}/{len(current['expected_packages'])} declared measurement packages. "
+            f"Measured coverage is {s['performance_coverage']}/{s['cases']} FPS, {s['energy_coverage']}/{s['cases']} energy and "
+            f"{s['quality_numeric_coverage']}/{s['cases']} numerical quality observations. Missing metrics remain unavailable.\n\n"
+            '[Figures](figures/README.md) · [Tables](tables/README.md) · [Complete dataset](data/PAPER_DATASET.csv) · '
+            '[Findings](FINDINGS.md) · [Methods](METHODS.md)\n\n'
+            'The fastest-deployment tables select one split across Native and Generic runners and all measured setups, '
+            'with the runner and exact source UID retained. Global and same-host Full references use the same selected split. '
+            'Energy belongs to its exact performance observation; replacing FPS clears incompatible prior energy. '
+            'The [source table](data/METRIC_SOURCES.csv), [measurement generations](data/MEASUREMENT_GENERATIONS.csv) and '
+            '[replacement history](data/current_observation_history.json) retain the old and current observations. '
+            'Full measurements and the literal b066 records are unchanged.\n\n'
+            'Unchanged Generic FPS/energy generations in this broad dataset remain separate from the current Generic FPS '
+            'used by [RQ2](../supplementary-studies/rq2-native-scope-20261027/README.md). '
+            'Quality uses Top-1 accuracy for classifiers and COCO AP@[.50:.05:.95] for detectors; current Native quality '
+            'replacements evaluate their actual timed completion records. Source-specific runtime, quality and comparison '
+            'authority remain visible in the data.\n\n'
+            'Reproduce with the [offline instructions](../../scripts/split-inference/README.md). '
+            'The generator performs no hardware measurement, compilation or dataset evaluation.\n')
 
 if __name__ == '__main__':
     import argparse
