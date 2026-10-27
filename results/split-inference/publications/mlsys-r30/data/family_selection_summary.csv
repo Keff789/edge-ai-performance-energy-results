@@ -1,0 +1,7 @@
+scope,family,original_native_cases,paired_candidates,model_device_groups,singleton_groups,groups_n_ge_2,mean_loss_pct,mean_loss_n_ge_2_pct,exact_winners,common_pair_groups,old_generic_mean_loss_same_pairs_pct,current_generic_mean_loss_same_pairs_pct
+unrestricted,all,204,204,21,0,21,1.464100554146222,1.464100554146222,14,,,
+unrestricted,classification,168,168,9,0,9,3.392714437605092,3.392714437605092,3,,,
+unrestricted,detection,36,36,12,0,12,0.01764014155206939,0.01764014155206939,11,,,
+quality_admitted,all,204,187,21,0,21,1.3467521152436048,1.3467521152436048,15,21,15.077128973324955,1.3467521152436048
+quality_admitted,classification,168,151,9,0,9,3.1189014134989854,3.1189014134989854,4,9,32.80433865060003,3.1189014134989854
+quality_admitted,detection,36,36,12,0,12,0.01764014155206939,0.01764014155206939,11,12,1.7817217153686513,0.01764014155206939

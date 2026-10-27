@@ -4,10 +4,10 @@ Absolute calibrated system energy of the same global throughput-selected Full an
 
 | Model | Full | mJ/image | Split | mJ/image | Energy change (%) |
 | --- | --- | ---: | --- | ---: | ---: |
-| MobileNetV3-L | DeepX | 12.01 | DeepX/b135 | 12.59 | +4.8 |
-| RegNet-X | DeepX | 31.54 | H10/b123 | 15.83 | -49.8 |
-| ResNet-50 | DeepX | 27.65 | H10/b095 | 29.46 | +6.6 |
-| YOLO11l | DeepX | 315.23 | H10/b120 | 555.75 | +76.3 |
-| YOLO26m | TRT (H8) | 400.03 | H10/b043 | 319.65 | -20.1 |
-| YOLO26s | TRT (DeepX) | 187.80 | H8/b021 | 157.65 | -16.1 |
-| YOLOv7 | DeepX | 269.44 | H8/b066 | 330.14 | +22.5 |
+| MobileNetV3-L | DeepX | 12.01 | Native DeepX/b135 | 12.59 | +4.8 |
+| RegNet-X | DeepX | 31.54 | Native H10/b123 | 15.83 | -49.8 |
+| ResNet-50 | DeepX | 27.65 | Native H10/b095 | 29.46 | +6.6 |
+| YOLO11l | DeepX | 315.23 | Generic DeepX/b511 | 326.19 | +3.5 |
+| YOLO26m | TRT (H8) | 400.03 | Native H10/b043 | 319.65 | -20.1 |
+| YOLO26s | TRT (DeepX) | 187.80 | Native H8/b021 | 157.65 | -16.1 |
+| YOLOv7 | DeepX | 269.44 | Native H8/b066 | 330.14 | +22.5 |

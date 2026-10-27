@@ -1,20 +1,46 @@
 {
   "closure": "results/supplementary-studies/generic420-closeout-20261027",
+  "current_dataset_sha256": "1ec1e759a4e0a4855bee9dd5b2686499b9dc462a85935d62821f87c94f663ee8",
+  "current_external_capture_count": 6,
+  "current_observation_packages": {
+    "accepted_packages": [
+      "generic_DeepX_yolo11l_b511_energy",
+      "native_H10_yolo26m_b043_quality",
+      "native_H8_yolo26m_b043_quality",
+      "native_H8_yolov7_b009_FPS",
+      "native_H8_yolov7_b009_energy",
+      "native_H8_yolov7_b009_quality"
+    ],
+    "expected_packages": [
+      "native_H8_yolov7_b009_FPS",
+      "native_H8_yolov7_b009_quality",
+      "native_H8_yolov7_b009_energy",
+      "native_H8_yolo26m_b043_quality",
+      "native_H10_yolo26m_b043_quality",
+      "generic_DeepX_yolo11l_b511_energy"
+    ],
+    "pending_packages": []
+  },
+  "current_observations_sha256": "98511b7078f394877885bac08da2aa71ec58e7a0f682ac4a9e9457585a9657f4",
+  "current_source_snapshot_id": "sixpack_inputs_7faede4dcc690c6f",
   "dissertation_de": "results/publication-builds/generic420-20261027/dissertation-de",
   "dissertation_en": "results/publication-builds/generic420-20261027/dissertation-en",
+  "generic420_core_snapshot_id": "rq2_detector_followup_20261027/generic420_d658eb195bcb2032",
+  "generic420_core_unchanged": true,
+  "hardware_measurements_performed_by_generator": false,
   "ledger_sha256": "d658eb195bcb20322c587c47180fc6c4d78003c9368e206943e0ab9ae1c55216",
   "manifest": "results/supplementary-studies/generic420-closeout-20261027/MANIFEST.json",
   "measurement_notes": "results/supplementary-studies/rq2-native-scope-20261027/DATA_NOTES.md",
   "paper": "results/publication-builds/generic420-20261027/paper",
   "previous_full_performance_energy_dataset_preserved": "results/split-inference",
-  "publication_update": "Consolidated paired comparison and retrospective graph–Generic–Native selection; no new hardware measurements.",
+  "publication_update": "Current source-bound deployment observations, paired comparison and retrospective graph–Generic–Native selection.",
   "quality_universe_complete": true,
   "reproduce": "python3 scripts/reproduce_current.py --output local-output/current --languages en de",
   "rq2": "results/supplementary-studies/rq2-native-scope-20261027",
   "rq2_scope": "All original Native cuts; independent of fixed420 RQ3 membership.",
   "rq3": "results/supplementary-studies/rq3-generic420-detector-corrected-20261027",
   "schema": "generic420-current-public-analysis-v1",
-  "source_snapshot_unchanged": true,
+  "source_snapshot_unchanged": false,
   "staged_selection": "results/supplementary-studies/staged-selection",
   "status": "complete"
 }

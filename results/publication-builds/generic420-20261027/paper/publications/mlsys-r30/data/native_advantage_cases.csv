@@ -452,6 +452,7 @@ quality_2pct,yolo11l,H8,native|yolo11l|H8|hailo8_to_trt|b120,native|yolo11l|H8|n
 quality_2pct,yolo26m,DeepX,native|yolo26m|DeepX|deepx_to_trt|b003,native|yolo26m|DeepX|native_full_tensorrt|full,native|yolo26m|DeepX|native_full_deepx|full,False,False,False,False
 quality_2pct,yolo26m,DeepX,native|yolo26m|DeepX|deepx_to_trt|b038,native|yolo26m|DeepX|native_full_tensorrt|full,native|yolo26m|DeepX|native_full_deepx|full,True,True,True,False
 quality_2pct,yolo26m,DeepX,native|yolo26m|DeepX|deepx_to_trt|b043,native|yolo26m|DeepX|native_full_tensorrt|full,native|yolo26m|DeepX|native_full_deepx|full,True,True,True,False
+quality_2pct,yolo26m,H10,native|yolo26m|H10|hailo10h_to_trt|b043,native|yolo26m|H10|native_full_tensorrt|full,native|yolo26m|H10|native_full_tensorrt|full,True,True,True,True
 quality_2pct,yolo26s,DeepX,native|yolo26s|DeepX|deepx_to_trt|b003,native|yolo26s|DeepX|native_full_tensorrt|full,native|yolo26s|DeepX|native_full_deepx|full,False,False,False,False
 quality_2pct,yolo26s,DeepX,native|yolo26s|DeepX|deepx_to_trt|b021,native|yolo26s|DeepX|native_full_tensorrt|full,native|yolo26s|DeepX|native_full_deepx|full,True,True,True,True
 quality_2pct,yolo26s,DeepX,native|yolo26s|DeepX|deepx_to_trt|b038,native|yolo26s|DeepX|native_full_tensorrt|full,native|yolo26s|DeepX|native_full_deepx|full,True,False,False,False

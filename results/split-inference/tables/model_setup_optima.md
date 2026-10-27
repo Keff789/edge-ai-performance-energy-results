@@ -17,8 +17,8 @@ Fastest and minimum-energy observed splits within each model/setup/runner. Candi
 | Native | YOLO11l (mAP) | H10 | 3 | b120 | 53 | 555.75 | 45.55 | b120 | 53 | 555.75 | 45.55 | yes |
 | Native | YOLO11l (mAP) | H8 | 3 | b120 | 44 | 555.17 | 45.89 | b120 | 44 | 555.17 | 45.89 | yes |
 | Native | YOLO26m (mAP) | DeepX | 3 | b043 | 98 | 332.03 | 44.81 | b043 | 98 | 332.03 | 44.81 | yes |
-| Native | YOLO26m (mAP) | H10 | 3 | b043 | 110 | 319.65 | 43.66 | b043 | 110 | 319.65 | 43.66 | yes |
-| Native | YOLO26m (mAP) | H8 | 3 | b038 | 79 | 360.60 | 43.66 | b043 | 79 | 355.99 | 43.64 | no |
+| Native | YOLO26m (mAP) | H10 | 3 | b043 | 110 | 319.65 | 44.03 | b043 | 110 | 319.65 | 44.03 | yes |
+| Native | YOLO26m (mAP) | H8 | 3 | b038 | 79 | 360.60 | 43.66 | b043 | 79 | 355.99 | 43.97 | no |
 | Native | YOLO26s (mAP) | DeepX | 3 | b021 | 163 | 176.61 | 40.02 | b021 | 163 | 176.61 | 40.02 | yes |
 | Native | YOLO26s (mAP) | H10 | 3 | b021 | 182 | 168.51 | 39.21 | b021 | 182 | 168.51 | 39.21 | yes |
 | Native | YOLO26s (mAP) | H8 | 3 | b021 | 187 | 157.65 | 39.18 | b021 | 187 | 157.65 | 39.18 | yes |
@@ -34,7 +34,7 @@ Fastest and minimum-energy observed splits within each model/setup/runner. Candi
 | Generic | ResNet-50 (Top-1) | DeepX | 19 | b002 | 463 | 61.94 | 80.50 | b119 | 340 | 50.88 | 80.52 | no |
 | Generic | ResNet-50 (Top-1) | H10 | 19 | b002 | 303 | 82.33 | 80.20 | b002 | 303 | 82.33 | 80.20 | yes |
 | Generic | ResNet-50 (Top-1) | H8 | 19 | b002 | 436 | 74.53 | 80.14 | b060 | 346 | 71.36 | 80.18 | no |
-| Generic | YOLO11l (mAP) | DeepX | 3 | b062 | 47 | 568.32 | 46.46 | b062 | 47 | 568.32 | 46.46 | yes |
+| Generic | YOLO11l (mAP) | DeepX | 4 | b511 | 69 | 326.19 | 46.37 | b511 | 69 | 326.19 | 46.37 | yes |
 | Generic | YOLO11l (mAP) | H10 | 3 | b003 | 30 | 829.21 | 45.64 | b120 | 27 | 811.74 | 45.55 | no |
 | Generic | YOLO11l (mAP) | H8 | 3 | b120 | 43 | 573.88 | 45.89 | b120 | 43 | 573.88 | 45.89 | yes |
 | Generic | YOLO26m (mAP) | DeepX | 3 | b038 | 64 | 423.95 | 44.78 | b043 | 64 | 417.70 | 44.81 | no |

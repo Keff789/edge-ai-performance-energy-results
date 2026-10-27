@@ -2,7 +2,7 @@ Generic-Rangfolge und exakte gleichverteilte Stichprobenauswahl anhand aktueller
 
 | Zulassung | Aufgabe | Gruppen | Cuts | k | G-Verlust (%) | U-Verlust (%) | G-Treffer | U-Treffer |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| ohne Qualitätsfilter | alle | 21 | 204 | 1 | 1.46 | 23.78 | 14 | 4.484 |
+| ohne Qualitätsfilter | alle | 21 | 204 | 1 | 1.46 | 23.79 | 14 | 4.484 |
 | ohne Qualitätsfilter | alle | 21 | 204 | 3 | 0.26 | 7.51 | 20 | 13.453 |
 | ohne Qualitätsfilter | alle | 21 | 204 | 5 | 0.00 | 4.43 | 21 | 14.422 |
 | ohne Qualitätsfilter | Klassifikation | 9 | 168 | 1 | 3.39 | 36.71 | 3 | 0.484 |

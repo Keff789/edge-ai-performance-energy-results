@@ -417,55 +417,55 @@
     "uid": "native|yolo11l|DeepX|native_full_deepx|full"
   },
   {
-    "aggregate_energy_source_sha256": "dff6029ede94b41efb74d070afadd523d0d8ee048e54039004c297b938d9ed00",
-    "backend": "hailo10h_to_trt",
-    "case": "b120",
-    "energy_generation": "rev3_consolidated_20261013",
-    "energy_max_mj_per_image": 567.6908907612469,
-    "energy_min_mj_per_image": 537.6321534241883,
-    "energy_mj_per_image": 555.753729911817,
-    "energy_range": "537.63--567.69",
+    "aggregate_energy_source_sha256": "ee1604dd40f7050ae87023c0420f82b5c541ac52f47a95365d0497094751bdd4",
+    "backend": "deepx_to_trt",
+    "case": "b511",
+    "energy_generation": "six_pack_20261027",
+    "energy_max_mj_per_image": 326.51017317222556,
+    "energy_min_mj_per_image": 325.99672962317766,
+    "energy_mj_per_image": 326.18722304791913,
+    "energy_range": "326.00--326.51",
     "energy_repeat_source_bindings": [
       {
         "campaign": null,
         "repeat": 0,
         "source": null,
-        "source_sha256": "673b6d820b8057685012ba722035b06a68dc8618e79b98761c686a7f5079ae29"
+        "source_sha256": "c1f6421e9ed43e0306cf5ddd5b94d6ea4ccb9751f7780f6f70b0b98f58f99889"
       },
       {
         "campaign": null,
         "repeat": 1,
         "source": null,
-        "source_sha256": "2a6abe4a9c8c9bece9b1b1ed83045dc9a807e0c53ccc9b5165ad4a71e458d627"
+        "source_sha256": "0345a82283ff400359e3c96843b356fd9f1b41167676835bf92f421a65e4ae9b"
       },
       {
         "campaign": null,
         "repeat": 2,
         "source": null,
-        "source_sha256": "3be5106489949f7151a9bbc28bfe58fc7eb5685028628bf0b8d50f2d700bfaad"
+        "source_sha256": "3940dc307132b50cba0276295aee4e12097ebcc1d69c792375679121eedd27bc"
       }
     ],
     "energy_repeats_mj_per_image": [
-      567.6908907612469,
-      537.6321534241883,
-      561.9381455500157
+      326.0547663483542,
+      325.99672962317766,
+      326.51017317222556
     ],
-    "fps": 53.2837092317369,
-    "fps_max": 53.32624918156851,
-    "fps_min": 53.23794442654492,
-    "fps_range": "53--53",
+    "fps": 69.40285189366168,
+    "fps_max": 69.47191778492947,
+    "fps_min": 68.93188082246797,
+    "fps_range": "69--69",
     "fps_repeats": [
-      53.32624918156851,
-      53.2837092317369,
-      53.23794442654492
+      68.93188082246797,
+      69.40285189366168,
+      69.47191778492947
     ],
-    "label": "YOLO11l / H10/b120",
+    "label": "YOLO11l / DeepX/b511",
     "model": "yolo11l",
-    "performance_generation": "rev3_consolidated_20261013",
-    "performance_source_sha256": "0bce07f85f20a522cfd9510e81e83cede66e11f8ff6c32fa951df9ce3be7f78f",
+    "performance_generation": "six_pack_20261027",
+    "performance_source_sha256": "289ffe379badc14bf330d9fe6555144ae51bc40f86bda5c356ee87e5e2bb05f6",
     "range_semantics": "observed minimum and maximum; independent performance and energy runs; not confidence intervals",
-    "setup": "H10",
-    "uid": "native|yolo11l|H10|hailo10h_to_trt|b120"
+    "setup": "DeepX",
+    "uid": "generic|yolo11l|DeepX|deepx_to_trt|b511"
   },
   {
     "aggregate_energy_source_sha256": "b53452841ab60f263d13566a8f8c3cc4c2bcf6e1a637d4d457faf1dfce6f30c4",

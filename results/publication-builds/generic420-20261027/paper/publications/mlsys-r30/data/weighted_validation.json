@@ -1,4 +1,9 @@
 {
+  "current_native_external_captures": {
+    "energy": 1,
+    "performance": 1,
+    "quality": 3
+  },
   "frozen_weights": {
     "default": {
       "w_comm": 1.0,
@@ -48,8 +53,9 @@
       "w_tensors": 0.2
     }
   },
-  "input_manifest_sha256": "38459343b54dd00c7ded9ad6114d271f237c3ff9575e85768d47a514b163ef67",
-  "new_native_measurements": false,
+  "hardware_measurements_performed_by_generator": false,
+  "input_manifest_sha256": "9e8d805e87dc4c93b61147da81b9f0bdab7d3e1d67614dc63ce6fecad1bb76b2",
+  "new_native_measurements": true,
   "publication_status": "complete",
   "refreshed_fps_joined_to_old_energy": false,
   "result": "PASS",
@@ -73,7 +79,7 @@
     "publication_status": "complete",
     "quality_groups_n_ge_2": 21,
     "quality_singleton_groups": 0,
-    "scope": "All original artifact-bound measured Native cut identities; RQ3 fixed420 membership is an annotation only. No Native values imputed or remeasured."
+    "scope": "All original artifact-bound measured Native cut identities; current normal Native observations replace only their source-bound archived predecessors. RQ3 membership remains an annotation; no imputation or new Native cuts."
   },
   "source_snapshot_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
   "validation_scope": "Offline reproduction and identity accounting; unresolved scientific evidence remains unresolved.",

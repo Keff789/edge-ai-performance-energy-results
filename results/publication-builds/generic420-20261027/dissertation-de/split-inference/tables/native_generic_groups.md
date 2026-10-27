@@ -24,4 +24,4 @@ Alle gemessenen Native/Generic-Paare je Modell und System. Jede Anzahl vorteilha
 | YOLO26s | H8 | 1/3 | 3/3 | 1/3 | 0.987 | 0.992 |
 | YOLOv7 | DeepX | 3/3 | 3/3 | 3/3 | 1.377 | 0.823 |
 | YOLOv7 | H10 | 3/3 | 3/3 | 3/3 | 1.748 | 0.697 |
-| YOLOv7 | H8 | 3/3 | 3/3 | 3/3 | 1.110 | 0.894 |
+| YOLOv7 | H8 | 3/3 | 2/2 | 2/2 | 1.110 | 0.748 |

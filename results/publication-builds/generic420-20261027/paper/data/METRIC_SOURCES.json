@@ -8892,6 +8892,58 @@
     "value": 0.46369175853815753
   },
   {
+    "generation": "six_pack_20261027",
+    "metric": "performance",
+    "original_current_quality_source_sha256": null,
+    "original_field": null,
+    "remeasured_in_native_a4": false,
+    "remeasured_in_refresh16": false,
+    "repeat_or_image_n": 3,
+    "repeat_sources": null,
+    "runtime": null,
+    "source": "sources/DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q.json",
+    "source_sha256": "289ffe379badc14bf330d9fe6555144ae51bc40f86bda5c356ee87e5e2bb05f6",
+    "uid": "generic|yolo11l|DeepX|deepx_to_trt|b511",
+    "unit": "image/s",
+    "value": 69.40285189366168
+  },
+  {
+    "generation": "six_pack_20261027",
+    "metric": "energy",
+    "original_current_quality_source_sha256": null,
+    "original_field": null,
+    "remeasured_in_native_a4": false,
+    "remeasured_in_refresh16": false,
+    "repeat_or_image_n": 3,
+    "repeat_sources": [
+      "c1f6421e9ed43e0306cf5ddd5b94d6ea4ccb9751f7780f6f70b0b98f58f99889",
+      "0345a82283ff400359e3c96843b356fd9f1b41167676835bf92f421a65e4ae9b",
+      "3940dc307132b50cba0276295aee4e12097ebcc1d69c792375679121eedd27bc"
+    ],
+    "runtime": null,
+    "source": "sources/DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q.json",
+    "source_sha256": "ee1604dd40f7050ae87023c0420f82b5c541ac52f47a95365d0497094751bdd4",
+    "uid": "generic|yolo11l|DeepX|deepx_to_trt|b511",
+    "unit": "J/image",
+    "value": 0.32618722304791914
+  },
+  {
+    "generation": "six_pack_20261027",
+    "metric": "quality",
+    "original_current_quality_source_sha256": "46e166166d16a10c525aae1dd2a7e8b12d8378daa941f0afb445f33df95c8031",
+    "original_field": "/quality/primary/candidate; /quality/primary/reference",
+    "remeasured_in_native_a4": false,
+    "remeasured_in_refresh16": false,
+    "repeat_or_image_n": 5000,
+    "repeat_sources": null,
+    "runtime": null,
+    "source": "sources/DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q.json",
+    "source_sha256": "46e166166d16a10c525aae1dd2a7e8b12d8378daa941f0afb445f33df95c8031",
+    "uid": "generic|yolo11l|DeepX|deepx_to_trt|b511",
+    "unit": "coco_ap_50_95",
+    "value": 0.4637383165951622
+  },
+  {
     "generation": "rev3_consolidated_20261013",
     "metric": "performance",
     "original_current_quality_source_sha256": null,
@@ -10452,7 +10504,7 @@
     "value": 0.45739549972243293
   },
   {
-    "generation": "rev3_consolidated_20261013",
+    "generation": "six_pack_20261027_existing_current_Generic_reuse",
     "metric": "performance",
     "original_current_quality_source_sha256": null,
     "original_field": "fps_samples / fps_median",
@@ -10461,44 +10513,40 @@
     "repeat_or_image_n": 3,
     "repeat_sources": null,
     "runtime": "hailo8_to_trt",
-    "source": "_supplements/native_fairness_rev3_20261013/payload/reports/generic_completed/final20261008/orin_nx_hailo8_01/yolov7_paper/b009/generic_completion_results.json",
-    "source_sha256": "6ee2178cdae608cf48ea40cf2d7691d5e280d5e9184fbe9ff252ce55b3a95d59",
+    "source": "sources/b009_existing_accepted_Generic_FPS_and_own_Q.json",
+    "source_sha256": "bbebd913183e81c32b508b2f7aa2f07f700e65eeaa43545fd211b0e584800d39",
     "uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
     "unit": "image/s",
-    "value": 41.29120249862124
+    "value": 41.19388564433142
   },
   {
-    "generation": "rev3_consolidated_20261013",
+    "generation": null,
     "metric": "energy",
     "original_current_quality_source_sha256": null,
-    "original_field": "energy_repeats[].energy_j / completed_tasks",
+    "original_field": null,
     "remeasured_in_native_a4": false,
     "remeasured_in_refresh16": false,
-    "repeat_or_image_n": 3,
-    "repeat_sources": [
-      "c334910a6fabe38babc46d6fe6f829e7561f654b8425886f74439e2640a4fefc",
-      "98a5b47405f94167efdc2f305a885095d75064bc89cb5abdce651f36d679a71e",
-      "26ffd5ef0417d92be45d7453fd29714fa383b255961d1173647756e467af8ba9"
-    ],
+    "repeat_or_image_n": 0,
+    "repeat_sources": [],
     "runtime": "hailo8_to_trt",
-    "source": "_supplements/native_fairness_rev3_20261013/payload/energy/generic_completed/h8_yolov7_b009_final_20261010/resume_attempts/20760624a6584914b5c501a18a0f0753/measurement/reports/generic_completed_task_energy.json",
-    "source_sha256": "c53ba609f2ba7844fd022ebe2d99a24b31fcf3da8f9f212d99dd428c7b193513",
+    "source": null,
+    "source_sha256": null,
     "uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
     "unit": "J/image",
-    "value": 0.6599491790052742
+    "value": null
   },
   {
-    "generation": "pre_refresh16_selected_evidence_reused",
+    "generation": "six_pack_20261027_existing_current_Generic_reuse",
     "metric": "quality",
-    "original_current_quality_source_sha256": null,
-    "original_field": "rows[identity].accuracy_gate_metrics; existing explicitly eligible Generic quality transfer, numerical assessment matched",
+    "original_current_quality_source_sha256": "c2c44b48ac557d6cff0344093f9e9843e3175d3f8a823acaee10eb4c5bbb2de3",
+    "original_field": "/proofs/actual_quality_result/primary/candidate; /proofs/actual_quality_result/primary/reference",
     "remeasured_in_native_a4": false,
     "remeasured_in_refresh16": false,
     "repeat_or_image_n": 5000,
     "repeat_sources": null,
     "runtime": "hailo8_to_trt",
-    "source": "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/direct_references/quality_transfer/final_native_179_20261008/finalized_179_origin_verified/native_producer_validation_summary.json",
-    "source_sha256": "12bf2227e6ec762a6a3daad5a599106050d4b8341f4548ef5f527a988b10851f",
+    "source": "sources/b009_existing_accepted_Generic_FPS_and_own_Q.json",
+    "source_sha256": "c2c44b48ac557d6cff0344093f9e9843e3175d3f8a823acaee10eb4c5bbb2de3",
     "uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
     "unit": "coco_ap_50_95",
     "value": 0.45791324238237674
@@ -21460,20 +21508,20 @@
     "value": 0.3196512627384614
   },
   {
-    "generation": "pre_refresh16_selected_evidence_reused",
+    "generation": "six_pack_20261027",
     "metric": "quality",
-    "original_current_quality_source_sha256": "12bf2227e6ec762a6a3daad5a599106050d4b8341f4548ef5f527a988b10851f",
-    "original_field": "rows[identity].accuracy_gate_metrics",
+    "original_current_quality_source_sha256": "bfaea59ab05217bd66e01888d4a78f5ac28b356e1b2cf000815d41596fe74bd9",
+    "original_field": "/result/primary/candidate; /result/primary/reference",
     "remeasured_in_native_a4": false,
     "remeasured_in_refresh16": false,
     "repeat_or_image_n": 5000,
     "repeat_sources": null,
     "runtime": "hailo10h_to_trt",
-    "source": "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/direct_references/quality_transfer/final_native_179_20261008/finalized_179_origin_verified/native_producer_validation_summary.json",
-    "source_sha256": "12bf2227e6ec762a6a3daad5a599106050d4b8341f4548ef5f527a988b10851f",
+    "source": "sources/H10_yolo26m_b043_actual_N5000.json",
+    "source_sha256": "bfaea59ab05217bd66e01888d4a78f5ac28b356e1b2cf000815d41596fe74bd9",
     "uid": "native|yolo26m|H10|hailo10h_to_trt|b043",
     "unit": "coco_ap_50_95",
-    "value": 0.4366393379590343
+    "value": 0.4402958336312416
   },
   {
     "generation": "rev3_consolidated_20261013",
@@ -21720,20 +21768,20 @@
     "value": 0.35599294959145455
   },
   {
-    "generation": "pre_refresh16_selected_evidence_reused",
+    "generation": "six_pack_20261027",
     "metric": "quality",
-    "original_current_quality_source_sha256": "12bf2227e6ec762a6a3daad5a599106050d4b8341f4548ef5f527a988b10851f",
-    "original_field": "rows[identity].accuracy_gate_metrics",
+    "original_current_quality_source_sha256": "8c54e25467153d067dee7e76e68f56ce7f07da98d31e73f507a2ea8580d536e3",
+    "original_field": "/result/primary/candidate; /result/primary/reference",
     "remeasured_in_native_a4": false,
     "remeasured_in_refresh16": false,
     "repeat_or_image_n": 5000,
     "repeat_sources": null,
     "runtime": "hailo8_to_trt",
-    "source": "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/direct_references/quality_transfer/final_native_179_20261008/finalized_179_origin_verified/native_producer_validation_summary.json",
-    "source_sha256": "12bf2227e6ec762a6a3daad5a599106050d4b8341f4548ef5f527a988b10851f",
+    "source": "sources/H8_yolo26m_b043_actual_N5000.json",
+    "source_sha256": "8c54e25467153d067dee7e76e68f56ce7f07da98d31e73f507a2ea8580d536e3",
     "uid": "native|yolo26m|H8|hailo8_to_trt|b043",
     "unit": "coco_ap_50_95",
-    "value": 0.4363651561823593
+    "value": 0.43972062667155115
   },
   {
     "generation": "rev3_consolidated_20261013",
@@ -23140,7 +23188,7 @@
     "value": 0.46015727596374045
   },
   {
-    "generation": "rev3_consolidated_20261013",
+    "generation": "six_pack_20261027",
     "metric": "performance",
     "original_current_quality_source_sha256": null,
     "original_field": "fps_samples / fps_median",
@@ -23149,14 +23197,14 @@
     "repeat_or_image_n": 3,
     "repeat_sources": null,
     "runtime": "hailo8_to_trt",
-    "source": "_supplements/native_fairness_rev3_20261013/payload/native_producers/performance/H8/hailo8_to_trt/b009/final20261008/summary.json",
-    "source_sha256": "ff45e10dd98b48f84f042c774dccb23331be6da15c598ce37432ef9385b24e16",
+    "source": "sources/h8_b009_native_fps_v3_portable_v2.json",
+    "source_sha256": "76df7a60e31bf4b5a500bd0949b0dc5f77df64ea11bb6b3a78506f0a2c3d97a4",
     "uid": "native|yolov7_paper|H8|hailo8_to_trt|b009",
     "unit": "image/s",
-    "value": 44.90082390250171
+    "value": 44.76443847494783
   },
   {
-    "generation": "rev3_consolidated_20261013",
+    "generation": "six_pack_20261027",
     "metric": "energy",
     "original_current_quality_source_sha256": null,
     "original_field": "energy_repeats[].energy_j / completed_tasks",
@@ -23164,29 +23212,29 @@
     "remeasured_in_refresh16": false,
     "repeat_or_image_n": 3,
     "repeat_sources": [
-      "44a035d4e689c79ce524691fe370beaa15be1a8928712a8714e474318ec7911d",
-      "c581e38331c4a66b1e452689c95961b9e86395fc821535e17f89dbb337934b63",
-      "0609fdb943141e1590fec4f9b1decd8968ad79e5eea70e087f87ab1a24c4df90"
+      "d99738682ae1b604db0e6c1fb83c07eed37f8446636a514d3a3784c1bff83c47",
+      "eab5090d17620d2ff944cb621c037638d3f0d1aa1007a84a3cfaf8dc1f99213f",
+      "f7e787eaf3fcf5e84924139b801636611ec6dacbc907100ec5ace4951f5d21c1"
     ],
     "runtime": "hailo8_to_trt",
-    "source": "_supplements/native_fairness_rev3_20261013/payload/_snapshots/continuous_retry_current_metadata_20261011/quality_transfer/qualified_energy_import/native_yolov7_h8_b009_full_final_20261010/50e77c48339e579b674fd9ee3ca6968925a9c54853cb670bf5b5dcf0dc2fe569/normal_view/reports/native_energy_measurements/native_producer_energy_results.json",
-    "source_sha256": "50e77c48339e579b674fd9ee3ca6968925a9c54853cb670bf5b5dcf0dc2fe569",
+    "source": "sources/H8_yolov7_b009_actual_native_energy.json",
+    "source_sha256": "aac122c84d1f654f7539ef8e9965f275620dc6e5a45224dca5bca70c7357641a",
     "uid": "native|yolov7_paper|H8|hailo8_to_trt|b009",
     "unit": "J/image",
-    "value": 0.5996526937121109
+    "value": 0.5994322504059489
   },
   {
-    "generation": "pre_refresh16_selected_evidence_reused",
+    "generation": "six_pack_20261027",
     "metric": "quality",
-    "original_current_quality_source_sha256": "12bf2227e6ec762a6a3daad5a599106050d4b8341f4548ef5f527a988b10851f",
-    "original_field": "rows[identity].accuracy_gate_metrics",
+    "original_current_quality_source_sha256": "b0b9de56a09583caa7bf7370596adc9ef76c01b4a6ab1d540c44cee1bdd1b18c",
+    "original_field": "/result/primary/candidate; /result/primary/reference",
     "remeasured_in_native_a4": false,
     "remeasured_in_refresh16": false,
     "repeat_or_image_n": 5000,
     "repeat_sources": null,
     "runtime": "hailo8_to_trt",
-    "source": "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/direct_references/quality_transfer/final_native_179_20261008/finalized_179_origin_verified/native_producer_validation_summary.json",
-    "source_sha256": "12bf2227e6ec762a6a3daad5a599106050d4b8341f4548ef5f527a988b10851f",
+    "source": "sources/H8_yolov7_b009_actual_N5000.json",
+    "source_sha256": "b0b9de56a09583caa7bf7370596adc9ef76c01b4a6ab1d540c44cee1bdd1b18c",
     "uid": "native|yolov7_paper|H8|hailo8_to_trt|b009",
     "unit": "coco_ap_50_95",
     "value": 0.45791324238237674

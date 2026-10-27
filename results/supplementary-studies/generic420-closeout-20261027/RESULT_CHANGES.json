@@ -35,9 +35,50 @@
       "remeasured": "Original cuts with an actual new FPS capture, including standalone captures held from pairing; alias of new_fps_captured.",
       "source_found": "Original cuts with any recovered Generic source, including standalone observations held from pairing."
     },
+    "current_native_dataset_sha256": "1ec1e759a4e0a4855bee9dd5b2686499b9dc462a85935d62821f87c94f663ee8",
+    "current_native_external_captures": {
+      "energy": 1,
+      "performance": 1,
+      "quality": 3
+    },
+    "current_native_replacement_count": 3,
+    "current_native_replacements": [
+      {
+        "energy_source_sha256": "f7c4fb2d9f6d3df1bdcfdcb5da157e221e5d6eccc70e053d1a88467b94699aff",
+        "evidence_sha256": "b799510ddf87bd1f809f67cb6b8b3bc285ef4352e563df8e72e8b730454949b7",
+        "metric_updates": [
+          "quality"
+        ],
+        "native_uid": "native|yolo26m|H10|hailo10h_to_trt|b043",
+        "performance_source_sha256": "b267a4e72c06a524e0c9d4a3ec7e41b4c6e4887d66591d2bf4426f6f5fa4f3e8",
+        "quality_source_sha256": "bfaea59ab05217bd66e01888d4a78f5ac28b356e1b2cf000815d41596fe74bd9"
+      },
+      {
+        "energy_source_sha256": "b53452841ab60f263d13566a8f8c3cc4c2bcf6e1a637d4d457faf1dfce6f30c4",
+        "evidence_sha256": "f60a373291d6fcd5c3794068796feb67d4bcdf34b3d59928d53c84c13abe18af",
+        "metric_updates": [
+          "quality"
+        ],
+        "native_uid": "native|yolo26m|H8|hailo8_to_trt|b043",
+        "performance_source_sha256": "98f654d3e99a820fc8b60b9103f52141c54a792d40b170798727b05ab0da1954",
+        "quality_source_sha256": "8c54e25467153d067dee7e76e68f56ce7f07da98d31e73f507a2ea8580d536e3"
+      },
+      {
+        "energy_source_sha256": "aac122c84d1f654f7539ef8e9965f275620dc6e5a45224dca5bca70c7357641a",
+        "evidence_sha256": "1c9b9d127dd65565097b5e679c23bedae4e747db1d6577950782f7344b67bc47",
+        "metric_updates": [
+          "energy",
+          "performance",
+          "quality"
+        ],
+        "native_uid": "native|yolov7_paper|H8|hailo8_to_trt|b009",
+        "performance_source_sha256": "76df7a60e31bf4b5a500bd0949b0dc5f77df64ea11bb6b3a78506f0a2c3d97a4",
+        "quality_source_sha256": "b0b9de56a09583caa7bf7370596adc9ef76c01b4a6ab1d540c44cee1bdd1b18c"
+      }
+    ],
     "detection_metric_label": "COCO AP@[.50:.05:.95]",
     "detector_quality_pairs": 36,
-    "energy_policy": "Original Native, Full and Generic energy records stay in their original dataset. No refreshed Generic rate is paired to old energy as one joint observation.",
+    "energy_policy": "Archived Native/Full/Generic energy observations are preserved. Current curated energy requires its exact selected FPS-source relation; no refreshed Generic rate inherits old energy.",
     "excluded_candidates": 17,
     "exclusion_reasons": {
       "generic_relative_quality_loss_above_5pct": 17,
@@ -139,10 +180,11 @@
     "generic_quality_policy": "Current bound normal Generic quality evaluates actual selected timed completion records against its own existing CPU-ONNX reference and evaluator policy. Invalidated quality assignment evidence remains history; corrected unavailable quality is pending, never physical accuracy_loss.",
     "group_count": 21,
     "groups_without_quality_pairs": 0,
-    "known_quality_timed_contract_difference_cases": [
+    "historical_quality_timed_contract_difference_cases": [
       "generic|yolo26m|H10|hailo10h_to_trt|b043",
       "generic|yolo26m|H8|hailo8_to_trt|b043"
     ],
+    "known_quality_timed_contract_difference_cases": [],
     "mean_final_generic_loss_n_ge_2_pct": 1.3467521152436048,
     "mean_final_generic_loss_pct": 1.3467521152436048,
     "mean_final_generic_loss_same_pairs_n_ge_2_pct": 1.3467521152436048,
@@ -158,7 +200,7 @@
       "yolo26s",
       "yolov7_paper"
     ],
-    "native_quality_policy": "Established historical Native numerical quality metric and <=5% gate retained. Historical Native AP is not asserted to be exact selected timed Native endpoint AP; source-scoped postfilter differences are explicitly reported.",
+    "native_quality_policy": "Use only own bound current normal quality for explicitly replaced Native observations; missing current quality remains unavailable. Retain historical Native quality and the established <=5% gate for unchanged cuts. Prior values and source-scoped postfilter differences remain archived.",
     "new_fps_capture_observations": 1,
     "new_fps_captured": 1,
     "new_quality_capture_observations": 17,
@@ -168,6 +210,7 @@
     "outside_rq3_fixed420_pairs": 12,
     "overall_statistic": "Unchanged equal-group mean over nonempty quality-admitted model/device groups; singleton zero loss is not evidence of ranking quality.",
     "pair_count": 204,
+    "prior_actual_accounting_retained_as_history": true,
     "prior_full_quality_scope_mean_loss_pct": 15.077128973324955,
     "prior_published_pairs": 204,
     "prior_published_quality_pairs": 187,
@@ -180,12 +223,12 @@
     },
     "quality_pair_count": 187,
     "quality_singleton_groups": 0,
-    "reviewed_metadata_pairs": 1,
+    "reviewed_metadata_pairs": 0,
     "rq3_fixed420_members": 192,
     "same_pairs_comparison_group_count": 21,
     "same_pairs_comparison_pair_count": 187,
     "schema": "rq2-native-scope-pairs-v1",
-    "scope": "All original artifact-bound measured Native cut identities; RQ3 fixed420 membership is an annotation only. No Native values imputed or remeasured.",
+    "scope": "All original artifact-bound measured Native cut identities; current normal Native observations replace only their source-bound archived predecessors. RQ3 membership remains an annotation; no imputation or new Native cuts.",
     "selected_generic_observations": 204,
     "selection_policy": "Latest actually completed identity- and complete-task-contract-compatible valid Generic observation; selection precedes quality admission and never ranks FPS, AP or quality outcome.",
     "source_found": 204,

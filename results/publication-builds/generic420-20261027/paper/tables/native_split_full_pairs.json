@@ -16379,7 +16379,7 @@
       "producer_impl=hailo10_infermodel_async_fifo"
     ],
     "split_fps": 110.292412066109,
-    "split_quality": 0.4366393379590343,
+    "split_quality": 0.4402958336312416,
     "split_raw_mj": 319.6512627384614,
     "split_uid": "native|yolo26m|H10|hailo10h_to_trt|b043"
   },
@@ -16425,7 +16425,7 @@
       "producer_impl=hailo10_infermodel_async_fifo"
     ],
     "split_fps": 110.292412066109,
-    "split_quality": 0.4366393379590343,
+    "split_quality": 0.4402958336312416,
     "split_raw_mj": 319.6512627384614,
     "split_uid": "native|yolo26m|H10|hailo10h_to_trt|b043"
   },
@@ -16663,7 +16663,7 @@
       "producer_impl=hailo8_python_vstreams_fifo"
     ],
     "split_fps": 78.61904956868067,
-    "split_quality": 0.4363651561823593,
+    "split_quality": 0.43972062667155115,
     "split_raw_mj": 355.99294959145453,
     "split_uid": "native|yolo26m|H8|hailo8_to_trt|b043"
   },
@@ -16710,7 +16710,7 @@
       "producer_impl=hailo8_python_vstreams_fifo"
     ],
     "split_fps": 78.61904956868067,
-    "split_quality": 0.4363651561823593,
+    "split_quality": 0.43972062667155115,
     "split_raw_mj": 355.99294959145453,
     "split_uid": "native|yolo26m|H8|hailo8_to_trt|b043"
   },
@@ -18160,12 +18160,12 @@
     "baseline_uid": "native|yolov7_paper|H8|native_full_hailo8|full",
     "both_reference_close": false,
     "case": "b009",
-    "comparison_energy_ratio": 1.0905878217153588,
+    "comparison_energy_ratio": 1.0901869016701395,
     "comparison_scope": "observed deployment differences; endpoint equivalence not implied",
-    "energy_gain_same_full": 0.9169367015552442,
+    "energy_gain_same_full": 0.9172739082335557,
     "energy_included": true,
-    "energy_ratio": 1.0905878217153588,
-    "fps_ratio": 1.4000329914446772,
+    "energy_ratio": 1.0901869016701395,
+    "fps_ratio": 1.395780416958687,
     "model": "yolov7_paper",
     "original_comparison_reasons": [],
     "original_contract_present": true,
@@ -18185,9 +18185,9 @@
       "postprocess_included=True",
       "producer_impl=hailo8_python_vstreams_fifo"
     ],
-    "split_fps": 44.90082390250171,
+    "split_fps": 44.76443847494783,
     "split_quality": 0.45791324238237674,
-    "split_raw_mj": 599.6526937121109,
+    "split_raw_mj": 599.4322504059489,
     "split_uid": "native|yolov7_paper|H8|hailo8_to_trt|b009"
   },
   {
@@ -18207,12 +18207,12 @@
     "baseline_uid": "native|yolov7_paper|H8|native_full_tensorrt|full",
     "both_reference_close": true,
     "case": "b009",
-    "comparison_energy_ratio": 1.0726112789781588,
+    "comparison_energy_ratio": 1.0722169674390898,
     "comparison_scope": "observed deployment differences; endpoint equivalence not implied",
-    "energy_gain_same_full": 0.9979217449276779,
+    "energy_gain_same_full": 0.9982887341388754,
     "energy_included": true,
-    "energy_ratio": 1.0020825832114448,
-    "fps_ratio": 0.8463019236478355,
+    "energy_ratio": 1.0017141993118863,
+    "fps_ratio": 0.8437312971055027,
     "model": "yolov7_paper",
     "original_comparison_reasons": [],
     "original_contract_present": true,
@@ -18232,9 +18232,9 @@
       "postprocess_included=True",
       "producer_impl=hailo8_python_vstreams_fifo"
     ],
-    "split_fps": 44.90082390250171,
+    "split_fps": 44.76443847494783,
     "split_quality": 0.45791324238237674,
-    "split_raw_mj": 599.6526937121109,
+    "split_raw_mj": 599.4322504059489,
     "split_uid": "native|yolov7_paper|H8|hailo8_to_trt|b009"
   },
   {

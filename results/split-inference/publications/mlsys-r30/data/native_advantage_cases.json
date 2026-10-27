@@ -5436,6 +5436,18 @@
     "split_uid": "native|yolo26m|DeepX|deepx_to_trt|b043"
   },
   {
+    "both_vs_fastest_full": true,
+    "faster_than_fastest_full": true,
+    "fastest_full_uid": "native|yolo26m|H10|native_full_tensorrt|full",
+    "gate": "quality_2pct",
+    "lower_energy_than_fastest_full": true,
+    "lower_energy_than_minimum_full": true,
+    "minimum_energy_full_uid": "native|yolo26m|H10|native_full_tensorrt|full",
+    "model": "yolo26m",
+    "setup": "H10",
+    "split_uid": "native|yolo26m|H10|hailo10h_to_trt|b043"
+  },
+  {
     "both_vs_fastest_full": false,
     "faster_than_fastest_full": false,
     "fastest_full_uid": "native|yolo26s|DeepX|native_full_tensorrt|full",

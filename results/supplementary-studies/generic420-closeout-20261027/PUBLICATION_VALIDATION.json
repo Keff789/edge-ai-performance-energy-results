@@ -1,10 +1,13 @@
 {
-  "RQ1_and_b066_values_unchanged": true,
+  "RQ1_values_unchanged": false,
+  "b066_values_unchanged": true,
+  "current_external_capture_count": 6,
+  "hardware_measurements_performed_by_generator": false,
   "integration": "results/publication-builds/generic420-20261027/INTEGRATION_VALIDATION.json",
-  "integration_sha256": "e612f3a2b6cd610bd3cead2162ae5df85e2f26d67293578a7bad65ed52cd83ab",
-  "new_hardware_measurements": false,
+  "integration_sha256": "a0897e8448770baad6cfeed7a6eff6709fe9bed1324e2d5c497632401ed41b4a",
+  "new_hardware_measurements": true,
   "schema": "current-publication-validation-v2",
   "staged_selection": "results/supplementary-studies/staged-selection",
-  "staged_selection_manifest_sha256": "9e2e2a99995b31193226781b92c470e0b57c42300939bd4b89720013c93763b0",
+  "staged_selection_manifest_sha256": "dcb9311621e0fc5d68952881f773ccf64efeefd8813f7e08e6e9410d6bf5bd84",
   "status": "PASS"
 }

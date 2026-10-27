@@ -13284,114 +13284,6 @@
     "uid": "native|yolo26m|H8|hailo8_to_trt|b043"
   },
   {
-    "case_id": "b009",
-    "completed_frames": 1000,
-    "completed_tasks": 1000,
-    "completion_tail_ms": 4.3121107327751815,
-    "consumer_effective_cycle_ms": null,
-    "consumer_makespan_ms": null,
-    "deepx_run_ms": null,
-    "fifo_put_block_ms": null,
-    "hailo_latency_ms": null,
-    "handoff_ms": 0.43572235153988004,
-    "inflight": null,
-    "kind": "split",
-    "makespan_ms": 22271.306249778718,
-    "model_id": "yolov7_paper",
-    "output_map_ms": null,
-    "p1_effective_cycle_ms": null,
-    "p1_ms": 5.761193943209946,
-    "p1_thread_ms": 6.196916294749826,
-    "p2_run_ms": 17.918237764853984,
-    "p2_thread_ms": 22.230348497629166,
-    "postprocess_ms": 4.3121107327751815,
-    "producer_impl": "hailo8_python_vstreams_fifo",
-    "producer_makespan_ms": null,
-    "queue_depth": 3,
-    "queue_wait_ms": null,
-    "raw_sha256": "f9310d20a2931a25c457bba7def364f86518df4dcf307dcc4142f656b2fb1f44",
-    "repeat": 0,
-    "runner_pid": 775639,
-    "runtime_instance_id": "fresh_runtime:4555771e0b5bfd8493717014440195022e31aca4b8c7a82ba42607bac59df640",
-    "setup_id": "H8",
-    "stored_makespan_s": 22.271306249778718,
-    "task": "detection",
-    "trt_input_copy_ms": null,
-    "uid": "native|yolov7_paper|H8|hailo8_to_trt|b009"
-  },
-  {
-    "case_id": "b009",
-    "completed_frames": 1000,
-    "completed_tasks": 1000,
-    "completion_tail_ms": 4.3280617175623775,
-    "consumer_effective_cycle_ms": null,
-    "consumer_makespan_ms": null,
-    "deepx_run_ms": null,
-    "fifo_put_block_ms": null,
-    "hailo_latency_ms": null,
-    "handoff_ms": 0.42298208735883236,
-    "inflight": null,
-    "kind": "split",
-    "makespan_ms": 22278.554322198033,
-    "model_id": "yolov7_paper",
-    "output_map_ms": null,
-    "p1_effective_cycle_ms": null,
-    "p1_ms": 5.75546406628564,
-    "p1_thread_ms": 6.178446153644472,
-    "p2_run_ms": 17.909470421727747,
-    "p2_thread_ms": 22.237532139290124,
-    "postprocess_ms": 4.3280617175623775,
-    "producer_impl": "hailo8_python_vstreams_fifo",
-    "producer_makespan_ms": null,
-    "queue_depth": 3,
-    "queue_wait_ms": null,
-    "raw_sha256": "b0bac951641822934a647aa7fc0d36ae4ab9f07fd38197166a3695a543d8ec0c",
-    "repeat": 1,
-    "runner_pid": 778027,
-    "runtime_instance_id": "fresh_runtime:bdf39eaeaaf8f2f2d2d51fc64ce39f779aac778a49a7610e49f5a78f7accf84a",
-    "setup_id": "H8",
-    "stored_makespan_s": 22.278554322198033,
-    "task": "detection",
-    "trt_input_copy_ms": null,
-    "uid": "native|yolov7_paper|H8|hailo8_to_trt|b009"
-  },
-  {
-    "case_id": "b009",
-    "completed_frames": 1000,
-    "completed_tasks": 1000,
-    "completion_tail_ms": 4.306391345337033,
-    "consumer_effective_cycle_ms": null,
-    "consumer_makespan_ms": null,
-    "deepx_run_ms": null,
-    "fifo_put_block_ms": null,
-    "hailo_latency_ms": null,
-    "handoff_ms": 0.4233357794582844,
-    "inflight": null,
-    "kind": "split",
-    "makespan_ms": 22259.92366904393,
-    "model_id": "yolov7_paper",
-    "output_map_ms": null,
-    "p1_effective_cycle_ms": null,
-    "p1_ms": 5.758728024084121,
-    "p1_thread_ms": 6.182063803542405,
-    "p2_run_ms": 17.913164232857525,
-    "p2_thread_ms": 22.21955557819456,
-    "postprocess_ms": 4.306391345337033,
-    "producer_impl": "hailo8_python_vstreams_fifo",
-    "producer_makespan_ms": null,
-    "queue_depth": 3,
-    "queue_wait_ms": null,
-    "raw_sha256": "7920e992bb84206ee0dc7b42947f70e1e79d2a8841e5ed483fc6d3dfc1428c76",
-    "repeat": 2,
-    "runner_pid": 780416,
-    "runtime_instance_id": "fresh_runtime:74602601e554f1d9903806ac70f2a04f8a182e9d83fb9fa188130b92010eaedd",
-    "setup_id": "H8",
-    "stored_makespan_s": 22.25992366904393,
-    "task": "detection",
-    "trt_input_copy_ms": null,
-    "uid": "native|yolov7_paper|H8|hailo8_to_trt|b009"
-  },
-  {
     "case_id": "full",
     "completed_frames": 1000,
     "completed_tasks": 1000,
@@ -1159087,5 +1158979,122 @@
     "task": "detection",
     "uid": "native|yolov7_paper|DeepX|native_full_deepx|full",
     "warmup_images": 100
+  },
+  {
+    "completed_tasks": 1000,
+    "process_evidence": {
+      "namespace": "measured_runner_pid",
+      "process_id": 1505843
+    },
+    "raw_sha256": "bbebd913183e81c32b508b2f7aa2f07f700e65eeaa43545fd211b0e584800d39",
+    "repeat": 0,
+    "runner_pid": 1505843,
+    "runtime_instance_id": null,
+    "uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009"
+  },
+  {
+    "completed_tasks": 1000,
+    "process_evidence": {
+      "namespace": "measured_runner_pid",
+      "process_id": 1508152
+    },
+    "raw_sha256": "bbebd913183e81c32b508b2f7aa2f07f700e65eeaa43545fd211b0e584800d39",
+    "repeat": 1,
+    "runner_pid": 1508152,
+    "runtime_instance_id": null,
+    "uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009"
+  },
+  {
+    "completed_tasks": 1000,
+    "process_evidence": {
+      "namespace": "measured_runner_pid",
+      "process_id": 1510461
+    },
+    "raw_sha256": "bbebd913183e81c32b508b2f7aa2f07f700e65eeaa43545fd211b0e584800d39",
+    "repeat": 2,
+    "runner_pid": 1510461,
+    "runtime_instance_id": null,
+    "uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009"
+  },
+  {
+    "completed_tasks": 1000,
+    "process_evidence": {
+      "clock_domain": "perf_counter_ns:process:1543544",
+      "namespace": "dut_native_python_process",
+      "pid_source": "request_latency.clock_domain",
+      "process_id": 1543544,
+      "runtime_instance_id": "fresh_runtime:0e68b1d72ed4087e2e9548593d21b9edbe0ed0d7f64cb65052286e4e03e02847"
+    },
+    "raw_sha256": "76df7a60e31bf4b5a500bd0949b0dc5f77df64ea11bb6b3a78506f0a2c3d97a4",
+    "repeat": 0,
+    "runner_pid": 1543544,
+    "runtime_instance_id": "fresh_runtime:0e68b1d72ed4087e2e9548593d21b9edbe0ed0d7f64cb65052286e4e03e02847",
+    "uid": "native|yolov7_paper|H8|hailo8_to_trt|b009"
+  },
+  {
+    "completed_tasks": 1000,
+    "process_evidence": {
+      "clock_domain": "perf_counter_ns:process:1545817",
+      "namespace": "dut_native_python_process",
+      "pid_source": "request_latency.clock_domain",
+      "process_id": 1545817,
+      "runtime_instance_id": "fresh_runtime:b3e2b0caf289dadfad032c7a3376940e06e75139a37a70116f911752800fa69a"
+    },
+    "raw_sha256": "76df7a60e31bf4b5a500bd0949b0dc5f77df64ea11bb6b3a78506f0a2c3d97a4",
+    "repeat": 1,
+    "runner_pid": 1545817,
+    "runtime_instance_id": "fresh_runtime:b3e2b0caf289dadfad032c7a3376940e06e75139a37a70116f911752800fa69a",
+    "uid": "native|yolov7_paper|H8|hailo8_to_trt|b009"
+  },
+  {
+    "completed_tasks": 1000,
+    "process_evidence": {
+      "clock_domain": "perf_counter_ns:process:1548090",
+      "namespace": "dut_native_python_process",
+      "pid_source": "request_latency.clock_domain",
+      "process_id": 1548090,
+      "runtime_instance_id": "fresh_runtime:08d1011792793763eb31dee98efa690749d860ee331a37c90122179dcfa594fc"
+    },
+    "raw_sha256": "76df7a60e31bf4b5a500bd0949b0dc5f77df64ea11bb6b3a78506f0a2c3d97a4",
+    "repeat": 2,
+    "runner_pid": 1548090,
+    "runtime_instance_id": "fresh_runtime:08d1011792793763eb31dee98efa690749d860ee331a37c90122179dcfa594fc",
+    "uid": "native|yolov7_paper|H8|hailo8_to_trt|b009"
+  },
+  {
+    "completed_tasks": 1000,
+    "process_evidence": {
+      "namespace": "measured_runner_pid",
+      "process_id": 3538646
+    },
+    "raw_sha256": "289ffe379badc14bf330d9fe6555144ae51bc40f86bda5c356ee87e5e2bb05f6",
+    "repeat": 0,
+    "runner_pid": 3538646,
+    "runtime_instance_id": null,
+    "uid": "generic|yolo11l|DeepX|deepx_to_trt|b511"
+  },
+  {
+    "completed_tasks": 1000,
+    "process_evidence": {
+      "namespace": "measured_runner_pid",
+      "process_id": 3538737
+    },
+    "raw_sha256": "289ffe379badc14bf330d9fe6555144ae51bc40f86bda5c356ee87e5e2bb05f6",
+    "repeat": 1,
+    "runner_pid": 3538737,
+    "runtime_instance_id": null,
+    "uid": "generic|yolo11l|DeepX|deepx_to_trt|b511"
+  },
+  {
+    "completed_tasks": 1000,
+    "process_evidence": {
+      "namespace": "measured_runner_pid",
+      "process_id": 3538827
+    },
+    "raw_sha256": "289ffe379badc14bf330d9fe6555144ae51bc40f86bda5c356ee87e5e2bb05f6",
+    "repeat": 2,
+    "runner_pid": 3538827,
+    "runtime_instance_id": null,
+    "uid": "generic|yolo11l|DeepX|deepx_to_trt|b511"
   }
 ]

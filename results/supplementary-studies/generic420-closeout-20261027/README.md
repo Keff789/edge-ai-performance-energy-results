@@ -25,7 +25,7 @@ The [staged selection analysis](../staged-selection/README.md) combines graph-ba
 
 The paired set contains 204 cuts. The quality rule excludes 17. The broader graph-score set selects 20 cuts per model and accelerator, including multi-tensor boundaries. Of 420 planned configurations, 359 have throughput measurements, 61 cannot be executed, and 28 measured cuts exceed the quality limit. The [coverage table](closure_matrix.csv) gives the counts for each group.
 
-Both selection analyses apply the 5% relative quality-loss rule. RQ2 evaluates Native throughput and RQ3 Generic throughput. The [measurement notes](../rq2-native-scope-20261027/DATA_NOTES.md) record source details that affect interpretation. The paired b009 observation is included using the reviewed executable and input evidence. Removing it leaves all Generic recommendation results unchanged. Energy comparisons use measurements of the same runtime configuration.
+Both selection analyses apply the 5% relative quality-loss rule. RQ2 evaluates Native throughput and RQ3 Generic throughput. The [measurement notes](../rq2-native-scope-20261027/DATA_NOTES.md) record source details that affect interpretation. The paired b009 observation uses the new normally admitted Native observation and its current input binding; the historical metadata review remains archived. Energy comparisons use measurements of the same runtime configuration.
 
 ## Figures, tables and reproduction
 

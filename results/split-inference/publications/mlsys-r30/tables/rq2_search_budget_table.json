@@ -1,74 +1,95 @@
-[
-  {
-    "measurement_set": "Graph-score comparison",
-    "method": "Bytes",
-    "exact_8of9": 12,
-    "exact_9of9": 13,
-    "within_1pct_9of9": 13,
-    "within_5pct_9of9": 11
-  },
-  {
-    "measurement_set": "Graph-score comparison",
-    "method": "Weighted",
-    "exact_8of9": 18,
-    "exact_9of9": 19,
-    "within_1pct_9of9": 19,
-    "within_5pct_9of9": 19
-  },
-  {
-    "measurement_set": "Graph-score comparison",
-    "method": "Fit-H10",
-    "exact_8of9": 15,
-    "exact_9of9": 19,
-    "within_1pct_9of9": 19,
-    "within_5pct_9of9": 19
-  },
-  {
-    "measurement_set": "Graph-score comparison",
-    "method": "Cycle",
-    "exact_8of9": 18,
-    "exact_9of9": 18,
-    "within_1pct_9of9": 18,
-    "within_5pct_9of9": 18
-  },
-  {
-    "measurement_set": "Graph-score comparison",
-    "method": "Stream",
-    "exact_8of9": 18,
-    "exact_9of9": 18,
-    "within_1pct_9of9": 18,
-    "within_5pct_9of9": 18
-  },
-  {
-    "measurement_set": "Graph-score comparison",
-    "method": "Generic",
-    "exact_8of9": 15,
-    "exact_9of9": 18,
-    "within_1pct_9of9": 18,
-    "within_5pct_9of9": 18
-  },
-  {
-    "measurement_set": "Deployment comparison, quality-filtered",
-    "method": "Bytes",
-    "exact_8of9": 12,
-    "exact_9of9": 14,
-    "within_1pct_9of9": 13,
-    "within_5pct_9of9": 11
-  },
-  {
-    "measurement_set": "Deployment comparison, quality-filtered",
-    "method": "Generic",
-    "exact_8of9": 17,
-    "exact_9of9": 18,
-    "within_1pct_9of9": 18,
-    "within_5pct_9of9": 18
-  },
-  {
-    "measurement_set": "Deployment comparison, quality-filtered",
-    "method": "Calibrated",
-    "exact_8of9": 13,
-    "exact_9of9": 18,
-    "within_1pct_9of9": 18,
-    "within_5pct_9of9": 18
-  }
-]
+{
+  "caption": "Native throughput loss for 187 quality-admissible cuts in 21 model-device groups, with groups weighted equally. At budget k, we test the first min(k,n) ranked cuts and compare their highest Native throughput with the best measured Native cut in that group.",
+  "rows": [
+    {
+      "groups": 21,
+      "method": "bytes",
+      "minimum_budget": 12,
+      "target_success": 0.9
+    },
+    {
+      "groups": 21,
+      "method": "bytes",
+      "minimum_budget": 12,
+      "target_success": 0.95
+    },
+    {
+      "groups": 21,
+      "method": "bytes",
+      "minimum_budget": 14,
+      "target_success": 1.0
+    },
+    {
+      "groups": 21,
+      "method": "generic",
+      "minimum_budget": 2,
+      "target_success": 0.9
+    },
+    {
+      "groups": 21,
+      "method": "generic",
+      "minimum_budget": 2,
+      "target_success": 0.95
+    },
+    {
+      "groups": 21,
+      "method": "generic",
+      "minimum_budget": 4,
+      "target_success": 1.0
+    },
+    {
+      "groups": 21,
+      "method": "weighted_default",
+      "minimum_budget": 14,
+      "target_success": 0.9
+    },
+    {
+      "groups": 21,
+      "method": "weighted_default",
+      "minimum_budget": 15,
+      "target_success": 0.95
+    },
+    {
+      "groups": 21,
+      "method": "weighted_default",
+      "minimum_budget": 18,
+      "target_success": 1.0
+    },
+    {
+      "groups": 21,
+      "method": "weighted_pooled",
+      "minimum_budget": 11,
+      "target_success": 0.9
+    },
+    {
+      "groups": 21,
+      "method": "weighted_pooled",
+      "minimum_budget": 12,
+      "target_success": 0.95
+    },
+    {
+      "groups": 21,
+      "method": "weighted_pooled",
+      "minimum_budget": 15,
+      "target_success": 1.0
+    },
+    {
+      "groups": 21,
+      "method": "weighted_cv",
+      "minimum_budget": 11,
+      "target_success": 0.9
+    },
+    {
+      "groups": 21,
+      "method": "weighted_cv",
+      "minimum_budget": 12,
+      "target_success": 0.95
+    },
+    {
+      "groups": 21,
+      "method": "weighted_cv",
+      "minimum_budget": 15,
+      "target_success": 1.0
+    }
+  ]
+}

@@ -1,13 +1,29 @@
 {
-  "schema": "current-study-build-v1",
+  "current_measurement_packages": [
+    "generic_DeepX_yolo11l_b511_energy",
+    "native_H10_yolo26m_b043_quality",
+    "native_H8_yolo26m_b043_quality",
+    "native_H8_yolov7_b009_FPS",
+    "native_H8_yolov7_b009_energy",
+    "native_H8_yolov7_b009_quality"
+  ],
+  "hardware_measurements": false,
   "languages": [
     "en",
     "de"
   ],
   "rq2_source": "../../supplementary-studies/rq2-native-scope-20261027",
   "rq3_source": "../../supplementary-studies/rq3-generic420-detector-corrected-20261027",
+  "schema": "current-study-build-v1",
+  "source_execution_epochs": {
+    "current_dataset_sha256": "1ec1e759a4e0a4855bee9dd5b2686499b9dc462a85935d62821f87c94f663ee8",
+    "current_observations_sha256": "98511b7078f394877885bac08da2aa71ec58e7a0f682ac4a9e9457585a9657f4",
+    "hardware_measurements_performed_by_generator": false,
+    "numeric_and_figure_source_commit": "df206022c84cfcb08c2c8df6f29a4685b1599dcb",
+    "report_generator_sha256": "1a8c7566cb0c8c23d8cd75ffcc1d360f5edcb1198c183ece22bcd4f77059b6d2",
+    "report_text_source_commit": "e3d719b17c517a86c86199e64a93dce0c61d3d38"
+  },
+  "staged_selection": "staged-selection",
   "studies_recomputed": false,
-  "verification_enabled": true,
-  "hardware_measurements": false,
-  "staged_selection": "staged-selection"
+  "verification_enabled": true
 }

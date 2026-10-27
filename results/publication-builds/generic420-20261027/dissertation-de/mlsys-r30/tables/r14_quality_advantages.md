@@ -6,5 +6,5 @@ Vorteile auf demselben Host nach Filterung von Native-Splits und Full-Alternativ
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | Alle Messungen | 204 | 42 | 105 | 77 | 65 | 72 |
 | <=1% Verlust | 114 | 28 | 58 | 40 | 32 | 37 |
-| <=2% Verlust | 147 | 30 | 88 | 61 | 52 | 56 |
+| <=2% Verlust | 148 | 30 | 89 | 62 | 53 | 57 |
 | <=5% Verlust | 187 | 33 | 102 | 74 | 62 | 69 |

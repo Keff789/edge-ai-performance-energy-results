@@ -1,6 +1,938 @@
 {
   "figures": {
     "figures": {
+      "archived-split/publications/mlsys-r22/figures/current_generic_selection_loss": {
+        "labels": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "20",
+            "20"
+          ],
+          [
+            "40",
+            "40"
+          ],
+          [
+            "60",
+            "60"
+          ],
+          [
+            "80",
+            "80"
+          ],
+          [
+            "DeepX",
+            "DeepX"
+          ],
+          [
+            "H10",
+            "H10"
+          ],
+          [
+            "H8",
+            "H8"
+          ],
+          [
+            "MobileNetV3-L",
+            "MobileNetV3-L"
+          ],
+          [
+            "Native throughput lost (%)",
+            "Native-Durchsatzverlust (%)"
+          ],
+          [
+            "RegNet-X",
+            "RegNet-X"
+          ],
+          [
+            "ResNet-50",
+            "ResNet-50"
+          ],
+          [
+            "YOLO11l",
+            "YOLO11l"
+          ],
+          [
+            "YOLO26m",
+            "YOLO26m"
+          ],
+          [
+            "YOLO26s",
+            "YOLO26s"
+          ],
+          [
+            "YOLOv7",
+            "YOLOv7"
+          ],
+          [
+            "−20",
+            "−20"
+          ]
+        ],
+        "untranslated": []
+      },
+      "archived-split/publications/mlsys-r22/figures/fastest_deployment_tradeoff": {
+        "labels": [
+          [
+            "0.2×",
+            "0.2×"
+          ],
+          [
+            "0.4×",
+            "0.4×"
+          ],
+          [
+            "0.5×",
+            "0.5×"
+          ],
+          [
+            "0.6×",
+            "0.6×"
+          ],
+          [
+            "0.75×",
+            "0.75×"
+          ],
+          [
+            "0.8×",
+            "0.8×"
+          ],
+          [
+            "1.25×",
+            "1.25×"
+          ],
+          [
+            "1.2×",
+            "1.2×"
+          ],
+          [
+            "1.4×",
+            "1.4×"
+          ],
+          [
+            "1.5×",
+            "1.5×"
+          ],
+          [
+            "1.6×",
+            "1.6×"
+          ],
+          [
+            "1.75×",
+            "1.75×"
+          ],
+          [
+            "1.8×",
+            "1.8×"
+          ],
+          [
+            "1×",
+            "1×"
+          ],
+          [
+            "2.25×",
+            "2.25×"
+          ],
+          [
+            "2.5×",
+            "2.5×"
+          ],
+          [
+            "2.75×",
+            "2.75×"
+          ],
+          [
+            "2×",
+            "2×"
+          ],
+          [
+            "3×",
+            "3×"
+          ],
+          [
+            "MobileNetV3-L",
+            "MobileNetV3-L"
+          ],
+          [
+            "RegNet-X",
+            "RegNet-X"
+          ],
+          [
+            "ResNet-50",
+            "ResNet-50"
+          ],
+          [
+            "Split / globally fastest Full: throughput",
+            "Split / global schnellster Full: Durchsatz"
+          ],
+          [
+            "Split / same Full: energy per image",
+            "Split / derselbe Full: Energie je Bild"
+          ],
+          [
+            "YOLO11l",
+            "YOLO11l"
+          ],
+          [
+            "YOLO26m",
+            "YOLO26m"
+          ],
+          [
+            "YOLO26s",
+            "YOLO26s"
+          ],
+          [
+            "YOLOv7",
+            "YOLOv7"
+          ]
+        ],
+        "untranslated": []
+      },
+      "archived-split/publications/mlsys-r22/figures/fastest_split_baseline_comparison": {
+        "labels": [
+          [
+            "0.84",
+            "0.84"
+          ],
+          [
+            "0×",
+            "0×"
+          ],
+          [
+            "1.06",
+            "1.06"
+          ],
+          [
+            "1.23 / 1.24",
+            "1.23 / 1.24"
+          ],
+          [
+            "1.30 / 1.31",
+            "1.30 / 1.31"
+          ],
+          [
+            "1.35",
+            "1.35"
+          ],
+          [
+            "1.36",
+            "1.36"
+          ],
+          [
+            "1.68",
+            "1.68"
+          ],
+          [
+            "1×",
+            "1×"
+          ],
+          [
+            "2.11",
+            "2.11"
+          ],
+          [
+            "2.13",
+            "2.13"
+          ],
+          [
+            "2.54",
+            "2.54"
+          ],
+          [
+            "2×",
+            "2×"
+          ],
+          [
+            "3×",
+            "3×"
+          ],
+          [
+            "4.33",
+            "4.33"
+          ],
+          [
+            "4×",
+            "4×"
+          ],
+          [
+            "5×",
+            "5×"
+          ],
+          [
+            "Global Full",
+            "Globaler Full"
+          ],
+          [
+            "MobileNetV3-L",
+            "MobileNetV3-L"
+          ],
+          [
+            "RegNet-X",
+            "RegNet-X"
+          ],
+          [
+            "ResNet-50",
+            "ResNet-50"
+          ],
+          [
+            "Same-host Full",
+            "Full auf demselben System"
+          ],
+          [
+            "Split throughput / Full throughput",
+            "Split-Durchsatz / Full-Durchsatz"
+          ],
+          [
+            "YOLO11l",
+            "YOLO11l"
+          ],
+          [
+            "YOLO26m",
+            "YOLO26m"
+          ],
+          [
+            "YOLO26s",
+            "YOLO26s"
+          ],
+          [
+            "YOLOv7",
+            "YOLOv7"
+          ]
+        ],
+        "untranslated": []
+      },
+      "archived-split/publications/mlsys-r22/figures/quality_generic_selection_loss": {
+        "labels": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "20",
+            "20"
+          ],
+          [
+            "40",
+            "40"
+          ],
+          [
+            "60",
+            "60"
+          ],
+          [
+            "80",
+            "80"
+          ],
+          [
+            "DeepX",
+            "DeepX"
+          ],
+          [
+            "H10",
+            "H10"
+          ],
+          [
+            "H8",
+            "H8"
+          ],
+          [
+            "MobileNetV3-L",
+            "MobileNetV3-L"
+          ],
+          [
+            "Native throughput lost (%)",
+            "Native-Durchsatzverlust (%)"
+          ],
+          [
+            "RegNet-X",
+            "RegNet-X"
+          ],
+          [
+            "ResNet-50",
+            "ResNet-50"
+          ],
+          [
+            "YOLO11l",
+            "YOLO11l"
+          ],
+          [
+            "YOLO26m",
+            "YOLO26m"
+          ],
+          [
+            "YOLO26s",
+            "YOLO26s"
+          ],
+          [
+            "YOLOv7",
+            "YOLOv7"
+          ],
+          [
+            "−20",
+            "−20"
+          ]
+        ],
+        "untranslated": []
+      },
+      "archived-split/publications/mlsys-r22/figures/resnet_h8_energy_current": {
+        "labels": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "100",
+            "100"
+          ],
+          [
+            "120",
+            "120"
+          ],
+          [
+            "140",
+            "140"
+          ],
+          [
+            "20",
+            "20"
+          ],
+          [
+            "200",
+            "200"
+          ],
+          [
+            "300",
+            "300"
+          ],
+          [
+            "40",
+            "40"
+          ],
+          [
+            "400",
+            "400"
+          ],
+          [
+            "500",
+            "500"
+          ],
+          [
+            "60",
+            "60"
+          ],
+          [
+            "600",
+            "600"
+          ],
+          [
+            "700",
+            "700"
+          ],
+          [
+            "80",
+            "80"
+          ],
+          [
+            "H8 Full",
+            "H8 Full"
+          ],
+          [
+            "Native splits",
+            "Native-Splits"
+          ],
+          [
+            "System energy (mJ/image)",
+            "Systemenergie (mJ/Bild)"
+          ],
+          [
+            "TensorRT Full",
+            "TensorRT Full"
+          ],
+          [
+            "Throughput (FPS)",
+            "Durchsatz (FPS)"
+          ],
+          [
+            "b038",
+            "b038"
+          ],
+          [
+            "b060",
+            "b060"
+          ]
+        ],
+        "untranslated": []
+      },
+      "archived-split/publications/mlsys-r22/figures/selector_loss_heatmap": {
+        "labels": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0.0",
+            "0.0"
+          ],
+          [
+            "0.7",
+            "0.7"
+          ],
+          [
+            "0.8",
+            "0.8"
+          ],
+          [
+            "1.2",
+            "1.2"
+          ],
+          [
+            "1.6",
+            "1.6"
+          ],
+          [
+            "1.9",
+            "1.9"
+          ],
+          [
+            "12.8",
+            "12.8"
+          ],
+          [
+            "13.3",
+            "13.3"
+          ],
+          [
+            "13.8",
+            "13.8"
+          ],
+          [
+            "13.9",
+            "13.9"
+          ],
+          [
+            "14.9",
+            "14.9"
+          ],
+          [
+            "16.5",
+            "16.5"
+          ],
+          [
+            "17.3",
+            "17.3"
+          ],
+          [
+            "17.8",
+            "17.8"
+          ],
+          [
+            "2.8",
+            "2.8"
+          ],
+          [
+            "20",
+            "20"
+          ],
+          [
+            "20.0",
+            "20.0"
+          ],
+          [
+            "20.5",
+            "20.5"
+          ],
+          [
+            "22.8",
+            "22.8"
+          ],
+          [
+            "23.2",
+            "23.2"
+          ],
+          [
+            "23.7",
+            "23.7"
+          ],
+          [
+            "28.9",
+            "28.9"
+          ],
+          [
+            "29.1",
+            "29.1"
+          ],
+          [
+            "3.8",
+            "3.8"
+          ],
+          [
+            "31.9",
+            "31.9"
+          ],
+          [
+            "37.3",
+            "37.3"
+          ],
+          [
+            "40",
+            "40"
+          ],
+          [
+            "40.0",
+            "40.0"
+          ],
+          [
+            "41.4",
+            "41.4"
+          ],
+          [
+            "42.1",
+            "42.1"
+          ],
+          [
+            "45.0",
+            "45.0"
+          ],
+          [
+            "45.5",
+            "45.5"
+          ],
+          [
+            "46.0",
+            "46.0"
+          ],
+          [
+            "50.8",
+            "50.8"
+          ],
+          [
+            "52.1",
+            "52.1"
+          ],
+          [
+            "57.5",
+            "57.5"
+          ],
+          [
+            "60",
+            "60"
+          ],
+          [
+            "66.6",
+            "66.6"
+          ],
+          [
+            "68.6",
+            "68.6"
+          ],
+          [
+            "7.7",
+            "7.7"
+          ],
+          [
+            "70.6",
+            "70.6"
+          ],
+          [
+            "75.1",
+            "75.1"
+          ],
+          [
+            "75.8",
+            "75.8"
+          ],
+          [
+            "77.7",
+            "77.7"
+          ],
+          [
+            "8.0",
+            "8.0"
+          ],
+          [
+            "80",
+            "80"
+          ],
+          [
+            "88.5",
+            "88.5"
+          ],
+          [
+            "9.3",
+            "9.3"
+          ],
+          [
+            "Cut\npayload\n6/21 hits",
+            "Schnitt\nGrenztensordaten\n6/21 Treffer"
+          ],
+          [
+            "Cycle\n(no handover)\n6/21 hits",
+            "Cycle\n(ohne Übergabe)\n6/21 Treffer"
+          ],
+          [
+            "DeepX  (17)",
+            "DeepX  (17)"
+          ],
+          [
+            "DeepX  (19)",
+            "DeepX  (19)"
+          ],
+          [
+            "DeepX  (20)",
+            "DeepX  (20)"
+          ],
+          [
+            "DeepX  (3)",
+            "DeepX  (3)"
+          ],
+          [
+            "Generic\ncompletion\n11/21 hits",
+            "Generic\nAufgabenabschluss\n11/21 Treffer"
+          ],
+          [
+            "H10  (17)",
+            "H10  (17)"
+          ],
+          [
+            "H10  (19)",
+            "H10  (19)"
+          ],
+          [
+            "H10  (20)",
+            "H10  (20)"
+          ],
+          [
+            "H10  (3)",
+            "H10  (3)"
+          ],
+          [
+            "H8  (17)",
+            "H8  (17)"
+          ],
+          [
+            "H8  (19)",
+            "H8  (19)"
+          ],
+          [
+            "H8  (20)",
+            "H8  (20)"
+          ],
+          [
+            "H8  (3)",
+            "H8  (3)"
+          ],
+          [
+            "HW fit\n(H10)\n6/21 hits",
+            "Hardwarebewertung\n(H10)\n6/21 Treffer"
+          ],
+          [
+            "MobileNetV3-L",
+            "MobileNetV3-L"
+          ],
+          [
+            "Native throughput loss (%)",
+            "Native-Durchsatzverlust (%)"
+          ],
+          [
+            "RegNet-X",
+            "RegNet-X"
+          ],
+          [
+            "ResNet-50",
+            "ResNet-50"
+          ],
+          [
+            "Stored\nstream rate\n7/21 hits",
+            "Gespeichert\nStream-Durchsatz\n7/21 Treffer"
+          ],
+          [
+            "Weighted\nscore\n6/21 hits",
+            "Weighted\nScore\n6/21 Treffer"
+          ],
+          [
+            "YOLO11l",
+            "YOLO11l"
+          ],
+          [
+            "YOLO26m",
+            "YOLO26m"
+          ],
+          [
+            "YOLO26s",
+            "YOLO26s"
+          ],
+          [
+            "YOLOv7",
+            "YOLOv7"
+          ]
+        ],
+        "untranslated": []
+      },
+      "archived-split/publications/mlsys-r22/figures/system_overview": {
+        "labels": [
+          [
+            "1 tensor",
+            "1 Tensor"
+          ],
+          [
+            "Accelerator prefix",
+            "Präfix auf dem Beschleuniger"
+          ],
+          [
+            "Common runtime",
+            "Gemeinsame Laufzeitimplementierung"
+          ],
+          [
+            "GPU suffix",
+            "Suffix auf der GPU"
+          ],
+          [
+            "Generic",
+            "Generic"
+          ],
+          [
+            "Generic also supports multi-tensor boundaries.",
+            "Generic unterstützt auch Grenzen mit mehreren Tensoren."
+          ],
+          [
+            "Input",
+            "Eingabe"
+          ],
+          [
+            "Model- and backend-specific runtime",
+            "Modell- und backendspezifische Implementierung"
+          ],
+          [
+            "Native",
+            "Native"
+          ],
+          [
+            "Native uses one input to the GPU suffix.",
+            "Native verwendet einen Eingang zum GPU-Suffix."
+          ],
+          [
+            "Paired comparison: same graph and cut",
+            "Paarweiser Vergleich: gleicher Graph und Schnitt"
+          ],
+          [
+            "Task\ncompletion",
+            "Aufgaben-\nabschluss"
+          ]
+        ],
+        "untranslated": []
+      },
+      "archived-split/publications/mlsys-r22/figures/yolov7_h8_case": {
+        "labels": [
+          [
+            "% · higher is better",
+            "% · höher ist besser"
+          ],
+          [
+            "(a) Throughput",
+            "(a) Durchsatz"
+          ],
+          [
+            "(b) System energy",
+            "(b) Systemenergie"
+          ],
+          [
+            "(c) COCO AP$_{50:95}$",
+            "(c) COCO AP$_{50:95}$"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "113",
+            "113"
+          ],
+          [
+            "120",
+            "120"
+          ],
+          [
+            "20",
+            "20"
+          ],
+          [
+            "200",
+            "200"
+          ],
+          [
+            "32",
+            "32"
+          ],
+          [
+            "330.14",
+            "330.14"
+          ],
+          [
+            "40",
+            "40"
+          ],
+          [
+            "40.78",
+            "40.78"
+          ],
+          [
+            "400",
+            "400"
+          ],
+          [
+            "45.74",
+            "45.74"
+          ],
+          [
+            "46.02",
+            "46.02"
+          ],
+          [
+            "53",
+            "53"
+          ],
+          [
+            "549.84",
+            "549.84"
+          ],
+          [
+            "598.41",
+            "598.41"
+          ],
+          [
+            "600",
+            "600"
+          ],
+          [
+            "80",
+            "80"
+          ],
+          [
+            "FPS · higher is better",
+            "FPS · höher ist besser"
+          ],
+          [
+            "Hailo8\nFull",
+            "Hailo8 Full"
+          ],
+          [
+            "Split\nb066",
+            "Split b066"
+          ],
+          [
+            "TensorRT\nFull",
+            "TensorRT Full"
+          ],
+          [
+            "mJ/image · lower is better",
+            "mJ/Bild · niedriger ist besser"
+          ]
+        ],
+        "untranslated": []
+      },
       "split/figures/01_full_throughput": {
         "labels": [
           [
@@ -750,6 +1682,10 @@
             "H10, n=68"
           ],
           [
+            "H8, n=67",
+            "H8, n=67"
+          ],
+          [
             "H8, n=68",
             "H8, n=68"
           ],
@@ -795,8 +1731,8 @@
             "0.618\n7 Modelle"
           ],
           [
-            "0.749\n7 models",
-            "0.749\n7 Modelle"
+            "0.742\n7 models",
+            "0.742\n7 Modelle"
           ],
           [
             "0.75",
@@ -807,8 +1743,8 @@
             "0.794\n7 Modelle"
           ],
           [
-            "0.833\n7 models",
-            "0.833\n7 Modelle"
+            "0.812\n7 models",
+            "0.812\n7 Modelle"
           ],
           [
             "0.90",
@@ -1820,6 +2756,10 @@
             "800"
           ],
           [
+            "90",
+            "90"
+          ],
+          [
             "900",
             "900"
           ],
@@ -1828,8 +2768,8 @@
             "COCO mAP@[.50:.95] (%)"
           ],
           [
-            "DeepX\nn=8 · front=1",
-            "DeepX\nn=8 · Pareto-Punkte=1"
+            "DeepX\nn=9 · front=2",
+            "DeepX\nn=9 · Pareto-Punkte=2"
           ],
           [
             "Empirical Pareto point",
@@ -1844,12 +2784,12 @@
             "G F b003"
           ],
           [
-            "G F=E b062",
-            "G F=E b062"
-          ],
-          [
             "G F=E b120",
             "G F=E b120"
+          ],
+          [
+            "G F=E b511",
+            "G F=E b511"
           ],
           [
             "Generic",
@@ -2371,12 +3311,20 @@
             "47"
           ],
           [
+            "500",
+            "500"
+          ],
+          [
             "60",
             "60"
           ],
           [
             "600",
             "600"
+          ],
+          [
+            "700",
+            "700"
           ],
           [
             "750",
@@ -2427,8 +3375,8 @@
             "H10\nn=8 · Pareto-Punkte=1"
           ],
           [
-            "H8\nn=8 · front=1",
-            "H8\nn=8 · Pareto-Punkte=1"
+            "H8\nn=7 · front=1",
+            "H8\nn=7 · Pareto-Punkte=1"
           ],
           [
             "Host-inclusive energy (mJ/image) ↓",
@@ -2576,6 +3524,10 @@
             "YOLO11l / DeepX  n=3/3  ="
           ],
           [
+            "YOLO11l / DeepX  n=4/4  =",
+            "YOLO11l / DeepX  n=4/4  ="
+          ],
+          [
             "YOLO11l / H10  n=3/3",
             "YOLO11l / H10  n=3/3"
           ],
@@ -2634,6 +3586,10 @@
           [
             "YOLOv7 / H10  n=3/3  =",
             "YOLOv7 / H10  n=3/3  ="
+          ],
+          [
+            "YOLOv7 / H8  n=3/2  =",
+            "YOLOv7 / H8  n=3/2  ="
           ],
           [
             "YOLOv7 / H8  n=3/3  =",
@@ -2810,8 +3766,8 @@
             "Objekterkennung — Kandidat minus Referenz"
           ],
           [
-            "Existing dataset quality: 450/450 numerical candidate/reference observations\nNegative values are retained; zero denotes each observation’s model reference",
-            "Datensatzqualität: 450/450 numerische Kandidat-Referenz-Vergleiche\nNegative Werte bleiben erhalten; null bezeichnet die jeweilige Modellreferenz"
+            "Existing dataset quality: 451/451 numerical candidate/reference observations\nNegative values are retained; zero denotes each observation’s model reference",
+            "Datensatzqualität: 451/451 numerische Kandidat-Referenz-Vergleiche\nNegative Werte bleiben erhalten; null bezeichnet die jeweilige Modellreferenz"
           ],
           [
             "Generic split",
@@ -3249,8 +4205,8 @@
             "DeepX Full"
           ],
           [
-            "DeepX: quality 8/8",
-            "DeepX: Qualität 8/8"
+            "DeepX: quality 9/9",
+            "DeepX: Qualität 9/9"
           ],
           [
             "Generic split",
@@ -3307,6 +4263,10 @@
           [
             "b120",
             "b120"
+          ],
+          [
+            "b511",
+            "b511"
           ]
         ],
         "untranslated": []
@@ -3649,12 +4609,16 @@
             "0.4"
           ],
           [
-            "0.5",
-            "0.5"
+            "0.50",
+            "0.50"
           ],
           [
             "0.6",
             "0.6"
+          ],
+          [
+            "0.75",
+            "0.75"
           ],
           [
             "0.8",
@@ -3665,36 +4629,52 @@
             "1.0"
           ],
           [
+            "1.00",
+            "1.00"
+          ],
+          [
             "1.2",
             "1.2"
+          ],
+          [
+            "1.25",
+            "1.25"
           ],
           [
             "1.4",
             "1.4"
           ],
           [
-            "1.5",
-            "1.5"
+            "1.50",
+            "1.50"
           ],
           [
             "1.6",
             "1.6"
           ],
           [
-            "1.8",
-            "1.8"
+            "1.75",
+            "1.75"
           ],
           [
-            "2.0",
-            "2.0"
+            "2.00",
+            "2.00"
           ],
           [
-            "2.5",
-            "2.5"
+            "2.25",
+            "2.25"
           ],
           [
-            "3.0",
-            "3.0"
+            "2.50",
+            "2.50"
+          ],
+          [
+            "2.75",
+            "2.75"
+          ],
+          [
+            "3.00",
+            "3.00"
           ],
           [
             "Energy per image ratio: selected split / global fastest Full",
@@ -3737,8 +4717,8 @@
             "Durchsatzverhältnis: gewählter Split / global schnellster Full →"
           ],
           [
-            "YOLO11l\nH10/b120 · Native",
-            "YOLO11l\nH10/b120 · Native"
+            "YOLO11l\nDeepX/b511 · Generic",
+            "YOLO11l\nDeepX/b511 · Generic"
           ],
           [
             "YOLO26m\nH10/b043 · Native",
@@ -3758,20 +4738,20 @@
       "split/figures/fastest_split_baseline_comparison": {
         "labels": [
           [
-            "0",
-            "0"
+            "0.5",
+            "0.5"
           ],
           [
-            "0.84×",
-            "0.84×"
-          ],
-          [
-            "1",
-            "1"
+            "1.0",
+            "1.0"
           ],
           [
             "1.06×",
             "1.06×"
+          ],
+          [
+            "1.10×",
+            "1.10×"
           ],
           [
             "1.23×",
@@ -3794,16 +4774,16 @@
             "1.35×"
           ],
           [
-            "1.36×",
-            "1.36×"
+            "1.5",
+            "1.5"
           ],
           [
             "1.68×",
             "1.68×"
           ],
           [
-            "2",
-            "2"
+            "2.0",
+            "2.0"
           ],
           [
             "2.11×",
@@ -3814,24 +4794,36 @@
             "2.13×"
           ],
           [
+            "2.5",
+            "2.5"
+          ],
+          [
             "2.54×",
             "2.54×"
           ],
           [
-            "3",
-            "3"
+            "3.0",
+            "3.0"
           ],
           [
-            "4",
-            "4"
+            "3.5",
+            "3.5"
+          ],
+          [
+            "4.0",
+            "4.0"
           ],
           [
             "4.33×",
             "4.33×"
           ],
           [
-            "5",
-            "5"
+            "4.5",
+            "4.5"
+          ],
+          [
+            "5.0",
+            "5.0"
           ],
           [
             "Baseline effect for the fastest observed split\nSame selected split, different Full baselines",
@@ -3862,8 +4854,8 @@
             "Durchsatz des gewählten Splits / Full-Referenzdurchsatz"
           ],
           [
-            "YOLO11l\nH10/b120 · Native",
-            "YOLO11l\nH10/b120 · Native"
+            "YOLO11l\nDeepX/b511 · Generic",
+            "YOLO11l\nDeepX/b511 · Generic"
           ],
           [
             "YOLO26m\nH10/b043 · Native",
@@ -3876,938 +4868,6 @@
           [
             "YOLOv7\nH8/b066 · Native",
             "YOLOv7\nH8/b066 · Native"
-          ]
-        ],
-        "untranslated": []
-      },
-      "split/publications/mlsys-r22/figures/current_generic_selection_loss": {
-        "labels": [
-          [
-            "0",
-            "0"
-          ],
-          [
-            "20",
-            "20"
-          ],
-          [
-            "40",
-            "40"
-          ],
-          [
-            "60",
-            "60"
-          ],
-          [
-            "80",
-            "80"
-          ],
-          [
-            "DeepX",
-            "DeepX"
-          ],
-          [
-            "H10",
-            "H10"
-          ],
-          [
-            "H8",
-            "H8"
-          ],
-          [
-            "MobileNetV3-L",
-            "MobileNetV3-L"
-          ],
-          [
-            "Native throughput lost (%)",
-            "Native-Durchsatzverlust (%)"
-          ],
-          [
-            "RegNet-X",
-            "RegNet-X"
-          ],
-          [
-            "ResNet-50",
-            "ResNet-50"
-          ],
-          [
-            "YOLO11l",
-            "YOLO11l"
-          ],
-          [
-            "YOLO26m",
-            "YOLO26m"
-          ],
-          [
-            "YOLO26s",
-            "YOLO26s"
-          ],
-          [
-            "YOLOv7",
-            "YOLOv7"
-          ],
-          [
-            "−20",
-            "−20"
-          ]
-        ],
-        "untranslated": []
-      },
-      "split/publications/mlsys-r22/figures/fastest_deployment_tradeoff": {
-        "labels": [
-          [
-            "0.2×",
-            "0.2×"
-          ],
-          [
-            "0.4×",
-            "0.4×"
-          ],
-          [
-            "0.5×",
-            "0.5×"
-          ],
-          [
-            "0.6×",
-            "0.6×"
-          ],
-          [
-            "0.75×",
-            "0.75×"
-          ],
-          [
-            "0.8×",
-            "0.8×"
-          ],
-          [
-            "1.25×",
-            "1.25×"
-          ],
-          [
-            "1.2×",
-            "1.2×"
-          ],
-          [
-            "1.4×",
-            "1.4×"
-          ],
-          [
-            "1.5×",
-            "1.5×"
-          ],
-          [
-            "1.6×",
-            "1.6×"
-          ],
-          [
-            "1.75×",
-            "1.75×"
-          ],
-          [
-            "1.8×",
-            "1.8×"
-          ],
-          [
-            "1×",
-            "1×"
-          ],
-          [
-            "2.25×",
-            "2.25×"
-          ],
-          [
-            "2.5×",
-            "2.5×"
-          ],
-          [
-            "2.75×",
-            "2.75×"
-          ],
-          [
-            "2×",
-            "2×"
-          ],
-          [
-            "3×",
-            "3×"
-          ],
-          [
-            "MobileNetV3-L",
-            "MobileNetV3-L"
-          ],
-          [
-            "RegNet-X",
-            "RegNet-X"
-          ],
-          [
-            "ResNet-50",
-            "ResNet-50"
-          ],
-          [
-            "Split / globally fastest Full: throughput",
-            "Split / global schnellster Full: Durchsatz"
-          ],
-          [
-            "Split / same Full: energy per image",
-            "Split / derselbe Full: Energie je Bild"
-          ],
-          [
-            "YOLO11l",
-            "YOLO11l"
-          ],
-          [
-            "YOLO26m",
-            "YOLO26m"
-          ],
-          [
-            "YOLO26s",
-            "YOLO26s"
-          ],
-          [
-            "YOLOv7",
-            "YOLOv7"
-          ]
-        ],
-        "untranslated": []
-      },
-      "split/publications/mlsys-r22/figures/fastest_split_baseline_comparison": {
-        "labels": [
-          [
-            "0.84",
-            "0.84"
-          ],
-          [
-            "0×",
-            "0×"
-          ],
-          [
-            "1.06",
-            "1.06"
-          ],
-          [
-            "1.23 / 1.24",
-            "1.23 / 1.24"
-          ],
-          [
-            "1.30 / 1.31",
-            "1.30 / 1.31"
-          ],
-          [
-            "1.35",
-            "1.35"
-          ],
-          [
-            "1.36",
-            "1.36"
-          ],
-          [
-            "1.68",
-            "1.68"
-          ],
-          [
-            "1×",
-            "1×"
-          ],
-          [
-            "2.11",
-            "2.11"
-          ],
-          [
-            "2.13",
-            "2.13"
-          ],
-          [
-            "2.54",
-            "2.54"
-          ],
-          [
-            "2×",
-            "2×"
-          ],
-          [
-            "3×",
-            "3×"
-          ],
-          [
-            "4.33",
-            "4.33"
-          ],
-          [
-            "4×",
-            "4×"
-          ],
-          [
-            "5×",
-            "5×"
-          ],
-          [
-            "Global Full",
-            "Globaler Full"
-          ],
-          [
-            "MobileNetV3-L",
-            "MobileNetV3-L"
-          ],
-          [
-            "RegNet-X",
-            "RegNet-X"
-          ],
-          [
-            "ResNet-50",
-            "ResNet-50"
-          ],
-          [
-            "Same-host Full",
-            "Full auf demselben System"
-          ],
-          [
-            "Split throughput / Full throughput",
-            "Split-Durchsatz / Full-Durchsatz"
-          ],
-          [
-            "YOLO11l",
-            "YOLO11l"
-          ],
-          [
-            "YOLO26m",
-            "YOLO26m"
-          ],
-          [
-            "YOLO26s",
-            "YOLO26s"
-          ],
-          [
-            "YOLOv7",
-            "YOLOv7"
-          ]
-        ],
-        "untranslated": []
-      },
-      "split/publications/mlsys-r22/figures/quality_generic_selection_loss": {
-        "labels": [
-          [
-            "0",
-            "0"
-          ],
-          [
-            "20",
-            "20"
-          ],
-          [
-            "40",
-            "40"
-          ],
-          [
-            "60",
-            "60"
-          ],
-          [
-            "80",
-            "80"
-          ],
-          [
-            "DeepX",
-            "DeepX"
-          ],
-          [
-            "H10",
-            "H10"
-          ],
-          [
-            "H8",
-            "H8"
-          ],
-          [
-            "MobileNetV3-L",
-            "MobileNetV3-L"
-          ],
-          [
-            "Native throughput lost (%)",
-            "Native-Durchsatzverlust (%)"
-          ],
-          [
-            "RegNet-X",
-            "RegNet-X"
-          ],
-          [
-            "ResNet-50",
-            "ResNet-50"
-          ],
-          [
-            "YOLO11l",
-            "YOLO11l"
-          ],
-          [
-            "YOLO26m",
-            "YOLO26m"
-          ],
-          [
-            "YOLO26s",
-            "YOLO26s"
-          ],
-          [
-            "YOLOv7",
-            "YOLOv7"
-          ],
-          [
-            "−20",
-            "−20"
-          ]
-        ],
-        "untranslated": []
-      },
-      "split/publications/mlsys-r22/figures/resnet_h8_energy_current": {
-        "labels": [
-          [
-            "0",
-            "0"
-          ],
-          [
-            "100",
-            "100"
-          ],
-          [
-            "120",
-            "120"
-          ],
-          [
-            "140",
-            "140"
-          ],
-          [
-            "20",
-            "20"
-          ],
-          [
-            "200",
-            "200"
-          ],
-          [
-            "300",
-            "300"
-          ],
-          [
-            "40",
-            "40"
-          ],
-          [
-            "400",
-            "400"
-          ],
-          [
-            "500",
-            "500"
-          ],
-          [
-            "60",
-            "60"
-          ],
-          [
-            "600",
-            "600"
-          ],
-          [
-            "700",
-            "700"
-          ],
-          [
-            "80",
-            "80"
-          ],
-          [
-            "H8 Full",
-            "H8 Full"
-          ],
-          [
-            "Native splits",
-            "Native-Splits"
-          ],
-          [
-            "System energy (mJ/image)",
-            "Systemenergie (mJ/Bild)"
-          ],
-          [
-            "TensorRT Full",
-            "TensorRT Full"
-          ],
-          [
-            "Throughput (FPS)",
-            "Durchsatz (FPS)"
-          ],
-          [
-            "b038",
-            "b038"
-          ],
-          [
-            "b060",
-            "b060"
-          ]
-        ],
-        "untranslated": []
-      },
-      "split/publications/mlsys-r22/figures/selector_loss_heatmap": {
-        "labels": [
-          [
-            "0",
-            "0"
-          ],
-          [
-            "0.0",
-            "0.0"
-          ],
-          [
-            "0.7",
-            "0.7"
-          ],
-          [
-            "0.8",
-            "0.8"
-          ],
-          [
-            "1.2",
-            "1.2"
-          ],
-          [
-            "1.6",
-            "1.6"
-          ],
-          [
-            "1.9",
-            "1.9"
-          ],
-          [
-            "12.8",
-            "12.8"
-          ],
-          [
-            "13.3",
-            "13.3"
-          ],
-          [
-            "13.8",
-            "13.8"
-          ],
-          [
-            "13.9",
-            "13.9"
-          ],
-          [
-            "14.9",
-            "14.9"
-          ],
-          [
-            "16.5",
-            "16.5"
-          ],
-          [
-            "17.3",
-            "17.3"
-          ],
-          [
-            "17.8",
-            "17.8"
-          ],
-          [
-            "2.8",
-            "2.8"
-          ],
-          [
-            "20",
-            "20"
-          ],
-          [
-            "20.0",
-            "20.0"
-          ],
-          [
-            "20.5",
-            "20.5"
-          ],
-          [
-            "22.8",
-            "22.8"
-          ],
-          [
-            "23.2",
-            "23.2"
-          ],
-          [
-            "23.7",
-            "23.7"
-          ],
-          [
-            "28.9",
-            "28.9"
-          ],
-          [
-            "29.1",
-            "29.1"
-          ],
-          [
-            "3.8",
-            "3.8"
-          ],
-          [
-            "31.9",
-            "31.9"
-          ],
-          [
-            "37.3",
-            "37.3"
-          ],
-          [
-            "40",
-            "40"
-          ],
-          [
-            "40.0",
-            "40.0"
-          ],
-          [
-            "41.4",
-            "41.4"
-          ],
-          [
-            "42.1",
-            "42.1"
-          ],
-          [
-            "45.0",
-            "45.0"
-          ],
-          [
-            "45.5",
-            "45.5"
-          ],
-          [
-            "46.0",
-            "46.0"
-          ],
-          [
-            "50.8",
-            "50.8"
-          ],
-          [
-            "52.1",
-            "52.1"
-          ],
-          [
-            "57.5",
-            "57.5"
-          ],
-          [
-            "60",
-            "60"
-          ],
-          [
-            "66.6",
-            "66.6"
-          ],
-          [
-            "68.6",
-            "68.6"
-          ],
-          [
-            "7.7",
-            "7.7"
-          ],
-          [
-            "70.6",
-            "70.6"
-          ],
-          [
-            "75.1",
-            "75.1"
-          ],
-          [
-            "75.8",
-            "75.8"
-          ],
-          [
-            "77.7",
-            "77.7"
-          ],
-          [
-            "8.0",
-            "8.0"
-          ],
-          [
-            "80",
-            "80"
-          ],
-          [
-            "88.5",
-            "88.5"
-          ],
-          [
-            "9.3",
-            "9.3"
-          ],
-          [
-            "Cut\npayload\n6/21 hits",
-            "Schnitt\nGrenztensordaten\n6/21 Treffer"
-          ],
-          [
-            "Cycle\n(no handover)\n6/21 hits",
-            "Cycle\n(ohne Übergabe)\n6/21 Treffer"
-          ],
-          [
-            "DeepX  (17)",
-            "DeepX  (17)"
-          ],
-          [
-            "DeepX  (19)",
-            "DeepX  (19)"
-          ],
-          [
-            "DeepX  (20)",
-            "DeepX  (20)"
-          ],
-          [
-            "DeepX  (3)",
-            "DeepX  (3)"
-          ],
-          [
-            "Generic\ncompletion\n11/21 hits",
-            "Generic\nAufgabenabschluss\n11/21 Treffer"
-          ],
-          [
-            "H10  (17)",
-            "H10  (17)"
-          ],
-          [
-            "H10  (19)",
-            "H10  (19)"
-          ],
-          [
-            "H10  (20)",
-            "H10  (20)"
-          ],
-          [
-            "H10  (3)",
-            "H10  (3)"
-          ],
-          [
-            "H8  (17)",
-            "H8  (17)"
-          ],
-          [
-            "H8  (19)",
-            "H8  (19)"
-          ],
-          [
-            "H8  (20)",
-            "H8  (20)"
-          ],
-          [
-            "H8  (3)",
-            "H8  (3)"
-          ],
-          [
-            "HW fit\n(H10)\n6/21 hits",
-            "Hardwarebewertung\n(H10)\n6/21 Treffer"
-          ],
-          [
-            "MobileNetV3-L",
-            "MobileNetV3-L"
-          ],
-          [
-            "Native throughput loss (%)",
-            "Native-Durchsatzverlust (%)"
-          ],
-          [
-            "RegNet-X",
-            "RegNet-X"
-          ],
-          [
-            "ResNet-50",
-            "ResNet-50"
-          ],
-          [
-            "Stored\nstream rate\n7/21 hits",
-            "Gespeichert\nStream-Durchsatz\n7/21 Treffer"
-          ],
-          [
-            "Weighted\nscore\n6/21 hits",
-            "Weighted\nScore\n6/21 Treffer"
-          ],
-          [
-            "YOLO11l",
-            "YOLO11l"
-          ],
-          [
-            "YOLO26m",
-            "YOLO26m"
-          ],
-          [
-            "YOLO26s",
-            "YOLO26s"
-          ],
-          [
-            "YOLOv7",
-            "YOLOv7"
-          ]
-        ],
-        "untranslated": []
-      },
-      "split/publications/mlsys-r22/figures/system_overview": {
-        "labels": [
-          [
-            "1 tensor",
-            "1 Tensor"
-          ],
-          [
-            "Accelerator prefix",
-            "Präfix auf dem Beschleuniger"
-          ],
-          [
-            "Common runtime",
-            "Gemeinsame Laufzeitimplementierung"
-          ],
-          [
-            "GPU suffix",
-            "Suffix auf der GPU"
-          ],
-          [
-            "Generic",
-            "Generic"
-          ],
-          [
-            "Generic also supports multi-tensor boundaries.",
-            "Generic unterstützt auch Grenzen mit mehreren Tensoren."
-          ],
-          [
-            "Input",
-            "Eingabe"
-          ],
-          [
-            "Model- and backend-specific runtime",
-            "Modell- und backendspezifische Implementierung"
-          ],
-          [
-            "Native",
-            "Native"
-          ],
-          [
-            "Native uses one input to the GPU suffix.",
-            "Native verwendet einen Eingang zum GPU-Suffix."
-          ],
-          [
-            "Paired comparison: same graph and cut",
-            "Paarweiser Vergleich: gleicher Graph und Schnitt"
-          ],
-          [
-            "Task\ncompletion",
-            "Aufgaben-\nabschluss"
-          ]
-        ],
-        "untranslated": []
-      },
-      "split/publications/mlsys-r22/figures/yolov7_h8_case": {
-        "labels": [
-          [
-            "% · higher is better",
-            "% · höher ist besser"
-          ],
-          [
-            "(a) Throughput",
-            "(a) Durchsatz"
-          ],
-          [
-            "(b) System energy",
-            "(b) Systemenergie"
-          ],
-          [
-            "(c) COCO AP$_{50:95}$",
-            "(c) COCO AP$_{50:95}$"
-          ],
-          [
-            "0",
-            "0"
-          ],
-          [
-            "113",
-            "113"
-          ],
-          [
-            "120",
-            "120"
-          ],
-          [
-            "20",
-            "20"
-          ],
-          [
-            "200",
-            "200"
-          ],
-          [
-            "32",
-            "32"
-          ],
-          [
-            "330.14",
-            "330.14"
-          ],
-          [
-            "40",
-            "40"
-          ],
-          [
-            "40.78",
-            "40.78"
-          ],
-          [
-            "400",
-            "400"
-          ],
-          [
-            "45.74",
-            "45.74"
-          ],
-          [
-            "46.02",
-            "46.02"
-          ],
-          [
-            "53",
-            "53"
-          ],
-          [
-            "549.84",
-            "549.84"
-          ],
-          [
-            "598.41",
-            "598.41"
-          ],
-          [
-            "600",
-            "600"
-          ],
-          [
-            "80",
-            "80"
-          ],
-          [
-            "FPS · higher is better",
-            "FPS · höher ist besser"
-          ],
-          [
-            "Hailo8\nFull",
-            "Hailo8 Full"
-          ],
-          [
-            "Split\nb066",
-            "Split b066"
-          ],
-          [
-            "TensorRT\nFull",
-            "TensorRT Full"
-          ],
-          [
-            "mJ/image · lower is better",
-            "mJ/Bild · niedriger ist besser"
           ]
         ],
         "untranslated": []
@@ -5005,16 +5065,16 @@
       "split/publications/mlsys-r30/figures/fastest_split_baseline_comparison": {
         "labels": [
           [
-            "0.84",
-            "0.84"
-          ],
-          [
             "0×",
             "0×"
           ],
           [
             "1.06",
             "1.06"
+          ],
+          [
+            "1.10",
+            "1.10"
           ],
           [
             "1.23 / 1.24",
@@ -5027,10 +5087,6 @@
           [
             "1.35",
             "1.35"
-          ],
-          [
-            "1.36",
-            "1.36"
           ],
           [
             "1.68",
@@ -8774,54 +8830,54 @@
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "fastest_split_baselines.tex",
-            "source_sha256": "040fc4355de8445d458bb7e2b355dce34a04fda926bf5ea8b75d74344e9b53fa",
+            "source_sha256": "c220938b8e7143c2e7d7ba08d977403a18c445bd8d5c01a23fbeea203e6d9f8e",
             "target": "fastest_split_baselines.tex",
-            "target_sha256": "174db966ac9659aa266f0aa2abda195517201142d9d843266cb9edac85a85fc5"
+            "target_sha256": "dcd3ed9eae443f6d70b0be18bf0360fe89650e6b29ddb222af787709a23542fa"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "fastest_split_baselines.md",
-            "source_sha256": "7ed07544101b201952a6ae3f1313afb612a6af8845cf45812261b03ace7bda46",
+            "source_sha256": "973a9d61e29131fb36db3990f0702e11a43232a9f073bbbe99a2782f04289867",
             "target": "fastest_split_baselines.md",
-            "target_sha256": "2db26a64bc9cdf969e332ce684791d01d2657f96cbcfdf9c92d7371516809b11"
+            "target_sha256": "2605a5a6fd2499e1609f081bb893ad68cabc44454d98e84309e31a37ab7f7cc1"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "model_setup_optima.tex",
-            "source_sha256": "896c0f5f6642f8af782905ca33e9cba24fc32e73f134cc12c37d6dedbf9b14ff",
+            "source_sha256": "fb3a9d7de69cc7d5567312665423ecdd36b0856fe573c961acc10c986fb71757",
             "target": "model_setup_optima.tex",
-            "target_sha256": "274d2e212dec06b738e33c1ab05a9bbc66697d025a93f52914794097bd4d280b"
+            "target_sha256": "1e4280393a841d93c88f1574be735e5b7ba2869b9edaf8bdd94481373b85b2f2"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "model_setup_optima.md",
-            "source_sha256": "2b86b56c2b6e1606fcc6c9a8aec2e8be531555e1f6dd3719a3c39af8ec64377f",
+            "source_sha256": "fa76ca0dc80763b71c3c7c3680feac81164f743139ae7dfafd8a46c62e0536f3",
             "target": "model_setup_optima.md",
-            "target_sha256": "279138088b9aa249c2fe1f132d1ce8de0c8a83f2415d8f2a5676ddf4a80bbc68"
+            "target_sha256": "e788f0dfdcf9958672f67bbfda49eb72ce9de56a17769aa0a740cbb15a6d86f8"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "native_generic_groups.tex",
-            "source_sha256": "1c4739c3a0dac951becd2efc87f1eeef2271aa5f6bfcf41265da840abef3fccc",
+            "source_sha256": "aa1392067ab588696924a9e669a1c775fcd7676ba0b6ef689182fbe2c15009f9",
             "target": "native_generic_groups.tex",
-            "target_sha256": "0fbd90d70e48c2c26b3d778136cb9b89a6182c3ad54a5aa0fe1566e3e03d191a"
+            "target_sha256": "b26fe5c17443b95f35005411f5de917b49f6608ce0c4b1d13eff915a48a0e4f1"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "native_generic_groups.md",
-            "source_sha256": "8c576216314098d4e025db328fc1de37e18fb95854895be4b349db17a010fe3c",
+            "source_sha256": "f15f811e77e4601bf4440e8152fc1b7c49bcae8020e72efaf0f3d2d68b53b0be",
             "target": "native_generic_groups.md",
-            "target_sha256": "378841501006a854508918233838dc2800e42056a37745aa48f19ada3e515aaf"
+            "target_sha256": "a1f95dbad61e10828b3a3e730217bff82c3b1d6cdbedb3533012b865617959a4"
           },
           {
             "compatibility_definitions": {},
@@ -8846,18 +8902,18 @@
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "table3_fastest_deployments.tex",
-            "source_sha256": "5229a1e828acc65a2e63f3eadc2ce5cc2b524f242634ebf22ad0a46011977443",
+            "source_sha256": "d0ba34fd9ed743e12d209489ebedcba84cadd7468caea02636e9ae08ee5d70d1",
             "target": "table3_fastest_deployments.tex",
-            "target_sha256": "b7c85d3977586b06f536bd4000a26f8c07f8460d8053928102c778406263de41"
+            "target_sha256": "f977f136e96a87bad8c1afcfd8a309d034343ab3474688dda675a721285aa5f2"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "table3_fastest_deployments.md",
-            "source_sha256": "0aabedc06c23989d3633ab8bbd4188c56a4eb3b1dd0bd1993291bb5e00e90a4e",
+            "source_sha256": "52cc1f1a5758bea0c39a281abcef6798a44d29f981e79b980e10194fa6fc6adc",
             "target": "table3_fastest_deployments.md",
-            "target_sha256": "f670c3411dc706688963d5ee36375360fb0f32bd2b364f60ccfec6b24b6029da"
+            "target_sha256": "ce6736948f5b7d4883fce9450f37d28cd0ce84fd41ed5a209cdbab87376fd82f"
           },
           {
             "compatibility_definitions": {},
@@ -9406,36 +9462,36 @@
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "best_cases_table.tex",
-            "source_sha256": "ce1bd01e5b95e164aa26e35886a064fe85e5b8505d9c5d6bcfb8caa90802ad08",
+            "source_sha256": "cbe193838111755ef9015cafaaf735ff87d4d448ae9481fa1d9fe70d8eafe472",
             "target": "best_cases_table.tex",
-            "target_sha256": "042da3db581a9b608ef6e2038985ac2e0534872d64bd3bc05f17672fac6a478b"
+            "target_sha256": "034df3907a8dbd078eb551b546a832ea496fd9980e0c3192c5adee0bf3d4fac3"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "best_cases_table.md",
-            "source_sha256": "f4eb6a0dfa4f0aeb5b78ebabb4d4b2cb5d4d9aabae78aa8e4e84bfc39d922cef",
+            "source_sha256": "b42ca1fb2aa1450cde7e9a695c9d57ce2f1c61ab6f36f748460c6a4bbc3ec6dc",
             "target": "best_cases_table.md",
-            "target_sha256": "18034a690f5d7a3983c03f1302b482ce3da7c32b7d1bb0260cdfb04e29193708"
+            "target_sha256": "cba8b30b1646bbb6adefba5de74d789be09be4ddbf14cd7a0b60d5c43139284e"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "cohorts.tex",
-            "source_sha256": "98c4ef368ff2be62e06259976721fe10fec78fc3282486506c633815142e06df",
+            "source_sha256": "59766008fe5a1818c5c513eada832d9a6a4c9c8aa6ac3489898c169854167ef6",
             "target": "cohorts.tex",
-            "target_sha256": "0ad3902a25b9acf1a0821f534712618f65dfd364f7200c99cbc9f8d7c46377df"
+            "target_sha256": "e785a1e80d0c228f7e2e3baf06d2e5beb490cc1bbaa5f0d06fbbfd4d4d11dafa"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "cohorts.md",
-            "source_sha256": "6351959233859e54b250f9d7c85193ae31afd6e08b277d26b7489c692f4ba8b7",
+            "source_sha256": "1faaf74401a46184c07f8d7409c5ff7d5fd7cf6dbcfd3b39e4039f629de5df88",
             "target": "cohorts.md",
-            "target_sha256": "da40d0863fc66f450de101127ef7fc2ddb90cbb37d3f17c8793f9e6d4562aade"
+            "target_sha256": "52dcc81bcdd4aa8cbcf5260ba0eb18fa373388854c02c081a77da1c116d5891d"
           },
           {
             "compatibility_definitions": {},
@@ -9460,18 +9516,18 @@
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "current_quality_highlights.tex",
-            "source_sha256": "b5a014aabddd6dcff760ab99e160c6d71fbd7219750c137658ca94329e0b38b4",
+            "source_sha256": "6ea66d2a8f6c20120a4746928cd94eb9e9432ec0dd624d4435b157f01ef45bc5",
             "target": "current_quality_highlights.tex",
-            "target_sha256": "66508e022b05938a65d060fd3a816954f8b658529545f2621a2157553bd548d6"
+            "target_sha256": "0ff044525e4529522529a8b6800e1d1f3c7fb5fe791848f3542347a02ab9a763"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "current_quality_highlights.md",
-            "source_sha256": "d67a4920554aa6dff1da373764d5ac7394ae2e45c99d8bb421d906d1de6f0622",
+            "source_sha256": "a4b722e9465eedfdd63b26464d211462552f572cfeabd58205f2ef2baae426a1",
             "target": "current_quality_highlights.md",
-            "target_sha256": "7173ef4fb4b713034341ae78459f484c137598720af8ea30e13b08742765e9dd"
+            "target_sha256": "6f0b24ce2c64e92b0acc801c967757f4c69c15d4e787570efa9bcaf3956497e2"
           },
           {
             "compatibility_definitions": {},
@@ -9532,18 +9588,18 @@
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "fastest_split_baselines.tex",
-            "source_sha256": "31566f87d46c52355ac468389c4e6b1b40ec4f231df14ab38d9bd8a5edd0811d",
+            "source_sha256": "dd54a2cfb4098a742c45d8d678b86874dd057f021e96a42fb2304c7ca6641fa6",
             "target": "fastest_split_baselines.tex",
-            "target_sha256": "47180d0826d3e2122561b691d5a6631f0fc0eb57efe8292aa36a9f4d6c282719"
+            "target_sha256": "7301da6a051073dccf77228ce0f17f04b81670ddb37c58bc6b17192ae03279de"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "fastest_split_baselines.md",
-            "source_sha256": "19bf07c1f2fc1e18934b6f4a4ce710e8f5638347967a6b07263bf9bccdb15c48",
+            "source_sha256": "d61b5bce9a213930183b78f378c3c125263f0ada46695e590c1dcb431ccdc978",
             "target": "fastest_split_baselines.md",
-            "target_sha256": "d0c6e2396f15a526eb8917f6ffab5657db5c797ced19ec26308d9aa9554e1e14"
+            "target_sha256": "bcb9631a60e047bfee95a967033a6e4d63ed117109b6ba60a97b9d4add588a41"
           },
           {
             "compatibility_definitions": {},
@@ -9586,54 +9642,54 @@
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "r14_budget_details.tex",
-            "source_sha256": "9d462e5b836f72cdb48e287be70952fc71274e28beb905cd4e33b6f0ce0a9e4c",
+            "source_sha256": "a8960e04a50097c3817bc22c7194cc31d26b20e19119a39f50cd4b26a8ed07bb",
             "target": "r14_budget_details.tex",
-            "target_sha256": "778d2734cc092d5d7d49bec1ec8d34b10cce3923d263911206ce38153eb52154"
+            "target_sha256": "3f5788ef2692a74d418add7b3f19b067287ad59157b319c8551e759f9e0b7f18"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "r14_budget_details.md",
-            "source_sha256": "3bc6c8aee73c5b39a4aee87d19a4fcbb7b08fb06fa816808bf8331d31ea0c1f3",
+            "source_sha256": "2677d2f7954d1387b3c4a0c4ab7cc6c78b6264115d5d515d016dd3d0f52a2f5d",
             "target": "r14_budget_details.md",
-            "target_sha256": "0e3326a86c1a0824db1c320d6df016379a5b7511ad8abea45cfefba4149bb1ce"
+            "target_sha256": "7b1006a1341dafc9658859b0fc49880aa24b9be39e0ecac2141c9b1c0c810679"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "r14_quality_advantages.tex",
-            "source_sha256": "138f82ba1665ddb46688a1ec5180c8e12d28acd972fdb9c89343a73fe0828cce",
+            "source_sha256": "0e37a84f4a6b1fcd82ea1798fe06183bb9f013b95ba965cd286403f646a81858",
             "target": "r14_quality_advantages.tex",
-            "target_sha256": "7db4ecd210ec35437cac50e63e4c6495a90d86d799b47885976b908ee651358b"
+            "target_sha256": "bd5a55e8d2e336397a662de32efc4f662e1dddeea5146c86d16647ca6be8cce6"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "r14_quality_advantages.md",
-            "source_sha256": "cc55525ea1c27f41d96790021ebd08b44abcfbed4da61c1156e7f301144cdbe0",
+            "source_sha256": "43f1c99fdac6240183491742a36e5d4c96bdf7bf7ff19b27d10a101953f6e502",
             "target": "r14_quality_advantages.md",
-            "target_sha256": "df13455770e8bfb5452e7fc76fbda14cca1fd8e6cfd9397549b63c9af3309fac"
+            "target_sha256": "3f31e745fba8dd1f20bdb0f8318befad0b7b4cacad35fb9ef7a2f0b8f1edc6b8"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "r14_winner_quality.tex",
-            "source_sha256": "3bd1af1ba7b62655c2786a2524e7008d8052571070912d16529dd1c3f69a84db",
+            "source_sha256": "37ac4d7721910feecb43d258f22315349edd8bb0dbba3ec55c6d7af9cd95172b",
             "target": "r14_winner_quality.tex",
-            "target_sha256": "a6341bfea129ddc99bee165604f9ae0e67d0ad9ce2a9132c533adeae6f3c1764"
+            "target_sha256": "8b29d1634152258a75416866c1aac4243e46e098d24de65ef235b9aa50dcf070"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "r14_winner_quality.md",
-            "source_sha256": "a1fc9a20835c626a3118ab8694bf5c73fe008c5e70f5136ae5aa3e0f89d254b1",
+            "source_sha256": "c254dd5939fca814c37e109d77068d7d75d51cd9489042568ddf66bc37fc4ed8",
             "target": "r14_winner_quality.md",
-            "target_sha256": "10b0e4d2f19b26ae37cbc72a6e697e852360a9f9c592f0304c12d7fea596852b"
+            "target_sha256": "f33390e9e9d92fbbd8cbc8020a48145829fa3552099a7425f97ef3d3edd6c585"
           },
           {
             "compatibility_definitions": {},
@@ -9766,18 +9822,18 @@
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "r16_winner_energy_details.tex",
-            "source_sha256": "56de43231cc5ff3157f478eb6e29653f5d8b01d1d0bc92c3dcca2c27e99e3427",
+            "source_sha256": "c1bbb0a3786850b5e39a19bc1aa47db3c60400684f4ae1cddabc748732e73f7a",
             "target": "r16_winner_energy_details.tex",
-            "target_sha256": "ecfe119c7bc30fdfb6d412d22905deb4d34758316308d0a312547d7d5c293289"
+            "target_sha256": "54030ae4470e1d7058cafdf73411f0fc6cab4593e393cb41d10f445298310bf1"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "r16_winner_energy_details.md",
-            "source_sha256": "871ef49ca4c153037d23a6164ea817096696e1a82d4609811a3bd980478f69e2",
+            "source_sha256": "ae59b2e72278951cfe3cf58c57e32e2e35441a8d880e6fc3494f401d7ec66a57",
             "target": "r16_winner_energy_details.md",
-            "target_sha256": "3b51e24fc7d78bfda023adf96a0f6803bb3417fb421338971ec038ad7d26e981"
+            "target_sha256": "134ad09251df2210404251f0cb73bee958f9b256a81a6d012dbaa71876d6ca4d"
           },
           {
             "compatibility_definitions": {},
@@ -9802,18 +9858,18 @@
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "r21_winner_repeat_ranges.tex",
-            "source_sha256": "19b9c9fb7f4d7aa86116c10645836791e2f1feeeb89887b83d696796e64434aa",
+            "source_sha256": "d8f1c17bfff860afa1fc95fdb01ad284815397d2faa0cdd7157328ab855daf08",
             "target": "r21_winner_repeat_ranges.tex",
-            "target_sha256": "9bb87e4e8ba1718e995469c0eb69b471e8442d3a9a2005d382a87234ec52259d"
+            "target_sha256": "db2fc9122c6f4e3a4acf95ae941f499d7f01a6ed54b8491ddec98d12e508644b"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "r21_winner_repeat_ranges.md",
-            "source_sha256": "e8e330bd127f3bb37d1198853ebf3775b2756a75f73345df38d2c1844146ebfb",
+            "source_sha256": "3701312919102ccf57fc89cc79576b8f4a24f9005ebd043c6c30beada91a23fa",
             "target": "r21_winner_repeat_ranges.md",
-            "target_sha256": "719f2b13a7b3665eb500871b92a67979ff8f8d310a938780a88528c30ed649a8"
+            "target_sha256": "3eea987c805cef2c7bcdccc2b6455a285c7b9cf3b75eee4ebbea1a346e96fb2e"
           },
           {
             "compatibility_definitions": {},
@@ -9928,18 +9984,18 @@
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "yolov7_completed_table.tex",
-            "source_sha256": "b0e324d9f0a91c091ab1d33312e8aecac4cbfa109222b87d00996cbdbc96969d",
+            "source_sha256": "ae33f7019b9c121d0c7938eb3b8ea83a21faead2e9b436c4fa9ea6e18350eb02",
             "target": "yolov7_completed_table.tex",
-            "target_sha256": "b050108855ae022554b15797d848a2ca8c01b3648785b53cb3b91cbe30a6200b"
+            "target_sha256": "5388d928885742dde21e553d17e8718ea5bed8dcf0d6c7b3cbc062fc8734cc5e"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "yolov7_completed_table.md",
-            "source_sha256": "a6ec800225f73f54a9f33dd5333549a95571c0d0e401ee03576164c666af1892",
+            "source_sha256": "af23278552419331ce57dd5cd5c289184a75bfc786ab6bd0fce299481ef1855f",
             "target": "yolov7_completed_table.md",
-            "target_sha256": "852247cd9cd749bcad7de74d40da7f440273898c512ee8bd0a035874ceb800ac"
+            "target_sha256": "ff1106822b3f9ee91e47f400b242f707de8bb6b0fc2c091765adbb0399518e05"
           }
         ],
         "untranslated": []

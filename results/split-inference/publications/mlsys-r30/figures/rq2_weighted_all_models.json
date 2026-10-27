@@ -1,460 +1,525 @@
 {
-  "budget_protocol": "For every k, keep all groups equally weighted and test min(k,n_group). Detector groups have n=3 and remain at zero loss for k>=3.",
-  "caption": "Native throughput loss after testing up to k ranked cuts per model/device group. All 21 groups receive equal weight at every budget. A group with fewer than k candidates tests all its candidates. Weighted (default) uses (1, 3, 0.2). Weighted (fit on all models) is a pooled in-sample result. Weighted (model held-out) fits six models and evaluates the seventh on all three devices. Calibrated Generic is omitted because its frozen predictions cover classifiers only.",
-  "default_weights": {
-    "w_comm": 1.0,
-    "w_imb": 3.0,
-    "w_tensors": 0.2
-  },
-  "held_out_status": "Leave one entire model out, including all three devices. Each displayed group uses only its held-out prediction.",
-  "kind": "measurement",
+  "caption": "Native throughput loss for 187 quality-admissible cuts in 21 model-device groups, with groups weighted equally. At budget k, we test the first min(k,n) ranked cuts and compare their highest Native throughput with the best measured Native cut in that group.",
   "method_labels": {
     "bytes": "Bytes",
     "generic": "Generic",
-    "weighted_cv": "Weighted (model held-out)",
+    "weighted_cv": "Weighted (frozen model held-out)",
     "weighted_default": "Weighted (default)",
-    "weighted_pooled": "Weighted (fit on all models)"
+    "weighted_pooled": "Weighted (frozen shared)"
   },
-  "operation_feature_contract": "analytic-operation-proxy-r29-extended-v1",
-  "optimized_status": "Retrospective in-sample optimization on every evaluated model/device group.",
-  "optimized_weights": {
-    "w_comm": 1.0,
-    "w_imb": 0.15799266978091375,
-    "w_tensors": 0.2
-  },
-  "schema": "mlsys-r30-weighted-figure-v1",
-  "scope": {
-    "all_source_pairs": 204,
-    "all_source_quality_eligible_pairs": 187,
-    "classifier_pairs": 151,
-    "detector_pairs": 36,
-    "evaluated_quality_pairs": 187,
-    "missing_models_due_incomplete_features": [],
-    "model_device_groups": 21,
-    "models": [
-      "mobilenet_v3_large",
-      "regnet_x_1_6gf",
-      "resnet50",
-      "yolo11l",
-      "yolo26m",
-      "yolo26s",
-      "yolov7_paper"
-    ]
-  },
+  "schema": "rq2-native-scope-weighted-v1",
+  "scope": "All original artifact-bound measured Native cut identities; current normal Native observations replace only their source-bound archived predecessors. RQ3 membership remains an annotation; no imputation or new Native cuts.",
   "series": {
     "bytes": [
       {
         "k": 1,
+        "mean_loss_n_ge_2_pct": 17.226542799168698,
         "mean_loss_pct": 17.226542799168698
       },
       {
         "k": 2,
-        "mean_loss_pct": 13.263532061914768
+        "mean_loss_n_ge_2_pct": 13.263532061914766,
+        "mean_loss_pct": 13.263532061914766
       },
       {
         "k": 3,
+        "mean_loss_n_ge_2_pct": 9.320355445001738,
         "mean_loss_pct": 9.320355445001738
       },
       {
         "k": 4,
+        "mean_loss_n_ge_2_pct": 7.021127873523854,
         "mean_loss_pct": 7.021127873523854
       },
       {
         "k": 5,
+        "mean_loss_n_ge_2_pct": 3.798185625435318,
         "mean_loss_pct": 3.798185625435318
       },
       {
         "k": 6,
+        "mean_loss_n_ge_2_pct": 2.0065375593344235,
         "mean_loss_pct": 2.0065375593344235
       },
       {
         "k": 7,
+        "mean_loss_n_ge_2_pct": 1.806104393603521,
         "mean_loss_pct": 1.806104393603521
       },
       {
         "k": 8,
+        "mean_loss_n_ge_2_pct": 1.806104393603521,
         "mean_loss_pct": 1.806104393603521
       },
       {
         "k": 9,
-        "mean_loss_pct": 1.4803332837157352
+        "mean_loss_n_ge_2_pct": 1.480333283715736,
+        "mean_loss_pct": 1.480333283715736
       },
       {
         "k": 10,
+        "mean_loss_n_ge_2_pct": 1.3492200381238724,
         "mean_loss_pct": 1.3492200381238724
       },
       {
         "k": 11,
-        "mean_loss_pct": 0.4173007670784313
+        "mean_loss_n_ge_2_pct": 0.41730076707843233,
+        "mean_loss_pct": 0.41730076707843233
       },
       {
         "k": 12,
+        "mean_loss_n_ge_2_pct": 0.09229258286492581,
         "mean_loss_pct": 0.09229258286492581
       },
       {
         "k": 13,
+        "mean_loss_n_ge_2_pct": 0.006463021353029336,
         "mean_loss_pct": 0.006463021353029336
       },
       {
         "k": 14,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 15,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 16,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 17,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 18,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 19,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 20,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       }
     ],
     "generic": [
       {
         "k": 1,
-        "mean_loss_pct": 15.077128973324953
+        "mean_loss_n_ge_2_pct": 1.3467521152436048,
+        "mean_loss_pct": 1.3467521152436048
       },
       {
         "k": 2,
-        "mean_loss_pct": 10.84438501265191
+        "mean_loss_n_ge_2_pct": 0.2607774355235832,
+        "mean_loss_pct": 0.2607774355235832
       },
       {
         "k": 3,
-        "mean_loss_pct": 10.18637400727791
+        "mean_loss_n_ge_2_pct": 0.2607774355235832,
+        "mean_loss_pct": 0.2607774355235832
       },
       {
         "k": 4,
-        "mean_loss_pct": 9.73814989272105
+        "mean_loss_n_ge_2_pct": 0.0,
+        "mean_loss_pct": 0.0
       },
       {
         "k": 5,
-        "mean_loss_pct": 8.763314163809524
+        "mean_loss_n_ge_2_pct": 0.0,
+        "mean_loss_pct": 0.0
       },
       {
         "k": 6,
-        "mean_loss_pct": 8.130010473007053
+        "mean_loss_n_ge_2_pct": 0.0,
+        "mean_loss_pct": 0.0
       },
       {
         "k": 7,
-        "mean_loss_pct": 7.281853890205785
+        "mean_loss_n_ge_2_pct": 0.0,
+        "mean_loss_pct": 0.0
       },
       {
         "k": 8,
-        "mean_loss_pct": 6.457429091520407
+        "mean_loss_n_ge_2_pct": 0.0,
+        "mean_loss_pct": 0.0
       },
       {
         "k": 9,
-        "mean_loss_pct": 6.133807059759467
+        "mean_loss_n_ge_2_pct": 0.0,
+        "mean_loss_pct": 0.0
       },
       {
         "k": 10,
-        "mean_loss_pct": 6.002693814167604
+        "mean_loss_n_ge_2_pct": 0.0,
+        "mean_loss_pct": 0.0
       },
       {
         "k": 11,
-        "mean_loss_pct": 5.8914018365331415
+        "mean_loss_n_ge_2_pct": 0.0,
+        "mean_loss_pct": 0.0
       },
       {
         "k": 12,
-        "mean_loss_pct": 5.067793925325314
+        "mean_loss_n_ge_2_pct": 0.0,
+        "mean_loss_pct": 0.0
       },
       {
         "k": 13,
-        "mean_loss_pct": 3.9460661798007344
+        "mean_loss_n_ge_2_pct": 0.0,
+        "mean_loss_pct": 0.0
       },
       {
         "k": 14,
-        "mean_loss_pct": 3.3454669248978623
+        "mean_loss_n_ge_2_pct": 0.0,
+        "mean_loss_pct": 0.0
       },
       {
         "k": 15,
-        "mean_loss_pct": 2.9715565651201503
+        "mean_loss_n_ge_2_pct": 0.0,
+        "mean_loss_pct": 0.0
       },
       {
         "k": 16,
-        "mean_loss_pct": 1.5934465139851521
+        "mean_loss_n_ge_2_pct": 0.0,
+        "mean_loss_pct": 0.0
       },
       {
         "k": 17,
-        "mean_loss_pct": 0.9965580403706563
+        "mean_loss_n_ge_2_pct": 0.0,
+        "mean_loss_pct": 0.0
       },
       {
         "k": 18,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 19,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 20,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       }
     ],
     "weighted_cv": [
       {
         "k": 1,
+        "mean_loss_n_ge_2_pct": 18.767915133798745,
         "mean_loss_pct": 18.767915133798745
       },
       {
         "k": 2,
+        "mean_loss_n_ge_2_pct": 11.664138518616793,
         "mean_loss_pct": 11.664138518616793
       },
       {
         "k": 3,
+        "mean_loss_n_ge_2_pct": 11.341651572896938,
         "mean_loss_pct": 11.341651572896938
       },
       {
         "k": 4,
+        "mean_loss_n_ge_2_pct": 10.473864212290154,
         "mean_loss_pct": 10.473864212290154
       },
       {
         "k": 5,
+        "mean_loss_n_ge_2_pct": 4.899698159042557,
         "mean_loss_pct": 4.899698159042557
       },
       {
         "k": 6,
+        "mean_loss_n_ge_2_pct": 2.956797629292007,
         "mean_loss_pct": 2.956797629292007
       },
       {
         "k": 7,
+        "mean_loss_n_ge_2_pct": 2.930523149236076,
         "mean_loss_pct": 2.930523149236076
       },
       {
         "k": 8,
-        "mean_loss_pct": 2.6010022617192723
+        "mean_loss_n_ge_2_pct": 2.601002261719273,
+        "mean_loss_pct": 2.601002261719273
       },
       {
         "k": 9,
+        "mean_loss_n_ge_2_pct": 1.3492200381238724,
         "mean_loss_pct": 1.3492200381238724
       },
       {
         "k": 10,
-        "mean_loss_pct": 0.9849551142396612
+        "mean_loss_n_ge_2_pct": 0.9849551142396622,
+        "mean_loss_pct": 0.9849551142396622
       },
       {
         "k": 11,
+        "mean_loss_n_ge_2_pct": 0.2440515968155659,
         "mean_loss_pct": 0.2440515968155659
       },
       {
         "k": 12,
+        "mean_loss_n_ge_2_pct": 0.09229258286492581,
         "mean_loss_pct": 0.09229258286492581
       },
       {
         "k": 13,
+        "mean_loss_n_ge_2_pct": 0.09229258286492581,
         "mean_loss_pct": 0.09229258286492581
       },
       {
         "k": 14,
+        "mean_loss_n_ge_2_pct": 0.09229258286492581,
         "mean_loss_pct": 0.09229258286492581
       },
       {
         "k": 15,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 16,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 17,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 18,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 19,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 20,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       }
     ],
     "weighted_default": [
       {
         "k": 1,
+        "mean_loss_n_ge_2_pct": 15.73266038918571,
         "mean_loss_pct": 15.73266038918571
       },
       {
         "k": 2,
+        "mean_loss_n_ge_2_pct": 10.542100915249593,
         "mean_loss_pct": 10.542100915249593
       },
       {
         "k": 3,
+        "mean_loss_n_ge_2_pct": 10.014221592283993,
         "mean_loss_pct": 10.014221592283993
       },
       {
         "k": 4,
+        "mean_loss_n_ge_2_pct": 8.767383968294084,
         "mean_loss_pct": 8.767383968294084
       },
       {
         "k": 5,
+        "mean_loss_n_ge_2_pct": 7.3671314867793285,
         "mean_loss_pct": 7.3671314867793285
       },
       {
         "k": 6,
-        "mean_loss_pct": 6.666745068193654
+        "mean_loss_n_ge_2_pct": 6.666745068193655,
+        "mean_loss_pct": 6.666745068193655
       },
       {
         "k": 7,
+        "mean_loss_n_ge_2_pct": 6.570702707699711,
         "mean_loss_pct": 6.570702707699711
       },
       {
         "k": 8,
-        "mean_loss_pct": 6.082255259963039
+        "mean_loss_n_ge_2_pct": 6.082255259963038,
+        "mean_loss_pct": 6.082255259963038
       },
       {
         "k": 9,
+        "mean_loss_n_ge_2_pct": 5.481656005060167,
         "mean_loss_pct": 5.481656005060167
       },
       {
         "k": 10,
-        "mean_loss_pct": 5.105330570660042
+        "mean_loss_n_ge_2_pct": 5.105330570660044,
+        "mean_loss_pct": 5.105330570660044
       },
       {
         "k": 11,
-        "mean_loss_pct": 3.5096718834327345
+        "mean_loss_n_ge_2_pct": 3.509671883432735,
+        "mean_loss_pct": 3.509671883432735
       },
       {
         "k": 12,
-        "mean_loss_pct": 3.5096718834327345
+        "mean_loss_n_ge_2_pct": 3.509671883432735,
+        "mean_loss_pct": 3.509671883432735
       },
       {
         "k": 13,
+        "mean_loss_n_ge_2_pct": 2.208901080116366,
         "mean_loss_pct": 2.208901080116366
       },
       {
         "k": 14,
-        "mean_loss_pct": 2.1954005440458624
+        "mean_loss_n_ge_2_pct": 2.195400544045863,
+        "mean_loss_pct": 2.195400544045863
       },
       {
         "k": 15,
+        "mean_loss_n_ge_2_pct": 0.9965580403706563,
         "mean_loss_pct": 0.9965580403706563
       },
       {
         "k": 16,
+        "mean_loss_n_ge_2_pct": 0.670340242808652,
         "mean_loss_pct": 0.670340242808652
       },
       {
         "k": 17,
+        "mean_loss_n_ge_2_pct": 0.670340242808652,
         "mean_loss_pct": 0.670340242808652
       },
       {
         "k": 18,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 19,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 20,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       }
     ],
     "weighted_pooled": [
       {
         "k": 1,
-        "mean_loss_pct": 16.670899967822407
+        "mean_loss_n_ge_2_pct": 16.67089996782241,
+        "mean_loss_pct": 16.67089996782241
       },
       {
         "k": 2,
+        "mean_loss_n_ge_2_pct": 6.005063303066712,
         "mean_loss_pct": 6.005063303066712
       },
       {
         "k": 3,
+        "mean_loss_n_ge_2_pct": 5.084223371258263,
         "mean_loss_pct": 5.084223371258263
       },
       {
         "k": 4,
+        "mean_loss_n_ge_2_pct": 4.2029354745809755,
         "mean_loss_pct": 4.2029354745809755
       },
       {
         "k": 5,
+        "mean_loss_n_ge_2_pct": 2.956797629292007,
         "mean_loss_pct": 2.956797629292007
       },
       {
         "k": 6,
+        "mean_loss_n_ge_2_pct": 2.956797629292007,
         "mean_loss_pct": 2.956797629292007
       },
       {
         "k": 7,
+        "mean_loss_n_ge_2_pct": 2.930523149236076,
         "mean_loss_pct": 2.930523149236076
       },
       {
         "k": 8,
-        "mean_loss_pct": 2.6010022617192723
+        "mean_loss_n_ge_2_pct": 2.601002261719273,
+        "mean_loss_pct": 2.601002261719273
       },
       {
         "k": 9,
+        "mean_loss_n_ge_2_pct": 1.3492200381238724,
         "mean_loss_pct": 1.3492200381238724
       },
       {
         "k": 10,
-        "mean_loss_pct": 0.9849551142396612
+        "mean_loss_n_ge_2_pct": 0.9849551142396622,
+        "mean_loss_pct": 0.9849551142396622
       },
       {
         "k": 11,
+        "mean_loss_n_ge_2_pct": 0.2440515968155659,
         "mean_loss_pct": 0.2440515968155659
       },
       {
         "k": 12,
+        "mean_loss_n_ge_2_pct": 0.09229258286492581,
         "mean_loss_pct": 0.09229258286492581
       },
       {
         "k": 13,
+        "mean_loss_n_ge_2_pct": 0.09229258286492581,
         "mean_loss_pct": 0.09229258286492581
       },
       {
         "k": 14,
+        "mean_loss_n_ge_2_pct": 0.09229258286492581,
         "mean_loss_pct": 0.09229258286492581
       },
       {
         "k": 15,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 16,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 17,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 18,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 19,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       },
       {
         "k": 20,
+        "mean_loss_n_ge_2_pct": 0.0,
         "mean_loss_pct": 0.0
       }
     ]
   },
-  "source_sha256": {
-    "aggregate_curves.csv": "fbafa273eede4166fcb54dc6f9384f0b8923f27e43ebc8eeafc55b2bfa621140",
-    "summary.json": "15f1a2238c3346b96f46b98c90dc116c81ae0660e7efd7f59b7e5f584cad8220"
-  }
+  "source_sha256": "0ce131051506a8552ec7693dc7823ef7e1c506a4a3c0693ccea4780c43eade58"
 }

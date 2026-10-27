@@ -6,8 +6,88 @@
   "current_closure_category": "quality_eligible",
   "current_quality_status": "reference_close",
   "current_rq2_inclusion": {
-    "basis": "Reviewed executable, runtime and observed-input evidence.",
+    "basis": "New normally admitted Native observation with actual current input/completion binding.",
+    "current_native_binding": {
+      "archived_binding_sha256": "d4249fae34e3a4b339bd2597a28ebf594083e1c1988ea2f5a29c04f7cdd5d960",
+      "evidence_sha256": "1c9b9d127dd65565097b5e679c23bedae4e747db1d6577950782f7344b67bc47",
+      "generic_comparison": {
+        "completed_endpoint_contract_sha256": "5ecd41662f05438f7c1d0bf4d56f04938f57ed234dd87a46a2c45b84f1c63e0c",
+        "performance_source_sha256": "bbebd913183e81c32b508b2f7aa2f07f700e65eeaa43545fd211b0e584800d39",
+        "prepared_inputs_sha256": "0bd0f530dd401d77b085e0cd847c03cef94346395ff6e852a68f6e615c58b8cb",
+        "preprocessing_sha256": "411898b92628e2a769a2b8ea7aa35faff35373cfacb863c3ab34b243c105b70e"
+      },
+      "identity": {
+        "boundary_id": "sha256:7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d:topo:4edacaf7f82a71887260f33c05018ac82a149cfcfd8c33db03f12ffe42ea076d:b000009",
+        "completed_endpoint_contract_sha256": "5ecd41662f05438f7c1d0bf4d56f04938f57ed234dd87a46a2c45b84f1c63e0c",
+        "completion_contract_sha256": "2c26c1471f15885ee47a7cba6be4eb31811c57028d4ecd11e35711c7ffb81218",
+        "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+        "part1_sha256": "5bb4af0c18be516ece74eeb4958079e17661c43dca0deac136369a09ee153419",
+        "part2_engine_sha256": "bfe8d53a0a6e2cc95c758aa1da3371003bf381dda1dfe4ec8f3302059f2abab1",
+        "prepared_inputs_sha256": "0bd0f530dd401d77b085e0cd847c03cef94346395ff6e852a68f6e615c58b8cb",
+        "preprocessing_sha256": "411898b92628e2a769a2b8ea7aa35faff35373cfacb863c3ab34b243c105b70e"
+      },
+      "normal_admission": {
+        "accepted": {
+          "pointer": "/normal_row/native_split_final_portable_binding_valid",
+          "source": "h8_b009_native_fps_v3"
+        },
+        "checks": [
+          {
+            "actual": {
+              "pointer": "/normal_row/status",
+              "source": "h8_b009_native_fps_v3"
+            },
+            "expected": "ok"
+          },
+          {
+            "actual": {
+              "pointer": "/normal_row/ok",
+              "source": "h8_b009_native_fps_v3"
+            },
+            "expected": true
+          },
+          {
+            "actual": {
+              "pointer": "/normal_row/repetition_count_valid",
+              "source": "h8_b009_native_fps_v3"
+            },
+            "expected": 3
+          },
+          {
+            "actual": {
+              "pointer": "/normal_row/repetition_claim_identity_status",
+              "source": "h8_b009_native_fps_v3"
+            },
+            "expected": "exact"
+          },
+          {
+            "actual": {
+              "pointer": "/normal_row/native_split_final_portable_binding_valid",
+              "source": "h8_b009_native_fps_v3"
+            },
+            "expected": true
+          },
+          {
+            "actual": {
+              "pointer": "/normal_row/repetition_independence_verified",
+              "source": "h8_b009_native_fps_v3"
+            },
+            "expected": true
+          }
+        ],
+        "normal_api": "scripts/native_producer_final_report.py"
+      },
+      "normal_source_sha256": {
+        "H8_yolov7_b009_actual_N5000": "3f7cb9badd004d059f2f7708a9bdfc85106490ba22b690253d0f25daf4b7983c",
+        "H8_yolov7_b009_actual_native_energy": "e32df52639f49adabcd52b18b3c403bcf47af6ee03a2667281dc02a3f8dea48d",
+        "b009_current_generic": "a79e3496ade5f4ccd3b03b90378d70024529ccc5f53f17d820a788cf316d3917",
+        "h8_b009_native_fps_v3": "45edf85eb8c2e0482ff85984b32eb5c2f144d4e55fe39d40fc6af0aa4a1b582d"
+      },
+      "performance_source_sha256": "76df7a60e31bf4b5a500bd0949b0dc5f77df64ea11bb6b3a78506f0a2c3d97a4"
+    },
+    "current_recipe_binding_verified": true,
     "historical_full_recipe_binding_verified": false,
+    "historical_review_retained": true,
     "included": true,
     "review": "results/supplementary-studies/rq2-native-scope-20261027/inputs/PAIRING_REVIEW_b009.json"
   },

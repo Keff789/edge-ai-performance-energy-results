@@ -8241,6 +8241,7 @@
     "status": "admitted"
   },
   {
+    "active_native_replacement_evidence_sha256": "b799510ddf87bd1f809f67cb6b8b3bc285ef4352e563df8e72e8b730454949b7",
     "candidate_observations": 1,
     "case": "b043",
     "comparison_precision": "uint8_dequant_fp16",
@@ -8376,6 +8377,7 @@
     "status": "admitted"
   },
   {
+    "active_native_replacement_evidence_sha256": "f60a373291d6fcd5c3794068796feb67d4bcdf34b3d59928d53c84c13abe18af",
     "candidate_observations": 1,
     "case": "b043",
     "comparison_precision": "uint8_dequant_fp16",
@@ -9096,6 +9098,7 @@
     "status": "admitted"
   },
   {
+    "active_native_replacement_evidence_sha256": "1c9b9d127dd65565097b5e679c23bedae4e747db1d6577950782f7344b67bc47",
     "candidate_observations": 2,
     "case": "b009",
     "comparison_precision": "uint8_dequant_fp16",
@@ -9103,7 +9106,6 @@
     "completed_at": "2026-10-27T08:40:43.367807+00:00",
     "corrected_quality_pending": false,
     "exclusion_reasons": [],
-    "full_historical_recipe_binding_verified": false,
     "generic_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
     "io_basis": "recorded_names_and_exact_native_bound_engine",
     "model": "yolov7_paper",
@@ -9125,7 +9127,7 @@
         "completed_at": "2026-10-08T10:35:57.242634+00:00",
         "observation_id": "sha256:6ee2178cdae608cf48ea40cf2d7691d5e280d5e9184fbe9ff252ce55b3a95d59",
         "reasons": [
-          "generic_native_pair_compatibility_unresolved:historical_b009_actual_preprocessing_authority_unproved; accepted standalone FPS preserved, pairing pending fresh observation"
+          "generic_native_pair_compatibility_unresolved:current_Native_and_Generic_preprocessing_not_bound"
         ]
       },
       {
@@ -9137,10 +9139,8 @@
       }
     ],
     "original_native_measured": true,
-    "original_native_source_sha256": "ff45e10dd98b48f84f042c774dccb23331be6da15c598ce37432ef9385b24e16",
+    "original_native_source_sha256": "76df7a60e31bf4b5a500bd0949b0dc5f77df64ea11bb6b3a78506f0a2c3d97a4",
     "pair_verified": true,
-    "pairing_basis": "exact_compiled_artifacts_and_recorded_runtime_parameters_with_matching_observed_input",
-    "pairing_metadata_note": "The historical Native preprocessing recipe was not logged in full. Existing source and prepared-input checks support pairing; no full-recipe equivalence is inferred. Excluding this pair leaves the Generic selection results unchanged.",
     "precision_basis": "original_native_record",
     "quality_eligible": true,
     "quality_exclusion_reasons": [],

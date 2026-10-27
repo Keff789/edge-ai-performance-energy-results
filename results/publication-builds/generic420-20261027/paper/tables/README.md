@@ -34,3 +34,5 @@ Table 3 and the baseline supplement share the same absolute fastest observed spl
 | Supplement: Top-2 Native splits by relative same-host speedup (historical selection method) | [CSV](table3_top2_native.csv) | [JSON](table3_top2_native.json) | [md](table3_top2_native.md) · [tex](table3_top2_native.tex) |
 
 The complete [deployment dataset](../data/PAPER_DATASET.csv), [metric sources](../data/METRIC_SOURCES.csv), [measurement generations](../data/MEASUREMENT_GENERATIONS.csv) and [summary](../data/summary.json) use the same broad selection.
+
+Only declared current observations replace prior metrics. Unchanged Generic FPS/energy rows retain their recorded generations and are separate from the current Generic FPS observations used by RQ2. Replacing FPS clears energy unless the normal source explicitly binds that energy to the same observation.

@@ -52,12 +52,14 @@
   "quality_groups": 21,
   "quality_pairs": 187,
   "result": "PASS",
-  "reviewed_metadata_pairs": 1,
+  "reviewed_metadata_pairs": 0,
   "schema": "rq2-current-validation-v2",
   "sensitivity": "results/supplementary-studies/rq2-native-scope-20261027/data/pairing_sensitivity.csv",
   "study_validation": {
+    "current_native_replacements_source_bound": true,
     "every_original_cut_admitted_excluded_or_unresolved": true,
     "final_actual_import_accounting_verified": true,
+    "historical_generic_import_accounting_bound": true,
     "no_fixed420_admission_filter": true,
     "no_new_fps_old_energy_joint_measurement": true,
     "original_native_and_full_records_modified": false,
@@ -67,5 +69,5 @@
     "validation_scope": "Offline importer and evidence accounting only; this does not claim hardware or missing quality PASS.",
     "weights_refitted": false
   },
-  "summary_sha256": "a7d549f27c60f008775f6abc2b7494048cee86bd6fa516d485ea745d843bac69"
+  "summary_sha256": "b4a9c10881c89f7659ea695014bdbe186f2af5fc436169e9e3e6a620d97ef976"
 }

@@ -11,7 +11,7 @@ Observed repetition minima and maxima for global winners and additional YOLOv7/H
 | ResNet-50 / DeepX Full | 655--659 | 27.64--27.66 |
 | ResNet-50 / H10/b095 | 1074--1114 | 29.42--29.50 |
 | YOLO11l / DeepX Full | 63--63 | 314.56--315.72 |
-| YOLO11l / H10/b120 | 53--53 | 537.63--567.69 |
+| YOLO11l / DeepX/b511 | 69--69 | 326.00--326.51 |
 | YOLO26m / TRT (H8) | 85--85 | 399.41--400.41 |
 | YOLO26m / H10/b043 | 110--111 | 319.55--319.76 |
 | YOLO26s / TRT (DeepX) | 152--152 | 186.79--188.63 |

@@ -6975,7 +6975,7 @@
           "producer_impl=hailo10_infermodel_async_fifo"
         ],
         "native_fps": 110.292412066109,
-        "native_quality": 0.4366393379590343,
+        "native_quality": 0.4402958336312416,
         "native_raw_mj": 319.6512627384614,
         "native_uid": "native|yolo26m|H10|hailo10h_to_trt|b043",
         "original_strict_energy": true,
@@ -7083,7 +7083,7 @@
           "producer_impl=hailo8_python_vstreams_fifo"
         ],
         "native_fps": 78.61904956868067,
-        "native_quality": 0.4363651561823593,
+        "native_quality": 0.43972062667155115,
         "native_raw_mj": 355.99294959145453,
         "native_uid": "native|yolo26m|H8|hailo8_to_trt|b043",
         "original_strict_energy": true,
@@ -7631,14 +7631,14 @@
         "administrative_quality_receipt_gap": false,
         "both_reference_close": true,
         "case": "b009",
-        "comparison_energy_ratio": 0.9086346536803839,
-        "energy_included": true,
-        "energy_ratio": 0.9086346536803839,
-        "energy_repeat_ratio_max": 0.9097731749961252,
-        "energy_repeat_ratio_min": 0.9067582024626427,
-        "fps_ratio": 1.0874186554387948,
-        "fps_repeat_ratio_max": 1.0885190190340264,
-        "fps_repeat_ratio_min": 1.0851508000638888,
+        "comparison_energy_ratio": null,
+        "energy_included": false,
+        "energy_ratio": null,
+        "energy_repeat_ratio_max": null,
+        "energy_repeat_ratio_min": null,
+        "fps_ratio": 1.086676767067924,
+        "fps_repeat_ratio_max": 1.089721605337481,
+        "fps_repeat_ratio_min": 1.083214631953507,
         "generic_endpoint_notes": [
           "completed_task_completion_mode=native_three_stage_fast_oracle_outside_timing",
           "postprocess_location=host_cpu_python_numpy",
@@ -7646,9 +7646,9 @@
           "postprocess_included=True",
           "producer_impl=hailo8_python_vstreams_fifo"
         ],
-        "generic_fps": 41.29120249862124,
+        "generic_fps": 41.19388564433142,
         "generic_quality": 0.45791324238237674,
-        "generic_raw_mj": 659.9491790052741,
+        "generic_raw_mj": null,
         "generic_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
         "model": "yolov7_paper",
         "native_endpoint_notes": [
@@ -7659,11 +7659,11 @@
           "postprocess_included=True",
           "producer_impl=hailo8_python_vstreams_fifo"
         ],
-        "native_fps": 44.90082390250171,
+        "native_fps": 44.76443847494783,
         "native_quality": 0.45791324238237674,
-        "native_raw_mj": 599.6526937121109,
+        "native_raw_mj": 599.4322504059489,
         "native_uid": "native|yolov7_paper|H8|hailo8_to_trt|b009",
-        "original_strict_energy": true,
+        "original_strict_energy": false,
         "original_strict_performance": true,
         "performance_included": true,
         "quality_metric": "coco_ap_50_95",
@@ -7805,7 +7805,7 @@
         "setup": "All"
       },
       {
-        "energy_ratio": 0.8045763784899455,
+        "energy_ratio": 0.7559979189037558,
         "energy_ratio_n_setups": 3,
         "fps_ratio": 1.4114463495155993,
         "fps_ratio_n_setups": 3,
@@ -7975,8 +7975,8 @@
         "setup": "H10"
       },
       {
-        "energy_ratio": 0.8938382225066073,
-        "energy_ratio_n": 3,
+        "energy_ratio": 0.7481028437480381,
+        "energy_ratio_n": 2,
         "fps_ratio": 1.1095483712114012,
         "fps_ratio_n": 3,
         "model": "yolov7_paper",
@@ -8015,7 +8015,7 @@
         "setup": "DeepX"
       },
       {
-        "mean_model_setup_medians": 0.8330750293432775,
+        "mean_model_setup_medians": 0.8122556895206248,
         "metric": "energy_ratio",
         "n_models": 7,
         "setup": "H8"
@@ -8027,7 +8027,7 @@
         "setup": "H10"
       },
       {
-        "mean_model_setup_medians": 0.7485689137695115,
+        "mean_model_setup_medians": 0.7416291338286273,
         "metric": "energy_ratio",
         "n_models": 7,
         "setup": "All"
@@ -8197,8 +8197,8 @@
         "setup": "H10"
       },
       {
-        "energy_ratio": 0.8938382225066073,
-        "energy_ratio_n": 3,
+        "energy_ratio": 0.7481028437480381,
+        "energy_ratio_n": 2,
         "fps_ratio": 1.1095483712114012,
         "fps_ratio_n": 3,
         "model": "yolov7_paper",
@@ -14325,7 +14325,7 @@
           "producer_impl=hailo10_infermodel_async_fifo"
         ],
         "native_fps": 110.292412066109,
-        "native_quality": 0.4366393379590343,
+        "native_quality": 0.4402958336312416,
         "native_raw_mj": 319.6512627384614,
         "native_uid": "native|yolo26m|H10|hailo10h_to_trt|b043",
         "original_strict_energy": true,
@@ -14433,7 +14433,7 @@
           "producer_impl=hailo8_python_vstreams_fifo"
         ],
         "native_fps": 78.61904956868067,
-        "native_quality": 0.4363651561823593,
+        "native_quality": 0.43972062667155115,
         "native_raw_mj": 355.99294959145453,
         "native_uid": "native|yolo26m|H8|hailo8_to_trt|b043",
         "original_strict_energy": true,
@@ -14981,14 +14981,14 @@
         "administrative_quality_receipt_gap": false,
         "both_reference_close": true,
         "case": "b009",
-        "comparison_energy_ratio": 0.9086346536803839,
-        "energy_included": true,
-        "energy_ratio": 0.9086346536803839,
-        "energy_repeat_ratio_max": 0.9097731749961252,
-        "energy_repeat_ratio_min": 0.9067582024626427,
-        "fps_ratio": 1.0874186554387948,
-        "fps_repeat_ratio_max": 1.0885190190340264,
-        "fps_repeat_ratio_min": 1.0851508000638888,
+        "comparison_energy_ratio": null,
+        "energy_included": false,
+        "energy_ratio": null,
+        "energy_repeat_ratio_max": null,
+        "energy_repeat_ratio_min": null,
+        "fps_ratio": 1.086676767067924,
+        "fps_repeat_ratio_max": 1.089721605337481,
+        "fps_repeat_ratio_min": 1.083214631953507,
         "generic_endpoint_notes": [
           "completed_task_completion_mode=native_three_stage_fast_oracle_outside_timing",
           "postprocess_location=host_cpu_python_numpy",
@@ -14996,9 +14996,9 @@
           "postprocess_included=True",
           "producer_impl=hailo8_python_vstreams_fifo"
         ],
-        "generic_fps": 41.29120249862124,
+        "generic_fps": 41.19388564433142,
         "generic_quality": 0.45791324238237674,
-        "generic_raw_mj": 659.9491790052741,
+        "generic_raw_mj": null,
         "generic_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
         "model": "yolov7_paper",
         "native_endpoint_notes": [
@@ -15009,11 +15009,11 @@
           "postprocess_included=True",
           "producer_impl=hailo8_python_vstreams_fifo"
         ],
-        "native_fps": 44.90082390250171,
+        "native_fps": 44.76443847494783,
         "native_quality": 0.45791324238237674,
-        "native_raw_mj": 599.6526937121109,
+        "native_raw_mj": 599.4322504059489,
         "native_uid": "native|yolov7_paper|H8|hailo8_to_trt|b009",
-        "original_strict_energy": true,
+        "original_strict_energy": false,
         "original_strict_performance": true,
         "performance_included": true,
         "quality_metric": "coco_ap_50_95",
@@ -24561,14 +24561,14 @@
         "uid": "native|yolo11l|DeepX|deepx_to_trt|b062"
       },
       {
-        "label": "G F=E b062",
+        "label": "G F=E b511",
         "model": "yolo11l",
         "setup": "DeepX",
         "text_offset_points": [
-          0,
+          -9,
           9
         ],
-        "uid": "generic|yolo11l|DeepX|deepx_to_trt|b062"
+        "uid": "generic|yolo11l|DeepX|deepx_to_trt|b511"
       }
     ],
     "omitted_points": [],
@@ -24621,16 +24621,21 @@
             {
               "energy_mj_per_image": 315.2272215384534,
               "fps": 63.178587945126715
+            },
+            {
+              "energy_mj_per_image": 326.18722304791913,
+              "fps": 69.40285189366168
             }
           ],
           "front_uids": [
+            "generic|yolo11l|DeepX|deepx_to_trt|b511",
             "native|yolo11l|DeepX|native_full_deepx|full"
           ],
-          "line_drawn": false,
+          "line_drawn": true,
           "model": "yolo11l",
-          "n_front_coordinates": 1,
-          "n_front_uids": 1,
-          "n_observations": 8,
+          "n_front_coordinates": 2,
+          "n_front_uids": 2,
+          "n_observations": 9,
           "setup": "DeepX"
         }
       ],
@@ -25064,7 +25069,7 @@
       {
         "backend": "deepx_to_trt",
         "case": "b062",
-        "dominated_by_uid": "native|yolo11l|DeepX|deepx_to_trt|b062",
+        "dominated_by_uid": "generic|yolo11l|DeepX|deepx_to_trt|b511",
         "endpoint_notes": [],
         "energy_mj_per_image": 568.3203988783093,
         "fps": 46.93098701465779,
@@ -25073,7 +25078,7 @@
         "model": "yolo11l",
         "omission_reason": null,
         "pareto_all": false,
-        "pareto_generic": true,
+        "pareto_generic": false,
         "pareto_native": null,
         "quality_metric": "coco_ap_50_95",
         "quality_percent": 46.45909057582048,
@@ -25105,6 +25110,27 @@
       },
       {
         "backend": "deepx_to_trt",
+        "case": "b511",
+        "dominated_by_uid": null,
+        "endpoint_notes": null,
+        "energy_mj_per_image": 326.18722304791913,
+        "fps": 69.40285189366168,
+        "included": true,
+        "kind": "split",
+        "model": "yolo11l",
+        "omission_reason": null,
+        "pareto_all": true,
+        "pareto_generic": true,
+        "pareto_native": null,
+        "quality_metric": "coco_ap_50_95",
+        "quality_percent": 46.37383165951622,
+        "quality_value": 0.4637383165951622,
+        "runner": "generic",
+        "setup": "DeepX",
+        "uid": "generic|yolo11l|DeepX|deepx_to_trt|b511"
+      },
+      {
+        "backend": "deepx_to_trt",
         "case": "b003",
         "dominated_by_uid": "generic|yolo11l|DeepX|deepx_to_trt|b062",
         "endpoint_notes": [
@@ -25133,7 +25159,7 @@
       {
         "backend": "deepx_to_trt",
         "case": "b062",
-        "dominated_by_uid": "native|yolo11l|DeepX|native_full_deepx|full",
+        "dominated_by_uid": "generic|yolo11l|DeepX|deepx_to_trt|b511",
         "endpoint_notes": [
           "DeepX Native A4; maximum four outstanding DeepX jobs",
           "normal imported performance and calibrated host-inclusive energy; dataset quality reused",
@@ -25160,7 +25186,7 @@
       {
         "backend": "deepx_to_trt",
         "case": "b120",
-        "dominated_by_uid": "native|yolo11l|DeepX|deepx_to_trt|b062",
+        "dominated_by_uid": "generic|yolo11l|DeepX|deepx_to_trt|b511",
         "endpoint_notes": [
           "DeepX Native A4; maximum four outstanding DeepX jobs",
           "normal imported performance and calibrated host-inclusive energy; dataset quality reused",
@@ -25247,6 +25273,7 @@
       "generic|yolo11l|DeepX|deepx_to_trt|b003",
       "generic|yolo11l|DeepX|deepx_to_trt|b062",
       "generic|yolo11l|DeepX|deepx_to_trt|b120",
+      "generic|yolo11l|DeepX|deepx_to_trt|b511",
       "generic|yolo11l|H10|hailo10h_to_trt|b003",
       "generic|yolo11l|H10|hailo10h_to_trt|b062",
       "generic|yolo11l|H10|hailo10h_to_trt|b120",
@@ -25656,8 +25683,8 @@
         "pareto_generic": null,
         "pareto_native": true,
         "quality_metric": "coco_ap_50_95",
-        "quality_percent": 43.63651561823593,
-        "quality_value": 0.4363651561823593,
+        "quality_percent": 43.972062667155114,
+        "quality_value": 0.43972062667155115,
         "runner": "native",
         "setup": "H8",
         "uid": "native|yolo26m|H8|hailo8_to_trt|b043"
@@ -25853,8 +25880,8 @@
         "pareto_generic": null,
         "pareto_native": true,
         "quality_metric": "coco_ap_50_95",
-        "quality_percent": 43.66393379590343,
-        "quality_value": 0.4366393379590343,
+        "quality_percent": 44.02958336312416,
+        "quality_value": 0.4402958336312416,
         "runner": "native",
         "setup": "H10",
         "uid": "native|yolo26m|H10|hailo10h_to_trt|b043"
@@ -27096,8 +27123,31 @@
         "uid": "generic|yolov7_paper|DeepX|deepx_to_trt|b044"
       }
     ],
-    "omitted_points": [],
-    "omitted_uids": [],
+    "omitted_points": [
+      {
+        "backend": "hailo8_to_trt",
+        "case": "b009",
+        "dominated_by_uid": null,
+        "energy_mj_per_image": null,
+        "fps": 41.19388564433142,
+        "included": false,
+        "kind": "split",
+        "model": "yolov7_paper",
+        "omission_reason": "missing_energy_mj_per_image",
+        "pareto_all": null,
+        "pareto_generic": null,
+        "pareto_native": null,
+        "quality_metric": "coco_ap_50_95",
+        "quality_percent": 45.79132423823767,
+        "quality_value": 0.45791324238237674,
+        "runner": "generic",
+        "setup": "H8",
+        "uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009"
+      }
+    ],
+    "omitted_uids": [
+      "generic|yolov7_paper|H8|hailo8_to_trt|b009"
+    ],
     "pareto_front": {
       "connection": "straight segments between distinct front coordinates sorted by FPS; no interpolation claim",
       "dominance": "B dominates A iff FPS_B >= FPS_A and energy_B <= energy_A, with at least one strict inequality",
@@ -27121,7 +27171,7 @@
           "model": "yolov7_paper",
           "n_front_coordinates": 1,
           "n_front_uids": 1,
-          "n_observations": 8,
+          "n_observations": 7,
           "setup": "H8"
         },
         {
@@ -27168,33 +27218,6 @@
       "runner_front_scope": "Native or Generic splits only, within the same model/setup"
     },
     "points": [
-      {
-        "backend": "hailo8_to_trt",
-        "case": "b009",
-        "dominated_by_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b044",
-        "endpoint_notes": [
-          "completed_task_completion_mode=native_three_stage_fast_oracle_outside_timing",
-          "postprocess_location=host_cpu_python_numpy",
-          "host_postprocess_required=True",
-          "postprocess_included=True",
-          "producer_impl=hailo8_python_vstreams_fifo"
-        ],
-        "energy_mj_per_image": 659.9491790052741,
-        "fps": 41.29120249862124,
-        "included": true,
-        "kind": "split",
-        "model": "yolov7_paper",
-        "omission_reason": null,
-        "pareto_all": false,
-        "pareto_generic": false,
-        "pareto_native": null,
-        "quality_metric": "coco_ap_50_95",
-        "quality_percent": 45.79132423823767,
-        "quality_value": 0.45791324238237674,
-        "runner": "generic",
-        "setup": "H8",
-        "uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009"
-      },
       {
         "backend": "hailo8_to_trt",
         "case": "b044",
@@ -27260,8 +27283,8 @@
           "postprocess_included=True",
           "producer_impl=hailo8_python_vstreams_fifo"
         ],
-        "energy_mj_per_image": 599.6526937121109,
-        "fps": 44.90082390250171,
+        "energy_mj_per_image": 599.4322504059489,
+        "fps": 44.76443847494783,
         "included": true,
         "kind": "split",
         "model": "yolov7_paper",
@@ -28094,16 +28117,16 @@
         "setup": "H10"
       },
       {
-        "candidate_count": 3,
-        "energy_candidates": 3,
+        "candidate_count": 4,
+        "energy_candidates": 4,
         "energy_ratio": 1.0,
-        "fastest_quality_value": 0.46459090575820483,
-        "fastest_uid": "generic|yolo11l|DeepX|deepx_to_trt|b062",
+        "fastest_quality_value": 0.4637383165951622,
+        "fastest_uid": "generic|yolo11l|DeepX|deepx_to_trt|b511",
         "fps_ratio": 1.0,
-        "lowest_energy_uid": "generic|yolo11l|DeepX|deepx_to_trt|b062",
-        "lowest_quality_value": 0.46459090575820483,
+        "lowest_energy_uid": "generic|yolo11l|DeepX|deepx_to_trt|b511",
+        "lowest_quality_value": 0.4637383165951622,
         "model": "yolo11l",
-        "performance_candidates": 3,
+        "performance_candidates": 4,
         "runner": "generic",
         "same_optimum": true,
         "setup": "DeepX"
@@ -28236,7 +28259,7 @@
         "fastest_uid": "native|yolo26m|H8|hailo8_to_trt|b038",
         "fps_ratio": 1.002121307405798,
         "lowest_energy_uid": "native|yolo26m|H8|hailo8_to_trt|b043",
-        "lowest_quality_value": 0.4363651561823593,
+        "lowest_quality_value": 0.43972062667155115,
         "model": "yolo26m",
         "performance_candidates": 3,
         "runner": "native",
@@ -28262,11 +28285,11 @@
         "candidate_count": 3,
         "energy_candidates": 3,
         "energy_ratio": 1.0,
-        "fastest_quality_value": 0.4366393379590343,
+        "fastest_quality_value": 0.4402958336312416,
         "fastest_uid": "native|yolo26m|H10|hailo10h_to_trt|b043",
         "fps_ratio": 1.0,
         "lowest_energy_uid": "native|yolo26m|H10|hailo10h_to_trt|b043",
-        "lowest_quality_value": 0.4366393379590343,
+        "lowest_quality_value": 0.4402958336312416,
         "model": "yolo26m",
         "performance_candidates": 3,
         "runner": "native",
@@ -28395,7 +28418,7 @@
       },
       {
         "candidate_count": 3,
-        "energy_candidates": 3,
+        "energy_candidates": 2,
         "energy_ratio": 1.0,
         "fastest_quality_value": 0.4574084155464624,
         "fastest_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b066",
@@ -32201,6 +32224,14 @@
         "uid": "generic|yolo11l|DeepX|deepx_to_trt|b120"
       },
       {
+        "difference_percentage_points": -0.308842500990808,
+        "quality_metric": "coco_ap_50_95",
+        "quality_n": 5000,
+        "quality_value": 0.4637383165951622,
+        "reference_value": 0.46682674160507026,
+        "uid": "generic|yolo11l|DeepX|deepx_to_trt|b511"
+      },
+      {
         "difference_percentage_points": -0.1947795139306041,
         "quality_metric": "coco_ap_50_95",
         "quality_n": 5000,
@@ -32473,10 +32504,10 @@
         "uid": "native|yolo26m|H8|hailo8_to_trt|b038"
       },
       {
-        "difference_percentage_points": -1.2630387974395474,
+        "difference_percentage_points": -0.9274917485203649,
         "quality_metric": "coco_ap_50_95",
         "quality_n": 5000,
-        "quality_value": 0.4363651561823593,
+        "quality_value": 0.43972062667155115,
         "reference_value": 0.4489955441567548,
         "uid": "native|yolo26m|H8|hailo8_to_trt|b043"
       },
@@ -32537,10 +32568,10 @@
         "uid": "native|yolo26m|H10|hailo10h_to_trt|b038"
       },
       {
-        "difference_percentage_points": -1.2356206197720487,
+        "difference_percentage_points": -0.8699710525513216,
         "quality_metric": "coco_ap_50_95",
         "quality_n": 5000,
-        "quality_value": 0.4366393379590343,
+        "quality_value": 0.4402958336312416,
         "reference_value": 0.4489955441567548,
         "uid": "native|yolo26m|H10|hailo10h_to_trt|b043"
       },
@@ -33101,6 +33132,7 @@
       "generic|yolo11l|DeepX|deepx_to_trt|b003",
       "generic|yolo11l|DeepX|deepx_to_trt|b062",
       "generic|yolo11l|DeepX|deepx_to_trt|b120",
+      "generic|yolo11l|DeepX|deepx_to_trt|b511",
       "generic|yolo11l|H10|hailo10h_to_trt|b003",
       "generic|yolo11l|H10|hailo10h_to_trt|b062",
       "generic|yolo11l|H10|hailo10h_to_trt|b120",
@@ -35388,6 +35420,13 @@
       {
         "quality_metric": "coco_ap_50_95",
         "quality_n": 5000,
+        "quality_percent": 46.37383165951622,
+        "reference_percent": 46.68267416050703,
+        "uid": "generic|yolo11l|DeepX|deepx_to_trt|b511"
+      },
+      {
+        "quality_metric": "coco_ap_50_95",
+        "quality_n": 5000,
         "quality_percent": 46.48789464657642,
         "reference_percent": 46.68267416050703,
         "uid": "native|yolo11l|DeepX|deepx_to_trt|b003"
@@ -35537,6 +35576,7 @@
       "generic|yolo11l|DeepX|deepx_to_trt|b003",
       "generic|yolo11l|DeepX|deepx_to_trt|b062",
       "generic|yolo11l|DeepX|deepx_to_trt|b120",
+      "generic|yolo11l|DeepX|deepx_to_trt|b511",
       "generic|yolo11l|H10|hailo10h_to_trt|b003",
       "generic|yolo11l|H10|hailo10h_to_trt|b062",
       "generic|yolo11l|H10|hailo10h_to_trt|b120",
@@ -35656,7 +35696,7 @@
       {
         "quality_metric": "coco_ap_50_95",
         "quality_n": 5000,
-        "quality_percent": 43.63651561823593,
+        "quality_percent": 43.972062667155114,
         "reference_percent": 44.89955441567548,
         "uid": "native|yolo26m|H8|hailo8_to_trt|b043"
       },
@@ -35712,7 +35752,7 @@
       {
         "quality_metric": "coco_ap_50_95",
         "quality_n": 5000,
-        "quality_percent": 43.66393379590343,
+        "quality_percent": 44.02958336312416,
         "reference_percent": 44.89955441567548,
         "uid": "native|yolo26m|H10|hailo10h_to_trt|b043"
       },
@@ -36170,8 +36210,8 @@
         "model": "regnet_x_1_6gf",
         "split_uid": "native|regnet_x_1_6gf|H10|hailo10h_to_trt|b123",
         "text_offset_points": [
-          0,
-          9
+          -9,
+          0
         ]
       },
       {
@@ -36184,12 +36224,12 @@
         ]
       },
       {
-        "label": "YOLO11l\nH10/b120 \u00b7 Native",
+        "label": "YOLO11l\nDeepX/b511 \u00b7 Generic",
         "model": "yolo11l",
-        "split_uid": "native|yolo11l|H10|hailo10h_to_trt|b120",
+        "split_uid": "generic|yolo11l|DeepX|deepx_to_trt|b511",
         "text_offset_points": [
           0,
-          -9
+          9
         ]
       },
       {
@@ -36197,8 +36237,8 @@
         "model": "yolo26m",
         "split_uid": "native|yolo26m|H10|hailo10h_to_trt|b043",
         "text_offset_points": [
-          9,
-          0
+          0,
+          -9
         ]
       },
       {
@@ -36207,7 +36247,7 @@
         "split_uid": "native|yolo26s|H8|hailo8_to_trt|b021",
         "text_offset_points": [
           -9,
-          -9
+          0
         ]
       },
       {
@@ -36215,8 +36255,8 @@
         "model": "yolov7_paper",
         "split_uid": "native|yolov7_paper|H8|hailo8_to_trt|b066",
         "text_offset_points": [
-          -9,
-          0
+          0,
+          9
         ]
       }
     ],
@@ -36265,18 +36305,18 @@
         "y": 1.065551817896194
       },
       {
-        "R_global": 0.8433824016139149,
-        "energy_ratio_global": 1.7630258173754283,
+        "R_global": 1.0985185669857167,
+        "energy_ratio_global": 1.0347685756832037,
         "global_full_uid": "native|yolo11l|DeepX|native_full_deepx|full",
-        "host_full_uid": "native|yolo11l|H10|native_full_tensorrt|full",
-        "label": "YOLO11l\nH10/b120 \u00b7 Native",
+        "host_full_uid": "native|yolo11l|DeepX|native_full_deepx|full",
+        "label": "YOLO11l\nDeepX/b511 \u00b7 Generic",
         "model": "yolo11l",
-        "split_case": "b120",
-        "split_runner": "native",
-        "split_setup": "H10",
-        "split_uid": "native|yolo11l|H10|hailo10h_to_trt|b120",
-        "x": 0.8433824016139149,
-        "y": 1.7630258173754283
+        "split_case": "b511",
+        "split_runner": "generic",
+        "split_setup": "DeepX",
+        "split_uid": "generic|yolo11l|DeepX|deepx_to_trt|b511",
+        "x": 1.0985185669857167,
+        "y": 1.0347685756832037
       },
       {
         "R_global": 1.301185170290098,
@@ -36379,19 +36419,19 @@
         "y": 2
       },
       {
-        "R_global": 0.8433824016139149,
-        "R_host": 1.3622423922871914,
+        "R_global": 1.0985185669857167,
+        "R_host": 1.0985185669857167,
         "global_full_uid": "native|yolo11l|DeepX|native_full_deepx|full",
         "global_plotted": true,
-        "host_full_uid": "native|yolo11l|H10|native_full_tensorrt|full",
+        "host_full_uid": "native|yolo11l|DeepX|native_full_deepx|full",
         "host_plotted": true,
         "missing_values": [],
         "model": "yolo11l",
-        "row_label": "YOLO11l\nH10/b120 \u00b7 Native",
-        "split_case": "b120",
-        "split_runner": "native",
-        "split_setup": "H10",
-        "split_uid": "native|yolo11l|H10|hailo10h_to_trt|b120",
+        "row_label": "YOLO11l\nDeepX/b511 \u00b7 Generic",
+        "split_case": "b511",
+        "split_runner": "generic",
+        "split_setup": "DeepX",
+        "split_uid": "generic|yolo11l|DeepX|deepx_to_trt|b511",
         "y": 3
       },
       {

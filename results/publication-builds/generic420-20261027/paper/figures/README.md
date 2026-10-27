@@ -14,7 +14,7 @@ All 23 current figure families are included. Each has a vector PDF/SVG and a PNG
 - [YOLO26s: performance, energy and dataset quality](models/yolo26s.md)
 - [YOLOv7: performance, energy and dataset quality](models/yolov7_paper.md)
 
-The 7 model views retain all observations, both Full alternatives and dataset quality. Outlines mark the joint performance–energy front within each model/setup; lines connect discrete front coordinates only. [All 450 points and front flags](../tables/PARETO_POINTS.csv) distinguish the 33 joint front points from runner-specific split fronts. See [methods](../METHODS.md) for dominance and interpretation limits.
+The 7 model views retain all observations, both Full alternatives and dataset quality. Outlines mark the joint performance–energy front within each model/setup; lines connect discrete front coordinates only. [All 451 points and front flags](../tables/PARETO_POINTS.csv) distinguish the 34 joint front points from runner-specific split fronts. See [methods](../METHODS.md) for dominance and interpretation limits.
 
 [Recommended Table 3: global fastest Full and split](../tables/table3_fastest_deployments.md) · [Same split, two Full baselines](../tables/fastest_split_baselines.md) · [Supplementary relative same-host Top-2](../tables/table3_top2_native.md)
 

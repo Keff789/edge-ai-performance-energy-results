@@ -2,6 +2,306 @@
   "profile": "mlsys-r30",
   "frozen_numerical_profile": "mlsys-r22",
   "weighted_scope": {
+    "evaluated_quality_pairs": 187,
+    "model_device_groups": 21,
+    "classifier_pairs": 151,
+    "detector_pairs": 36,
+    "models": [
+      "mobilenet_v3_large",
+      "regnet_x_1_6gf",
+      "resnet50",
+      "yolo11l",
+      "yolo26m",
+      "yolo26s",
+      "yolov7_paper"
+    ],
+    "groups_without_quality_pairs": 0,
+    "scope": "All original artifact-bound measured Native cut identities; current normal Native observations replace only their source-bound archived predecessors. RQ3 membership remains an annotation; no imputation or new Native cuts.",
+    "original_native_population": 204,
+    "quality_singleton_groups": 0,
+    "quality_groups_n_ge_2": 21,
+    "mean_final_generic_loss_n_ge_2_pct": 1.3467521152436048,
+    "publication_status": "complete"
+  },
+  "weighted_weights": {
+    "w_comm": 1.0,
+    "w_imb": 0.15799266978091375,
+    "w_tensors": 0.2
+  },
+  "new_asset_ids": [
+    "r30_weighted_budget_table",
+    "r30_weighted_fold_table",
+    "r30_weighted_macros",
+    "r30_weighted_operations_table",
+    "rq2_weighted_all_models",
+    "yolov7_h8_case_single_column"
+  ],
+  "measurement_changes": true,
+  "old_evidence_reference": "results/split-inference/publications/mlsys-r22/data/r15_evidence_validation.json",
+  "final_rq2_scope": {
+    "schema": "rq2-native-scope-pairs-v1",
+    "publication_status": "complete",
+    "actual_imports_complete": true,
+    "actual_import_accounting_sha256": "62d6747d954573b4ad91fdb40d2cb14d0dbe43b71da3d63ded1b8da5e50e6d41",
+    "quality_metrics": {
+      "classification": "top1_accuracy",
+      "detection": "coco_ap_50_95"
+    },
+    "detection_metric_label": "COCO AP@[.50:.05:.95]",
+    "family_selection_results": [
+      {
+        "scope": "unrestricted",
+        "family": "all",
+        "original_native_cases": 204,
+        "paired_candidates": 204,
+        "model_device_groups": 21,
+        "singleton_groups": 0,
+        "groups_n_ge_2": 21,
+        "mean_loss_pct": 1.464100554146222,
+        "mean_loss_n_ge_2_pct": 1.464100554146222,
+        "exact_winners": 14,
+        "common_pair_groups": null,
+        "old_generic_mean_loss_same_pairs_pct": null,
+        "current_generic_mean_loss_same_pairs_pct": null
+      },
+      {
+        "scope": "unrestricted",
+        "family": "classification",
+        "original_native_cases": 168,
+        "paired_candidates": 168,
+        "model_device_groups": 9,
+        "singleton_groups": 0,
+        "groups_n_ge_2": 9,
+        "mean_loss_pct": 3.392714437605092,
+        "mean_loss_n_ge_2_pct": 3.392714437605092,
+        "exact_winners": 3,
+        "common_pair_groups": null,
+        "old_generic_mean_loss_same_pairs_pct": null,
+        "current_generic_mean_loss_same_pairs_pct": null
+      },
+      {
+        "scope": "unrestricted",
+        "family": "detection",
+        "original_native_cases": 36,
+        "paired_candidates": 36,
+        "model_device_groups": 12,
+        "singleton_groups": 0,
+        "groups_n_ge_2": 12,
+        "mean_loss_pct": 0.01764014155206939,
+        "mean_loss_n_ge_2_pct": 0.01764014155206939,
+        "exact_winners": 11,
+        "common_pair_groups": null,
+        "old_generic_mean_loss_same_pairs_pct": null,
+        "current_generic_mean_loss_same_pairs_pct": null
+      },
+      {
+        "scope": "quality_admitted",
+        "family": "all",
+        "original_native_cases": 204,
+        "paired_candidates": 187,
+        "model_device_groups": 21,
+        "singleton_groups": 0,
+        "groups_n_ge_2": 21,
+        "mean_loss_pct": 1.3467521152436048,
+        "mean_loss_n_ge_2_pct": 1.3467521152436048,
+        "exact_winners": 15,
+        "common_pair_groups": 21,
+        "old_generic_mean_loss_same_pairs_pct": 15.077128973324955,
+        "current_generic_mean_loss_same_pairs_pct": 1.3467521152436048
+      },
+      {
+        "scope": "quality_admitted",
+        "family": "classification",
+        "original_native_cases": 168,
+        "paired_candidates": 151,
+        "model_device_groups": 9,
+        "singleton_groups": 0,
+        "groups_n_ge_2": 9,
+        "mean_loss_pct": 3.1189014134989854,
+        "mean_loss_n_ge_2_pct": 3.1189014134989854,
+        "exact_winners": 4,
+        "common_pair_groups": 9,
+        "old_generic_mean_loss_same_pairs_pct": 32.80433865060003,
+        "current_generic_mean_loss_same_pairs_pct": 3.1189014134989854
+      },
+      {
+        "scope": "quality_admitted",
+        "family": "detection",
+        "original_native_cases": 36,
+        "paired_candidates": 36,
+        "model_device_groups": 12,
+        "singleton_groups": 0,
+        "groups_n_ge_2": 12,
+        "mean_loss_pct": 0.01764014155206939,
+        "mean_loss_n_ge_2_pct": 0.01764014155206939,
+        "exact_winners": 11,
+        "common_pair_groups": 12,
+        "old_generic_mean_loss_same_pairs_pct": 1.7817217153686513,
+        "current_generic_mean_loss_same_pairs_pct": 0.01764014155206939
+      }
+    ],
+    "original_native_population": 204,
+    "original_native_detector_pairs": 36,
+    "pair_count": 204,
+    "quality_pair_count": 187,
+    "group_count": 21,
+    "quality_group_count": 21,
+    "quality_singleton_groups": 0,
+    "quality_groups_n_ge_2": 21,
+    "models": [
+      "mobilenet_v3_large",
+      "regnet_x_1_6gf",
+      "resnet50",
+      "yolo11l",
+      "yolo26m",
+      "yolo26s",
+      "yolov7_paper"
+    ],
+    "classifier_quality_pairs": 151,
+    "detector_quality_pairs": 36,
+    "final_generic_observations": 205,
+    "selected_generic_observations": 204,
+    "source_found": 204,
+    "compatible_selected": 204,
+    "new_fps_captured": 1,
+    "new_quality_captured": 17,
+    "new_fps_capture_observations": 1,
+    "new_quality_capture_observations": 17,
+    "coverage_count_definitions": {
+      "source_found": "Original cuts with any recovered Generic source, including standalone observations held from pairing.",
+      "compatible_selected": "Original cuts with a selected identity- and complete-task-compatible Generic pair.",
+      "recovered": "Compatible selected observations recovered from existing sources; legacy selected-pair meaning retained.",
+      "remeasured": "Original cuts with an actual new FPS capture, including standalone captures held from pairing; alias of new_fps_captured.",
+      "new_quality_captured": "Original cuts with actual new quality captures declared in hash-bound overlay provenance, independent of FPS acquisition or pair admission.",
+      "capture_observations": "Distinct actual capture source observations; repeat captures of one cut remain distinct, duplicate source hashes are counted once."
+    },
+    "prior_published_pairs": 204,
+    "prior_published_quality_pairs": 187,
+    "excluded_candidates": 17,
+    "unresolved_candidates": 0,
+    "groups_without_quality_pairs": 0,
+    "rq3_fixed420_members": 192,
+    "outside_rq3_fixed420_pairs": 12,
+    "exclusion_reasons": {
+      "generic_relative_quality_loss_above_5pct": 17,
+      "native_quality_loss_above_5pct": 17
+    },
+    "scope": "All original artifact-bound measured Native cut identities; current normal Native observations replace only their source-bound archived predecessors. RQ3 membership remains an annotation; no imputation or new Native cuts.",
+    "selection_policy": "Latest actually completed identity- and complete-task-contract-compatible valid Generic observation; selection precedes quality admission and never ranks FPS, AP or quality outcome.",
+    "overall_statistic": "Unchanged equal-group mean over nonempty quality-admitted model/device groups; singleton zero loss is not evidence of ranking quality.",
+    "mean_final_generic_loss_pct": 1.3467521152436048,
+    "mean_final_generic_loss_n_ge_2_pct": 1.3467521152436048,
+    "same_pairs_comparison_pair_count": 187,
+    "same_pairs_comparison_group_count": 21,
+    "mean_old_generic_loss_same_pairs_pct": 15.077128973324955,
+    "mean_final_generic_loss_same_pairs_pct": 1.3467521152436048,
+    "mean_old_generic_loss_same_pairs_n_ge_2_pct": 15.077128973324955,
+    "mean_final_generic_loss_same_pairs_n_ge_2_pct": 1.3467521152436048,
+    "prior_full_quality_scope_mean_loss_pct": 15.077128973324955,
+    "weights": {
+      "default": {
+        "w_comm": 1.0,
+        "w_imb": 3.0,
+        "w_tensors": 0.2
+      },
+      "shared": {
+        "w_comm": 1.0,
+        "w_imb": 0.15799266978091375,
+        "w_tensors": 0.2
+      },
+      "model_held_out": {
+        "mobilenet_v3_large": {
+          "w_comm": 1.0,
+          "w_imb": 0.5693428877923351,
+          "w_tensors": 0.2
+        },
+        "regnet_x_1_6gf": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        },
+        "resnet50": {
+          "w_comm": 1.0,
+          "w_imb": 0.025084670679042267,
+          "w_tensors": 0.2
+        },
+        "yolo11l": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        },
+        "yolo26m": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        },
+        "yolo26s": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        },
+        "yolov7_paper": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        }
+      }
+    },
+    "weight_policy": "All prior vectors and original full graph normalization universes frozen; no fit. Original holdout status describes original training.",
+    "native_quality_policy": "Use only own bound current normal quality for explicitly replaced Native observations; missing current quality remains unavailable. Retain historical Native quality and the established <=5% gate for unchanged cuts. Prior values and source-scoped postfilter differences remain archived.",
+    "generic_quality_policy": "Current bound normal Generic quality evaluates actual selected timed completion records against its own existing CPU-ONNX reference and evaluator policy. Invalidated quality assignment evidence remains history; corrected unavailable quality is pending, never physical accuracy_loss.",
+    "known_quality_timed_contract_difference_cases": [],
+    "corrected_quality_pending": 0,
+    "reviewed_metadata_pairs": 0,
+    "energy_policy": "Archived Native/Full/Generic energy observations are preserved. Current curated energy requires its exact selected FPS-source relation; no refreshed Generic rate inherits old energy.",
+    "current_native_dataset_sha256": "1ec1e759a4e0a4855bee9dd5b2686499b9dc462a85935d62821f87c94f663ee8",
+    "current_native_replacement_count": 3,
+    "current_native_replacements": [
+      {
+        "native_uid": "native|yolo26m|H10|hailo10h_to_trt|b043",
+        "metric_updates": [
+          "quality"
+        ],
+        "performance_source_sha256": "b267a4e72c06a524e0c9d4a3ec7e41b4c6e4887d66591d2bf4426f6f5fa4f3e8",
+        "quality_source_sha256": "bfaea59ab05217bd66e01888d4a78f5ac28b356e1b2cf000815d41596fe74bd9",
+        "energy_source_sha256": "f7c4fb2d9f6d3df1bdcfdcb5da157e221e5d6eccc70e053d1a88467b94699aff",
+        "evidence_sha256": "b799510ddf87bd1f809f67cb6b8b3bc285ef4352e563df8e72e8b730454949b7"
+      },
+      {
+        "native_uid": "native|yolo26m|H8|hailo8_to_trt|b043",
+        "metric_updates": [
+          "quality"
+        ],
+        "performance_source_sha256": "98f654d3e99a820fc8b60b9103f52141c54a792d40b170798727b05ab0da1954",
+        "quality_source_sha256": "8c54e25467153d067dee7e76e68f56ce7f07da98d31e73f507a2ea8580d536e3",
+        "energy_source_sha256": "b53452841ab60f263d13566a8f8c3cc4c2bcf6e1a637d4d457faf1dfce6f30c4",
+        "evidence_sha256": "f60a373291d6fcd5c3794068796feb67d4bcdf34b3d59928d53c84c13abe18af"
+      },
+      {
+        "native_uid": "native|yolov7_paper|H8|hailo8_to_trt|b009",
+        "metric_updates": [
+          "energy",
+          "performance",
+          "quality"
+        ],
+        "performance_source_sha256": "76df7a60e31bf4b5a500bd0949b0dc5f77df64ea11bb6b3a78506f0a2c3d97a4",
+        "quality_source_sha256": "b0b9de56a09583caa7bf7370596adc9ef76c01b4a6ab1d540c44cee1bdd1b18c",
+        "energy_source_sha256": "aac122c84d1f654f7539ef8e9965f275620dc6e5a45224dca5bca70c7357641a",
+        "evidence_sha256": "1c9b9d127dd65565097b5e679c23bedae4e747db1d6577950782f7344b67bc47"
+      }
+    ],
+    "prior_actual_accounting_retained_as_history": true,
+    "historical_quality_timed_contract_difference_cases": [
+      "generic|yolo26m|H10|hailo10h_to_trt|b043",
+      "generic|yolo26m|H8|hailo8_to_trt|b043"
+    ],
+    "current_native_external_captures": {
+      "performance": 1,
+      "quality": 3,
+      "energy": 1
+    }
+  },
+  "historical_weighted_scope": {
     "all_source_pairs": 204,
     "all_source_quality_eligible_pairs": 187,
     "evaluated_quality_pairs": 187,
@@ -19,19 +319,106 @@
     ],
     "missing_models_due_incomplete_features": []
   },
-  "weighted_weights": {
-    "w_comm": 1.0,
-    "w_imb": 0.15799266978091375,
-    "w_tensors": 0.2
-  },
-  "new_asset_ids": [
-    "r30_weighted_budget_table",
-    "r30_weighted_fold_table",
-    "r30_weighted_macros",
-    "r30_weighted_operations_table",
-    "rq2_weighted_all_models",
-    "yolov7_h8_case_single_column"
-  ],
-  "measurement_changes": false,
-  "old_evidence_reference": "results/split-inference/publications/mlsys-r22/data/r15_evidence_validation.json"
+  "weighted_weight_policy": "All prior vectors and original full graph normalization universes frozen; no fit. Original holdout status describes original training.",
+  "current_rq1_observations": {
+    "schema": "mlsys-r30-source-bound-current-rq1-v1",
+    "paper_dataset_sha256": "1ec1e759a4e0a4855bee9dd5b2686499b9dc462a85935d62821f87c94f663ee8",
+    "archived_paper_dataset_sha256": "03a0924016e6298587d366a45903d6b3a19d8f8aa08e831fdfa0f5b7f0725bcd",
+    "observation_inputs_sha256": "98511b7078f394877885bac08da2aa71ec58e7a0f682ac4a9e9457585a9657f4",
+    "sources": {
+      "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q": {
+        "path": "sources/DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q.json",
+        "sha256": "8174b7e6ed70f3105e7179ed772c1d8b3f4cc199570d34f1268262517bca2050"
+      },
+      "H10_yolo26m_b043_actual_N5000": {
+        "path": "sources/H10_yolo26m_b043_actual_N5000.json",
+        "sha256": "c738b00416e9be93e6f3280fba7ac32eec026d5d8b974b447430de3e1aff9af7"
+      },
+      "H8_yolo26m_b043_actual_N5000": {
+        "path": "sources/H8_yolo26m_b043_actual_N5000.json",
+        "sha256": "df3f2573318cf0048ef2f2a5d4728a31681c099078f6a567f33f98a190f4d9bb"
+      },
+      "H8_yolov7_b009_actual_N5000": {
+        "path": "sources/H8_yolov7_b009_actual_N5000.json",
+        "sha256": "3f7cb9badd004d059f2f7708a9bdfc85106490ba22b690253d0f25daf4b7983c"
+      },
+      "H8_yolov7_b009_actual_native_energy": {
+        "path": "sources/H8_yolov7_b009_actual_native_energy.json",
+        "sha256": "e32df52639f49adabcd52b18b3c403bcf47af6ee03a2667281dc02a3f8dea48d"
+      },
+      "b009_current_generic": {
+        "path": "sources/b009_existing_accepted_Generic_FPS_and_own_Q.json",
+        "sha256": "a79e3496ade5f4ccd3b03b90378d70024529ccc5f53f17d820a788cf316d3917"
+      },
+      "h8_b009_native_fps_v3": {
+        "path": "sources/h8_b009_native_fps_v3_portable_v2.json",
+        "sha256": "45edf85eb8c2e0482ff85984b32eb5c2f144d4e55fe39d40fc6af0aa4a1b582d"
+      }
+    },
+    "observation_history_sha256": "ceaab910b8982356abced430eee108c91ae6bc48b06f44224fe200aa19616c8d",
+    "affected_observations": [
+      {
+        "uid": "generic|yolo11l|DeepX|deepx_to_trt|b511",
+        "generation": "six_pack_20261027",
+        "metrics": [
+          "energy",
+          "performance",
+          "quality"
+        ]
+      },
+      {
+        "uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
+        "generation": "six_pack_20261027_existing_current_Generic_reuse",
+        "metrics": [
+          "performance",
+          "quality"
+        ]
+      },
+      {
+        "uid": "native|yolo26m|H10|hailo10h_to_trt|b043",
+        "generation": "six_pack_20261027",
+        "metrics": [
+          "quality"
+        ]
+      },
+      {
+        "uid": "native|yolo26m|H8|hailo8_to_trt|b043",
+        "generation": "six_pack_20261027",
+        "metrics": [
+          "quality"
+        ]
+      },
+      {
+        "uid": "native|yolov7_paper|H8|hailo8_to_trt|b009",
+        "generation": "six_pack_20261027",
+        "metrics": [
+          "energy",
+          "performance",
+          "quality"
+        ]
+      }
+    ],
+    "expected_packages": [
+      "native_H8_yolov7_b009_FPS",
+      "native_H8_yolov7_b009_quality",
+      "native_H8_yolov7_b009_energy",
+      "native_H8_yolo26m_b043_quality",
+      "native_H10_yolo26m_b043_quality",
+      "generic_DeepX_yolo11l_b511_energy"
+    ],
+    "accepted_packages": [
+      "generic_DeepX_yolo11l_b511_energy",
+      "native_H10_yolo26m_b043_quality",
+      "native_H8_yolo26m_b043_quality",
+      "native_H8_yolov7_b009_FPS",
+      "native_H8_yolov7_b009_energy",
+      "native_H8_yolov7_b009_quality"
+    ],
+    "pending_packages": [],
+    "new_native_measurements": true,
+    "full_baselines_unchanged": true,
+    "literal_b066_unchanged": true,
+    "archived_r22_unchanged": true,
+    "hardware_measurements_performed_by_generator": false
+  }
 }

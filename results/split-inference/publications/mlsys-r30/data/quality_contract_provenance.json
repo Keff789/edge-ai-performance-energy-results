@@ -1,0 +1,103 @@
+{
+  "cases": [
+    {
+      "current_native_binding_evidence_sha256": "f60a373291d6fcd5c3794068796feb67d4bcdf34b3d59928d53c84c13abe18af",
+      "current_native_quality_source_sha256": "8c54e25467153d067dee7e76e68f56ce7f07da98d31e73f507a2ea8580d536e3",
+      "current_native_quality_timed_endpoint_bound": true,
+      "established_native_quality_gate_preserved": true,
+      "evidence_file": "native_quality_completion_H8_b043.json",
+      "generic_selected_timed_completion": "source-completed records with no second host NMS",
+      "generic_uid": "generic|yolo26m|H8|hailo8_to_trt|b043",
+      "historical_native_AP_is_exact_timed_endpoint_AP": false,
+      "historical_native_quality_retained_as_archive": true,
+      "native_historical_quality_postfilter": "additional class-aware NMS",
+      "native_selected_timed_completion": "source-completed records with no second host NMS",
+      "original_evidence_sha256": "0c7786a052bc48907f9d0f4d7cb6fbdf3dab11fed72ebc0de90c88b261da376e",
+      "scope": "This exact model/device/cut and evidenced source identities only; no blanket detector or population claim."
+    },
+    {
+      "CPU_reference_identity": {
+        "function": "_extract_detections_for_proxy",
+        "line": 11362,
+        "path": "retained_source::diss_results/models/yolo26m/benchmark_set/legacy_suite/b003/run_split_onnxruntime.py",
+        "route": "YoloHarness.postprocess then canonical numeric detection mapping; if that raises, local _decode_bn6 also applies NMS",
+        "sha256": "c4ee2ec1f181bcbc10fe87050f16481f255e60abc6f86ab1b88ed46945390fc8"
+      },
+      "CPU_reference_source_closure_caveat": "CPU job records top-level generated-runner hash and adapter contract; it does not retain an independent measured before/after harness source closure. Associated retained suite harness is provided and executed; both source routes explicitly apply NMS.",
+      "current_native_binding_evidence_sha256": "b799510ddf87bd1f809f67cb6b8b3bc285ef4352e563df8e72e8b730454949b7",
+      "current_native_quality_source_sha256": "bfaea59ab05217bd66e01888d4a78f5ac28b356e1b2cf000815d41596fe74bd9",
+      "current_native_quality_timed_endpoint_bound": true,
+      "established_native_quality_gate_preserved": true,
+      "evidence_file": "native_quality_completion_H10_b043.json",
+      "generic_selected_timed_completion": "source-completed records with no second host NMS",
+      "generic_timed_identity": {
+        "fast_runtime_path": "retained_source::Reports/generic_main_freeze_h10_deepx_20261021T123251Z/measurements/h10/yolo26m/runner-bundle/splitpoint_runners/native_three_stage.py",
+        "fast_runtime_sha256": "22657a4b26d12ce3962862537ca7f994ebb7324259b5e25d983344277ab0a129",
+        "host_NMS": false,
+        "postprocess_path": "retained_source::Reports/generic_main_freeze_h10_deepx_20261021T123251Z/measurements/h10/yolo26m/runner-bundle/splitpoint_runners/native_detection_postprocess.py",
+        "postprocess_sha256": "8c202f4237ec39316a54dda7ea8f71dd19bae4bb02e3311bbd8fed7be43214b8",
+        "route": "create_detection_completion_runtime -> FastDetectionCompletionRuntime.process -> _decoded_nms_records -> _AttestedDecodedNmsMaterializer.process"
+      },
+      "generic_uid": "generic|yolo26m|H10|hailo10h_to_trt|b043",
+      "historical_native_AP_is_exact_timed_endpoint_AP": false,
+      "historical_native_quality_identity": {
+        "host_NMS": true,
+        "same_NMS_contract_sha256": "29cb10532c89c13fc2a0146105aca955138afca87e5b549befc7f5df626783d1",
+        "same_bound_generated_runner_sha256": "c4ee2ec1f181bcbc10fe87050f16481f255e60abc6f86ab1b88ed46945390fc8",
+        "same_decoder_contract_sha256": "6fffccd57de6fc1359bd41ff881c85bb51d4a20431283de99f64b4ab78a17138"
+      },
+      "historical_native_quality_retained_as_archive": true,
+      "native_historical_quality_postfilter": "additional class-aware NMS",
+      "native_selected_timed_completion": "source-completed records with no second host NMS",
+      "native_timed_identity": {
+        "actual_preserved_first_image_completed_detection_count": 16,
+        "fast_runtime_sha256": "22657a4b26d12ce3962862537ca7f994ebb7324259b5e25d983344277ab0a129",
+        "host_NMS": false,
+        "matched_git_source": "followup_source::h10_diagnostic/postprocess_trace_v1/native_detection_postprocess_NATIVE_FPS_e499.py",
+        "matched_git_source_sha256": "e4999c38f46ed4736c83899d01d2ef220a8fb41b32d19d117d6d8d67fde1995b",
+        "postprocess_sha256": "e4999c38f46ed4736c83899d01d2ef220a8fb41b32d19d117d6d8d67fde1995b",
+        "source_git_commit": "8346d43d526221bd9d138943122206b658d56cbf"
+      },
+      "original_evidence_sha256": "52e256bbe39b238ed22c6a0d9397e82b531c7e4734346c1363c7e41443e18682",
+      "scope": "This exact model/device/cut and evidenced source identities only; no blanket detector or population claim."
+    }
+  ],
+  "current_native_observations": [
+    {
+      "binding_evidence_sha256": "b799510ddf87bd1f809f67cb6b8b3bc285ef4352e563df8e72e8b730454949b7",
+      "metric_updates": [
+        "quality"
+      ],
+      "native_uid": "native|yolo26m|H10|hailo10h_to_trt|b043",
+      "performance_source_sha256": "b267a4e72c06a524e0c9d4a3ec7e41b4c6e4887d66591d2bf4426f6f5fa4f3e8",
+      "quality_source_sha256": "bfaea59ab05217bd66e01888d4a78f5ac28b356e1b2cf000815d41596fe74bd9",
+      "quality_timed_endpoint_bound": true
+    },
+    {
+      "binding_evidence_sha256": "f60a373291d6fcd5c3794068796feb67d4bcdf34b3d59928d53c84c13abe18af",
+      "metric_updates": [
+        "quality"
+      ],
+      "native_uid": "native|yolo26m|H8|hailo8_to_trt|b043",
+      "performance_source_sha256": "98f654d3e99a820fc8b60b9103f52141c54a792d40b170798727b05ab0da1954",
+      "quality_source_sha256": "8c54e25467153d067dee7e76e68f56ce7f07da98d31e73f507a2ea8580d536e3",
+      "quality_timed_endpoint_bound": true
+    },
+    {
+      "binding_evidence_sha256": "1c9b9d127dd65565097b5e679c23bedae4e747db1d6577950782f7344b67bc47",
+      "metric_updates": [
+        "energy",
+        "performance",
+        "quality"
+      ],
+      "native_uid": "native|yolov7_paper|H8|hailo8_to_trt|b009",
+      "performance_source_sha256": "76df7a60e31bf4b5a500bd0949b0dc5f77df64ea11bb6b3a78506f0a2c3d97a4",
+      "quality_source_sha256": "b0b9de56a09583caa7bf7370596adc9ef76c01b4a6ab1d540c44cee1bdd1b18c",
+      "quality_timed_endpoint_bound": true
+    }
+  ],
+  "generic_gate": "Normal bound Generic quality evaluates actual selected timed completion records with the existing CPU-ONNX reference and evaluator policy.",
+  "limitation": "Historical additional-NMS evaluations remain archived in cases. Explicit current Native observations use their own normal selected-timed-completion evaluation; this replacement is bounded to the listed source identities. Other historical cases remain unassessed here.",
+  "native_gate": "Use only own bound current normal quality for explicitly replaced Native observations; missing current quality remains unavailable. Retain historical Native quality and the established <=5% gate for unchanged cuts. Prior values and source-scoped postfilter differences remain archived.",
+  "schema": "rq2-quality-and-timed-completion-provenance-v1"
+}

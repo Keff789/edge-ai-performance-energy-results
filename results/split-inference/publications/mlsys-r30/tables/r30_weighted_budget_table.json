@@ -1,52 +1,60 @@
 {
-  "caption": "Mean Native throughput loss (\\%) over all 21 model/device groups. The budget is $k$ trials per group, capped by the available cuts. The pooled fit uses all seven models. Model-held-out weights exclude the evaluated model on all three devices.",
-  "held_out_status": "Leave one entire model out, including all three devices. Each displayed group uses only its held-out prediction.",
-  "optimized_status": "Retrospective in-sample optimization on every evaluated model/device group.",
+  "caption": "Native throughput loss for 187 quality-admissible cuts in 21 model-device groups, with groups weighted equally. At budget k, we test the first min(k,n) ranked cuts and compare their highest Native throughput with the best measured Native cut in that group.",
   "rows": [
     {
       "groups": 21,
       "label": "Bytes",
+      "loss_k1_n_ge_2_pct": 17.226542799168698,
       "loss_k1_pct": 17.226542799168698,
+      "loss_k3_n_ge_2_pct": 9.320355445001738,
       "loss_k3_pct": 9.320355445001738,
+      "loss_k5_n_ge_2_pct": 3.798185625435318,
       "loss_k5_pct": 3.798185625435318,
       "method": "bytes"
     },
     {
       "groups": 21,
       "label": "Generic",
-      "loss_k1_pct": 15.077128973324953,
-      "loss_k3_pct": 10.18637400727791,
-      "loss_k5_pct": 8.763314163809524,
+      "loss_k1_n_ge_2_pct": 1.3467521152436048,
+      "loss_k1_pct": 1.3467521152436048,
+      "loss_k3_n_ge_2_pct": 0.2607774355235832,
+      "loss_k3_pct": 0.2607774355235832,
+      "loss_k5_n_ge_2_pct": 0.0,
+      "loss_k5_pct": 0.0,
       "method": "generic"
     },
     {
       "groups": 21,
       "label": "Weighted (default)",
+      "loss_k1_n_ge_2_pct": 15.73266038918571,
       "loss_k1_pct": 15.73266038918571,
+      "loss_k3_n_ge_2_pct": 10.014221592283993,
       "loss_k3_pct": 10.014221592283993,
+      "loss_k5_n_ge_2_pct": 7.3671314867793285,
       "loss_k5_pct": 7.3671314867793285,
       "method": "weighted_default"
     },
     {
       "groups": 21,
-      "label": "Weighted (joint fit)",
-      "loss_k1_pct": 16.670899967822407,
+      "label": "Weighted (frozen shared)",
+      "loss_k1_n_ge_2_pct": 16.67089996782241,
+      "loss_k1_pct": 16.67089996782241,
+      "loss_k3_n_ge_2_pct": 5.084223371258263,
       "loss_k3_pct": 5.084223371258263,
+      "loss_k5_n_ge_2_pct": 2.956797629292007,
       "loss_k5_pct": 2.956797629292007,
       "method": "weighted_pooled"
     },
     {
       "groups": 21,
-      "label": "Weighted (model held-out)",
+      "label": "Weighted (frozen model held-out)",
+      "loss_k1_n_ge_2_pct": 18.767915133798745,
       "loss_k1_pct": 18.767915133798745,
+      "loss_k3_n_ge_2_pct": 11.341651572896938,
       "loss_k3_pct": 11.341651572896938,
+      "loss_k5_n_ge_2_pct": 4.899698159042557,
       "loss_k5_pct": 4.899698159042557,
       "method": "weighted_cv"
     }
-  ],
-  "source_sha256": {
-    "fold_weights.csv": "2f47163cfa7a669104be1d2f9993d9ba56506a140218a699d7ed16e4c3d9f554",
-    "key_budget_results.csv": "0a495693118564991898dddc562c5ff7e19c71484a38e2cbde81d667979d0ecd",
-    "summary.json": "15f1a2238c3346b96f46b98c90dc116c81ae0660e7efd7f59b7e5f584cad8220"
-  }
+  ]
 }

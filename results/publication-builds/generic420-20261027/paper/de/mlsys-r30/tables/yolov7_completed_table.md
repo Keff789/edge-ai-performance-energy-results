@@ -4,7 +4,7 @@ YOLOv7-Ausführungsvergleich für die gemessenen Cuts. Generic- und Native-Durch
 
 | Host | Cut | G FPS | N FPS | N mJ/Bild |
 | --- | --- | ---: | ---: | ---: |
-| H8 | b009 | 41 | 45 | 599.65 |
+| H8 | b009 | 41 | 45 | 599.43 |
 | H8 | b044 | 45 | 50 | 515.66 |
 | H8 | b066 | 47 | 113 | 330.14 |
 | H10 | b009 | 29 | 51 | 587.48 |

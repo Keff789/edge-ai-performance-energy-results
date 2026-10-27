@@ -1,13 +1,13 @@
 [
   {
     "case": "b009",
-    "generic_fps": 41.29120249862124,
-    "generic_mj_per_image": 659.9491790052741,
+    "generic_fps": 41.19388564433142,
+    "generic_mj_per_image": null,
     "generic_relative_quality_loss": 0.005285896265169955,
     "generic_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
     "model": "yolov7_paper",
-    "native_fps": 44.90082390250171,
-    "native_mj_per_image": 599.6526937121109,
+    "native_fps": 44.76443847494783,
+    "native_mj_per_image": 599.4322504059489,
     "native_relative_quality_loss": 0.005285896265169955,
     "native_uid": "native|yolov7_paper|H8|hailo8_to_trt|b009",
     "setup": "H8"

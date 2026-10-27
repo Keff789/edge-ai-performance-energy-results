@@ -1,10 +1,16 @@
-measurement_set,method,exact_8of9,exact_9of9,within_1pct_9of9,within_5pct_9of9
-Graph-score comparison,Bytes,12,13,13,11
-Graph-score comparison,Weighted,18,19,19,19
-Graph-score comparison,Fit-H10,15,19,19,19
-Graph-score comparison,Cycle,18,18,18,18
-Graph-score comparison,Stream,18,18,18,18
-Graph-score comparison,Generic,15,18,18,18
-"Deployment comparison, quality-filtered",Bytes,12,14,13,11
-"Deployment comparison, quality-filtered",Generic,17,18,18,18
-"Deployment comparison, quality-filtered",Calibrated,13,18,18,18
+method,target_success,groups,minimum_budget
+bytes,0.9,21,12
+bytes,0.95,21,12
+bytes,1.0,21,14
+generic,0.9,21,2
+generic,0.95,21,2
+generic,1.0,21,4
+weighted_default,0.9,21,14
+weighted_default,0.95,21,15
+weighted_default,1.0,21,18
+weighted_pooled,0.9,21,11
+weighted_pooled,0.95,21,12
+weighted_pooled,1.0,21,15
+weighted_cv,0.9,21,11
+weighted_cv,0.95,21,12
+weighted_cv,1.0,21,15

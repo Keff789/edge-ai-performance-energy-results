@@ -1,7 +1,7 @@
 {
   "profile": "mlsys-r30",
   "frozen_profile": "mlsys-r22",
-  "scope": "Current paper presentation plus the seven-model weighted analysis; original measurements unchanged.",
+  "scope": "Source-admitted current deployment observations; archived R22, Full baselines and the literal b066 case remain unchanged.",
   "existing_core_assets": [
     {
       "asset_id": "fig:runners",
@@ -10,7 +10,8 @@
       "description": "Generic and Native execution schematic",
       "generator": "scripts/split-inference/publication_mlsys_r30.py:current_schematic",
       "input_files": [
-        "scripts/split-inference/publication_mlsys_figures.py"
+        "scripts/split-inference/publication_mlsys_figures.py",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [],
       "kind": "figure",
@@ -51,7 +52,7 @@
         "results/split-inference/publications/mlsys-r30/figures/system_overview.png",
         "results/split-inference/publications/mlsys-r30/figures/system_overview.json"
       ],
-      "verification": "Exact plotted coordinates and UID/source checks; deterministic PDF/SVG/PNG byte comparison; source specification for conceptual schematic."
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:experimental-scope",
@@ -59,7 +60,8 @@
       "description": "Deployment platforms, datasets and protocol",
       "generator": "scripts/split-inference/publication_mlsys.py:build_methods",
       "input_files": [
-        "results/split-inference/publication-inputs/mlsys-r22/methods_spec.json"
+        "results/split-inference/publication-inputs/mlsys-r22/methods_spec.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [],
       "kind": "table",
@@ -94,7 +96,7 @@
         "results/split-inference/publications/mlsys-r30/tables/experimental_scope.md",
         "results/split-inference/publications/mlsys-r30/tables/experimental_scope.tex"
       ],
-      "verification": "Source specification for methods; independently counted original rows for cohort/model inventories."
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "fig:baseline-effect",
@@ -105,7 +107,8 @@
       "input_files": [
         "results/split-inference/data/inputs/cases.json",
         "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/split-inference/data/inputs/energy_repeats.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "generic|mobilenet_v3_large|DeepX|deepx_to_trt|b001",
@@ -279,6 +282,7 @@
         "generic|yolo11l|DeepX|deepx_to_trt|b003",
         "generic|yolo11l|DeepX|deepx_to_trt|b062",
         "generic|yolo11l|DeepX|deepx_to_trt|b120",
+        "generic|yolo11l|DeepX|deepx_to_trt|b511",
         "generic|yolo11l|H10|hailo10h_to_trt|b003",
         "generic|yolo11l|H10|hailo10h_to_trt|b062",
         "generic|yolo11l|H10|hailo10h_to_trt|b120",
@@ -599,7 +603,7 @@
         "results/split-inference/publications/mlsys-r30/figures/fastest_split_baseline_comparison.csv",
         "results/split-inference/publications/mlsys-r30/figures/fastest_split_baseline_comparison.json"
       ],
-      "verification": "Exact plotted coordinates and UID/source checks; deterministic PDF/SVG/PNG byte comparison; source specification for conceptual schematic."
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:full-performance",
@@ -609,7 +613,8 @@
       "input_files": [
         "results/split-inference/data/inputs/cases.json",
         "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/split-inference/data/inputs/energy_repeats.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "native|mobilenet_v3_large|DeepX|native_full_deepx|full",
@@ -690,7 +695,7 @@
         "results/split-inference/publications/mlsys-r30/tables/full_performance_table.md",
         "results/split-inference/publications/mlsys-r30/tables/full_performance_table.tex"
       ],
-      "verification": "UID joins, independent numerical reference checks, table render and deterministic byte comparison"
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:best-cases",
@@ -700,7 +705,8 @@
       "input_files": [
         "results/split-inference/data/inputs/cases.json",
         "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/split-inference/data/inputs/energy_repeats.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "generic|mobilenet_v3_large|DeepX|deepx_to_trt|b001",
@@ -874,6 +880,7 @@
         "generic|yolo11l|DeepX|deepx_to_trt|b003",
         "generic|yolo11l|DeepX|deepx_to_trt|b062",
         "generic|yolo11l|DeepX|deepx_to_trt|b120",
+        "generic|yolo11l|DeepX|deepx_to_trt|b511",
         "generic|yolo11l|H10|hailo10h_to_trt|b003",
         "generic|yolo11l|H10|hailo10h_to_trt|b062",
         "generic|yolo11l|H10|hailo10h_to_trt|b120",
@@ -1189,7 +1196,7 @@
         "results/split-inference/publications/mlsys-r30/tables/best_cases_table.md",
         "results/split-inference/publications/mlsys-r30/tables/best_cases_table.tex"
       ],
-      "verification": "UID joins, independent numerical reference checks, table render and deterministic byte comparison"
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:winner-quality",
@@ -1199,9 +1206,11 @@
       "input_files": [
         "results/split-inference/data/inputs/cases.json",
         "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/split-inference/data/inputs/energy_repeats.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
+        "generic|yolo11l|DeepX|deepx_to_trt|b511",
         "native|mobilenet_v3_large|DeepX|deepx_to_trt|b027",
         "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135",
         "native|mobilenet_v3_large|DeepX|native_full_deepx|full",
@@ -1216,8 +1225,6 @@
         "native|resnet50|H10|hailo10h_to_trt|b095",
         "native|resnet50|H10|native_full_tensorrt|full",
         "native|yolo11l|DeepX|native_full_deepx|full",
-        "native|yolo11l|H10|hailo10h_to_trt|b120",
-        "native|yolo11l|H10|native_full_tensorrt|full",
         "native|yolo26m|H10|hailo10h_to_trt|b043",
         "native|yolo26m|H10|native_full_tensorrt|full",
         "native|yolo26m|H8|native_full_tensorrt|full",
@@ -1263,7 +1270,7 @@
         "results/split-inference/publications/mlsys-r30/tables/r14_winner_quality.md",
         "results/split-inference/publications/mlsys-r30/tables/r14_winner_quality.tex"
       ],
-      "verification": "UID joins, independent numerical reference checks, table render and deterministic byte comparison"
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "fig:yolov7-case",
@@ -1274,7 +1281,8 @@
       "input_files": [
         "results/split-inference/data/inputs/cases.json",
         "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/split-inference/data/inputs/energy_repeats.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "native|yolov7_paper|H8|hailo8_to_trt|b066",
@@ -1322,7 +1330,7 @@
         "results/split-inference/publications/mlsys-r30/figures/yolov7_h8_case.csv",
         "results/split-inference/publications/mlsys-r30/figures/yolov7_h8_case.json"
       ],
-      "verification": "Exact plotted coordinates and UID/source checks; deterministic PDF/SVG/PNG byte comparison; source specification for conceptual schematic."
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "fig:resnet-energy",
@@ -1333,7 +1341,8 @@
       "input_files": [
         "results/split-inference/data/inputs/cases.json",
         "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/split-inference/data/inputs/energy_repeats.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "native|resnet50|H8|hailo8_to_trt|b002",
@@ -1399,18 +1408,17 @@
         "results/split-inference/publications/mlsys-r30/figures/resnet_h8_energy_current.csv",
         "results/split-inference/publications/mlsys-r30/figures/resnet_h8_energy_current.json"
       ],
-      "verification": "Exact plotted coordinates and UID/source checks; deterministic PDF/SVG/PNG byte comparison; source specification for conceptual schematic."
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "fig:selectors",
-      "caption": "Generic-to-Native selection after the numerical 5% CPU-relative quality filter, using 187 paired cuts. Each marker shows the Native throughput lost by choosing the Generic winner in one model/setup group. Zero means no loss. There are 9 exact winner agreements in 21 groups. Each group receives equal weight; the group mean loss is 15.08%. Selection uses unrounded FPS and stable UID ties.",
-      "data_generation": "deepx_native_a4_20261015",
-      "description": "Quality-filtered Generic-to-Native loss, 187 pairs",
-      "generator": "scripts/split-inference/publication_mlsys_figures.py",
+      "caption": "Native throughput lost by selecting the Generic winner in 21 model-device groups with 187 quality-admissible paired cuts. Groups contribute equally. Arrows outside the 0\u20136% axis label the larger losses, which remain in the aggregate results.",
+      "data_generation": "Current source-bound Generic and Native observations; original records remain archived and study metadata records observation authority.",
+      "description": "Current Generic-to-Native selection, 187 verified pairs in 21 model/device groups",
+      "generator": "scripts/supplementary-studies/rq2-native-scope-20261027/reproduce.py:render",
       "input_files": [
-        "results/split-inference/data/inputs/cases.json",
-        "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/supplementary-studies/rq2-native-scope-20261027/INPUT_MANIFEST.json",
+        "results/supplementary-studies/rq2-native-scope-20261027/data/quality_pairs.json"
       ],
       "input_uids": [
         "generic|mobilenet_v3_large|DeepX|deepx_to_trt|b001",
@@ -1828,7 +1836,13 @@
         "results/split-inference/publications/mlsys-r30/figures/quality_generic_selection_loss.csv",
         "results/split-inference/publications/mlsys-r30/figures/quality_generic_selection_loss.json"
       ],
-      "verification": "Exact plotted coordinates and UID/source checks; deterministic PDF/SVG/PNG byte comparison; source specification for conceptual schematic."
+      "verification": "Verified current study numerical reproduction and identity/accounting gates; archived R22 reference evidence is retained separately.",
+      "current_cohort": {
+        "verified_pairs": 187,
+        "model_device_groups": 21,
+        "singleton_groups": 0
+      },
+      "archived_reference_scope": "Reference archive, original occurrences and reference captions retain their historical R22 scope; current cohort and input identities are given above."
     },
     {
       "asset_id": "tab:budget",
@@ -1972,7 +1986,8 @@
         "results/supplementary-studies/mlsys-evidence-mechanism-20261017/tables/mechanism_summary.csv",
         "results/supplementary-studies/mlsys-resnet-replication-20261017/tables/replication_blocks.csv",
         "results/supplementary-studies/mlsys-resnet-replication-20261017/tables/replication_summaries.csv",
-        "scripts/split-inference/mlsys_evidence_checks/r20_extract.py"
+        "scripts/split-inference/mlsys_evidence_checks/r20_extract.py",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "native|mobilenet_v3_large|DeepX|deepx_to_trt|b001",
@@ -2198,7 +2213,7 @@
         "results/split-inference/publications/mlsys-r30/tables/r15_budget.tex",
         "results/split-inference/publications/mlsys-r30/tables/r15_budget.md"
       ],
-      "verification": "Original bound R15 quality/calibration/process checks; all folds, predictions, memberships, budget groups, block contrasts and nominal intervals recomputed; deterministic CSV/JSON/TeX/Markdown comparison."
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:scheduling",
@@ -2342,7 +2357,8 @@
         "results/supplementary-studies/mlsys-evidence-mechanism-20261017/tables/mechanism_summary.csv",
         "results/supplementary-studies/mlsys-resnet-replication-20261017/tables/replication_blocks.csv",
         "results/supplementary-studies/mlsys-resnet-replication-20261017/tables/replication_summaries.csv",
-        "scripts/split-inference/mlsys_evidence_checks/r20_extract.py"
+        "scripts/split-inference/mlsys_evidence_checks/r20_extract.py",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "2dd83237edba776775d83f0e27c790ef3100b0f11a64f65c3c53eb0dea61300a",
@@ -2461,7 +2477,7 @@
         "results/split-inference/publications/mlsys-r30/tables/r15_mechanism.tex",
         "results/split-inference/publications/mlsys-r30/tables/r15_mechanism.md"
       ],
-      "verification": "Original bound R15 quality/calibration/process checks; all folds, predictions, memberships, budget groups, block contrasts and nominal intervals recomputed; deterministic CSV/JSON/TeX/Markdown comparison."
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:stage-costs",
@@ -2506,7 +2522,8 @@
         "results/supplementary-studies/stage-cost-composition/inputs/measurements/PC/h10_regnet_b059_block3.json",
         "results/supplementary-studies/stage-cost-composition/inputs/measurements/PC/h10_regnet_b123_block1.json",
         "results/supplementary-studies/stage-cost-composition/inputs/measurements/PC/h10_regnet_b123_block2.json",
-        "results/supplementary-studies/stage-cost-composition/inputs/measurements/PC/h10_regnet_b123_block3.json"
+        "results/supplementary-studies/stage-cost-composition/inputs/measurements/PC/h10_regnet_b123_block3.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "historical_THESIS20|regnet_x_1_6gf|H10|hailo10h_to_trt|uint8_dequant_fp16|hailo10_infermodel_async_fifo|classification:classification_logits:7e81637d07062cb8ef8bad5a0db478cab1a08ede42cf1c306f0e7757a4f670e1|3|8|UNKNOWN|UNKNOWN",
@@ -2563,7 +2580,7 @@
         "results/split-inference/publications/mlsys-r30/tables/stage_cost_summary.md",
         "results/split-inference/publications/mlsys-r30/tables/stage_cost_summary.tex"
       ],
-      "verification": "UID joins, independent numerical reference checks, table render and deterministic byte comparison"
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:cohorts",
@@ -2571,7 +2588,8 @@
       "description": "Deployment cohort counts",
       "generator": "scripts/split-inference/publication_mlsys.py:build_methods",
       "input_files": [
-        "results/split-inference/data/PAPER_DATASET.json"
+        "results/split-inference/data/PAPER_DATASET.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "generic|mobilenet_v3_large|DeepX|deepx_to_trt|b001",
@@ -2745,6 +2763,7 @@
         "generic|yolo11l|DeepX|deepx_to_trt|b003",
         "generic|yolo11l|DeepX|deepx_to_trt|b062",
         "generic|yolo11l|DeepX|deepx_to_trt|b120",
+        "generic|yolo11l|DeepX|deepx_to_trt|b511",
         "generic|yolo11l|H10|hailo10h_to_trt|b003",
         "generic|yolo11l|H10|hailo10h_to_trt|b062",
         "generic|yolo11l|H10|hailo10h_to_trt|b120",
@@ -3058,7 +3077,7 @@
         "results/split-inference/publications/mlsys-r30/tables/cohorts.md",
         "results/split-inference/publications/mlsys-r30/tables/cohorts.tex"
       ],
-      "verification": "Source specification for methods; independently counted original rows for cohort/model inventories."
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:fastest-split-baselines",
@@ -3068,7 +3087,8 @@
       "input_files": [
         "results/split-inference/data/inputs/cases.json",
         "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/split-inference/data/inputs/energy_repeats.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "generic|mobilenet_v3_large|DeepX|deepx_to_trt|b001",
@@ -3242,6 +3262,7 @@
         "generic|yolo11l|DeepX|deepx_to_trt|b003",
         "generic|yolo11l|DeepX|deepx_to_trt|b062",
         "generic|yolo11l|DeepX|deepx_to_trt|b120",
+        "generic|yolo11l|DeepX|deepx_to_trt|b511",
         "generic|yolo11l|H10|hailo10h_to_trt|b003",
         "generic|yolo11l|H10|hailo10h_to_trt|b062",
         "generic|yolo11l|H10|hailo10h_to_trt|b120",
@@ -3556,7 +3577,7 @@
         "results/split-inference/publications/mlsys-r30/tables/fastest_split_baselines.md",
         "results/split-inference/publications/mlsys-r30/tables/fastest_split_baselines.tex"
       ],
-      "verification": "UID joins, independent numerical reference checks, table render and deterministic byte comparison"
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "fig:fastest-tradeoff",
@@ -3567,7 +3588,8 @@
       "input_files": [
         "results/split-inference/data/inputs/cases.json",
         "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/split-inference/data/inputs/energy_repeats.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "generic|mobilenet_v3_large|DeepX|deepx_to_trt|b001",
@@ -3741,6 +3763,7 @@
         "generic|yolo11l|DeepX|deepx_to_trt|b003",
         "generic|yolo11l|DeepX|deepx_to_trt|b062",
         "generic|yolo11l|DeepX|deepx_to_trt|b120",
+        "generic|yolo11l|DeepX|deepx_to_trt|b511",
         "generic|yolo11l|H10|hailo10h_to_trt|b003",
         "generic|yolo11l|H10|hailo10h_to_trt|b062",
         "generic|yolo11l|H10|hailo10h_to_trt|b120",
@@ -4060,7 +4083,7 @@
         "results/split-inference/publications/mlsys-r30/figures/fastest_deployment_tradeoff.csv",
         "results/split-inference/publications/mlsys-r30/figures/fastest_deployment_tradeoff.json"
       ],
-      "verification": "Exact plotted coordinates and UID/source checks; deterministic PDF/SVG/PNG byte comparison; source specification for conceptual schematic."
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:current-full-details",
@@ -4070,7 +4093,8 @@
       "input_files": [
         "results/split-inference/data/inputs/cases.json",
         "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/split-inference/data/inputs/energy_repeats.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "native|mobilenet_v3_large|DeepX|native_full_deepx|full",
@@ -4150,7 +4174,7 @@
         "results/split-inference/publications/mlsys-r30/tables/current_full_details.md",
         "results/split-inference/publications/mlsys-r30/tables/current_full_details.tex"
       ],
-      "verification": "UID joins, independent numerical reference checks, table render and deterministic byte comparison"
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:winner-energy",
@@ -4160,9 +4184,11 @@
       "input_files": [
         "results/split-inference/data/inputs/cases.json",
         "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/split-inference/data/inputs/energy_repeats.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
+        "generic|yolo11l|DeepX|deepx_to_trt|b511",
         "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135",
         "native|mobilenet_v3_large|DeepX|native_full_deepx|full",
         "native|regnet_x_1_6gf|DeepX|native_full_deepx|full",
@@ -4172,8 +4198,6 @@
         "native|resnet50|H10|hailo10h_to_trt|b095",
         "native|resnet50|H10|native_full_tensorrt|full",
         "native|yolo11l|DeepX|native_full_deepx|full",
-        "native|yolo11l|H10|hailo10h_to_trt|b120",
-        "native|yolo11l|H10|native_full_tensorrt|full",
         "native|yolo26m|H10|hailo10h_to_trt|b043",
         "native|yolo26m|H10|native_full_tensorrt|full",
         "native|yolo26m|H8|native_full_tensorrt|full",
@@ -4218,7 +4242,7 @@
         "results/split-inference/publications/mlsys-r30/tables/r16_winner_energy_details.md",
         "results/split-inference/publications/mlsys-r30/tables/r16_winner_energy_details.tex"
       ],
-      "verification": "UID joins, independent numerical reference checks, table render and deterministic byte comparison"
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:winner-repeat-ranges",
@@ -4228,9 +4252,11 @@
       "input_files": [
         "results/split-inference/data/inputs/cases.json",
         "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/split-inference/data/inputs/energy_repeats.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
+        "generic|yolo11l|DeepX|deepx_to_trt|b511",
         "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135",
         "native|mobilenet_v3_large|DeepX|native_full_deepx|full",
         "native|regnet_x_1_6gf|DeepX|native_full_deepx|full",
@@ -4238,7 +4264,6 @@
         "native|resnet50|DeepX|native_full_deepx|full",
         "native|resnet50|H10|hailo10h_to_trt|b095",
         "native|yolo11l|DeepX|native_full_deepx|full",
-        "native|yolo11l|H10|hailo10h_to_trt|b120",
         "native|yolo26m|H10|hailo10h_to_trt|b043",
         "native|yolo26m|H8|native_full_tensorrt|full",
         "native|yolo26s|DeepX|native_full_tensorrt|full",
@@ -4282,7 +4307,7 @@
         "results/split-inference/publications/mlsys-r30/tables/r21_winner_repeat_ranges.md",
         "results/split-inference/publications/mlsys-r30/tables/r21_winner_repeat_ranges.tex"
       ],
-      "verification": "UID joins, independent numerical reference checks, table render and deterministic byte comparison"
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:current-top2-relative",
@@ -4292,7 +4317,8 @@
       "input_files": [
         "results/split-inference/data/inputs/cases.json",
         "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/split-inference/data/inputs/energy_repeats.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "generic|mobilenet_v3_large|DeepX|deepx_to_trt|b001",
@@ -4466,6 +4492,7 @@
         "generic|yolo11l|DeepX|deepx_to_trt|b003",
         "generic|yolo11l|DeepX|deepx_to_trt|b062",
         "generic|yolo11l|DeepX|deepx_to_trt|b120",
+        "generic|yolo11l|DeepX|deepx_to_trt|b511",
         "generic|yolo11l|H10|hailo10h_to_trt|b003",
         "generic|yolo11l|H10|hailo10h_to_trt|b062",
         "generic|yolo11l|H10|hailo10h_to_trt|b120",
@@ -4780,7 +4807,7 @@
         "results/split-inference/publications/mlsys-r30/tables/current_top2_relative.md",
         "results/split-inference/publications/mlsys-r30/tables/current_top2_relative.tex"
       ],
-      "verification": "UID joins, independent numerical reference checks, table render and deterministic byte comparison"
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:current-quality",
@@ -4790,9 +4817,11 @@
       "input_files": [
         "results/split-inference/data/inputs/cases.json",
         "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/split-inference/data/inputs/energy_repeats.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
+        "generic|yolo11l|DeepX|deepx_to_trt|b511",
         "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135",
         "native|mobilenet_v3_large|DeepX|native_full_deepx|full",
         "native|regnet_x_1_6gf|DeepX|native_full_deepx|full",
@@ -4802,8 +4831,6 @@
         "native|resnet50|H10|hailo10h_to_trt|b095",
         "native|resnet50|H10|native_full_tensorrt|full",
         "native|yolo11l|DeepX|native_full_deepx|full",
-        "native|yolo11l|H10|hailo10h_to_trt|b120",
-        "native|yolo11l|H10|native_full_tensorrt|full",
         "native|yolo26m|H10|hailo10h_to_trt|b043",
         "native|yolo26m|H10|native_full_tensorrt|full",
         "native|yolo26m|H8|native_full_tensorrt|full",
@@ -4848,7 +4875,7 @@
         "results/split-inference/publications/mlsys-r30/tables/current_quality_highlights.md",
         "results/split-inference/publications/mlsys-r30/tables/current_quality_highlights.tex"
       ],
-      "verification": "UID joins, independent numerical reference checks, table render and deterministic byte comparison"
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:supp-setup",
@@ -4856,7 +4883,8 @@
       "description": "Recorded setup and workload metadata with scope",
       "generator": "scripts/split-inference/publication_mlsys.py:build_methods",
       "input_files": [
-        "results/split-inference/publication-inputs/mlsys-r22/methods_spec.json"
+        "results/split-inference/publication-inputs/mlsys-r22/methods_spec.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [],
       "kind": "table",
@@ -4891,7 +4919,7 @@
         "results/split-inference/publications/mlsys-r30/tables/supplement_setup.md",
         "results/split-inference/publications/mlsys-r30/tables/supplement_setup.tex"
       ],
-      "verification": "Source specification for methods; independently counted original rows for cohort/model inventories."
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:supp-endpoint-contracts",
@@ -4899,7 +4927,8 @@
       "description": "Task-completion contracts by model/output path",
       "generator": "scripts/split-inference/publication_mlsys.py:build_methods",
       "input_files": [
-        "results/split-inference/publication-inputs/mlsys-r22/methods_spec.json"
+        "results/split-inference/publication-inputs/mlsys-r22/methods_spec.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [],
       "kind": "table",
@@ -4934,7 +4963,7 @@
         "results/split-inference/publications/mlsys-r30/tables/r20_endpoint_contracts.md",
         "results/split-inference/publications/mlsys-r30/tables/r20_endpoint_contracts.tex"
       ],
-      "verification": "Source specification for methods; independently counted original rows for cohort/model inventories."
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:yolov7-completion",
@@ -4944,7 +4973,8 @@
       "input_files": [
         "results/split-inference/data/inputs/cases.json",
         "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/split-inference/data/inputs/energy_repeats.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "generic|yolov7_paper|DeepX|deepx_to_trt|b009",
@@ -5000,7 +5030,7 @@
         "results/split-inference/publications/mlsys-r30/tables/yolov7_completed_table.md",
         "results/split-inference/publications/mlsys-r30/tables/yolov7_completed_table.tex"
       ],
-      "verification": "UID joins, independent numerical reference checks, table render and deterministic byte comparison"
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:current-selection-groups",
@@ -5010,7 +5040,8 @@
       "input_files": [
         "results/split-inference/data/inputs/cases.json",
         "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/split-inference/data/inputs/energy_repeats.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "generic|mobilenet_v3_large|DeepX|deepx_to_trt|b001",
@@ -5456,18 +5487,17 @@
         "results/split-inference/publications/mlsys-r30/tables/current_selection_groups.md",
         "results/split-inference/publications/mlsys-r30/tables/current_selection_groups.tex"
       ],
-      "verification": "UID joins, independent numerical reference checks, table render and deterministic byte comparison"
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "fig:supp-unfiltered-selection",
-      "caption": "Generic-to-Native selection before quality filtering, using 204 paired cuts. Each marker shows the Native throughput lost by choosing the Generic winner in one model/setup group. Zero means no loss. There are 9 exact winner agreements in 21 groups. Each group receives equal weight; the group mean loss is 15.16%. Selection uses unrounded FPS and stable UID ties.",
-      "data_generation": "deepx_native_a4_20261015",
-      "description": "Unfiltered Generic-to-Native loss, 204 pairs",
-      "generator": "scripts/split-inference/publication_mlsys_figures.py",
+      "caption": "Native throughput lost by selecting the Generic winner in 21 model-device groups with 204 paired cuts before quality filtering. Groups contribute equally. Arrows outside the 0\u20136% axis label the larger losses, which remain in the aggregate results.",
+      "data_generation": "Current source-bound Generic and Native observations; original records remain archived and study metadata records observation authority.",
+      "description": "Current Generic-to-Native selection, 204 verified pairs in 21 model/device groups",
+      "generator": "scripts/supplementary-studies/rq2-native-scope-20261027/reproduce.py:render",
       "input_files": [
-        "results/split-inference/data/inputs/cases.json",
-        "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/supplementary-studies/rq2-native-scope-20261027/INPUT_MANIFEST.json",
+        "results/supplementary-studies/rq2-native-scope-20261027/data/current_pairs.json"
       ],
       "input_uids": [
         "generic|mobilenet_v3_large|DeepX|deepx_to_trt|b001",
@@ -5918,7 +5948,13 @@
         "results/split-inference/publications/mlsys-r30/figures/current_generic_selection_loss.csv",
         "results/split-inference/publications/mlsys-r30/figures/current_generic_selection_loss.json"
       ],
-      "verification": "Exact plotted coordinates and UID/source checks; deterministic PDF/SVG/PNG byte comparison; source specification for conceptual schematic."
+      "verification": "Verified current study numerical reproduction and identity/accounting gates; archived R22 reference evidence is retained separately.",
+      "current_cohort": {
+        "verified_pairs": 204,
+        "model_device_groups": 21,
+        "singleton_groups": 0
+      },
+      "archived_reference_scope": "Reference archive, original occurrences and reference captions retain their historical R22 scope; current cohort and input identities are given above."
     },
     {
       "asset_id": "tab:quality-advantages",
@@ -5928,7 +5964,8 @@
       "input_files": [
         "results/split-inference/data/inputs/cases.json",
         "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/split-inference/data/inputs/energy_repeats.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "generic|mobilenet_v3_large|DeepX|deepx_to_trt|b001",
@@ -6102,6 +6139,7 @@
         "generic|yolo11l|DeepX|deepx_to_trt|b003",
         "generic|yolo11l|DeepX|deepx_to_trt|b062",
         "generic|yolo11l|DeepX|deepx_to_trt|b120",
+        "generic|yolo11l|DeepX|deepx_to_trt|b511",
         "generic|yolo11l|H10|hailo10h_to_trt|b003",
         "generic|yolo11l|H10|hailo10h_to_trt|b062",
         "generic|yolo11l|H10|hailo10h_to_trt|b120",
@@ -6416,7 +6454,7 @@
         "results/split-inference/publications/mlsys-r30/tables/r14_quality_advantages.md",
         "results/split-inference/publications/mlsys-r30/tables/r14_quality_advantages.tex"
       ],
-      "verification": "UID joins, independent numerical reference checks, table render and deterministic byte comparison"
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:budget-details",
@@ -6426,7 +6464,8 @@
       "input_files": [
         "results/split-inference/data/inputs/cases.json",
         "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/split-inference/data/inputs/energy_repeats.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "generic|mobilenet_v3_large|DeepX|deepx_to_trt|b001",
@@ -6600,6 +6639,7 @@
         "generic|yolo11l|DeepX|deepx_to_trt|b003",
         "generic|yolo11l|DeepX|deepx_to_trt|b062",
         "generic|yolo11l|DeepX|deepx_to_trt|b120",
+        "generic|yolo11l|DeepX|deepx_to_trt|b511",
         "generic|yolo11l|H10|hailo10h_to_trt|b003",
         "generic|yolo11l|H10|hailo10h_to_trt|b062",
         "generic|yolo11l|H10|hailo10h_to_trt|b120",
@@ -6914,7 +6954,7 @@
         "results/split-inference/publications/mlsys-r30/tables/r14_budget_details.md",
         "results/split-inference/publications/mlsys-r30/tables/r14_budget_details.tex"
       ],
-      "verification": "UID joins, independent numerical reference checks, table render and deterministic byte comparison"
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:supp-calibration-summary",
@@ -7058,7 +7098,8 @@
         "results/supplementary-studies/mlsys-evidence-mechanism-20261017/tables/mechanism_summary.csv",
         "results/supplementary-studies/mlsys-resnet-replication-20261017/tables/replication_blocks.csv",
         "results/supplementary-studies/mlsys-resnet-replication-20261017/tables/replication_summaries.csv",
-        "scripts/split-inference/mlsys_evidence_checks/r20_extract.py"
+        "scripts/split-inference/mlsys_evidence_checks/r20_extract.py",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "native|mobilenet_v3_large|DeepX|deepx_to_trt|b001",
@@ -7248,7 +7289,7 @@
         "results/split-inference/publications/mlsys-r30/tables/r15_calibration_summary.tex",
         "results/split-inference/publications/mlsys-r30/tables/r15_calibration_summary.md"
       ],
-      "verification": "Original bound R15 quality/calibration/process checks; all folds, predictions, memberships, budget groups, block contrasts and nominal intervals recomputed; deterministic CSV/JSON/TeX/Markdown comparison."
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:supp-calibration-groups",
@@ -7392,7 +7433,8 @@
         "results/supplementary-studies/mlsys-evidence-mechanism-20261017/tables/mechanism_summary.csv",
         "results/supplementary-studies/mlsys-resnet-replication-20261017/tables/replication_blocks.csv",
         "results/supplementary-studies/mlsys-resnet-replication-20261017/tables/replication_summaries.csv",
-        "scripts/split-inference/mlsys_evidence_checks/r20_extract.py"
+        "scripts/split-inference/mlsys_evidence_checks/r20_extract.py",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "native|mobilenet_v3_large|DeepX|deepx_to_trt|b001",
@@ -7582,7 +7624,7 @@
         "results/split-inference/publications/mlsys-r30/tables/r15_calibration_groups.tex",
         "results/split-inference/publications/mlsys-r30/tables/r15_calibration_groups.md"
       ],
-      "verification": "Original bound R15 quality/calibration/process checks; all folds, predictions, memberships, budget groups, block contrasts and nominal intervals recomputed; deterministic CSV/JSON/TeX/Markdown comparison."
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:supp-scheduling-summary",
@@ -7726,7 +7768,8 @@
         "results/supplementary-studies/mlsys-evidence-mechanism-20261017/tables/mechanism_summary.csv",
         "results/supplementary-studies/mlsys-resnet-replication-20261017/tables/replication_blocks.csv",
         "results/supplementary-studies/mlsys-resnet-replication-20261017/tables/replication_summaries.csv",
-        "scripts/split-inference/mlsys_evidence_checks/r20_extract.py"
+        "scripts/split-inference/mlsys_evidence_checks/r20_extract.py",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "2dd83237edba776775d83f0e27c790ef3100b0f11a64f65c3c53eb0dea61300a",
@@ -7845,7 +7888,7 @@
         "results/split-inference/publications/mlsys-r30/tables/r15_scheduling_summary.tex",
         "results/split-inference/publications/mlsys-r30/tables/r15_scheduling_summary.md"
       ],
-      "verification": "Original bound R15 quality/calibration/process checks; all folds, predictions, memberships, budget groups, block contrasts and nominal intervals recomputed; deterministic CSV/JSON/TeX/Markdown comparison."
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:supp-scheduling-blocks",
@@ -7989,7 +8032,8 @@
         "results/supplementary-studies/mlsys-evidence-mechanism-20261017/tables/mechanism_summary.csv",
         "results/supplementary-studies/mlsys-resnet-replication-20261017/tables/replication_blocks.csv",
         "results/supplementary-studies/mlsys-resnet-replication-20261017/tables/replication_summaries.csv",
-        "scripts/split-inference/mlsys_evidence_checks/r20_extract.py"
+        "scripts/split-inference/mlsys_evidence_checks/r20_extract.py",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "2dd83237edba776775d83f0e27c790ef3100b0f11a64f65c3c53eb0dea61300a",
@@ -8108,7 +8152,7 @@
         "results/split-inference/publications/mlsys-r30/tables/r15_scheduling_blocks.tex",
         "results/split-inference/publications/mlsys-r30/tables/r15_scheduling_blocks.md"
       ],
-      "verification": "Original bound R15 quality/calibration/process checks; all folds, predictions, memberships, budget groups, block contrasts and nominal intervals recomputed; deterministic CSV/JSON/TeX/Markdown comparison."
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:supp-scheduling-native-only",
@@ -8252,7 +8296,8 @@
         "results/supplementary-studies/mlsys-evidence-mechanism-20261017/tables/mechanism_summary.csv",
         "results/supplementary-studies/mlsys-resnet-replication-20261017/tables/replication_blocks.csv",
         "results/supplementary-studies/mlsys-resnet-replication-20261017/tables/replication_summaries.csv",
-        "scripts/split-inference/mlsys_evidence_checks/r20_extract.py"
+        "scripts/split-inference/mlsys_evidence_checks/r20_extract.py",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "3e31ac12c24a1372c38af5ac0816b8ae2d46604d7e064d5a0175491c2bf5ee9f",
@@ -8311,7 +8356,7 @@
         "results/split-inference/publications/mlsys-r30/tables/r15_scheduling_native_only.tex",
         "results/split-inference/publications/mlsys-r30/tables/r15_scheduling_native_only.md"
       ],
-      "verification": "Original bound R15 quality/calibration/process checks; all folds, predictions, memberships, budget groups, block contrasts and nominal intervals recomputed; deterministic CSV/JSON/TeX/Markdown comparison."
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:selectors",
@@ -8322,7 +8367,8 @@
         "results/supplementary-studies/mlsys-selection-20261007/inputs/analysis/evidence/tables/rank_cases.csv",
         "results/supplementary-studies/mlsys-selection-20261007/inputs/analysis/reported_update/reported_results.csv",
         "results/supplementary-studies/thesis20-ranking-20261005/tables/method_groups.csv",
-        "results/supplementary-studies/thesis20-ranking-20261005/source/deep_analysis/tables/energy_cases.csv"
+        "results/supplementary-studies/thesis20-ranking-20261005/source/deep_analysis/tables/energy_cases.csv",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "energy|augmentation|yolo11l|b120|orin_nx_deepx_m1_01|deepx_to_trt|deepx",
@@ -8759,7 +8805,7 @@
         "results/split-inference/publications/mlsys-r30/tables/ranking_tables.md",
         "results/split-inference/publications/mlsys-r30/tables/ranking_tables.tex"
       ],
-      "verification": "UID joins, independent numerical reference checks, table render and deterministic byte comparison"
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "fig:historical-selectors",
@@ -8771,7 +8817,8 @@
         "results/supplementary-studies/mlsys-selection-20261007/inputs/analysis/evidence/tables/rank_cases.csv",
         "results/supplementary-studies/mlsys-selection-20261007/inputs/analysis/reported_update/reported_results.csv",
         "results/supplementary-studies/thesis20-ranking-20261005/tables/method_groups.csv",
-        "results/supplementary-studies/thesis20-ranking-20261005/source/deep_analysis/tables/energy_cases.csv"
+        "results/supplementary-studies/thesis20-ranking-20261005/source/deep_analysis/tables/energy_cases.csv",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "energy|augmentation|yolo11l|b120|orin_nx_deepx_m1_01|deepx_to_trt|deepx",
@@ -9213,7 +9260,7 @@
         "results/split-inference/publications/mlsys-r30/figures/selector_loss_heatmap.csv",
         "results/split-inference/publications/mlsys-r30/figures/selector_loss_heatmap.json"
       ],
-      "verification": "Exact plotted coordinates and UID/source checks; deterministic PDF/SVG/PNG byte comparison; source specification for conceptual schematic."
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:models",
@@ -9222,7 +9269,8 @@
       "generator": "scripts/split-inference/publication_mlsys.py:build_methods",
       "input_files": [
         "results/supplementary-studies/mlsys-selection-20261007/inputs/analysis/evidence/inputs/graph_features.csv",
-        "results/split-inference/data/PAPER_DATASET.json"
+        "results/split-inference/data/PAPER_DATASET.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "native|mobilenet_v3_large|DeepX|deepx_to_trt|b001",
@@ -9463,7 +9511,7 @@
         "results/split-inference/publications/mlsys-r30/tables/models.md",
         "results/split-inference/publications/mlsys-r30/tables/models.tex"
       ],
-      "verification": "Source specification for methods; independently counted original rows for cohort/model inventories."
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     },
     {
       "asset_id": "tab:vendor-quality",
@@ -9473,7 +9521,8 @@
       "input_files": [
         "results/split-inference/data/inputs/cases.json",
         "results/split-inference/data/inputs/selected_evidence.json",
-        "results/split-inference/data/inputs/energy_repeats.json"
+        "results/split-inference/data/inputs/energy_repeats.json",
+        "private/local-output/current-six-pack-final/paper/publications/mlsys-r30/data/current_rq1_binding.json"
       ],
       "input_uids": [
         "native|mobilenet_v3_large|DeepX|deepx_to_trt|b027",
@@ -9517,10 +9566,10 @@
         "results/split-inference/publications/mlsys-r30/tables/vendor_quality_recovery_table.md",
         "results/split-inference/publications/mlsys-r30/tables/vendor_quality_recovery_table.tex"
       ],
-      "verification": "UID joins, independent numerical reference checks, table render and deterministic byte comparison"
+      "verification": "Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged."
     }
   ],
-  "core_presentation": "Shared PAPER_STYLE/PAPER_PALETTE; frozen numerical payload stored in data/frozen_r22_figure_data.json.",
+  "core_presentation": "Current PAPER_DATASET drives RQ1; data/frozen_r22_figure_data.json preserves the archived R22 payload.",
   "schematic_override": {
     "kind": "conceptual_illustration",
     "source": "publications/mlsys/figure1/source.zip",
@@ -9556,7 +9605,7 @@
     }
   },
   "existing_rq2_assets": {
-    "generator": "scripts/supplementary-studies/rq2-all-cuts-20261020/reproduce.py",
+    "generator": "scripts/supplementary-studies/rq2-native-scope-20261027/reproduce.py",
     "figures": [
       "rq2_generic_selection_loss",
       "rq2_native_success",
@@ -9565,7 +9614,15 @@
     "tables": [
       "rq2_search_budget_table"
     ],
-    "scope": "Unchanged separate current/historical cohorts."
+    "scope": "Current Generic scatter, Native success and search budgets use the verified original Native population study; historical graph campaign remains unchanged.",
+    "historical_graph_generator": "scripts/supplementary-studies/rq2-all-cuts-20261020/reproduce.py",
+    "graph_display": {
+      "figure": "rq2_graph_analysis",
+      "excluded_methods": [
+        "uniform_random"
+      ],
+      "scope": "Active R30 presentation only; the separate historical RQ2 graph-score numerical controls and archived studies remain unchanged."
+    }
   },
   "new_assets": {
     "yolov7_h8_case_single_column": {
@@ -9590,7 +9647,7 @@
     "rq2_weighted_all_models": {
       "kind": "figure",
       "label": "fig:weighted-all-models",
-      "caption": "Native throughput loss after testing up to k ranked cuts per model/device group. All 21 groups receive equal weight at every budget. A group with fewer than k candidates tests all its candidates. Weighted (default) uses (1, 3, 0.2). Weighted (fit on all models) is a pooled in-sample result. Weighted (model held-out) fits six models and evaluates the seventh on all three devices. Calibrated Generic is omitted because its frozen predictions cover classifiers only.",
+      "caption": "Current source-bound Generic / Native verified pairs with original records archived, frozen prior graph weights. See data/rq2_final_summary.json for counts, singleton groups, pending evidence and quality contract limitations.",
       "files": [
         "figures/rq2_weighted_all_models.json",
         "figures/rq2_weighted_all_models.csv",
@@ -9603,26 +9660,27 @@
         2.95
       ],
       "source_sha256": {
-        "aggregate_curves.csv": "fbafa273eede4166fcb54dc6f9384f0b8923f27e43ebc8eeafc55b2bfa621140",
-        "summary.json": "15f1a2238c3346b96f46b98c90dc116c81ae0660e7efd7f59b7e5f584cad8220"
+        "rq2_final_input_manifest": "9e8d805e87dc4c93b61147da81b9f0bdab7d3e1d67614dc63ce6fecad1bb76b2",
+        "rq2_final_summary": "b4a9c10881c89f7659ea695014bdbe186f2af5fc436169e9e3e6a620d97ef976"
       },
-      "optimized_status": "Retrospective in-sample optimization on every evaluated model/device group.",
-      "held_out_status": "Leave one entire model out, including all three devices. Each displayed group uses only its held-out prediction."
+      "optimized_status": "Frozen prior shared weights; no fit on the current paired subset.",
+      "held_out_status": "Frozen prior model-held-out vectors; prior training scope retained separately.",
+      "generator": "scripts/supplementary-studies/rq2-native-scope-20261027/reproduce.py:render"
     },
     "r30_weighted_budget_table": {
       "kind": "table",
       "label": "tab:weighted-budget",
-      "caption": "Mean Native throughput loss (\\%) over all 21 model/device groups. The budget is $k$ trials per group, capped by the available cuts. The pooled fit uses all seven models. Model-held-out weights exclude the evaluated model on all three devices.",
+      "caption": "Current source-bound Generic / Native verified pairs with original records archived, frozen prior graph weights. See data/rq2_final_summary.json for counts, singleton groups, pending evidence and quality contract limitations.",
       "files": [
         "tables/r30_weighted_budget_table.tex",
         "tables/r30_weighted_budget_table.json",
         "tables/r30_weighted_budget_table.csv"
       ],
       "source_sha256": {
-        "summary.json": "15f1a2238c3346b96f46b98c90dc116c81ae0660e7efd7f59b7e5f584cad8220",
-        "key_budget_results.csv": "0a495693118564991898dddc562c5ff7e19c71484a38e2cbde81d667979d0ecd",
-        "fold_weights.csv": "2f47163cfa7a669104be1d2f9993d9ba56506a140218a699d7ed16e4c3d9f554"
-      }
+        "rq2_final_input_manifest": "9e8d805e87dc4c93b61147da81b9f0bdab7d3e1d67614dc63ce6fecad1bb76b2",
+        "rq2_final_summary": "b4a9c10881c89f7659ea695014bdbe186f2af5fc436169e9e3e6a620d97ef976"
+      },
+      "generator": "scripts/supplementary-studies/rq2-native-scope-20261027/reproduce.py:render"
     },
     "r30_weighted_fold_table": {
       "kind": "table",
@@ -9660,10 +9718,461 @@
         "tables/r30_weighted_macros.tex"
       ],
       "source_sha256": {
-        "summary.json": "15f1a2238c3346b96f46b98c90dc116c81ae0660e7efd7f59b7e5f584cad8220"
-      }
+        "rq2_final_input_manifest": "9e8d805e87dc4c93b61147da81b9f0bdab7d3e1d67614dc63ce6fecad1bb76b2",
+        "rq2_final_summary": "b4a9c10881c89f7659ea695014bdbe186f2af5fc436169e9e3e6a620d97ef976"
+      },
+      "caption": "Current source-bound Generic / Native verified pairs with original records archived, frozen prior graph weights. See data/rq2_final_summary.json for counts, singleton groups, pending evidence and quality contract limitations.",
+      "generator": "scripts/supplementary-studies/rq2-native-scope-20261027/reproduce.py:render"
     }
   },
   "study": "results/supplementary-studies/rq2-weighted-20261020",
-  "numeric_only": false
+  "numeric_only": false,
+  "current_rq2_override": {
+    "study": "results/supplementary-studies/rq2-native-scope-20261027",
+    "scope": {
+      "schema": "rq2-native-scope-pairs-v1",
+      "publication_status": "complete",
+      "actual_imports_complete": true,
+      "actual_import_accounting_sha256": "62d6747d954573b4ad91fdb40d2cb14d0dbe43b71da3d63ded1b8da5e50e6d41",
+      "quality_metrics": {
+        "classification": "top1_accuracy",
+        "detection": "coco_ap_50_95"
+      },
+      "detection_metric_label": "COCO AP@[.50:.05:.95]",
+      "family_selection_results": [
+        {
+          "scope": "unrestricted",
+          "family": "all",
+          "original_native_cases": 204,
+          "paired_candidates": 204,
+          "model_device_groups": 21,
+          "singleton_groups": 0,
+          "groups_n_ge_2": 21,
+          "mean_loss_pct": 1.464100554146222,
+          "mean_loss_n_ge_2_pct": 1.464100554146222,
+          "exact_winners": 14,
+          "common_pair_groups": null,
+          "old_generic_mean_loss_same_pairs_pct": null,
+          "current_generic_mean_loss_same_pairs_pct": null
+        },
+        {
+          "scope": "unrestricted",
+          "family": "classification",
+          "original_native_cases": 168,
+          "paired_candidates": 168,
+          "model_device_groups": 9,
+          "singleton_groups": 0,
+          "groups_n_ge_2": 9,
+          "mean_loss_pct": 3.392714437605092,
+          "mean_loss_n_ge_2_pct": 3.392714437605092,
+          "exact_winners": 3,
+          "common_pair_groups": null,
+          "old_generic_mean_loss_same_pairs_pct": null,
+          "current_generic_mean_loss_same_pairs_pct": null
+        },
+        {
+          "scope": "unrestricted",
+          "family": "detection",
+          "original_native_cases": 36,
+          "paired_candidates": 36,
+          "model_device_groups": 12,
+          "singleton_groups": 0,
+          "groups_n_ge_2": 12,
+          "mean_loss_pct": 0.01764014155206939,
+          "mean_loss_n_ge_2_pct": 0.01764014155206939,
+          "exact_winners": 11,
+          "common_pair_groups": null,
+          "old_generic_mean_loss_same_pairs_pct": null,
+          "current_generic_mean_loss_same_pairs_pct": null
+        },
+        {
+          "scope": "quality_admitted",
+          "family": "all",
+          "original_native_cases": 204,
+          "paired_candidates": 187,
+          "model_device_groups": 21,
+          "singleton_groups": 0,
+          "groups_n_ge_2": 21,
+          "mean_loss_pct": 1.3467521152436048,
+          "mean_loss_n_ge_2_pct": 1.3467521152436048,
+          "exact_winners": 15,
+          "common_pair_groups": 21,
+          "old_generic_mean_loss_same_pairs_pct": 15.077128973324955,
+          "current_generic_mean_loss_same_pairs_pct": 1.3467521152436048
+        },
+        {
+          "scope": "quality_admitted",
+          "family": "classification",
+          "original_native_cases": 168,
+          "paired_candidates": 151,
+          "model_device_groups": 9,
+          "singleton_groups": 0,
+          "groups_n_ge_2": 9,
+          "mean_loss_pct": 3.1189014134989854,
+          "mean_loss_n_ge_2_pct": 3.1189014134989854,
+          "exact_winners": 4,
+          "common_pair_groups": 9,
+          "old_generic_mean_loss_same_pairs_pct": 32.80433865060003,
+          "current_generic_mean_loss_same_pairs_pct": 3.1189014134989854
+        },
+        {
+          "scope": "quality_admitted",
+          "family": "detection",
+          "original_native_cases": 36,
+          "paired_candidates": 36,
+          "model_device_groups": 12,
+          "singleton_groups": 0,
+          "groups_n_ge_2": 12,
+          "mean_loss_pct": 0.01764014155206939,
+          "mean_loss_n_ge_2_pct": 0.01764014155206939,
+          "exact_winners": 11,
+          "common_pair_groups": 12,
+          "old_generic_mean_loss_same_pairs_pct": 1.7817217153686513,
+          "current_generic_mean_loss_same_pairs_pct": 0.01764014155206939
+        }
+      ],
+      "original_native_population": 204,
+      "original_native_detector_pairs": 36,
+      "pair_count": 204,
+      "quality_pair_count": 187,
+      "group_count": 21,
+      "quality_group_count": 21,
+      "quality_singleton_groups": 0,
+      "quality_groups_n_ge_2": 21,
+      "models": [
+        "mobilenet_v3_large",
+        "regnet_x_1_6gf",
+        "resnet50",
+        "yolo11l",
+        "yolo26m",
+        "yolo26s",
+        "yolov7_paper"
+      ],
+      "classifier_quality_pairs": 151,
+      "detector_quality_pairs": 36,
+      "final_generic_observations": 205,
+      "selected_generic_observations": 204,
+      "source_found": 204,
+      "compatible_selected": 204,
+      "new_fps_captured": 1,
+      "new_quality_captured": 17,
+      "new_fps_capture_observations": 1,
+      "new_quality_capture_observations": 17,
+      "coverage_count_definitions": {
+        "source_found": "Original cuts with any recovered Generic source, including standalone observations held from pairing.",
+        "compatible_selected": "Original cuts with a selected identity- and complete-task-compatible Generic pair.",
+        "recovered": "Compatible selected observations recovered from existing sources; legacy selected-pair meaning retained.",
+        "remeasured": "Original cuts with an actual new FPS capture, including standalone captures held from pairing; alias of new_fps_captured.",
+        "new_quality_captured": "Original cuts with actual new quality captures declared in hash-bound overlay provenance, independent of FPS acquisition or pair admission.",
+        "capture_observations": "Distinct actual capture source observations; repeat captures of one cut remain distinct, duplicate source hashes are counted once."
+      },
+      "prior_published_pairs": 204,
+      "prior_published_quality_pairs": 187,
+      "excluded_candidates": 17,
+      "unresolved_candidates": 0,
+      "groups_without_quality_pairs": 0,
+      "rq3_fixed420_members": 192,
+      "outside_rq3_fixed420_pairs": 12,
+      "exclusion_reasons": {
+        "generic_relative_quality_loss_above_5pct": 17,
+        "native_quality_loss_above_5pct": 17
+      },
+      "scope": "All original artifact-bound measured Native cut identities; current normal Native observations replace only their source-bound archived predecessors. RQ3 membership remains an annotation; no imputation or new Native cuts.",
+      "selection_policy": "Latest actually completed identity- and complete-task-contract-compatible valid Generic observation; selection precedes quality admission and never ranks FPS, AP or quality outcome.",
+      "overall_statistic": "Unchanged equal-group mean over nonempty quality-admitted model/device groups; singleton zero loss is not evidence of ranking quality.",
+      "mean_final_generic_loss_pct": 1.3467521152436048,
+      "mean_final_generic_loss_n_ge_2_pct": 1.3467521152436048,
+      "same_pairs_comparison_pair_count": 187,
+      "same_pairs_comparison_group_count": 21,
+      "mean_old_generic_loss_same_pairs_pct": 15.077128973324955,
+      "mean_final_generic_loss_same_pairs_pct": 1.3467521152436048,
+      "mean_old_generic_loss_same_pairs_n_ge_2_pct": 15.077128973324955,
+      "mean_final_generic_loss_same_pairs_n_ge_2_pct": 1.3467521152436048,
+      "prior_full_quality_scope_mean_loss_pct": 15.077128973324955,
+      "weights": {
+        "default": {
+          "w_comm": 1.0,
+          "w_imb": 3.0,
+          "w_tensors": 0.2
+        },
+        "shared": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        },
+        "model_held_out": {
+          "mobilenet_v3_large": {
+            "w_comm": 1.0,
+            "w_imb": 0.5693428877923351,
+            "w_tensors": 0.2
+          },
+          "regnet_x_1_6gf": {
+            "w_comm": 1.0,
+            "w_imb": 0.15799266978091375,
+            "w_tensors": 0.2
+          },
+          "resnet50": {
+            "w_comm": 1.0,
+            "w_imb": 0.025084670679042267,
+            "w_tensors": 0.2
+          },
+          "yolo11l": {
+            "w_comm": 1.0,
+            "w_imb": 0.15799266978091375,
+            "w_tensors": 0.2
+          },
+          "yolo26m": {
+            "w_comm": 1.0,
+            "w_imb": 0.15799266978091375,
+            "w_tensors": 0.2
+          },
+          "yolo26s": {
+            "w_comm": 1.0,
+            "w_imb": 0.15799266978091375,
+            "w_tensors": 0.2
+          },
+          "yolov7_paper": {
+            "w_comm": 1.0,
+            "w_imb": 0.15799266978091375,
+            "w_tensors": 0.2
+          }
+        }
+      },
+      "weight_policy": "All prior vectors and original full graph normalization universes frozen; no fit. Original holdout status describes original training.",
+      "native_quality_policy": "Use only own bound current normal quality for explicitly replaced Native observations; missing current quality remains unavailable. Retain historical Native quality and the established <=5% gate for unchanged cuts. Prior values and source-scoped postfilter differences remain archived.",
+      "generic_quality_policy": "Current bound normal Generic quality evaluates actual selected timed completion records against its own existing CPU-ONNX reference and evaluator policy. Invalidated quality assignment evidence remains history; corrected unavailable quality is pending, never physical accuracy_loss.",
+      "known_quality_timed_contract_difference_cases": [],
+      "corrected_quality_pending": 0,
+      "reviewed_metadata_pairs": 0,
+      "energy_policy": "Archived Native/Full/Generic energy observations are preserved. Current curated energy requires its exact selected FPS-source relation; no refreshed Generic rate inherits old energy.",
+      "current_native_dataset_sha256": "1ec1e759a4e0a4855bee9dd5b2686499b9dc462a85935d62821f87c94f663ee8",
+      "current_native_replacement_count": 3,
+      "current_native_replacements": [
+        {
+          "native_uid": "native|yolo26m|H10|hailo10h_to_trt|b043",
+          "metric_updates": [
+            "quality"
+          ],
+          "performance_source_sha256": "b267a4e72c06a524e0c9d4a3ec7e41b4c6e4887d66591d2bf4426f6f5fa4f3e8",
+          "quality_source_sha256": "bfaea59ab05217bd66e01888d4a78f5ac28b356e1b2cf000815d41596fe74bd9",
+          "energy_source_sha256": "f7c4fb2d9f6d3df1bdcfdcb5da157e221e5d6eccc70e053d1a88467b94699aff",
+          "evidence_sha256": "b799510ddf87bd1f809f67cb6b8b3bc285ef4352e563df8e72e8b730454949b7"
+        },
+        {
+          "native_uid": "native|yolo26m|H8|hailo8_to_trt|b043",
+          "metric_updates": [
+            "quality"
+          ],
+          "performance_source_sha256": "98f654d3e99a820fc8b60b9103f52141c54a792d40b170798727b05ab0da1954",
+          "quality_source_sha256": "8c54e25467153d067dee7e76e68f56ce7f07da98d31e73f507a2ea8580d536e3",
+          "energy_source_sha256": "b53452841ab60f263d13566a8f8c3cc4c2bcf6e1a637d4d457faf1dfce6f30c4",
+          "evidence_sha256": "f60a373291d6fcd5c3794068796feb67d4bcdf34b3d59928d53c84c13abe18af"
+        },
+        {
+          "native_uid": "native|yolov7_paper|H8|hailo8_to_trt|b009",
+          "metric_updates": [
+            "energy",
+            "performance",
+            "quality"
+          ],
+          "performance_source_sha256": "76df7a60e31bf4b5a500bd0949b0dc5f77df64ea11bb6b3a78506f0a2c3d97a4",
+          "quality_source_sha256": "b0b9de56a09583caa7bf7370596adc9ef76c01b4a6ab1d540c44cee1bdd1b18c",
+          "energy_source_sha256": "aac122c84d1f654f7539ef8e9965f275620dc6e5a45224dca5bca70c7357641a",
+          "evidence_sha256": "1c9b9d127dd65565097b5e679c23bedae4e747db1d6577950782f7344b67bc47"
+        }
+      ],
+      "prior_actual_accounting_retained_as_history": true,
+      "historical_quality_timed_contract_difference_cases": [
+        "generic|yolo26m|H10|hailo10h_to_trt|b043",
+        "generic|yolo26m|H8|hailo8_to_trt|b043"
+      ],
+      "current_native_external_captures": {
+        "performance": 1,
+        "quality": 3,
+        "energy": 1
+      }
+    },
+    "frozen_rq1_and_yolov7": false,
+    "asset_files": [
+      "data/budget_groups.csv",
+      "data/budget_groups.json",
+      "data/current_pairs.csv",
+      "data/current_pairs.json",
+      "data/family_selection_summary.csv",
+      "data/family_selection_summary.json",
+      "data/historical_quality_observations.csv",
+      "data/historical_quality_observations.json",
+      "data/non_population_observations.csv",
+      "data/non_population_observations.json",
+      "data/old_final_same_pairs_comparison.csv",
+      "data/old_final_same_pairs_comparison.json",
+      "data/old_final_same_pairs_rankings.csv",
+      "data/old_final_same_pairs_rankings.json",
+      "data/pair_group_coverage.csv",
+      "data/pair_group_coverage.json",
+      "data/pair_identity_audit.csv",
+      "data/pair_identity_audit.json",
+      "data/pairing_sensitivity.csv",
+      "data/quality_contract_provenance.json",
+      "data/quality_pairs.csv",
+      "data/quality_pairs.json",
+      "data/quality_selection_groups.csv",
+      "data/quality_selection_groups.json",
+      "data/rq2_final_input_manifest.json",
+      "data/rq2_final_summary.json",
+      "data/runner_graph_comparison.csv",
+      "data/selection_groups.csv",
+      "data/selection_groups.json",
+      "data/standalone_generic_observations.csv",
+      "data/standalone_generic_observations.json",
+      "figures/current_generic_selection_loss.csv",
+      "figures/current_generic_selection_loss.json",
+      "figures/current_generic_selection_loss.pdf",
+      "figures/current_generic_selection_loss.png",
+      "figures/current_generic_selection_loss.svg",
+      "figures/quality_generic_selection_loss.csv",
+      "figures/quality_generic_selection_loss.json",
+      "figures/quality_generic_selection_loss.pdf",
+      "figures/quality_generic_selection_loss.png",
+      "figures/quality_generic_selection_loss.svg",
+      "figures/rq2_generic_selection_loss.csv",
+      "figures/rq2_generic_selection_loss.json",
+      "figures/rq2_generic_selection_loss.pdf",
+      "figures/rq2_generic_selection_loss.png",
+      "figures/rq2_generic_selection_loss.svg",
+      "figures/rq2_native_success.csv",
+      "figures/rq2_native_success.json",
+      "figures/rq2_native_success.pdf",
+      "figures/rq2_native_success.png",
+      "figures/rq2_native_success.svg",
+      "figures/rq2_weighted_all_models.csv",
+      "figures/rq2_weighted_all_models.json",
+      "figures/rq2_weighted_all_models.pdf",
+      "figures/rq2_weighted_all_models.png",
+      "figures/rq2_weighted_all_models.svg",
+      "tables/current_selection_groups.csv",
+      "tables/current_selection_groups.json",
+      "tables/current_selection_groups.md",
+      "tables/current_selection_groups.tex",
+      "tables/family_selection_summary.csv",
+      "tables/family_selection_summary.json",
+      "tables/native_generic_quality_observations.csv",
+      "tables/native_generic_quality_observations.json",
+      "tables/pair_group_coverage.csv",
+      "tables/pair_group_coverage.json",
+      "tables/r14_budget_details.csv",
+      "tables/r14_budget_details.json",
+      "tables/r14_budget_details.md",
+      "tables/r14_budget_details.tex",
+      "tables/r30_weighted_budget_table.csv",
+      "tables/r30_weighted_budget_table.json",
+      "tables/r30_weighted_budget_table.tex",
+      "tables/r30_weighted_macros.tex",
+      "tables/rq2_search_budget_table.csv",
+      "tables/rq2_search_budget_table.json",
+      "tables/rq2_search_budget_table.tex"
+    ],
+    "archived_r22_and_literal_b066_unchanged": true
+  },
+  "current_rq1_observations": {
+    "schema": "mlsys-r30-source-bound-current-rq1-v1",
+    "paper_dataset_sha256": "1ec1e759a4e0a4855bee9dd5b2686499b9dc462a85935d62821f87c94f663ee8",
+    "archived_paper_dataset_sha256": "03a0924016e6298587d366a45903d6b3a19d8f8aa08e831fdfa0f5b7f0725bcd",
+    "observation_inputs_sha256": "98511b7078f394877885bac08da2aa71ec58e7a0f682ac4a9e9457585a9657f4",
+    "sources": {
+      "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q": {
+        "path": "sources/DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q.json",
+        "sha256": "8174b7e6ed70f3105e7179ed772c1d8b3f4cc199570d34f1268262517bca2050"
+      },
+      "H10_yolo26m_b043_actual_N5000": {
+        "path": "sources/H10_yolo26m_b043_actual_N5000.json",
+        "sha256": "c738b00416e9be93e6f3280fba7ac32eec026d5d8b974b447430de3e1aff9af7"
+      },
+      "H8_yolo26m_b043_actual_N5000": {
+        "path": "sources/H8_yolo26m_b043_actual_N5000.json",
+        "sha256": "df3f2573318cf0048ef2f2a5d4728a31681c099078f6a567f33f98a190f4d9bb"
+      },
+      "H8_yolov7_b009_actual_N5000": {
+        "path": "sources/H8_yolov7_b009_actual_N5000.json",
+        "sha256": "3f7cb9badd004d059f2f7708a9bdfc85106490ba22b690253d0f25daf4b7983c"
+      },
+      "H8_yolov7_b009_actual_native_energy": {
+        "path": "sources/H8_yolov7_b009_actual_native_energy.json",
+        "sha256": "e32df52639f49adabcd52b18b3c403bcf47af6ee03a2667281dc02a3f8dea48d"
+      },
+      "b009_current_generic": {
+        "path": "sources/b009_existing_accepted_Generic_FPS_and_own_Q.json",
+        "sha256": "a79e3496ade5f4ccd3b03b90378d70024529ccc5f53f17d820a788cf316d3917"
+      },
+      "h8_b009_native_fps_v3": {
+        "path": "sources/h8_b009_native_fps_v3_portable_v2.json",
+        "sha256": "45edf85eb8c2e0482ff85984b32eb5c2f144d4e55fe39d40fc6af0aa4a1b582d"
+      }
+    },
+    "observation_history_sha256": "ceaab910b8982356abced430eee108c91ae6bc48b06f44224fe200aa19616c8d",
+    "affected_observations": [
+      {
+        "uid": "generic|yolo11l|DeepX|deepx_to_trt|b511",
+        "generation": "six_pack_20261027",
+        "metrics": [
+          "energy",
+          "performance",
+          "quality"
+        ]
+      },
+      {
+        "uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
+        "generation": "six_pack_20261027_existing_current_Generic_reuse",
+        "metrics": [
+          "performance",
+          "quality"
+        ]
+      },
+      {
+        "uid": "native|yolo26m|H10|hailo10h_to_trt|b043",
+        "generation": "six_pack_20261027",
+        "metrics": [
+          "quality"
+        ]
+      },
+      {
+        "uid": "native|yolo26m|H8|hailo8_to_trt|b043",
+        "generation": "six_pack_20261027",
+        "metrics": [
+          "quality"
+        ]
+      },
+      {
+        "uid": "native|yolov7_paper|H8|hailo8_to_trt|b009",
+        "generation": "six_pack_20261027",
+        "metrics": [
+          "energy",
+          "performance",
+          "quality"
+        ]
+      }
+    ],
+    "expected_packages": [
+      "native_H8_yolov7_b009_FPS",
+      "native_H8_yolov7_b009_quality",
+      "native_H8_yolov7_b009_energy",
+      "native_H8_yolo26m_b043_quality",
+      "native_H10_yolo26m_b043_quality",
+      "generic_DeepX_yolo11l_b511_energy"
+    ],
+    "accepted_packages": [
+      "generic_DeepX_yolo11l_b511_energy",
+      "native_H10_yolo26m_b043_quality",
+      "native_H8_yolo26m_b043_quality",
+      "native_H8_yolov7_b009_FPS",
+      "native_H8_yolov7_b009_energy",
+      "native_H8_yolov7_b009_quality"
+    ],
+    "pending_packages": [],
+    "new_native_measurements": true,
+    "full_baselines_unchanged": true,
+    "literal_b066_unchanged": true,
+    "archived_r22_unchanged": true,
+    "hardware_measurements_performed_by_generator": false
+  }
 }
