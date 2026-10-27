@@ -1,12 +1,12 @@
 # Split selection on heterogeneous edge systems
 
-This study evaluates seven vision models on three accelerator–GPU systems. It compares complete deployments, tests whether the universal Generic runner identifies fast cuts for specialized Native implementations, and evaluates graph scores on a broader set of Generic cuts.
+This study evaluates seven vision models on three accelerator–GPU systems. It compares complete deployments, tests whether the universal Generic runner identifies fast cuts for specialized Native implementations, and evaluates graph scores on a broader set of Generic cuts. The [study overview](../../docs/current-study.md) explains the common design, candidate coverage and exclusions.
 
 ## Results
 
 | Question | Evidence | Main finding |
 |---|---|---|
-| RQ1: When does splitting help? | [Full and split comparisons](../../results/split-inference/tables/table3_fastest_deployments.md), [quality](../../results/publication-builds/generic420-20261027/paper/publications/mlsys-r30/tables/r14_winner_quality.csv), [YOLOv7 case](../../results/publication-builds/generic420-20261027/paper/publications/mlsys-r30/figures/yolov7_h8_case_single_column.pdf) | The fastest admissible split beats the globally fastest Full for six of seven models. Three also use less energy per image. |
+| RQ1: When does splitting help? | [Full and split comparisons](../../results/split-inference/tables/table3_fastest_deployments.md), [quality](../../results/publication-builds/generic420-20261027/paper/publications/mlsys-r30/tables/r14_winner_quality.csv), [YOLOv7 case](../../results/publication-builds/generic420-20261027/paper/publications/mlsys-r30/figures/yolov7_h8_case_single_column.pdf) | The fastest admissible split beats the globally fastest Full for all seven models. Three also use less energy per image. Six winners use Native and the YOLO11l winner uses Generic. |
 | RQ2: Can Generic identify good Native splits? | [Runner-based selection](../../results/supplementary-studies/rq2-native-scope-20261027/README.md) | Selecting the Generic winner leaves 1.35% mean Native throughput loss: 3.12% for classifiers and 0.02% for detectors. |
 | RQ3: How well do graph scores narrow the search? | [Graph-based selection](../../results/supplementary-studies/rq3-generic420-detector-corrected-20261027/README.md) | Boundary size has the lowest mean loss at five tests. Weights fitted separately by task and accelerator perform best at one and three tests among the evaluated methods. |
 
@@ -34,4 +34,4 @@ python3 scripts/reproduce_current.py --output local-output/current --languages e
 
 [Setup instructions](../../scripts/README.md) describe the Python dependencies. The command rebuilds the current runner-selection analysis, graph-score analysis and publication outputs from the supplied inputs. The directory name `mlsys-r30` is an internal rendering profile used by the current build.
 
-The [measurement methods](../../results/split-inference/METHODS.md) describe throughput, quality and energy. The selection-analysis pages above specify their candidate sets and fitting procedure. Configuration-level source records and the b009 inclusion sensitivity remain with the analysis inputs. Earlier publication profiles and experiments are indexed in the [research archive](../../docs/archival_studies.md).
+The [measurement methods](../../results/split-inference/METHODS.md) describe throughput, quality and energy. The selection-analysis pages above specify their candidate sets and fitting procedure. Configuration-level source records remain with the analysis inputs. Earlier publication profiles and experiments are indexed in the [research archive](../../docs/archival_studies.md).

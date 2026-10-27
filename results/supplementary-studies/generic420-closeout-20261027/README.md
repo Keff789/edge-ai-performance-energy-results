@@ -1,6 +1,6 @@
 # Split selection: current results
 
-Seven vision models are evaluated on Jetson Orin NX systems paired with Hailo-8, Hailo-10H or DeepX DX-M1. The study examines deployment benefits, selection with Generic, and graph-based shortlists.
+Seven vision models are evaluated on Jetson Orin NX systems paired with Hailo-8, Hailo-10H or DeepX DX-M1. The study examines deployment benefits, selection with Generic, and graph-based shortlists. The [study overview](../../../docs/current-study.md) explains the common design, candidate sets and exclusions.
 
 | Question | Data and results |
 |---|---|
@@ -25,7 +25,9 @@ The [staged selection analysis](../staged-selection/README.md) combines graph-ba
 
 The paired set contains 204 cuts. The quality rule excludes 17. The broader graph-score set selects 20 cuts per model and accelerator, including multi-tensor boundaries. Of 420 planned configurations, 359 have throughput measurements, 61 cannot be executed, and 28 measured cuts exceed the quality limit. The [coverage table](closure_matrix.csv) gives the counts for each group.
 
-Both selection analyses apply the 5% relative quality-loss rule. RQ2 evaluates Native throughput and RQ3 Generic throughput. The [measurement notes](../rq2-native-scope-20261027/DATA_NOTES.md) record source details that affect interpretation. The paired b009 observation uses the new normally admitted Native observation and its current input binding; the historical metadata review remains archived. Energy comparisons use measurements of the same runtime configuration.
+Of the paired cuts, 192 also belong to the 420-candidate set and 12 are additional paired cuts. The two sets are not independent totals. All planned cases are resolved; technical and quality exclusions are completed outcomes.
+
+Both selection analyses apply the 5% relative quality-loss rule. RQ2 evaluates Native throughput and RQ3 Generic throughput. Energy comparisons use measurements of the same runtime configuration. The [measurement notes](../rq2-native-scope-20261027/DATA_NOTES.md) retain configuration-level source details.
 
 ## Figures, tables and reproduction
 

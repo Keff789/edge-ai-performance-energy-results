@@ -2,6 +2,8 @@
 
 Die Dissertation verwendet denselben aktuellen Split-Datensatz wie das Paper. Die Ergebnisse gliedern sich in den Nutzen der Aufteilung, die Auswahl mit Generic und die Vorauswahl mit Graph-Scores. Die deutsche und englische Ausgabe verwenden gemeinsame Zahlen und dieselbe grafische Gestaltung.
 
+Die [Untersuchungsübersicht](../../docs/current-study.md) beschreibt die gemeinsamen Kandidatenmengen und Ausschlüsse. Die Graph-Auswertung umfasst 420 geplante Konfigurationen: 359 wurden gemessen, davon bestehen 331 die Qualitätsgrenze. Die übrigen Fälle sind technisch ausgeschlossen oder überschreiten den zulässigen Qualitätsverlust. Der Runner-Vergleich umfasst 204 gepaarte Cuts, von denen 187 die Qualitätsgrenze in beiden Runnern bestehen. Für alle sieben Modelle ist ein Split schneller als die jeweils schnellste Full-Ausführung. Drei dieser Splits benötigen zugleich weniger Energie pro Bild.
+
 | Bereich | Dateien |
 |---|---|
 | Deutsche Split-Grafiken und Tabellen | [Aktuelle Sammlung](../../results/publication-builds/generic420-20261027/dissertation-de/README.md) |

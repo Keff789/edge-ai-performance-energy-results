@@ -2,7 +2,9 @@
 
 This study evaluates split deployment benefits, selection with a universal runner, and graph-based selection before measurement.
 
-The paired comparison contains 187 quality-admissible cuts in 21 model–device groups. The graph comparison uses 331 quality-admissible Generic cuts in 21 groups.
+The study selects 420 candidate splits: twenty per model and accelerator. Of these, 359 have throughput and quality measurements, 61 have technical exclusions, and 28 measured candidates exceed the 5% relative quality-loss limit. The remaining 331 candidates support graph-score evaluation.
+
+The paired runner comparison contains 204 compatible cuts: 192 from that pool and 12 additional single-input cuts. It retains 187 quality-admissible pairs in 21 model–device groups. The deployment comparison includes 42 host-specific Full alternatives. The three analyses connect graph preselection, Generic testing and final Native selection.
 
 | Result | Figures and tables |
 |---|---|

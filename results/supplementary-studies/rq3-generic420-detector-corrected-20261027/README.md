@@ -32,3 +32,5 @@ python -B scripts/supplementary-studies/rq3-generic420/reproduce.py \
 ```
 
 Verify a completed study with `scripts/supplementary-studies/rq3-generic420/verify.py --study STUDY`. Dependencies and the detailed scoring, holdout and sensitivity protocol are in `scripts/supplementary-studies/rq3-generic420/README.md`. No private snapshot is needed for this rebuild.
+
+[Recorded compiler examples](inputs/technical_exclusion_examples.README.md) explain two excluded boundaries. These are compiler-output examples, not additional measurements.

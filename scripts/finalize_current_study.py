@@ -88,7 +88,8 @@ def main():
     labels = {'all': 'All models', 'classification': 'Classifiers', 'detection': 'Detectors'}
     lines = ['# Split selection: current results', '',
         'Seven vision models are evaluated on Jetson Orin NX systems paired with Hailo-8, Hailo-10H or DeepX DX-M1. '
-        'The study examines deployment benefits, selection with Generic, and graph-based shortlists.', '',
+        'The study examines deployment benefits, selection with Generic, and graph-based shortlists. '
+        'The [study overview](../../../docs/current-study.md) explains the common design, candidate sets and exclusions.', '',
         '| Question | Data and results |', '|---|---|',
         '| RQ1: When does splitting improve deployment? | [Split and Full comparisons](../../split-inference/tables/fastest_split_baselines.md), including throughput, quality and energy. |',
         f"| RQ2: Can Generic select a fast Native cut? | [Paired comparison](../rq2-native-scope-20261027/README.md) on {q2['original_native_population']} cuts, with {q2['quality_pair_count']} passing the quality rule. |",
@@ -106,13 +107,12 @@ def main():
         f"Of {counts['selected']} planned configurations, {counts['fps_measured']} have throughput measurements, "
         f"{counts['technical_excluded']} cannot be executed, and {counts['quality_fail_measured']} measured cuts exceed the quality limit. "
         'The [coverage table](closure_matrix.csv) gives the counts for each group.', '',
+        f"Of the paired cuts, {q2['rq3_fixed420_members']} also belong to the {counts['selected']}-candidate set and "
+        f"{q2['outside_rq3_fixed420_pairs']} are additional paired cuts. The two sets are not independent totals. "
+        'All planned cases are resolved; technical and quality exclusions are completed outcomes.', '',
         'Both selection analyses apply the 5% relative quality-loss rule. RQ2 evaluates Native throughput and RQ3 Generic throughput. '
-        'The [measurement notes](../rq2-native-scope-20261027/DATA_NOTES.md) record source details that affect interpretation. '
-        + ('The paired b009 observation uses the new normally admitted Native observation and its current input binding; '
-         'the historical metadata review remains archived. ' if b009_fresh else
-         'The paired b009 observation is included using the reviewed executable and input evidence. '
-         'Removing it leaves all Generic recommendation results unchanged. ')
-        + 'Energy comparisons use measurements of the same runtime configuration.', '',
+        'Energy comparisons use measurements of the same runtime configuration. '
+        'The [measurement notes](../rq2-native-scope-20261027/DATA_NOTES.md) retain configuration-level source details.', '',
         '## Figures, tables and reproduction', '',
         '[Paper figures and tables](../../publication-builds/generic420-20261027/paper/README.md) · '
         '[German dissertation collection](../../publication-builds/generic420-20261027/dissertation-de/README.md) · '
@@ -241,7 +241,7 @@ def main():
     for name in ['README.md','scripts/README.md','scripts/split-inference/README.md',
             'scripts/split-inference/CURRENT_OBSERVATIONS.md','scripts/split-inference/config.json',
             'scripts/dissertation/README.md','publications/mlsys/README.md','publications/dissertation/README.md',
-            'docs/archival_studies.md']:
+            'docs/archival_studies.md','docs/current-study.md']:
         if (REPO/name).is_file():
             paths.add(REPO/name)
     for directory in ['scripts/split-inference','scripts/dissertation',

@@ -66,6 +66,9 @@ def write_readme(output, meta):
             'Verify a completed study with `scripts/supplementary-studies/rq3-generic420/verify.py --study STUDY`. '
             'Dependencies and the detailed scoring, holdout and sensitivity protocol are in '
             '`scripts/supplementary-studies/rq3-generic420/README.md`. No private snapshot is needed for this rebuild.','']
+    if (output/'inputs/technical_exclusion_examples.json').is_file():
+        lines += ['[Recorded compiler examples](inputs/technical_exclusion_examples.README.md) explain '
+                  'two excluded boundaries. These are compiler-output examples, not additional measurements.', '']
     (output/'README.md').write_text('\n'.join(lines))
 
 
@@ -92,6 +95,11 @@ def main():
         (a.output/'inputs').mkdir()
         for name in ['candidates.csv','graph_universe.csv','coverage.csv','feature_metadata.json','published_feature_provenance.json']:
             shutil.copyfile(a.inputs/name,a.output/'inputs'/name)
+        # Recorded compiler errors explain the published technical exclusions.
+        # They add documentation, not candidates or numerical features.
+        for name in ['technical_exclusion_examples.json', 'technical_exclusion_examples.README.md']:
+            if (a.inputs/name).is_file():
+                shutil.copyfile(a.inputs/name,a.output/'inputs'/name)
     verify_inputs(a.output)
     run('fit_weights.py','--input',a.output/'inputs/candidates.csv','--out',a.output/'fit_results',*(['--skip-sensitivity'] if a.skip_sensitivity else []))
     run('render_artifacts.py','--study',a.output,'--out',a.output/'artifacts','--languages',*a.languages,*(['--numeric-only'] if a.numeric_only else []))

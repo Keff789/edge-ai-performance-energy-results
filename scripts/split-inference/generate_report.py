@@ -146,22 +146,24 @@ All 36 Native detector split configurations record an oracle outside timing, whe
 Other recorded completion modes, prepared-input identities and work boundaries are retained per identity. Missing contract hashes alone are not evidence of different executed work; unknown entries remain unknown. Missing historical clock profiles remain unknown for their original dated records; the new A4 cohorts retain their normal verified runtime and source evidence. Contextual comparisons are retained. Strict recorded claim/provenance and reference-close views are optional sensitivities, never the hidden main selection. Broad plots show raw throughput, host-inclusive energy and quality. The recorded-work Pareto sensitivity retains its cohorts; the broad empirical front uses the model/setup population defined above. Neither establishes equal quality or universal endpoint equivalence.
 '''
     if current:
-        captures = s['current_external_captures']
-        intro = (f"# Methods: current deployment observations\n\n"
-                 f"The established selection contains {s['cases']} deployments ({s['native']} Native and {s['generic']} Generic), "
-                 f"including {s['full_coverage']['configurations']} host-specific Full configurations. "
-                 f"The source-bound current input admits {len(current['accepted_packages'])}/{len(current['expected_packages'])} declared measurement packages. "
-                 f"These comprise {captures['performance']} new performance cohorts, {captures['quality']} new quality evaluations and "
-                 f"{captures['energy']} new energy cohorts; reused observations remain explicitly identified. "
-                 "Original input rows and replaced observations remain archived in data/current_observation_history.json. "
-                 "Only declared, normally admitted metrics change; Full measurements and the literal b066 records are retained. "
-                 "This offline generator performs no hardware measurement, model build or dataset evaluation.\n\n"
-                 "Unchanged DeepX Native A4 observations retain their recorded batch-one, single-engine regime, at most four outstanding jobs, "
-                 "FIFO depth three and serial TensorRT completion. Current replacements and the added Generic deployment retain their own "
-                 "runtime, quality and source epochs. The broad RQ1 dataset retains unchanged Generic FPS/energy generations separately "
-                 "from the current Generic FPS used by RQ2. These observed deployment comparisons do not isolate a causal effect "
-                 "of splitting at equal executed work or parallelism. Own metric admission and Full-baseline comparison "
-                 "authority are reported separately in the retained normal source records.\n\n")
+        native_splits = sum(row['runner']=='native' and row['kind']=='split' for row in data)
+        generic_splits = sum(row['runner']=='generic' and row['kind']=='split' for row in data)
+        intro = ("# Methods: deployment comparison\n\n"
+                 "RQ1 compares the throughput, energy and task quality of accelerator–GPU splits with Full execution. "
+                 f"The deployment dataset contains {s['cases']} configurations: {native_splits} Native splits, "
+                 f"{generic_splits} Generic splits and {s['full_coverage']['configurations']} host-specific Full alternatives. "
+                 "The [study overview](../../docs/current-study.md) connects this comparison with runner selection and graph preselection. "
+                 "This directory includes broad descriptive exports as well as the paper's quality-filtered views.\n\n"
+                 "Each configuration retains its compiled artifacts, prepared inputs, completion processing and runtime settings. "
+                 "DeepX Native uses batch one, one engine and at most four outstanding accelerator jobs. Its splits use FIFO depth "
+                 "three and a serial TensorRT consumer through task completion. Other backends retain their own execution policies. "
+                 "The comparison therefore evaluates complete deployments; it does not isolate splitting at equal work and parallelism.\n\n"
+                 "Throughput and energy are linked to the same recorded runtime configuration. "
+                 "The paired runner-selection analysis uses its own bound Generic observations, which need not be the same observations "
+                 "used for the broader deployment-energy comparison. Exact metric sources and previous observations are retained in "
+                 "[the source table](data/METRIC_SOURCES.csv) and [configuration history](data/current_observation_history.json). "
+                 "Measurement validity and eligibility for a particular Full comparison are recorded separately. "
+                 "The offline generator performs no hardware measurement, model build or dataset evaluation.\n\n")
         methods = intro + '## Selection and coverage\n\n' + methods.split('## Selection and coverage\n\n', 1)[1]
         methods = methods.replace('No such fallback is needed for the current complete FPS/energy matrix.',
             'Replacing FPS clears prior energy unless the normal source binds energy to that exact performance observation. Missing current energy remains unavailable.')
@@ -223,22 +225,21 @@ See [Table 2](tables/table2_full.md), [recommended Table 3: global fastest deplo
             '# Split inference: performance, energy and quality\n\n'
             f"{s['cases']} observed deployments cover {len(fastest)} models, with {native_splits} Native splits, "
             f"{generic_splits} Generic splits and {s['full_coverage']['configurations']} host-specific Full configurations. "
-            f"The current inputs admit {len(current['accepted_packages'])}/{len(current['expected_packages'])} declared measurement packages. "
             f"Measured coverage is {s['performance_coverage']}/{s['cases']} FPS, {s['energy_coverage']}/{s['cases']} energy and "
             f"{s['quality_numeric_coverage']}/{s['cases']} numerical quality observations. Missing metrics remain unavailable.\n\n"
+            'This deployment comparison is RQ1 of the [split-selection study](../../docs/current-study.md). '
+            'The same study evaluates Generic recommendations against Native and graph rankings against Generic.\n\n'
             '[Figures](figures/README.md) · [Tables](tables/README.md) · [Complete dataset](data/PAPER_DATASET.csv) · '
             '[Findings](FINDINGS.md) · [Methods](METHODS.md)\n\n'
             'The fastest-deployment tables select one split across Native and Generic runners and all measured setups, '
             'with the runner and exact source UID retained. Global and same-host Full references use the same selected split. '
-            'Energy belongs to its exact performance observation; replacing FPS clears incompatible prior energy. '
-            'The [source table](data/METRIC_SOURCES.csv), [measurement generations](data/MEASUREMENT_GENERATIONS.csv) and '
-            '[replacement history](data/current_observation_history.json) retain the old and current observations. '
-            'Full measurements and the literal b066 records are unchanged.\n\n'
-            'Unchanged Generic FPS/energy generations in this broad dataset remain separate from the current Generic FPS '
-            'used by [RQ2](../supplementary-studies/rq2-native-scope-20261027/README.md). '
-            'Quality uses Top-1 accuracy for classifiers and COCO AP@[.50:.05:.95] for detectors; current Native quality '
-            'replacements evaluate their actual timed completion records. Source-specific runtime, quality and comparison '
-            'authority remain visible in the data.\n\n'
+            'Energy and quality belong to the same recorded runtime configuration as its throughput. '
+            'Quality uses Top-1 accuracy for classifiers and COCO AP@[.50:.05:.95] for detectors. '
+            'The paper applies a 5% relative quality-loss limit against the CPU-ONNX reference.\n\n'
+            'The [paired selection analysis](../supplementary-studies/rq2-native-scope-20261027/README.md) '
+            'uses its bound Generic observations for ranking. Energy is not transferred from a different observation '
+            'when runtime measurements differ. The [metric sources](data/METRIC_SOURCES.csv) and '
+            '[configuration history](data/current_observation_history.json) retain these mappings.\n\n'
             'Reproduce with the [offline instructions](../../scripts/split-inference/README.md). '
             'The generator performs no hardware measurement, compilation or dataset evaluation.\n')
 

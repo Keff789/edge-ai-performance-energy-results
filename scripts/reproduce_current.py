@@ -31,9 +31,16 @@ def write_overview(output: Path, rq2: Path, rq3: Path, languages: list[str]) -> 
         '# Split-selection results', '',
         'This study evaluates split deployment benefits, selection with a universal runner, '
         'and graph-based selection before measurement.', '',
-        f"The paired comparison contains {paired['quality_pair_count']} quality-admissible cuts "
-        f"in {paired['quality_group_count']} model–device groups. The graph comparison uses "
-        f"{counts['eligible']} quality-admissible Generic cuts in {counts['nonempty_eligible_groups']} groups.", '',
+        f"The study selects {counts['selected']} candidate splits: twenty per model and accelerator. "
+        f"Of these, {counts['fps_measured']} have throughput and quality measurements, "
+        f"{counts['technical_excluded']} have technical exclusions, and "
+        f"{counts['quality_fail_measured']} measured candidates exceed the 5% relative quality-loss limit. "
+        f"The remaining {counts['eligible']} candidates support graph-score evaluation.", '',
+        f"The paired runner comparison contains {paired['original_native_population']} compatible cuts: "
+        f"{paired['rq3_fixed420_members']} from that pool and {paired['outside_rq3_fixed420_pairs']} additional single-input cuts. "
+        f"It retains {paired['quality_pair_count']} quality-admissible pairs in {paired['quality_group_count']} model–device groups. "
+        "The deployment comparison includes 42 host-specific Full alternatives. "
+        "The three analyses connect graph preselection, Generic testing and final Native selection.", '',
         '| Result | Figures and tables |', '|---|---|',
         '| Split benefits and paired runner selection | [Paper assets](paper/publications/mlsys-r30/) |',
         '| Graph-selected shortlists | [English artifacts](paper/rq3-generic420/en/) |',

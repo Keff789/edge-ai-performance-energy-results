@@ -87,16 +87,16 @@
       "size_bytes": 3301
     },
     "METHODS.md": {
-      "sha256": "8de9ff61c741bd93089fa5fea7022cff9edb88f011acdce6e179bd7b1d30e7cd",
-      "size_bytes": 12885
+      "sha256": "fc9b3e4844a2047d04db77ea72f6962703cda81bfc34c30281725a59de347981",
+      "size_bytes": 13089
     },
     "METHODS_PARAGRAPH.tex": {
       "sha256": "b8500a130efc897e949e999f90d6c919caa1148e3efbce7b30cee82c10646f6f",
       "size_bytes": 2506
     },
     "README.md": {
-      "sha256": "89e70a9cfb113d3236e411a401be47d154b4a03922b344f07227fcaf3781e58e",
-      "size_bytes": 1728
+      "sha256": "d80b78f2707e99a227fc6eb4978ab897598bb6440807ff6ff5eb51b544defb90",
+      "size_bytes": 1674
     },
     "data/MEASUREMENT_GENERATIONS.csv": {
       "sha256": "89fe387b389104064131eb47c82974606a84672755d9468e9021b7f95b12aef1",
@@ -1715,6 +1715,15 @@
     "hardware_measurements_performed_by_generator": false,
     "numeric_and_figure_source_commit": "df206022c84cfcb08c2c8df6f29a4685b1599dcb",
     "report_generator_sha256": "1a8c7566cb0c8c23d8cd75ffcc1d360f5edcb1198c183ece22bcd4f77059b6d2",
-    "report_text_source_commit": "e3d719b17c517a86c86199e64a93dce0c61d3d38"
+    "report_text_source_commit": "e3d719b17c517a86c86199e64a93dce0c61d3d38",
+    "report_text_updates": {
+      "files": [
+        "README.md",
+        "METHODS.md"
+      ],
+      "generator_sha256": "0fd02095adb6da849d334420a368a32f05a7ae59e1ea8bb95f28521834a77470",
+      "numerical_measurements_changed": false,
+      "source_identity": "containing Git commit"
+    }
   }
 }
