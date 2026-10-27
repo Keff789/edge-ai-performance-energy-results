@@ -1403,9 +1403,9 @@
     },
     {
       "asset_id": "fig:selectors",
-      "caption": "Generic-to-Native selection on 186 verified paired cuts in 21 model/device groups; 0 groups have fewer than two cuts. Both Native historical numerical quality and current bound Generic quality pass. Hollow markers denote one candidate, which provides no ranking test. Every nonempty group has equal weight. Original Native FPS and historical Native quality retain their separate observed contracts.",
+      "caption": "Generic-to-Native selection on 187 verified paired cuts in 21 model/device groups; 0 groups have fewer than two cuts. Both Native historical numerical quality and current bound Generic quality pass. Hollow markers denote one candidate, which provides no ranking test. Every nonempty group has equal weight. Original Native FPS and historical Native quality retain their separate observed contracts.",
       "data_generation": "Current compatible Generic observations with original artifact-bound Native measurements; study metadata records the observation policy and audit status.",
-      "description": "Current Generic-to-Native selection, 186 verified pairs in 21 model/device groups",
+      "description": "Current Generic-to-Native selection, 187 verified pairs in 21 model/device groups",
       "generator": "scripts/supplementary-studies/rq2-native-scope-20261027/reproduce.py:render",
       "input_files": [
         "results/supplementary-studies/rq2-native-scope-20261027/INPUT_MANIFEST.json",
@@ -1596,6 +1596,7 @@
         "generic|yolov7_paper|H10|hailo10h_to_trt|b009",
         "generic|yolov7_paper|H10|hailo10h_to_trt|b044",
         "generic|yolov7_paper|H10|hailo10h_to_trt|b066",
+        "generic|yolov7_paper|H8|hailo8_to_trt|b009",
         "generic|yolov7_paper|H8|hailo8_to_trt|b044",
         "generic|yolov7_paper|H8|hailo8_to_trt|b066",
         "native|mobilenet_v3_large|DeepX|deepx_to_trt|b001",
@@ -1782,6 +1783,7 @@
         "native|yolov7_paper|H10|hailo10h_to_trt|b009",
         "native|yolov7_paper|H10|hailo10h_to_trt|b044",
         "native|yolov7_paper|H10|hailo10h_to_trt|b066",
+        "native|yolov7_paper|H8|hailo8_to_trt|b009",
         "native|yolov7_paper|H8|hailo8_to_trt|b044",
         "native|yolov7_paper|H8|hailo8_to_trt|b066"
       ],
@@ -1827,7 +1829,7 @@
       ],
       "verification": "Verified current study numerical reproduction and identity/accounting gates; archived R22 reference evidence is retained separately.",
       "current_cohort": {
-        "verified_pairs": 186,
+        "verified_pairs": 187,
         "model_device_groups": 21,
         "singleton_groups": 0
       },
@@ -5463,9 +5465,9 @@
     },
     {
       "asset_id": "fig:supp-unfiltered-selection",
-      "caption": "Generic-to-Native selection on 203 verified paired cuts in 21 model/device groups; 0 groups have fewer than two cuts. No quality filter. Hollow markers denote one candidate, which provides no ranking test. Every nonempty group has equal weight. Original Native FPS and historical Native quality retain their separate observed contracts.",
+      "caption": "Generic-to-Native selection on 204 verified paired cuts in 21 model/device groups; 0 groups have fewer than two cuts. No quality filter. Hollow markers denote one candidate, which provides no ranking test. Every nonempty group has equal weight. Original Native FPS and historical Native quality retain their separate observed contracts.",
       "data_generation": "Current compatible Generic observations with original artifact-bound Native measurements; study metadata records the observation policy and audit status.",
-      "description": "Current Generic-to-Native selection, 203 verified pairs in 21 model/device groups",
+      "description": "Current Generic-to-Native selection, 204 verified pairs in 21 model/device groups",
       "generator": "scripts/supplementary-studies/rq2-native-scope-20261027/reproduce.py:render",
       "input_files": [
         "results/supplementary-studies/rq2-native-scope-20261027/INPUT_MANIFEST.json",
@@ -5673,6 +5675,7 @@
         "generic|yolov7_paper|H10|hailo10h_to_trt|b009",
         "generic|yolov7_paper|H10|hailo10h_to_trt|b044",
         "generic|yolov7_paper|H10|hailo10h_to_trt|b066",
+        "generic|yolov7_paper|H8|hailo8_to_trt|b009",
         "generic|yolov7_paper|H8|hailo8_to_trt|b044",
         "generic|yolov7_paper|H8|hailo8_to_trt|b066",
         "native|mobilenet_v3_large|DeepX|deepx_to_trt|b001",
@@ -5876,6 +5879,7 @@
         "native|yolov7_paper|H10|hailo10h_to_trt|b009",
         "native|yolov7_paper|H10|hailo10h_to_trt|b044",
         "native|yolov7_paper|H10|hailo10h_to_trt|b066",
+        "native|yolov7_paper|H8|hailo8_to_trt|b009",
         "native|yolov7_paper|H8|hailo8_to_trt|b044",
         "native|yolov7_paper|H8|hailo8_to_trt|b066"
       ],
@@ -5920,7 +5924,7 @@
       ],
       "verification": "Verified current study numerical reproduction and identity/accounting gates; archived R22 reference evidence is retained separately.",
       "current_cohort": {
-        "verified_pairs": 203,
+        "verified_pairs": 204,
         "model_device_groups": 21,
         "singleton_groups": 0
       },
@@ -9617,8 +9621,8 @@
         2.95
       ],
       "source_sha256": {
-        "rq2_final_input_manifest": "9810d487e5ab030209f82974d0c4b434c924379c73462582cf26359b717058bd",
-        "rq2_final_summary": "39cdbb81d29104a44973dcc2d88ee62a1ea6bac8ec014aca588b94f6eed3ea59"
+        "rq2_final_input_manifest": "38459343b54dd00c7ded9ad6114d271f237c3ff9575e85768d47a514b163ef67",
+        "rq2_final_summary": "a7d549f27c60f008775f6abc2b7494048cee86bd6fa516d485ea745d843bac69"
       },
       "optimized_status": "Frozen prior shared weights; no fit on the current paired subset.",
       "held_out_status": "Frozen prior model-held-out vectors; prior training scope retained separately.",
@@ -9634,8 +9638,8 @@
         "tables/r30_weighted_budget_table.csv"
       ],
       "source_sha256": {
-        "rq2_final_input_manifest": "9810d487e5ab030209f82974d0c4b434c924379c73462582cf26359b717058bd",
-        "rq2_final_summary": "39cdbb81d29104a44973dcc2d88ee62a1ea6bac8ec014aca588b94f6eed3ea59"
+        "rq2_final_input_manifest": "38459343b54dd00c7ded9ad6114d271f237c3ff9575e85768d47a514b163ef67",
+        "rq2_final_summary": "a7d549f27c60f008775f6abc2b7494048cee86bd6fa516d485ea745d843bac69"
       },
       "generator": "scripts/supplementary-studies/rq2-native-scope-20261027/reproduce.py:render"
     },
@@ -9675,8 +9679,8 @@
         "tables/r30_weighted_macros.tex"
       ],
       "source_sha256": {
-        "rq2_final_input_manifest": "9810d487e5ab030209f82974d0c4b434c924379c73462582cf26359b717058bd",
-        "rq2_final_summary": "39cdbb81d29104a44973dcc2d88ee62a1ea6bac8ec014aca588b94f6eed3ea59"
+        "rq2_final_input_manifest": "38459343b54dd00c7ded9ad6114d271f237c3ff9575e85768d47a514b163ef67",
+        "rq2_final_summary": "a7d549f27c60f008775f6abc2b7494048cee86bd6fa516d485ea745d843bac69"
       },
       "caption": "Current Generic / original Native verified pairs, frozen prior graph weights. See data/rq2_final_summary.json for counts, singleton groups, pending evidence and quality contract limitations.",
       "generator": "scripts/supplementary-studies/rq2-native-scope-20261027/reproduce.py:render"
@@ -9688,9 +9692,9 @@
     "study": "results/supplementary-studies/rq2-native-scope-20261027",
     "scope": {
       "schema": "rq2-native-scope-pairs-v1",
-      "publication_status": "complete_with_documented_native_authority_hold",
+      "publication_status": "complete",
       "actual_imports_complete": true,
-      "actual_import_accounting_sha256": "00aac77edecfe50dff677240af188c866a83dde2392b830f829e728f1558cb0f",
+      "actual_import_accounting_sha256": "62d6747d954573b4ad91fdb40d2cb14d0dbe43b71da3d63ded1b8da5e50e6d41",
       "quality_metrics": {
         "classification": "top1_accuracy",
         "detection": "coco_ap_50_95"
@@ -9701,7 +9705,7 @@
           "scope": "unrestricted",
           "family": "all",
           "original_native_cases": 204,
-          "paired_candidates": 203,
+          "paired_candidates": 204,
           "model_device_groups": 21,
           "singleton_groups": 0,
           "groups_n_ge_2": 21,
@@ -9731,7 +9735,7 @@
           "scope": "unrestricted",
           "family": "detection",
           "original_native_cases": 36,
-          "paired_candidates": 35,
+          "paired_candidates": 36,
           "model_device_groups": 12,
           "singleton_groups": 0,
           "groups_n_ge_2": 12,
@@ -9746,7 +9750,7 @@
           "scope": "quality_admitted",
           "family": "all",
           "original_native_cases": 204,
-          "paired_candidates": 186,
+          "paired_candidates": 187,
           "model_device_groups": 21,
           "singleton_groups": 0,
           "groups_n_ge_2": 21,
@@ -9776,7 +9780,7 @@
           "scope": "quality_admitted",
           "family": "detection",
           "original_native_cases": 36,
-          "paired_candidates": 35,
+          "paired_candidates": 36,
           "model_device_groups": 12,
           "singleton_groups": 0,
           "groups_n_ge_2": 12,
@@ -9790,8 +9794,8 @@
       ],
       "original_native_population": 204,
       "original_native_detector_pairs": 36,
-      "pair_count": 203,
-      "quality_pair_count": 186,
+      "pair_count": 204,
+      "quality_pair_count": 187,
       "group_count": 21,
       "quality_group_count": 21,
       "quality_singleton_groups": 0,
@@ -9806,11 +9810,11 @@
         "yolov7_paper"
       ],
       "classifier_quality_pairs": 151,
-      "detector_quality_pairs": 35,
+      "detector_quality_pairs": 36,
       "final_generic_observations": 205,
-      "selected_generic_observations": 203,
+      "selected_generic_observations": 204,
       "source_found": 204,
-      "compatible_selected": 203,
+      "compatible_selected": 204,
       "new_fps_captured": 1,
       "new_quality_captured": 17,
       "new_fps_capture_observations": 1,
@@ -9826,22 +9830,20 @@
       "prior_published_pairs": 204,
       "prior_published_quality_pairs": 187,
       "excluded_candidates": 17,
-      "unresolved_candidates": 1,
+      "unresolved_candidates": 0,
       "groups_without_quality_pairs": 0,
       "rq3_fixed420_members": 192,
       "outside_rq3_fixed420_pairs": 12,
       "exclusion_reasons": {
         "generic_relative_quality_loss_above_5pct": 17,
-        "native_quality_loss_above_5pct": 17,
-        "original_Native_historical_preprocessing_authority_missing": 1,
-        "no_selected_generic_observation": 1
+        "native_quality_loss_above_5pct": 17
       },
       "scope": "All original artifact-bound measured Native cut identities; RQ3 fixed420 membership is an annotation only. No Native values imputed or remeasured.",
       "selection_policy": "Latest actually completed identity- and complete-task-contract-compatible valid Generic observation; selection precedes quality admission and never ranks FPS, AP or quality outcome.",
       "overall_statistic": "Unchanged equal-group mean over nonempty quality-admitted model/device groups; singleton zero loss is not evidence of ranking quality.",
       "mean_final_generic_loss_pct": 1.3467521152436048,
       "mean_final_generic_loss_n_ge_2_pct": 1.3467521152436048,
-      "same_pairs_comparison_pair_count": 186,
+      "same_pairs_comparison_pair_count": 187,
       "same_pairs_comparison_group_count": 21,
       "mean_old_generic_loss_same_pairs_pct": 15.077128973324955,
       "mean_final_generic_loss_same_pairs_pct": 1.3467521152436048,
@@ -9905,6 +9907,7 @@
         "generic|yolo26m|H8|hailo8_to_trt|b043"
       ],
       "corrected_quality_pending": 0,
+      "reviewed_metadata_pairs": 1,
       "energy_policy": "Original Native, Full and Generic energy records stay in their original dataset. No refreshed Generic rate is paired to old energy as one joint observation."
     },
     "frozen_rq1_and_yolov7": true,
@@ -9927,6 +9930,7 @@
       "data/pair_group_coverage.json",
       "data/pair_identity_audit.csv",
       "data/pair_identity_audit.json",
+      "data/pairing_sensitivity.csv",
       "data/quality_contract_provenance.json",
       "data/quality_pairs.csv",
       "data/quality_pairs.json",
@@ -9934,6 +9938,7 @@
       "data/quality_selection_groups.json",
       "data/rq2_final_input_manifest.json",
       "data/rq2_final_summary.json",
+      "data/runner_graph_comparison.csv",
       "data/selection_groups.csv",
       "data/selection_groups.json",
       "data/standalone_generic_observations.csv",

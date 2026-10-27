@@ -24,5 +24,9 @@
     "RQ1 and existing YOLOv7-b066 case evidence",
     "paper and dissertation prose"
   ],
-  "no_new_joint_energy_observations": true
+  "no_new_joint_energy_observations": true,
+  "reviewed_metadata_policy": "Missing historical recipe metadata alone does not exclude a pair when exact executable binding, recorded runtime parameters and the retained observed input checks agree. No absent hash is reconstructed; all ordinary identity, timing and quality checks remain active.",
+  "reviewed_metadata_decisions": [
+    "PAIRING_REVIEW_b009.json"
+  ]
 }

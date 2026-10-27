@@ -1,24 +1,36 @@
 # Edge AI performance and energy results
 
-The current [27 October 2026 detector-corrected release](results/supplementary-studies/generic420-closeout-20261027/README.md) separates the fixed Generic420 study from the original Native-cut paired study. RQ3 accounts for all 420 planned configurations: 359 have accepted FPS, with 331 quality admissions, 28 quality exclusions and 61 technical exclusions; none remain open. RQ2 accounts for 204 original Native cuts: 186 admitted pairs, 17 quality exclusions and 1 unresolved historical Native-preprocessing authority. H8/YOLOv7/b009 now has complete Generic FPS and quality; its remaining hold concerns only the Native comparison. The original performance–energy records remain separate, and new Generic throughput is never combined with old energy as one observation.
+This repository contains measurements and reproducible analyses of neural-network inference on heterogeneous edge systems. The split-inference study covers seven vision models on Jetson Orin NX systems paired with Hailo-8, Hailo-10H, or DeepX DX-M1.
 
+## Current split-inference study
 
-Measured split-inference performance, energy and quality, together with energy-measurement methods and controls. The preserved performance–energy dataset includes 75 DeepX Native A4 replacements; the other 375 direct observations and all 450 original dataset-quality selections are retained. The collection includes complete model views, supplementary analyses and negative results.
+The study connects three questions: when splitting improves a deployment, how well a universal runner selects cuts for specialized implementations, and how graph scores can narrow the search before hardware testing. **Generic** is the universal runner, **Native** the specialized implementation, and **Full** the unpartitioned model.
 
-| Explore | Contents |
+| Question | Evaluation | Current results |
+|---|---|---|
+| RQ1: When is splitting useful? | Throughput, energy per image and quality against Full execution | [Deployment comparisons](results/split-inference/tables/table3_fastest_deployments.md) |
+| RQ2: Can Generic identify fast Native cuts? | 204 paired cuts; 187 satisfy the quality rule across 21 model–device groups | [Runner-based selection](results/supplementary-studies/rq2-native-scope-20261027/README.md) |
+| RQ3: Can graph scores reduce the candidate set? | 420 planned Generic configurations; 359 measured and 331 quality-admissible across 21 groups | [Graph-based selection](results/supplementary-studies/rq3-generic420-detector-corrected-20261027/README.md) |
+
+The fastest quality-admissible split exceeds the globally fastest Full for six of seven models. Selecting the Generic winner leaves **1.35% mean Native throughput loss**. In the broader graph-score evaluation, testing five cuts selected by boundary size leaves **6.61% mean Generic throughput loss**. The loss is relative to the best measured cut in each model–device group, with equal weight per group.
+
+Start with the [paper results](publications/mlsys/README.md) or the [dissertation figures and tables](publications/dissertation/README.md). Both use the same current inputs. The [data index](results/ACTIVE_GENERIC420.json) identifies the analysis and artifact directories.
+
+From the repository root, regenerate the current English and German outputs with:
+
+```sh
+python3 scripts/reproduce_current.py --output local-output/current --languages en de
+```
+
+See [setup and reproduction](scripts/README.md) for dependencies. This is an offline analysis of the supplied measurements. It does not start hardware runs. Quality is assessed against the CPU-ONNX reference using the 5% relative-loss rule. Energy comparisons use throughput and energy from the same recorded deployment.
+
+## Other research areas
+
+| Area | Contents |
 |---|---|
-| [Split inference](results/split-inference/README.md) | 450 deployments, including 42 Full baselines; throughput, host-inclusive energy, dataset quality, repeats and sensitivity comparisons |
-| [Energy measurement](results/energy-measurement/README.md) | Reconstruction, spectra, historical FP16 rate curves, measurement comparisons, calibration and protocol controls |
-| [Supplementary studies](results/supplementary-studies/README.md) | Quality audit, fixed calibration, scheduling intervention and full ResNet replication, alongside independent stage costs and earlier THESIS20/MLSys and diagnostic studies, each with its own scope |
-| [Analysis scripts](scripts/README.md) | Offline reanalysis and plotting from the supplied inputs |
-| [Software and measurement tools](software/README.md) | Offline evaluators, measurement tools and the selected ONNX source |
+| [Energy measurement](results/energy-measurement/README.md) | Calibration, signal reconstruction, sampling and measurement comparisons |
+| [Supplementary analyses](results/supplementary-studies/README.md) | Additional methods, sensitivity analyses and stage-cost measurements |
+| [Software and measurement tools](software/README.md) | Evaluators, measurement tools and ONNX sources |
+| [PARMA-DITAM](publications/parma-ditam/README.md) · [IEEE TIM](publications/tim/README.md) | Publication-specific results |
 
-Publication entry points: [PARMA-DITAM](publications/parma-ditam/README.md) · [IEEE TIM](publications/tim/README.md) · [MLSys](publications/mlsys/README.md) · [Dissertation](publications/dissertation/README.md).
-
-The split analysis now compares the [global fastest observed Full and split per model](results/split-inference/tables/table3_fastest_deployments.md), with throughput and energy from those exact configurations. A [companion table](results/split-inference/tables/fastest_split_baselines.md) compares the same selected split with both its same-host and global Full references. [Baseline-effect](results/split-inference/figures/fastest_split_baseline_comparison.pdf) and [throughput–energy](results/split-inference/figures/fastest_deployment_tradeoff.pdf) figures share those selections. The earlier [Top-2 Native splits by relative same-host gain](results/split-inference/tables/table3_top2_native.md) remains a separate supplementary selection method.
-
-The split results retain differences in dataset quality and timed work. Their ratios describe measured deployments; they do not isolate the causal effect of graph splitting at equal work. Energy reconstructions retain their sampling and reference limitations. See each result area's methods before comparing values.
-
-Offline reproduction processes existing measurements or exported numerical summaries. It does not repeat hardware acquisition, model compilation or dataset evaluation. Large models, engines, datasets and raw archives remain outside this repository.
-
-The source collection is [onnx-splitpoint-results](https://github.com/Keff789/onnx-splitpoint-results/tree/380dfa09aa6740acdc71908cb6e5dd5c8fc115ad). Existing identifiers and measurement metadata are retained. See [rights and notices](RIGHTS_AND_NOTICES.md).
+Earlier analyses and development experiments are indexed in the [research archive](docs/archival_studies.md). Their source records remain available without mixing them into the current result summaries. Large model files, datasets and raw archives are stored separately. See [rights and notices](RIGHTS_AND_NOTICES.md).

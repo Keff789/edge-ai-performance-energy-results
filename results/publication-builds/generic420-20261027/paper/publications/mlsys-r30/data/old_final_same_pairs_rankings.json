@@ -2208,7 +2208,7 @@
     "setup": "H10"
   },
   {
-    "candidate_count": 2,
+    "candidate_count": 3,
     "case": "b066",
     "current_generic_fps": 46.580410545228744,
     "current_generic_rank": 1,
@@ -2220,7 +2220,7 @@
     "setup": "H8"
   },
   {
-    "candidate_count": 2,
+    "candidate_count": 3,
     "case": "b044",
     "current_generic_fps": 45.468284910007526,
     "current_generic_rank": 2,
@@ -2228,6 +2228,18 @@
     "model": "yolov7_paper",
     "old_generic_fps": 45.468284910007526,
     "old_generic_rank": 2,
+    "ranking_evaluable": true,
+    "setup": "H8"
+  },
+  {
+    "candidate_count": 3,
+    "case": "b009",
+    "current_generic_fps": 41.19388564433142,
+    "current_generic_rank": 3,
+    "generic_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
+    "model": "yolov7_paper",
+    "old_generic_fps": 41.29120249862124,
+    "old_generic_rank": 3,
     "ranking_evaluable": true,
     "setup": "H8"
   }

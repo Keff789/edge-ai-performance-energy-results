@@ -2,10 +2,10 @@
   "profile": "mlsys-r30",
   "frozen_numerical_profile": "mlsys-r22",
   "weighted_scope": {
-    "evaluated_quality_pairs": 186,
+    "evaluated_quality_pairs": 187,
     "model_device_groups": 21,
     "classifier_pairs": 151,
-    "detector_pairs": 35,
+    "detector_pairs": 36,
     "models": [
       "mobilenet_v3_large",
       "regnet_x_1_6gf",
@@ -21,7 +21,7 @@
     "quality_singleton_groups": 0,
     "quality_groups_n_ge_2": 21,
     "mean_final_generic_loss_n_ge_2_pct": 1.3467521152436048,
-    "publication_status": "complete_with_documented_native_authority_hold"
+    "publication_status": "complete"
   },
   "weighted_weights": {
     "w_comm": 1.0,
@@ -40,9 +40,9 @@
   "old_evidence_reference": "results/split-inference/publications/mlsys-r22/data/r15_evidence_validation.json",
   "final_rq2_scope": {
     "schema": "rq2-native-scope-pairs-v1",
-    "publication_status": "complete_with_documented_native_authority_hold",
+    "publication_status": "complete",
     "actual_imports_complete": true,
-    "actual_import_accounting_sha256": "00aac77edecfe50dff677240af188c866a83dde2392b830f829e728f1558cb0f",
+    "actual_import_accounting_sha256": "62d6747d954573b4ad91fdb40d2cb14d0dbe43b71da3d63ded1b8da5e50e6d41",
     "quality_metrics": {
       "classification": "top1_accuracy",
       "detection": "coco_ap_50_95"
@@ -53,7 +53,7 @@
         "scope": "unrestricted",
         "family": "all",
         "original_native_cases": 204,
-        "paired_candidates": 203,
+        "paired_candidates": 204,
         "model_device_groups": 21,
         "singleton_groups": 0,
         "groups_n_ge_2": 21,
@@ -83,7 +83,7 @@
         "scope": "unrestricted",
         "family": "detection",
         "original_native_cases": 36,
-        "paired_candidates": 35,
+        "paired_candidates": 36,
         "model_device_groups": 12,
         "singleton_groups": 0,
         "groups_n_ge_2": 12,
@@ -98,7 +98,7 @@
         "scope": "quality_admitted",
         "family": "all",
         "original_native_cases": 204,
-        "paired_candidates": 186,
+        "paired_candidates": 187,
         "model_device_groups": 21,
         "singleton_groups": 0,
         "groups_n_ge_2": 21,
@@ -128,7 +128,7 @@
         "scope": "quality_admitted",
         "family": "detection",
         "original_native_cases": 36,
-        "paired_candidates": 35,
+        "paired_candidates": 36,
         "model_device_groups": 12,
         "singleton_groups": 0,
         "groups_n_ge_2": 12,
@@ -142,8 +142,8 @@
     ],
     "original_native_population": 204,
     "original_native_detector_pairs": 36,
-    "pair_count": 203,
-    "quality_pair_count": 186,
+    "pair_count": 204,
+    "quality_pair_count": 187,
     "group_count": 21,
     "quality_group_count": 21,
     "quality_singleton_groups": 0,
@@ -158,11 +158,11 @@
       "yolov7_paper"
     ],
     "classifier_quality_pairs": 151,
-    "detector_quality_pairs": 35,
+    "detector_quality_pairs": 36,
     "final_generic_observations": 205,
-    "selected_generic_observations": 203,
+    "selected_generic_observations": 204,
     "source_found": 204,
-    "compatible_selected": 203,
+    "compatible_selected": 204,
     "new_fps_captured": 1,
     "new_quality_captured": 17,
     "new_fps_capture_observations": 1,
@@ -178,22 +178,20 @@
     "prior_published_pairs": 204,
     "prior_published_quality_pairs": 187,
     "excluded_candidates": 17,
-    "unresolved_candidates": 1,
+    "unresolved_candidates": 0,
     "groups_without_quality_pairs": 0,
     "rq3_fixed420_members": 192,
     "outside_rq3_fixed420_pairs": 12,
     "exclusion_reasons": {
       "generic_relative_quality_loss_above_5pct": 17,
-      "native_quality_loss_above_5pct": 17,
-      "original_Native_historical_preprocessing_authority_missing": 1,
-      "no_selected_generic_observation": 1
+      "native_quality_loss_above_5pct": 17
     },
     "scope": "All original artifact-bound measured Native cut identities; RQ3 fixed420 membership is an annotation only. No Native values imputed or remeasured.",
     "selection_policy": "Latest actually completed identity- and complete-task-contract-compatible valid Generic observation; selection precedes quality admission and never ranks FPS, AP or quality outcome.",
     "overall_statistic": "Unchanged equal-group mean over nonempty quality-admitted model/device groups; singleton zero loss is not evidence of ranking quality.",
     "mean_final_generic_loss_pct": 1.3467521152436048,
     "mean_final_generic_loss_n_ge_2_pct": 1.3467521152436048,
-    "same_pairs_comparison_pair_count": 186,
+    "same_pairs_comparison_pair_count": 187,
     "same_pairs_comparison_group_count": 21,
     "mean_old_generic_loss_same_pairs_pct": 15.077128973324955,
     "mean_final_generic_loss_same_pairs_pct": 1.3467521152436048,
@@ -257,6 +255,7 @@
       "generic|yolo26m|H8|hailo8_to_trt|b043"
     ],
     "corrected_quality_pending": 0,
+    "reviewed_metadata_pairs": 1,
     "energy_policy": "Original Native, Full and Generic energy records stay in their original dataset. No refreshed Generic rate is paired to old energy as one joint observation."
   },
   "historical_weighted_scope": {

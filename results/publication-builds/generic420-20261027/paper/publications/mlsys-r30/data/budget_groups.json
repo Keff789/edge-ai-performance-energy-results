@@ -2985,10 +2985,12 @@
   },
   {
     "actual_k": 1,
-    "candidate_count": 2,
+    "candidate_count": 3,
     "candidate_uids": [
+      "generic|yolov7_paper|H8|hailo8_to_trt|b009",
       "generic|yolov7_paper|H8|hailo8_to_trt|b044",
       "generic|yolov7_paper|H8|hailo8_to_trt|b066",
+      "native|yolov7_paper|H8|hailo8_to_trt|b009",
       "native|yolov7_paper|H8|hailo8_to_trt|b044",
       "native|yolov7_paper|H8|hailo8_to_trt|b066"
     ],
@@ -3004,10 +3006,10 @@
     "native_best_case": "b066",
     "native_best_fps": 112.86778421355565,
     "native_best_uid": "native|yolov7_paper|H8|hailo8_to_trt|b066",
-    "random_expected_best_fps": 81.65852283861521,
-    "random_expected_exact_hit": 0.5,
-    "random_expected_loss_pct": 27.651168659331347,
-    "random_subset_count": 2,
+    "random_expected_best_fps": 69.40595652657738,
+    "random_expected_exact_hit": 0.3333333333333333,
+    "random_expected_loss_pct": 38.50684939889022,
+    "random_subset_count": 3,
     "ranking_evaluable": true,
     "requested_k": 1,
     "scope": "unrestricted",
@@ -3016,11 +3018,13 @@
     "singleton": false
   },
   {
-    "actual_k": 2,
-    "candidate_count": 2,
+    "actual_k": 3,
+    "candidate_count": 3,
     "candidate_uids": [
+      "generic|yolov7_paper|H8|hailo8_to_trt|b009",
       "generic|yolov7_paper|H8|hailo8_to_trt|b044",
       "generic|yolov7_paper|H8|hailo8_to_trt|b066",
+      "native|yolov7_paper|H8|hailo8_to_trt|b009",
       "native|yolov7_paper|H8|hailo8_to_trt|b044",
       "native|yolov7_paper|H8|hailo8_to_trt|b066"
     ],
@@ -3030,7 +3034,8 @@
     "generic_loss_pct": 0.0,
     "generic_shortlist": [
       "generic|yolov7_paper|H8|hailo8_to_trt|b066",
-      "generic|yolov7_paper|H8|hailo8_to_trt|b044"
+      "generic|yolov7_paper|H8|hailo8_to_trt|b044",
+      "generic|yolov7_paper|H8|hailo8_to_trt|b009"
     ],
     "generic_shortlist_native_choice": "b066",
     "model": "yolov7_paper",
@@ -3049,11 +3054,13 @@
     "singleton": false
   },
   {
-    "actual_k": 2,
-    "candidate_count": 2,
+    "actual_k": 3,
+    "candidate_count": 3,
     "candidate_uids": [
+      "generic|yolov7_paper|H8|hailo8_to_trt|b009",
       "generic|yolov7_paper|H8|hailo8_to_trt|b044",
       "generic|yolov7_paper|H8|hailo8_to_trt|b066",
+      "native|yolov7_paper|H8|hailo8_to_trt|b009",
       "native|yolov7_paper|H8|hailo8_to_trt|b044",
       "native|yolov7_paper|H8|hailo8_to_trt|b066"
     ],
@@ -3063,7 +3070,8 @@
     "generic_loss_pct": 0.0,
     "generic_shortlist": [
       "generic|yolov7_paper|H8|hailo8_to_trt|b066",
-      "generic|yolov7_paper|H8|hailo8_to_trt|b044"
+      "generic|yolov7_paper|H8|hailo8_to_trt|b044",
+      "generic|yolov7_paper|H8|hailo8_to_trt|b009"
     ],
     "generic_shortlist_native_choice": "b066",
     "model": "yolov7_paper",
@@ -5965,10 +5973,12 @@
   },
   {
     "actual_k": 1,
-    "candidate_count": 2,
+    "candidate_count": 3,
     "candidate_uids": [
+      "generic|yolov7_paper|H8|hailo8_to_trt|b009",
       "generic|yolov7_paper|H8|hailo8_to_trt|b044",
       "generic|yolov7_paper|H8|hailo8_to_trt|b066",
+      "native|yolov7_paper|H8|hailo8_to_trt|b009",
       "native|yolov7_paper|H8|hailo8_to_trt|b044",
       "native|yolov7_paper|H8|hailo8_to_trt|b066"
     ],
@@ -5984,10 +5994,10 @@
     "native_best_case": "b066",
     "native_best_fps": 112.86778421355565,
     "native_best_uid": "native|yolov7_paper|H8|hailo8_to_trt|b066",
-    "random_expected_best_fps": 81.65852283861521,
-    "random_expected_exact_hit": 0.5,
-    "random_expected_loss_pct": 27.651168659331347,
-    "random_subset_count": 2,
+    "random_expected_best_fps": 69.40595652657738,
+    "random_expected_exact_hit": 0.3333333333333333,
+    "random_expected_loss_pct": 38.50684939889022,
+    "random_subset_count": 3,
     "ranking_evaluable": true,
     "requested_k": 1,
     "scope": "native_quality_5pct",
@@ -5996,11 +6006,13 @@
     "singleton": false
   },
   {
-    "actual_k": 2,
-    "candidate_count": 2,
+    "actual_k": 3,
+    "candidate_count": 3,
     "candidate_uids": [
+      "generic|yolov7_paper|H8|hailo8_to_trt|b009",
       "generic|yolov7_paper|H8|hailo8_to_trt|b044",
       "generic|yolov7_paper|H8|hailo8_to_trt|b066",
+      "native|yolov7_paper|H8|hailo8_to_trt|b009",
       "native|yolov7_paper|H8|hailo8_to_trt|b044",
       "native|yolov7_paper|H8|hailo8_to_trt|b066"
     ],
@@ -6010,7 +6022,8 @@
     "generic_loss_pct": 0.0,
     "generic_shortlist": [
       "generic|yolov7_paper|H8|hailo8_to_trt|b066",
-      "generic|yolov7_paper|H8|hailo8_to_trt|b044"
+      "generic|yolov7_paper|H8|hailo8_to_trt|b044",
+      "generic|yolov7_paper|H8|hailo8_to_trt|b009"
     ],
     "generic_shortlist_native_choice": "b066",
     "model": "yolov7_paper",
@@ -6029,11 +6042,13 @@
     "singleton": false
   },
   {
-    "actual_k": 2,
-    "candidate_count": 2,
+    "actual_k": 3,
+    "candidate_count": 3,
     "candidate_uids": [
+      "generic|yolov7_paper|H8|hailo8_to_trt|b009",
       "generic|yolov7_paper|H8|hailo8_to_trt|b044",
       "generic|yolov7_paper|H8|hailo8_to_trt|b066",
+      "native|yolov7_paper|H8|hailo8_to_trt|b009",
       "native|yolov7_paper|H8|hailo8_to_trt|b044",
       "native|yolov7_paper|H8|hailo8_to_trt|b066"
     ],
@@ -6043,7 +6058,8 @@
     "generic_loss_pct": 0.0,
     "generic_shortlist": [
       "generic|yolov7_paper|H8|hailo8_to_trt|b066",
-      "generic|yolov7_paper|H8|hailo8_to_trt|b044"
+      "generic|yolov7_paper|H8|hailo8_to_trt|b044",
+      "generic|yolov7_paper|H8|hailo8_to_trt|b009"
     ],
     "generic_shortlist_native_choice": "b066",
     "model": "yolov7_paper",

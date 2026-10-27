@@ -41945,7 +41945,7 @@
         "valid": true,
         "warmups_per_process": 100
       },
-      "observation_id": "sha256:6ee2178cdae608cf48ea40cf2d7691d5e280d5e9184fbe9ff252ce55b3a95d59",
+      "observation_id": "sha256:bbebd913183e81c32b508b2f7aa2f07f700e65eeaa43545fd211b0e584800d39",
       "observation_mode": "normal_legacy_completed_task_new_measurement",
       "observation_origin": "remeasured",
       "pair_compatibility": {
@@ -42135,7 +42135,11 @@
           "sha256": "6ee2178cdae608cf48ea40cf2d7691d5e280d5e9184fbe9ff252ce55b3a95d59"
         }
       },
-      "task": "detection"
+      "task": "detection",
+      "pairing_review": {
+        "path": "PAIRING_REVIEW_b009.json",
+        "sha256": "526f3aba9fc3dbfaf33e4c9d25290d4dcbdf6f07b17676722271bdef245ab27f"
+      }
     },
     {
       "admission_mode": "rq2_original_native_scope_recovered_existing_generic",

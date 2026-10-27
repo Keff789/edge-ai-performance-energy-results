@@ -5,6 +5,12 @@
   "completed_at": "2026-10-27T12:13:57.775627+00:00",
   "current_closure_category": "quality_eligible",
   "current_quality_status": "reference_close",
+  "current_rq2_inclusion": {
+    "basis": "Reviewed executable, runtime and observed-input evidence.",
+    "historical_full_recipe_binding_verified": false,
+    "included": true,
+    "review": "results/supplementary-studies/rq2-native-scope-20261027/inputs/PAIRING_REVIEW_b009.json"
+  },
   "evidence": {
     "fps_normal_admission": {
       "filename": "B009_FRESH_LEGACY_IMPORT_RECEIPT_v1.json",

@@ -50,18 +50,22 @@ def main():
         'files': dict(sorted(english_assets.items()))}
     write(english / 'ASSET_MANIFEST.json', manifest)
     lines = ['# English dissertation figures and tables', '',
-        'The complete English split and paper build is in [paper](../paper). The same current RQ2 and corrected RQ3 studies feed the English and German outputs. Original RQ1, Native, Full and energy observations retain their recorded values.', '',
-        'The source index below links the existing English artifacts for every registered dissertation bundle. Historical supplementary studies keep their own populations and captions. `ASSET_MANIFEST.json` records each selected file and its SHA256.', '',
+        'The current study covers split deployment benefits, selection with Generic, and graph-based shortlists.', '',
+        '- [Split benefits and paired runner selection](../paper/publications/mlsys-r30/)',
+        '- [Graph-based shortlists](../paper/rq3-generic420/en/)',
+        '- [German collection](../dissertation-de/README.md)', '',
+        'Wide and single-column YOLOv7 case figures use the same measurements. The [complete asset catalog](ASSET_CATALOG.md) contains the additional dissertation material. `ASSET_MANIFEST.json` records source files and hashes.', '',
+        'Reproduce the study from the repository root:', '',
+        '```sh', 'python3 scripts/reproduce_current.py --output local-output/current --languages en de', '```', '']
+    catalog = ['# Complete English asset catalog', '',
+        'The [current study](README.md) provides the main entry point. This catalog also includes supplementary and archived analyses.', '',
         '| Bundle | Files | Source |', '|---|---:|---|']
     for bundle in sorted({entry['bundle'] for entry in english_assets.values()}):
         files = [repo / name for name, entry in english_assets.items() if entry['bundle'] == bundle]
         common = Path(os.path.commonpath([str(path.parent) for path in files]))
-        lines.append(f'| {bundle} | {len(files)} | [English artifacts]({os.path.relpath(common, english)}) |')
-    lines += ['', 'The [German dissertation export](../dissertation-de/README.md) records translation coverage and numerical checks. Both wide and single-column YOLOv7 b066 figures use the frozen original values.', '',
-        'Recreate this source index and the integration verification after the normal paper and German dissertation builds:', '',
-        '```sh', 'python -I -B scripts/dissertation/finalize_generic420_publication.py', '```', '',
-        'The complete preceding commands, including both `--rq2-study` and `--generic420-study`, are recorded in [INTEGRATION_VALIDATION.json](../INTEGRATION_VALIDATION.json).', '']
+        catalog.append(f'| {bundle} | {len(files)} | [English artifacts]({os.path.relpath(common, english)}) |')
     (english / 'README.md').write_text('\n'.join(lines))
+    (english / 'ASSET_CATALOG.md').write_text('\n'.join(catalog) + '\n')
     frozen = repo / 'results/split-inference/publications/mlsys-r22'
     checked = []
     for actual in sorted((paper / 'publications/mlsys-r22').rglob('*')):

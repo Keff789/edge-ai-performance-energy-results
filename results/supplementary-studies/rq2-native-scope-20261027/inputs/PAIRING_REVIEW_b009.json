@@ -1,0 +1,28 @@
+{
+  "schema": "observed-input-pairing-review-v1",
+  "decision": "include_with_metadata_note",
+  "generic_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
+  "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+  "setup_id": "orin_nx_hailo8_01",
+  "boundary_id": "sha256:7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d:topo:4edacaf7f82a71887260f33c05018ac82a149cfcfd8c33db03f12ffe42ea076d:b000009",
+  "part1_sha256": "5bb4af0c18be516ece74eeb4958079e17661c43dca0deac136369a09ee153419",
+  "part2_engine_sha256": "bfe8d53a0a6e2cc95c758aa1da3371003bf381dda1dfe4ec8f3302059f2abab1",
+  "performance_source_sha256": "bbebd913183e81c32b508b2f7aa2f07f700e65eeaa43545fd211b0e584800d39",
+  "completed_at": "2026-10-27T08:40:43.367807+00:00",
+  "basis": "exact_compiled_artifacts_and_recorded_runtime_parameters_with_matching_observed_input",
+  "full_historical_recipe_binding_verified": false,
+  "metadata_note": "The historical Native preprocessing recipe was not logged in full. Existing source and prepared-input checks support pairing; no full-recipe equivalence is inferred. Excluding this pair leaves the Generic selection results unchanged.",
+  "evidence": {
+    "historical_b009_exact_guard_receipt.json": {
+      "path": "historical_b009_exact_guard_receipt.json",
+      "sha256": "62dca173abd24e962d5114441630cde3fc90a05554e40daa59cff0276cc7bccb"
+    },
+    "historical_b009_final_hold.json": {
+      "path": "historical_b009_final_hold.json",
+      "sha256": "2f3c4aa8e3899415ef752e168150a53102feb9fb470eee202dcb7f457aa2603f"
+    }
+  },
+  "policy": "Missing historical recipe metadata alone does not exclude a pair when exact executable binding, recorded runtime parameters and the retained observed input checks agree. No absent hash is reconstructed; all ordinary identity, timing and quality checks remain active.",
+  "decision_basis_independent_of_selection_loss": true,
+  "measured_values_modified": false
+}

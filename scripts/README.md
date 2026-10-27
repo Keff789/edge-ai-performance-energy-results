@@ -1,21 +1,34 @@
-# Offline analysis
+# Reproduce the current results
 
-For the latest Generic420 follow-up, use the [curated-input reproduction commands](../results/supplementary-studies/generic420-closeout-20261027/README.md#reproduction-from-published-inputs). Both `--rq2-study` and `--generic420-study` must be passed to reproduce the current paired RQ2 and Generic-target RQ3 outputs together. The frozen publication presets remain reproducible without these optional inputs.
+The current split-inference analysis has one entry point for the runner comparison, graph-score evaluation, and English/German publication outputs. It uses the supplied measurements and does not start hardware acquisition.
 
-| Analysis | Instructions |
+## Setup
+
+Use Python 3.12 and install the pinned dependencies in a virtual environment. From the repository root:
+
+```sh
+python3.12 -m venv .venv
+.venv/bin/python -m pip install -r scripts/split-inference/requirements-r30.txt -r scripts/supplementary-studies/rq3-generic420/requirements.txt
+```
+
+Activate the environment, then generate the current outputs:
+
+```sh
+. .venv/bin/activate
+python3 scripts/reproduce_current.py --output local-output/current --languages en de
+```
+
+Use a fresh output directory. The command reconstructs the current RQ2 and RQ3 analyses and feeds both into the publication generators. It keeps the measured Full/split throughput and energy values used by RQ1. The outputs include numerical tables, figures and their source references.
+
+The English and German outputs use identical numerical inputs. Models, datasets and accelerator hardware are not required for this offline reproduction. Detailed configuration-level methods are documented with the [runner-selection inputs](../results/supplementary-studies/rq2-native-scope-20261027/README.md) and [graph-selection inputs](../results/supplementary-studies/rq3-generic420-detector-corrected-20261027/README.md).
+
+## Other analyses
+
+| Area | Instructions |
 |---|---|
-| v49 hardware confirmation and energy supplements | [Separate R3 tables, own-interval energy supplements and offline paired-quality analysis](supplementary-studies/thesis-v49-confirmation-20261019/README.md) |
-| Split inference | [Reproduce the tables and figures](../results/split-inference/README.md) |
-| Independent stage-cost composition | [Numerical reproduction, summary tables and vector figures from 36 supplied reports](supplementary-studies/stage-cost-composition/README.md) |
-| Historical split selection | [THESIS20 methods and compact reproduction](../results/supplementary-studies/thesis20-ranking-20261005/README.md) |
-| MLSys R10 supplementary analysis | [Numerical stages, four figures and sensitivity/inventory tables](supplementary-studies/mlsys-selection-20261007/README.md) |
-| Dissertation development studies | [Ranking/proxy plots and reported decoder/compiler/deployment tables](supplementary-studies/dissertation-development-2026/README.md) |
-| Hailo-8 numerical diagnosis | [Exported results and comparison helper with external-array requirements](../results/supplementary-studies/hailo8-har-20260912/README.md) |
-| Native endpoint reconstruction | [Summary tables from archived JSON reports](supplementary-studies/native-endpoint-reconstruction/README.md) |
-| Historical YOLOv7 completion | [Reported-results extraction and bounded stage-profile evidence](../results/supplementary-studies/yolov7-completion-20261007/README.md) |
-| Historical FP16 spectra and dense rate curves | [Thirteen-run cohort, figures and tested generation command](../results/energy-measurement/galleries/historical-fp16.md) |
-| Energy measurement | [Available generators and their input boundaries](../results/energy-measurement/README.md) |
+| Energy measurement | [Signal processing, calibration and measurement comparisons](../results/energy-measurement/README.md) |
+| Independent stage-cost composition | [Stage capacities and pipeline predictions](supplementary-studies/stage-cost-composition/README.md) |
+| Hailo-10H format measurements | [Measurement sources and hardware requirements](hardware/hailo10/README.md) |
+| Earlier publication profiles and studies | [Research archive](../docs/archival_studies.md) |
 
-The main split analysis uses the current DeepX Native A4 replacement cohort. Supplementary commands retain their separately dated populations. Run commands from the repository root and place environments and generated checks in a sibling directory. The analysis instructions distinguish compact numeric replotting from raw-signal processing. No command presented here starts a hardware campaign.
-
-The [archived Hailo-10H input/output-format measurement sources](hardware/hailo10/README.md) accompany the existing microbenchmark results. They require hardware and are separate from the offline commands above.
+The individual generator scripts remain available for targeted work. The unified command above is the normal entry point for the current paper and dissertation figures and tables.

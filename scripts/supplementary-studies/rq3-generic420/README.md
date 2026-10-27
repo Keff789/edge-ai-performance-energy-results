@@ -1,21 +1,22 @@
-# Generic420 graph-score analysis (RQ3)
+# Graph-score selection (RQ3)
 
-This additive study evaluates graph rankings against **measured Generic throughput**.
-It does not replace the paired Generic/Native dataset or recompute Native results.
-The active corrected 27 October snapshot has 420 frozen configurations,
-359 accepted FPS medians, and 331 measured and quality-eligible cuts in
-21 nonempty model–accelerator groups. All 21 groups have resolved FPS and
-quality decisions. The remaining 28 measured cuts have quality failures.
-Fifteen corrected historical quality observations retain their original FPS;
-YOLOv7 on Hailo-8, cut b009, uses its genuinely new three-repeat FPS observation
-and current quality admission. Its earlier observation remains in ledger history.
-A further 61 configurations have technical exclusions (37 compile failures and
-24 unsupported configurations); no supported FPS measurements remain pending.
-This is the resolved conditional pool; technical exclusions are not measured
-quality outcomes. These categories remain separate in `inputs/coverage.csv`.
-`inputs/feature_metadata.json` records the complete current quality coverage.
-The earlier 315-cut preliminary study remains preserved separately under
-`results/supplementary-studies/rq3-generic420-20261027`.
+Graph scores identify promising cuts before hardware measurement. The evaluation
+uses 331 quality-admissible cuts across seven models and three accelerators.
+Of 420 planned configurations, 359 have throughput measurements. The remaining
+61 have documented compilation or support failures, and 28 measured cuts exceed
+the 5% relative quality-loss limit. Per-group coverage is in `inputs/coverage.csv`.
+
+A budget is the number of cuts tested in each model–accelerator group. Its result
+is the fastest Generic cut in that shortlist. Learned weights are evaluated on
+models excluded from training across all accelerators. All groups count equally.
+
+For the complete current study and both language exports, run:
+
+```bash
+python3 scripts/reproduce_current.py --output local-output/current --languages en de
+```
+
+The commands below support working with this analysis separately.
 
 ## Reproduce
 

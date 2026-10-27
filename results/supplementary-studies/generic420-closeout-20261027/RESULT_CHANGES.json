@@ -17,13 +17,15 @@
     "other_358_fps_unchanged": true,
     "outside_fixed420_RQ2_cases": 12
   },
+  "current_pairing_review": "results/supplementary-studies/rq2-native-scope-20261027/inputs/PAIRING_REVIEW_b009.json",
+  "current_pairing_sensitivity": "results/supplementary-studies/rq2-native-scope-20261027/data/pairing_sensitivity.csv",
   "joint_Graph_Generic_Native_search_pipeline_experimentally_validated": false,
   "main_method_prespecified": "global",
   "rq2": {
-    "actual_import_accounting_sha256": "00aac77edecfe50dff677240af188c866a83dde2392b830f829e728f1558cb0f",
+    "actual_import_accounting_sha256": "62d6747d954573b4ad91fdb40d2cb14d0dbe43b71da3d63ded1b8da5e50e6d41",
     "actual_imports_complete": true,
     "classifier_quality_pairs": 151,
-    "compatible_selected": 203,
+    "compatible_selected": 204,
     "corrected_quality_pending": 0,
     "coverage_count_definitions": {
       "capture_observations": "Distinct actual capture source observations; repeat captures of one cut remain distinct, duplicate source hashes are counted once.",
@@ -34,14 +36,12 @@
       "source_found": "Original cuts with any recovered Generic source, including standalone observations held from pairing."
     },
     "detection_metric_label": "COCO AP@[.50:.05:.95]",
-    "detector_quality_pairs": 35,
+    "detector_quality_pairs": 36,
     "energy_policy": "Original Native, Full and Generic energy records stay in their original dataset. No refreshed Generic rate is paired to old energy as one joint observation.",
     "excluded_candidates": 17,
     "exclusion_reasons": {
       "generic_relative_quality_loss_above_5pct": 17,
-      "native_quality_loss_above_5pct": 17,
-      "no_selected_generic_observation": 1,
-      "original_Native_historical_preprocessing_authority_missing": 1
+      "native_quality_loss_above_5pct": 17
     },
     "family_selection_results": [
       {
@@ -55,7 +55,7 @@
         "model_device_groups": 21,
         "old_generic_mean_loss_same_pairs_pct": null,
         "original_native_cases": 204,
-        "paired_candidates": 203,
+        "paired_candidates": 204,
         "scope": "unrestricted",
         "singleton_groups": 0
       },
@@ -85,7 +85,7 @@
         "model_device_groups": 12,
         "old_generic_mean_loss_same_pairs_pct": null,
         "original_native_cases": 36,
-        "paired_candidates": 35,
+        "paired_candidates": 36,
         "scope": "unrestricted",
         "singleton_groups": 0
       },
@@ -100,7 +100,7 @@
         "model_device_groups": 21,
         "old_generic_mean_loss_same_pairs_pct": 15.077128973324955,
         "original_native_cases": 204,
-        "paired_candidates": 186,
+        "paired_candidates": 187,
         "scope": "quality_admitted",
         "singleton_groups": 0
       },
@@ -130,7 +130,7 @@
         "model_device_groups": 12,
         "old_generic_mean_loss_same_pairs_pct": 1.7817217153686513,
         "original_native_cases": 36,
-        "paired_candidates": 35,
+        "paired_candidates": 36,
         "scope": "quality_admitted",
         "singleton_groups": 0
       }
@@ -167,28 +167,29 @@
     "original_native_population": 204,
     "outside_rq3_fixed420_pairs": 12,
     "overall_statistic": "Unchanged equal-group mean over nonempty quality-admitted model/device groups; singleton zero loss is not evidence of ranking quality.",
-    "pair_count": 203,
+    "pair_count": 204,
     "prior_full_quality_scope_mean_loss_pct": 15.077128973324955,
     "prior_published_pairs": 204,
     "prior_published_quality_pairs": 187,
-    "publication_status": "complete_with_documented_native_authority_hold",
+    "publication_status": "complete",
     "quality_group_count": 21,
     "quality_groups_n_ge_2": 21,
     "quality_metrics": {
       "classification": "top1_accuracy",
       "detection": "coco_ap_50_95"
     },
-    "quality_pair_count": 186,
+    "quality_pair_count": 187,
     "quality_singleton_groups": 0,
+    "reviewed_metadata_pairs": 1,
     "rq3_fixed420_members": 192,
     "same_pairs_comparison_group_count": 21,
-    "same_pairs_comparison_pair_count": 186,
+    "same_pairs_comparison_pair_count": 187,
     "schema": "rq2-native-scope-pairs-v1",
     "scope": "All original artifact-bound measured Native cut identities; RQ3 fixed420 membership is an annotation only. No Native values imputed or remeasured.",
-    "selected_generic_observations": 203,
+    "selected_generic_observations": 204,
     "selection_policy": "Latest actually completed identity- and complete-task-contract-compatible valid Generic observation; selection precedes quality admission and never ranks FPS, AP or quality outcome.",
     "source_found": 204,
-    "unresolved_candidates": 1,
+    "unresolved_candidates": 0,
     "weight_policy": "All prior vectors and original full graph normalization universes frozen; no fit. Original holdout status describes original training.",
     "weights": {
       "default": {

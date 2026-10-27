@@ -1,36 +1,17 @@
 # Deutsche Grafiken und Tabellen für die Dissertation
 
-Diese Ausgabe enthält die vollständige Split-Auswertung, die Publikationsprofile und die ergänzenden Split-Studien. Die Energiemessung besitzt ein separates Auswertetool.
+Die aktuelle Studie untersucht den Nutzen der Split-Inferenz, die Auswahl mit Generic und die Vorauswahl anhand des Modellgraphen. Die deutschen Darstellungen verwenden dieselben Messwerte wie die englischen Ausgaben.
 
-Alle Darstellungen verwenden die vorhandenen Messdaten. Achsen, Legenden und Tabellenbeschriftungen sind deutsch. Modell-, Geräte- und Methodennamen sowie die wissenschaftliche Zahlenschreibweise bleiben erhalten. Die englischen CSV-/JSON-Dateien bleiben die gemeinsame Datenquelle.
-
-Das aktuelle Paper verwendet `mlsys-r30`. `mlsys-r22` und die datierten Zusatzstudien bleiben als eigene Messreihen getrennt. Das Manifest verknüpft jede deutsche Datei mit ihrer Quelle und deren Prüfsumme.
+- [Split-Vergleiche und Generic–Native-Auswahl](mlsys-r30/README.md)
+- [Graph-basierte Vorauswahl](rq3-generic420/de/)
 
 ## Reproduktion
 
 ```sh
-python -I -B scripts/dissertation/reproduce.py --source results/publication-builds/generic420-20261027/paper --rq2-study results/supplementary-studies/rq2-native-scope-20261027 --output <empty-directory> --verify
+python3 scripts/reproduce_current.py --output local-output/current --languages en de
 ```
 
-Ein leeres Ausgabeverzeichnis verwenden. Für die vollständige englische und deutsche Split-Ausgabe:
+Ein leeres Ausgabeverzeichnis verwenden. Die Prüfung der Zahlen und Übersetzungen ist Bestandteil des Aufrufs. PDF/SVG und LaTeX sind für die Dissertation vorgesehen, PNG und Markdown für die Vorschau.
 
-```sh
-python -I -B scripts/split-inference/reproduce.py \
-  --publication mlsys-r30 --languages en de --rq2-study results/supplementary-studies/rq2-native-scope-20261027 --output <empty-directory> --verify
-```
+Der [vollständige Dateikatalog](ASSET_CATALOG.md) enthält zusätzliche Darstellungen. `ASSET_MANIFEST.json` verknüpft jede Ausgabe mit ihren Quelldaten.
 
-## Auswahl
-
-| Bereich | Grafiken | Tabellen-Dateien |
-|---|---:|---:|
-| [mlsys-r22](mlsys-r22/README.md) | 8 | 56 |
-| [mlsys-r30](mlsys-r30/README.md) | 13 | 60 |
-| [split-inference](split-inference/README.md) | 23 | 12 |
-| [supplementary-studies/dissertation-development-2026](supplementary-studies/dissertation-development-2026/README.md) | 2 | 15 |
-| [supplementary-studies/mlsys-selection-20261007](supplementary-studies/mlsys-selection-20261007/README.md) | 4 | 25 |
-| [supplementary-studies/native-endpoint-reconstruction](supplementary-studies/native-endpoint-reconstruction/README.md) | 0 | 12 |
-| [supplementary-studies/rq2-all-cuts-20261020](supplementary-studies/rq2-all-cuts-20261020/README.md) | 4 | 1 |
-| [supplementary-studies/stage-cost-composition](supplementary-studies/stage-cost-composition/README.md) | 2 | 2 |
-| [supplementary-studies/thesis-v49-confirmation-20261019](supplementary-studies/thesis-v49-confirmation-20261019/README.md) | 0 | 0 |
-| [supplementary-studies/thesis20-ranking-20261005](supplementary-studies/thesis20-ranking-20261005/README.md) | 2 | 0 |
-| [supplementary-studies/yolov7-completion-20261007](supplementary-studies/yolov7-completion-20261007/README.md) | 0 | 1 |

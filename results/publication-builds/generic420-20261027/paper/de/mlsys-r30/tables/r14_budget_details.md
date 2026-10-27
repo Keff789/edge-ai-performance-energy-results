@@ -2,21 +2,21 @@ Generic-Rangfolge und exakte gleichverteilte Stichprobenauswahl anhand aktueller
 
 | Zulassung | Aufgabe | Gruppen | Cuts | k | G-Verlust (%) | U-Verlust (%) | G-Treffer | U-Treffer |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| ohne Qualitätsfilter | alle | 21 | 203 | 1 | 1.46 | 23.27 | 14 | 4.651 |
-| ohne Qualitätsfilter | alle | 21 | 203 | 3 | 0.26 | 7.51 | 20 | 13.453 |
-| ohne Qualitätsfilter | alle | 21 | 203 | 5 | 0.00 | 4.43 | 21 | 14.422 |
+| ohne Qualitätsfilter | alle | 21 | 204 | 1 | 1.46 | 23.78 | 14 | 4.484 |
+| ohne Qualitätsfilter | alle | 21 | 204 | 3 | 0.26 | 7.51 | 20 | 13.453 |
+| ohne Qualitätsfilter | alle | 21 | 204 | 5 | 0.00 | 4.43 | 21 | 14.422 |
 | ohne Qualitätsfilter | Klassifikation | 9 | 168 | 1 | 3.39 | 36.71 | 3 | 0.484 |
 | ohne Qualitätsfilter | Klassifikation | 9 | 168 | 3 | 0.61 | 17.51 | 8 | 1.453 |
 | ohne Qualitätsfilter | Klassifikation | 9 | 168 | 5 | 0.00 | 10.34 | 9 | 2.422 |
-| ohne Qualitätsfilter | Detektion | 12 | 35 | 1 | 0.02 | 13.19 | 11 | 4.167 |
-| ohne Qualitätsfilter | Detektion | 12 | 35 | 3 | 0.00 | 0.00 | 12 | 12.000 |
-| ohne Qualitätsfilter | Detektion | 12 | 35 | 5 | 0.00 | 0.00 | 12 | 12.000 |
-| native_quality_5pct | alle | 21 | 186 | 1 | 1.35 | 21.37 | 15 | 4.769 |
-| native_quality_5pct | alle | 21 | 186 | 3 | 0.26 | 6.60 | 20 | 13.808 |
-| native_quality_5pct | alle | 21 | 186 | 5 | 0.00 | 3.90 | 21 | 15.014 |
+| ohne Qualitätsfilter | Detektion | 12 | 36 | 1 | 0.02 | 14.09 | 11 | 4.000 |
+| ohne Qualitätsfilter | Detektion | 12 | 36 | 3 | 0.00 | 0.00 | 12 | 12.000 |
+| ohne Qualitätsfilter | Detektion | 12 | 36 | 5 | 0.00 | 0.00 | 12 | 12.000 |
+| native_quality_5pct | alle | 21 | 187 | 1 | 1.35 | 21.89 | 15 | 4.603 |
+| native_quality_5pct | alle | 21 | 187 | 3 | 0.26 | 6.60 | 20 | 13.808 |
+| native_quality_5pct | alle | 21 | 187 | 5 | 0.00 | 3.90 | 21 | 15.014 |
 | native_quality_5pct | Klassifikation | 9 | 151 | 1 | 3.12 | 32.29 | 4 | 0.603 |
 | native_quality_5pct | Klassifikation | 9 | 151 | 3 | 0.61 | 15.41 | 8 | 1.808 |
 | native_quality_5pct | Klassifikation | 9 | 151 | 5 | 0.00 | 9.10 | 9 | 3.014 |
-| native_quality_5pct | Detektion | 12 | 35 | 1 | 0.02 | 13.19 | 11 | 4.167 |
-| native_quality_5pct | Detektion | 12 | 35 | 3 | 0.00 | 0.00 | 12 | 12.000 |
-| native_quality_5pct | Detektion | 12 | 35 | 5 | 0.00 | 0.00 | 12 | 12.000 |
+| native_quality_5pct | Detektion | 12 | 36 | 1 | 0.02 | 14.09 | 11 | 4.000 |
+| native_quality_5pct | Detektion | 12 | 36 | 3 | 0.00 | 0.00 | 12 | 12.000 |
+| native_quality_5pct | Detektion | 12 | 36 | 5 | 0.00 | 0.00 | 12 | 12.000 |

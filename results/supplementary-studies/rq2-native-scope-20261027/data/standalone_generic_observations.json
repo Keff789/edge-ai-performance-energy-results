@@ -8225,7 +8225,7 @@
   },
   {
     "case": "b009",
-    "current_pair_hold_explanation": "Fresh Generic FPS and quality are complete. The original Native historical preprocessing authority remains unproved; further Generic recapture is not required and cannot establish it.",
+    "current_pair_hold_explanation": null,
     "generic_completed_at": "2026-10-08T10:35:57.242634+00:00",
     "generic_cpu_reference_sha256": null,
     "generic_fps": 41.29120249862124,
@@ -8248,9 +8248,7 @@
     "generic_quality_value": null,
     "generic_relative_quality_loss": null,
     "generic_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
-    "historical_pair_hold_reasons": [
-      "generic_native_pair_compatibility_unresolved:historical_b009_actual_preprocessing_authority_unproved; accepted standalone FPS preserved, pairing pending fresh observation"
-    ],
+    "historical_pair_hold_reasons": [],
     "model": "yolov7_paper",
     "native_cpu_reference_sha256": null,
     "native_quality_metric": "coco_ap_50_95",
@@ -8261,7 +8259,7 @@
     "pair_compatible_selected": false,
     "pair_eligible": false,
     "pair_hold_reasons": [
-      "original_Native_historical_preprocessing_authority_missing"
+      "generic_native_pair_compatibility_unresolved:historical_b009_actual_preprocessing_authority_unproved; accepted standalone FPS preserved, pairing pending fresh observation"
     ],
     "pair_quality_exclusion_reasons": [
       "observation_not_selected_for_native_pair"
@@ -8276,7 +8274,7 @@
   },
   {
     "case": "b009",
-    "current_pair_hold_explanation": "Fresh Generic FPS and quality are complete. The original Native historical preprocessing authority remains unproved; further Generic recapture is not required and cannot establish it.",
+    "current_pair_hold_explanation": null,
     "generic_completed_at": "2026-10-27T08:40:43.367807+00:00",
     "generic_cpu_reference_sha256": null,
     "generic_fps": 41.19388564433142,
@@ -8299,9 +8297,7 @@
     "generic_quality_value": 0.45791324238237674,
     "generic_relative_quality_loss": 0.005285896265169955,
     "generic_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
-    "historical_pair_hold_reasons": [
-      "generic_native_pair_compatibility_unresolved:historical_b009_actual_preprocessing_authority_unproved; accepted standalone FPS preserved, pairing pending fresh observation"
-    ],
+    "historical_pair_hold_reasons": [],
     "model": "yolov7_paper",
     "native_cpu_reference_sha256": null,
     "native_quality_metric": "coco_ap_50_95",
@@ -8309,15 +8305,11 @@
     "native_quality_scope": "Preserved historical normal quality; exact timed Native endpoint AP is not asserted.",
     "native_quality_value": 0.45791324238237674,
     "native_relative_quality_loss": 0.005285896265169955,
-    "pair_compatible_selected": false,
-    "pair_eligible": false,
-    "pair_hold_reasons": [
-      "original_Native_historical_preprocessing_authority_missing"
-    ],
-    "pair_quality_exclusion_reasons": [
-      "observation_not_selected_for_native_pair"
-    ],
-    "pair_status": "not_selected_incompatible_or_unresolved",
+    "pair_compatible_selected": true,
+    "pair_eligible": true,
+    "pair_hold_reasons": [],
+    "pair_quality_exclusion_reasons": [],
+    "pair_status": "admitted",
     "performance_acquisition_origin": "new_capture",
     "performance_source_epochs": {
       "central_consumer_source_commit": "6acdf869f329a2a23632436857daffcf90c0337a",

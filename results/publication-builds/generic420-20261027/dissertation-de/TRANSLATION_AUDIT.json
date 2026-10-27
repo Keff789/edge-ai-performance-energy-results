@@ -8766,7 +8766,7 @@
     {
       "bundle": "split-inference",
       "report": {
-        "catalog_sha256": "67973ffc319387507f8828d9df67c634f6f66b5a19980d3ec8c217fc86a78174",
+        "catalog_sha256": "dbe1dca4997a2fd494b01b96c7f0ccf1b83e4e19798ea2b0bf8a92f16d2eda22",
         "file_count": 12,
         "files": [
           {
@@ -8884,7 +8884,7 @@
     {
       "bundle": "mlsys-r22",
       "report": {
-        "catalog_sha256": "67973ffc319387507f8828d9df67c634f6f66b5a19980d3ec8c217fc86a78174",
+        "catalog_sha256": "dbe1dca4997a2fd494b01b96c7f0ccf1b83e4e19798ea2b0bf8a92f16d2eda22",
         "file_count": 56,
         "files": [
           {
@@ -9398,7 +9398,7 @@
     {
       "bundle": "mlsys-r30",
       "report": {
-        "catalog_sha256": "67973ffc319387507f8828d9df67c634f6f66b5a19980d3ec8c217fc86a78174",
+        "catalog_sha256": "dbe1dca4997a2fd494b01b96c7f0ccf1b83e4e19798ea2b0bf8a92f16d2eda22",
         "file_count": 60,
         "files": [
           {
@@ -9478,18 +9478,18 @@
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "current_selection_groups.tex",
-            "source_sha256": "0522fd562cf2193b1823f30f9dfcfc6db2e62d884d75973cd6cad6ef19a7a41c",
+            "source_sha256": "1ae38d07f1cfd7acd7f2c8c1cd90c80efc4fb63c30d5c8d571a913c4aa561b1c",
             "target": "current_selection_groups.tex",
-            "target_sha256": "9cac93b16978c4d6a8f10d9e779b1873807d21e110dd0f183b97dbe35df0b003"
+            "target_sha256": "97af66f6c713b79d89c33f5217a64478d3e4f4c124e14fb25fac47c5d20daa15"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "current_selection_groups.md",
-            "source_sha256": "f6833b6063a943f3b1dac0db7f771e60d93847f0b2c3d8cf277b45bd1bb1b683",
+            "source_sha256": "8ee996dcbf300a04ba26eda4f28f6834096bbd18ec79af39295069ba344f0e13",
             "target": "current_selection_groups.md",
-            "target_sha256": "8cf76ad6cef92c43866f4815bac02abf562e497d04517ff4543da0c93aa4555d"
+            "target_sha256": "3290e370de2c0478996d9d45633aa22ca1ea99dc6d1b151d3e9bd7e2c7a61d24"
           },
           {
             "compatibility_definitions": {},
@@ -9586,18 +9586,18 @@
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "r14_budget_details.tex",
-            "source_sha256": "50e620e3fa34c8d3b5426c5f38ffa6e932d0fcd772da59956012b07e5be711ff",
+            "source_sha256": "9d462e5b836f72cdb48e287be70952fc71274e28beb905cd4e33b6f0ce0a9e4c",
             "target": "r14_budget_details.tex",
-            "target_sha256": "03fec4cb6a17b15662e3d499e2beead953879dc4efb94be03f68258ec432623f"
+            "target_sha256": "778d2734cc092d5d7d49bec1ec8d34b10cce3923d263911206ce38153eb52154"
           },
           {
             "compatibility_definitions": {},
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "r14_budget_details.md",
-            "source_sha256": "8e366c059da125e85e27575fcba2d147c79fbfed3c14038f0148d422956e1798",
+            "source_sha256": "3bc6c8aee73c5b39a4aee87d19a4fcbb7b08fb06fa816808bf8331d31ea0c1f3",
             "target": "r14_budget_details.md",
-            "target_sha256": "9a6866be5718a93a02072cfe1261246ba33755ec93311d5d74296fdb3b8a825c"
+            "target_sha256": "0e3326a86c1a0824db1c320d6df016379a5b7511ad8abea45cfefba4149bb1ce"
           },
           {
             "compatibility_definitions": {},
@@ -9820,9 +9820,9 @@
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "r30_weighted_budget_table.tex",
-            "source_sha256": "d36b283fc4ae272b5d2ed5b01e64415ea068504cad74c7c04fe5d365e3ac0fd1",
+            "source_sha256": "0d7348dbe25c6c7fbaa3ff9d0e28c08b197626baf272adb6f636f8f4c7edd7f4",
             "target": "r30_weighted_budget_table.tex",
-            "target_sha256": "69386e05ccaacc893edab2142e40a8ce512ad5777624c2e6c108f401d2dd3565"
+            "target_sha256": "56f9184294bd23c4179b32d7b1269f9a5e1d1756808a0c10e17b0e3ff0d7b31c"
           },
           {
             "compatibility_definitions": {},
@@ -9865,9 +9865,9 @@
             "numeric_content_unchanged": true,
             "numeric_row_tokens_unchanged": true,
             "source": "rq2_search_budget_table.tex",
-            "source_sha256": "bce67f1a919541f5da3b13656f3fbfcddcc55208727164b52bfd317334db57ab",
+            "source_sha256": "edcc209865475607337ac9ccd18e360739e8a193b85b0069f64314933c25a86d",
             "target": "rq2_search_budget_table.tex",
-            "target_sha256": "e390fbc8d3422ba3223d0870716a34ef0e9b8ef4b77fc6dd44d855d1a6fc6072"
+            "target_sha256": "f567bd0bfc49bcd979c0f1afa11307b60d478fa5cb18a1370dca1ae8166a238d"
           },
           {
             "compatibility_definitions": {},
@@ -9948,7 +9948,7 @@
     {
       "bundle": "supplementary-studies/stage-cost-composition",
       "report": {
-        "catalog_sha256": "67973ffc319387507f8828d9df67c634f6f66b5a19980d3ec8c217fc86a78174",
+        "catalog_sha256": "dbe1dca4997a2fd494b01b96c7f0ccf1b83e4e19798ea2b0bf8a92f16d2eda22",
         "file_count": 2,
         "files": [
           {
@@ -9976,7 +9976,7 @@
     {
       "bundle": "supplementary-studies/mlsys-selection-20261007",
       "report": {
-        "catalog_sha256": "67973ffc319387507f8828d9df67c634f6f66b5a19980d3ec8c217fc86a78174",
+        "catalog_sha256": "dbe1dca4997a2fd494b01b96c7f0ccf1b83e4e19798ea2b0bf8a92f16d2eda22",
         "file_count": 25,
         "files": [
           {
@@ -10218,7 +10218,7 @@
     {
       "bundle": "supplementary-studies/rq2-all-cuts-20261020",
       "report": {
-        "catalog_sha256": "67973ffc319387507f8828d9df67c634f6f66b5a19980d3ec8c217fc86a78174",
+        "catalog_sha256": "dbe1dca4997a2fd494b01b96c7f0ccf1b83e4e19798ea2b0bf8a92f16d2eda22",
         "file_count": 1,
         "files": [
           {
@@ -10237,7 +10237,7 @@
     {
       "bundle": "supplementary-studies/dissertation-development-2026",
       "report": {
-        "catalog_sha256": "67973ffc319387507f8828d9df67c634f6f66b5a19980d3ec8c217fc86a78174",
+        "catalog_sha256": "dbe1dca4997a2fd494b01b96c7f0ccf1b83e4e19798ea2b0bf8a92f16d2eda22",
         "file_count": 15,
         "files": [
           {
@@ -10382,7 +10382,7 @@
     {
       "bundle": "supplementary-studies/thesis20-ranking-20261005",
       "report": {
-        "catalog_sha256": "67973ffc319387507f8828d9df67c634f6f66b5a19980d3ec8c217fc86a78174",
+        "catalog_sha256": "dbe1dca4997a2fd494b01b96c7f0ccf1b83e4e19798ea2b0bf8a92f16d2eda22",
         "file_count": 0,
         "files": [],
         "untranslated": []
@@ -10391,7 +10391,7 @@
     {
       "bundle": "supplementary-studies/native-endpoint-reconstruction",
       "report": {
-        "catalog_sha256": "67973ffc319387507f8828d9df67c634f6f66b5a19980d3ec8c217fc86a78174",
+        "catalog_sha256": "dbe1dca4997a2fd494b01b96c7f0ccf1b83e4e19798ea2b0bf8a92f16d2eda22",
         "file_count": 12,
         "files": [
           {
@@ -10509,7 +10509,7 @@
     {
       "bundle": "supplementary-studies/thesis-v49-confirmation-20261019",
       "report": {
-        "catalog_sha256": "67973ffc319387507f8828d9df67c634f6f66b5a19980d3ec8c217fc86a78174",
+        "catalog_sha256": "dbe1dca4997a2fd494b01b96c7f0ccf1b83e4e19798ea2b0bf8a92f16d2eda22",
         "file_count": 0,
         "files": [],
         "untranslated": []
@@ -10518,7 +10518,7 @@
     {
       "bundle": "supplementary-studies/yolov7-completion-20261007",
       "report": {
-        "catalog_sha256": "67973ffc319387507f8828d9df67c634f6f66b5a19980d3ec8c217fc86a78174",
+        "catalog_sha256": "dbe1dca4997a2fd494b01b96c7f0ccf1b83e4e19798ea2b0bf8a92f16d2eda22",
         "file_count": 1,
         "files": [
           {

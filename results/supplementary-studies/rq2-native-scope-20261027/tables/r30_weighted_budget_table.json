@@ -1,5 +1,5 @@
 {
-  "caption": "Native throughput loss on 186 quality-admitted original Native cuts in 21 model/device groups; 0 groups have fewer than two cuts. Latest actually completed compatible Generic observation, selected before quality. Equal weight per nonempty group; also report the mean restricted to n>=2. Original graph weights and normalization universes are frozen. RQ3 fixed420 membership is only an annotation; missing evidence remains unavailable.",
+  "caption": "Native throughput loss for 187 quality-admissible cuts in 21 model-device groups, with groups weighted equally. At budget k, we test the first min(k,n) ranked cuts and compare their highest Native throughput with the best measured Native cut in that group.",
   "rows": [
     {
       "groups": 21,

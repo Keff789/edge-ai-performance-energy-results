@@ -4967,9 +4967,8 @@
     {
       "actual_quality_import_pending": false,
       "case": "b009",
-      "compatible_selected": false,
+      "compatible_selected": true,
       "corrected_quality_pending": false,
-      "current_pair_hold_explanation": "Fresh Generic FPS and quality are complete. The original Native historical preprocessing authority remains unproved; further Generic recapture is not required and cannot establish it.",
       "generic_quality_source_epochs": {
         "central_consumer_source_commit": "6acdf869f329a2a23632436857daffcf90c0337a",
         "controller_source_commit": "acf508840a16fa29d90955abca2fa2af4ebb72c7",
@@ -4993,13 +4992,14 @@
       "own_generic_quality_status": "reference_close",
       "own_generic_quality_value": 0.45791324238237674,
       "own_generic_relative_loss": 0.005285896265169955,
-      "pair_eligible": false,
-      "pair_hold_reasons": [
-        "original_Native_historical_preprocessing_authority_missing"
-      ],
+      "pair_eligible": true,
+      "pair_hold_reasons": [],
       "setup": "H8",
       "source_found": true,
-      "state": "unresolved"
+      "state": "admitted",
+      "pairing_basis": "exact_compiled_artifacts_and_recorded_runtime_parameters_with_matching_observed_input",
+      "pairing_metadata_note": "The historical Native preprocessing recipe was not logged in full. Existing source and prepared-input checks support pairing; no full-recipe equivalence is inferred. Excluding this pair leaves the Generic selection results unchanged.",
+      "prior_pair_hold_explanation": "Fresh Generic FPS and quality are complete. The original Native historical preprocessing authority remains unproved; further Generic recapture is not required and cannot establish it."
     },
     {
       "actual_quality_import_pending": false,
@@ -5052,17 +5052,24 @@
   ],
   "counts": {
     "actual_performance_candidates": 205,
-    "compatible_selected_pairs": 203,
+    "compatible_selected_pairs": 204,
     "corrected_quality_pending": 0,
     "excluded": 17,
     "generic_sources_found": 204,
     "new_fps_captured": 1,
     "new_quality_captured": 17,
     "original_native_cases": 204,
-    "quality_admitted_pairs": 186,
-    "unresolved": 1
+    "quality_admitted_pairs": 187,
+    "unresolved": 0
   },
-  "documented_native_pair_holds": [
+  "extra_cut_added_to_fixed420": false,
+  "inputs_sha256": "e5218400f0f9d05e35fc2da8cdc54f7f5878a3ef9878aea6db05885105df3dbb",
+  "last_actual_quality_overlay_sha256": "e96c11ffc662296562b5b5f524efe95411cfa63f5c9cf2fbcbaf060312be1542",
+  "remaining_actual_quality_import_UIDs": [],
+  "schema": "rq2-actual-import-accounting-v1",
+  "scope": "Completed actual imports and unchanged normal identity/quality accounting only; comparison curves, graphs and publication assets are not refreshed.",
+  "pairing_review_sha256": "526f3aba9fc3dbfaf33e4c9d25290d4dcbdf6f07b17676722271bdef245ab27f",
+  "historical_native_metadata_notes": [
     {
       "actual_quality_import_pending": false,
       "case": "b009",
@@ -5100,11 +5107,5 @@
       "source_found": true,
       "state": "unresolved"
     }
-  ],
-  "extra_cut_added_to_fixed420": false,
-  "inputs_sha256": "47fca775723c56ed8cceb744b919734d3f74f7f596206974d85fd7866e527b8d",
-  "last_actual_quality_overlay_sha256": "e96c11ffc662296562b5b5f524efe95411cfa63f5c9cf2fbcbaf060312be1542",
-  "remaining_actual_quality_import_UIDs": [],
-  "schema": "rq2-actual-import-accounting-v1",
-  "scope": "Completed actual imports and unchanged normal identity/quality accounting only; comparison curves, graphs and publication assets are not refreshed."
+  ]
 }

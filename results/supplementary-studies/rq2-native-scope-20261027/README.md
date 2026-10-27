@@ -1,17 +1,25 @@
-# RQ2 original Native population
+# Selecting Native splits with Generic
 
-204 original Native cuts in 21 model/device groups are accounted for. 203 have a selected valid compatible Generic observation; 186 pass both Native numerical quality and current bound Generic quality in 21 groups. 17 are excluded and 1 remain unresolved. Publication status: complete_with_documented_native_authority_hold.
+The comparison covers 204 measured cuts on seven models and three accelerator setups. The 5% relative quality-loss rule admits 187 paired cuts in 21 model–device groups. 17 cuts exceed this quality limit.
 
-`source_snapshot_sha256=36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e` identifies the historical 192-observation base. The separate INPUT_MANIFEST.json hash for inputs/observations.json binds the complete current RQ2 input, including 12 extra cuts, 17 new quality captures and 1 new FPS captures with retained provenance. The adopted fixed420 ledger d658eb19… is separate current RQ3 authority; it does not replace the RQ2 observations outside that cohort. Historical source hashes retain their original meaning.
+For each group, Generic recommends its fastest measured cut. We evaluate that recommendation by its Native throughput, relative to the fastest measured Native cut in the same group. Each group contributes equally.
 
-RQ3 fixed420 membership is an annotation. The importer iterates the original Native population and admits valid observations outside that set. Every group reports original cuts, Generic sources found, compatible selected pairs, recovered compatible observations, actual new FPS captures, actual new quality captures, admissions, exclusions and unresolved counts. Sources found and actual captures include standalone observations held from pairing. Recovered retains its compatible-selected meaning; remeasured counts new FPS captures only. Quality-only captures are separate and come from actual overlay acquisition provenance. tables/native_generic_quality_observations.csv retains observed standalone Generic AP/reference/loss even when pair_eligible is false, with exact pair hold reasons. Missing quality evidence is unavailable, never a measured accuracy loss. Native and Generic values and their own CPU-ONNX references remain separate.
+| Models | Paired cuts | Groups | Mean Native loss (%) |
+|---|---:|---:|---:|
+| All models | 187 | 21 | 1.3468 |
+| Classifiers | 151 | 9 | 3.1189 |
+| Detectors | 36 | 12 | 0.0176 |
 
-The equal-group mean retains its established definition: 1.3467521152436048; the mean restricted to groups with n>=2 is 1.3467521152436048. 0 groups have a single admitted cut; zero loss for a singleton provides no ranking evidence. Old/current Generic choices and complete ranks use exactly the same quality-admitted eligible pairs with both rates available.
+[Shortlist results](analysis/key_budget_results.csv) show how the loss changes when more than one recommendation can be tested. [Group results](data/quality_selection_groups.csv) identify the selected cuts. The [paired observations](data/current_pairs.csv) contain the measurement values and quality decisions. [Runner comparison](data/runner_graph_comparison.csv) evaluates the same graph shortlists with Generic and Native.
 
-Actual imports are complete: True; new FPS captures: 1, new quality captures: 17, pending quality corrections: 0. The documented Native authority hold concerns original historical preprocessing evidence. Fresh Generic FPS and quality are complete; further Generic recapture is not required and cannot establish that historical Native authority.
+RQ3 uses a broader candidate set to evaluate graph rankings against Generic throughput. It is available from the [current study entry](../generic420-closeout-20261027/README.md). The two analyses answer different selection questions within the same study.
 
-Native quality retains its recorded historical metric, which is not asserted to be exact selected timed Native endpoint AP. Current Generic quality evaluates its actual timed completion records against its own CPU-ONNX reference under the unchanged normal policy. Proven additional-NMS differences are source-scoped in data/quality_contract_provenance.json; this quality-definition difference limits interpretation. Detector quality is COCO AP@[.50:.05:.95]; classification quality is Top-1 accuracy. The evaluator implementation suffix does not change the reported primary metric.
+## Reproduce
 
-All graph weights and normalization universes are frozen. Native, Full, historical energy, RQ1, RQ3 and original YOLOv7 case evidence remain unchanged. Refreshed Generic FPS never inherits historical energy as a joint observation.
+```bash
+python3 scripts/supplementary-studies/rq2-native-scope-20261027/reproduce.py --output local-output/rq2 --verify
+```
 
-Reproduce with `python scripts/supplementary-studies/rq2-native-scope-20261027/reproduce.py --output <empty-dir> --verify`; add `--numeric-only` to omit rendering. `VALIDATION.json` validates offline accounting and reproduction only. Unresolved scientific evidence remains unresolved in `data/pair_identity_audit.json`.
+Run from the repository root. Add `--numeric-only` to omit rendering. [Measurement notes](DATA_NOTES.md) explain the few retained source differences. The input manifest and detailed source records support reproduction without making the measurement chronology part of the result.
+
+<!-- assemble_inputs.py reconstructs historical acquisition sources. It does not apply the published pairing review. Normal reproduction reads the current observations.json and validates that review separately. -->

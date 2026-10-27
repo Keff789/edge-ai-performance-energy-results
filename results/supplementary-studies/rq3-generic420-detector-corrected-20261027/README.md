@@ -1,8 +1,8 @@
-# Generic420 RQ3: published conditional analysis
+# RQ3: Selecting cuts with graph scores
 
-Status: **resolved_conditional_candidate_pool**. 420 selected configurations; 359 accepted FPS medians; 331 quality-eligible cuts in 21 model–accelerator groups. 28 measured quality failures, 0 measured quality decisions pending, 61 technical exclusions and 0 FPS measurements pending.
+Graph scores rank cuts before hardware measurements. We measure the highest Generic throughput found after testing the first one, three or five recommendations, relative to the best measured cut in each group.
 
-The candidate pool is conditional on available, quality-eligible measurements. Historical quality is not a current endpoint admission. All selected cases have a resolved measured-quality or technical-exclusion status. Pending identities and historical roles are in `inputs/feature_metadata.json`. Native measurements are unchanged.
+The analysis includes 331 quality-admissible cuts in 21 model–accelerator groups. Of 420 planned configurations, 61 could not be executed and 28 measured cuts exceed the 5% relative quality-loss limit. Per-group coverage is recorded in `inputs/coverage.csv`.
 
 Mean held-out Generic throughput loss (%); every model–accelerator group has equal weight:
 
@@ -17,7 +17,13 @@ Mean held-out Generic throughput loss (%); every model–accelerator group has e
 
 Learned rankings hold out the complete model on every accelerator. One training fit minimizes mean loss at budgets 1, 3 and 5, and supplies the same ranking at all budgets. The primary simplex grid has step 0.0025 and includes the exact standard and pure boundary-size weights. Full-data weights are descriptive training fits, separate from held-out performance.
 
-From the repository root, rebuild all five analyses and EN/DE figures from these published inputs:
+Reproduce the complete study and its English and German outputs from the repository root:
+
+```bash
+python3 scripts/reproduce_current.py --output local-output/current --languages en de
+```
+
+To rebuild only the graph-score analysis:
 
 ```bash
 python -B scripts/supplementary-studies/rq3-generic420/reproduce.py \

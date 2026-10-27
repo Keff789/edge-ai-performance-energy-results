@@ -261,24 +261,23 @@ def build(repo, source, output, *, numeric_only=False, supplementary=True, stric
 def write_catalog(output, manifest):
     bundles = sorted({x['bundle'] for x in manifest['figures'] + manifest['tables']} |
                      {'supplementary-studies/' + name for name in manifest['study_provenance']})
+    graph_link = '../rq3-generic420/de/' if (output.parent / 'publications/mlsys-r30').exists() else 'rq3-generic420/de/'
     lines = ['# Deutsche Grafiken und Tabellen für die Dissertation', '',
-             'Diese Ausgabe enthält die vollständige Split-Auswertung, die Publikationsprofile und die ergänzenden Split-Studien. Die Energiemessung besitzt ein separates Auswertetool.', '',
-             'Alle Darstellungen verwenden die vorhandenen Messdaten. Achsen, Legenden und Tabellenbeschriftungen sind deutsch. Modell-, Geräte- und Methodennamen sowie die wissenschaftliche Zahlenschreibweise bleiben erhalten. Die englischen CSV-/JSON-Dateien bleiben die gemeinsame Datenquelle.', '',
-             'Das aktuelle Paper verwendet `mlsys-r30`. `mlsys-r22` und die datierten Zusatzstudien bleiben als eigene Messreihen getrennt. Das Manifest verknüpft jede deutsche Datei mit ihrer Quelle und deren Prüfsumme.', '',
+             'Die aktuelle Studie untersucht den Nutzen der Split-Inferenz, die Auswahl mit Generic und die Vorauswahl anhand des Modellgraphen. Die deutschen Darstellungen verwenden dieselben Messwerte wie die englischen Ausgaben.', '',
+             '- [Split-Vergleiche und Generic–Native-Auswahl](mlsys-r30/README.md)',
+             f'- [Graph-basierte Vorauswahl]({graph_link})', '',
              '## Reproduktion', '', '```sh',
-             'python -I -B scripts/dissertation/reproduce.py --source ' + manifest['english_source'] +
-             (' --rq2-study ' + manifest['current_rq2_study'] if manifest['current_rq2_study'] else '') +
-             ' --output <empty-directory> --verify', '```', '',
-             'Ein leeres Ausgabeverzeichnis verwenden. Für die vollständige englische und deutsche Split-Ausgabe:', '', '```sh',
-             'python -I -B scripts/split-inference/reproduce.py \\',
-             '  --publication mlsys-r30 --languages en de' +
-             (' --rq2-study ' + manifest['current_rq2_study'] if manifest['current_rq2_study'] else '') +
-             ' --output <empty-directory> --verify', '```', '',
-             '## Auswahl', '', '| Bereich | Grafiken | Tabellen-Dateien |', '|---|---:|---:|']
+             'python3 scripts/reproduce_current.py --output local-output/current --languages en de',
+             '```', '',
+             'Ein leeres Ausgabeverzeichnis verwenden. Die Prüfung der Zahlen und Übersetzungen ist Bestandteil des Aufrufs. PDF/SVG und LaTeX sind für die Dissertation vorgesehen, PNG und Markdown für die Vorschau.', '',
+             'Der [vollständige Dateikatalog](ASSET_CATALOG.md) enthält zusätzliche Darstellungen. `ASSET_MANIFEST.json` verknüpft jede Ausgabe mit ihren Quelldaten.', '']
+    catalog = ['# Vollständiger Dateikatalog', '',
+               'Die aktuelle Auswahl steht in [README.md](README.md). Weitere Darstellungen und frühere Analysen sind hier nach Generator gruppiert.', '',
+               '| Bereich | Grafiken | Tabellen-Dateien |', '|---|---:|---:|']
     for bundle in bundles:
         figs = [x for x in manifest['figures'] if x['bundle'] == bundle]
         tabs = [x for x in manifest['tables'] if x['bundle'] == bundle]
-        lines.append(f'| [{bundle}]({bundle}/README.md) | {len({str(Path(x["output"]).with_suffix("")) for x in figs})} | {len(tabs)} |')
+        catalog.append(f'| [{bundle}]({bundle}/README.md) | {len({str(Path(x["output"]).with_suffix("")) for x in figs})} | {len(tabs)} |')
         index = ['# ' + bundle, '', 'Deutsche Darstellung der unveränderten Ausgangsdaten.', '', '## Grafiken', '']
         if not figs and not tabs:
             study = manifest['study_provenance'][bundle.split('/', 1)[1]]
@@ -295,6 +294,7 @@ def write_catalog(output, manifest):
             rel = str(Path(item['output']).relative_to(bundle))
             index.append('- [' + rel + '](' + rel + ')')
         (output / bundle / 'README.md').write_text('\n'.join(index) + '\n', encoding='utf-8')
+    (output / 'ASSET_CATALOG.md').write_text('\n'.join(catalog) + '\n', encoding='utf-8')
     (output / 'README.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
 
 

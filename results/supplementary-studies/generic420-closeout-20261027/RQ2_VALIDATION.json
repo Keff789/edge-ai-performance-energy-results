@@ -1,51 +1,5 @@
 {
-  "actual_quality_imports_pending": 0,
   "family_selection_results": [
-    {
-      "common_pair_groups": null,
-      "current_generic_mean_loss_same_pairs_pct": null,
-      "exact_winners": 14,
-      "family": "all",
-      "groups_n_ge_2": 21,
-      "mean_loss_n_ge_2_pct": 1.464100554146222,
-      "mean_loss_pct": 1.464100554146222,
-      "model_device_groups": 21,
-      "old_generic_mean_loss_same_pairs_pct": null,
-      "original_native_cases": 204,
-      "paired_candidates": 203,
-      "scope": "unrestricted",
-      "singleton_groups": 0
-    },
-    {
-      "common_pair_groups": null,
-      "current_generic_mean_loss_same_pairs_pct": null,
-      "exact_winners": 3,
-      "family": "classification",
-      "groups_n_ge_2": 9,
-      "mean_loss_n_ge_2_pct": 3.392714437605092,
-      "mean_loss_pct": 3.392714437605092,
-      "model_device_groups": 9,
-      "old_generic_mean_loss_same_pairs_pct": null,
-      "original_native_cases": 168,
-      "paired_candidates": 168,
-      "scope": "unrestricted",
-      "singleton_groups": 0
-    },
-    {
-      "common_pair_groups": null,
-      "current_generic_mean_loss_same_pairs_pct": null,
-      "exact_winners": 11,
-      "family": "detection",
-      "groups_n_ge_2": 12,
-      "mean_loss_n_ge_2_pct": 0.01764014155206939,
-      "mean_loss_pct": 0.01764014155206939,
-      "model_device_groups": 12,
-      "old_generic_mean_loss_same_pairs_pct": null,
-      "original_native_cases": 36,
-      "paired_candidates": 35,
-      "scope": "unrestricted",
-      "singleton_groups": 0
-    },
     {
       "common_pair_groups": 21,
       "current_generic_mean_loss_same_pairs_pct": 1.3467521152436048,
@@ -57,7 +11,7 @@
       "model_device_groups": 21,
       "old_generic_mean_loss_same_pairs_pct": 15.077128973324955,
       "original_native_cases": 204,
-      "paired_candidates": 186,
+      "paired_candidates": 187,
       "scope": "quality_admitted",
       "singleton_groups": 0
     },
@@ -87,46 +41,31 @@
       "model_device_groups": 12,
       "old_generic_mean_loss_same_pairs_pct": 1.7817217153686513,
       "original_native_cases": 36,
-      "paired_candidates": 35,
+      "paired_candidates": 36,
       "scope": "quality_admitted",
       "singleton_groups": 0
     }
   ],
-  "frozen_r22_files_unchanged": 126,
-  "frozen_yolov7_unchanged": true,
-  "generic_top1_loss_pct": 1.3467521152436048,
-  "groups_without_quality_pairs": 0,
-  "historical_Native_quality_scope_limitations": "Established historical Native numerical quality metric and <=5% gate retained. Historical Native AP is not asserted to be exact selected timed Native endpoint AP; source-scoped postfilter differences are explicitly reported.",
-  "historical_native_authority_holds": 1,
-  "independent_ranks_groups_and_means_recomputed": true,
-  "integrated_current_r30_scientific_files_checked": 58,
-  "new_acquisition_from_followup": {
-    "Native_Full_energy": 0,
-    "fps_configurations": 1,
-    "quality": 17
-  },
-  "new_hardware_measurements_by_publication": false,
-  "old_generic_same_pairs_loss_pct": 15.077128973324955,
   "original_native_cases": 204,
-  "outside_fixed420_pairs": 12,
-  "pair_count": 203,
+  "paired_cases": 204,
   "quality_excluded": 17,
   "quality_groups": 21,
-  "quality_pair_count": 186,
-  "refreshed_generic_fps_joined_to_old_energy": false,
+  "quality_pairs": 187,
   "result": "PASS",
-  "same_pair_comparison_candidates": 186,
-  "schema": "rq2-final-pair-integration-validation-v1",
-  "singleton_groups": 0,
-  "source_sha256": {
-    "results/supplementary-studies/rq2-native-scope-20261027/ACTUAL_IMPORT_ACCOUNTING.json": "00aac77edecfe50dff677240af188c866a83dde2392b830f829e728f1558cb0f",
-    "results/supplementary-studies/rq2-native-scope-20261027/INPUT_MANIFEST.json": "9810d487e5ab030209f82974d0c4b434c924379c73462582cf26359b717058bd",
-    "results/supplementary-studies/rq2-native-scope-20261027/summary.json": "39cdbb81d29104a44973dcc2d88ee62a1ea6bac8ec014aca588b94f6eed3ea59",
-    "scripts/supplementary-studies/rq2-native-scope-20261027/reproduce.py": "66f66a518ea9cf153c12c774196a67f10bebff002d75d28247e282adb962f4ab"
+  "reviewed_metadata_pairs": 1,
+  "schema": "rq2-current-validation-v2",
+  "sensitivity": "results/supplementary-studies/rq2-native-scope-20261027/data/pairing_sensitivity.csv",
+  "study_validation": {
+    "every_original_cut_admitted_excluded_or_unresolved": true,
+    "final_actual_import_accounting_verified": true,
+    "no_fixed420_admission_filter": true,
+    "no_new_fps_old_energy_joint_measurement": true,
+    "original_native_and_full_records_modified": false,
+    "original_native_population_fully_accounted": true,
+    "result": "PASS",
+    "selection_precedes_quality": true,
+    "validation_scope": "Offline importer and evidence accounting only; this does not claim hardware or missing quality PASS.",
+    "weights_refitted": false
   },
-  "source_snapshot_sha256": "d658eb195bcb20322c587c47180fc6c4d78003c9368e206943e0ab9ae1c55216",
-  "unit_tests_passed": {
-    "historical_regression": 6,
-    "original_scope_policy": 18
-  }
+  "summary_sha256": "a7d549f27c60f008775f6abc2b7494048cee86bd6fa516d485ea745d843bac69"
 }

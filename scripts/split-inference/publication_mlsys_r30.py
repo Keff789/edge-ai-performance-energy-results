@@ -403,23 +403,21 @@ Inputs, operation rules, fold memberships, exact results and sensitivity checks 
 `ASSET_MANIFEST.json` maps assets to generators. `PROVENANCE.json` records hashes.
 ''')
     if final_rq2:
-        (output/'README.md').write_text(f"""# MLSys R30 with current Generic RQ2 evidence
+        (output/'README.md').write_text(f"""# Split benefits and runner selection
 
-Reproduce with the normal split-inference CLI plus
-`--rq2-study {rq2_study_name(repo,rq2_study)}`.
-RQ1, Full energy and the YOLOv7 case retain their frozen original bindings.
-The current RQ2 figures and tables use {final_rq2['pair_count']} verified artifact pairs, of which
-{final_rq2['quality_pair_count']} pass Native numerical quality and bound Generic quality across {final_rq2['quality_group_count']} groups.
-{final_rq2['groups_without_quality_pairs']} groups have no admitted paired candidate and are listed as unavailable.
-Publication status: {final_rq2.get('publication_status', 'historical_snapshot')}.
-{final_rq2['scope']}
-{final_rq2.get('overall_statistic', 'Every evaluated model/device group receives equal weight.')}
-Groups with one admitted cut: {final_rq2.get('quality_singleton_groups', 'see per-group candidate_count')}.
-Mean restricted to groups with at least two cuts: {final_rq2.get('mean_final_generic_loss_n_ge_2_pct', 'not separately evaluated in this historical snapshot')}.
-All prior graph weights and normalization universes are frozen; no new fit.
-The original weighted folds and operation rules remain separately documented.
-Current Generic rates never inherit historical energy as joint measurements.
-`data/rq2_final_summary.json`, `data/pair_group_coverage.json` and
-`data/pair_identity_audit.json` give exact counts, exclusions and source hashes.
+The runner comparison contains {final_rq2['quality_pair_count']} quality-admissible paired cuts
+in {final_rq2['quality_group_count']} equally weighted model–device groups.
+The split/Full comparisons and the YOLOv7 case use their recorded throughput, energy and quality.
+
+[Figures](figures/) · [Tables](tables/) · [Unrounded data](data/)
+
+Reproduce the current study from the repository root:
+
+```sh
+python3 scripts/reproduce_current.py --output local-output/current --languages en de
+```
+
+The build includes the graph-selection analysis and English/German artifacts.
+`ASSET_MANIFEST.json` maps the outputs to their sources.
 """)
     return manifest

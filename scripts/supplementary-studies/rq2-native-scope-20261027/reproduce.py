@@ -87,11 +87,54 @@ def product_identity(row):
                 part2_engine_sha256=row.get('artifacts', {}).get('part2_engine_sha256'))
 
 
+def reviewed_pairing_basis(row):
+    """Read an explicit evidence review without manufacturing missing metadata.
+
+    Ordinary executable, timing and quality checks remain separate. The review
+    permits a documented historical recipe gap only for its exact observation.
+    """
+    reference = row.get('pairing_review') or {}
+    if not reference.get('path') or not reference.get('sha256'):
+        return None
+    root = (REPO / STUDY / 'inputs').resolve()
+    path = (root / reference['path']).resolve()
+    if path.parent != root or not path.is_file() or sha(path) != reference['sha256']:
+        return None
+    review = read(path)
+    if (review.get('schema') != 'observed-input-pairing-review-v1'
+            or review.get('decision') != 'include_with_metadata_note'
+            or review.get('full_historical_recipe_binding_verified') is not False):
+        return None
+    expected = dict(product_identity(row), generic_uid=row.get('generic_uid'),
+                    boundary_id=row.get('boundary_id'), completed_at=row.get('completed_at'),
+                    performance_source_sha256=row.get('performance_source_sha256'))
+    if any(not value or review.get(key) != value for key, value in expected.items()):
+        return None
+    evidence = {}
+    for name in ['historical_b009_exact_guard_receipt.json', 'historical_b009_final_hold.json']:
+        source = review.get('evidence', {}).get(name, {})
+        p = root / name
+        if source.get('path') != name or not p.is_file() or sha(p) != source.get('sha256'):
+            return None
+        evidence[name] = read(p)
+    guard = evidence['historical_b009_exact_guard_receipt.json']
+    hold = evidence['historical_b009_final_hold.json']
+    boundaries = hold.get('independent_strict_contract_boundaries', {})
+    if not (guard.get('prepared_tensor_sha_unchanged') is True
+            and guard.get('source_image_sha_unchanged') is True
+            and guard.get('Q_prepared_input_sha256') == guard.get('original_prepared_input_sha256')
+            and boundaries.get('Native_command_common_original_fields_all_exactly_equal') is True
+            and boundaries.get('Native_command_runtime_options_exactly_equal') is True
+            and hold.get('generic_uid') == row.get('generic_uid')):
+        return None
+    return review
+
+
 def contract_reasons(row):
     contract = row.get('observation_contract') or {}
     reasons = []
     relation = row.get('pair_compatibility') or {}
-    if relation.get('verified') is False:
+    if relation.get('verified') is False and reviewed_pairing_basis(row) is None:
         reasons.append('generic_native_pair_compatibility_unresolved:' + relation.get('reason', 'evidence_missing'))
     if row.get('invalidated') is True and (not row.get('invalidation_reason') or not row.get('invalidation_evidence_sha256')):
         reasons.append('implementation_invalidation_evidence_unavailable')
@@ -140,6 +183,10 @@ def select_observation(candidates, original, native):
     for row in candidates:
         reasons, proof = bind(row, original, native)
         reasons += contract_reasons(row)
+        review = reviewed_pairing_basis(row)
+        if review is not None:
+            proof.update(pairing_basis=review['basis'], pairing_metadata_note=review['metadata_note'],
+                         full_historical_recipe_binding_verified=False)
         unproven_invalidation |= 'implementation_invalidation_evidence_unavailable' in reasons
         if not positive(row.get('effective_generic_fps')):
             reasons.append('generic_throughput_unavailable')
@@ -301,15 +348,66 @@ def family_results(pairs, eligible, selected, quality_selected, comparison, bind
     return result
 
 
+def plot_selection_loss(points, language='en'):
+    """Show every model/device group; place large losses outside the scale."""
+    sys.path.insert(0, str(REPO / 'scripts/split-inference'))
+    from publication_mlsys_figures import PAPER_STYLE, PAPER_PALETTE
+    import matplotlib.pyplot as plt
+    from matplotlib.lines import Line2D
+    models = ['mobilenet_v3_large', 'regnet_x_1_6gf', 'resnet50',
+              'yolo11l', 'yolo26m', 'yolo26s', 'yolov7_paper']
+    labels = ['MobileNetV3-L', 'RegNet-X', 'ResNet-50', 'YOLO11l',
+              'YOLO26m', 'YOLO26s', 'YOLOv7']
+    position = {name: index for index, name in enumerate(models)}
+    with plt.rc_context(PAPER_STYLE):
+        fig, ax = plt.subplots(figsize=(3.6, 2.62))
+        fig.subplots_adjust(left=.30, right=.79, bottom=.18, top=.88)
+        handles = []
+        for setup, marker, color, offset in [('H8', 'o', 'blue', -.14),
+                ('H10', 's', 'orange', 0.), ('DeepX', '^', 'green', .14)]:
+            color = PAPER_PALETTE[color]
+            handles.append(Line2D([], [], marker=marker, linestyle='none', color=color,
+                                  markersize=4.2, label=setup))
+            for row in points:
+                if row['setup'] != setup or row['model'] not in position:
+                    continue
+                loss = row['loss_pct']
+                y = position[row['model']] + offset
+                if loss > 6:
+                    # No marker is placed at the right axis boundary: that
+                    # would falsely suggest a loss near six percent.
+                    ax.annotate('', xy=(1.11, y), xytext=(1.02, y),
+                        xycoords=('axes fraction', 'data'),
+                        textcoords=('axes fraction', 'data'),
+                        arrowprops=dict(arrowstyle='->', color=color, lw=.9),
+                        annotation_clip=False)
+                    value = f'{loss:.2f}%' if language == 'en' else f'{loss:.2f} %'.replace('.', ',')
+                    note = 'off scale' if language == 'en' else 'außerhalb'
+                    ax.text(1.14, y, value + '\n' + note, transform=ax.get_yaxis_transform(),
+                            ha='left', va='center', fontsize=7, color=color, clip_on=False)
+                else:
+                    ax.scatter([loss], [y], marker=marker, s=19,
+                               facecolors='none' if row.get('singleton') else color,
+                               edgecolors=color, linewidths=.7, zorder=3)
+        ax.set(xlim=(-.2, 6), ylim=(6.55, -.55), xticks=list(range(7)),
+               yticks=list(range(7)), yticklabels=labels,
+               xlabel='Native throughput lost (%)' if language == 'en' else 'Native-Durchsatzverlust (%)')
+        ax.tick_params(axis='y', labelsize=8, length=3, pad=3)
+        ax.grid(axis='x', color='#DDDDDD', linewidth=.55)
+        ax.legend(handles=handles, frameon=False, ncol=3, loc='lower center',
+                  bbox_to_anchor=(.5, 1.015), columnspacing=1.0, handletextpad=.3,
+                  borderaxespad=0., fontsize=8)
+        return fig
+
+
 def render(output, numeric_only):
     summary = read(output / 'summary.json')
     with (output / 'analysis/aggregate_curves.csv').open() as stream:
         raw = list(csv.DictReader(stream))
-    caption = (f"Native throughput loss on {summary['quality_pair_count']} quality-admitted original Native cuts in "
-        f"{summary['quality_group_count']} model/device groups; {summary['quality_singleton_groups']} groups have fewer than two cuts. "
-        "Latest actually completed compatible Generic observation, selected before quality. Equal weight per nonempty group; "
-        "also report the mean restricted to n>=2. Original graph weights and normalization universes are frozen. "
-        "RQ3 fixed420 membership is only an annotation; missing evidence remains unavailable.")
+    caption = (f"Native throughput loss for {summary['quality_pair_count']} quality-admissible cuts in "
+        f"{summary['quality_group_count']} model-device groups, with groups weighted equally. "
+        "At budget k, we test the first min(k,n) ranked cuts and compare their highest Native throughput "
+        "with the best measured Native cut in that group.")
     series = {method: [dict(k=int(r['k']), mean_loss_pct=float(r['mean_loss_pct']) if r['mean_loss_pct'] else None,
         mean_loss_n_ge_2_pct=float(r['mean_loss_n_ge_2_pct']) if r['mean_loss_n_ge_2_pct'] else None)
         for r in raw if r['method'] == method] for method in METHODS}
@@ -333,12 +431,15 @@ def render(output, numeric_only):
         points = read(output / 'data' / f'{key}.json')
         pair_count = sum(r['candidate_count'] for r in points)
         singleton_count = sum(r['singleton'] for r in points)
-        scatter_caption = (f'Generic-to-Native selection on {pair_count} verified paired cuts in {len(points)} model/device groups; '
-            f'{singleton_count} groups have fewer than two cuts. ' +
-            ('Both Native historical numerical quality and current bound Generic quality pass. ' if key.startswith('quality') else 'No quality filter. ') +
-            'Hollow markers denote one candidate, which provides no ranking test. Every nonempty group has equal weight. '
-            'Original Native FPS and historical Native quality retain their separate observed contracts.')
+        eligibility = 'quality-admissible paired cuts' if key.startswith('quality') else 'paired cuts before quality filtering'
+        scatter_caption = (f'Native throughput lost by selecting the Generic winner in {len(points)} model-device groups '
+            f'with {pair_count} {eligibility}. Groups contribute equally. '
+            'Arrows outside the 0–6% axis label the larger losses, which remain in the aggregate results.')
+        if singleton_count:
+            scatter_caption += ' Hollow markers denote groups with only one candidate.'
         write_json(output / 'figures' / f'{name}.json', dict(points=points, caption=scatter_caption,
+            plot_layout='model_rows_with_offset_accelerator_markers', x_axis='native_throughput_loss_pct',
+            displayed_loss_range_pct=[0, 6], out_of_range_marker_policy='outside_axis_arrow_with_actual_value_no_boundary_marker',
             marker_policy={'one_candidate':'hollow backend marker; no ranking test', 'at_least_two_candidates':'filled backend marker'},
             paired_candidates=sum(r['candidate_count'] for r in points), groups=len(points),
             mean_group_loss_pct=average(r['loss_pct'] for r in points),
@@ -397,27 +498,10 @@ def render(output, numeric_only):
             ax.legend(frameon=False, fontsize=6); fig.tight_layout()
             legacy.save_figure(fig, output / 'figures' / name); plt.close(fig)
         for name in ['current_generic_selection_loss', 'quality_generic_selection_loss']:
-            points = read(output / 'figures' / f'{name}.json')['points']; fig, ax = plt.subplots(figsize=(3.3, 2.3))
-            for setup, marker, color in [('H8', 'o', 'blue'), ('H10', 's', 'yellow'), ('DeepX', '^', 'green')]:
-                selected = [r for r in points if r['setup'] == setup]
-                ordinary = [r for r in selected if not r['singleton']]
-                singleton = [r for r in selected if r['singleton']]
-                ax.scatter([r['candidate_count'] for r in ordinary], [r['loss_pct'] for r in ordinary], label=setup,
-                           marker=marker, s=24, color=PAPER_PALETTE[color])
-                ax.scatter([r['candidate_count'] for r in singleton], [r['loss_pct'] for r in singleton],
-                           marker=marker, s=24, facecolors='none', edgecolors=PAPER_PALETTE[color])
-            handles, labels = ax.get_legend_handles_labels()
-            if any(r['singleton'] for r in points):
-                from matplotlib.lines import Line2D
-                handles.append(Line2D([], [], marker='o', markerfacecolor='none', markeredgecolor=PAPER_PALETTE['dark_gray'],
-                                      linestyle='None', markersize=5))
-                labels.append('One candidate (no ranking test)')
-            ax.set(xlabel='Verified paired candidates in group', ylabel='Native throughput loss (%)')
-            if any(r['singleton'] for r in points):
-                lower, upper = ax.get_xlim()
-                ax.set_xticks(sorted({1.0} | {tick for tick in ax.get_xticks() if lower <= tick <= upper}))
-            ax.legend(handles, labels, frameon=False, fontsize=7); fig.tight_layout()
-            legacy.save_figure(fig, output / 'figures' / name); plt.close(fig)
+            points = read(output / 'figures' / f'{name}.json')['points']
+            fig = plot_selection_loss(points)
+            legacy.save_figure(fig, output / 'figures' / name)
+            plt.close(fig)
         for ext in ['pdf', 'svg', 'png']:
             shutil.copyfile(output / 'figures' / f'quality_generic_selection_loss.{ext}', output / 'figures' / f'rq2_generic_selection_loss.{ext}')
 
@@ -511,6 +595,9 @@ def run(output, repo=REPO, numeric_only=False, verify_reference=None, input_path
             native_original_precision=proof.get('native_recorded_precision'), comparison_precision=proof.get('comparison_precision'),
             native_performance_source_sha256=native['performance_source_sha256'], native_measurement_boundary=native.get('measurement_boundary'),
             generic_observation_mode=row.get('observation_mode'), endpoint_equivalence_claimed=False,
+            pairing_basis=proof.get('pairing_basis', 'artifact_and_recorded_contract_binding'),
+            pairing_metadata_note=proof.get('pairing_metadata_note'),
+            full_historical_recipe_binding_verified=proof.get('full_historical_recipe_binding_verified'),
             native_quality_scope='Preserved historical normal quality observation; exact selected timed Native endpoint AP is not established by its numeric record alone.',
             native_quality_evidence_sha256=native.get('quality_evidence_sha256'),
             native_quality_source_sha256=native.get('quality_source_sha256'), native_quality_generation=native.get('quality_generation'),
@@ -604,7 +691,7 @@ def run(output, repo=REPO, numeric_only=False, verify_reference=None, input_path
     families = family_results(pairs, quality, selected, quality_selected, comparison, bindings)
     previous = read(repo / 'results/split-inference/publications/mlsys-r22/data/quality_selection_groups.json')
     imports_complete = bool(accounting is not None and not accounting.get('remaining_actual_quality_import_UIDs') and not any(row['corrected_quality_pending'] for row in audit))
-    publication_status = ('complete_with_documented_native_authority_hold' if any(row['unresolved'] for row in coverage) else 'complete_evidence_audit') if imports_complete else ('provisional_unresolved_evidence' if any(row['unresolved'] for row in coverage) else 'complete_evidence_audit')
+    publication_status = 'complete' if imports_complete and not any(row['unresolved'] for row in coverage) else 'incomplete'
     summary = dict(schema='rq2-native-scope-pairs-v1', publication_status=publication_status,
         actual_imports_complete=imports_complete, actual_import_accounting_sha256=sha(accounting_path) if accounting else None,
         quality_metrics={'classification':'top1_accuracy', 'detection':'coco_ap_50_95'}, detection_metric_label='COCO AP@[.50:.05:.95]',
@@ -648,6 +735,7 @@ def run(output, repo=REPO, numeric_only=False, verify_reference=None, input_path
         generic_quality_policy='Current bound normal Generic quality evaluates actual selected timed completion records against its own existing CPU-ONNX reference and evaluator policy. Invalidated quality assignment evidence remains history; corrected unavailable quality is pending, never physical accuracy_loss.',
         known_quality_timed_contract_difference_cases=[r['generic_uid'] for r in pairs if r.get('completion_provenance')],
         corrected_quality_pending=sum(r['corrected_quality_pending'] for r in audit),
+        reviewed_metadata_pairs=sum(bool(r.get('pairing_metadata_note')) for r in pairs),
         energy_policy='Original Native, Full and Generic energy records stay in their original dataset. No refreshed Generic rate is paired to old energy as one joint observation.')
     if accounting is not None:
         actual_counts = dict(original_native_cases=len(bindings), generic_sources_found=summary['source_found'],
@@ -689,6 +777,22 @@ def run(output, repo=REPO, numeric_only=False, verify_reference=None, input_path
     for name, rows in [('group_curves', group_curves), ('aggregate_curves', aggregate), ('complete_rankings', rankings),
                        ('key_budget_results', [r for r in aggregate if r['k'] in [1, 3, 5]])]:
         write_csv(output / 'analysis' / f'{name}.csv', rows)
+    # One compact sensitivity keeps the pairing judgement inspectable while
+    # retaining one main dataset and one set of figures.
+    sensitivity, runner_comparison = [], []
+    for inclusion, pool in [('included', quality), ('excluded', [r for r in quality if not r.get('pairing_metadata_note')])]:
+        for target in ['native', 'generic']:
+            target_pool = pool if target == 'native' else [dict(r, native_fps=r['generic_fps']) for r in pool]
+            _, totals, _ = curves(target_pool, graph, frozen)
+            for item in totals:
+                if item['k'] in [1, 2, 3, 4, 5]:
+                    sensitivity.append(dict(reviewed_pair=inclusion, target=target, candidates=len(pool),
+                        method=item['method'], k=item['k'], groups=item['groups'],
+                        mean_loss_pct=item['mean_loss_pct'], exact_winners=item['exact_winners']))
+                    if inclusion == 'included':
+                        runner_comparison.append(sensitivity[-1])
+    write_csv(output / 'data/pairing_sensitivity.csv', sensitivity)
+    write_csv(output / 'data/runner_graph_comparison.csv', runner_comparison)
     sys.path.insert(0, str(repo / 'scripts/split-inference'))
     from publication_mlsys_data import budget_calculations
     budget_groups, budgets = budget_calculations(pairs, quality)
@@ -733,29 +837,44 @@ def run(output, repo=REPO, numeric_only=False, verify_reference=None, input_path
     if verify_reference:
         validation['published_reference'] = legacy.verify(output, verify_reference)
     write_json(output / 'VALIDATION.json', validation)
-    (output / 'README.md').write_text(f"# RQ2 original Native population\n\n{summary['original_native_population']} original Native cuts in {len(coverage)} model/device groups are accounted for. "
-        f"{len(pairs)} have a selected valid compatible Generic observation; {len(quality)} pass both Native numerical quality and current bound Generic quality in {len(quality_selected)} groups. "
-        f"{summary['excluded_candidates']} are excluded and {summary['unresolved_candidates']} remain unresolved. Publication status: {summary['publication_status']}.\n\n"
-        f"`source_snapshot_sha256={manifest['source_snapshot_sha256']}` identifies the historical 192-observation base. "
-        "The separate INPUT_MANIFEST.json hash for inputs/observations.json binds the complete current RQ2 input, including "
-        f"{summary['outside_rq3_fixed420_pairs']} extra cuts, {summary['new_quality_captured']} new quality captures and {summary['new_fps_captured']} new FPS captures with retained provenance. "
-        "The adopted fixed420 ledger d658eb19… is separate current RQ3 authority; it does not replace the RQ2 observations outside that cohort. Historical source hashes retain their original meaning.\n\n"
-        "RQ3 fixed420 membership is an annotation. The importer iterates the original Native population and admits valid observations outside that set. "
-        "Every group reports original cuts, Generic sources found, compatible selected pairs, recovered compatible observations, actual new FPS captures, actual new quality captures, admissions, exclusions and unresolved counts. "
-        "Sources found and actual captures include standalone observations held from pairing. Recovered retains its compatible-selected meaning; remeasured counts new FPS captures only. Quality-only captures are separate and come from actual overlay acquisition provenance. "
-        "tables/native_generic_quality_observations.csv retains observed standalone Generic AP/reference/loss even when pair_eligible is false, with exact pair hold reasons. "
-        "Missing quality evidence is unavailable, never a measured accuracy loss. Native and Generic values and their own CPU-ONNX references remain separate.\n\n"
-        f"The equal-group mean retains its established definition: {summary['mean_final_generic_loss_pct']}; the mean restricted to groups with n>=2 is {summary['mean_final_generic_loss_n_ge_2_pct']}. "
-        f"{summary['quality_singleton_groups']} groups have a single admitted cut; zero loss for a singleton provides no ranking evidence. "
-        "Old/current Generic choices and complete ranks use exactly the same quality-admitted eligible pairs with both rates available.\n\n"
-        f"Actual imports are complete: {summary['actual_imports_complete']}; new FPS captures: {summary['new_fps_captured']}, new quality captures: {summary['new_quality_captured']}, pending quality corrections: {summary['corrected_quality_pending']}. "
-        "The documented Native authority hold concerns original historical preprocessing evidence. Fresh Generic FPS and quality are complete; further Generic recapture is not required and cannot establish that historical Native authority.\n\n"
-        "Native quality retains its recorded historical metric, which is not asserted to be exact selected timed Native endpoint AP. Current Generic quality evaluates its actual timed completion records against its own CPU-ONNX reference under the unchanged normal policy. Proven additional-NMS differences are source-scoped in data/quality_contract_provenance.json; this quality-definition difference limits interpretation. "
-        "Detector quality is COCO AP@[.50:.05:.95]; classification quality is Top-1 accuracy. The evaluator implementation suffix does not change the reported primary metric.\n\n"
-        "All graph weights and normalization universes are frozen. Native, Full, historical energy, RQ1, RQ3 and original YOLOv7 case evidence remain unchanged. "
-        "Refreshed Generic FPS never inherits historical energy as a joint observation.\n\n"
-        "Reproduce with `python scripts/supplementary-studies/rq2-native-scope-20261027/reproduce.py --output <empty-dir> --verify`; add `--numeric-only` to omit rendering. "
-        "`VALIDATION.json` validates offline accounting and reproduction only. Unresolved scientific evidence remains unresolved in `data/pair_identity_audit.json`.\n")
+    family = {r['family']: r for r in families if r['scope'] == 'quality_admitted'}
+    number = lambda value: 'unavailable' if value is None else f'{value:.4f}'
+    rows = "\n".join(f"| {label} | {family[key]['paired_candidates']} | {family[key]['model_device_groups']} | {number(family[key]['mean_loss_pct'])} |"
+        for key, label in [('all', 'All models'), ('classification', 'Classifiers'), ('detection', 'Detectors')])
+    (output / 'README.md').write_text(
+        "# Selecting Native splits with Generic\n\n"
+        f"The comparison covers {len(bindings)} measured cuts on seven models and three accelerator setups. "
+        f"The 5% relative quality-loss rule admits {len(quality)} paired cuts in {len(quality_selected)} model–device groups. "
+        f"{summary['excluded_candidates']} cuts exceed this quality limit.\n\n"
+        "For each group, Generic recommends its fastest measured cut. We evaluate that recommendation by its Native throughput, "
+        "relative to the fastest measured Native cut in the same group. Each group contributes equally.\n\n"
+        "| Models | Paired cuts | Groups | Mean Native loss (%) |\n|---|---:|---:|---:|\n" + rows + "\n\n"
+        "[Shortlist results](analysis/key_budget_results.csv) show how the loss changes when more than one recommendation can be tested. "
+        "[Group results](data/quality_selection_groups.csv) identify the selected cuts. "
+        "The [paired observations](data/current_pairs.csv) contain the measurement values and quality decisions. "
+        "[Runner comparison](data/runner_graph_comparison.csv) evaluates the same graph shortlists with Generic and Native.\n\n"
+        "RQ3 uses a broader candidate set to evaluate graph rankings against Generic throughput. It is available from the "
+        "[current study entry](../generic420-closeout-20261027/README.md). The two analyses answer different selection questions within the same study.\n\n"
+        "## Reproduce\n\n"
+        "```bash\npython3 scripts/supplementary-studies/rq2-native-scope-20261027/reproduce.py --output local-output/rq2 --verify\n```\n\n"
+        "Run from the repository root. Add `--numeric-only` to omit rendering. "
+        "[Measurement notes](DATA_NOTES.md) explain the few retained source differences. "
+        "The input manifest and detailed source records support reproduction without making the measurement chronology part of the result.\n\n"
+        "<!-- assemble_inputs.py reconstructs historical acquisition sources. It does not apply the published pairing review. "
+        "Normal reproduction reads the current observations.json and validates that review separately. -->\n")
+    (output / 'DATA_NOTES.md').write_text(
+        "# Measurement notes\n\n"
+        "H8/YOLOv7/b009 is included using its matching executable artifacts, recorded runtime parameters and retained image/tensor checks. "
+        "The complete historical Native preprocessing recipe was not logged, and its missing hash has not been reconstructed. "
+        "The source review is in `inputs/PAIRING_REVIEW_b009.json`. "
+        "The compact `data/pairing_sensitivity.csv` reports results with and without this pair. "
+        "All Generic recommendation losses and the number of Native winners found remain unchanged.\n\n"
+        "Quality uses Top-1 accuracy for classifiers and COCO AP50:95 for detectors, relative to the CPU-ONNX reference. "
+        "The recorded Native quality evaluations for YOLO26m/b043 on H8 and H10 include an additional NMS step, "
+        "which is absent from their timed completion paths. These quality values therefore describe the recorded evaluation pipeline. "
+        "Their exact source mapping is retained in `data/quality_contract_provenance.json`.\n\n"
+        "Native, Full and energy measurements retain their recorded values. Generic throughput is not combined with energy from a different run. "
+        "The archived import receipts preserve the acquisition history; the current input manifest identifies the observations used here.\n")
     return summary
 
 

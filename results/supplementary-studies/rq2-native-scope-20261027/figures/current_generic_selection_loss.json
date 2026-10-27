@@ -1,5 +1,9 @@
 {
-  "caption": "Generic-to-Native selection on 203 verified paired cuts in 21 model/device groups; 0 groups have fewer than two cuts. No quality filter. Hollow markers denote one candidate, which provides no ranking test. Every nonempty group has equal weight. Original Native FPS and historical Native quality retain their separate observed contracts.",
+  "caption": "Native throughput lost by selecting the Generic winner in 21 model-device groups with 204 paired cuts before quality filtering. Groups contribute equally. Arrows outside the 0\u20136% axis label the larger losses, which remain in the aggregate results.",
+  "displayed_loss_range_pct": [
+    0,
+    6
+  ],
   "exact_hits": 14,
   "groups": 21,
   "marker_policy": {
@@ -8,7 +12,9 @@
   },
   "mean_group_loss_n_ge_2_pct": 1.464100554146222,
   "mean_group_loss_pct": 1.464100554146222,
-  "paired_candidates": 203,
+  "out_of_range_marker_policy": "outside_axis_arrow_with_actual_value_no_boundary_marker",
+  "paired_candidates": 204,
+  "plot_layout": "model_rows_with_offset_accelerator_markers",
   "points": [
     {
       "best_native_fps": 1551.6267412219636,
@@ -352,7 +358,7 @@
     },
     {
       "best_native_fps": 112.86778421355565,
-      "candidate_count": 2,
+      "candidate_count": 3,
       "exact_hit": true,
       "generic_choice": "b066",
       "generic_choice_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b066",
@@ -367,5 +373,6 @@
       "setup": "H8",
       "singleton": false
     }
-  ]
+  ],
+  "x_axis": "native_throughput_loss_pct"
 }

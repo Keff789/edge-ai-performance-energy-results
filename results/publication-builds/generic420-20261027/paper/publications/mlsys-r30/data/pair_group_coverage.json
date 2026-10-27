@@ -546,9 +546,9 @@
     "unresolved": 0
   },
   {
-    "compatible_selected": 2,
+    "compatible_selected": 3,
     "excluded": 0,
-    "identity_valid_pairs": 2,
+    "identity_valid_pairs": 3,
     "model": "yolov7_paper",
     "new_fps_capture_observations": 1,
     "new_fps_captured": 1,
@@ -556,24 +556,20 @@
     "new_quality_captured": 1,
     "original": 3,
     "outside_rq3_fixed420": 2,
-    "pair_exclusion_reasons": {
-      "original_Native_historical_preprocessing_authority_missing": 1
-    },
-    "quality_admitted": 2,
-    "quality_exclusion_reasons": {
-      "no_selected_generic_observation": 1
-    },
-    "quality_pairs": 2,
+    "pair_exclusion_reasons": {},
+    "quality_admitted": 3,
+    "quality_exclusion_reasons": {},
+    "quality_pairs": 3,
     "ranking_evaluable": true,
     "ranking_note": "at least two admitted cuts",
     "recovered": 2,
     "remeasured": 1,
-    "remeasured_compatible_selected": 0,
+    "remeasured_compatible_selected": 1,
     "rq3_fixed420_members": 1,
     "setup": "H8",
     "singleton": false,
     "source_found": 3,
     "status": "evaluated",
-    "unresolved": 1
+    "unresolved": 0
   }
 ]

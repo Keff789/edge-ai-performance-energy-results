@@ -1,0 +1,132 @@
+#!/usr/bin/env python3
+"""Reproduce the current split-selection study and its publication artifacts.
+
+All steps operate on published inputs. No hardware measurement is performed.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import shutil
+import importlib.util
+from pathlib import Path
+import subprocess
+import sys
+
+REPO = Path(__file__).resolve().parents[1]
+RQ2 = REPO / 'results/supplementary-studies/rq2-native-scope-20261027'
+RQ3 = REPO / 'results/supplementary-studies/rq3-generic420-detector-corrected-20261027'
+
+
+def run(script: str, *arguments: object) -> None:
+    subprocess.run([sys.executable, '-B', str(REPO / script),
+                    *(str(value) for value in arguments)], cwd=REPO, check=True)
+
+
+def write_overview(output: Path, rq2: Path, rq3: Path, languages: list[str]) -> None:
+    paired = json.loads((rq2 / 'summary.json').read_text())
+    counts = json.loads((rq3 / 'MANIFEST.json').read_text())['counts']
+    lines = [
+        '# Split-selection results', '',
+        'This study evaluates split deployment benefits, selection with a universal runner, '
+        'and graph-based selection before measurement.', '',
+        f"The paired comparison contains {paired['quality_pair_count']} quality-admissible cuts "
+        f"in {paired['quality_group_count']} model–device groups. The graph comparison uses "
+        f"{counts['eligible']} quality-admissible Generic cuts in {counts['nonempty_eligible_groups']} groups.", '',
+        '| Result | Figures and tables |', '|---|---|',
+        '| Split benefits and paired runner selection | [Paper assets](paper/publications/mlsys-r30/) |',
+        '| Graph-selected shortlists | [English artifacts](paper/rq3-generic420/en/) |',
+    ]
+    if 'de' in languages:
+        lines.append('| German dissertation artifacts | [German collection](dissertation-de/README.md) |')
+    lines += ['', 'Reproduce the entire study from the repository root:', '', '```sh',
+              'python3 scripts/reproduce_current.py --output local-output/current --languages en de',
+              '```', '', 'Use a fresh output directory. Verification is enabled for every build. '
+              'CSV and JSON files contain the unrounded values. Input manifests retain the measurement sources.', '']
+    (output / 'README.md').write_text('\n'.join(lines))
+    paper_lines = [
+        '# Paper figures and tables', '',
+        '[Split benefits and paired runner selection](publications/mlsys-r30/) and '
+        '[graph-selected shortlists](rq3-generic420/en/) form the current paper artifact set.', '',
+        '[Build overview and reproduction](../README.md). '
+        'The numbered publication-profile directories are internal generator identifiers.', '']
+    (output / 'paper/README.md').write_text('\n'.join(paper_lines))
+    profile_lines = [
+        '# Split benefits and runner selection', '',
+        f"The runner comparison uses {paired['quality_pair_count']} quality-admissible paired cuts "
+        f"in {paired['quality_group_count']} equally weighted model–device groups.", '',
+        '[Figures](figures/) · [Tables](tables/) · [Unrounded data](data/) · '
+        '[Graph-selection results](../../rq3-generic420/en/)', '',
+        'The split/Full and YOLOv7 case figures use their recorded throughput, energy and quality. '
+        'The runner-selection figures use the same current paired inputs as the analysis tables.', '',
+        '[Reproduce the current study](../../../README.md). '
+        '`ASSET_MANIFEST.json` maps the outputs to their generators and input files.', '']
+    (output / 'paper/publications/mlsys-r30/README.md').write_text('\n'.join(profile_lines))
+    english = output / 'dissertation-en'
+    english.mkdir(exist_ok=True)
+    (english / 'README.md').write_text(
+        '# English dissertation figures and tables\n\n'
+        'Use the current [split and runner-selection figures](../paper/publications/mlsys-r30/) '
+        'and [graph-selection figures](../paper/rq3-generic420/en/). '
+        'Both wide and single-column YOLOv7 variants are included.\n\n'
+        '[Reproduce the complete study](../README.md).\n')
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, required=True, help='Fresh output directory.')
+    parser.add_argument('--languages', nargs='+', choices=['en', 'de'], default=['en', 'de'])
+    parser.add_argument('--verify', action='store_true', help='Verification is always enabled.')
+    parser.add_argument('--reuse-studies', action='store_true',
+                        help='Render the already reproduced published studies without fitting again.')
+    args = parser.parse_args()
+    output = args.output.resolve()
+    if output.exists() and any(output.iterdir()):
+        parser.error('Use a fresh output directory: ' + str(output))
+    if output == REPO or output in RQ2.parents or output in RQ3.parents:
+        parser.error('Output must not replace repository inputs.')
+    output.mkdir(parents=True, exist_ok=True)
+    # English data and assets are the common source of the German presentation.
+    languages = list(dict.fromkeys(['en', *args.languages]))
+    rq2, rq3 = RQ2, RQ3
+    if not args.reuse_studies:
+        rq2, rq3 = output / 'rq2', output / 'rq3'
+        run('scripts/supplementary-studies/rq2-native-scope-20261027/reproduce.py',
+            '--input', RQ2 / 'inputs/observations.json', '--output', rq2, '--verify')
+        run('scripts/supplementary-studies/rq3-generic420/reproduce.py',
+            '--inputs', RQ3 / 'inputs', '--output', rq3, '--languages', *languages)
+    run('scripts/supplementary-studies/rq3-generic420/verify.py', '--study', rq3)
+    run('scripts/split-inference/reproduce.py', '--publication', 'mlsys-r30',
+        '--languages', 'en', '--rq2-study', rq2, '--generic420-study', rq3,
+        '--output', output / 'paper', '--verify')
+    if 'de' in languages:
+        run('scripts/dissertation/reproduce.py', '--source', output / 'paper',
+            '--rq2-study', rq2, '--generic420-study', rq3,
+            '--output', output / 'dissertation-de', '--verify')
+        # Both destinations present the same German assets. Render once and
+        # retain the existing paper/dissertation paths with identical data.
+        shutil.copytree(output / 'dissertation-de', output / 'paper/de',
+                        ignore=shutil.ignore_patterns('rq3-generic420'))
+        spec = importlib.util.spec_from_file_location('current_german_export', REPO / 'scripts/dissertation/reproduce.py')
+        exporter = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(exporter)
+        manifest = json.loads((output / 'paper/de/ASSET_MANIFEST.json').read_text())
+        exporter.write_catalog(output / 'paper/de', manifest)
+        run('scripts/supplementary-studies/rq3-generic420/render_artifacts.py',
+            '--study', rq3, '--out', output / 'paper/rq3-generic420', '--languages', *languages)
+    write_overview(output, rq2, rq3, languages)
+    (output / 'BUILD.json').write_text(json.dumps({
+        'schema': 'current-study-build-v1',
+        'languages': languages,
+        'rq2_source': os.path.relpath(rq2, output),
+        'rq3_source': os.path.relpath(rq3, output),
+        'studies_recomputed': not args.reuse_studies,
+        'verification_enabled': True,
+        'hardware_measurements': False,
+    }, indent=2) + '\n')
+    print(json.dumps({'output': str(output), 'languages': languages, 'status': 'complete'}))
+
+
+if __name__ == '__main__':
+    main()

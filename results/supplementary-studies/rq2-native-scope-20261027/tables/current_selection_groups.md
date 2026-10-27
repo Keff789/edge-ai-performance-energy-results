@@ -22,4 +22,4 @@ Current Generic selection on original Native cuts without quality filtering. Gro
 | YOLO26s | H8 | 3 | True | b021 | b021 | 187 | 187 | 0.00 |
 | YOLOv7 | DeepX | 3 | True | b044 | b044 | 64 | 64 | 0.00 |
 | YOLOv7 | H10 | 3 | True | b044 | b044 | 70 | 70 | 0.00 |
-| YOLOv7 | H8 | 2 | True | b066 | b066 | 113 | 113 | 0.00 |
+| YOLOv7 | H8 | 3 | True | b066 | b066 | 113 | 113 | 0.00 |

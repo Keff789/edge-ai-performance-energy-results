@@ -112,6 +112,30 @@ class NativeScopeTests(unittest.TestCase):
         self.assertEqual(row['effective_generic_fps'], historical_fps)
         self.assertTrue(any('pair_compatibility_unresolved' in reason for reason in reasons))
 
+    def test_reviewed_pair_uses_existing_evidence_without_filling_missing_recipe(self):
+        uid = 'generic|yolov7_paper|H8|hailo8_to_trt|b009'
+        actual = engine.read(engine.REPO / engine.INPUT)
+        row = copy.deepcopy(next(r for r in actual['rows'] if r['generic_uid'] == uid
+                                 and r.get('pairing_review')))
+        native = self.data[self.bindings[uid]['config_id']]
+        chosen, proof, _, reasons = engine.select_observation([row], self.bindings[uid], native)
+        self.assertFalse(reasons)
+        self.assertIsNotNone(chosen)
+        self.assertFalse(chosen['pair_compatibility']['verified'])
+        self.assertFalse(proof['full_historical_recipe_binding_verified'])
+        self.assertTrue(engine.generic_quality(chosen)['admitted'])
+        # A review cannot be transferred to another execution or used to admit
+        # mismatched artifacts or a failing measured quality result.
+        changed = copy.deepcopy(row)
+        changed['performance_source_sha256'] = '0' * 64
+        self.assertIsNone(engine.select_observation([changed], self.bindings[uid], native)[0])
+        changed = copy.deepcopy(row)
+        changed['artifacts']['part1_sha256'] = '0' * 64
+        self.assertIsNone(engine.select_observation([changed], self.bindings[uid], native)[0])
+        changed = copy.deepcopy(row)
+        changed['quality_binding'].update(value=.1, normal_admission=False)
+        self.assertFalse(engine.generic_quality(changed)['admitted'])
+
     def test_captures_and_standalone_quality_are_reported_even_when_pair_held(self):
         row, _, _ = self.candidate()
         row['pair_compatibility'] = dict(verified=False, evidence_sha256='e' * 64, reason='Native_preprocessing_authority_missing')

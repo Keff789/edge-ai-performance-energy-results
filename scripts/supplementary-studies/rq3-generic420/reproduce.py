@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build an additive Generic420 study from a frozen SM2 export or curated inputs."""
+"""Evaluate graph-score shortlists from the published measurements."""
 import argparse
 import csv
 import hashlib
@@ -39,15 +39,14 @@ def write_readme(output, meta):
     names={'boundary_size':'Boundary size','weighted_default':'Standard (1, 3, 0.2)',
            'global':'Shared fitted weights','task':'Fit by task','device':'Fit by accelerator',
            'task_device':'Fit by task and accelerator'}
-    lines=['# Generic420 RQ3: published conditional analysis','',
-           f"Status: **{meta['status']}**. {c['selected']} selected configurations; {c['fps_measured']} accepted FPS medians; "
-           f"{c['eligible']} quality-eligible cuts in {c['nonempty_eligible_groups']} model–accelerator groups. "
-           f"{c['quality_fail_measured']} measured quality failures, {c['quality_pending_measured']} measured quality decisions pending, "
-           f"{c['technical_excluded']} technical exclusions and {c['fps_pending']} FPS measurements pending.",'',
-           'The candidate pool is conditional on available, quality-eligible measurements. '
-           'Historical quality is not a current endpoint admission. ' + pool_note +
-           'Pending identities and historical roles are in '
-           '`inputs/feature_metadata.json`. Native measurements are unchanged.','',
+    lines=['# RQ3: Selecting cuts with graph scores','',
+           'Graph scores rank cuts before hardware measurements. We measure the highest Generic throughput '
+           'found after testing the first one, three or five recommendations, relative to the best measured cut in each group.','',
+           f"The analysis includes {c['eligible']} quality-admissible cuts in {c['nonempty_eligible_groups']} model–accelerator groups. "
+           f"Of {c['selected']} planned configurations, {c['technical_excluded']} could not be executed and "
+           f"{c['quality_fail_measured']} measured cuts exceed the 5% relative quality-loss limit. "
+           +(f"{c['fps_pending']} FPS and {c['quality_pending_measured']} quality decisions are pending. " if pending else '')+
+           'Per-group coverage is recorded in `inputs/coverage.csv`.','',
            'Mean held-out Generic throughput loss (%); every model–accelerator group has equal weight:', '',
            '| Ranking | 1 cut | 3 cuts | 5 cuts | Mean at 1, 3, 5 |',
            '| --- | ---: | ---: | ---: | ---: |']
@@ -58,7 +57,9 @@ def write_readme(output, meta):
             'minimizes mean loss at budgets 1, 3 and 5, and supplies the same ranking at all budgets. '
             'The primary simplex grid has step 0.0025 and includes the exact standard and pure boundary-size weights. '
             'Full-data weights are descriptive training fits, separate from held-out performance.','',
-            'From the repository root, rebuild all five analyses and EN/DE figures from these published inputs:', '',
+            'Reproduce the complete study and its English and German outputs from the repository root:', '',
+            '```bash','python3 scripts/reproduce_current.py --output local-output/current --languages en de','```','',
+            'To rebuild only the graph-score analysis:', '',
             '```bash','python -B scripts/supplementary-studies/rq3-generic420/reproduce.py \\',
             f'  --inputs "{input_path}" \\',
             '  --output /tmp/generic420-reproduced --languages en de','```','',

@@ -22,4 +22,4 @@ Aktuelle Generic-Auswahl auf ursprünglichen Native-Cuts ohne Qualitätsfilter. 
 | YOLO26s | H8 | 3 | Ja | b021 | b021 | 187 | 187 | 0.00 |
 | YOLOv7 | DeepX | 3 | Ja | b044 | b044 | 64 | 64 | 0.00 |
 | YOLOv7 | H10 | 3 | Ja | b044 | b044 | 70 | 70 | 0.00 |
-| YOLOv7 | H8 | 2 | Ja | b066 | b066 | 113 | 113 | 0.00 |
+| YOLOv7 | H8 | 3 | Ja | b066 | b066 | 113 | 113 | 0.00 |
