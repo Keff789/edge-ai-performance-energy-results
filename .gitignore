@@ -25,3 +25,6 @@ dist/
 *.key
 credentials.json
 .DS_Store
+
+# Renderer-local font discovery cache; scientific figure exports remain tracked.
+.matplotlib-cache/

@@ -12,6 +12,9 @@
     "selected": 420,
     "technical_excluded": 61
   },
+  "excluded_local_caches": [
+    "Matplotlib font discovery cache; no scientific result or source data removed."
+  ],
   "export_manifest_sha256": "4e97e816d9636e2fca341ddb5c38a79b795e2ca6c475be382e6855f053e4bbc0",
   "generated_text_formatting": "Scoped Git whitespace attributes preserve renderer SVG line separators, inherited terminal blank lines in historical generated Markdown, and standard CSV CRLF. Code whitespace and all scientific/hash checks remain enabled.",
   "git_commit_binding": "The containing Git commit and post-push Sprite receipt bind this manifest without a self-referential commit hash.",
@@ -19,10 +22,6 @@
   "native_full_energy_measurements_unchanged": true,
   "new_hardware_measurements": false,
   "output_files": {
-    "results/publication-builds/generic420-20261027/.matplotlib-cache/fontlist-v390.json": {
-      "sha256": "ad19b4491eeb561965ef733c4081ba77a42017e4e588577b76cd83676f4f3a74",
-      "size_bytes": 153252
-    },
     "results/publication-builds/generic420-20261027/dissertation-de/ASSET_MANIFEST.json": {
       "sha256": "52b56e3e8e2a0235e77f7af13c3180a37fa28cb84859d7d0daac4012624a9d6f",
       "size_bytes": 318731
@@ -7096,7 +7095,7 @@
   "paper_dissertation_prose_unchanged": true,
   "quality_universe_complete": false,
   "raw_preservation_complete": false,
-  "recorded_at": "2026-10-27T00:05:43.539932+00:00",
+  "recorded_at": "2026-10-27T00:12:56.294313+00:00",
   "results_repository_base_commit": "1f3734bf0a190e4541dc843c957730280e0f6eb4",
   "schema": "generic420-publication-release-v1",
   "selection_sha256": "b084b0d2e0844c736877adf12279f582427d244376f8077e51cef66c73a0e895",
@@ -7105,6 +7104,10 @@
     ".gitattributes": {
       "sha256": "1c17cc76f40d3591ccebd6deb81376c22848c006e25fea8ccafdd6410a892b28",
       "size_bytes": 656
+    },
+    ".gitignore": {
+      "sha256": "1acf706e564c4596df7880589e23f1268dcd5ce87982ac99c66ffe4906a38a16",
+      "size_bytes": 442
     },
     "README.md": {
       "sha256": "af07a0846f2e739c389da411dbac1e46d5df0f28026b344473821507561c16cc",
