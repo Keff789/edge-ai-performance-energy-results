@@ -17,6 +17,8 @@ The calculation uses previously measured FPS and quality-admissible candidates. 
 
 The primary figure shows budgets 2–20 with at most two Native tests. The data also include budget one. Non-monotonic changes are retained: a new Generic favourite can displace a stronger Native candidate from the two-test shortlist.
 
+The workflow diagram uses the 615 graph boundaries of YOLO11l to illustrate model size. Candidate-pool construction precedes the Generic and Native tests. It does not claim that the staged selection was measured over all of these graph boundaries. Box widths are schematic.
+
 [English artifacts](artifacts/en/) · [German artifacts](artifacts/de/) · [Unrounded group data](data/group_budgets.csv) · [Aggregate results](data/summary.csv)
 
 Reproduce from the repository root:

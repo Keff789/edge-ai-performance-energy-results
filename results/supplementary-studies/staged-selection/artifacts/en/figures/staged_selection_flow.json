@@ -1,0 +1,37 @@
+{
+  "schema": "staged-selection-flow-v1",
+  "kind": "workflow_illustration",
+  "example_model": "yolo11l",
+  "example_model_label": "YOLO11l",
+  "graph_candidates": 615,
+  "source": {
+    "path": "results/supplementary-studies/rq3-generic420-detector-corrected-20261027/inputs/feature_metadata.json",
+    "sha256": "af4acf61eb65dbf3d75b2fd77011a22867fb339ab3f9b9643663832de6af36a8"
+  },
+  "pool_count": null,
+  "generic_budget": "k",
+  "maximum_native_tests": 2,
+  "graph_count_scope": "Complete workflow graph candidates, before backend support and quality checks.",
+  "evaluation_scope": "Selection outcomes are evaluated separately on the paired candidate pools. The paired detector pools contain three cuts each.",
+  "geometry_note": "Box widths illustrate narrowing; they are not proportional to candidate counts.",
+  "language": "en",
+  "labels": [
+    [
+      "Graph candidates",
+      "615 boundaries in YOLO11l"
+    ],
+    [
+      "Candidate pool",
+      "Window selection and backend support"
+    ],
+    [
+      "Up to $k$ Generic tests",
+      "Start with the smallest boundaries"
+    ],
+    [
+      "Up to 2 Native tests",
+      "Test the two fastest Generic cuts",
+      "Select the faster Native result"
+    ]
+  ]
+}

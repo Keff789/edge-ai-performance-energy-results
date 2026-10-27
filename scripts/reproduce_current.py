@@ -37,7 +37,7 @@ def write_overview(output: Path, rq2: Path, rq3: Path, languages: list[str]) -> 
         '| Result | Figures and tables |', '|---|---|',
         '| Split benefits and paired runner selection | [Paper assets](paper/publications/mlsys-r30/) |',
         '| Graph-selected shortlists | [English artifacts](paper/rq3-generic420/en/) |',
-        '| Graph–Generic–Native selection | [Budget curves and tables](staged-selection/artifacts/en/) |',
+        '| Graph–Generic–Native selection | [Workflow, budget curves and tables](staged-selection/artifacts/en/) |',
     ]
     if 'de' in languages:
         lines.append('| German dissertation artifacts | [German collection](dissertation-de/README.md) |')
@@ -51,6 +51,7 @@ def write_overview(output: Path, rq2: Path, rq3: Path, languages: list[str]) -> 
         '[Split benefits and paired runner selection](publications/mlsys-r30/) and '
         '[graph-selected shortlists](rq3-generic420/en/) form the current paper artifact set.', '',
         '[Staged selection](../staged-selection/artifacts/en/) reports Native throughput after graph preselection and Generic testing.', '',
+        'The [workflow diagram](../staged-selection/artifacts/en/figures/staged_selection_flow.pdf) illustrates the candidate pool and the two measurement stages.', '',
         '[Build overview and reproduction](../README.md). '
         'The numbered publication-profile directories are internal generator identifiers.', '']
     (output / 'paper/README.md').write_text('\n'.join(paper_lines))
@@ -73,11 +74,15 @@ def write_overview(output: Path, rq2: Path, rq3: Path, languages: list[str]) -> 
         'and [graph-selection figures](../paper/rq3-generic420/en/). '
         'Both wide and single-column YOLOv7 variants are included.\n\n'
         '[Graph–Generic–Native budgets](../staged-selection/artifacts/en/) use the same paired measurements.\n\n'
+        '[Selection workflow](../staged-selection/artifacts/en/figures/staged_selection_flow.pdf).\n\n'
         '[Reproduce the complete study](../README.md).\n')
     if 'de' in languages:
         german = output / 'dissertation-de/README.md'
-        german.write_text(german.read_text() + '\n[Auswahl mit Graph, Generic und Native](../staged-selection/artifacts/de/): '
-                          'deutsche Budgetgrafiken und Tabellen aus denselben Messpaaren.\n')
+        lines = [line for line in german.read_text().splitlines()
+                 if not line.startswith('[Auswahl mit Graph, Generic und Native]')]
+        german.write_text('\n'.join(lines).rstrip() + '\n\n[Auswahl mit Graph, Generic und Native](../staged-selection/artifacts/de/): '
+                          '[Ablaufgrafik](../staged-selection/artifacts/de/figures/staged_selection_flow.pdf), '
+                          'Budgetgrafiken und Tabellen aus denselben Messpaaren.\n')
 
 
 def main() -> None:
@@ -105,7 +110,8 @@ def main() -> None:
             '--inputs', RQ3 / 'inputs', '--output', rq3, '--languages', *languages)
     run('scripts/supplementary-studies/rq3-generic420/verify.py', '--study', rq3)
     run('scripts/supplementary-studies/staged-selection/reproduce.py',
-        '--paired-study', rq2, '--output', output / 'staged-selection',
+        '--paired-study', rq2, '--graph-metadata', rq3 / 'inputs/feature_metadata.json',
+        '--output', output / 'staged-selection',
         '--languages', *languages, '--verify')
     run('scripts/split-inference/reproduce.py', '--publication', 'mlsys-r30',
         '--languages', 'en', '--rq2-study', rq2, '--generic420-study', rq3,
