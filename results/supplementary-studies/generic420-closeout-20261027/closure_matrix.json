@@ -1,14 +1,12 @@
 {
   "accounting": {
-    "FPS": "Orthogonal accepted FPS availability; do not add FPS to the partition.",
+    "FPS": "Orthogonal accepted FPS availability; never add FPS to the partition.",
     "disjoint_partition": "planned = quality_eligible + quality_exclusion + technical_exclusion + open",
-    "missing_FPS": "JSON null / CSV blank; never zero",
-    "open": "Selected cell lacking admitted quality or unresolved execution; b009 is the only current open cell.",
-    "quality_exclusion": "An admitted measured quality accuracy_loss, preserved as a scientific result.",
-    "technical_exclusion": "Bound original COMPILE_FAILED or UNSUPPORTED; never count unavailable quality here a second time."
+    "missing_FPS": "JSON null / CSV blank, never zero.",
+    "native_pair_authority": "Separate from current Generic quality closure; no retrospective Native admission."
   },
-  "completed_at": "2026-10-26T23:38:56.689644+00:00",
-  "completion_scope": "FPS_COMPLETE_QUALITY_ONE_HISTORICAL_JOIN_HELD",
+  "completed_at": "2026-10-27T12:13:57.775627+00:00",
+  "completion_scope": "ALL_GENERIC_CELLS_RESOLVED",
   "groups": [
     {
       "FPS": 20,
@@ -124,8 +122,8 @@
       "model": "yolo11l",
       "open": 0,
       "planned": 20,
-      "quality_eligible": 6,
-      "quality_exclusion": 2,
+      "quality_eligible": 8,
+      "quality_exclusion": 0,
       "setup": "H8",
       "technical_exclusion": 12,
       "unsupported": 0
@@ -136,8 +134,8 @@
       "model": "yolo11l",
       "open": 0,
       "planned": 20,
-      "quality_eligible": 9,
-      "quality_exclusion": 2,
+      "quality_eligible": 11,
+      "quality_exclusion": 0,
       "setup": "H10",
       "technical_exclusion": 9,
       "unsupported": 0
@@ -160,8 +158,8 @@
       "model": "yolo26m",
       "open": 0,
       "planned": 20,
-      "quality_eligible": 4,
-      "quality_exclusion": 5,
+      "quality_eligible": 7,
+      "quality_exclusion": 2,
       "setup": "H8",
       "technical_exclusion": 11,
       "unsupported": 6
@@ -172,8 +170,8 @@
       "model": "yolo26m",
       "open": 0,
       "planned": 20,
-      "quality_eligible": 6,
-      "quality_exclusion": 3,
+      "quality_eligible": 9,
+      "quality_exclusion": 0,
       "setup": "H10",
       "technical_exclusion": 11,
       "unsupported": 6
@@ -196,8 +194,8 @@
       "model": "yolo26s",
       "open": 0,
       "planned": 20,
-      "quality_eligible": 5,
-      "quality_exclusion": 6,
+      "quality_eligible": 7,
+      "quality_exclusion": 4,
       "setup": "H8",
       "technical_exclusion": 9,
       "unsupported": 6
@@ -208,8 +206,8 @@
       "model": "yolo26s",
       "open": 0,
       "planned": 20,
-      "quality_eligible": 9,
-      "quality_exclusion": 2,
+      "quality_eligible": 11,
+      "quality_exclusion": 0,
       "setup": "H10",
       "technical_exclusion": 9,
       "unsupported": 6
@@ -230,9 +228,9 @@
       "FPS": 20,
       "compile_failed": 0,
       "model": "yolov7_paper",
-      "open": 1,
+      "open": 0,
       "planned": 20,
-      "quality_eligible": 18,
+      "quality_eligible": 19,
       "quality_exclusion": 1,
       "setup": "H8",
       "technical_exclusion": 0,
@@ -244,8 +242,8 @@
       "model": "yolov7_paper",
       "open": 0,
       "planned": 20,
-      "quality_eligible": 18,
-      "quality_exclusion": 2,
+      "quality_eligible": 19,
+      "quality_exclusion": 1,
       "setup": "H10",
       "technical_exclusion": 0,
       "unsupported": 0
@@ -263,97 +261,97 @@
       "unsupported": 0
     }
   ],
-  "open_cells": [
-    {
-      "case_id": "b009",
-      "effective_generic_fps": 41.29120249862124,
-      "generic_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
-      "model": "yolov7_paper",
-      "quality_status": "unavailable",
-      "setup": "H8"
-    }
-  ],
+  "open_cells": [],
   "provenance": {
     "CURRENT": {
       "filename": "CURRENT.json",
       "report_relative_path": "status420/CURRENT.json",
-      "sha256": "5108a6fa185b8b4e895ecae48cf3460c40ed18513b078e293d04471d4569356e",
-      "size_bytes": 346
+      "sha256": "1fd8217c08ca2f622964327968004b173eb1d8f87ddac7fac8649738afc8d66f",
+      "size_bytes": 349
+    },
+    "additional_provenance": {
+      "H10_final_normal_central_result": {
+        "filename": "composed_central_result.json",
+        "report_relative_path": "rq2_detector_followup_20261027/h10_quality_fixed_queue_v4/runs/extra_RQ2_yolo26s_b038_v7/rq2_only_h10_yolo26s_b038_actual_generic_n5000_b1000_20261027_20261027_122114/models/yolo26s/benchmark_results/quality_inputs/orin_nx_hailo10_01/results/b038/results_hailo10_to_tensorrt/task_quality_inputs/composed_central_result.json",
+        "sha256": "0c38dbb15d0117a2452b969d965088db9bd1f1ea62676711cbf5c8ba5df2e7a8",
+        "size_bytes": 194026
+      },
+      "H10_normal_source_verified_exact_N5000": {
+        "filename": "remote_benchmark_status_orin_nx_hailo10_01.json",
+        "report_relative_path": "rq2_detector_followup_20261027/h10_quality_fixed_queue_v4/runs/extra_RQ2_yolo26s_b038_v7/rq2_only_h10_yolo26s_b038_actual_generic_n5000_b1000_20261027_20261027_122114/models/yolo26s/benchmark_results/remote_benchmark_status_orin_nx_hailo10_01.json",
+        "sha256": "b12973902ca054b4860554ef7c9314551c6e31c538202439e64bc6c1279b4c53",
+        "size_bytes": 45920
+      },
+      "H10_outer_returncode_1_preserved": {
+        "filename": "ACTION_v7.result.json",
+        "report_relative_path": "rq2_detector_followup_20261027/h10_quality_fixed_queue_v4/extra_RQ2_yolo26s_b038/ACTION_v7.result.json",
+        "sha256": "8f46108c8dad6ecdc2a1fff434628ba6f90fb9d142465dc392623de13cf9def6",
+        "size_bytes": 5208
+      },
+      "b009_accepted_new_FPS_row": {
+        "filename": "B009_FRESH_LEGACY_ACCEPTED_ROWS_v1.json",
+        "report_relative_path": "rq2_detector_followup_20261027/publication_backup/B009_FRESH_LEGACY_ACCEPTED_ROWS_v1.json",
+        "sha256": "1a2fb027a9f6ce9d9ee4dd012afd8228e060b9c62f63d8d71c4f531555666d60",
+        "size_bytes": 462858
+      },
+      "current_RQ2_accounting": {
+        "filename": "ACTUAL_IMPORT_ACCOUNTING.json",
+        "location_scope": "outside_report_root",
+        "sha256": "00aac77edecfe50dff677240af188c866a83dde2392b830f829e728f1558cb0f",
+        "size_bytes": 204781
+      }
     },
     "closure_builder": {
-      "filename": "build_closure420.py",
-      "report_relative_path": "postprocess_rq3_20261027/build_closure420.py",
-      "sha256": "0cac6a11206d016a031efef6bc745976ce9ae6ebca2ef66e9e8080d9aef33510",
-      "size_bytes": 18692
+      "filename": "build_final_closure420.py",
+      "report_relative_path": "rq2_detector_followup_20261027/build_final_closure420.py",
+      "sha256": "2e549ed2faf7f2eacc59dfc44b9e8b0abd2a3859fac6a0d2e334481084e86dcb",
+      "size_bytes": 22577
     },
-    "completed_at": "2026-10-26T23:38:56.689644+00:00",
-    "incremental_consolidator": {
-      "filename": "consolidate_incremental_fps420.py",
-      "report_relative_path": "continuation_v3_20261022/report_incremental_fr10_partial_v1/normal_import_sources_v3/consolidate_incremental_fps420.py",
-      "sha256": "b1e8a44ecdbd46b843b70cc28b578cd8ac3027268e208e23f5e9363f96cca2ef",
-      "size_bytes": 16890
-    },
-    "last_quality_consumer_commit": "56fc4f2495d617483dce71966ea7accf92ef4a21",
-    "last_quality_consumer_source_manifest": {
-      "filename": "SOURCE_MANIFEST.json",
-      "report_relative_path": "continuation_v3_20261022/generic_historical_sha_only_source_sizes_consumer_product_v1/source_export/SOURCE_MANIFEST.json",
-      "sha256": "d5361195a24cc9f05f97399b592bc877245c6421fe4323a06586b96c82d818a9",
-      "size_bytes": 442357
+    "completed_at": "2026-10-27T12:13:57.775627+00:00",
+    "evidence_manifest": {
+      "filename": "FINAL_CLOSURE_EVIDENCE_v1.json",
+      "report_relative_path": "rq2_detector_followup_20261027/FINAL_CLOSURE_EVIDENCE_v1.json",
+      "sha256": "201c327899c5c1cd83499f68103496032e6e270a439b645ca2c105545b71b998",
+      "size_bytes": 7044
     },
     "ledger": {
       "filename": "scope_ledger.json",
-      "report_relative_path": "status420/fr58_deepx_y7_b306_single_sourceb4_incremental_v1/scope_ledger.json",
-      "sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
-      "size_bytes": 83854220
+      "report_relative_path": "status420/rq2_followup_corrected_quality_and_b009_20261027_v1/scope_ledger.json",
+      "sha256": "d658eb195bcb20322c587c47180fc6c4d78003c9368e206943e0ab9ae1c55216",
+      "size_bytes": 85306552
     },
-    "ledger_generator": {
-      "filename": "build_scope420_ledger.py",
-      "report_relative_path": "continuation_v3_20261022/report_incremental_fr10_partial_v1/normal_import_sources_v3/build_scope420_ledger.py",
-      "sha256": "7d04ee8ca3c329491d10e3851c991e4bb10e59aeb9774a3eb8cfa5447f202201",
-      "size_bytes": 63294
-    },
-    "normal_b009_import_commit": "6f0d8f26d6f1426000e78f72afedeae6a722298a",
-    "normal_b009_import_module": {
-      "filename": "historical_quality_import.py",
-      "location_scope": "outside_report_root",
-      "sha256": "bfbea759480dc01759661f5baa442cb259fecd4bbddc617279faa31526f98a3e",
-      "size_bytes": 37108
-    },
-    "reused_original_runner_revisions": [
+    "ledger_generator": [
       {
-        "commit": "8346d43d526221bd9d138943122206b658d56cbf",
-        "runner_bundle": {
-          "sha256": "a837bd56e8d72b501e42fac27ffc3d2b041848ebf616111f531efe14e1190ed8",
-          "size_bytes": 457074
-        },
-        "version": "2.92.0"
-      },
-      {
-        "commit": "599a1fe924d74f9eb96073ea283a34c4feeb1795",
-        "runner_bundle": {
-          "sha256": "b4f13ac1522e88f5d2118c27d3aa2ffab6d761f758c1361d5f56a712680f2853",
-          "size_bytes": null
-        },
-        "version": "2.95.5"
+        "filename": "normal_renderer_with_legacy.py",
+        "report_relative_path": "rq2_detector_followup_20261027/publication_backup/normal_renderer_with_legacy.py",
+        "role": "generator",
+        "sha256": "ab8630bd5e9f1c103d0ef6e153bc7d03590485cd9f70cd27977f75fc568f2606",
+        "size_bytes": 8007
       }
     ],
-    "revision_scope": "Mixed original execution sources are retained; latest consumer commit is not attributed to all FPS acquisitions.",
+    "root_adoption": {
+      "filename": "ROOT_FINAL_420_ADOPTION_v1.json",
+      "report_relative_path": "rq2_detector_followup_20261027/publication_backup/ROOT_FINAL_420_ADOPTION_v1.json",
+      "sha256": "0c5dfe1a3c4a3b3fb730d2773466e5305e01a1955af205023f7decbdf797da4f",
+      "size_bytes": 2402
+    },
     "selection": {
       "filename": "frozen_candidates420.json",
       "report_relative_path": "selection420/frozen_candidates420.json",
       "sha256": "b084b0d2e0844c736877adf12279f582427d244376f8077e51cef66c73a0e895",
       "size_bytes": 1059383
     },
-    "selection_replay_product_commit": "599a1fe924d74f9eb96073ea283a34c4feeb1795"
+    "selection_replay_product_commit": "599a1fe924d74f9eb96073ea283a34c4feeb1795",
+    "source_epoch_scope": "Each case retains its actual original source references and canonical row pin; no global latest-runner attribution."
   },
-  "schema": "generic420-compact-closure-matrix-v1",
+  "schema": "generic420-compact-closure-matrix-v2",
   "totals": {
     "FPS": 359,
     "compile_failed": 37,
-    "open": 1,
+    "open": 0,
     "planned": 420,
-    "quality_eligible": 315,
-    "quality_exclusion": 43,
+    "quality_eligible": 331,
+    "quality_exclusion": 28,
     "technical_exclusion": 61,
     "unsupported": 24
   }

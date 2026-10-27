@@ -1,0 +1,75 @@
+{
+  "normal_receipt_sha256": "2cdc22808651290e7a11fd4c6f20d8b49129e5e8249d4dc24ce608e57f5a88da",
+  "performance_overlay_sha256": "a79e3496ade5f4ccd3b03b90378d70024529ccc5f53f17d820a788cf316d3917",
+  "rows": [
+    {
+      "generic_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
+      "performance_source_sha256": "bbebd913183e81c32b508b2f7aa2f07f700e65eeaa43545fd211b0e584800d39",
+      "quality_acquisition_origin": "new_capture",
+      "quality_binding": {
+        "artifacts": {
+          "authority_kind": "cached_artifacts_with_exact_hashes",
+          "boundary_inputs": [
+            {
+              "dtype": "float32",
+              "layout": "NCHW",
+              "name": "getitem_9",
+              "shape": [
+                1,
+                128,
+                160,
+                160
+              ]
+            }
+          ],
+          "original_boundary_mode": null,
+          "part1_sha256": "5bb4af0c18be516ece74eeb4958079e17661c43dca0deac136369a09ee153419",
+          "part2_engine_sha256": "bfe8d53a0a6e2cc95c758aa1da3371003bf381dda1dfe4ec8f3302059f2abab1",
+          "source_part2_onnx_sha256": "8e2c9167d8dcb959a4cab257c9410d3a0be4412798c10562a0c4502b8dfe657a"
+        },
+        "dataset_reference_evaluator_bound": true,
+        "evidence_sha256": "c2c44b48ac557d6cff0344093f9e9843e3175d3f8a823acaee10eb4c5bbb2de3",
+        "ledger_row_sha256": "e0b5583bc1534865aff33d0d9f4c9516537eb46853b2bbdfb57467d6d7f8662b",
+        "legacy_1pct_ci_high": -0.0010764986717898542,
+        "legacy_1pct_ci_low": -0.0040293753141052635,
+        "legacy_1pct_decision": "pass",
+        "legacy_1pct_margin_absolute_ap": 0.01,
+        "normal_Quality_API": "generic_only_plan.validate_quality_reference",
+        "normal_admission": true,
+        "normal_admission_sha256": "0619b03c25d7a0fa9fdf3513843a5569731f076aac4771192ae294f10c2936aa",
+        "normal_exclusion_reasons": [],
+        "normal_legacy_import_receipt_sha256": "2cdc22808651290e7a11fd4c6f20d8b49129e5e8249d4dc24ce608e57f5a88da",
+        "product_identity": {
+          "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+          "part1_sha256": "5bb4af0c18be516ece74eeb4958079e17661c43dca0deac136369a09ee153419",
+          "part2_engine_sha256": "bfe8d53a0a6e2cc95c758aa1da3371003bf381dda1dfe4ec8f3302059f2abab1",
+          "setup_id": "orin_nx_hailo8_01"
+        },
+        "product_identity_verified": true,
+        "proof_type": "normal_current_ledger",
+        "reference": 0.460346586685622,
+        "reference_runtime": "cpu_onnx",
+        "runtime_artifacts_and_inputs_bound": true,
+        "source_epochs": {
+          "central_consumer_source_commit": "6acdf869f329a2a23632436857daffcf90c0337a",
+          "controller_source_commit": "acf508840a16fa29d90955abca2fa2af4ebb72c7",
+          "controller_sourcefreeze_sha256": "63fcf1d6654e8dcffccd11f1e56f71ce577ce8c3273d7f05d07463ca5226a841",
+          "hardware_producer_source_commit": "6acdf869f329a2a23632436857daffcf90c0337a",
+          "hardware_producer_sourcefreeze_sha256": "3d34f71c3877bbc068ab404c53a53337686ffca7a104d26d3040760f1a5f92e6"
+        },
+        "value": 0.45791324238237674,
+        "verified": true
+      },
+      "quality_completed_at": "2026-10-27T07:00:59.777012+00:00",
+      "source_capture_evidence": {
+        "json_pointer": "/generic_quality_source_capture/evidence/0",
+        "source": {
+          "path": "followup_source::b009_completion/n5000_capture_v1/evaluation_runs/generic420_h8_yolov7_b009_current6ac_targeted_n5000_deferred_20261027_20261027_071127/models/yolov7_paper/benchmark_results/remote_benchmark_status_orin_nx_hailo8_01.json",
+          "sha256": "de2d9398a1c3a2234082a908ed8441d4834e398cbc1506c48cb2e0fd8a3a3f18",
+          "size_bytes": 48285
+        }
+      }
+    }
+  ],
+  "schema": "rq2-normal-fresh-legacy-own-quality-overlay-v1"
+}

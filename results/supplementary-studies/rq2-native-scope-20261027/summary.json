@@ -1,0 +1,221 @@
+{
+  "actual_import_accounting_sha256": "00aac77edecfe50dff677240af188c866a83dde2392b830f829e728f1558cb0f",
+  "actual_imports_complete": true,
+  "classifier_quality_pairs": 151,
+  "compatible_selected": 203,
+  "corrected_quality_pending": 0,
+  "coverage_count_definitions": {
+    "capture_observations": "Distinct actual capture source observations; repeat captures of one cut remain distinct, duplicate source hashes are counted once.",
+    "compatible_selected": "Original cuts with a selected identity- and complete-task-compatible Generic pair.",
+    "new_quality_captured": "Original cuts with actual new quality captures declared in hash-bound overlay provenance, independent of FPS acquisition or pair admission.",
+    "recovered": "Compatible selected observations recovered from existing sources; legacy selected-pair meaning retained.",
+    "remeasured": "Original cuts with an actual new FPS capture, including standalone captures held from pairing; alias of new_fps_captured.",
+    "source_found": "Original cuts with any recovered Generic source, including standalone observations held from pairing."
+  },
+  "detection_metric_label": "COCO AP@[.50:.05:.95]",
+  "detector_quality_pairs": 35,
+  "energy_policy": "Original Native, Full and Generic energy records stay in their original dataset. No refreshed Generic rate is paired to old energy as one joint observation.",
+  "excluded_candidates": 17,
+  "exclusion_reasons": {
+    "generic_relative_quality_loss_above_5pct": 17,
+    "native_quality_loss_above_5pct": 17,
+    "no_selected_generic_observation": 1,
+    "original_Native_historical_preprocessing_authority_missing": 1
+  },
+  "family_selection_results": [
+    {
+      "common_pair_groups": null,
+      "current_generic_mean_loss_same_pairs_pct": null,
+      "exact_winners": 14,
+      "family": "all",
+      "groups_n_ge_2": 21,
+      "mean_loss_n_ge_2_pct": 1.464100554146222,
+      "mean_loss_pct": 1.464100554146222,
+      "model_device_groups": 21,
+      "old_generic_mean_loss_same_pairs_pct": null,
+      "original_native_cases": 204,
+      "paired_candidates": 203,
+      "scope": "unrestricted",
+      "singleton_groups": 0
+    },
+    {
+      "common_pair_groups": null,
+      "current_generic_mean_loss_same_pairs_pct": null,
+      "exact_winners": 3,
+      "family": "classification",
+      "groups_n_ge_2": 9,
+      "mean_loss_n_ge_2_pct": 3.392714437605092,
+      "mean_loss_pct": 3.392714437605092,
+      "model_device_groups": 9,
+      "old_generic_mean_loss_same_pairs_pct": null,
+      "original_native_cases": 168,
+      "paired_candidates": 168,
+      "scope": "unrestricted",
+      "singleton_groups": 0
+    },
+    {
+      "common_pair_groups": null,
+      "current_generic_mean_loss_same_pairs_pct": null,
+      "exact_winners": 11,
+      "family": "detection",
+      "groups_n_ge_2": 12,
+      "mean_loss_n_ge_2_pct": 0.01764014155206939,
+      "mean_loss_pct": 0.01764014155206939,
+      "model_device_groups": 12,
+      "old_generic_mean_loss_same_pairs_pct": null,
+      "original_native_cases": 36,
+      "paired_candidates": 35,
+      "scope": "unrestricted",
+      "singleton_groups": 0
+    },
+    {
+      "common_pair_groups": 21,
+      "current_generic_mean_loss_same_pairs_pct": 1.3467521152436048,
+      "exact_winners": 15,
+      "family": "all",
+      "groups_n_ge_2": 21,
+      "mean_loss_n_ge_2_pct": 1.3467521152436048,
+      "mean_loss_pct": 1.3467521152436048,
+      "model_device_groups": 21,
+      "old_generic_mean_loss_same_pairs_pct": 15.077128973324955,
+      "original_native_cases": 204,
+      "paired_candidates": 186,
+      "scope": "quality_admitted",
+      "singleton_groups": 0
+    },
+    {
+      "common_pair_groups": 9,
+      "current_generic_mean_loss_same_pairs_pct": 3.1189014134989854,
+      "exact_winners": 4,
+      "family": "classification",
+      "groups_n_ge_2": 9,
+      "mean_loss_n_ge_2_pct": 3.1189014134989854,
+      "mean_loss_pct": 3.1189014134989854,
+      "model_device_groups": 9,
+      "old_generic_mean_loss_same_pairs_pct": 32.80433865060003,
+      "original_native_cases": 168,
+      "paired_candidates": 151,
+      "scope": "quality_admitted",
+      "singleton_groups": 0
+    },
+    {
+      "common_pair_groups": 12,
+      "current_generic_mean_loss_same_pairs_pct": 0.01764014155206939,
+      "exact_winners": 11,
+      "family": "detection",
+      "groups_n_ge_2": 12,
+      "mean_loss_n_ge_2_pct": 0.01764014155206939,
+      "mean_loss_pct": 0.01764014155206939,
+      "model_device_groups": 12,
+      "old_generic_mean_loss_same_pairs_pct": 1.7817217153686513,
+      "original_native_cases": 36,
+      "paired_candidates": 35,
+      "scope": "quality_admitted",
+      "singleton_groups": 0
+    }
+  ],
+  "final_generic_observations": 205,
+  "generic_quality_policy": "Current bound normal Generic quality evaluates actual selected timed completion records against its own existing CPU-ONNX reference and evaluator policy. Invalidated quality assignment evidence remains history; corrected unavailable quality is pending, never physical accuracy_loss.",
+  "group_count": 21,
+  "groups_without_quality_pairs": 0,
+  "known_quality_timed_contract_difference_cases": [
+    "generic|yolo26m|H10|hailo10h_to_trt|b043",
+    "generic|yolo26m|H8|hailo8_to_trt|b043"
+  ],
+  "mean_final_generic_loss_n_ge_2_pct": 1.3467521152436048,
+  "mean_final_generic_loss_pct": 1.3467521152436048,
+  "mean_final_generic_loss_same_pairs_n_ge_2_pct": 1.3467521152436048,
+  "mean_final_generic_loss_same_pairs_pct": 1.3467521152436048,
+  "mean_old_generic_loss_same_pairs_n_ge_2_pct": 15.077128973324955,
+  "mean_old_generic_loss_same_pairs_pct": 15.077128973324955,
+  "models": [
+    "mobilenet_v3_large",
+    "regnet_x_1_6gf",
+    "resnet50",
+    "yolo11l",
+    "yolo26m",
+    "yolo26s",
+    "yolov7_paper"
+  ],
+  "native_quality_policy": "Established historical Native numerical quality metric and <=5% gate retained. Historical Native AP is not asserted to be exact selected timed Native endpoint AP; source-scoped postfilter differences are explicitly reported.",
+  "new_fps_capture_observations": 1,
+  "new_fps_captured": 1,
+  "new_quality_capture_observations": 17,
+  "new_quality_captured": 17,
+  "original_native_detector_pairs": 36,
+  "original_native_population": 204,
+  "outside_rq3_fixed420_pairs": 12,
+  "overall_statistic": "Unchanged equal-group mean over nonempty quality-admitted model/device groups; singleton zero loss is not evidence of ranking quality.",
+  "pair_count": 203,
+  "prior_full_quality_scope_mean_loss_pct": 15.077128973324955,
+  "prior_published_pairs": 204,
+  "prior_published_quality_pairs": 187,
+  "publication_status": "complete_with_documented_native_authority_hold",
+  "quality_group_count": 21,
+  "quality_groups_n_ge_2": 21,
+  "quality_metrics": {
+    "classification": "top1_accuracy",
+    "detection": "coco_ap_50_95"
+  },
+  "quality_pair_count": 186,
+  "quality_singleton_groups": 0,
+  "rq3_fixed420_members": 192,
+  "same_pairs_comparison_group_count": 21,
+  "same_pairs_comparison_pair_count": 186,
+  "schema": "rq2-native-scope-pairs-v1",
+  "scope": "All original artifact-bound measured Native cut identities; RQ3 fixed420 membership is an annotation only. No Native values imputed or remeasured.",
+  "selected_generic_observations": 203,
+  "selection_policy": "Latest actually completed identity- and complete-task-contract-compatible valid Generic observation; selection precedes quality admission and never ranks FPS, AP or quality outcome.",
+  "source_found": 204,
+  "unresolved_candidates": 1,
+  "weight_policy": "All prior vectors and original full graph normalization universes frozen; no fit. Original holdout status describes original training.",
+  "weights": {
+    "default": {
+      "w_comm": 1.0,
+      "w_imb": 3.0,
+      "w_tensors": 0.2
+    },
+    "model_held_out": {
+      "mobilenet_v3_large": {
+        "w_comm": 1.0,
+        "w_imb": 0.5693428877923351,
+        "w_tensors": 0.2
+      },
+      "regnet_x_1_6gf": {
+        "w_comm": 1.0,
+        "w_imb": 0.15799266978091375,
+        "w_tensors": 0.2
+      },
+      "resnet50": {
+        "w_comm": 1.0,
+        "w_imb": 0.025084670679042267,
+        "w_tensors": 0.2
+      },
+      "yolo11l": {
+        "w_comm": 1.0,
+        "w_imb": 0.15799266978091375,
+        "w_tensors": 0.2
+      },
+      "yolo26m": {
+        "w_comm": 1.0,
+        "w_imb": 0.15799266978091375,
+        "w_tensors": 0.2
+      },
+      "yolo26s": {
+        "w_comm": 1.0,
+        "w_imb": 0.15799266978091375,
+        "w_tensors": 0.2
+      },
+      "yolov7_paper": {
+        "w_comm": 1.0,
+        "w_imb": 0.15799266978091375,
+        "w_tensors": 0.2
+      }
+    },
+    "shared": {
+      "w_comm": 1.0,
+      "w_imb": 0.15799266978091375,
+      "w_tensors": 0.2
+    }
+  }
+}

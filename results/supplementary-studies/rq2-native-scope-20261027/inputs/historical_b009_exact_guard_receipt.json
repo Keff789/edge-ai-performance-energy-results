@@ -1,0 +1,37 @@
+{
+  "Q_config_preprocessing_named_keys": {},
+  "Q_prepared_input_sha256": "0bd0f530dd401d77b085e0cd847c03cef94346395ff6e852a68f6e615c58b8cb",
+  "Q_result_preprocessing_named_keys": {
+    "preprocessing_contract_sha256": "411898b92628e2a769a2b8ea7aa35faff35373cfacb863c3ab34b243c105b70e"
+  },
+  "Q_result_top_level_key_present": true,
+  "Q_result_top_level_preprocessing_contract_sha256": "411898b92628e2a769a2b8ea7aa35faff35373cfacb863c3ab34b243c105b70e",
+  "actual_Q_admission": {
+    "path": "retained_source::Reports/generic_detectors20_multitensor_20261021T163124Z/continuation_v3_20261022/deferred_h8_yolo26s_uint8_corrected2_central_Main6b59_v1/dx_incremental_v6/execution_quality_only_h8_yolov7_b009_SourceA814_consumerMain6b59_v6_01/0_yolov7_paper_orin_nx_hailo8_01_b009/completion/b009_NORMAL_QUALITY_ADMISSION.json",
+    "sha256": "5a3b1ed3d960030793e4e16ab4698603578ee16690673d8e9a05b86df3dcc0ab",
+    "size_bytes": 1644351
+  },
+  "actual_Q_config": {
+    "path": "retained_source::Reports/generic_detectors20_multitensor_20261021T163124Z/continuation_v3_20261022/next_h8_yolov7_b009_qualityonly_sourcea814_uint8_import_closed_b093_local_v1/configs/yolov7_paper/b009.json",
+    "sha256": "cfd614a934907a30c0ddbe5a17a4feb7b2b5fa4dd4cfa7de22799e9dccc446aa",
+    "size_bytes": 175176
+  },
+  "actual_Q_result": {
+    "path": "retained_source::Reports/generic_detectors20_multitensor_20261021T163124Z/continuation_v3_20261022/local_quality_runs/yolov7_H8_b009_qualityonly_sourcea814_original_uint8_full20_local_v1/generic420_h8_yolov7_b009_qualityonly_sourcea814_original_uint8_full20_deferred_v1_20261026_002609/models/yolov7_paper/benchmark_results/quality_inputs/orin_nx_hailo8_01/results/b009/results_hailo8_to_trt/task_quality_inputs/composed_central_result.json",
+    "sha256": "86ec8a6279f789e062962de8217a6f1ee1eb5f3195165ac8f938526f2664d45a",
+    "size_bytes": 183970
+  },
+  "exact_guard_expression": "preprocessing and result.get(preprocessing_contract_sha256) == preprocessing",
+  "no_guard_contract_or_scientific_method_changed": true,
+  "observed_at": "2026-10-26T10:51:12.850081+00:00",
+  "original_FPS": {
+    "path": "retained_source::Reports/native-fairness-rev3-20261007/generic_energy_extension/confirmation_final_20261008/results/orin_nx_hailo8_01/yolov7_paper/b009/generic_completion_results.json",
+    "sha256": "6ee2178cdae608cf48ea40cf2d7691d5e280d5e9184fbe9ff252ce55b3a95d59",
+    "size_bytes": 231910
+  },
+  "original_FPS_preprocessing_contract_sha256": null,
+  "original_prepared_input_sha256": "0bd0f530dd401d77b085e0cd847c03cef94346395ff6e852a68f6e615c58b8cb",
+  "prepared_tensor_sha_unchanged": true,
+  "schema": "generic420-H8-Y7-b009-actual-preprocess-guard-key-facts-no-admission-v1",
+  "source_image_sha_unchanged": true
+}

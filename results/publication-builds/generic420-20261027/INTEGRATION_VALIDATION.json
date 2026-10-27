@@ -1,0 +1,313 @@
+{
+  "active_rq2_graph_random_curve_absent": true,
+  "archival_evidence_reference": "results/split-inference/publications/mlsys-r22/data/r15_evidence_validation.json",
+  "b066_points": [
+    {
+      "case": "full",
+      "coco_ap_50_95_percent": 40.77616377244088,
+      "configuration": "Hailo8 Full",
+      "energy_claim": true,
+      "model": "yolov7_paper",
+      "normal_performance_claim": true,
+      "passes_5pct": false,
+      "quality_bound_result_sha256": "5669e8739a8d2307e4f5c741b5e2d6ed270fcef4ffdf6727839ce96bc792be2e",
+      "quality_n": 5000,
+      "reference_coco_ap_50_95_percent": 46.0346586685622,
+      "relative_quality_loss": 0.11422904064481373,
+      "runner": "native",
+      "setup": "H8",
+      "system_energy_mj_per_image": 549.8435630511002,
+      "throughput_fps": 32.0712613037562,
+      "uid": "native|yolov7_paper|H8|native_full_hailo8|full"
+    },
+    {
+      "case": "full",
+      "coco_ap_50_95_percent": 46.02158790020155,
+      "configuration": "TensorRT Full",
+      "energy_claim": true,
+      "model": "yolov7_paper",
+      "normal_performance_claim": true,
+      "passes_5pct": true,
+      "quality_bound_result_sha256": "5669e8739a8d2307e4f5c741b5e2d6ed270fcef4ffdf6727839ce96bc792be2e",
+      "quality_n": 5000,
+      "reference_coco_ap_50_95_percent": 46.0346586685622,
+      "relative_quality_loss": 0.00028393320899276,
+      "runner": "native",
+      "setup": "H8",
+      "system_energy_mj_per_image": 598.4064624597721,
+      "throughput_fps": 53.055325348859675,
+      "uid": "native|yolov7_paper|H8|native_full_tensorrt|full"
+    },
+    {
+      "case": "b066",
+      "coco_ap_50_95_percent": 45.74084155464624,
+      "configuration": "Split b066",
+      "energy_claim": true,
+      "model": "yolov7_paper",
+      "normal_performance_claim": true,
+      "passes_5pct": true,
+      "quality_bound_result_sha256": "12bf2227e6ec762a6a3daad5a599106050d4b8341f4548ef5f527a988b10851f",
+      "quality_n": 5000,
+      "reference_coco_ap_50_95_percent": 46.0346586685622,
+      "relative_quality_loss": 0.006382519658315923,
+      "runner": "native",
+      "setup": "H8",
+      "system_energy_mj_per_image": 330.140070508485,
+      "throughput_fps": 112.86778421355565,
+      "uid": "native|yolov7_paper|H8|hailo8_to_trt|b066"
+    }
+  ],
+  "b066_wide_single_numerical_payload_unchanged": true,
+  "commands": [
+    "python -I -B scripts/split-inference/reproduce.py --publication mlsys-r30 --languages en de --rq2-study results/supplementary-studies/rq2-native-scope-20261027 --generic420-study results/supplementary-studies/rq3-generic420-detector-corrected-20261027 --output results/publication-builds/generic420-20261027/paper --verify",
+    "python -I -B scripts/dissertation/reproduce.py --source results/publication-builds/generic420-20261027/paper --rq2-study results/supplementary-studies/rq2-native-scope-20261027 --generic420-study results/supplementary-studies/rq3-generic420-detector-corrected-20261027 --output results/publication-builds/generic420-20261027/dissertation-de --verify",
+    "python -I -B scripts/dissertation/finalize_generic420_publication.py"
+  ],
+  "current_r30_output_targets_verified": true,
+  "english_dissertation_source_files": 425,
+  "finalization_source_sha256": "8d55d60797d9128d1fcc71f30d6098ca9b98a67ecbfe3b5cd3faa22f6aaf8e66",
+  "frozen_r22_numerical_files_checked": 126,
+  "new_measurements_by_publication_build": 0,
+  "private_paths_found": [],
+  "rq2_current_files_exact": 58,
+  "rq2_input_manifest_sha256": "9810d487e5ab030209f82974d0c4b434c924379c73462582cf26359b717058bd",
+  "rq2_scope": {
+    "actual_import_accounting_sha256": "00aac77edecfe50dff677240af188c866a83dde2392b830f829e728f1558cb0f",
+    "actual_imports_complete": true,
+    "classifier_quality_pairs": 151,
+    "compatible_selected": 203,
+    "corrected_quality_pending": 0,
+    "coverage_count_definitions": {
+      "capture_observations": "Distinct actual capture source observations; repeat captures of one cut remain distinct, duplicate source hashes are counted once.",
+      "compatible_selected": "Original cuts with a selected identity- and complete-task-compatible Generic pair.",
+      "new_quality_captured": "Original cuts with actual new quality captures declared in hash-bound overlay provenance, independent of FPS acquisition or pair admission.",
+      "recovered": "Compatible selected observations recovered from existing sources; legacy selected-pair meaning retained.",
+      "remeasured": "Original cuts with an actual new FPS capture, including standalone captures held from pairing; alias of new_fps_captured.",
+      "source_found": "Original cuts with any recovered Generic source, including standalone observations held from pairing."
+    },
+    "detection_metric_label": "COCO AP@[.50:.05:.95]",
+    "detector_quality_pairs": 35,
+    "energy_policy": "Original Native, Full and Generic energy records stay in their original dataset. No refreshed Generic rate is paired to old energy as one joint observation.",
+    "excluded_candidates": 17,
+    "exclusion_reasons": {
+      "generic_relative_quality_loss_above_5pct": 17,
+      "native_quality_loss_above_5pct": 17,
+      "no_selected_generic_observation": 1,
+      "original_Native_historical_preprocessing_authority_missing": 1
+    },
+    "family_selection_results": [
+      {
+        "common_pair_groups": null,
+        "current_generic_mean_loss_same_pairs_pct": null,
+        "exact_winners": 14,
+        "family": "all",
+        "groups_n_ge_2": 21,
+        "mean_loss_n_ge_2_pct": 1.464100554146222,
+        "mean_loss_pct": 1.464100554146222,
+        "model_device_groups": 21,
+        "old_generic_mean_loss_same_pairs_pct": null,
+        "original_native_cases": 204,
+        "paired_candidates": 203,
+        "scope": "unrestricted",
+        "singleton_groups": 0
+      },
+      {
+        "common_pair_groups": null,
+        "current_generic_mean_loss_same_pairs_pct": null,
+        "exact_winners": 3,
+        "family": "classification",
+        "groups_n_ge_2": 9,
+        "mean_loss_n_ge_2_pct": 3.392714437605092,
+        "mean_loss_pct": 3.392714437605092,
+        "model_device_groups": 9,
+        "old_generic_mean_loss_same_pairs_pct": null,
+        "original_native_cases": 168,
+        "paired_candidates": 168,
+        "scope": "unrestricted",
+        "singleton_groups": 0
+      },
+      {
+        "common_pair_groups": null,
+        "current_generic_mean_loss_same_pairs_pct": null,
+        "exact_winners": 11,
+        "family": "detection",
+        "groups_n_ge_2": 12,
+        "mean_loss_n_ge_2_pct": 0.01764014155206939,
+        "mean_loss_pct": 0.01764014155206939,
+        "model_device_groups": 12,
+        "old_generic_mean_loss_same_pairs_pct": null,
+        "original_native_cases": 36,
+        "paired_candidates": 35,
+        "scope": "unrestricted",
+        "singleton_groups": 0
+      },
+      {
+        "common_pair_groups": 21,
+        "current_generic_mean_loss_same_pairs_pct": 1.3467521152436048,
+        "exact_winners": 15,
+        "family": "all",
+        "groups_n_ge_2": 21,
+        "mean_loss_n_ge_2_pct": 1.3467521152436048,
+        "mean_loss_pct": 1.3467521152436048,
+        "model_device_groups": 21,
+        "old_generic_mean_loss_same_pairs_pct": 15.077128973324955,
+        "original_native_cases": 204,
+        "paired_candidates": 186,
+        "scope": "quality_admitted",
+        "singleton_groups": 0
+      },
+      {
+        "common_pair_groups": 9,
+        "current_generic_mean_loss_same_pairs_pct": 3.1189014134989854,
+        "exact_winners": 4,
+        "family": "classification",
+        "groups_n_ge_2": 9,
+        "mean_loss_n_ge_2_pct": 3.1189014134989854,
+        "mean_loss_pct": 3.1189014134989854,
+        "model_device_groups": 9,
+        "old_generic_mean_loss_same_pairs_pct": 32.80433865060003,
+        "original_native_cases": 168,
+        "paired_candidates": 151,
+        "scope": "quality_admitted",
+        "singleton_groups": 0
+      },
+      {
+        "common_pair_groups": 12,
+        "current_generic_mean_loss_same_pairs_pct": 0.01764014155206939,
+        "exact_winners": 11,
+        "family": "detection",
+        "groups_n_ge_2": 12,
+        "mean_loss_n_ge_2_pct": 0.01764014155206939,
+        "mean_loss_pct": 0.01764014155206939,
+        "model_device_groups": 12,
+        "old_generic_mean_loss_same_pairs_pct": 1.7817217153686513,
+        "original_native_cases": 36,
+        "paired_candidates": 35,
+        "scope": "quality_admitted",
+        "singleton_groups": 0
+      }
+    ],
+    "final_generic_observations": 205,
+    "generic_quality_policy": "Current bound normal Generic quality evaluates actual selected timed completion records against its own existing CPU-ONNX reference and evaluator policy. Invalidated quality assignment evidence remains history; corrected unavailable quality is pending, never physical accuracy_loss.",
+    "group_count": 21,
+    "groups_without_quality_pairs": 0,
+    "known_quality_timed_contract_difference_cases": [
+      "generic|yolo26m|H10|hailo10h_to_trt|b043",
+      "generic|yolo26m|H8|hailo8_to_trt|b043"
+    ],
+    "mean_final_generic_loss_n_ge_2_pct": 1.3467521152436048,
+    "mean_final_generic_loss_pct": 1.3467521152436048,
+    "mean_final_generic_loss_same_pairs_n_ge_2_pct": 1.3467521152436048,
+    "mean_final_generic_loss_same_pairs_pct": 1.3467521152436048,
+    "mean_old_generic_loss_same_pairs_n_ge_2_pct": 15.077128973324955,
+    "mean_old_generic_loss_same_pairs_pct": 15.077128973324955,
+    "models": [
+      "mobilenet_v3_large",
+      "regnet_x_1_6gf",
+      "resnet50",
+      "yolo11l",
+      "yolo26m",
+      "yolo26s",
+      "yolov7_paper"
+    ],
+    "native_quality_policy": "Established historical Native numerical quality metric and <=5% gate retained. Historical Native AP is not asserted to be exact selected timed Native endpoint AP; source-scoped postfilter differences are explicitly reported.",
+    "new_fps_capture_observations": 1,
+    "new_fps_captured": 1,
+    "new_quality_capture_observations": 17,
+    "new_quality_captured": 17,
+    "original_native_detector_pairs": 36,
+    "original_native_population": 204,
+    "outside_rq3_fixed420_pairs": 12,
+    "overall_statistic": "Unchanged equal-group mean over nonempty quality-admitted model/device groups; singleton zero loss is not evidence of ranking quality.",
+    "pair_count": 203,
+    "prior_full_quality_scope_mean_loss_pct": 15.077128973324955,
+    "prior_published_pairs": 204,
+    "prior_published_quality_pairs": 187,
+    "publication_status": "complete_with_documented_native_authority_hold",
+    "quality_group_count": 21,
+    "quality_groups_n_ge_2": 21,
+    "quality_metrics": {
+      "classification": "top1_accuracy",
+      "detection": "coco_ap_50_95"
+    },
+    "quality_pair_count": 186,
+    "quality_singleton_groups": 0,
+    "rq3_fixed420_members": 192,
+    "same_pairs_comparison_group_count": 21,
+    "same_pairs_comparison_pair_count": 186,
+    "schema": "rq2-native-scope-pairs-v1",
+    "scope": "All original artifact-bound measured Native cut identities; RQ3 fixed420 membership is an annotation only. No Native values imputed or remeasured.",
+    "selected_generic_observations": 203,
+    "selection_policy": "Latest actually completed identity- and complete-task-contract-compatible valid Generic observation; selection precedes quality admission and never ranks FPS, AP or quality outcome.",
+    "source_found": 204,
+    "unresolved_candidates": 1,
+    "weight_policy": "All prior vectors and original full graph normalization universes frozen; no fit. Original holdout status describes original training.",
+    "weights": {
+      "default": {
+        "w_comm": 1.0,
+        "w_imb": 3.0,
+        "w_tensors": 0.2
+      },
+      "model_held_out": {
+        "mobilenet_v3_large": {
+          "w_comm": 1.0,
+          "w_imb": 0.5693428877923351,
+          "w_tensors": 0.2
+        },
+        "regnet_x_1_6gf": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        },
+        "resnet50": {
+          "w_comm": 1.0,
+          "w_imb": 0.025084670679042267,
+          "w_tensors": 0.2
+        },
+        "yolo11l": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        },
+        "yolo26m": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        },
+        "yolo26s": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        },
+        "yolov7_paper": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        }
+      },
+      "shared": {
+        "w_comm": 1.0,
+        "w_imb": 0.15799266978091375,
+        "w_tensors": 0.2
+      }
+    }
+  },
+  "rq2_study": "results/supplementary-studies/rq2-native-scope-20261027",
+  "rq2_summary_sha256": "39cdbb81d29104a44973dcc2d88ee62a1ea6bac8ec014aca588b94f6eed3ea59",
+  "rq3_counts": {
+    "analysis_complete_groups": 21,
+    "eligible": 331,
+    "fps_measured": 359,
+    "fps_pending": 0,
+    "nonempty_eligible_groups": 21,
+    "quality_fail_measured": 28,
+    "quality_pending_measured": 0,
+    "selected": 420,
+    "technical_excluded": 61
+  },
+  "rq3_manifest_files_verified": 203,
+  "rq3_manifest_sha256": "1299939c4ce2afc32afca9cc10cd472db3167d063dc814e4e47937dbf3885207",
+  "rq3_study": "results/supplementary-studies/rq3-generic420-detector-corrected-20261027",
+  "schema": "bilingual-publication-integration-verification-v1",
+  "status": "PASS"
+}

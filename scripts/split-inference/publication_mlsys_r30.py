@@ -21,6 +21,50 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def profile_output_reference(repo, output):
+    repo, output = Path(repo).resolve(), Path(output).resolve()
+    return output.relative_to(repo) if output.is_relative_to(repo) else Path('results/split-inference/publications') / PROFILE
+
+
+def bind_output_targets(assets, repo, output):
+    reference = profile_output_reference(repo, output)
+    for asset in assets:
+        asset['repo_targets'] = [str(reference / name) for name in asset['outputs']]
+
+
+def profile_output_hashes(output):
+    return {str(p.relative_to(output)): digest(p) for p in sorted(output.rglob('*'))
+            if p.is_file() and p not in [output / 'PROVENANCE.json', output / 'README.md']}
+
+
+def graph_display_policy():
+    return {'figure': 'rq2_graph_analysis', 'excluded_methods': ['uniform_random'],
+            'scope': 'Active R30 presentation only; the separate historical RQ2 graph-score numerical controls and archived studies remain unchanged.'}
+
+
+def render_current_graph(repo, data_root, output):
+    renderer = module(Path(repo) / 'scripts/supplementary-studies/rq2-all-cuts-20261020/paper_assets.py', 'rq2_current_graph_display')
+    renderer.run(data_root, output, excluded_graph_methods=('uniform_random',))
+
+
+def refresh_profile_metadata(repo, broad_output):
+    """Rebind an existing profile's output authority without regenerating science."""
+    repo = Path(repo).resolve()
+    output = (Path(broad_output) / 'publications' / PROFILE).resolve()
+    manifest = json.loads((output / 'ASSET_MANIFEST.json').read_text())
+    bind_output_targets(manifest['existing_core_assets'], repo, output)
+    if manifest.get('current_rq2_override'):
+        manifest['existing_rq2_assets']['graph_display'] = graph_display_policy()
+    (output / 'ASSET_MANIFEST.json').write_text(json.dumps(manifest, indent=2) + '\n')
+    provenance = json.loads((output / 'PROVENANCE.json').read_text())
+    if manifest.get('current_rq2_override'):
+        provenance['source_sha256']['scripts/supplementary-studies/rq2-all-cuts-20261020/paper_assets.py'] = ''
+    provenance['source_sha256'] = {name: digest(repo / name) for name in provenance['source_sha256']}
+    provenance['output_sha256'] = profile_output_hashes(output)
+    (output / 'PROVENANCE.json').write_text(json.dumps(provenance, indent=2) + '\n')
+    return manifest
+
+
 def module(path, name):
     spec = importlib.util.spec_from_file_location(name, path)
     result = importlib.util.module_from_spec(spec)
@@ -66,11 +110,52 @@ def final_rq2_files(study):
     return result
 
 
+def rq2_engine_source(repo, study):
+    """Select the registered importer by the study schema, preserving old commands."""
+    summary = json.loads((Path(study) / 'summary.json').read_text())
+    engines = {'rq2-native-scope-pairs-v1':'rq2-native-scope-20261027',
+               'rq2-final-pairs-v1':'rq2-generic-final-20261027'}
+    if summary.get('schema') not in engines:
+        raise ValueError('Unregistered RQ2 study schema: ' + str(summary.get('schema')))
+    name = engines[summary['schema']]
+    return Path(repo) / 'scripts/supplementary-studies' / name / 'reproduce.py'
+
+
+def rq2_study_name(repo, study):
+    try:
+        return str(Path(study).resolve().relative_to(Path(repo).resolve()))
+    except ValueError:
+        return str(Path(study))
+
+
+def current_rq2_asset_metadata(asset, repo, study):
+    """Current figure provenance uses its current cohort; archive fields stay explicit."""
+    study = Path(study)
+    quality = any('quality_generic_selection_loss' in name for name in asset['outputs'])
+    key = 'quality_pairs' if quality else 'current_pairs'
+    figure_name = 'quality_generic_selection_loss' if quality else 'current_generic_selection_loss'
+    pairs = json.loads((study / 'data' / (key + '.json')).read_text())
+    figure = json.loads((study / 'figures' / (figure_name + '.json')).read_text())
+    groups = {(row['model'], row['setup']) for row in pairs}
+    asset['caption'] = figure['caption']
+    asset['description'] = f"Current Generic-to-Native selection, {len(pairs)} verified pairs in {len(groups)} model/device groups"
+    asset['input_uids'] = sorted({uid for pair in pairs for uid in [pair['native_uid'], pair['generic_uid']]})
+    prefix = rq2_study_name(repo, study)
+    asset['input_files'] = [prefix + '/INPUT_MANIFEST.json', prefix + '/data/' + key + '.json']
+    asset['current_cohort'] = dict(verified_pairs=len(pairs), model_device_groups=len(groups),
+        singleton_groups=sum(row.get('singleton', False) for row in figure['points']))
+    asset['archived_reference_scope'] = 'Reference archive, original occurrences and reference captions retain their historical R22 scope; current cohort and input identities are given above.'
+    asset['verification'] = 'Verified current study numerical reproduction and identity/accounting gates; archived R22 reference evidence is retained separately.'
+    return asset
+
+
 def current_weighted_scope(summary):
     return {'evaluated_quality_pairs':summary['quality_pair_count'],'model_device_groups':summary['quality_group_count'],
         'classifier_pairs':summary['classifier_quality_pairs'],'detector_pairs':summary['detector_quality_pairs'],
         'models':summary['models'],'groups_without_quality_pairs':summary['groups_without_quality_pairs'],
-        'scope':summary['scope']}
+        'scope':summary['scope'],
+        **{key:summary[key] for key in ['original_native_population','quality_singleton_groups','quality_groups_n_ge_2',
+            'mean_final_generic_loss_n_ge_2_pct','publication_status'] if key in summary}}
 
 
 def current_weighted_validation(study):
@@ -79,12 +164,14 @@ def current_weighted_validation(study):
     return {'result':'PASS','scope':current_weighted_scope(summary),'source_snapshot_sha256':manifest['source_snapshot_sha256'],
         'input_manifest_sha256':digest(study/'INPUT_MANIFEST.json'),'frozen_weights':summary['weights'],
         'weight_policy':summary['weight_policy'],'weights_refitted':False,'new_native_measurements':False,
-        'refreshed_fps_joined_to_old_energy':False}
+        'refreshed_fps_joined_to_old_energy':False,
+        'publication_status':summary.get('publication_status','historical_snapshot'),
+        'validation_scope':'Offline reproduction and identity accounting; unresolved scientific evidence remains unresolved.'}
 
 
 def apply_final_rq2(repo,output,study,numeric_only):
     study=Path(study).resolve()
-    engine=module(repo/'scripts/supplementary-studies/rq2-generic-final-20261027/reproduce.py','rq2_final_publication')
+    engine=module(rq2_engine_source(repo,study),'rq2_final_publication')
     with tempfile.TemporaryDirectory(prefix='rq2-final-profile-') as temporary:
         verified=Path(temporary)/'verified'
         summary=engine.run(verified,repo,numeric_only=numeric_only,verify_reference=study)
@@ -131,7 +218,7 @@ def verify_profile(repo, broad_output, rq2_study=None):
               'data/summary.json':['paired_candidates','quality_paired_candidates','quality_groups','quality_mean_loss_pct','quality_exact_hits'],
               'data/profile_summary.json':['final_rq2_scope','weighted_scope','historical_weighted_scope','weighted_weight_policy']}
     if rq2_study:
-        engine=module(repo/'scripts/supplementary-studies/rq2-generic-final-20261027/reproduce.py','rq2_final_verify')
+        engine=module(rq2_engine_source(repo,rq2_study),'rq2_final_verify')
         with tempfile.TemporaryDirectory(prefix='rq2-final-verify-') as temporary:
             engine.run(Path(temporary)/'checked',repo,numeric_only=True,verify_reference=Path(rq2_study))
     for folder in ['figures', 'tables', 'data']:
@@ -224,6 +311,8 @@ def build_profile(repo_root, broad_output, numeric_only=False, rq2_study=None):
         legacy = module(old_source, 'rq2_all_cuts_reproduce')
         with contextlib.redirect_stdout(io.StringIO()):
             legacy.run(work / 'all_cuts', numeric_only=numeric_only, verify=True)
+        if rq2_study and not numeric_only:
+            render_current_graph(repo, work / 'all_cuts', work / 'all_cuts')
         for stem in ['rq2_generic_selection_loss', 'rq2_native_success', 'rq2_graph_analysis']:
             for ext in ([] if numeric_only else ['pdf', 'svg', 'png']):
                 shutil.copyfile(work / 'all_cuts/figures' / f'{stem}.{ext}', output / 'figures' / f'{stem}.{ext}')
@@ -233,17 +322,16 @@ def build_profile(repo_root, broad_output, numeric_only=False, rq2_study=None):
 
     final_rq2=apply_final_rq2(repo,output,rq2_study,numeric_only) if rq2_study else None
     core_assets = json.loads((frozen / 'ASSET_MANIFEST.json').read_text())['assets']
+    bind_output_targets(core_assets, repo, output)
     for asset in core_assets:
-        asset['repo_targets'] = ['results/split-inference/publications/' + PROFILE + '/' + p
-                                 for p in asset['outputs']]
         if asset['asset_id'] == 'fig:runners':
             asset['generator'] = 'scripts/split-inference/publication_mlsys_r30.py:current_schematic'
             asset['caption'] = payload['system_overview']['scope']
             asset['data_generation'] = 'Maintained author vector source, replacing the frozen R22 schematic.'
         if final_rq2 and any('generic_selection_loss' in p for p in asset['outputs']):
-            asset['caption']='Final Generic on the verified existing Native intersection; current per-figure JSON records exact scope.'
-            asset['generator']='scripts/supplementary-studies/rq2-generic-final-20261027/reproduce.py:render'
-            asset['data_generation']='Final Generic snapshot with original artifact-bound Native measurements.'
+            current_rq2_asset_metadata(asset, repo, rq2_study)
+            asset['generator']=str(rq2_engine_source(repo,rq2_study).relative_to(repo))+':render'
+            asset['data_generation']='Current compatible Generic observations with original artifact-bound Native measurements; study metadata records the observation policy and audit status.'
     manifest = {'profile': PROFILE, 'frozen_profile': 'mlsys-r22',
         'scope': 'Current paper presentation plus the seven-model weighted analysis; original measurements unchanged.',
         'existing_core_assets': core_assets,
@@ -255,15 +343,18 @@ def build_profile(repo_root, broad_output, numeric_only=False, rq2_study=None):
         'new_assets': assets, 'study': str(STUDY),
         'numeric_only': numeric_only}
     if final_rq2:
-        manifest['current_rq2_override']={'study':'results/supplementary-studies/rq2-generic-final-20261027',
+        manifest['current_rq2_override']={'study':rq2_study_name(repo,rq2_study),
             'scope':final_rq2,'frozen_rq1_and_yolov7':True,
             'asset_files':sorted(final_rq2_files(Path(rq2_study)))}
-        manifest['scope']='Frozen RQ1 and YOLOv7 evidence; current RQ2 recomputed on the exact final Generic/existing Native intersection.'
-        manifest['existing_rq2_assets']['scope']='Current Generic scatter, Native success and search budgets replaced by the final verified paired study; historical graph campaign remains unchanged.'
+        manifest['scope']='Frozen RQ1 and YOLOv7 evidence; current RQ2 recomputed using the verified study population and observation policy.'
+        manifest['existing_rq2_assets']['historical_graph_generator']=str(old_source.relative_to(repo))
+        manifest['existing_rq2_assets']['generator']=str(rq2_engine_source(repo,rq2_study).relative_to(repo))
+        manifest['existing_rq2_assets']['graph_display']=graph_display_policy()
+        manifest['existing_rq2_assets']['scope']='Current Generic scatter, Native success and search budgets use the verified original Native population study; historical graph campaign remains unchanged.'
         for name in ['rq2_weighted_all_models','r30_weighted_budget_table','r30_weighted_macros']:
             if name in assets:
-                assets[name]['caption']='Final Generic / original Native verified paired subset, frozen prior graph weights. See data/rq2_final_summary.json for counts and missing groups.'
-                assets[name]['generator']='scripts/supplementary-studies/rq2-generic-final-20261027/reproduce.py:render'
+                assets[name]['caption']='Current Generic / original Native verified pairs, frozen prior graph weights. See data/rq2_final_summary.json for counts, singleton groups, pending evidence and quality contract limitations.'
+                assets[name]['generator']=str(rq2_engine_source(repo,rq2_study).relative_to(repo))+':render'
                 assets[name]['source_sha256']={'rq2_final_input_manifest':digest(Path(rq2_study)/'INPUT_MANIFEST.json'),
                     'rq2_final_summary':digest(Path(rq2_study)/'summary.json')}
                 if 'optimized_status' in assets[name]:assets[name]['optimized_status']='Frozen prior shared weights; no fit on the current paired subset.'
@@ -283,18 +374,19 @@ def build_profile(repo_root, broad_output, numeric_only=False, rq2_study=None):
     (output / 'data/profile_summary.json').write_text(json.dumps(profile_summary, indent=2) + '\n')
     sources = [HERE / 'publication_mlsys_r30.py', HERE / 'publication_mlsys_r30_assets.py',
                HERE / 'publication_mlsys_figures.py', weighted_source, old_source]
-    if final_rq2:sources.append(repo/'scripts/supplementary-studies/rq2-generic-final-20261027/reproduce.py')
+    if final_rq2:
+        sources.append(rq2_engine_source(repo,rq2_study))
+        sources.append(old_source.parent / 'paper_assets.py')
     provenance = {'schema': 'mlsys-r30-publication-v1', 'paper_style': PAPER_STYLE,
         'paper_palette': PAPER_PALETTE, 'measurement_changes': False,
         'source_sha256': {str(p.relative_to(repo)): digest(p) for p in sources},
         'input_sha256': {str(STUDY / 'inputs/MANIFEST.json'): digest(repo / STUDY / 'inputs/MANIFEST.json'),
                          'publications/mlsys/figure1/source.zip': digest(repo / 'publications/mlsys/figure1/source.zip')},
-        'output_sha256': {str(p.relative_to(output)): digest(p) for p in sorted(output.rglob('*'))
-                          if p.is_file() and p not in [output / 'PROVENANCE.json', output / 'README.md']}}
+        'output_sha256': profile_output_hashes(output)}
     if final_rq2:
-        provenance['input_sha256']['results/supplementary-studies/rq2-generic-final-20261027/INPUT_MANIFEST.json']=digest(Path(rq2_study)/'INPUT_MANIFEST.json')
+        provenance['input_sha256'][rq2_study_name(repo,rq2_study)+'/INPUT_MANIFEST.json']=digest(Path(rq2_study)/'INPUT_MANIFEST.json')
     (output / 'PROVENANCE.json').write_text(json.dumps(provenance, indent=2) + '\n')
-    (output / 'README.md').write_text('''# MLSys R30 paper assets
+    (output / 'README.md').write_text(f'''# MLSys R30 paper assets
 
 Generated with `python -I -B scripts/split-inference/reproduce.py --publication mlsys-r30 --output <empty-directory> --verify`.
 Add `--numeric-only` to omit image rendering. The default registered R22 profile remains unchanged.
@@ -302,8 +394,8 @@ Add `--numeric-only` to omit image rendering. The default registered R22 profile
 The core measurement figures use the common paper style and their frozen R22 numerical data.
 The author boundary illustration is regenerated from its maintained vector source.
 Both wide and single-column YOLOv7 case figures are included, with identical numbers.
-The weighted figure and tables use all 187 quality-eligible measured pairs in 21 groups.
-Optimized weights are fitted on all seven models; held-out results exclude one entire model at a time.
+The historical weighted figure and tables use {result['scope']['evaluated_quality_pairs']} quality-eligible measured pairs in {result['scope']['model_device_groups']} groups.
+The historical optimized weights are fitted across {len(result['scope']['models'])} models; held-out results exclude one entire model at a time.
 The new main weighted figure has no Random curve. Existing historical supplementary evidence keeps its original scope.
 
 Inputs, operation rules, fold memberships, exact results and sensitivity checks are in
@@ -311,18 +403,23 @@ Inputs, operation rules, fold memberships, exact results and sensitivity checks 
 `ASSET_MANIFEST.json` maps assets to generators. `PROVENANCE.json` records hashes.
 ''')
     if final_rq2:
-        (output/'README.md').write_text('''# MLSys R30 with final Generic RQ2 evidence
+        (output/'README.md').write_text(f"""# MLSys R30 with current Generic RQ2 evidence
 
 Reproduce with the normal split-inference CLI plus
-`--rq2-study results/supplementary-studies/rq2-generic-final-20261027`.
+`--rq2-study {rq2_study_name(repo,rq2_study)}`.
 RQ1, Full energy and the YOLOv7 case retain their frozen original bindings.
-The current RQ2 figures and tables use 192 verified artifact pairs, of which
-159 pass Native numerical quality and final Generic quality across 13 groups.
-Eight groups have no eligible paired candidate and are listed as unavailable.
+The current RQ2 figures and tables use {final_rq2['pair_count']} verified artifact pairs, of which
+{final_rq2['quality_pair_count']} pass Native numerical quality and bound Generic quality across {final_rq2['quality_group_count']} groups.
+{final_rq2['groups_without_quality_pairs']} groups have no admitted paired candidate and are listed as unavailable.
+Publication status: {final_rq2.get('publication_status', 'historical_snapshot')}.
+{final_rq2['scope']}
+{final_rq2.get('overall_statistic', 'Every evaluated model/device group receives equal weight.')}
+Groups with one admitted cut: {final_rq2.get('quality_singleton_groups', 'see per-group candidate_count')}.
+Mean restricted to groups with at least two cuts: {final_rq2.get('mean_final_generic_loss_n_ge_2_pct', 'not separately evaluated in this historical snapshot')}.
 All prior graph weights and normalization universes are frozen; no new fit.
 The original weighted folds and operation rules remain separately documented.
-Final Generic rates never inherit historical energy as joint measurements.
+Current Generic rates never inherit historical energy as joint measurements.
 `data/rq2_final_summary.json`, `data/pair_group_coverage.json` and
 `data/pair_identity_audit.json` give exact counts, exclusions and source hashes.
-''')
+""")
     return manifest

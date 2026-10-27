@@ -1,9 +1,9 @@
 # Edge AI performance and energy results
 
-The latest Generic420 follow-up is the [27 October 2026 closeout](results/supplementary-studies/generic420-closeout-20261027/README.md): all 359 supported FPS configurations are accepted, with 61 recorded technical exclusions. Of the measured configurations, 315 have admitted quality, 43 have a quality exclusion, and one historical H8/YOLOv7 quality association remains unresolved. This dated release is FPS-complete, **not a claim of complete quality provenance**. The earlier performance–energy dataset remains intact; new Generic throughput is not combined with earlier energy recordings.
+The current [27 October 2026 detector-corrected release](results/supplementary-studies/generic420-closeout-20261027/README.md) separates the fixed Generic420 study from the original Native-cut paired study. RQ3 accounts for all 420 planned configurations: 359 have accepted FPS, with 331 quality admissions, 28 quality exclusions and 61 technical exclusions; none remain open. RQ2 accounts for 204 original Native cuts: 186 admitted pairs, 17 quality exclusions and 1 unresolved historical Native-preprocessing authority. H8/YOLOv7/b009 now has complete Generic FPS and quality; its remaining hold concerns only the Native comparison. The original performance–energy records remain separate, and new Generic throughput is never combined with old energy as one observation.
 
 
-Measured split-inference performance, energy and quality, together with energy-measurement methods and controls. The current main dataset includes 75 DeepX Native A4 replacements; the other 375 direct observations and all 450 original dataset-quality selections are retained. The collection includes complete model views, supplementary analyses and negative results.
+Measured split-inference performance, energy and quality, together with energy-measurement methods and controls. The preserved performance–energy dataset includes 75 DeepX Native A4 replacements; the other 375 direct observations and all 450 original dataset-quality selections are retained. The collection includes complete model views, supplementary analyses and negative results.
 
 | Explore | Contents |
 |---|---|

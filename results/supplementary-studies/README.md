@@ -1,6 +1,6 @@
 # Supplementary studies
 
-Current follow-up: [Generic420 closeout, 27 October 2026](generic420-closeout-20261027/README.md), with [Generic-target RQ3](rq3-generic420-20261027/README.md) and the [updated Native-target paired RQ2 study](rq2-generic-final-20261027/README.md). The single unresolved historical quality association remains explicit; earlier studies retain their original populations.
+Current follow-up: [detector-corrected Generic420 closeout, 27 October 2026](generic420-closeout-20261027/README.md), with [Generic-target RQ3](rq3-generic420-detector-corrected-20261027/README.md) and [Native-target RQ2 over the original Native-cut scope](rq2-native-scope-20261027/README.md). Generic420 is fully status-resolved. The separate RQ2 historical Native-preprocessing hold remains explicit; earlier studies retain their original populations and are historical references.
 
 
 These completed studies retain their original populations and dates. Their populations and relationship to the current [Refresh16 split results](../split-inference/README.md) are stated separately. The 17 October evidence audit reuses the R14 deployment snapshot; its fresh scheduling processes form separate experimental series.

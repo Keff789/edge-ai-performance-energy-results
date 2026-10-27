@@ -46,6 +46,26 @@ Die zentrale Auswertung unterstützt zusätzlich `--languages en de`:
 
 Die englische Ausgabe behält ihre bisherige Struktur. Der zusätzliche Ordner `de/` enthält die deutsche Sammlung. Ohne `--languages` bleibt die bisherige englische Ausgabe unverändert. `--numeric-only` kann auch bei diesem Aufruf verwendet werden.
 
+## Aktueller RQ2-/RQ3-Publikationsstand
+
+Die korrigierte Publikationsausgabe verwendet beide geprüften Studien. Die folgenden normalen Befehle erwarten neue oder leere Ausgabeverzeichnisse:
+
+```sh
+python -I -B scripts/split-inference/reproduce.py \
+  --publication mlsys-r30 --languages en de \
+  --rq2-study results/supplementary-studies/rq2-native-scope-20261027 \
+  --generic420-study results/supplementary-studies/rq3-generic420-detector-corrected-20261027 \
+  --output results/publication-builds/generic420-20261027/paper --verify
+python -I -B scripts/dissertation/reproduce.py \
+  --source results/publication-builds/generic420-20261027/paper \
+  --rq2-study results/supplementary-studies/rq2-native-scope-20261027 \
+  --generic420-study results/supplementary-studies/rq3-generic420-detector-corrected-20261027 \
+  --output results/publication-builds/generic420-20261027/dissertation-de --verify
+python -I -B scripts/dissertation/finalize_generic420_publication.py
+```
+
+Der letzte Schritt erzeugt den englischen Dissertation-Quellenindex mit Prüfsummen und den Integrationsnachweis. Er verwendet die vorhandenen englischen Grafiken und Tabellen. Er prüft die unveränderten R22-Zahlen, beide b066-Layouts, die aktuellen RQ2-Exporte und die Übersetzungsabdeckung. Das historische R22-Nachweisprotokoll bleibt als relativer Verweis auf seine unveränderte Repository-Datei erhalten. Der Schritt führt keine Messung oder neue wissenschaftliche Berechnung aus und kann auf einer abgeschlossenen Ausgabe erneut ausgeführt werden.
+
 ## Ordnung der Dateien
 
 | Ordner in der deutschen Ausgabe | Inhalt |

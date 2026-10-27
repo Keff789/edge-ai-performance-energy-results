@@ -1,12 +1,8 @@
 {
-  "schema": "rq2-final-input-manifest-v1",
+  "schema": "rq2-native-scope-input-manifest-v1",
   "source_selection_sha256": "b084b0d2e0844c736877adf12279f582427d244376f8077e51cef66c73a0e895",
   "source_snapshot_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
   "sources": [
-    {
-      "path": "results/supplementary-studies/rq2-generic-final-20261027/inputs/final_generic420.json",
-      "sha256": "72131dd51d2d5070deb378fc4dca18a959f0ee174b9b7900b87d3a997eb489d8"
-    },
     {
       "path": "results/supplementary-studies/rq2-weighted-20261020/inputs/current_graph_feature_inputs.zip",
       "sha256": "c9fe64b0a67ff74c987b030d9db412dbaa5008a293d85dbf9fb05b504b1ace1a"
@@ -24,8 +20,204 @@
       "sha256": "03a0924016e6298587d366a45903d6b3a19d8f8aa08e831fdfa0f5b7f0725bcd"
     },
     {
-      "path": "results/split-inference/publications/mlsys-r22/data/quality_selection_groups.json",
-      "sha256": "458ea36a8fc897d2ce0a3bbf90303e9268324f6cb415f14a9a04484d9729b47a"
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/OBSERVATION_POLICY_v1.json",
+      "sha256": "2b0580a9368abefac59037673e2b63ba8089e79762a3c2b2109ca47b3083e6ad"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/ACTUAL_IMPORT_ACCOUNTING.json",
+      "sha256": "00aac77edecfe50dff677240af188c866a83dde2392b830f829e728f1558cb0f"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/observations.json",
+      "sha256": "47fca775723c56ed8cceb744b919734d3f74f7f596206974d85fd7866e527b8d"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/SOURCE_PROJECTION_MANIFEST.json",
+      "sha256": "8cd93148cd5a8f42b46ebe04b38f33a425191f240daed363e08bf0050483e889"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/current_fps_reuse_after_quality_fix.json",
+      "sha256": "d85e3c3cac0b68c30e3206d470454c8f0216e954966fc2cb518a336992866fac"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/current_generic_observations.json",
+      "sha256": "158369948964158fbbec3a6b7b2773e31f08d502c10fa7f4827c2035ed69ea7f"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/current_observation_proofs.json",
+      "sha256": "a3fe327c5732171041d9bb03913c3e740d5939f699d6d44c8fbfb1a30abff611"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/current_observation_validation.json",
+      "sha256": "a9f11cb2e1c627d3511942cb59d6254916a3801cd1c15bb6c52e82c082a0ee47"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/extra_RQ1_b066_scope_check.json",
+      "sha256": "a478f498d0a25f7586bdd4791ccf0d78e811d46ace8f3b1ec845bef7488325cb"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/extra_final_authority_report.json",
+      "sha256": "15fda9b098a0d958223586bfd03f5b8387aed5459254d06e046d3d035d092fbe"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/extra_generic_observations.json",
+      "sha256": "cb1728ad65875aac802aed577be1c6e754823d060ed978118bdc20c642a26b99"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/extra_independent_generic_quality_resolution.json",
+      "sha256": "02ef3926c2585eff13eaf1a107d4354f38885196909bd3d93d8977758ec23d09"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/extra_native_quality_reference_bindings.json",
+      "sha256": "f781dcdecdcf967509dd1099905ee16485dee54b7c8d3e222b7ab1fd8c7e77bc"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/extra_observation_proofs.json",
+      "sha256": "0d6ed57530d58bcd8ffd223f42770a3880fa450c9404481a7c7d6c8ff844dee2"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/extra_projection_manifest.json",
+      "sha256": "78de8faaaf8854a1d2a51e93ecd832bc22ee5ea3a5a12bec715bc190063f1b47"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/extra_quality_proofs.json",
+      "sha256": "3bf2058722bf651b33330b86721ea0e9f0942d739a565d2efa2e59005b0522e4"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/historical_b009_exact_guard_receipt.json",
+      "sha256": "62dca173abd24e962d5114441630cde3fc90a05554e40daa59cff0276cc7bccb"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/historical_b009_final_hold.json",
+      "sha256": "2f3c4aa8e3899415ef752e168150a53102feb9fb470eee202dcb7f457aa2603f"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/historical_b009_normal_relation_receipt.json",
+      "sha256": "9c52f5f3ab97883a1c9b016c14b17e11a9af611c73a993409a435a645dc38122"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/historical_b009_preprocessing_closure.json",
+      "sha256": "b85799cbd6f48fa63fdf84b9aa82939f5a260cbe8820540a27f135f05494ec54"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/native_quality_completion_H10_b043.json",
+      "sha256": "ed9900d2d2706b6beeec260d234ea2f3b82c9d58d917725444757d61363b4103"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/native_quality_completion_H8_b043.json",
+      "sha256": "20965dbbfe1c07acb3b07a9489966e2703b947c2a8c42e57d9be72379c0a9f50"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/performance_overlay_000.json",
+      "sha256": "a79e3496ade5f4ccd3b03b90378d70024529ccc5f53f17d820a788cf316d3917"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/provenance_overlay_000.json",
+      "sha256": "77c1bfc8e0d53791a3dddcfa03984c7df4bc1c52735e5097a91eda1b3e5a2857"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/provenance_overlay_001.json",
+      "sha256": "22137d675e646f01e3ec7a19a196fede92295c154bf6c74ffbf5fe98c975589e"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/provenance_overlay_002.json",
+      "sha256": "cde43ea6ce4d49de64378e25fea157a113920db47dd8fcb789d376ca3da6939b"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/provenance_overlay_003.json",
+      "sha256": "195ce29e0e0136a6ac4a50f0d031b516be15732e80b7f5ca64b68d04d54c3d06"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/provenance_overlay_004.json",
+      "sha256": "2e91aac16d179557755a27cc110631081c7c707476edfeca89d7692d51beb06b"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/provenance_overlay_005.json",
+      "sha256": "30015eb3fb711e20292a0e1c635324f2859d22b43beff3dde09c0a4377dda3fe"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/quality_affected_scope.json",
+      "sha256": "112d1224714e5b0fc8c873b8bb94bde49de7fa6360b0f5c257a5c6f538ef1db0"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/quality_affected_scope_validation.json",
+      "sha256": "c31da1dadabc911d067861d0cd1b7599d1487352c97e1c25a76c0879a95fa1cc"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/quality_contract_provenance.json",
+      "sha256": "eaf291f4966ea203ad025018a062183822e81ddcefaac78da08f958148df098b"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/quality_overlay_000.json",
+      "sha256": "2d104f517c605089bb83cbbe866d5a6ee4067a26a5598c4ec7e7f7e31dcbedc3"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/quality_overlay_001.json",
+      "sha256": "72150ce817d6357398e8dbc5aca4cea90cba5a88df3b0d8ce4fdb99f03ff191c"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/quality_overlay_002.json",
+      "sha256": "60c329a5e362c3158cd0fa0d0e1611512cb28f1b39cf030f340abf8ed769c247"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/quality_overlay_003.json",
+      "sha256": "0ece888d24056775223b4dafb1c9e5a4f698fb578ce032670db1b269efccd26e"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/quality_overlay_004.json",
+      "sha256": "0de4a5b4bb1a7406c237e2ae4db69d385c75132963828fad521bc7e350c84b9d"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/quality_overlay_005.json",
+      "sha256": "a16c5720c2bd5d7a53323d4a8cbc8b6b95609c3c3f88950bce3c7e86fa00f83b"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/quality_overlay_006.json",
+      "sha256": "6bee5c2eb2afaa043b3e951efeba645515becde8601e0b85fc613870426b9315"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/quality_overlay_007.json",
+      "sha256": "f5a830297d32aabdf6d70d8e94f90c2524d8eec3a4bd29d281fe5f19de309245"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/quality_overlay_008.json",
+      "sha256": "c6a63d3335ebdfcbae281fe0d93d9be6c42db9576259976f6d2447ef9844da50"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/quality_overlay_009.json",
+      "sha256": "e96c11ffc662296562b5b5f524efe95411cfa63f5c9cf2fbcbaf060312be1542"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/typed_quality_admission_000.json",
+      "sha256": "ae9256c868ba252ba64c63a4eafe3b7d0a7a963c531cdeef997507d86dc715d0"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/typed_quality_admission_001.json",
+      "sha256": "d33a0fb36f1afe634ce570fe66fe7ab91b909990805f914fbc4deca000f3a9ff"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/typed_quality_admission_002.json",
+      "sha256": "5bf5a1d47fb07a760fee72efd9ec8ae8cd21267e24cdb847005e9f51b6b0de2c"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/typed_quality_admission_003.json",
+      "sha256": "707eb9019c83a1bfbe8d101ab7d52974bfb2d5963a4001acecc72402b3b373e8"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/typed_quality_admission_004.json",
+      "sha256": "2fcf961edb16021510636474d4daa1ae3b077a630b78e634455c87879fb0fa1f"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/typed_quality_admission_005.json",
+      "sha256": "f93e3c76ceabfe3ee2b8570f39c905da5e49c2473dbd64e7b688ffd2221b535d"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/typed_quality_admission_006.json",
+      "sha256": "8130c970bf286f7fe0111da53d07581d7215834a4b5a57fde1386ddd39c79dda"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-native-scope-20261027/inputs/typed_quality_admission_007.json",
+      "sha256": "ed10a7ff4e8474d6a16732ae5dead37785ab607a39a83193df5c310db7f91d77"
     }
   ]
 }

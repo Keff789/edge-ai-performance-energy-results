@@ -2,6 +2,7 @@
 # Matplotlib uses line-ending spaces inside SVG path data; other whitespace checks remain active.
 results/publication-builds/generic420-20261027/**/*.svg whitespace=-blank-at-eol
 results/supplementary-studies/rq2-generic-final-20261027/figures/*.svg whitespace=-blank-at-eol
+results/supplementary-studies/rq2-native-scope-20261027/figures/*.svg whitespace=-blank-at-eol
 # Frozen historical Markdown exporters intentionally retain a final blank line.
 results/publication-builds/generic420-20261027/**/*.md whitespace=-blank-at-eof
 # Python csv.writer uses the standard CSV CRLF terminator.

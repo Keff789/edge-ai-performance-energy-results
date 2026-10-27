@@ -14,7 +14,7 @@ from verify import verify_inputs
 
 HERE=Path(__file__).resolve().parent
 REPO=HERE.parents[2]
-DEFAULT_STUDY=REPO/'results/supplementary-studies/rq3-generic420-20261027'
+DEFAULT_STUDY=REPO/'results/supplementary-studies/rq3-generic420-detector-corrected-20261027'
 
 
 def run(script,*args):
@@ -23,6 +23,16 @@ def run(script,*args):
 
 def write_readme(output, meta):
     c=meta['counts']
+    pending = c['fps_pending'] or c['quality_pending_measured']
+    pool_note = (
+        'Open decisions remain excluded; this is not a final full-quality universe. '
+        if pending else
+        'All selected cases have a resolved measured-quality or technical-exclusion status. '
+    )
+    try:
+        input_path = (output.resolve()/'inputs').relative_to(REPO.resolve()).as_posix()
+    except ValueError:
+        input_path = '<STUDY>/inputs'
     with (output/'fit_results/primary/summary.csv').open() as stream:
         summary=list(csv.DictReader(stream))
     rows=[r for r in summary if r['task']=='all' and r['accelerator']=='all' and r['group_scope']=='all_available']
@@ -35,8 +45,8 @@ def write_readme(output, meta):
            f"{c['quality_fail_measured']} measured quality failures, {c['quality_pending_measured']} measured quality decisions pending, "
            f"{c['technical_excluded']} technical exclusions and {c['fps_pending']} FPS measurements pending.",'',
            'The candidate pool is conditional on available, quality-eligible measurements. '
-           'Historical quality is not a current endpoint admission. Open decisions remain excluded; '
-           'this is not a final full-quality universe. Pending identities and historical roles are in '
+           'Historical quality is not a current endpoint admission. ' + pool_note +
+           'Pending identities and historical roles are in '
            '`inputs/feature_metadata.json`. Native measurements are unchanged.','',
            'Mean held-out Generic throughput loss (%); every model–accelerator group has equal weight:', '',
            '| Ranking | 1 cut | 3 cuts | 5 cuts | Mean at 1, 3, 5 |',
@@ -50,7 +60,7 @@ def write_readme(output, meta):
             'Full-data weights are descriptive training fits, separate from held-out performance.','',
             'From the repository root, rebuild all five analyses and EN/DE figures from these published inputs:', '',
             '```bash','python -B scripts/supplementary-studies/rq3-generic420/reproduce.py \\',
-            '  --inputs results/supplementary-studies/rq3-generic420-20261027/inputs \\',
+            f'  --inputs "{input_path}" \\',
             '  --output /tmp/generic420-reproduced --languages en de','```','',
             'Verify a completed study with `scripts/supplementary-studies/rq3-generic420/verify.py --study STUDY`. '
             'Dependencies and the detailed scoring, holdout and sensitivity protocol are in '

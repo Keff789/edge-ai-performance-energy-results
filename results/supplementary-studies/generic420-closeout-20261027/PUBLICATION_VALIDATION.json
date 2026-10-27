@@ -1,37 +1,21 @@
 {
-  "schema": "generic420-publication-validation-v1",
-  "paper_reproduction_exit_code": 0,
-  "dissertation_reproduction_exit_code": 0,
-  "paper_current_profile_scientific_files_verified": 159,
-  "frozen_R22_numerical_files_verified": 126,
-  "frozen_RQ1_and_YOLOv7_values_unchanged": true,
-  "RQ3_rendered_artifacts_byte_equal_to_verified_study": 134,
   "EN_DE_figures_numeric_data_identical": true,
-  "German_untranslated_figure_labels": 0,
+  "English_dissertation_indexed_source_files": 425,
   "German_figure_families_each": 58,
   "German_table_files_each": 184,
+  "German_untranslated_figure_labels": 0,
+  "dissertation_reproduction_exit_code": 0,
+  "frozen_R22_numerical_files_verified": 126,
+  "frozen_RQ1_and_YOLOv7_values_unchanged": true,
+  "full_integration_proof": {
+    "path": "results/publication-builds/generic420-20261027/INTEGRATION_VALIDATION.json",
+    "sha256": "b6927a0c0dc8029b17690a7b98ebcce2f57c7b39d58a9b49830e7152da1dcb1d",
+    "size_bytes": 13518
+  },
   "historical_Native_Full_energy_inputs_modified": false,
-  "updated_RQ2_scope": {
-    "evaluated_quality_pairs": 159,
-    "model_device_groups": 13,
-    "classifier_pairs": 151,
-    "detector_pairs": 8,
-    "models": [
-      "mobilenet_v3_large",
-      "regnet_x_1_6gf",
-      "resnet50",
-      "yolo11l",
-      "yolo26m",
-      "yolo26s",
-      "yolov7_paper"
-    ],
-    "groups_without_quality_pairs": 8,
-    "scope": "Existing Native measurements on the verified intersection with final fixed420 Generic candidates; no Native values imputed or remeasured."
-  },
-  "historical_audit_reused_via_relative_symlink": {
-    "path": "results/publication-builds/generic420-20261027/paper/publications/mlsys-r22/data/r15_evidence_validation.json",
-    "canonical": "results/split-inference/publications/mlsys-r22/data/r15_evidence_validation.json",
-    "bytes_unchanged": true
-  },
-  "visual_review": "RQ3 EN/DE wide/single and RQ2 EN/DE weighted/selection figures inspected; no clipped labels or overall titles, no Random curve in active new main figures."
+  "integrated_current_RQ2_files_verified": 58,
+  "new_hardware_measurements_by_publication": false,
+  "paper_reproduction_exit_code": 0,
+  "schema": "generic420-publication-artifact-validation-v1",
+  "visual_review": "RQ2 EN selection plot, DE b066 single-column and all six RQ3 EN/DE wide/single/fit PNGs inspected: readable labels, no overall titles or Random curve in active main figures."
 }

@@ -9,14 +9,14 @@ Das aktuelle Paper verwendet `mlsys-r30`. `mlsys-r22` und die datierten Zusatzst
 ## Reproduktion
 
 ```sh
-python -I -B scripts/dissertation/reproduce.py --output /tmp/dissertation-de --verify
+python -I -B scripts/dissertation/reproduce.py --source results/publication-builds/generic420-20261027/paper --rq2-study results/supplementary-studies/rq2-native-scope-20261027 --output <empty-directory> --verify
 ```
 
 Ein leeres Ausgabeverzeichnis verwenden. Für die vollständige englische und deutsche Split-Ausgabe:
 
 ```sh
 python -I -B scripts/split-inference/reproduce.py \
-  --publication mlsys-r30 --languages en de --output /tmp/split-de --verify
+  --publication mlsys-r30 --languages en de --rq2-study results/supplementary-studies/rq2-native-scope-20261027 --output <empty-directory> --verify
 ```
 
 ## Auswahl

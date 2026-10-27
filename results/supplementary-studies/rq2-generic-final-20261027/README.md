@@ -1,5 +1,7 @@
 # Current Generic / existing Native comparison
 
+**Historical preliminary release.** Superseded as the active analysis by the [detector-corrected study](../rq2-native-scope-20261027/README.md). The original inputs and results below remain unchanged for provenance; use [the active release](../generic420-closeout-20261027/README.md) for current counts, results and reproduction commands.
+
 192 verified pairs across 21 model/device groups; 159 pairs pass both numerical Native quality and current Generic quality across 13 groups. Eight groups have no eligible paired candidate. The prior publication used 204 pairs (187 quality-eligible); the fixed420 intersection changes the evaluated candidate set. Unproven pairs remain in data/pair_identity_audit.json with reasons. Model, physical device, graph frontier, execution precision, exact P1/engine bytes and original I/O bindings are checked.
 
 Mean Generic Top-1 selection loss: 2.159239%; old Generic on these same pairs: 22.959196%. The prior full 187-pair/21-group value (15.077129%) uses a different cohort and stays separate in summary.json. Weights and normalizations are frozen from the original study; no fit is repeated. Energy is excluded from refreshed pairs, preserving its original observations and bindings.

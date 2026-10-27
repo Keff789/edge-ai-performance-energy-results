@@ -1,0 +1,1376 @@
+{
+  "rows": [
+    {
+      "admission_mode": "rq2_original_native_scope_recovered_existing_generic",
+      "artifacts": {
+        "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+        "part1_sha256": "9c9f35c03b93504a35f48d6e6dac77fe824261feb2c6dea3ec66e45b89dcec0a",
+        "part2_engine_sha256": "fa0a93933b2ac4333b264c939cd832f18c86c01faedf2e1a02b13a201beacef2",
+        "source_part2_onnx_sha256": "0e574f4f3c6406b13adad60639ae5ee1a2c5ff588a3c97888307d63a49814826"
+      },
+      "boundary_count": 1,
+      "boundary_id": "sha256:f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147:topo:16ced2c27cf5429155986850b049b437224e09fc8cace2a855032dac61c8c575:b000120",
+      "case_id": "b120",
+      "completed_at": "2026-10-21T13:56:44.390601+00:00",
+      "effective_generic_fps": "48.17598279214943",
+      "effective_repeats": [
+        "48.9519278004132",
+        "48.17598279214943",
+        "48.08975639717151"
+      ],
+      "execution_precision": "float32_layout_fp16",
+      "full_product_identity": {
+        "case_id": "b120",
+        "comparison_backend": "deepx",
+        "direction": "deepx_to_trt",
+        "model_id": "yolo11l",
+        "output_endpoint_id": "detection:decoded_pre_nms:4ff299deec70a49feb11e468c7adeadea8016934121da91b275994b3229fa431",
+        "precision": "float32_layout_fp16",
+        "setup_id": "orin_nx_deepx_m1_01"
+      },
+      "generic_uid": "generic|yolo11l|DeepX|deepx_to_trt|b120",
+      "measurement_status": "complete_reused_existing_valid_generic",
+      "model": "yolo11l",
+      "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+      "native_quality_reference_value": 0.46682674160507026,
+      "native_quality_relative_loss": 0.006715517316197132,
+      "native_quality_value": 0.46369175853815753,
+      "observation_contract": {
+        "complete_task_contract_sha256": "3a68519b67159b79be87190c48fcd9b05d74849c0f30971aed70af88e6100221",
+        "complete_task_verified": true,
+        "completed_tasks_per_process": 1000,
+        "contract_evidence_sha256": "b168b1598d526e431f7cc1ea0239facb6c2523388fab6a88a6ba114afbd47b7d",
+        "full_postprocessing": true,
+        "historical_reuse": false,
+        "identity_verified": true,
+        "independent_processes": 3,
+        "ledger_row_sha256": "96c3abb0ba570caf7ab8d14d7de23e6d6dd97dcab7bbdd1207e6702384d13983",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "normal_admission_authority_sha256": "1e6137921d6a1436a6020c98d00c6ad30647506d6f2f766c18ef4cb546e5eab5",
+        "normal_technical_admission": true,
+        "proof_type": "normal_product_pair_admission_plus_actual_three_repetitions",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ],
+        "valid": true,
+        "warmups_per_process": 100
+      },
+      "observation_mode": "main_remeasurement",
+      "part2_input_count": 1,
+      "performance_source_sha256": "b168b1598d526e431f7cc1ea0239facb6c2523388fab6a88a6ba114afbd47b7d",
+      "quality_binding": {
+        "annotations_sha256": "fc8121b9115bcd3dcd336fa7fd109f1effa553516d64d17950359cc2f539f9a2",
+        "artifacts": {
+          "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+          "part1_sha256": "9c9f35c03b93504a35f48d6e6dac77fe824261feb2c6dea3ec66e45b89dcec0a",
+          "part2_engine_sha256": "fa0a93933b2ac4333b264c939cd832f18c86c01faedf2e1a02b13a201beacef2",
+          "source_part2_onnx_sha256": "0e574f4f3c6406b13adad60639ae5ee1a2c5ff588a3c97888307d63a49814826"
+        },
+        "candidate_predictions_sha256": "320dbe8d59fbf7c42bd7bc97d3d806f705f749889a5581becb42445611071f77",
+        "dataset_reference_evaluator_bound": true,
+        "evaluation_fingerprint": "104f3f71b29e09a55eb5deafd22ceaea4bb240c0602b2496ac7f0d3fafafaf2b",
+        "evaluator_algorithm": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+        "evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "ledger_row_sha256": "96c3abb0ba570caf7ab8d14d7de23e6d6dd97dcab7bbdd1207e6702384d13983",
+        "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+        "normal_admission": true,
+        "normal_exclusion_reasons": [],
+        "product_identity_verified": true,
+        "proof_type": "normal_product_pair_admission_with_actual_artifact_quality_evidence",
+        "quality_evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "quality_reference_value": 0.46682674160507026,
+        "quality_result_row_sha256": "bc3f1ad7765a2d975517c99af001da478ab0e709a6f56ed7da567d7a3ab2759b",
+        "quality_value": 0.46369175853815753,
+        "reference": 0.46682674160507026,
+        "reference_predictions_sha256": "45306cc9e77393a202c260d5a4a80c581e2ef321d68749ac580f8b414ea6452f",
+        "reference_runtime": "cpu_onnx",
+        "relative_loss": 0.006715517316197132,
+        "runtime_artifacts_and_inputs_bound": true,
+        "value": 0.46369175853815753,
+        "verified": true
+      },
+      "quality_eligible": true,
+      "quality_reference_value": 0.46682674160507026,
+      "quality_relative_loss": 0.006715517316197132,
+      "quality_status": "reference_close",
+      "quality_value": 0.46369175853815753,
+      "rq3_fixed420_member": false,
+      "selection_status": "latest_completed_identity_and_complete_task_compatible",
+      "setup": "DeepX",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_sha256": {
+        "actual_quality": {
+          "canonical_row_sha256": "bc3f1ad7765a2d975517c99af001da478ab0e709a6f56ed7da567d7a3ab2759b",
+          "sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84"
+        },
+        "normal_admission": {
+          "canonical_row_sha256": "96c3abb0ba570caf7ab8d14d7de23e6d6dd97dcab7bbdd1207e6702384d13983",
+          "sha256": "1e6137921d6a1436a6020c98d00c6ad30647506d6f2f766c18ef4cb546e5eab5"
+        },
+        "selected_generic_result": {
+          "sha256": "b168b1598d526e431f7cc1ea0239facb6c2523388fab6a88a6ba114afbd47b7d"
+        }
+      },
+      "task": "detection"
+    },
+    {
+      "admission_mode": "rq2_original_native_scope_recovered_existing_generic",
+      "artifacts": {
+        "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+        "part1_sha256": "9ad8717e7db2a190739367963aa745b132aecd200516f449766485232c30c64b",
+        "part2_engine_sha256": "ec96951893708432ace3e555e994ee66ed8c1f037ed50efb7315e5305a5ccdd1",
+        "source_part2_onnx_sha256": "0e574f4f3c6406b13adad60639ae5ee1a2c5ff588a3c97888307d63a49814826"
+      },
+      "boundary_count": 1,
+      "boundary_id": "sha256:f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147:topo:16ced2c27cf5429155986850b049b437224e09fc8cace2a855032dac61c8c575:b000120",
+      "case_id": "b120",
+      "completed_at": "2026-10-21T13:40:08.700380+00:00",
+      "effective_generic_fps": "51.06404180339726",
+      "effective_repeats": [
+        "51.06404180339726",
+        "51.139380469583",
+        "50.89595069803312"
+      ],
+      "execution_precision": "uint8_dequant_fp16",
+      "full_product_identity": {
+        "case_id": "b120",
+        "comparison_backend": "hailo10h",
+        "direction": "hailo10h_to_trt",
+        "model_id": "yolo11l",
+        "output_endpoint_id": "detection:decoded_pre_nms:4ff299deec70a49feb11e468c7adeadea8016934121da91b275994b3229fa431",
+        "precision": "uint8_dequant_fp16",
+        "setup_id": "orin_nx_hailo10_01"
+      },
+      "generic_uid": "generic|yolo11l|H10|hailo10h_to_trt|b120",
+      "measurement_status": "complete_reused_existing_valid_generic",
+      "model": "yolo11l",
+      "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+      "native_quality_reference_value": 0.46682674160507026,
+      "native_quality_relative_loss": 0.024242864964205593,
+      "native_quality_value": 0.45550952394665845,
+      "observation_contract": {
+        "complete_task_contract_sha256": "3a68519b67159b79be87190c48fcd9b05d74849c0f30971aed70af88e6100221",
+        "complete_task_verified": true,
+        "completed_tasks_per_process": 1000,
+        "contract_evidence_sha256": "9a0fd348a18c7e1a3b6326b22b5048316eabdccbf38beb8d5a3e8dfc781eef72",
+        "full_postprocessing": true,
+        "historical_reuse": false,
+        "identity_verified": true,
+        "independent_processes": 3,
+        "ledger_row_sha256": "3fbe67c212c52d4129ed526bed0179ffad925b44070c6ca56a72309e7390e533",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "normal_admission_authority_sha256": "a6e15157634d7493f1d08e561d3e0d04de9aaffcc9706c154b6dbafa99f847d0",
+        "normal_technical_admission": true,
+        "proof_type": "normal_product_pair_admission_plus_actual_three_repetitions",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ],
+        "valid": true,
+        "warmups_per_process": 100
+      },
+      "observation_mode": "main_remeasurement",
+      "part2_input_count": 1,
+      "performance_source_sha256": "9a0fd348a18c7e1a3b6326b22b5048316eabdccbf38beb8d5a3e8dfc781eef72",
+      "quality_binding": {
+        "annotations_sha256": "fc8121b9115bcd3dcd336fa7fd109f1effa553516d64d17950359cc2f539f9a2",
+        "artifacts": {
+          "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+          "part1_sha256": "9ad8717e7db2a190739367963aa745b132aecd200516f449766485232c30c64b",
+          "part2_engine_sha256": "ec96951893708432ace3e555e994ee66ed8c1f037ed50efb7315e5305a5ccdd1",
+          "source_part2_onnx_sha256": "0e574f4f3c6406b13adad60639ae5ee1a2c5ff588a3c97888307d63a49814826"
+        },
+        "candidate_predictions_sha256": "15f72b51b178128d50ebc8007fc784588d2fb5c32b441aedcf59a8bf7399fdf9",
+        "dataset_reference_evaluator_bound": true,
+        "evaluation_fingerprint": "b8951a73695784d5ed43196fd157e844f1ed412a3c7c6d30f574b430bc74ed8b",
+        "evaluator_algorithm": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+        "evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "ledger_row_sha256": "3fbe67c212c52d4129ed526bed0179ffad925b44070c6ca56a72309e7390e533",
+        "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+        "normal_admission": true,
+        "normal_exclusion_reasons": [],
+        "product_identity_verified": true,
+        "proof_type": "normal_product_pair_admission_with_actual_artifact_quality_evidence",
+        "quality_evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "quality_reference_value": 0.46682674160507026,
+        "quality_result_row_sha256": "1d677e0d33bfe198c3e5eb37a75842ebc472519abcbfd219fbdad06c8ac8700d",
+        "quality_value": 0.45550952394665845,
+        "reference": 0.46682674160507026,
+        "reference_predictions_sha256": "45306cc9e77393a202c260d5a4a80c581e2ef321d68749ac580f8b414ea6452f",
+        "reference_runtime": "cpu_onnx",
+        "relative_loss": 0.024242864964205593,
+        "runtime_artifacts_and_inputs_bound": true,
+        "value": 0.45550952394665845,
+        "verified": true
+      },
+      "quality_eligible": true,
+      "quality_reference_value": 0.46682674160507026,
+      "quality_relative_loss": 0.024242864964205593,
+      "quality_status": "reference_close",
+      "quality_value": 0.45550952394665845,
+      "rq3_fixed420_member": false,
+      "selection_status": "latest_completed_identity_and_complete_task_compatible",
+      "setup": "H10",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_sha256": {
+        "actual_quality": {
+          "canonical_row_sha256": "1d677e0d33bfe198c3e5eb37a75842ebc472519abcbfd219fbdad06c8ac8700d",
+          "sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84"
+        },
+        "normal_admission": {
+          "canonical_row_sha256": "3fbe67c212c52d4129ed526bed0179ffad925b44070c6ca56a72309e7390e533",
+          "sha256": "a6e15157634d7493f1d08e561d3e0d04de9aaffcc9706c154b6dbafa99f847d0"
+        },
+        "selected_generic_result": {
+          "sha256": "9a0fd348a18c7e1a3b6326b22b5048316eabdccbf38beb8d5a3e8dfc781eef72"
+        }
+      },
+      "task": "detection"
+    },
+    {
+      "admission_mode": "rq2_original_native_scope_recovered_existing_generic",
+      "artifacts": {
+        "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+        "part1_sha256": "3028bbbe2a16912c87a5af6cd04e2a233cd790c8646aa299cce4daccb8a653cb",
+        "part2_engine_sha256": "e6c1968fdf408a37397bc609071f08430b13078fa0481c9fab604949bf5e3bd1",
+        "source_part2_onnx_sha256": "0e574f4f3c6406b13adad60639ae5ee1a2c5ff588a3c97888307d63a49814826"
+      },
+      "boundary_count": 1,
+      "boundary_id": "sha256:f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147:topo:16ced2c27cf5429155986850b049b437224e09fc8cace2a855032dac61c8c575:b000120",
+      "case_id": "b120",
+      "completed_at": "2026-10-08T12:11:24.060777+00:00",
+      "effective_generic_fps": "43.16076947429501",
+      "effective_repeats": [
+        "43.17973249288758",
+        "42.756125680120434",
+        "43.16076947429501"
+      ],
+      "execution_precision": "uint8_dequant_fp16",
+      "full_product_identity": {
+        "case_id": "b120",
+        "comparison_backend": "hailo8",
+        "direction": "hailo8_to_trt",
+        "model_id": "yolo11l",
+        "output_endpoint_id": "detection:decoded_pre_nms:4ff299deec70a49feb11e468c7adeadea8016934121da91b275994b3229fa431",
+        "precision": "uint8_dequant_fp16",
+        "setup_id": "orin_nx_hailo8_01"
+      },
+      "generic_uid": "generic|yolo11l|H8|hailo8_to_trt|b120",
+      "measurement_status": "complete_reused_existing_valid_generic",
+      "model": "yolo11l",
+      "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+      "native_quality_reference_value": 0.46682674160507026,
+      "native_quality_relative_loss": 0.017074009962292722,
+      "native_quality_value": 0.45885613716824064,
+      "observation_contract": {
+        "complete_task_contract_sha256": "3a68519b67159b79be87190c48fcd9b05d74849c0f30971aed70af88e6100221",
+        "complete_task_verified": true,
+        "completed_tasks_per_process": 1000,
+        "contract_evidence_sha256": "ad752cf2d3007cb1c13c579012556fb169717c7431a7b2a968552fbd8a1d70c2",
+        "full_postprocessing": true,
+        "historical_reuse": true,
+        "identity_verified": true,
+        "independent_processes": 3,
+        "ledger_row_sha256": "0ec8660f98e50f790ba1092fb75cbf98f201244666185da1ecf1c82be4dda72c",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "normal_admission_authority_sha256": "244863d0726d8a0630d2e4bc701062048d2e260920cb85493e42e018f47b1a28",
+        "normal_technical_admission": true,
+        "proof_type": "normal_product_pair_admission_plus_actual_three_repetitions",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ],
+        "valid": true,
+        "warmups_per_process": 100
+      },
+      "observation_mode": "historical",
+      "part2_input_count": 1,
+      "performance_source_sha256": "ad752cf2d3007cb1c13c579012556fb169717c7431a7b2a968552fbd8a1d70c2",
+      "quality_binding": {
+        "annotations_sha256": "fc8121b9115bcd3dcd336fa7fd109f1effa553516d64d17950359cc2f539f9a2",
+        "artifacts": {
+          "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+          "part1_sha256": "3028bbbe2a16912c87a5af6cd04e2a233cd790c8646aa299cce4daccb8a653cb",
+          "part2_engine_sha256": "e6c1968fdf408a37397bc609071f08430b13078fa0481c9fab604949bf5e3bd1",
+          "source_part2_onnx_sha256": "0e574f4f3c6406b13adad60639ae5ee1a2c5ff588a3c97888307d63a49814826"
+        },
+        "candidate_predictions_sha256": "e7af54691e244253e489f0b6ea460cc15cca67115b0bdaeeda1bfc8612e59f2f",
+        "dataset_reference_evaluator_bound": true,
+        "evaluation_fingerprint": "57ad3ac8a8cbc82443bb5d2b0803f89f79d53477330214c02d04011d4f57eba4",
+        "evaluator_algorithm": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+        "evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "ledger_row_sha256": "0ec8660f98e50f790ba1092fb75cbf98f201244666185da1ecf1c82be4dda72c",
+        "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+        "normal_admission": true,
+        "normal_exclusion_reasons": [],
+        "product_identity_verified": true,
+        "proof_type": "normal_product_pair_admission_with_actual_artifact_quality_evidence",
+        "quality_evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "quality_reference_value": 0.46682674160507026,
+        "quality_result_row_sha256": "5bb4835c4d36ba21a3c1fb2732cf4ac8fdeea88196453044372fcabd9d3a7df3",
+        "quality_value": 0.45885613716824064,
+        "reference": 0.46682674160507026,
+        "reference_predictions_sha256": "45306cc9e77393a202c260d5a4a80c581e2ef321d68749ac580f8b414ea6452f",
+        "reference_runtime": "cpu_onnx",
+        "relative_loss": 0.017074009962292722,
+        "runtime_artifacts_and_inputs_bound": true,
+        "value": 0.45885613716824064,
+        "verified": true
+      },
+      "quality_eligible": true,
+      "quality_reference_value": 0.46682674160507026,
+      "quality_relative_loss": 0.017074009962292722,
+      "quality_status": "reference_close",
+      "quality_value": 0.45885613716824064,
+      "rq3_fixed420_member": false,
+      "selection_status": "latest_completed_identity_and_complete_task_compatible",
+      "setup": "H8",
+      "setup_id": "orin_nx_hailo8_01",
+      "source_sha256": {
+        "actual_quality": {
+          "canonical_row_sha256": "5bb4835c4d36ba21a3c1fb2732cf4ac8fdeea88196453044372fcabd9d3a7df3",
+          "sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84"
+        },
+        "normal_admission": {
+          "canonical_row_sha256": "0ec8660f98e50f790ba1092fb75cbf98f201244666185da1ecf1c82be4dda72c",
+          "sha256": "244863d0726d8a0630d2e4bc701062048d2e260920cb85493e42e018f47b1a28"
+        },
+        "selected_generic_result": {
+          "sha256": "ad752cf2d3007cb1c13c579012556fb169717c7431a7b2a968552fbd8a1d70c2"
+        }
+      },
+      "task": "detection"
+    },
+    {
+      "admission_mode": "rq2_original_native_scope_recovered_existing_generic",
+      "artifacts": {
+        "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+        "part1_sha256": "32ba5be1cc7382b0958c38b5b9808d84caa75935c14d3def4b2a09268077dee4",
+        "part2_engine_sha256": "66d22eb0fbc52273e11b26102889b407f2cd770ff6bb8f02fceedf2a862e8aea",
+        "source_part2_onnx_sha256": "edd8485dfecd521ce0d20aefc358986ffba5e7cf5f4a52433d5fa99a9104f7b8"
+      },
+      "boundary_count": 1,
+      "boundary_id": "sha256:4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a:topo:a393be7a94221816b908bac25f33a2d9e2d2123de0cb443b5d47f7a9450ff74b:b000038",
+      "case_id": "b038",
+      "completed_at": "2026-10-21T15:06:30.490261+00:00",
+      "effective_generic_fps": "149.78574006657908",
+      "effective_repeats": [
+        "146.91087511784295",
+        "153.24585162816854",
+        "149.78574006657908"
+      ],
+      "execution_precision": "float32_layout_fp16",
+      "full_product_identity": {
+        "case_id": "b038",
+        "comparison_backend": "deepx",
+        "direction": "deepx_to_trt",
+        "model_id": "yolo26s",
+        "output_endpoint_id": "detection:decoded_nms:ef37b2fa7934ea23c08bc692b0e81531d09dcccb98efeb6d1e0636a28c4089fc",
+        "precision": "float32_layout_fp16",
+        "setup_id": "orin_nx_deepx_m1_01"
+      },
+      "generic_uid": "generic|yolo26s|DeepX|deepx_to_trt|b038",
+      "measurement_status": "complete_reused_existing_valid_generic",
+      "model": "yolo26s",
+      "model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+      "native_quality_reference_value": 0.40087514853384254,
+      "native_quality_relative_loss": 0.0013110257857374098,
+      "native_quality_value": 0.40034959087725336,
+      "observation_contract": {
+        "complete_task_contract_sha256": "b338663b2369a99816f906e3093db42fe82ca47be1768175efd8d379464a36d0",
+        "complete_task_verified": true,
+        "completed_tasks_per_process": 1000,
+        "contract_evidence_sha256": "b8e3bbdf410397caf3e5e15b94e334682b5890f3e51efc662e1e619c01957948",
+        "full_postprocessing": true,
+        "historical_reuse": false,
+        "identity_verified": true,
+        "independent_processes": 3,
+        "ledger_row_sha256": "077c1cc9ac93b9ad48d48eb883b01743c3c92f85c5c16f0513d9e22c00d54628",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "normal_admission_authority_sha256": "0906f521eb7ed9fc5d5e3b5c375d2ca496b17684df8fd17b1dcd6352e3a8bc97",
+        "normal_technical_admission": true,
+        "proof_type": "normal_product_pair_admission_plus_actual_three_repetitions",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ],
+        "valid": true,
+        "warmups_per_process": 100
+      },
+      "observation_mode": "main_remeasurement",
+      "part2_input_count": 1,
+      "performance_source_sha256": "b8e3bbdf410397caf3e5e15b94e334682b5890f3e51efc662e1e619c01957948",
+      "quality_binding": {
+        "annotations_sha256": "fc8121b9115bcd3dcd336fa7fd109f1effa553516d64d17950359cc2f539f9a2",
+        "artifacts": {
+          "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+          "part1_sha256": "32ba5be1cc7382b0958c38b5b9808d84caa75935c14d3def4b2a09268077dee4",
+          "part2_engine_sha256": "66d22eb0fbc52273e11b26102889b407f2cd770ff6bb8f02fceedf2a862e8aea",
+          "source_part2_onnx_sha256": "edd8485dfecd521ce0d20aefc358986ffba5e7cf5f4a52433d5fa99a9104f7b8"
+        },
+        "candidate_predictions_sha256": "f45302581309aa299b05f983029db0eff4a45d8bea598b26906cc344df4a1957",
+        "dataset_reference_evaluator_bound": true,
+        "evaluation_fingerprint": "795998d2115b5b2b7ecde5502d73a9da066e7d22cf2e5fa8bf8450c56a279bfa",
+        "evaluator_algorithm": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+        "evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "ledger_row_sha256": "077c1cc9ac93b9ad48d48eb883b01743c3c92f85c5c16f0513d9e22c00d54628",
+        "model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+        "normal_admission": true,
+        "normal_exclusion_reasons": [],
+        "product_identity_verified": true,
+        "proof_type": "normal_product_pair_admission_with_actual_artifact_quality_evidence",
+        "quality_evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "quality_reference_value": 0.40087514853384254,
+        "quality_result_row_sha256": "1fe5bce728029178aa0dd1dadb5c7299d4782222be0d5d55e1dfe0de2c7c5ef3",
+        "quality_value": 0.40034959087725336,
+        "reference": 0.40087514853384254,
+        "reference_predictions_sha256": "1a3aa3975dfb4a92c324d9dca3368e8c6eb74417475f60864dfe3f042cebdd1e",
+        "reference_runtime": "cpu_onnx",
+        "relative_loss": 0.0013110257857374098,
+        "runtime_artifacts_and_inputs_bound": true,
+        "value": 0.40034959087725336,
+        "verified": true
+      },
+      "quality_eligible": true,
+      "quality_reference_value": 0.40087514853384254,
+      "quality_relative_loss": 0.0013110257857374098,
+      "quality_status": "reference_close",
+      "quality_value": 0.40034959087725336,
+      "rq3_fixed420_member": false,
+      "selection_status": "latest_completed_identity_and_complete_task_compatible",
+      "setup": "DeepX",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_sha256": {
+        "actual_quality": {
+          "canonical_row_sha256": "1fe5bce728029178aa0dd1dadb5c7299d4782222be0d5d55e1dfe0de2c7c5ef3",
+          "sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84"
+        },
+        "normal_admission": {
+          "canonical_row_sha256": "077c1cc9ac93b9ad48d48eb883b01743c3c92f85c5c16f0513d9e22c00d54628",
+          "sha256": "0906f521eb7ed9fc5d5e3b5c375d2ca496b17684df8fd17b1dcd6352e3a8bc97"
+        },
+        "selected_generic_result": {
+          "sha256": "b8e3bbdf410397caf3e5e15b94e334682b5890f3e51efc662e1e619c01957948"
+        }
+      },
+      "task": "detection"
+    },
+    {
+      "admission_mode": "rq2_original_native_scope_recovered_existing_generic",
+      "artifacts": {
+        "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+        "part1_sha256": "2aa321e7c3dd6755d8bc1c0ee50aa10ad41dcfba893cec1dad3c33730ced07df",
+        "part2_engine_sha256": "5b1eac3b810466968f511e50815f45561c9a6402dfbc61b800699321c79fc2b1",
+        "source_part2_onnx_sha256": "edd8485dfecd521ce0d20aefc358986ffba5e7cf5f4a52433d5fa99a9104f7b8"
+      },
+      "boundary_count": 1,
+      "boundary_id": "sha256:4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a:topo:a393be7a94221816b908bac25f33a2d9e2d2123de0cb443b5d47f7a9450ff74b:b000038",
+      "case_id": "b038",
+      "completed_at": "2026-10-21T21:23:58.058422+00:00",
+      "effective_generic_fps": "137.70654286434242",
+      "effective_repeats": [
+        "137.73510249986353",
+        "137.69840159904726",
+        "137.70654286434242"
+      ],
+      "execution_precision": "uint8_dequant_fp16",
+      "full_product_identity": {
+        "case_id": "b038",
+        "comparison_backend": "hailo10h",
+        "direction": "hailo10h_to_trt",
+        "model_id": "yolo26s",
+        "output_endpoint_id": "detection:decoded_nms:ef37b2fa7934ea23c08bc692b0e81531d09dcccb98efeb6d1e0636a28c4089fc",
+        "precision": "uint8_dequant_fp16",
+        "setup_id": "orin_nx_hailo10_01"
+      },
+      "generic_uid": "generic|yolo26s|H10|hailo10h_to_trt|b038",
+      "measurement_status": "complete_reused_existing_valid_generic",
+      "model": "yolo26s",
+      "model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+      "native_quality_reference_value": 0.40087514853384254,
+      "native_quality_relative_loss": 0.026441877729974927,
+      "native_quality_value": 0.39027525687132514,
+      "observation_contract": {
+        "complete_task_contract_sha256": "ae951ebe45f1b588d5152b725a56d9bcd39366f1f0e25241e7b2608c049f820f",
+        "complete_task_verified": true,
+        "completed_tasks_per_process": 1000,
+        "contract_evidence_sha256": "386bbac3653cfba80cee4fac91c9451c998a994a155b65c249943006085cceef",
+        "full_postprocessing": true,
+        "historical_reuse": false,
+        "identity_verified": true,
+        "independent_processes": 3,
+        "ledger_row_sha256": "c4623d21dd4912573439c089cdef043926cc503e26c1ca8a2db4e9b8f88b1224",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "normal_admission_authority_sha256": "b2660e4ed0bd66442d0c13718cf8981b4af8f30e3620865d934fdc05856a20be",
+        "normal_technical_admission": true,
+        "proof_type": "normal_product_pair_admission_plus_actual_three_repetitions",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ],
+        "valid": true,
+        "warmups_per_process": 100
+      },
+      "observation_mode": "paired_remaining4",
+      "part2_input_count": 1,
+      "performance_source_sha256": "386bbac3653cfba80cee4fac91c9451c998a994a155b65c249943006085cceef",
+      "quality_binding": {
+        "annotations_sha256": "fc8121b9115bcd3dcd336fa7fd109f1effa553516d64d17950359cc2f539f9a2",
+        "artifacts": {
+          "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+          "part1_sha256": "2aa321e7c3dd6755d8bc1c0ee50aa10ad41dcfba893cec1dad3c33730ced07df",
+          "part2_engine_sha256": "5b1eac3b810466968f511e50815f45561c9a6402dfbc61b800699321c79fc2b1",
+          "source_part2_onnx_sha256": "edd8485dfecd521ce0d20aefc358986ffba5e7cf5f4a52433d5fa99a9104f7b8"
+        },
+        "candidate_predictions_sha256": "dc47bae4d4f186d6e4ceef36c69470ef156c24b4e99ad26dd8433bee41e5ed88",
+        "dataset_reference_evaluator_bound": true,
+        "evaluation_fingerprint": "c2bfa9911d0c386f98a213e403d0c9db6244d337fe70b1c547663101bc36992c",
+        "evaluator_algorithm": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+        "evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "ledger_row_sha256": "c4623d21dd4912573439c089cdef043926cc503e26c1ca8a2db4e9b8f88b1224",
+        "model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+        "normal_admission": false,
+        "normal_exclusion_reasons": [
+          "native_output_endpoint_match"
+        ],
+        "product_identity_verified": true,
+        "proof_type": "normal_product_pair_admission_with_actual_artifact_quality_evidence",
+        "quality_evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "quality_reference_value": 0.40087514853384254,
+        "quality_result_row_sha256": "13b64e772b521cc6211f34cc083c2da6904b6a1406d9b4cdbc8b6871e591aa8c",
+        "quality_value": 0.39027525687132514,
+        "reference": 0.40087514853384254,
+        "reference_predictions_sha256": "1a3aa3975dfb4a92c324d9dca3368e8c6eb74417475f60864dfe3f042cebdd1e",
+        "reference_runtime": "cpu_onnx",
+        "relative_loss": 0.026441877729974927,
+        "runtime_artifacts_and_inputs_bound": true,
+        "value": 0.39027525687132514,
+        "verified": false
+      },
+      "quality_eligible": false,
+      "quality_reference_value": 0.40087514853384254,
+      "quality_relative_loss": 0.026441877729974927,
+      "quality_status": "unavailable_normal_runtime_endpoint_binding",
+      "quality_value": 0.39027525687132514,
+      "rq3_fixed420_member": false,
+      "selection_status": "latest_completed_identity_and_complete_task_compatible",
+      "setup": "H10",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_sha256": {
+        "actual_quality": {
+          "canonical_row_sha256": "13b64e772b521cc6211f34cc083c2da6904b6a1406d9b4cdbc8b6871e591aa8c",
+          "sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84"
+        },
+        "normal_admission": {
+          "canonical_row_sha256": "c4623d21dd4912573439c089cdef043926cc503e26c1ca8a2db4e9b8f88b1224",
+          "sha256": "b2660e4ed0bd66442d0c13718cf8981b4af8f30e3620865d934fdc05856a20be"
+        },
+        "selected_generic_result": {
+          "sha256": "386bbac3653cfba80cee4fac91c9451c998a994a155b65c249943006085cceef"
+        }
+      },
+      "task": "detection"
+    },
+    {
+      "admission_mode": "rq2_original_native_scope_recovered_existing_generic",
+      "artifacts": {
+        "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+        "part1_sha256": "c89b8dc100dc1ccf88b704829de8bcc8c403d045344d0f8370da3942e7c8b10d",
+        "part2_engine_sha256": "c1feb55674bfe41edbf62f029d56c76089d8d41e47dea8a556332c197a827af6",
+        "source_part2_onnx_sha256": "edd8485dfecd521ce0d20aefc358986ffba5e7cf5f4a52433d5fa99a9104f7b8"
+      },
+      "boundary_count": 1,
+      "boundary_id": "sha256:4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a:topo:a393be7a94221816b908bac25f33a2d9e2d2123de0cb443b5d47f7a9450ff74b:b000038",
+      "case_id": "b038",
+      "completed_at": "2026-10-08T17:26:01.104491+00:00",
+      "effective_generic_fps": "133.96130904876756",
+      "effective_repeats": [
+        "133.2422666499557",
+        "133.96130904876756",
+        "135.02649012065424"
+      ],
+      "execution_precision": "uint8_dequant_fp16",
+      "full_product_identity": {
+        "case_id": "b038",
+        "comparison_backend": "hailo8",
+        "direction": "hailo8_to_trt",
+        "model_id": "yolo26s",
+        "output_endpoint_id": "detection:decoded_nms:ef37b2fa7934ea23c08bc692b0e81531d09dcccb98efeb6d1e0636a28c4089fc",
+        "precision": "uint8_dequant_fp16",
+        "setup_id": "orin_nx_hailo8_01"
+      },
+      "generic_uid": "generic|yolo26s|H8|hailo8_to_trt|b038",
+      "measurement_status": "complete_reused_existing_valid_generic",
+      "model": "yolo26s",
+      "model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+      "native_quality_reference_value": 0.40087514853384254,
+      "native_quality_relative_loss": 0.023109262019383278,
+      "native_quality_value": 0.3916112196893148,
+      "observation_contract": {
+        "complete_task_contract_sha256": "bc3dd72b97e677c06f81a649a342a022ac7b8c058aee3b08d1081692e063200e",
+        "complete_task_verified": true,
+        "completed_tasks_per_process": 1000,
+        "contract_evidence_sha256": "f498a4ead84869a1531734b8a83d6de6917a7447544dae3efca0c6a26f0a7f30",
+        "full_postprocessing": true,
+        "historical_reuse": true,
+        "identity_verified": true,
+        "independent_processes": 3,
+        "ledger_row_sha256": "17e8d20dc36f7224aa474be34877c628b610d1a61763e6a463e1c8d3bfe05efb",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "normal_admission_authority_sha256": "244863d0726d8a0630d2e4bc701062048d2e260920cb85493e42e018f47b1a28",
+        "normal_technical_admission": true,
+        "proof_type": "normal_product_pair_admission_plus_actual_three_repetitions",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ],
+        "valid": true,
+        "warmups_per_process": 100
+      },
+      "observation_mode": "historical",
+      "part2_input_count": 1,
+      "performance_source_sha256": "f498a4ead84869a1531734b8a83d6de6917a7447544dae3efca0c6a26f0a7f30",
+      "quality_binding": {
+        "annotations_sha256": "fc8121b9115bcd3dcd336fa7fd109f1effa553516d64d17950359cc2f539f9a2",
+        "artifacts": {
+          "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+          "part1_sha256": "c89b8dc100dc1ccf88b704829de8bcc8c403d045344d0f8370da3942e7c8b10d",
+          "part2_engine_sha256": "c1feb55674bfe41edbf62f029d56c76089d8d41e47dea8a556332c197a827af6",
+          "source_part2_onnx_sha256": "edd8485dfecd521ce0d20aefc358986ffba5e7cf5f4a52433d5fa99a9104f7b8"
+        },
+        "candidate_predictions_sha256": "2013de247b4e587e6c229f4e9c9bd2f6ee52debbc83e20172dd0648084ab8530",
+        "dataset_reference_evaluator_bound": true,
+        "evaluation_fingerprint": "7c4cf460d5528662ff7d6a82c3381a6e0bd5f1db040f5bb02b26d6094b4454b1",
+        "evaluator_algorithm": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+        "evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "ledger_row_sha256": "17e8d20dc36f7224aa474be34877c628b610d1a61763e6a463e1c8d3bfe05efb",
+        "model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+        "normal_admission": true,
+        "normal_exclusion_reasons": [],
+        "product_identity_verified": true,
+        "proof_type": "normal_product_pair_admission_with_actual_artifact_quality_evidence",
+        "quality_evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "quality_reference_value": 0.40087514853384254,
+        "quality_result_row_sha256": "6da83a047da2d66f08430175238060d595c654964aa90357c18845e14102c6c3",
+        "quality_value": 0.3916112196893148,
+        "reference": 0.40087514853384254,
+        "reference_predictions_sha256": "1a3aa3975dfb4a92c324d9dca3368e8c6eb74417475f60864dfe3f042cebdd1e",
+        "reference_runtime": "cpu_onnx",
+        "relative_loss": 0.023109262019383278,
+        "runtime_artifacts_and_inputs_bound": true,
+        "value": 0.3916112196893148,
+        "verified": true
+      },
+      "quality_eligible": true,
+      "quality_reference_value": 0.40087514853384254,
+      "quality_relative_loss": 0.023109262019383278,
+      "quality_status": "reference_close",
+      "quality_value": 0.3916112196893148,
+      "rq3_fixed420_member": false,
+      "selection_status": "latest_completed_identity_and_complete_task_compatible",
+      "setup": "H8",
+      "setup_id": "orin_nx_hailo8_01",
+      "source_sha256": {
+        "actual_quality": {
+          "canonical_row_sha256": "6da83a047da2d66f08430175238060d595c654964aa90357c18845e14102c6c3",
+          "sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84"
+        },
+        "normal_admission": {
+          "canonical_row_sha256": "17e8d20dc36f7224aa474be34877c628b610d1a61763e6a463e1c8d3bfe05efb",
+          "sha256": "244863d0726d8a0630d2e4bc701062048d2e260920cb85493e42e018f47b1a28"
+        },
+        "selected_generic_result": {
+          "sha256": "f498a4ead84869a1531734b8a83d6de6917a7447544dae3efca0c6a26f0a7f30"
+        }
+      },
+      "task": "detection"
+    },
+    {
+      "admission_mode": "rq2_original_native_scope_recovered_existing_generic",
+      "artifacts": {
+        "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+        "part1_sha256": "f9b45eaba1487b9a5774b85bee8aa8650801ee65a45fbe4a753ca1494e5aded3",
+        "part2_engine_sha256": "3a5e5db722b0ad6f9fe7234bd514ffa46641c0c0931bb58cc5fec04e7b5d8a96",
+        "source_part2_onnx_sha256": "bc2608913bb25062d5591d054bb16eae39987656c24d7d7bd63b7580f0162b1d"
+      },
+      "boundary_count": 1,
+      "boundary_id": "sha256:7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d:topo:4edacaf7f82a71887260f33c05018ac82a149cfcfd8c33db03f12ffe42ea076d:b000044",
+      "case_id": "b044",
+      "completed_at": "2026-10-21T21:29:58.991278+00:00",
+      "effective_generic_fps": "55.20400828818517",
+      "effective_repeats": [
+        "55.20400828818517",
+        "55.441338700726206",
+        "54.9316377536954"
+      ],
+      "execution_precision": "float32_layout_fp16",
+      "full_product_identity": {
+        "case_id": "b044",
+        "comparison_backend": "deepx",
+        "direction": "deepx_to_trt",
+        "model_id": "yolov7_paper",
+        "output_endpoint_id": "detection:raw_head:2e579f896f7b7505560b2606b42b3d8ae4d8a7a8d4c9f26fc525e25b3912ce04",
+        "precision": "float32_layout_fp16",
+        "setup_id": "orin_nx_deepx_m1_01"
+      },
+      "generic_uid": "generic|yolov7_paper|DeepX|deepx_to_trt|b044",
+      "measurement_status": "complete_reused_existing_valid_generic",
+      "model": "yolov7_paper",
+      "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+      "native_quality_reference_value": 0.460346586685622,
+      "native_quality_relative_loss": 0.0014127162518591978,
+      "native_quality_value": 0.4596962475811233,
+      "observation_contract": {
+        "complete_task_contract_sha256": "2c26c1471f15885ee47a7cba6be4eb31811c57028d4ecd11e35711c7ffb81218",
+        "complete_task_verified": true,
+        "completed_tasks_per_process": 1000,
+        "contract_evidence_sha256": "daf0132de5a21b5d7d62d727bc6c8b8a25a1952c3eb93fefba14466b0d02e7ac",
+        "full_postprocessing": true,
+        "historical_reuse": false,
+        "identity_verified": true,
+        "independent_processes": 3,
+        "ledger_row_sha256": "a7a0ef052d824fbe27f755fc05ef87b0dd8c1ccd466e89ff097a0ffc9db9711e",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "normal_admission_authority_sha256": "eb510636035928019e5629e32d5c948beac04dac31645336ec9e54710304fc63",
+        "normal_technical_admission": true,
+        "proof_type": "normal_product_pair_admission_plus_actual_three_repetitions",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ],
+        "valid": true,
+        "warmups_per_process": 100
+      },
+      "observation_mode": "paired_remaining4",
+      "part2_input_count": 1,
+      "performance_source_sha256": "daf0132de5a21b5d7d62d727bc6c8b8a25a1952c3eb93fefba14466b0d02e7ac",
+      "quality_binding": {
+        "actual_candidate_prediction_fingerprint": "12c52de589817ac984aa008af46d83504186edef96a031487ba5f15940c6a96c",
+        "annotations_sha256": "fc8121b9115bcd3dcd336fa7fd109f1effa553516d64d17950359cc2f539f9a2",
+        "artifacts": {
+          "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+          "part1_sha256": "f9b45eaba1487b9a5774b85bee8aa8650801ee65a45fbe4a753ca1494e5aded3",
+          "part2_engine_sha256": "3a5e5db722b0ad6f9fe7234bd514ffa46641c0c0931bb58cc5fec04e7b5d8a96",
+          "source_part2_onnx_sha256": "bc2608913bb25062d5591d054bb16eae39987656c24d7d7bd63b7580f0162b1d"
+        },
+        "candidate_predictions_sha256": "12c52de589817ac984aa008af46d83504186edef96a031487ba5f15940c6a96c",
+        "dataset_reference_evaluator_bound": true,
+        "direct_generic_quality_predictions_sha256": "396e72274044d6fc1d7bae23f5d28f005d376afdbe0afb2fb37f3b283c32f44a",
+        "direct_generic_quality_request_sha256": "5b57d6dd8958a696e0a37823603247d02cbb5f78753585483a3af46e7dc5e051",
+        "evaluation_fingerprint": "ea886a4dabc31ac977904324fdf5ace2754dc56e8425a9df8428b2f3e8ae89f0",
+        "evaluator_algorithm": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+        "evidence_sha256": "a7f7241dff42591dcd47900d6b5f395b93ea3f43e16a9047c6f00183d17d2f8b",
+        "historical_native_transfer_row_sha256": "a7a0ef052d824fbe27f755fc05ef87b0dd8c1ccd466e89ff097a0ffc9db9711e",
+        "ledger_row_sha256": "b224fd9538c62d79eaaa211d3a587c15dac9cff9e99e947178b19245a595763a",
+        "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+        "native_quality_transfer_exclusion_reasons": [
+          "native_output_endpoint_match"
+        ],
+        "normal_admission": true,
+        "normal_exclusion_reasons": [],
+        "normal_native_quality_transfer_admission": false,
+        "product_identity_verified": true,
+        "proof_type": "normal_generic_quality_source_with_exact_runtime_equivalence",
+        "quality_evidence_sha256": "a7f7241dff42591dcd47900d6b5f395b93ea3f43e16a9047c6f00183d17d2f8b",
+        "quality_reference_value": 0.460346586685622,
+        "quality_result_row_sha256": "b224fd9538c62d79eaaa211d3a587c15dac9cff9e99e947178b19245a595763a",
+        "quality_value": 0.4596962475811233,
+        "reference": 0.460346586685622,
+        "reference_predictions_sha256": "98bd15baab2635ad4a32f1bf3a2cd274b9733a1832f5d42c1f1b041b79236725",
+        "reference_runtime": "cpu_onnx",
+        "relative_loss": 0.0014127162518591978,
+        "runtime_artifacts_and_inputs_bound": true,
+        "runtime_equivalence_proof_sha256": "02ef3926c2585eff13eaf1a107d4354f38885196909bd3d93d8977758ec23d09",
+        "source_admission": "independent actual Generic N5000 bound to latest measured runtime; preserved corrected source, no favorable-outcome selection",
+        "value": 0.4596962475811233,
+        "verified": true
+      },
+      "quality_eligible": true,
+      "quality_reference_value": 0.460346586685622,
+      "quality_relative_loss": 0.0014127162518591978,
+      "quality_status": "reference_close",
+      "quality_value": 0.4596962475811233,
+      "rq3_fixed420_member": false,
+      "selection_status": "latest_completed_identity_and_complete_task_compatible",
+      "setup": "DeepX",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_sha256": {
+        "actual_quality": {
+          "canonical_row_sha256": "b224fd9538c62d79eaaa211d3a587c15dac9cff9e99e947178b19245a595763a",
+          "sha256": "a7f7241dff42591dcd47900d6b5f395b93ea3f43e16a9047c6f00183d17d2f8b"
+        },
+        "independent_generic_quality_runtime_equivalence": {
+          "sha256": "02ef3926c2585eff13eaf1a107d4354f38885196909bd3d93d8977758ec23d09"
+        },
+        "normal_admission": {
+          "canonical_row_sha256": "a7a0ef052d824fbe27f755fc05ef87b0dd8c1ccd466e89ff097a0ffc9db9711e",
+          "sha256": "eb510636035928019e5629e32d5c948beac04dac31645336ec9e54710304fc63"
+        },
+        "selected_generic_result": {
+          "sha256": "daf0132de5a21b5d7d62d727bc6c8b8a25a1952c3eb93fefba14466b0d02e7ac"
+        }
+      },
+      "task": "detection"
+    },
+    {
+      "admission_mode": "rq2_original_native_scope_recovered_existing_generic",
+      "artifacts": {
+        "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+        "part1_sha256": "3d6e5149a9c0cb5234c30c64572596a20a059b5ab5ab336b35a3b18fba82334f",
+        "part2_engine_sha256": "fa05c597d30853a5f63dd2ee64929197e278d4bddeef4876254d72ec7400f2b7",
+        "source_part2_onnx_sha256": "f068ef8f1927c0e2426b84e462f3d9f5a2481f8f2a35aef92c7ba64f85e8ad38"
+      },
+      "boundary_count": 1,
+      "boundary_id": "sha256:7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d:topo:4edacaf7f82a71887260f33c05018ac82a149cfcfd8c33db03f12ffe42ea076d:b000066",
+      "case_id": "b066",
+      "completed_at": "2026-10-21T21:32:00.849715+00:00",
+      "effective_generic_fps": "55.01226656560828",
+      "effective_repeats": [
+        "54.97264998601449",
+        "55.66009460121927",
+        "55.01226656560828"
+      ],
+      "execution_precision": "float32_layout_fp16",
+      "full_product_identity": {
+        "case_id": "b066",
+        "comparison_backend": "deepx",
+        "direction": "deepx_to_trt",
+        "model_id": "yolov7_paper",
+        "output_endpoint_id": "detection:raw_head:2e579f896f7b7505560b2606b42b3d8ae4d8a7a8d4c9f26fc525e25b3912ce04",
+        "precision": "float32_layout_fp16",
+        "setup_id": "orin_nx_deepx_m1_01"
+      },
+      "generic_uid": "generic|yolov7_paper|DeepX|deepx_to_trt|b066",
+      "measurement_status": "complete_reused_existing_valid_generic",
+      "model": "yolov7_paper",
+      "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+      "native_quality_reference_value": 0.460346586685622,
+      "native_quality_relative_loss": 0.0008921256883502546,
+      "native_quality_value": 0.4599358996700954,
+      "observation_contract": {
+        "complete_task_contract_sha256": "2c26c1471f15885ee47a7cba6be4eb31811c57028d4ecd11e35711c7ffb81218",
+        "complete_task_verified": true,
+        "completed_tasks_per_process": 1000,
+        "contract_evidence_sha256": "6394136d889f06879a092e562f4c291c29ae6b297a09bfe4a9534caa24eab278",
+        "full_postprocessing": true,
+        "historical_reuse": false,
+        "identity_verified": true,
+        "independent_processes": 3,
+        "ledger_row_sha256": "ae89d7ccdf385132425b3c274c63a127ce714b436319b56b29cd0863f1ebfe07",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "normal_admission_authority_sha256": "eb510636035928019e5629e32d5c948beac04dac31645336ec9e54710304fc63",
+        "normal_technical_admission": true,
+        "proof_type": "normal_product_pair_admission_plus_actual_three_repetitions",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ],
+        "valid": true,
+        "warmups_per_process": 100
+      },
+      "observation_mode": "paired_remaining4",
+      "part2_input_count": 1,
+      "performance_source_sha256": "6394136d889f06879a092e562f4c291c29ae6b297a09bfe4a9534caa24eab278",
+      "quality_binding": {
+        "annotations_sha256": "fc8121b9115bcd3dcd336fa7fd109f1effa553516d64d17950359cc2f539f9a2",
+        "artifacts": {
+          "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+          "part1_sha256": "3d6e5149a9c0cb5234c30c64572596a20a059b5ab5ab336b35a3b18fba82334f",
+          "part2_engine_sha256": "fa05c597d30853a5f63dd2ee64929197e278d4bddeef4876254d72ec7400f2b7",
+          "source_part2_onnx_sha256": "f068ef8f1927c0e2426b84e462f3d9f5a2481f8f2a35aef92c7ba64f85e8ad38"
+        },
+        "candidate_predictions_sha256": "88cf6848eb8be7df74ccd863f7daad00a6dd27bf94b7976575f759e6a957cc34",
+        "dataset_reference_evaluator_bound": true,
+        "evaluation_fingerprint": "c9074b2b09956b59bc4d5689d998f213354f7a5cd531917427025065cd3145ca",
+        "evaluator_algorithm": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+        "evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "ledger_row_sha256": "ae89d7ccdf385132425b3c274c63a127ce714b436319b56b29cd0863f1ebfe07",
+        "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+        "normal_admission": true,
+        "normal_exclusion_reasons": [],
+        "product_identity_verified": true,
+        "proof_type": "normal_product_pair_admission_with_actual_artifact_quality_evidence",
+        "quality_evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "quality_reference_value": 0.460346586685622,
+        "quality_result_row_sha256": "a39924f312a9a5bfdbe27f50052356d3f0d5ee93a87dfedfb47d209131340030",
+        "quality_value": 0.4599358996700954,
+        "reference": 0.460346586685622,
+        "reference_predictions_sha256": "98bd15baab2635ad4a32f1bf3a2cd274b9733a1832f5d42c1f1b041b79236725",
+        "reference_runtime": "cpu_onnx",
+        "relative_loss": 0.0008921256883502546,
+        "runtime_artifacts_and_inputs_bound": true,
+        "value": 0.4599358996700954,
+        "verified": true
+      },
+      "quality_eligible": true,
+      "quality_reference_value": 0.460346586685622,
+      "quality_relative_loss": 0.0008921256883502546,
+      "quality_status": "reference_close",
+      "quality_value": 0.4599358996700954,
+      "rq3_fixed420_member": false,
+      "selection_status": "latest_completed_identity_and_complete_task_compatible",
+      "setup": "DeepX",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_sha256": {
+        "actual_quality": {
+          "canonical_row_sha256": "a39924f312a9a5bfdbe27f50052356d3f0d5ee93a87dfedfb47d209131340030",
+          "sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84"
+        },
+        "normal_admission": {
+          "canonical_row_sha256": "ae89d7ccdf385132425b3c274c63a127ce714b436319b56b29cd0863f1ebfe07",
+          "sha256": "eb510636035928019e5629e32d5c948beac04dac31645336ec9e54710304fc63"
+        },
+        "selected_generic_result": {
+          "sha256": "6394136d889f06879a092e562f4c291c29ae6b297a09bfe4a9534caa24eab278"
+        }
+      },
+      "task": "detection"
+    },
+    {
+      "admission_mode": "rq2_original_native_scope_recovered_existing_generic",
+      "artifacts": {
+        "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+        "part1_sha256": "8f96254e681b5d42d6454b5df52ec6c141f56462b9ec6bcc45cc0a4c0ba7a841",
+        "part2_engine_sha256": "ae4c3c2f611e743f47cd371f7c63f71db08ce2f918ac32a3106a1a5b32187482",
+        "source_part2_onnx_sha256": "bc2608913bb25062d5591d054bb16eae39987656c24d7d7bd63b7580f0162b1d"
+      },
+      "boundary_count": 1,
+      "boundary_id": "sha256:7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d:topo:4edacaf7f82a71887260f33c05018ac82a149cfcfd8c33db03f12ffe42ea076d:b000044",
+      "case_id": "b044",
+      "completed_at": "2026-10-21T14:30:33.806732+00:00",
+      "effective_generic_fps": "59.146254593471205",
+      "effective_repeats": [
+        "58.836617018471365",
+        "59.146254593471205",
+        "59.21385081160684"
+      ],
+      "execution_precision": "uint8_dequant_fp16",
+      "full_product_identity": {
+        "case_id": "b044",
+        "comparison_backend": "hailo10h",
+        "direction": "hailo10h_to_trt",
+        "model_id": "yolov7_paper",
+        "output_endpoint_id": "detection:raw_head:2e579f896f7b7505560b2606b42b3d8ae4d8a7a8d4c9f26fc525e25b3912ce04",
+        "precision": "uint8_dequant_fp16",
+        "setup_id": "orin_nx_hailo10_01"
+      },
+      "generic_uid": "generic|yolov7_paper|H10|hailo10h_to_trt|b044",
+      "measurement_status": "complete_reused_existing_valid_generic",
+      "model": "yolov7_paper",
+      "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+      "native_quality_reference_value": 0.460346586685622,
+      "native_quality_relative_loss": 0.005600366959137754,
+      "native_quality_value": 0.457768476871796,
+      "observation_contract": {
+        "complete_task_contract_sha256": "a3806858b67f1321ecf36f0ee6d75657a3d6b2404f7a7c2f0064bc712697664f",
+        "complete_task_verified": true,
+        "completed_tasks_per_process": 1000,
+        "contract_evidence_sha256": "c1dc7dbc1d144512f9c5e763c58904b3c0852d0f73463c6f60897386e1b40bda",
+        "full_postprocessing": true,
+        "historical_reuse": false,
+        "identity_verified": true,
+        "independent_processes": 3,
+        "ledger_row_sha256": "add3f9e23290ad5d3f395a9e76d16af8f6ded108c54e3aae55aed44fd9038a93",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "normal_admission_authority_sha256": "34509625f0bb04355bf827a620724cef6ecbbaf5070c1491de4d0e0f52a6ea57",
+        "normal_technical_admission": true,
+        "proof_type": "normal_product_pair_admission_plus_actual_three_repetitions",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ],
+        "valid": true,
+        "warmups_per_process": 100
+      },
+      "observation_mode": "main_remeasurement",
+      "part2_input_count": 1,
+      "performance_source_sha256": "c1dc7dbc1d144512f9c5e763c58904b3c0852d0f73463c6f60897386e1b40bda",
+      "quality_binding": {
+        "annotations_sha256": "fc8121b9115bcd3dcd336fa7fd109f1effa553516d64d17950359cc2f539f9a2",
+        "artifacts": {
+          "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+          "part1_sha256": "8f96254e681b5d42d6454b5df52ec6c141f56462b9ec6bcc45cc0a4c0ba7a841",
+          "part2_engine_sha256": "ae4c3c2f611e743f47cd371f7c63f71db08ce2f918ac32a3106a1a5b32187482",
+          "source_part2_onnx_sha256": "bc2608913bb25062d5591d054bb16eae39987656c24d7d7bd63b7580f0162b1d"
+        },
+        "candidate_predictions_sha256": "4c79028b96834fe7f2579b022fcb550c26b3bff4e782110eaf33323bb5e36ed8",
+        "dataset_reference_evaluator_bound": true,
+        "evaluation_fingerprint": "9d3a9cee0752950505b3175d5b55675614955c6373b00afba0cffeb2299cc65e",
+        "evaluator_algorithm": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+        "evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "ledger_row_sha256": "add3f9e23290ad5d3f395a9e76d16af8f6ded108c54e3aae55aed44fd9038a93",
+        "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+        "normal_admission": true,
+        "normal_exclusion_reasons": [],
+        "product_identity_verified": true,
+        "proof_type": "normal_product_pair_admission_with_actual_artifact_quality_evidence",
+        "quality_evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "quality_reference_value": 0.460346586685622,
+        "quality_result_row_sha256": "c96caf1029344e0a649f550d586886d491ad424c78d25edc0364546c4a56d672",
+        "quality_value": 0.457768476871796,
+        "reference": 0.460346586685622,
+        "reference_predictions_sha256": "98bd15baab2635ad4a32f1bf3a2cd274b9733a1832f5d42c1f1b041b79236725",
+        "reference_runtime": "cpu_onnx",
+        "relative_loss": 0.005600366959137754,
+        "runtime_artifacts_and_inputs_bound": true,
+        "value": 0.457768476871796,
+        "verified": true
+      },
+      "quality_eligible": true,
+      "quality_reference_value": 0.460346586685622,
+      "quality_relative_loss": 0.005600366959137754,
+      "quality_status": "reference_close",
+      "quality_value": 0.457768476871796,
+      "rq3_fixed420_member": false,
+      "selection_status": "latest_completed_identity_and_complete_task_compatible",
+      "setup": "H10",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_sha256": {
+        "actual_quality": {
+          "canonical_row_sha256": "c96caf1029344e0a649f550d586886d491ad424c78d25edc0364546c4a56d672",
+          "sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84"
+        },
+        "normal_admission": {
+          "canonical_row_sha256": "add3f9e23290ad5d3f395a9e76d16af8f6ded108c54e3aae55aed44fd9038a93",
+          "sha256": "34509625f0bb04355bf827a620724cef6ecbbaf5070c1491de4d0e0f52a6ea57"
+        },
+        "selected_generic_result": {
+          "sha256": "c1dc7dbc1d144512f9c5e763c58904b3c0852d0f73463c6f60897386e1b40bda"
+        }
+      },
+      "task": "detection"
+    },
+    {
+      "admission_mode": "rq2_original_native_scope_recovered_existing_generic",
+      "artifacts": {
+        "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+        "part1_sha256": "516fb8f34149f94de4f30be2ab7b895429841491b9bb92e4f21ffbd695e9ef35",
+        "part2_engine_sha256": "ce8329110a338b750609f1bccd731945eb141d55f1c27fca4b40205647f37e2a",
+        "source_part2_onnx_sha256": "f068ef8f1927c0e2426b84e462f3d9f5a2481f8f2a35aef92c7ba64f85e8ad38"
+      },
+      "boundary_count": 1,
+      "boundary_id": "sha256:7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d:topo:4edacaf7f82a71887260f33c05018ac82a149cfcfd8c33db03f12ffe42ea076d:b000066",
+      "case_id": "b066",
+      "completed_at": "2026-10-21T14:32:34.924659+00:00",
+      "effective_generic_fps": "52.89338163819719",
+      "effective_repeats": [
+        "52.87707380645409",
+        "52.89338163819719",
+        "53.02050741925663"
+      ],
+      "execution_precision": "uint8_dequant_fp16",
+      "full_product_identity": {
+        "case_id": "b066",
+        "comparison_backend": "hailo10h",
+        "direction": "hailo10h_to_trt",
+        "model_id": "yolov7_paper",
+        "output_endpoint_id": "detection:raw_head:2e579f896f7b7505560b2606b42b3d8ae4d8a7a8d4c9f26fc525e25b3912ce04",
+        "precision": "uint8_dequant_fp16",
+        "setup_id": "orin_nx_hailo10_01"
+      },
+      "generic_uid": "generic|yolov7_paper|H10|hailo10h_to_trt|b066",
+      "measurement_status": "complete_reused_existing_valid_generic",
+      "model": "yolov7_paper",
+      "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+      "native_quality_reference_value": 0.460346586685622,
+      "native_quality_relative_loss": 0.006410576397310012,
+      "native_quality_value": 0.45739549972243293,
+      "observation_contract": {
+        "complete_task_contract_sha256": "a3806858b67f1321ecf36f0ee6d75657a3d6b2404f7a7c2f0064bc712697664f",
+        "complete_task_verified": true,
+        "completed_tasks_per_process": 1000,
+        "contract_evidence_sha256": "1794fa9ed0b7c78c5afb9778d621be07c5c3cd56077e6ac340ab4734f50913c7",
+        "full_postprocessing": true,
+        "historical_reuse": false,
+        "identity_verified": true,
+        "independent_processes": 3,
+        "ledger_row_sha256": "8f50b4adc9da55cd84306e68de4083a0386ea49af17b0050f256efa33070f272",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "normal_admission_authority_sha256": "34509625f0bb04355bf827a620724cef6ecbbaf5070c1491de4d0e0f52a6ea57",
+        "normal_technical_admission": true,
+        "proof_type": "normal_product_pair_admission_plus_actual_three_repetitions",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ],
+        "valid": true,
+        "warmups_per_process": 100
+      },
+      "observation_mode": "main_remeasurement",
+      "part2_input_count": 1,
+      "performance_source_sha256": "1794fa9ed0b7c78c5afb9778d621be07c5c3cd56077e6ac340ab4734f50913c7",
+      "quality_binding": {
+        "annotations_sha256": "fc8121b9115bcd3dcd336fa7fd109f1effa553516d64d17950359cc2f539f9a2",
+        "artifacts": {
+          "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+          "part1_sha256": "516fb8f34149f94de4f30be2ab7b895429841491b9bb92e4f21ffbd695e9ef35",
+          "part2_engine_sha256": "ce8329110a338b750609f1bccd731945eb141d55f1c27fca4b40205647f37e2a",
+          "source_part2_onnx_sha256": "f068ef8f1927c0e2426b84e462f3d9f5a2481f8f2a35aef92c7ba64f85e8ad38"
+        },
+        "candidate_predictions_sha256": "7dc6f5fc6813d86e89e7aa5e147b37eaaaaa390d649b36846547734f36e71dda",
+        "dataset_reference_evaluator_bound": true,
+        "evaluation_fingerprint": "46eb80f34ff74bf9c383ee268078f15c29b4d28241436c9d3537cc1dc0a29c56",
+        "evaluator_algorithm": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+        "evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "ledger_row_sha256": "8f50b4adc9da55cd84306e68de4083a0386ea49af17b0050f256efa33070f272",
+        "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+        "normal_admission": true,
+        "normal_exclusion_reasons": [],
+        "product_identity_verified": true,
+        "proof_type": "normal_product_pair_admission_with_actual_artifact_quality_evidence",
+        "quality_evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "quality_reference_value": 0.460346586685622,
+        "quality_result_row_sha256": "06980ce1486e2cf719a71ad1cd695cfbd8acf536c7ab8691199cba86a3d39303",
+        "quality_value": 0.45739549972243293,
+        "reference": 0.460346586685622,
+        "reference_predictions_sha256": "98bd15baab2635ad4a32f1bf3a2cd274b9733a1832f5d42c1f1b041b79236725",
+        "reference_runtime": "cpu_onnx",
+        "relative_loss": 0.006410576397310012,
+        "runtime_artifacts_and_inputs_bound": true,
+        "value": 0.45739549972243293,
+        "verified": true
+      },
+      "quality_eligible": true,
+      "quality_reference_value": 0.460346586685622,
+      "quality_relative_loss": 0.006410576397310012,
+      "quality_status": "reference_close",
+      "quality_value": 0.45739549972243293,
+      "rq3_fixed420_member": false,
+      "selection_status": "latest_completed_identity_and_complete_task_compatible",
+      "setup": "H10",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_sha256": {
+        "actual_quality": {
+          "canonical_row_sha256": "06980ce1486e2cf719a71ad1cd695cfbd8acf536c7ab8691199cba86a3d39303",
+          "sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84"
+        },
+        "normal_admission": {
+          "canonical_row_sha256": "8f50b4adc9da55cd84306e68de4083a0386ea49af17b0050f256efa33070f272",
+          "sha256": "34509625f0bb04355bf827a620724cef6ecbbaf5070c1491de4d0e0f52a6ea57"
+        },
+        "selected_generic_result": {
+          "sha256": "1794fa9ed0b7c78c5afb9778d621be07c5c3cd56077e6ac340ab4734f50913c7"
+        }
+      },
+      "task": "detection"
+    },
+    {
+      "admission_mode": "rq2_original_native_scope_recovered_existing_generic",
+      "artifacts": {
+        "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+        "part1_sha256": "536e1102e227b999be31f665b7566c4da76dc513e7e98957dd701fd274e2493a",
+        "part2_engine_sha256": "a90487fe3c7e7a076ce4e4818281a381073787d5f326105b966b91adb6b3643b",
+        "source_part2_onnx_sha256": "bc2608913bb25062d5591d054bb16eae39987656c24d7d7bd63b7580f0162b1d"
+      },
+      "boundary_count": 1,
+      "boundary_id": "sha256:7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d:topo:4edacaf7f82a71887260f33c05018ac82a149cfcfd8c33db03f12ffe42ea076d:b000044",
+      "case_id": "b044",
+      "completed_at": "2026-10-08T10:39:02.495045+00:00",
+      "effective_generic_fps": "45.468284910007526",
+      "effective_repeats": [
+        "45.58148748136221",
+        "45.3725735626809",
+        "45.468284910007526"
+      ],
+      "execution_precision": "uint8_dequant_fp16",
+      "full_product_identity": {
+        "case_id": "b044",
+        "comparison_backend": "hailo8",
+        "direction": "hailo8_to_trt",
+        "model_id": "yolov7_paper",
+        "output_endpoint_id": "detection:raw_head:2e579f896f7b7505560b2606b42b3d8ae4d8a7a8d4c9f26fc525e25b3912ce04",
+        "precision": "uint8_dequant_fp16",
+        "setup_id": "orin_nx_hailo8_01"
+      },
+      "generic_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b044",
+      "measurement_status": "complete_reused_existing_valid_generic",
+      "model": "yolov7_paper",
+      "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+      "native_quality_reference_value": 0.460346586685622,
+      "native_quality_relative_loss": 0.004746544427440272,
+      "native_quality_value": 0.4581615311598982,
+      "observation_contract": {
+        "complete_task_contract_sha256": "a3806858b67f1321ecf36f0ee6d75657a3d6b2404f7a7c2f0064bc712697664f",
+        "complete_task_verified": true,
+        "completed_tasks_per_process": 1000,
+        "contract_evidence_sha256": "c110eebb4aa6e019083ac2b320a89d7acc0ee953ef0f0330f0a9df5835140a3d",
+        "full_postprocessing": true,
+        "historical_reuse": true,
+        "identity_verified": true,
+        "independent_processes": 3,
+        "ledger_row_sha256": "ba101a19b1ffb8b5f898fccb594f1b4d3138aa60ed7df2a4b67b819e6aa0650d",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "normal_admission_authority_sha256": "244863d0726d8a0630d2e4bc701062048d2e260920cb85493e42e018f47b1a28",
+        "normal_technical_admission": true,
+        "proof_type": "normal_product_pair_admission_plus_actual_three_repetitions",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ],
+        "valid": true,
+        "warmups_per_process": 100
+      },
+      "observation_mode": "historical",
+      "part2_input_count": 1,
+      "performance_source_sha256": "c110eebb4aa6e019083ac2b320a89d7acc0ee953ef0f0330f0a9df5835140a3d",
+      "quality_binding": {
+        "annotations_sha256": "fc8121b9115bcd3dcd336fa7fd109f1effa553516d64d17950359cc2f539f9a2",
+        "artifacts": {
+          "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+          "part1_sha256": "536e1102e227b999be31f665b7566c4da76dc513e7e98957dd701fd274e2493a",
+          "part2_engine_sha256": "a90487fe3c7e7a076ce4e4818281a381073787d5f326105b966b91adb6b3643b",
+          "source_part2_onnx_sha256": "bc2608913bb25062d5591d054bb16eae39987656c24d7d7bd63b7580f0162b1d"
+        },
+        "candidate_predictions_sha256": "fa40f071bc8a00f458c3d2c09e49395ae5f72d01a5282e760787ee31670e2f3c",
+        "dataset_reference_evaluator_bound": true,
+        "evaluation_fingerprint": "aa7f15952a7b1321cf79df70575a198e8f978084cb2ff806bf66759f4c2d796e",
+        "evaluator_algorithm": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+        "evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "ledger_row_sha256": "ba101a19b1ffb8b5f898fccb594f1b4d3138aa60ed7df2a4b67b819e6aa0650d",
+        "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+        "normal_admission": true,
+        "normal_exclusion_reasons": [],
+        "product_identity_verified": true,
+        "proof_type": "normal_product_pair_admission_with_actual_artifact_quality_evidence",
+        "quality_evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "quality_reference_value": 0.460346586685622,
+        "quality_result_row_sha256": "332d07c9caa0a791323807bd292758ffe65b72997b84b38ddaa6481ccb41043b",
+        "quality_value": 0.4581615311598982,
+        "reference": 0.460346586685622,
+        "reference_predictions_sha256": "98bd15baab2635ad4a32f1bf3a2cd274b9733a1832f5d42c1f1b041b79236725",
+        "reference_runtime": "cpu_onnx",
+        "relative_loss": 0.004746544427440272,
+        "runtime_artifacts_and_inputs_bound": true,
+        "value": 0.4581615311598982,
+        "verified": true
+      },
+      "quality_eligible": true,
+      "quality_reference_value": 0.460346586685622,
+      "quality_relative_loss": 0.004746544427440272,
+      "quality_status": "reference_close",
+      "quality_value": 0.4581615311598982,
+      "rq3_fixed420_member": false,
+      "selection_status": "latest_completed_identity_and_complete_task_compatible",
+      "setup": "H8",
+      "setup_id": "orin_nx_hailo8_01",
+      "source_sha256": {
+        "actual_quality": {
+          "canonical_row_sha256": "332d07c9caa0a791323807bd292758ffe65b72997b84b38ddaa6481ccb41043b",
+          "sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84"
+        },
+        "normal_admission": {
+          "canonical_row_sha256": "ba101a19b1ffb8b5f898fccb594f1b4d3138aa60ed7df2a4b67b819e6aa0650d",
+          "sha256": "244863d0726d8a0630d2e4bc701062048d2e260920cb85493e42e018f47b1a28"
+        },
+        "selected_generic_result": {
+          "sha256": "c110eebb4aa6e019083ac2b320a89d7acc0ee953ef0f0330f0a9df5835140a3d"
+        }
+      },
+      "task": "detection"
+    },
+    {
+      "admission_mode": "rq2_original_native_scope_recovered_existing_generic",
+      "artifacts": {
+        "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+        "part1_sha256": "e733652e523cbc6b51d696fd9ef62913f809e07b1d9137ca1e1e5413591cd70f",
+        "part2_engine_sha256": "e93f81da79faf9374507460588f3dd4fd88a55a510b29da278903ebafd14603e",
+        "source_part2_onnx_sha256": "f068ef8f1927c0e2426b84e462f3d9f5a2481f8f2a35aef92c7ba64f85e8ad38"
+      },
+      "boundary_count": 1,
+      "boundary_id": "sha256:7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d:topo:4edacaf7f82a71887260f33c05018ac82a149cfcfd8c33db03f12ffe42ea076d:b000066",
+      "case_id": "b066",
+      "completed_at": "2026-10-08T10:44:28.130638+00:00",
+      "effective_generic_fps": "46.580410545228744",
+      "effective_repeats": [
+        "46.557209938257444",
+        "46.580410545228744",
+        "46.60674267646143"
+      ],
+      "execution_precision": "uint8_dequant_fp16",
+      "full_product_identity": {
+        "case_id": "b066",
+        "comparison_backend": "hailo8",
+        "direction": "hailo8_to_trt",
+        "model_id": "yolov7_paper",
+        "output_endpoint_id": "detection:raw_head:2e579f896f7b7505560b2606b42b3d8ae4d8a7a8d4c9f26fc525e25b3912ce04",
+        "precision": "uint8_dequant_fp16",
+        "setup_id": "orin_nx_hailo8_01"
+      },
+      "generic_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b066",
+      "measurement_status": "complete_reused_existing_valid_generic",
+      "model": "yolov7_paper",
+      "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+      "native_quality_reference_value": 0.460346586685622,
+      "native_quality_relative_loss": 0.006382519658315923,
+      "native_quality_value": 0.4574084155464624,
+      "observation_contract": {
+        "complete_task_contract_sha256": "a3806858b67f1321ecf36f0ee6d75657a3d6b2404f7a7c2f0064bc712697664f",
+        "complete_task_verified": true,
+        "completed_tasks_per_process": 1000,
+        "contract_evidence_sha256": "98700e317a7eda9e9de94d354861b22e28904a8c6d845480519f35a7e1e8306e",
+        "full_postprocessing": true,
+        "historical_reuse": true,
+        "identity_verified": true,
+        "independent_processes": 3,
+        "ledger_row_sha256": "133ba445cbc4ba08fcf122fba87392b0943f2fa44eecc6cd66b9d94660f8974d",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "normal_admission_authority_sha256": "244863d0726d8a0630d2e4bc701062048d2e260920cb85493e42e018f47b1a28",
+        "normal_technical_admission": true,
+        "proof_type": "normal_product_pair_admission_plus_actual_three_repetitions",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ],
+        "valid": true,
+        "warmups_per_process": 100
+      },
+      "observation_mode": "historical",
+      "part2_input_count": 1,
+      "performance_source_sha256": "98700e317a7eda9e9de94d354861b22e28904a8c6d845480519f35a7e1e8306e",
+      "quality_binding": {
+        "annotations_sha256": "fc8121b9115bcd3dcd336fa7fd109f1effa553516d64d17950359cc2f539f9a2",
+        "artifacts": {
+          "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+          "part1_sha256": "e733652e523cbc6b51d696fd9ef62913f809e07b1d9137ca1e1e5413591cd70f",
+          "part2_engine_sha256": "e93f81da79faf9374507460588f3dd4fd88a55a510b29da278903ebafd14603e",
+          "source_part2_onnx_sha256": "f068ef8f1927c0e2426b84e462f3d9f5a2481f8f2a35aef92c7ba64f85e8ad38"
+        },
+        "candidate_predictions_sha256": "36b874ce04e57e930ec3dfa6657f2d8d5675585013cd4026a024071e811e932c",
+        "dataset_reference_evaluator_bound": true,
+        "evaluation_fingerprint": "b06cb991268ad7fda89eb361a3ef19707be419822a7b289d98d182aa9e12b271",
+        "evaluator_algorithm": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+        "evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "ledger_row_sha256": "133ba445cbc4ba08fcf122fba87392b0943f2fa44eecc6cd66b9d94660f8974d",
+        "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+        "normal_admission": true,
+        "normal_exclusion_reasons": [],
+        "product_identity_verified": true,
+        "proof_type": "normal_product_pair_admission_with_actual_artifact_quality_evidence",
+        "quality_evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+        "quality_reference_value": 0.460346586685622,
+        "quality_result_row_sha256": "0af0c7c32aa6b59e42e78ac7baf31cabc694760e9f3222f6d1fb37fb6b0d9221",
+        "quality_value": 0.4574084155464624,
+        "reference": 0.460346586685622,
+        "reference_predictions_sha256": "98bd15baab2635ad4a32f1bf3a2cd274b9733a1832f5d42c1f1b041b79236725",
+        "reference_runtime": "cpu_onnx",
+        "relative_loss": 0.006382519658315923,
+        "runtime_artifacts_and_inputs_bound": true,
+        "value": 0.4574084155464624,
+        "verified": true
+      },
+      "quality_eligible": true,
+      "quality_reference_value": 0.460346586685622,
+      "quality_relative_loss": 0.006382519658315923,
+      "quality_status": "reference_close",
+      "quality_value": 0.4574084155464624,
+      "rq3_fixed420_member": false,
+      "selection_status": "latest_completed_identity_and_complete_task_compatible",
+      "setup": "H8",
+      "setup_id": "orin_nx_hailo8_01",
+      "source_sha256": {
+        "actual_quality": {
+          "canonical_row_sha256": "0af0c7c32aa6b59e42e78ac7baf31cabc694760e9f3222f6d1fb37fb6b0d9221",
+          "sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84"
+        },
+        "normal_admission": {
+          "canonical_row_sha256": "133ba445cbc4ba08fcf122fba87392b0943f2fa44eecc6cd66b9d94660f8974d",
+          "sha256": "244863d0726d8a0630d2e4bc701062048d2e260920cb85493e42e018f47b1a28"
+        },
+        "selected_generic_result": {
+          "sha256": "98700e317a7eda9e9de94d354861b22e28904a8c6d845480519f35a7e1e8306e"
+        }
+      },
+      "task": "detection"
+    }
+  ],
+  "schema": "rq2-extra-original-detector-generic-observations-v1"
+}

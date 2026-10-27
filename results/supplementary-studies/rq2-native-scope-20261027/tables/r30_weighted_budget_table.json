@@ -1,0 +1,60 @@
+{
+  "caption": "Native throughput loss on 186 quality-admitted original Native cuts in 21 model/device groups; 0 groups have fewer than two cuts. Latest actually completed compatible Generic observation, selected before quality. Equal weight per nonempty group; also report the mean restricted to n>=2. Original graph weights and normalization universes are frozen. RQ3 fixed420 membership is only an annotation; missing evidence remains unavailable.",
+  "rows": [
+    {
+      "groups": 21,
+      "label": "Bytes",
+      "loss_k1_n_ge_2_pct": 17.226542799168698,
+      "loss_k1_pct": 17.226542799168698,
+      "loss_k3_n_ge_2_pct": 9.320355445001738,
+      "loss_k3_pct": 9.320355445001738,
+      "loss_k5_n_ge_2_pct": 3.798185625435318,
+      "loss_k5_pct": 3.798185625435318,
+      "method": "bytes"
+    },
+    {
+      "groups": 21,
+      "label": "Generic",
+      "loss_k1_n_ge_2_pct": 1.3467521152436048,
+      "loss_k1_pct": 1.3467521152436048,
+      "loss_k3_n_ge_2_pct": 0.2607774355235832,
+      "loss_k3_pct": 0.2607774355235832,
+      "loss_k5_n_ge_2_pct": 0.0,
+      "loss_k5_pct": 0.0,
+      "method": "generic"
+    },
+    {
+      "groups": 21,
+      "label": "Weighted (default)",
+      "loss_k1_n_ge_2_pct": 15.73266038918571,
+      "loss_k1_pct": 15.73266038918571,
+      "loss_k3_n_ge_2_pct": 10.014221592283993,
+      "loss_k3_pct": 10.014221592283993,
+      "loss_k5_n_ge_2_pct": 7.3671314867793285,
+      "loss_k5_pct": 7.3671314867793285,
+      "method": "weighted_default"
+    },
+    {
+      "groups": 21,
+      "label": "Weighted (frozen shared)",
+      "loss_k1_n_ge_2_pct": 16.67089996782241,
+      "loss_k1_pct": 16.67089996782241,
+      "loss_k3_n_ge_2_pct": 5.084223371258263,
+      "loss_k3_pct": 5.084223371258263,
+      "loss_k5_n_ge_2_pct": 2.956797629292007,
+      "loss_k5_pct": 2.956797629292007,
+      "method": "weighted_pooled"
+    },
+    {
+      "groups": 21,
+      "label": "Weighted (frozen model held-out)",
+      "loss_k1_n_ge_2_pct": 18.767915133798745,
+      "loss_k1_pct": 18.767915133798745,
+      "loss_k3_n_ge_2_pct": 11.341651572896938,
+      "loss_k3_pct": 11.341651572896938,
+      "loss_k5_n_ge_2_pct": 4.899698159042557,
+      "loss_k5_pct": 4.899698159042557,
+      "method": "weighted_cv"
+    }
+  ]
+}

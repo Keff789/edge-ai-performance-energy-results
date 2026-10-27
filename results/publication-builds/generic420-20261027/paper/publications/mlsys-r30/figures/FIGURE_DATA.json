@@ -1,10 +1,15 @@
 {
   "current_generic_selection_loss": {
-    "caption": "Final Generic-to-Native selection on 192 verified paired cuts in 21 model/device groups. No quality filter. Every group receives equal weight; stable UID ties use unrounded FPS. Missing paired groups are unavailable. Original timed endpoints remain distinct.",
+    "caption": "Generic-to-Native selection on 203 verified paired cuts in 21 model/device groups; 0 groups have fewer than two cuts. No quality filter. Hollow markers denote one candidate, which provides no ranking test. Every nonempty group has equal weight. Original Native FPS and historical Native quality retain their separate observed contracts.",
     "exact_hits": 14,
     "groups": 21,
+    "marker_policy": {
+      "at_least_two_candidates": "filled backend marker",
+      "one_candidate": "hollow backend marker; no ranking test"
+    },
+    "mean_group_loss_n_ge_2_pct": 1.464100554146222,
     "mean_group_loss_pct": 1.464100554146222,
-    "paired_candidates": 192,
+    "paired_candidates": 203,
     "points": [
       {
         "best_native_fps": 1551.6267412219636,
@@ -16,9 +21,12 @@
         "model": "mobilenet_v3_large",
         "native_best": "b135",
         "native_best_uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 1551.6267412219636,
         "selected_native_uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135",
-        "setup": "DeepX"
+        "setup": "DeepX",
+        "singleton": false
       },
       {
         "best_native_fps": 1171.781085617744,
@@ -30,9 +38,12 @@
         "model": "mobilenet_v3_large",
         "native_best": "b078",
         "native_best_uid": "native|mobilenet_v3_large|H10|hailo10h_to_trt|b078",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 1142.9046825798443,
         "selected_native_uid": "native|mobilenet_v3_large|H10|hailo10h_to_trt|b074",
-        "setup": "H10"
+        "setup": "H10",
+        "singleton": false
       },
       {
         "best_native_fps": 993.083599,
@@ -44,9 +55,12 @@
         "model": "mobilenet_v3_large",
         "native_best": "b027",
         "native_best_uid": "native|mobilenet_v3_large|H8|hailo8_to_trt|b027",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 993.083599,
         "selected_native_uid": "native|mobilenet_v3_large|H8|hailo8_to_trt|b027",
-        "setup": "H8"
+        "setup": "H8",
+        "singleton": false
       },
       {
         "best_native_fps": 729.0349421337696,
@@ -58,9 +72,12 @@
         "model": "regnet_x_1_6gf",
         "native_best": "b109",
         "native_best_uid": "native|regnet_x_1_6gf|DeepX|deepx_to_trt|b109",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 705.8010411034752,
         "selected_native_uid": "native|regnet_x_1_6gf|DeepX|deepx_to_trt|b102",
-        "setup": "DeepX"
+        "setup": "DeepX",
+        "singleton": false
       },
       {
         "best_native_fps": 1367.1124837764846,
@@ -72,9 +89,12 @@
         "model": "regnet_x_1_6gf",
         "native_best": "b123",
         "native_best_uid": "native|regnet_x_1_6gf|H10|hailo10h_to_trt|b123",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 1174.6620757689764,
         "selected_native_uid": "native|regnet_x_1_6gf|H10|hailo10h_to_trt|b132",
-        "setup": "H10"
+        "setup": "H10",
+        "singleton": false
       },
       {
         "best_native_fps": 617.505899,
@@ -86,9 +106,12 @@
         "model": "regnet_x_1_6gf",
         "native_best": "b073",
         "native_best_uid": "native|regnet_x_1_6gf|H8|hailo8_to_trt|b073",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 583.689262,
         "selected_native_uid": "native|regnet_x_1_6gf|H8|hailo8_to_trt|b066",
-        "setup": "H8"
+        "setup": "H8",
+        "singleton": false
       },
       {
         "best_native_fps": 781.5417294013049,
@@ -100,9 +123,12 @@
         "model": "resnet50",
         "native_best": "b104",
         "native_best_uid": "native|resnet50|DeepX|deepx_to_trt|b104",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 776.7071698048061,
         "selected_native_uid": "native|resnet50|DeepX|deepx_to_trt|b081",
-        "setup": "DeepX"
+        "setup": "DeepX",
+        "singleton": false
       },
       {
         "best_native_fps": 1099.5381472990744,
@@ -114,9 +140,12 @@
         "model": "resnet50",
         "native_best": "b095",
         "native_best_uid": "native|resnet50|H10|hailo10h_to_trt|b095",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 1099.5381472990744,
         "selected_native_uid": "native|resnet50|H10|hailo10h_to_trt|b095",
-        "setup": "H10"
+        "setup": "H10",
+        "singleton": false
       },
       {
         "best_native_fps": 581.33212,
@@ -128,13 +157,16 @@
         "model": "resnet50",
         "native_best": "b038",
         "native_best_uid": "native|resnet50|H8|hailo8_to_trt|b038",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 553.944927,
         "selected_native_uid": "native|resnet50|H8|hailo8_to_trt|b002",
-        "setup": "H8"
+        "setup": "H8",
+        "singleton": false
       },
       {
         "best_native_fps": 49.75397642714195,
-        "candidate_count": 2,
+        "candidate_count": 3,
         "exact_hit": true,
         "generic_choice": "b062",
         "generic_choice_uid": "generic|yolo11l|DeepX|deepx_to_trt|b062",
@@ -142,37 +174,46 @@
         "model": "yolo11l",
         "native_best": "b062",
         "native_best_uid": "native|yolo11l|DeepX|deepx_to_trt|b062",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 49.75397642714195,
         "selected_native_uid": "native|yolo11l|DeepX|deepx_to_trt|b062",
-        "setup": "DeepX"
+        "setup": "DeepX",
+        "singleton": false
       },
       {
-        "best_native_fps": 51.426740194226014,
-        "candidate_count": 2,
+        "best_native_fps": 53.2837092317369,
+        "candidate_count": 3,
         "exact_hit": true,
-        "generic_choice": "b062",
-        "generic_choice_uid": "generic|yolo11l|H10|hailo10h_to_trt|b062",
+        "generic_choice": "b120",
+        "generic_choice_uid": "generic|yolo11l|H10|hailo10h_to_trt|b120",
         "loss_pct": 0.0,
         "model": "yolo11l",
-        "native_best": "b062",
-        "native_best_uid": "native|yolo11l|H10|hailo10h_to_trt|b062",
-        "selected_native_fps": 51.426740194226014,
-        "selected_native_uid": "native|yolo11l|H10|hailo10h_to_trt|b062",
-        "setup": "H10"
+        "native_best": "b120",
+        "native_best_uid": "native|yolo11l|H10|hailo10h_to_trt|b120",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
+        "selected_native_fps": 53.2837092317369,
+        "selected_native_uid": "native|yolo11l|H10|hailo10h_to_trt|b120",
+        "setup": "H10",
+        "singleton": false
       },
       {
-        "best_native_fps": 43.15418857413099,
-        "candidate_count": 2,
+        "best_native_fps": 43.776598201597565,
+        "candidate_count": 3,
         "exact_hit": true,
-        "generic_choice": "b062",
-        "generic_choice_uid": "generic|yolo11l|H8|hailo8_to_trt|b062",
+        "generic_choice": "b120",
+        "generic_choice_uid": "generic|yolo11l|H8|hailo8_to_trt|b120",
         "loss_pct": 0.0,
         "model": "yolo11l",
-        "native_best": "b062",
-        "native_best_uid": "native|yolo11l|H8|hailo8_to_trt|b062",
-        "selected_native_fps": 43.15418857413099,
-        "selected_native_uid": "native|yolo11l|H8|hailo8_to_trt|b062",
-        "setup": "H8"
+        "native_best": "b120",
+        "native_best_uid": "native|yolo11l|H8|hailo8_to_trt|b120",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
+        "selected_native_fps": 43.776598201597565,
+        "selected_native_uid": "native|yolo11l|H8|hailo8_to_trt|b120",
+        "setup": "H8",
+        "singleton": false
       },
       {
         "best_native_fps": 98.21568777636374,
@@ -184,9 +225,12 @@
         "model": "yolo26m",
         "native_best": "b043",
         "native_best_uid": "native|yolo26m|DeepX|deepx_to_trt|b043",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 98.21568777636374,
         "selected_native_uid": "native|yolo26m|DeepX|deepx_to_trt|b043",
-        "setup": "DeepX"
+        "setup": "DeepX",
+        "singleton": false
       },
       {
         "best_native_fps": 110.292412066109,
@@ -198,9 +242,12 @@
         "model": "yolo26m",
         "native_best": "b043",
         "native_best_uid": "native|yolo26m|H10|hailo10h_to_trt|b043",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 110.292412066109,
         "selected_native_uid": "native|yolo26m|H10|hailo10h_to_trt|b043",
-        "setup": "H10"
+        "setup": "H10",
+        "singleton": false
       },
       {
         "best_native_fps": 78.78582474076751,
@@ -212,13 +259,16 @@
         "model": "yolo26m",
         "native_best": "b038",
         "native_best_uid": "native|yolo26m|H8|hailo8_to_trt|b038",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 78.61904956868067,
         "selected_native_uid": "native|yolo26m|H8|hailo8_to_trt|b043",
-        "setup": "H8"
+        "setup": "H8",
+        "singleton": false
       },
       {
         "best_native_fps": 163.35948835722328,
-        "candidate_count": 2,
+        "candidate_count": 3,
         "exact_hit": true,
         "generic_choice": "b021",
         "generic_choice_uid": "generic|yolo26s|DeepX|deepx_to_trt|b021",
@@ -226,13 +276,16 @@
         "model": "yolo26s",
         "native_best": "b021",
         "native_best_uid": "native|yolo26s|DeepX|deepx_to_trt|b021",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 163.35948835722328,
         "selected_native_uid": "native|yolo26s|DeepX|deepx_to_trt|b021",
-        "setup": "DeepX"
+        "setup": "DeepX",
+        "singleton": false
       },
       {
         "best_native_fps": 181.93118513799513,
-        "candidate_count": 2,
+        "candidate_count": 3,
         "exact_hit": true,
         "generic_choice": "b021",
         "generic_choice_uid": "generic|yolo26s|H10|hailo10h_to_trt|b021",
@@ -240,13 +293,16 @@
         "model": "yolo26s",
         "native_best": "b021",
         "native_best_uid": "native|yolo26s|H10|hailo10h_to_trt|b021",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 181.93118513799513,
         "selected_native_uid": "native|yolo26s|H10|hailo10h_to_trt|b021",
-        "setup": "H10"
+        "setup": "H10",
+        "singleton": false
       },
       {
         "best_native_fps": 187.0049385138302,
-        "candidate_count": 2,
+        "candidate_count": 3,
         "exact_hit": true,
         "generic_choice": "b021",
         "generic_choice_uid": "generic|yolo26s|H8|hailo8_to_trt|b021",
@@ -254,51 +310,63 @@
         "model": "yolo26s",
         "native_best": "b021",
         "native_best_uid": "native|yolo26s|H8|hailo8_to_trt|b021",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 187.0049385138302,
         "selected_native_uid": "native|yolo26s|H8|hailo8_to_trt|b021",
-        "setup": "H8"
+        "setup": "H8",
+        "singleton": false
       },
       {
-        "best_native_fps": 51.603252154708095,
-        "candidate_count": 1,
+        "best_native_fps": 64.04541779762341,
+        "candidate_count": 3,
         "exact_hit": true,
-        "generic_choice": "b009",
-        "generic_choice_uid": "generic|yolov7_paper|DeepX|deepx_to_trt|b009",
+        "generic_choice": "b044",
+        "generic_choice_uid": "generic|yolov7_paper|DeepX|deepx_to_trt|b044",
         "loss_pct": 0.0,
         "model": "yolov7_paper",
-        "native_best": "b009",
-        "native_best_uid": "native|yolov7_paper|DeepX|deepx_to_trt|b009",
-        "selected_native_fps": 51.603252154708095,
-        "selected_native_uid": "native|yolov7_paper|DeepX|deepx_to_trt|b009",
-        "setup": "DeepX"
+        "native_best": "b044",
+        "native_best_uid": "native|yolov7_paper|DeepX|deepx_to_trt|b044",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
+        "selected_native_fps": 64.04541779762341,
+        "selected_native_uid": "native|yolov7_paper|DeepX|deepx_to_trt|b044",
+        "setup": "DeepX",
+        "singleton": false
       },
       {
-        "best_native_fps": 51.311575467819544,
-        "candidate_count": 1,
+        "best_native_fps": 69.619008524253,
+        "candidate_count": 3,
         "exact_hit": true,
-        "generic_choice": "b009",
-        "generic_choice_uid": "generic|yolov7_paper|H10|hailo10h_to_trt|b009",
+        "generic_choice": "b044",
+        "generic_choice_uid": "generic|yolov7_paper|H10|hailo10h_to_trt|b044",
         "loss_pct": 0.0,
         "model": "yolov7_paper",
-        "native_best": "b009",
-        "native_best_uid": "native|yolov7_paper|H10|hailo10h_to_trt|b009",
-        "selected_native_fps": 51.311575467819544,
-        "selected_native_uid": "native|yolov7_paper|H10|hailo10h_to_trt|b009",
-        "setup": "H10"
+        "native_best": "b044",
+        "native_best_uid": "native|yolov7_paper|H10|hailo10h_to_trt|b044",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
+        "selected_native_fps": 69.619008524253,
+        "selected_native_uid": "native|yolov7_paper|H10|hailo10h_to_trt|b044",
+        "setup": "H10",
+        "singleton": false
       },
       {
-        "best_native_fps": 44.90082390250171,
-        "candidate_count": 1,
+        "best_native_fps": 112.86778421355565,
+        "candidate_count": 2,
         "exact_hit": true,
-        "generic_choice": "b009",
-        "generic_choice_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
+        "generic_choice": "b066",
+        "generic_choice_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b066",
         "loss_pct": 0.0,
         "model": "yolov7_paper",
-        "native_best": "b009",
-        "native_best_uid": "native|yolov7_paper|H8|hailo8_to_trt|b009",
-        "selected_native_fps": 44.90082390250171,
-        "selected_native_uid": "native|yolov7_paper|H8|hailo8_to_trt|b009",
-        "setup": "H8"
+        "native_best": "b066",
+        "native_best_uid": "native|yolov7_paper|H8|hailo8_to_trt|b066",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
+        "selected_native_fps": 112.86778421355565,
+        "selected_native_uid": "native|yolov7_paper|H8|hailo8_to_trt|b066",
+        "setup": "H8",
+        "singleton": false
       }
     ]
   },
@@ -1620,11 +1688,16 @@
     "x_scale": "linear"
   },
   "quality_generic_selection_loss": {
-    "caption": "Final Generic-to-Native selection on 159 verified paired cuts in 13 model/device groups. Both Native numerical quality and final Generic quality pass. Every group receives equal weight; stable UID ties use unrounded FPS. Missing paired groups are unavailable. Original timed endpoints remain distinct.",
-    "exact_hits": 8,
-    "groups": 13,
-    "mean_group_loss_pct": 2.1592394401146824,
-    "paired_candidates": 159,
+    "caption": "Generic-to-Native selection on 186 verified paired cuts in 21 model/device groups; 0 groups have fewer than two cuts. Both Native historical numerical quality and current bound Generic quality pass. Hollow markers denote one candidate, which provides no ranking test. Every nonempty group has equal weight. Original Native FPS and historical Native quality retain their separate observed contracts.",
+    "exact_hits": 15,
+    "groups": 21,
+    "marker_policy": {
+      "at_least_two_candidates": "filled backend marker",
+      "one_candidate": "hollow backend marker; no ranking test"
+    },
+    "mean_group_loss_n_ge_2_pct": 1.3467521152436048,
+    "mean_group_loss_pct": 1.3467521152436048,
+    "paired_candidates": 186,
     "points": [
       {
         "best_native_fps": 1551.6267412219636,
@@ -1636,9 +1709,12 @@
         "model": "mobilenet_v3_large",
         "native_best": "b135",
         "native_best_uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 1551.6267412219636,
         "selected_native_uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135",
-        "setup": "DeepX"
+        "setup": "DeepX",
+        "singleton": false
       },
       {
         "best_native_fps": 1142.9046825798443,
@@ -1650,9 +1726,12 @@
         "model": "mobilenet_v3_large",
         "native_best": "b074",
         "native_best_uid": "native|mobilenet_v3_large|H10|hailo10h_to_trt|b074",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 1142.9046825798443,
         "selected_native_uid": "native|mobilenet_v3_large|H10|hailo10h_to_trt|b074",
-        "setup": "H10"
+        "setup": "H10",
+        "singleton": false
       },
       {
         "best_native_fps": 993.083599,
@@ -1664,9 +1743,12 @@
         "model": "mobilenet_v3_large",
         "native_best": "b027",
         "native_best_uid": "native|mobilenet_v3_large|H8|hailo8_to_trt|b027",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 993.083599,
         "selected_native_uid": "native|mobilenet_v3_large|H8|hailo8_to_trt|b027",
-        "setup": "H8"
+        "setup": "H8",
+        "singleton": false
       },
       {
         "best_native_fps": 729.0349421337696,
@@ -1678,9 +1760,12 @@
         "model": "regnet_x_1_6gf",
         "native_best": "b109",
         "native_best_uid": "native|regnet_x_1_6gf|DeepX|deepx_to_trt|b109",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 705.8010411034752,
         "selected_native_uid": "native|regnet_x_1_6gf|DeepX|deepx_to_trt|b102",
-        "setup": "DeepX"
+        "setup": "DeepX",
+        "singleton": false
       },
       {
         "best_native_fps": 1367.1124837764846,
@@ -1692,9 +1777,12 @@
         "model": "regnet_x_1_6gf",
         "native_best": "b123",
         "native_best_uid": "native|regnet_x_1_6gf|H10|hailo10h_to_trt|b123",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 1174.6620757689764,
         "selected_native_uid": "native|regnet_x_1_6gf|H10|hailo10h_to_trt|b132",
-        "setup": "H10"
+        "setup": "H10",
+        "singleton": false
       },
       {
         "best_native_fps": 617.505899,
@@ -1706,9 +1794,12 @@
         "model": "regnet_x_1_6gf",
         "native_best": "b073",
         "native_best_uid": "native|regnet_x_1_6gf|H8|hailo8_to_trt|b073",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 583.689262,
         "selected_native_uid": "native|regnet_x_1_6gf|H8|hailo8_to_trt|b066",
-        "setup": "H8"
+        "setup": "H8",
+        "singleton": false
       },
       {
         "best_native_fps": 781.5417294013049,
@@ -1720,9 +1811,12 @@
         "model": "resnet50",
         "native_best": "b104",
         "native_best_uid": "native|resnet50|DeepX|deepx_to_trt|b104",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 776.7071698048061,
         "selected_native_uid": "native|resnet50|DeepX|deepx_to_trt|b081",
-        "setup": "DeepX"
+        "setup": "DeepX",
+        "singleton": false
       },
       {
         "best_native_fps": 1099.5381472990744,
@@ -1734,9 +1828,12 @@
         "model": "resnet50",
         "native_best": "b095",
         "native_best_uid": "native|resnet50|H10|hailo10h_to_trt|b095",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 1099.5381472990744,
         "selected_native_uid": "native|resnet50|H10|hailo10h_to_trt|b095",
-        "setup": "H10"
+        "setup": "H10",
+        "singleton": false
       },
       {
         "best_native_fps": 581.33212,
@@ -1748,13 +1845,16 @@
         "model": "resnet50",
         "native_best": "b038",
         "native_best_uid": "native|resnet50|H8|hailo8_to_trt|b038",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 553.944927,
         "selected_native_uid": "native|resnet50|H8|hailo8_to_trt|b002",
-        "setup": "H8"
+        "setup": "H8",
+        "singleton": false
       },
       {
         "best_native_fps": 49.75397642714195,
-        "candidate_count": 2,
+        "candidate_count": 3,
         "exact_hit": true,
         "generic_choice": "b062",
         "generic_choice_uid": "generic|yolo11l|DeepX|deepx_to_trt|b062",
@@ -1762,9 +1862,46 @@
         "model": "yolo11l",
         "native_best": "b062",
         "native_best_uid": "native|yolo11l|DeepX|deepx_to_trt|b062",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 49.75397642714195,
         "selected_native_uid": "native|yolo11l|DeepX|deepx_to_trt|b062",
-        "setup": "DeepX"
+        "setup": "DeepX",
+        "singleton": false
+      },
+      {
+        "best_native_fps": 53.2837092317369,
+        "candidate_count": 3,
+        "exact_hit": true,
+        "generic_choice": "b120",
+        "generic_choice_uid": "generic|yolo11l|H10|hailo10h_to_trt|b120",
+        "loss_pct": 0.0,
+        "model": "yolo11l",
+        "native_best": "b120",
+        "native_best_uid": "native|yolo11l|H10|hailo10h_to_trt|b120",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
+        "selected_native_fps": 53.2837092317369,
+        "selected_native_uid": "native|yolo11l|H10|hailo10h_to_trt|b120",
+        "setup": "H10",
+        "singleton": false
+      },
+      {
+        "best_native_fps": 43.776598201597565,
+        "candidate_count": 3,
+        "exact_hit": true,
+        "generic_choice": "b120",
+        "generic_choice_uid": "generic|yolo11l|H8|hailo8_to_trt|b120",
+        "loss_pct": 0.0,
+        "model": "yolo11l",
+        "native_best": "b120",
+        "native_best_uid": "native|yolo11l|H8|hailo8_to_trt|b120",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
+        "selected_native_fps": 43.776598201597565,
+        "selected_native_uid": "native|yolo11l|H8|hailo8_to_trt|b120",
+        "setup": "H8",
+        "singleton": false
       },
       {
         "best_native_fps": 98.21568777636374,
@@ -1776,13 +1913,50 @@
         "model": "yolo26m",
         "native_best": "b043",
         "native_best_uid": "native|yolo26m|DeepX|deepx_to_trt|b043",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 98.21568777636374,
         "selected_native_uid": "native|yolo26m|DeepX|deepx_to_trt|b043",
-        "setup": "DeepX"
+        "setup": "DeepX",
+        "singleton": false
+      },
+      {
+        "best_native_fps": 110.292412066109,
+        "candidate_count": 3,
+        "exact_hit": true,
+        "generic_choice": "b043",
+        "generic_choice_uid": "generic|yolo26m|H10|hailo10h_to_trt|b043",
+        "loss_pct": 0.0,
+        "model": "yolo26m",
+        "native_best": "b043",
+        "native_best_uid": "native|yolo26m|H10|hailo10h_to_trt|b043",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
+        "selected_native_fps": 110.292412066109,
+        "selected_native_uid": "native|yolo26m|H10|hailo10h_to_trt|b043",
+        "setup": "H10",
+        "singleton": false
+      },
+      {
+        "best_native_fps": 78.78582474076751,
+        "candidate_count": 3,
+        "exact_hit": false,
+        "generic_choice": "b043",
+        "generic_choice_uid": "generic|yolo26m|H8|hailo8_to_trt|b043",
+        "loss_pct": 0.21168169862483266,
+        "model": "yolo26m",
+        "native_best": "b038",
+        "native_best_uid": "native|yolo26m|H8|hailo8_to_trt|b038",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
+        "selected_native_fps": 78.61904956868067,
+        "selected_native_uid": "native|yolo26m|H8|hailo8_to_trt|b043",
+        "setup": "H8",
+        "singleton": false
       },
       {
         "best_native_fps": 163.35948835722328,
-        "candidate_count": 2,
+        "candidate_count": 3,
         "exact_hit": true,
         "generic_choice": "b021",
         "generic_choice_uid": "generic|yolo26s|DeepX|deepx_to_trt|b021",
@@ -1790,23 +1964,97 @@
         "model": "yolo26s",
         "native_best": "b021",
         "native_best_uid": "native|yolo26s|DeepX|deepx_to_trt|b021",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
         "selected_native_fps": 163.35948835722328,
         "selected_native_uid": "native|yolo26s|DeepX|deepx_to_trt|b021",
-        "setup": "DeepX"
+        "setup": "DeepX",
+        "singleton": false
       },
       {
-        "best_native_fps": 51.603252154708095,
-        "candidate_count": 1,
+        "best_native_fps": 181.93118513799513,
+        "candidate_count": 3,
         "exact_hit": true,
-        "generic_choice": "b009",
-        "generic_choice_uid": "generic|yolov7_paper|DeepX|deepx_to_trt|b009",
+        "generic_choice": "b021",
+        "generic_choice_uid": "generic|yolo26s|H10|hailo10h_to_trt|b021",
+        "loss_pct": 0.0,
+        "model": "yolo26s",
+        "native_best": "b021",
+        "native_best_uid": "native|yolo26s|H10|hailo10h_to_trt|b021",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
+        "selected_native_fps": 181.93118513799513,
+        "selected_native_uid": "native|yolo26s|H10|hailo10h_to_trt|b021",
+        "setup": "H10",
+        "singleton": false
+      },
+      {
+        "best_native_fps": 187.0049385138302,
+        "candidate_count": 3,
+        "exact_hit": true,
+        "generic_choice": "b021",
+        "generic_choice_uid": "generic|yolo26s|H8|hailo8_to_trt|b021",
+        "loss_pct": 0.0,
+        "model": "yolo26s",
+        "native_best": "b021",
+        "native_best_uid": "native|yolo26s|H8|hailo8_to_trt|b021",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
+        "selected_native_fps": 187.0049385138302,
+        "selected_native_uid": "native|yolo26s|H8|hailo8_to_trt|b021",
+        "setup": "H8",
+        "singleton": false
+      },
+      {
+        "best_native_fps": 64.04541779762341,
+        "candidate_count": 3,
+        "exact_hit": true,
+        "generic_choice": "b044",
+        "generic_choice_uid": "generic|yolov7_paper|DeepX|deepx_to_trt|b044",
         "loss_pct": 0.0,
         "model": "yolov7_paper",
-        "native_best": "b009",
-        "native_best_uid": "native|yolov7_paper|DeepX|deepx_to_trt|b009",
-        "selected_native_fps": 51.603252154708095,
-        "selected_native_uid": "native|yolov7_paper|DeepX|deepx_to_trt|b009",
-        "setup": "DeepX"
+        "native_best": "b044",
+        "native_best_uid": "native|yolov7_paper|DeepX|deepx_to_trt|b044",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
+        "selected_native_fps": 64.04541779762341,
+        "selected_native_uid": "native|yolov7_paper|DeepX|deepx_to_trt|b044",
+        "setup": "DeepX",
+        "singleton": false
+      },
+      {
+        "best_native_fps": 69.619008524253,
+        "candidate_count": 3,
+        "exact_hit": true,
+        "generic_choice": "b044",
+        "generic_choice_uid": "generic|yolov7_paper|H10|hailo10h_to_trt|b044",
+        "loss_pct": 0.0,
+        "model": "yolov7_paper",
+        "native_best": "b044",
+        "native_best_uid": "native|yolov7_paper|H10|hailo10h_to_trt|b044",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
+        "selected_native_fps": 69.619008524253,
+        "selected_native_uid": "native|yolov7_paper|H10|hailo10h_to_trt|b044",
+        "setup": "H10",
+        "singleton": false
+      },
+      {
+        "best_native_fps": 112.86778421355565,
+        "candidate_count": 2,
+        "exact_hit": true,
+        "generic_choice": "b066",
+        "generic_choice_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b066",
+        "loss_pct": 0.0,
+        "model": "yolov7_paper",
+        "native_best": "b066",
+        "native_best_uid": "native|yolov7_paper|H8|hailo8_to_trt|b066",
+        "ranking_evaluable": true,
+        "ranking_note": "at least two admitted cuts",
+        "selected_native_fps": 112.86778421355565,
+        "selected_native_uid": "native|yolov7_paper|H8|hailo8_to_trt|b066",
+        "setup": "H8",
+        "singleton": false
       }
     ]
   },

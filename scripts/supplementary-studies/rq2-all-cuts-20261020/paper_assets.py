@@ -167,7 +167,16 @@ def figure_payload(data_root):
     }
 
 
-def run(data_root, output_dir, numeric_only=False):
+def run(data_root, output_dir, numeric_only=False, *, excluded_graph_methods=()):
+    """Render archived coordinates, optionally hiding graph-series presentation.
+
+    Exclusions affect only the graph-analysis curves and their legend. All
+    numerical payloads and historical default rendering remain unchanged.
+    """
+    excluded_graph_methods = frozenset(excluded_graph_methods)
+    unknown = excluded_graph_methods - {method[0] for method in METHODS}
+    if unknown:
+        raise ValueError('Unknown excluded graph methods: ' + ', '.join(sorted(unknown)))
     data_root,output_dir=Path(data_root),Path(output_dir)
     write_table(data_root,output_dir)
     payload=figure_payload(data_root)
@@ -250,17 +259,21 @@ def run(data_root, output_dir, numeric_only=False):
     ax.set_title('(a) Full-ranking agreement',loc='left')
     fig.colorbar(im,ax=ax,pad=.015,fraction=.04,ticks=[-1,0,1],label='Spearman ρ')
     for i,(values,definition) in enumerate(zip(data['mean_loss'],METHODS)):
+        if definition[0] in excluded_graph_methods:
+            continue
         line(axes[0,1],values,definition,i)
     axis(axes[0,1])
     axes[0,1].set_title('(b) Best retained Native throughput',loc='left')
     for ax,curves,title in [(axes[1,0],data['success'][0],'(c) Exact Native optimum'),
                             (axes[1,1],data['success'][1],'(d) Within 5% of Native optimum')]:
         for i,(values,definition) in enumerate(zip(curves,METHODS)):
+            if definition[0] in excluded_graph_methods:
+                continue
             line(ax,values,definition,i)
         axis(ax,True)
         ax.set_title(title,loc='left')
     handles=[Line2D([0],[0],color=c,ls=ls,lw=1.5,marker=mk,ms=3,label=label)
-             for _,label,c,ls,mk in METHODS]
+             for method,label,c,ls,mk in METHODS if method not in excluded_graph_methods]
     fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.55,1),ncol=4,
                frameon=False,handlelength=2)
     fig.tight_layout(rect=[0,0,1,.92],pad=.6,w_pad=1.7,h_pad=2)

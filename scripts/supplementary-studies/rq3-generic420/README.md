@@ -2,18 +2,20 @@
 
 This additive study evaluates graph rankings against **measured Generic throughput**.
 It does not replace the paired Generic/Native dataset or recompute Native results.
-The checked-in 27 October snapshot is preliminary in quality: 420 frozen
-configurations, 359 accepted FPS medians, and 315 measured and quality-eligible
-cuts in 21 nonempty model–accelerator groups. Twenty groups have no open FPS or
-quality decisions. The remaining 44 measured cuts comprise 43 quality failures
-and one pending quality decision: YOLOv7 on Hailo-8, cut b009. Its reused
-historical Generic FPS is retained, but historical quality is not a current
-endpoint admission, so the cut is excluded from fitting and evaluation.
+The active corrected 27 October snapshot has 420 frozen configurations,
+359 accepted FPS medians, and 331 measured and quality-eligible cuts in
+21 nonempty model–accelerator groups. All 21 groups have resolved FPS and
+quality decisions. The remaining 28 measured cuts have quality failures.
+Fifteen corrected historical quality observations retain their original FPS;
+YOLOv7 on Hailo-8, cut b009, uses its genuinely new three-repeat FPS observation
+and current quality admission. Its earlier observation remains in ledger history.
 A further 61 configurations have technical exclusions (37 compile failures and
 24 unsupported configurations); no supported FPS measurements remain pending.
-This is the available conditional pool, not a final full-quality universe. These
-categories remain separate in `inputs/coverage.csv` and the pending quality
-identity is recorded in `inputs/feature_metadata.json`.
+This is the resolved conditional pool; technical exclusions are not measured
+quality outcomes. These categories remain separate in `inputs/coverage.csv`.
+`inputs/feature_metadata.json` records the complete current quality coverage.
+The earlier 315-cut preliminary study remains preserved separately under
+`results/supplementary-studies/rq3-generic420-20261027`.
 
 ## Reproduce
 
@@ -22,7 +24,7 @@ From the repository root, in Python 3.12 with this directory's pinned requiremen
 ```bash
 python -m pip install -r scripts/supplementary-studies/rq3-generic420/requirements.txt
 python scripts/supplementary-studies/rq3-generic420/reproduce.py \
-  --inputs results/supplementary-studies/rq3-generic420-20261027/inputs \
+  --inputs results/supplementary-studies/rq3-generic420-detector-corrected-20261027/inputs \
   --output /tmp/generic420-reproduced
 ```
 
@@ -61,7 +63,7 @@ For rendering an already computed study without refitting:
 
 ```bash
 python scripts/supplementary-studies/rq3-generic420/render_artifacts.py \
-  --study results/supplementary-studies/rq3-generic420-20261027 \
+  --study results/supplementary-studies/rq3-generic420-detector-corrected-20261027 \
   --out /tmp/generic420-artifacts --languages en de
 ```
 
@@ -70,9 +72,9 @@ The existing publication entrypoints accept an optional `--generic420-study`:
 ```bash
 python scripts/split-inference/reproduce.py --output /tmp/paper-build \
   --publication mlsys-r30 --languages en de \
-  --generic420-study results/supplementary-studies/rq3-generic420-20261027
+  --generic420-study results/supplementary-studies/rq3-generic420-detector-corrected-20261027
 python scripts/dissertation/reproduce.py --output /tmp/diss-build \
-  --generic420-study results/supplementary-studies/rq3-generic420-20261027
+  --generic420-study results/supplementary-studies/rq3-generic420-detector-corrected-20261027
 ```
 
 These calls keep their original behavior and additionally create `rq3-generic420/`
@@ -172,8 +174,8 @@ and every sensitivity analysis. They bind reported rankings to their recorded
 fold weights, enforce whole-model holdout and pure-bytes training-objective
 dominance, recalculate every loss and summary, and verify matching EN/DE numeric
 tables and file hashes. Descriptive full-data weights remain separate from
-held-out results. This validates the analysis; the pending quality decision
-remains unresolved. Regression checks reject corrupted fold weights, altered
+held-out results. This validates the analysis and preserves any unresolved
+decisions as exclusions when importing a different snapshot. Regression checks reject corrupted fold weights, altered
 sensitivity metrics, and a test model leaked into training on another device:
 
 ```bash

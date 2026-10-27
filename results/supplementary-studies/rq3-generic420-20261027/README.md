@@ -1,5 +1,7 @@
 # Generic420 RQ3: published conditional analysis
 
+**Historical preliminary release.** Superseded as the active analysis by the [detector-corrected study](../rq3-generic420-detector-corrected-20261027/README.md). The original inputs and results below remain unchanged for provenance; use [the active release](../generic420-closeout-20261027/README.md) for current counts, results and reproduction commands.
+
 Status: **preliminary**. 420 selected configurations; 359 accepted FPS medians; 315 quality-eligible cuts in 21 model–accelerator groups. 43 measured quality failures, 1 measured quality decisions pending, 61 technical exclusions and 0 FPS measurements pending.
 
 The candidate pool is conditional on available, quality-eligible measurements. Historical quality is not a current endpoint admission. Open decisions remain excluded; this is not a final full-quality universe. Pending identities and historical roles are in `inputs/feature_metadata.json`. Native measurements are unchanged.

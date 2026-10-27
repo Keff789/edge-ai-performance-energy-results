@@ -1,0 +1,28 @@
+{
+  "schema": "rq2-detector-followup-observation-policy-v1",
+  "recorded_at": "2026-10-27T04:45:51.696236+00:00",
+  "results_base_commit": "04d32d14586083afe91a81c0706ac67626072415",
+  "rq2_population": "All already measured original Native cut identities; the RQ3 fixed420 membership is an annotation, not an RQ2 admission condition.",
+  "rq3_population": "Frozen420 unchanged; no extra RQ2 cut may enter RQ3.",
+  "identity_requirements": [
+    "same model content hash and model semantics",
+    "same physical accelerator/device and cut boundary identity",
+    "matching actual P1/P2 executable artifacts or explicit proven product reuse relation",
+    "precision verified from actual runtime/build evidence; unknown precision stays unknown, exact same executable may establish equivalence",
+    "matching actual preprocessing, prepared inputs, tensor names/order/dtypes/layouts, output interpretation and completion/postprocessing contract",
+    "original runner and source revisions retained; only scientifically compatible complete-task contracts may be compared"
+  ],
+  "measurement_requirements": "Preserve established complete-task Generic measurement contract and backend policies: three independent processes, 100 warmups and 1000 fully completed measured tasks each, full postprocessing. Historical reuse requires its existing valid contract evidence.",
+  "selection_rule": "Choose the latest actually completed, identity- and contract-compatible valid Generic observation by measured completion time; never rank candidate observations by FPS, AP or quality outcome. A newer valid quality FAIL is retained over an older PASS. Unknown ordering or incompatible identity is held with reason.",
+  "quality_rule": "Use the existing normal quality admission and thresholds unchanged; bind actual prediction runtime, artifact/input/completion identity, dataset/image set, CPU-ONNX model/reference and evaluator policy. Missing evidence is unavailable, never measured accuracy_loss. Report Native and Generic AP and their own reference AP and relative loss separately.",
+  "bug_rule": "Only demonstrated implementation/assignment errors invalidate evidence. Determine affected cases from code and contract identities, not desired admissions. Reevaluate all actually affected quality; remeasure FPS only when timed runtime/contract changed or valid FPS absent. Preserve original records.",
+  "singleton_rule": "Keep the established equal-group overall statistic, label groups with fewer than two admitted cuts, additionally report the same statistic restricted to groups with at least two candidates. A singleton zero loss is not evidence of ranking quality.",
+  "hardware_rule": "Do not interrupt existing b009 or FPS. Use normal physical leases; no concurrent diagnostic/quality/build load on a setup performing FPS. H8/H10 independent.",
+  "preserved": [
+    "all Native measurements and implementations",
+    "Full and original energy records",
+    "RQ1 and existing YOLOv7-b066 case evidence",
+    "paper and dissertation prose"
+  ],
+  "no_new_joint_energy_observations": true
+}

@@ -1,12 +1,12 @@
-% Native throughput loss using 159 verified quality-eligible pairs in 13 model/device groups. Generic uses the final measurement snapshot. Default, shared and model-held-out graph weights and full graph normalizations are frozen from the prior study; no refit. Every group has equal weight and tests min(k,n) candidates. This is a retrospective paired subset, not all 420 Generic candidates.
+% Native throughput loss on 186 quality-admitted original Native cuts in 21 model/device groups; 0 groups have fewer than two cuts. Latest actually completed compatible Generic observation, selected before quality. Equal weight per nonempty group; also report the mean restricted to n>=2. Original graph weights and normalization universes are frozen. RQ3 fixed420 membership is only an annotation; missing evidence remains unavailable.
 \begin{tabular}{lrrr}
 \toprule
 Method & $k=1$ & $k=3$ & $k=5$ \\
 \midrule
-Bytes & 23.07 & 15.06 & 6.14 \\
-Generic & 2.16 & 0.42 & 0.00 \\
-Weighted (default) & 18.41 & 16.18 & 11.90 \\
-Weighted (frozen shared) & 22.28 & 8.21 & 4.78 \\
-Weighted (frozen model held-out) & 25.67 & 18.32 & 7.91 \\
+Bytes & 17.23 & 9.32 & 3.80 \\
+Generic & 1.35 & 0.26 & 0.00 \\
+Weighted (default) & 15.73 & 10.01 & 7.37 \\
+Weighted (frozen shared) & 16.67 & 5.08 & 2.96 \\
+Weighted (frozen model held-out) & 18.77 & 11.34 & 4.90 \\
 \bottomrule
 \end{tabular}

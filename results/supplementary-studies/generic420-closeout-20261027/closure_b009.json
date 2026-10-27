@@ -1,59 +1,78 @@
 {
+  "CPU_reference_AP": 0.460346586685622,
   "CURRENT_modified": false,
-  "accepted_FPS": true,
-  "accepted_FPS_value": 41.29120249862124,
-  "check_scope": "Only CURRENT and exact already referenced b009 evidence bytes and unchanged blocking guard expression; no repeated broad audit or full join reattempt.",
-  "completed_at": "2026-10-26T23:38:56.689644+00:00",
-  "current_closure_category": "open",
-  "current_quality_status": "unavailable",
+  "accepted_FPS_value": 41.19388564433142,
+  "completed_at": "2026-10-27T12:13:57.775627+00:00",
+  "current_closure_category": "quality_eligible",
+  "current_quality_status": "reference_close",
   "evidence": {
-    "exact_guard_receipt": {
-      "filename": "H8_B009_ACTUAL_INDEPENDENT_PREPROCESS_GUARD_EXACT_KEYS_NO_ADMISSION_v1.json",
-      "report_relative_path": "continuation_v3_20261022/quality_only_ten_existing_fps_matching_preparation_v1/actual_Y7_b009_original_native_backing_facts_v1/H8_B009_ACTUAL_INDEPENDENT_PREPROCESS_GUARD_EXACT_KEYS_NO_ADMISSION_v1.json",
-      "sha256": "74870820520da89db23f296ee410aeb005acc9620e74bf665375a4566f02f454",
-      "size_bytes": 2743
+    "fps_normal_admission": {
+      "filename": "B009_FRESH_LEGACY_IMPORT_RECEIPT_v1.json",
+      "report_relative_path": "rq2_detector_followup_20261027/publication_backup/B009_FRESH_LEGACY_IMPORT_RECEIPT_v1.json",
+      "sha256": "2cdc22808651290e7a11fd4c6f20d8b49129e5e8249d4dc24ce608e57f5a88da",
+      "size_bytes": 14617
     },
-    "final_hold": {
+    "new_fps_result": {
+      "filename": "generic_completion_results.json",
+      "report_relative_path": "rq2_detector_followup_20261027/b009_completion/new_fps_scoped_legacy_measurement_v3/results/orin_nx_hailo8_01/yolov7_paper/b009/generic_completion_results.json",
+      "sha256": "bbebd913183e81c32b508b2f7aa2f07f700e65eeaa43545fd211b0e584800d39",
+      "size_bytes": 244520
+    },
+    "new_quality_result": {
+      "filename": "composed_central_result.json",
+      "report_relative_path": "rq2_detector_followup_20261027/b009_completion/n5000_capture_v1/evaluation_runs/generic420_h8_yolov7_b009_current6ac_targeted_n5000_deferred_20261027_20261027_071127/models/yolov7_paper/benchmark_results/quality_inputs/orin_nx_hailo8_01/results/b009/results_hailo8_to_trt/task_quality_inputs/composed_central_result.json",
+      "sha256": "c2c44b48ac557d6cff0344093f9e9843e3175d3f8a823acaee10eb4c5bbb2de3",
+      "size_bytes": 183890
+    },
+    "old_native_pair_hold": {
       "filename": "H8_B009_FINAL_HOLD_ORIGINAL_EXECUTION_POLICY_AUTHORITY_MISSING_NO_FIX_NO_PUBLISH_v1.json",
       "report_relative_path": "continuation_v3_20261022/quality_only_ten_existing_fps_matching_preparation_v1/actual_Y7_b009_original_native_backing_facts_v1/H8_B009_FINAL_HOLD_ORIGINAL_EXECUTION_POLICY_AUTHORITY_MISSING_NO_FIX_NO_PUBLISH_v1.json",
       "sha256": "d22b37cc45515acdd5537408819c4dbd87ffebd717b8849e13446a68a4c42c51",
       "size_bytes": 4487
     },
-    "normal_relation_receipt": {
-      "filename": "H8_B009_ACTUAL_UNMODIFIED_P8_NORMAL_RELATION_AND_EXACT_ORIGINAL_IDENTITY_BLOCKER_NO_IMPORT_v1.json",
-      "report_relative_path": "continuation_v3_20261022/quality_only_ten_existing_fps_matching_preparation_v1/actual_Y7_b009_original_native_backing_facts_v1/H8_B009_ACTUAL_UNMODIFIED_P8_NORMAL_RELATION_AND_EXACT_ORIGINAL_IDENTITY_BLOCKER_NO_IMPORT_v1.json",
-      "sha256": "9a528a585da9bfa5dca9f0d366cf8ba73e9819c6967cb64e54ee5bb81581b974",
-      "size_bytes": 5342
+    "quality_case_import_index": {
+      "filename": "CASE_IMPORT_INDEX_WITH_SERVICE_CLOSURE.json",
+      "report_relative_path": "rq2_detector_followup_20261027/quality_audit/central_stats_6ac_v1/executions/h8_yolov7_b009_v1/0_yolov7_paper_orin_nx_hailo8_01_b009/typed_import_source/CASE_IMPORT_INDEX_WITH_SERVICE_CLOSURE.json",
+      "sha256": "2923dc6ef0f6e3c9bcf8fa092d5f6e41c468b0d5c4a1f8cbc2ca3b671f4bf62e",
+      "size_bytes": 29728
     },
-    "original_FPS": {
-      "filename": "generic_completion_results.json",
-      "location_scope": "outside_report_root",
-      "sha256": "6ee2178cdae608cf48ea40cf2d7691d5e280d5e9184fbe9ff252ce55b3a95d59",
-      "size_bytes": 231910
+    "quality_case_receipt": {
+      "filename": "CASE_PUBLISHED_RECEIPT.json",
+      "report_relative_path": "rq2_detector_followup_20261027/quality_audit/central_stats_6ac_v1/executions/h8_yolov7_b009_v1/0_yolov7_paper_orin_nx_hailo8_01_b009/CASE_PUBLISHED_RECEIPT.json",
+      "sha256": "e8ef7e4be2c692e436366342bbfb612ce5b08f02b35c225361427e01d40cd919",
+      "size_bytes": 1543
     },
-    "saved_quality_own_admission": {
+    "quality_normal_admission": {
       "filename": "b009_NORMAL_QUALITY_ADMISSION.json",
-      "report_relative_path": "continuation_v3_20261022/deferred_h8_yolo26s_uint8_corrected2_central_Main6b59_v1/dx_incremental_v6/execution_quality_only_h8_yolov7_b009_SourceA814_consumerMain6b59_v6_01/0_yolov7_paper_orin_nx_hailo8_01_b009/completion/b009_NORMAL_QUALITY_ADMISSION.json",
-      "sha256": "5a3b1ed3d960030793e4e16ab4698603578ee16690673d8e9a05b86df3dcc0ab",
-      "size_bytes": 1644351
-    },
-    "saved_quality_result": {
-      "filename": "composed_central_result.json",
-      "report_relative_path": "continuation_v3_20261022/local_quality_runs/yolov7_H8_b009_qualityonly_sourcea814_original_uint8_full20_local_v1/generic420_h8_yolov7_b009_qualityonly_sourcea814_original_uint8_full20_deferred_v1_20261026_002609/models/yolov7_paper/benchmark_results/quality_inputs/orin_nx_hailo8_01/results/b009/results_hailo8_to_trt/task_quality_inputs/composed_central_result.json",
-      "sha256": "86ec8a6279f789e062962de8217a6f1ee1eb5f3195165ac8f938526f2664d45a",
-      "size_bytes": 183970
+      "report_relative_path": "rq2_detector_followup_20261027/quality_audit/central_stats_6ac_v1/executions/h8_yolov7_b009_v1/0_yolov7_paper_orin_nx_hailo8_01_b009/completion/b009_NORMAL_QUALITY_ADMISSION.json",
+      "sha256": "0619b03c25d7a0fa9fdf3513843a5569731f076aac4771192ae294f10c2936aa",
+      "size_bytes": 1644318
     }
   },
-  "exact_remaining_gap": "No authentic observed original execution-policy/recipe binding proves that the historical Native prepared feed executed the complete SHA411898 recipe. Shared single-image prepared tensor0bd0f530 and image equality do not supply the missing policy authority. No field is inferred or inserted.",
   "generic_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
-  "hardware_or_inference_or_build_started": false,
-  "normal_relation_previously_called": true,
-  "normal_relation_previously_passed": false,
-  "original_FPS_preprocessing_contract_sha256": null,
-  "saved_Q_preprocessing_contract_sha256": "411898b92628e2a769a2b8ea7aa35faff35373cfacb863c3ab34b243c105b70e",
-  "saved_independent_quality_class": "accuracy_loss",
-  "saved_quality_joined_to_accepted_FPS": false,
-  "schema": "generic420-b009-bounded-closure-v1",
-  "status": "QUALITY_JOIN_HELD",
-  "unchanged_normal_preprocessing_guard_passes": false
+  "new_FPS_adopted": true,
+  "new_FPS_completed_at": "2026-10-27T08:40:43.367807+00:00",
+  "new_FPS_median": 41.19388564433142,
+  "new_FPS_repeats": [
+    41.13953018707622,
+    41.263681919555594,
+    41.19388564433142
+  ],
+  "new_quality_AP": 0.45791324238237674,
+  "new_quality_class": "reference_close",
+  "old_Native_pair_authority": {
+    "historical_evidence": {
+      "filename": "H8_B009_FINAL_HOLD_ORIGINAL_EXECUTION_POLICY_AUTHORITY_MISSING_NO_FIX_NO_PUBLISH_v1.json",
+      "report_relative_path": "continuation_v3_20261022/quality_only_ten_existing_fps_matching_preparation_v1/actual_Y7_b009_original_native_backing_facts_v1/H8_B009_FINAL_HOLD_ORIGINAL_EXECUTION_POLICY_AUTHORITY_MISSING_NO_FIX_NO_PUBLISH_v1.json",
+      "sha256": "d22b37cc45515acdd5537408819c4dbd87ffebd717b8849e13446a68a4c42c51",
+      "size_bytes": 4487
+    },
+    "new_Generic_observation_does_not_retroactively_prove_original_Native_recipe": true,
+    "pair_compatibility": false,
+    "status": "UNRESOLVED_ORIGINAL_EXECUTION_AUTHORITY"
+  },
+  "performance_acquisition_origin": "new_capture",
+  "quality_acquisition_origin": "new_capture",
+  "quality_completed_at": "2026-10-27T07:02:14.393537+00:00",
+  "schema": "generic420-b009-current-observation-closure-v2"
 }

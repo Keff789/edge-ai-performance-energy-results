@@ -29,8 +29,10 @@ def sha(path):
 
 def source_reference(path, repo, source):
     """Use stable repository paths even for a freshly reproduced English export."""
+    path, repo, source = (Path(value).resolve() for value in (path, repo, source))
     if path.is_relative_to(source):
-        return str(Path('results/split-inference') / path.relative_to(source))
+        reference = source.relative_to(repo) if source.is_relative_to(repo) else Path('results/split-inference')
+        return str(reference / path.relative_to(source))
     return str(path.relative_to(repo))
 
 
@@ -65,6 +67,21 @@ def repair_markdown_links(path, original, repo):
 
 def json_write(path, value):
     Path(path).write_text(json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+
+
+def refresh_figure_metadata(repo, source, output, figure):
+    """Refresh an existing translated figure's hashes after its normal redraw."""
+    repo, source, output = (Path(value).resolve() for value in (repo, source, output))
+    manifest = json.loads((output / 'ASSET_MANIFEST.json').read_text())
+    for asset in manifest['figures']:
+        if str(Path(asset['output']).with_suffix('')) != figure:
+            continue
+        original = source / 'publications' / asset['output']
+        asset.update(source_metadata(original, repo, source))
+        asset['sha256'] = sha(output / asset['output'])
+    r30 = json.loads((source / 'publications/mlsys-r30/ASSET_MANIFEST.json').read_text())
+    manifest['current_rq2_graph_display'] = r30['existing_rq2_assets']['graph_display']
+    json_write(output / 'ASSET_MANIFEST.json', manifest)
 
 
 def scientific_payload(value):
@@ -211,6 +228,8 @@ def build(repo, source, output, *, numeric_only=False, supplementary=True, stric
                     'numeric_only': numeric_only, 'supplementary_studies': supplementary,
                     'source_reference_base': REPOSITORY_URL + '/blob/main/',
                     'english_source_kind': 'repository' if source == repo / 'results/split-inference' else 'fresh_reproduction',
+                    'english_source': str(source.relative_to(repo)) if source.is_relative_to(repo) else 'results/split-inference',
+                    'current_rq2_study': (str(Path(rq2_study).resolve().relative_to(repo)) if rq2_study is not None and Path(rq2_study).resolve().is_relative_to(repo) else None),
                     'schematic': schematic_report,
                     'study_provenance': {name: {
                         **{key: value for key, value in study.items() if key not in ['output', 'presentation_status']},
@@ -220,6 +239,9 @@ def build(repo, source, output, *, numeric_only=False, supplementary=True, stric
                     'number_format': 'Original scientific number formatting retained. Numerical records are unchanged.',
                     'catalogs': {str(p.relative_to(HERE)): sha(p) for p in sorted((HERE / 'locales').glob('*.json'))},
                     'figures': figure_assets, 'tables': table_assets, 'numeric_checks': numeric_checks}
+        if rq2_study is not None:
+            current = json.loads((broad / 'publications/mlsys-r30/ASSET_MANIFEST.json').read_text())
+            manifest['current_rq2_graph_display'] = current['existing_rq2_assets']['graph_display']
         # Link repair affects only Markdown destinations. Record the final bytes
         # in both manifests; numerical-token checks above precede link repair.
         for item in table_reports:
@@ -244,10 +266,14 @@ def write_catalog(output, manifest):
              'Alle Darstellungen verwenden die vorhandenen Messdaten. Achsen, Legenden und Tabellenbeschriftungen sind deutsch. Modell-, Geräte- und Methodennamen sowie die wissenschaftliche Zahlenschreibweise bleiben erhalten. Die englischen CSV-/JSON-Dateien bleiben die gemeinsame Datenquelle.', '',
              'Das aktuelle Paper verwendet `mlsys-r30`. `mlsys-r22` und die datierten Zusatzstudien bleiben als eigene Messreihen getrennt. Das Manifest verknüpft jede deutsche Datei mit ihrer Quelle und deren Prüfsumme.', '',
              '## Reproduktion', '', '```sh',
-             'python -I -B scripts/dissertation/reproduce.py --output /tmp/dissertation-de --verify', '```', '',
+             'python -I -B scripts/dissertation/reproduce.py --source ' + manifest['english_source'] +
+             (' --rq2-study ' + manifest['current_rq2_study'] if manifest['current_rq2_study'] else '') +
+             ' --output <empty-directory> --verify', '```', '',
              'Ein leeres Ausgabeverzeichnis verwenden. Für die vollständige englische und deutsche Split-Ausgabe:', '', '```sh',
              'python -I -B scripts/split-inference/reproduce.py \\',
-             '  --publication mlsys-r30 --languages en de --output /tmp/split-de --verify', '```', '',
+             '  --publication mlsys-r30 --languages en de' +
+             (' --rq2-study ' + manifest['current_rq2_study'] if manifest['current_rq2_study'] else '') +
+             ' --output <empty-directory> --verify', '```', '',
              '## Auswahl', '', '| Bereich | Grafiken | Tabellen-Dateien |', '|---|---:|---:|']
     for bundle in bundles:
         figs = [x for x in manifest['figures'] if x['bundle'] == bundle]

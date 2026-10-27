@@ -1,0 +1,49 @@
+{
+  "Native_values_and_original_quality_admission_unchanged": true,
+  "new_Generic_quality_requires_its_own_actual_capture": true,
+  "portable_no_absolute_machine_paths": true,
+  "recorded_at": "2026-10-27T09:30:06.014585+00:00",
+  "rows": [
+    {
+      "CPU_reference_identity_inferred_from_AP_equality": false,
+      "Generic_quality_admission_or_oldPASS_fallback_inferred": false,
+      "Native_original_quality_reference_value": 0.40087514853384254,
+      "Native_original_quality_value": 0.39027525687132514,
+      "Native_source_proof_full_SHA_readback_verified": true,
+      "Native_values_modified": false,
+      "actual_native_quality_result_container_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+      "actual_native_quality_result_json_pointer": "/results/4",
+      "actual_native_quality_result_sha256": "13b64e772b521cc6211f34cc083c2da6904b6a1406d9b4cdbc8b6871e591aa8c",
+      "case_id": "b038",
+      "cpu_reference_model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+      "cpu_reference_provider": "onnxruntime_cpu",
+      "cpu_reference_quality_contract_sha256": "ac9b080e6e0ccba7cb3719873f5eec6d56c9888ff03e07ab8c293a98a57aa49c",
+      "cpu_reference_sha256": "5bc005a331931613f323a30f18413c4405d38488dfbe4a022fa8c228e606bd8b",
+      "evaluator_algorithm": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+      "evidence_trace_sha256": "d5353bd960cea00f0be4196efb8260ff3498caf35b47acf73cfa9b6300cea794",
+      "generic_uid": "generic|yolo26s|H10|hailo10h_to_trt|b038",
+      "join_checks": {
+        "CPU_reference_hash_explicit_in_that_exact_actual_result": true,
+        "Native_source_normal_quality_binding_verified": true,
+        "exact_model_setup_case_identity": true,
+        "original_Native_row_explicit_central_result_hash_equals_actual_quality_result_canonical_SHA": true,
+        "original_Native_source_request_equals_actual_quality_result_source_request": true
+      },
+      "model": "yolo26s",
+      "model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+      "native_uid": "native|yolo26s|H10|hailo10h_to_trt|b038",
+      "original_native_quality_evidence_json_pointer": "/rows/10",
+      "original_native_quality_evidence_sha256": "12bf2227e6ec762a6a3daad5a599106050d4b8341f4548ef5f527a988b10851f",
+      "original_native_row_canonical_sha256": "6798fc6c65b4d820bbb67e2bcb28a5fe2fbb49a95faae75b9a2c20caaf2cc64a",
+      "proof_type": "explicit_original_Native_central_result_content_hash_to_CPU_reference",
+      "setup": "H10",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_request_sha256": "801eda27c022f7975c26e469d3d9493ea4ec1f682717a93ca68c7874f06de438",
+      "validation_dataset_manifest_sha256": "6e6a01aff3f354ef81379ac56359c89080733c338ac2e42b87c039b899d33dd2",
+      "validation_ground_truth_sha256": "a4d6d2cda4ba2c651a0dae652e41ece1c26fd1ed1ea4b168d293c3a5e5bacf50",
+      "validation_image_ids_sha256": "9eced8e839495a204fb99096d0cc923f5c41e6bce8ba7155b70999686a303768",
+      "verified": true
+    }
+  ],
+  "schema": "original-Native-quality-direct-CPU-reference-bindings-v1"
+}

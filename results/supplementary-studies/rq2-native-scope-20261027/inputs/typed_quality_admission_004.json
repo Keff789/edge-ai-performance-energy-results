@@ -1,0 +1,98 @@
+{
+  "CURRENT_written": false,
+  "FPS_values_repeats_attempts_and_source_authorities_unchanged": true,
+  "accepted_quality_rows": {
+    "path": "followup_source::publication_backup/H8_Y26M_B043_ACCEPTED_ROWS_v1.json",
+    "sha256": "ba8bac3ea072091c6d41bab48645c0bc05441e9be331853da383ad266d8a6d1a",
+    "size_bytes": 320133
+  },
+  "baseline": {
+    "path": "retained_source::Reports/generic_detectors20_multitensor_20261021T163124Z/status420/fr58_deepx_y7_b306_single_sourceb4_incremental_v1/scope_ledger.json",
+    "sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+    "size_bytes": 83854220
+  },
+  "caller": {
+    "path": "followup_source::publication_backup/import_corrected_quality_v4.py",
+    "sha256": "b45127ac1c6dc9db429e406273c628b40ab7b208e81cff033acfd62f7453676c",
+    "size_bytes": 29759
+  },
+  "corrected_capture_bindings": {
+    "generic|yolo26m|H8|hailo8_to_trt|b043": {
+      "actual_N5000_boundary_observations": 5000,
+      "actual_capture_source_closure": {
+        "json_pointer": "/generic_quality_source_capture/evidence/2",
+        "source": {
+          "path": "followup_source::h8_diagnostic/n5000_corrected_v2/yolo26m/evaluation_runs/rq2_h8_yolo26m_physical_bridge_6acdf86_n5000_b1000_v1_20261027_075933/models/yolo26m/benchmark_results/remote_benchmark_status_orin_nx_hailo8_01.json",
+          "sha256": "2faa5fd19f7321980b76c4777ce226e1400459bf2c0f2231defdfafb1e7f0bd8",
+          "size_bytes": 58917
+        }
+      },
+      "actual_loader_sha256": "c49b9f7eda029fbff7c286203e175cb7583e752013d82a4ef90bf40d2f87ceba",
+      "actual_python_runtime_members": 37,
+      "actual_request": {
+        "path": "followup_source::h8_diagnostic/n5000_corrected_v2/yolo26m/evaluation_runs/rq2_h8_yolo26m_physical_bridge_6acdf86_n5000_b1000_v1_20261027_075933/models/yolo26m/benchmark_results/quality_inputs/orin_nx_hailo8_01/results/b043/results_hailo8_to_trt/task_quality_inputs/composed_request.json",
+        "sha256": "a28f9faf02bb094cc3205c624f7d9fbec9b132572352da16bef1c10298e0529f",
+        "size_bytes": 98063975
+      },
+      "actual_runner_sha256": "1242bcd9698a0df33a116465e993514906e5cf9404b70c5d9171f284bd852954",
+      "corrected_runtime_source_commit": "6acdf869f329a2a23632436857daffcf90c0337a",
+      "original_FPS_physical_bridge_sha256": "bcba3edfb8b97ec38156beab99bfbe691662e1466c384c1fac875c282e6b5bd5"
+    }
+  },
+  "exact_original_paired_plan_metadata_aliases": {},
+  "fps_reuse_proof": {
+    "path": "followup_source::current_observations/fps_reuse_after_quality_fix.json",
+    "sha256": "d85e3c3cac0b68c30e3206d470454c8f0216e954966fc2cb518a336992866fac",
+    "size_bytes": 71290
+  },
+  "full_affected_scope_complete": false,
+  "new_FPS_or_hardware_or_statistics_started": false,
+  "only_UIDs": [
+    "generic|yolo26m|H8|hailo8_to_trt|b043"
+  ],
+  "pending_affected_UIDs": [
+    "generic|yolo11l|H10|hailo10h_to_trt|b003",
+    "generic|yolo11l|H10|hailo10h_to_trt|b062",
+    "generic|yolo11l|H8|hailo8_to_trt|b003",
+    "generic|yolo11l|H8|hailo8_to_trt|b062",
+    "generic|yolo26m|H10|hailo10h_to_trt|b003",
+    "generic|yolo26m|H10|hailo10h_to_trt|b038",
+    "generic|yolo26m|H10|hailo10h_to_trt|b043",
+    "generic|yolo26m|H8|hailo8_to_trt|b003",
+    "generic|yolo26m|H8|hailo8_to_trt|b038",
+    "generic|yolo26s|H10|hailo10h_to_trt|b003",
+    "generic|yolo26s|H10|hailo10h_to_trt|b021",
+    "generic|yolo26s|H8|hailo8_to_trt|b003",
+    "generic|yolo26s|H8|hailo8_to_trt|b021",
+    "generic|yolov7_paper|H10|hailo10h_to_trt|b009"
+  ],
+  "quality_decisions": [
+    {
+      "generic_uid": "generic|yolo26m|H8|hailo8_to_trt|b043",
+      "quality_eligible": true,
+      "quality_role": "historical_completed_operator_quality_import",
+      "quality_status": "reference_close"
+    }
+  ],
+  "quality_index": {
+    "path": "followup_source::publication_backup/H8_Y26M_B043_ACTUAL_Q_INDEX_v1.json",
+    "sha256": "f3be198d6d6b15b064d6131782b4940a5e741c80936dc3f9568e4968ef488160",
+    "size_bytes": 32635
+  },
+  "quality_outcome_filter": null,
+  "reader_publication": {
+    "path": "followup_source::publication_backup/h10_reader_release_v1/PUBLICATION_BRANCH_v1.json",
+    "sha256": "b349d221c317c2a68237efbcfe71df8b5cb7d30b903e86c7cd8d3a24613ef9c2",
+    "size_bytes": 5472
+  },
+  "schema": "rq2-corrected-historical-quality-import-receipt-v1",
+  "separate_new_Generic_FPS_and_Quality_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
+  "state": "NORMAL_TYPED_QUALITY_IMPORT_VALIDATED_NO_LEDGER_WRITE",
+  "typed_API": "workflow.historical_quality_import.import_historical_operator_quality",
+  "unchanged_CURRENT_source": {
+    "path": "retained_source::Reports/generic_detectors20_multitensor_20261021T163124Z/status420/CURRENT.json",
+    "sha256": "5108a6fa185b8b4e895ecae48cf3460c40ed18513b078e293d04471d4569356e",
+    "size_bytes": 346
+  },
+  "untargeted_whole_rows_unchanged": true
+}

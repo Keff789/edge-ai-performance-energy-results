@@ -2,75 +2,210 @@
   "CURRENT_changed_during_backup": false,
   "accepted_FPS_result_container_coverage": {
     "accepted_rows": 359,
+    "historical_superseded_b009_preserved_separately": 1,
     "missing_container_rows": [],
+    "new_current_b009_three_process_container": 1,
     "original_containers_not_found": 0,
-    "original_containers_retained": 359
+    "original_containers_retained": 359,
+    "unchanged_from_prior_verified_snapshot": 358
   },
-  "alias_reconciliation_zip_bytes": 834899,
-  "alias_reconciliation_zip_sha256": "34831ff881e7e64a085e64f5455a371fb05270d2bf9e5133e0ae82c4d65dc719",
+  "active_current": {
+    "path": "status420/CURRENT.json",
+    "sha256": "bea6241dc07bffd6ab16b85aafd32ca0b6924e9fed10e960cd97c17cfcd69584",
+    "size_bytes": 448
+  },
+  "actual_new_quality_preservation": {
+    "actual_N5000_requests_and_candidate_predictions_and_normal_admissions_preserved": true,
+    "archives": [
+      {
+        "actual_quality_UIDs": [
+          "generic|yolo11l|H10|hailo10h_to_trt|b003",
+          "generic|yolo11l|H10|hailo10h_to_trt|b062",
+          "generic|yolo11l|H8|hailo8_to_trt|b003",
+          "generic|yolo11l|H8|hailo8_to_trt|b062",
+          "generic|yolo26m|H10|hailo10h_to_trt|b003",
+          "generic|yolo26m|H10|hailo10h_to_trt|b038",
+          "generic|yolo26m|H10|hailo10h_to_trt|b043"
+        ],
+        "archive": {
+          "path": "paper_rq3_snapshots/rq2_detector_followup_20261027/raw_supplements/new_quality_closed_seven_4dd20bf7ded09c18.zip",
+          "sha256": "c7f83ed45767d747d6552ac8266a496899d7df90156f6e6a19ae10e2bec7af85",
+          "size_bytes": 177084477
+        },
+        "manifest": {
+          "path": "paper_rq3_snapshots/rq2_detector_followup_20261027/raw_supplements/new_quality_closed_seven_4dd20bf7ded09c18.manifest.json",
+          "sha256": "721abf6a71c16d72065fe8a8ae45088f5b96e289eb21b96a3c200d5d16cb75fc",
+          "size_bytes": 116204
+        },
+        "receipt": {
+          "path": "paper_rq3_snapshots/rq2_detector_followup_20261027/raw_supplements/new_quality_closed_seven_4dd20bf7ded09c18.receipt.json",
+          "sha256": "1a77df86683a63dc40edc6a9aaa88db254eb2056a11ac4fe1fd1482ed0afb511",
+          "size_bytes": 79223
+        }
+      },
+      {
+        "actual_quality_UIDs": [
+          "generic|yolov7_paper|H8|hailo8_to_trt|b009",
+          "generic|yolo26m|H8|hailo8_to_trt|b003",
+          "generic|yolo26m|H8|hailo8_to_trt|b038",
+          "generic|yolo26m|H8|hailo8_to_trt|b043"
+        ],
+        "archive": {
+          "path": "paper_rq3_snapshots/rq2_detector_followup_20261027/raw_supplements/new_quality_four_and_source_closures_05eefd8316e4569a.zip",
+          "sha256": "21e3c11b2df0d7ad3904ef79ee7d1f65df437df26ec7662f76a9f1df2bb6883d",
+          "size_bytes": 188291684
+        },
+        "manifest": {
+          "path": "paper_rq3_snapshots/rq2_detector_followup_20261027/raw_supplements/new_quality_four_and_source_closures_05eefd8316e4569a.manifest.json",
+          "sha256": "6eea547f827f2d7e6a2dea16a82add0a9ee4628fecc36b26ce16b66af50df5c4",
+          "size_bytes": 219812
+        },
+        "receipt": {
+          "path": "paper_rq3_snapshots/rq2_detector_followup_20261027/raw_supplements/new_quality_four_and_source_closures_05eefd8316e4569a.receipt.json",
+          "sha256": "2027f7fddf86db12b3d3a59165196f6bc1621f9e5b6f38e49d20d0ad7c190c48",
+          "size_bytes": 164136
+        }
+      },
+      {
+        "actual_quality_UIDs": [
+          "generic|yolo26s|H10|hailo10h_to_trt|b003",
+          "generic|yolo26s|H10|hailo10h_to_trt|b021",
+          "generic|yolov7_paper|H10|hailo10h_to_trt|b009"
+        ],
+        "archive": {
+          "path": "paper_rq3_snapshots/rq2_detector_followup_20261027/raw_supplements/new_quality_h10_three_and_cpu307_090fa701ae1077c9.zip",
+          "sha256": "88cb69e83a4413f82885502787978415930766adbe14bd0a6b4cdeb9fb66f2c4",
+          "size_bytes": 122520203
+        },
+        "manifest": {
+          "path": "paper_rq3_snapshots/rq2_detector_followup_20261027/raw_supplements/new_quality_h10_three_and_cpu307_090fa701ae1077c9.manifest.json",
+          "sha256": "74b46f47591952692944c8c284845e3af7e994bf2c82f95f247edfd6211cd09c",
+          "size_bytes": 93712
+        },
+        "receipt": {
+          "path": "paper_rq3_snapshots/rq2_detector_followup_20261027/raw_supplements/new_quality_h10_three_and_cpu307_090fa701ae1077c9.receipt.json",
+          "sha256": "1ef7c470bdfe7f52733e03ed52e8c65927723a55ff43467792eee71e953059c4",
+          "size_bytes": 78768
+        }
+      },
+      {
+        "actual_quality_UIDs": [
+          "generic|yolo26s|H8|hailo8_to_trt|b003",
+          "generic|yolo26s|H8|hailo8_to_trt|b021",
+          "generic|yolo26s|H10|hailo10h_to_trt|b038"
+        ],
+        "archive": {
+          "path": "paper_rq3_snapshots/rq2_detector_followup_20261027/raw_supplements/new_quality_final_three_fps_sources_32880f0280ec2025.zip",
+          "sha256": "6cb628d85c92d88f3484b05ebeff52eb199758b6fdd15c394b65e256cab6d9b7",
+          "size_bytes": 125066883
+        },
+        "manifest": {
+          "path": "paper_rq3_snapshots/rq2_detector_followup_20261027/raw_supplements/new_quality_final_three_fps_sources_32880f0280ec2025.manifest.json",
+          "sha256": "8b3cd43fcc93b6b6cd5fe016d4ef5e9c111764e03aae5aa496023196127f9b4d",
+          "size_bytes": 324485
+        },
+        "receipt": {
+          "path": "paper_rq3_snapshots/rq2_detector_followup_20261027/raw_supplements/new_quality_final_three_fps_sources_32880f0280ec2025.receipt.json",
+          "sha256": "696b78374efa6ee67a3f18669faeb835d0372ff9339cb07b487058e60b3ea20a",
+          "size_bytes": 144148
+        }
+      }
+    ],
+    "captures": 17,
+    "frozen420": 16,
+    "new_capture_count_not_doubled_by_closure_wrappers": true,
+    "original_RQ2_outside420": 1
+  },
   "analysis_core_complete": true,
-  "core_bytes": 414055502,
-  "core_files": 1110,
-  "first_supplement_zip_sha256": "8c99d7f965fcf0a3e18a61bd944839d3926247db9eb70896e7eaa190ee130662",
+  "core_bytes": 443288537,
+  "core_checksums": {
+    "path": "paper_rq3_snapshots/rq2_detector_followup_20261027/generic420_d658eb195bcb2032/SNAPSHOT_SHA256.json",
+    "sha256": "43f0e60f72f07d5a565ef0563435475e0e00518d1007f227aba914281572174f",
+    "size_bytes": 329162
+  },
+  "core_export_manifest": {
+    "path": "paper_rq3_snapshots/rq2_detector_followup_20261027/generic420_d658eb195bcb2032/EXPORT_MANIFEST.json",
+    "sha256": "0922ac0b02f8053ffdc92fb466a87401444352c8731b9607c31c99678cde0e8f",
+    "size_bytes": 1386741
+  },
+  "core_files": 1162,
+  "core_inputs_immutable": true,
+  "details": {
+    "path": "paper_rq3_snapshots/rq2_detector_followup_20261027/FINAL_BACKUP_DEPENDENCY_BINDING_v1.json",
+    "sha256": "24651b2c4db226c2b8a89cbc331f9ca743eaa00b2bb930d10f7f5d653f44a0e8",
+    "size_bytes": 873888
+  },
+  "finite_physical_preservation": {
+    "additional_extra_b038_files_verified": 7,
+    "optional_build_tool_not_retrieved": 1,
+    "original_scope_unique_file_hashes": 169,
+    "physical_pull_receipts": [
+      {
+        "normal_locks_released": true,
+        "receipt": {
+          "path": "paper_rq3_snapshots/rq2_detector_followup_20261027/raw_supplements/physical_artifacts_H8_e4ddddd6d78cacb8/H8_PHYSICAL_ARTIFACT_PRESERVATION_RECEIPT.json",
+          "sha256": "b909f0c35e5140cc6b0042e562f5d1e0c5c05b68b8b3e263f6142940848dccf4",
+          "size_bytes": 68773
+        },
+        "verified_bytes": 1022776494,
+        "verified_files": 37
+      },
+      {
+        "normal_locks_released": true,
+        "receipt": {
+          "path": "paper_rq3_snapshots/rq2_detector_followup_20261027/raw_supplements/physical_artifacts_H10_3dcdca7c7682d2ad/H10_PHYSICAL_ARTIFACT_PRESERVATION_RECEIPT.json",
+          "sha256": "fb55b79c8b5deead73274392c0ea116fde25f0b94776655610d318825cf7ebd9",
+          "size_bytes": 57635
+        },
+        "verified_bytes": 420451814,
+        "verified_files": 35
+      }
+    ],
+    "required_for_current_no_build_replay": 168,
+    "required_unresolved": 0,
+    "required_verified": 168,
+    "whole420_or_extra12_compiled_binary_coverage_claimed": false
+  },
   "individual_FPS_repeat_preservation": {
     "all_accepted_rows": 359,
+    "all_three_raw_repetition_bodies_retained_for_new_b009": true,
     "every_accepted_row_has_three_individual_values": true,
     "individual_repeat_values": 1077,
-    "missing_original_container_does_not_mean_missing_individual_repeat_values": true,
-    "no_prediction_reconstruction_claim": "User-authorized cleanup allowed deletion of last completed-Q per-image prediction copies. These deleted captures are not restored or guaranteed recoverable.",
-    "retained_in_pinned_ledger": [
-      "rows[].effective_repeats",
-      "rows[].effective_generic_fps",
-      "rows[].attempts.fps (original schema varies for reused/fresh runs)",
-      "rows[].source_authorities",
-      "rows[].model_sha256",
-      "rows[].actual_artifact_authority",
-      "rows[].quality_status",
-      "rows[].quality_eligible",
-      "quality statistics and input/configuration hashes wherever embedded in original row authorities"
-    ]
-  },
-  "input_configuration_status_counts": {
-    "prediction_capture_or_dataset_payload_excluded": 295,
-    "preserved_exact_bytes": 367,
-    "remote_or_external_reference_only": 168,
-    "some_expected_versions_unpreserved": 3,
-    "unresolved_metadata": 1
+    "new_b009_raw_check": {
+      "path": "paper_rq3_snapshots/rq2_detector_followup_20261027/B009_CURRENT_THREE_RAW_REPETITIONS_PRESERVATION_CHECK_v1.json",
+      "sha256": "83123e8301d4241d56f15f675aad86ce3236f1305782d29c50ec096bf4147159",
+      "size_bytes": 6256
+    },
+    "no_prediction_reconstruction_claim": "User-authorized cleanup allowed deletion of last completed-Q per-image prediction copies. These deleted captures are not restored or guaranteed recoverable."
   },
   "intentional_limitations": [
-    "No full raw backup certification; deleted completed-Q per-image captures are not reconstructed.",
-    "Compiled model payloads and datasets are not duplicated.",
-    "Remote runtime paths are retained as hashed provenance; existing large archive payloads were not restored or fully rehashed."
+    "User-authorized deletion of old completed-Q per-image prediction copies remains unreconstructed; full historical raw backup is not certified.",
+    "New17 Quality captures are preserved independently; this does not imply all historical420 raw datasets or compiled payloads are duplicated.",
+    "Finite necessary physical files were verified by archive/member or exact Sprite-file readback; unrelated old archive images remain under their prior verified or stat-only classifications.",
+    "Core exporter records100 unresolved supporting references and14272 inventory-only raw/binary locators; these are retained honestly and are not reclassified as a complete raw PASS.",
+    "Historical RQ2 Native b009 authority hold remains a scientific status; preserving bytes does not resolve that association."
   ],
-  "ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
-  "model_artifact_identity_references": 1494,
-  "original_FPS_container_verification": {
-    "accepted_original_result_containers_SHA_verified": 359,
-    "all_three_values_match_for_every_accepted_row": true,
-    "containers_with_completion_contract": 359,
-    "containers_with_expected_runtime_artifacts": 359,
-    "containers_with_input_binding": 359,
-    "individual_FPS_values_verified_against_frozen_ledger": 1077,
-    "per_repeat_completed_equals_requested_counts": 1077,
-    "positive_per_repeat_measured_makespans": 1077
+  "ledger_sha256": "d658eb195bcb20322c587c47180fc6c4d78003c9368e206943e0ab9ae1c55216",
+  "old_archive_copies": 0,
+  "original_RQ2_extra12": {
+    "extra_b038_new_quality_outside420": true,
+    "original_Native_population": 204,
+    "pairs": 12,
+    "preservation_proof_archive": {
+      "path": "paper_rq3_snapshots/rq2_detector_followup_20261027/raw_supplements/new_quality_four_and_source_closures_05eefd8316e4569a.zip",
+      "sha256": "21e3c11b2df0d7ad3904ef79ee7d1f65df437df26ec7662f76a9f1df2bb6883d",
+      "size_bytes": 188291684
+    },
+    "raw_three_repetitions_source_configs_and_quality_proofs_preserved": true,
+    "source_preservation_proof_sha256": "98d6b1042f29637106608e042cbc8b0efbcd53217204dd9455f583c882042d4f"
   },
-  "quality_input_verification_zip_bytes": 585121,
-  "quality_input_verification_zip_sha256": "93e625a9d01e0ac92267d04e21e768049dce356d8187c0de5ba1fc4a7b92eb07",
-  "quality_metadata_status_counts": {
-    "per_image_validation_payload_excluded": 8,
-    "prediction_capture_or_dataset_payload_excluded": 306,
-    "preserved_exact_bytes": 744
+  "prior_snapshot_and_superseded_b009_unchanged": {
+    "ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+    "snapshot": "paper_rq3_snapshots/rq3_postprocess_20261027/generic420_36d0a02e1b941edb"
   },
   "raw_preservation_complete": false,
-  "remaining_historical_metadata_limitations": [
-    "Some prior cancelled-run admissions/observations/plans and a historical reader-source version no longer match their original hashes; current accepted result containers are retained.",
-    "One earlier group execution-plan digest is unavailable; original executed input bindings, completion contracts and expected runtime-artifact fields are verified separately for every accepted result container."
-  ],
-  "runner_source_status_counts": {
-    "preserved_exact_bytes": 630,
-    "some_expected_versions_unpreserved": 1
-  },
   "schema": "rq3-portable-backup-receipt-v1",
-  "snapshot_relative_to_sprite_reports_job": "paper_rq3_snapshots/rq3_postprocess_20261027/generic420_36d0a02e1b941edb",
+  "snapshot_relative_to_sprite_reports_job": "paper_rq3_snapshots/rq2_detector_followup_20261027/generic420_d658eb195bcb2032",
+  "source_deletions": 0,
   "source_write_operations": 0
 }

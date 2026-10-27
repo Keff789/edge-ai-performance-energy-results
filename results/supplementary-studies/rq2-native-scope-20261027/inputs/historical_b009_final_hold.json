@@ -1,0 +1,69 @@
+{
+  "actual_normal_relation_failure": "historical_quality_import: Quality/FPS preprocessing differs",
+  "authentic_original_reference_recipe": {
+    "bound_member": "splitpoint_runners/preprocessing_contract.py",
+    "exists_in_bound_source_bundle": true,
+    "independent_original_inputs": {
+      "shape": [
+        640,
+        640,
+        3
+      ],
+      "task": "detection"
+    },
+    "independently_built_reference_recipe_canonical_sha256": "411898b92628e2a769a2b8ea7aa35faff35373cfacb863c3ab34b243c105b70e",
+    "materialized_observed_original_execution_recipe_record_found": false,
+    "member_sha256": "9d8faf47e2291a7fe57829c40c16b97a3719c1ba73091b4d4f60e91272516ffe",
+    "member_size_bytes": 21563,
+    "original_input_contract_preprocess_label": "opencv_letterbox_rgb_uint8",
+    "presence_of_reference_code_not_claimed_as_actual_prepared_feed_execution_binding": true,
+    "reference_recipe_resize_implementation": "Pillow BILINEAR with round-and-centered-pad114",
+    "runner_bundle_sha256": "a837bd56e8d72b501e42fac27ffc3d2b041848ebf616111f531efe14e1190ed8",
+    "runner_bundle_size_bytes": 457074,
+    "runner_bundle_source": "retained_source::Reports/native-fairness-rev3-20261007/generic_energy_extension/confirmation_final_20261008/runner-bundle.tar.gz"
+  },
+  "completed_N5000_B1000_accuracy_loss_100_percent_Q_preserved": true,
+  "exact_missing_condition": "No authentic observed original execution-policy/recipe binding proves that the historical Native prepared feed executed the complete SHA411898 recipe. Shared single-image prepared tensor0bd0f530 and image equality do not supply the missing policy authority. No field is inferred or inserted.",
+  "existing_evidence": [
+    {
+      "filename": "H8_B009_EXACT_BOUND_V2_SIGMOID_AND_DENSE_OPERATOR_SEMANTICS_NO_ADMISSION_v1.json",
+      "sha256": "985e93b6d5bc9d3a1e5eccadda630b6f2c0eab177156f50fd04f5bd9a3d2cba3",
+      "size_bytes": 9684
+    },
+    {
+      "filename": "H8_B009_ACTUAL_UNMODIFIED_P8_NORMAL_RELATION_AND_EXACT_ORIGINAL_IDENTITY_BLOCKER_NO_IMPORT_v1.json",
+      "sha256": "9a528a585da9bfa5dca9f0d366cf8ba73e9819c6967cb64e54ee5bb81581b974",
+      "size_bytes": 5342
+    },
+    {
+      "filename": "H8_B009_ACTUAL_INDEPENDENT_PREPROCESS_GUARD_EXACT_KEYS_NO_ADMISSION_v1.json",
+      "sha256": "74870820520da89db23f296ee410aeb005acc9620e74bf665375a4566f02f454",
+      "size_bytes": 2743
+    }
+  ],
+  "generic_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
+  "independent_strict_contract_boundaries": {
+    "Native_command_common_original_fields_all_exactly_equal": true,
+    "Native_command_exact_equality": false,
+    "Native_command_extra_metadata_keys_in_actual": 32,
+    "Native_command_runtime_options_exactly_equal": true,
+    "accepted_FPS_contract_sha256": "a3806858b67f1321ecf36f0ee6d75657a3d6b2404f7a7c2f0064bc712697664f",
+    "actual_Native_contract_sha256": "5b9b4662218dc051bbefba40c73d8fab8485d19fa69caf37ed193d110217d637",
+    "contract_difference_classification": "Two implementation hashes (e499/ef63 versus4bac/a6df) and their derived processor/invariant/completed-endpoint/hash-layer seals; no changed explicit decoder/anchor/threshold/NMS/geometry/scientific argument found in the examined contract diff. No runtime equivalence/admission granted.",
+    "contract_exact_equality": false,
+    "normal_command_verifier_status": "hash_schema_identity_artifacts_and_quality_first_crosslinks_verified",
+    "normal_verified_enriched_command_still_not_equal_original_plan_command": true,
+    "original_and_actual_Native_command_canonical_sha256": "585f3d067039f7c5ca3a13bd401aab0c641f3debe311ab792661a27f8adef63e"
+  },
+  "isolated_unmodified_worktree": "retained_source::kmika/Worktrees/historical_y7_dense_reader_20261026",
+  "isolated_unmodified_worktree_commit": "6f0d8f26d6f1426000e78f72afedeae6a722298a",
+  "no_further_search_edit_publish_new_capture_FPS_or_statistics": true,
+  "observed_at": "2026-10-26T11:02:43.403555+00:00",
+  "one_bounded_peer_confirmed_independent_unchanged_guard_HOLD": true,
+  "original_FPS_immutable": "41.29120249862124",
+  "original_FPS_preprocessing_contract_sha256": null,
+  "protected_R_expected_unchanged_commit": "5e6606422f1e6484ece5e78c91280e2adef3c84c",
+  "schema": "generic420-H8-Y7-b009-final-hold-original-provenance-no-admission-v1",
+  "source_preservation": "All original source bundles/Native/Generic contracts, oldFPS, completedQ and full source evidence retained; no cleanup performed.",
+  "status": "HOLD_NO_JOIN_NO_CODE_CHANGE_NO_PUBLISH"
+}

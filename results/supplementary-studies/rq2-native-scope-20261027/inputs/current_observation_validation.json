@@ -1,0 +1,51 @@
+{
+  "CURRENT_mutations": 0,
+  "actual_completion_times": 192,
+  "actual_three_repeat_source_sha_verified": 192,
+  "all_original_current192_uids_covered": true,
+  "engine_contract_and_quality_projection_compatibility_passed": 192,
+  "files": {
+    "candidate_generic_observations.json": {
+      "sha256": "158369948964158fbbec3a6b7b2773e31f08d502c10fa7f4827c2035ed69ea7f",
+      "size_bytes": 1738111
+    },
+    "proofs.json": {
+      "sha256": "a3fe327c5732171041d9bb03913c3e740d5939f699d6d44c8fbfb1a30abff611",
+      "size_bytes": 876290
+    }
+  },
+  "new_hardware_measurements": false,
+  "normal_eligibility_changed": false,
+  "normal_quality_binding_available": 191,
+  "normal_quality_status_counts": {
+    "accuracy_loss": 32,
+    "reference_close": 159,
+    "unavailable": 1
+  },
+  "original_detector_fail_observations_retained": 15,
+  "portable_JSON_contains_no_absolute_paths": true,
+  "quality_authority_kind_counts": {
+    "existing_classifier_normal_quality_compatibility": 168,
+    "existing_normal_completed_operator_import": 11,
+    "existing_normal_current_quality": 11,
+    "existing_normal_fps_admission_with_bound_quality_reference": 1,
+    "unavailable": 1
+  },
+  "quality_numeric_values": 191,
+  "quality_status_counts_by_task": {
+    "classification": {
+      "accuracy_loss": 17,
+      "reference_close": 151
+    },
+    "detection": {
+      "accuracy_loss": 15,
+      "reference_close": 8,
+      "unavailable": 1
+    }
+  },
+  "rows": 192,
+  "schema": "rq2-current-native-intersection-validation-v1",
+  "source_ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+  "status": "PASS",
+  "unknown_completion_ordering": []
+}

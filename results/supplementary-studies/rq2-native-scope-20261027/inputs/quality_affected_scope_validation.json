@@ -1,0 +1,37 @@
+{
+  "AP_or_quality_outcome_used_for_scope": false,
+  "all15_boundconfig_bridge_runtime_helper_preconditions_verified": true,
+  "all15_source_helper_AST_identical": true,
+  "all168_UIDs_unique": true,
+  "artifacts": [
+    {
+      "name": "AFFECTED_SCOPE.json",
+      "sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+      "size_bytes": 970979
+    },
+    {
+      "name": "AFFECTED_SCOPE.csv",
+      "sha256": "52a338e5ca0cd0e4b8849bb3dac4b6e2564f6ba1c36cd0bc4d4a221711496796",
+      "size_bytes": 40018
+    },
+    {
+      "name": "AFFECTED_SCOPE_QUEUE.json",
+      "sha256": "bba9ae179d83795331f00e68f1d66dc6ef07e305856c72e7fe67ca3d035938ac",
+      "size_bytes": 71559
+    },
+    {
+      "name": "affected_helper_source_version_proof.json",
+      "sha256": "4ac2df5bb24476e5dbd0c661fdd0148c3207b19649721f84770310eb81370782",
+      "size_bytes": 2718
+    }
+  ],
+  "classified_selected_FPS_rows": 107,
+  "extra8_original_quality_Native_binding_route_verified": true,
+  "queue_exactly_matches_source_affected_UIDs": true,
+  "schema": "rq2-quality-affected-scope-validation-v1",
+  "selected_FPS_affected": 15,
+  "selected_FPS_unaffected": 91,
+  "selected_FPS_unknown_existing_H8_b009": 1,
+  "source_hash_mismatches": 0,
+  "unmeasured_no_quality_unknown": 61
+}

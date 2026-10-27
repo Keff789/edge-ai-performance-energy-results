@@ -1,6 +1,6 @@
 # Dissertation
 
-Latest generated EN/DE evidence: [Generic420 follow-up, 27 October 2026](../../results/supplementary-studies/generic420-closeout-20261027/README.md), with explicit current RQ2 and RQ3 inputs. The existing Native/Full/energy studies and frozen RQ1/YOLOv7 numerical evidence remain intact. Dissertation prose is unchanged.
+Current generated EN/DE evidence: [detector-corrected release, 27 October 2026](../../results/supplementary-studies/generic420-closeout-20261027/README.md), with [English source manifest](../../results/publication-builds/generic420-20261027/dissertation-en/README.md) and [German outputs](../../results/publication-builds/generic420-20261027/dissertation-de/README.md). Both consume the current original-Native-scope RQ2 and fixed420 RQ3 studies. Native/Full/energy studies and frozen RQ1/YOLOv7-b066 evidence retain their original values. Dissertation prose is unchanged; the earlier collections below retain their historical scope.
 
 ## Deutsche Split-Grafiken und Tabellen
 

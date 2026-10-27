@@ -1,46 +1,68 @@
 {
-  "accepted_FPS_missing_import": 0,
-  "complete_FPS_pending_import": [],
-  "completed_at": "2026-10-26T23:38:56.689644+00:00",
-  "latest_quality_service": {
-    "admission_closed": true,
-    "all_started_workers_exited_0": true,
-    "configured_worker_budget": 6,
-    "dispatcher_alive": false,
-    "final_receipt": {
-      "filename": "DEEPX_YOLOV7_B306_SINGLE_SOURCEB4_V6_FINAL_RESULT_AND_GENUINE_SHUTDOWN_OBSERVED_BY_ROOT_v1.json",
-      "report_relative_path": "continuation_v3_20261022/deferred_h8_yolo26s_uint8_corrected2_central_Main6b59_v1/dx_incremental_v6/execution_deepx_yolov7_b306_SINGLE_SourceB4_consumer56fc_v6_01/DEEPX_YOLOV7_B306_SINGLE_SOURCEB4_V6_FINAL_RESULT_AND_GENUINE_SHUTDOWN_OBSERVED_BY_ROOT_v1.json",
-      "sha256": "a6db20e1a738209e1ad94fc9657a2e25ec76d924dd8100191c2a9cfa6cebedfa",
-      "size_bytes": 13789
+  "completed_at": "2026-10-27T12:13:57.775627+00:00",
+  "final_owner_receipts": {
+    "H10": {
+      "observed_fields": {
+        "finished_at": "2026-10-27T11:48:35.100255+00:00",
+        "schema": "rq2-extra-normal-repaired-H10-N5000-action-v1"
+      },
+      "source": {
+        "filename": "ACTION_v7.result.json",
+        "report_relative_path": "rq2_detector_followup_20261027/h10_quality_fixed_queue_v4/extra_RQ2_yolo26s_b038/ACTION_v7.result.json",
+        "sha256": "8f46108c8dad6ecdc2a1fff434628ba6f90fb9d142465dc392623de13cf9def6",
+        "size_bytes": 5208
+      }
     },
-    "finished": true,
-    "finished_at": "2026-10-26T23:12:09.623653+00:00",
-    "group_count": 0,
-    "inflight_count": 0,
-    "manager_alive": false,
-    "queue_size": 0,
-    "shutdown_receipt": {
-      "filename": "NEW_CPU_SERVICE_SHUTDOWN.json",
-      "report_relative_path": "continuation_v3_20261022/deferred_h8_yolo26s_uint8_corrected2_central_Main6b59_v1/dx_incremental_v6/execution_deepx_yolov7_b306_SINGLE_SourceB4_consumer56fc_v6_01/NEW_CPU_SERVICE_SHUTDOWN.json",
-      "sha256": "aa007de265f350b59dfbdd9588cdfc1a1ef8eef3ccb2c995bc7990a187ec242b",
-      "size_bytes": 527
+    "H8": {
+      "observed_fields": {
+        "recorded_at": "2026-10-27T09:38:12.026949+00:00",
+        "schema": "rq2-h8-complete-actual-quality-and-b009-fps-handoff-v1"
+      },
+      "source": {
+        "filename": "H8_COMPLETE_ACTUAL_RESULTS_HANDOFF_v1.json",
+        "report_relative_path": "rq2_detector_followup_20261027/h8_diagnostic/H8_COMPLETE_ACTUAL_RESULTS_HANDOFF_v1.json",
+        "sha256": "9c3e8609fac76fccd9d252f07bc5f1c6e0fa12cc938ed4f298c41b7c356dd53f",
+        "size_bytes": 58660
+      }
     },
-    "workers_actually_started": 4
+    "central_quality": {
+      "observed_fields": {
+        "admission_closed": true,
+        "dispatcher_alive": false,
+        "finished": true,
+        "group_keys_count": 0,
+        "inflight_keys_count": 0,
+        "manager_alive": false,
+        "queue_size": 0,
+        "worker_count": 4,
+        "worker_exitcodes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "workers_alive": 0
+      },
+      "source": {
+        "filename": "NEW_CPU_SERVICE_SHUTDOWN.json",
+        "report_relative_path": "rq2_detector_followup_20261027/quality_audit/central_stats_6ac_v1/executions/extra_RQ2_h10_yolo26s_b038_Source42042_cap2_v2/NEW_CPU_SERVICE_SHUTDOWN.json",
+        "sha256": "fd87ac2d7fb3730e3bfbc7247c1c18593f23d8b3e09b97439a5a784f1605fe5f",
+        "size_bytes": 527
+      }
+    }
   },
-  "local_process_observation": {
-    "job_process_count": 0,
-    "job_processes": [],
-    "observed_at": "2026-10-26T23:38:56.689613+00:00",
-    "read_only_squashfuse_helpers_excluded": 34,
-    "scope": "local processes whose command line references this report root"
+  "final_queue_status": {
+    "observed_fields": {
+      "schema": "rq2-last-extra-normal-quality-import-receipt-v1"
+    },
+    "source": {
+      "filename": "LAST_EXTRA_H10_B038_ACTUAL_RQ2_IMPORT_RECEIPT.json",
+      "report_relative_path": "rq2_detector_followup_20261027/quality_audit/LAST_EXTRA_H10_B038_ACTUAL_RQ2_IMPORT_RECEIPT.json",
+      "sha256": "fc6db76dc37ef6c6e33de28c397b76b2373da77da5bdc882f3cb47154591196b",
+      "size_bytes": 1014
+    }
   },
-  "progress_receipt": {
-    "filename": "PROGRESS_20261026T233320Z.json",
-    "report_relative_path": "continuation_v3_20261022/PROGRESS_20261026T233320Z.json",
-    "sha256": "5b6c15e3305a79e670474eb38de87a2baec2f29d3696d66fe6a7a3e001e854b7",
-    "size_bytes": 13694
-  },
-  "remote_status_scope": "No fresh remote execution or process scan; original normal terminal receipts and final progress are retained.",
-  "schema": "generic420-existing-work-closure-status-v1",
-  "supported_FPS_pending": 0
+  "old_shutdown_receipts_not_used_as_current_final_status": true,
+  "schema": "generic420-current-owner-and-queue-closure-evidence-v2",
+  "status_scope": "Pinned current actual queue/import and owner terminal receipts. No live or remote process scan was performed."
 }
