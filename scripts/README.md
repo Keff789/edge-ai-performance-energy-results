@@ -18,7 +18,7 @@ Activate the environment, then generate the current outputs:
 python3 scripts/reproduce_current.py --output local-output/current --languages en de
 ```
 
-Use a fresh output directory. The command reconstructs the current RQ2 and RQ3 analyses and feeds both into the publication generators. It keeps the measured Full/split throughput and energy values used by RQ1. The outputs include numerical tables, figures and their source references.
+Use a fresh output directory. The command reconstructs the current RQ2 and RQ3 analyses and feeds both into the publication generators. It also replays the graph–Generic–Native selection procedure on the resulting paired set, writing bilingual budget figures and tables to `staged-selection/artifacts/`. It keeps the measured Full/split throughput and energy values used by RQ1. The outputs include numerical tables, figures and their source references.
 
 The English and German outputs use identical numerical inputs. Models, datasets and accelerator hardware are not required for this offline reproduction. Detailed configuration-level methods are documented with the [runner-selection inputs](../results/supplementary-studies/rq2-native-scope-20261027/README.md) and [graph-selection inputs](../results/supplementary-studies/rq3-generic420-detector-corrected-20261027/README.md).
 

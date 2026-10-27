@@ -8,9 +8,12 @@ Die Dissertation verwendet denselben aktuellen Split-Datensatz wie das Paper. Di
 | Englische Split-Grafiken und Tabellen | [Aktuelle Sammlung](../../results/publication-builds/generic420-20261027/dissertation-en/README.md) |
 | Deutscher Graph-Score-Vergleich | [Grafiken und Tabellen](../../results/supplementary-studies/rq3-generic420-detector-corrected-20261027/artifacts/de/) |
 | Englischer Graph-Score-Vergleich | [Grafiken und Tabellen](../../results/supplementary-studies/rq3-generic420-detector-corrected-20261027/artifacts/en/) |
+| Auswahl mit Graph, Generic und Native | [Deutsch](../../results/supplementary-studies/staged-selection/artifacts/de/) · [Englisch](../../results/supplementary-studies/staged-selection/artifacts/en/) |
 | Energiemessung | [Kalibrierung, Messvergleiche und Spektralanalyse](../../results/energy-measurement/README.md) |
 
 PDF und SVG sind für Abbildungen vorgesehen, LaTeX für Tabellen. PNG und Markdown dienen der Vorschau. CSV und JSON enthalten die zugrunde liegenden Zahlen. Die YOLOv7-Fallstudie steht zusätzlich in einer breiten und einer einspaltigen Fassung bereit.
+
+Die [Auswertung der Auswahlkette](../../results/supplementary-studies/staged-selection/README.md) untersucht zuerst eine Vorauswahl nach Grenztensorgröße, dann Generic-Tests und schließlich zwei Native-Tests. Mit höchstens fünf Generic-Tests werden im Mittel 96,20 Prozent des besten gemessenen Native-Durchsatzes erreicht. Mit zwölf sind es 99,65 Prozent. Die Zahl der exakt gefundenen Gewinner wird getrennt angegeben.
 
 ## Aktuelle Split-Auswertung erzeugen
 

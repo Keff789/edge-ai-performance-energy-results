@@ -458,5 +458,47 @@
     }
   },
   "rq3_target": "Measured Generic throughput among quality-admitted candidates",
-  "schema": "generic420-result-changes-v1"
+  "schema": "generic420-result-changes-v1",
+  "staged_selection_primary_budgets": [
+    {
+      "candidates": 187,
+      "exact_winner_pct": 80.95238095238095,
+      "exact_winners": 17,
+      "generic_tests": 81,
+      "groups": 21,
+      "k": 5,
+      "max_loss_pct": 54.46678185867402,
+      "mean_loss_pct": 3.798185625435318,
+      "mean_retained_native_pct": 96.20181437456468,
+      "median_loss_pct": 0.0,
+      "method": "bytes",
+      "native_budget": 2,
+      "native_tests": 42,
+      "policy": "cascade_native2",
+      "shortlist_best_preserved": 21,
+      "task": "all",
+      "within_1pct": 17,
+      "within_5pct": 18
+    },
+    {
+      "candidates": 187,
+      "exact_winner_pct": 90.47619047619048,
+      "exact_winners": 19,
+      "generic_tests": 137,
+      "groups": 21,
+      "k": 12,
+      "max_loss_pct": 5.476326145995247,
+      "mean_loss_pct": 0.353070018388509,
+      "mean_retained_native_pct": 99.64692998161149,
+      "median_loss_pct": 0.0,
+      "method": "bytes",
+      "native_budget": 2,
+      "native_tests": 42,
+      "policy": "cascade_native2",
+      "shortlist_best_preserved": 20,
+      "task": "all",
+      "within_1pct": 19,
+      "within_5pct": 20
+    }
+  ]
 }

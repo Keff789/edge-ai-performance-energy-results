@@ -1,6 +1,7 @@
 {
   "current_rq2_study": "results/supplementary-studies/rq2-native-scope-20261027",
   "current_rq3_study": "results/supplementary-studies/rq3-generic420-detector-corrected-20261027",
+  "current_staged_selection_study": "results/supplementary-studies/staged-selection",
   "files": {
     "results/publication-builds/generic420-20261027/paper/figures/01_full_throughput.pdf": {
       "bundle": "split-inference",
@@ -1637,6 +1638,61 @@
       "kind": "tables",
       "sha256": "8fa840845c140f0731906e6f170c8c1ce17850c1dd4c8c0d8db387e871c9a7c8"
     },
+    "results/publication-builds/generic420-20261027/staged-selection/artifacts/en/figures/staged_selection_budget.csv": {
+      "bundle": "staged-selection",
+      "kind": "localized_artifact",
+      "sha256": "84ef6c211c6a154492c24634b1bc19f18617d5fba6bbe1fd42646c625fa3631d"
+    },
+    "results/publication-builds/generic420-20261027/staged-selection/artifacts/en/figures/staged_selection_budget.json": {
+      "bundle": "staged-selection",
+      "kind": "localized_artifact",
+      "sha256": "fdd973c18d792d114a54b6f98af883d6a6937e04d9ea5ac6279367742e228fc8"
+    },
+    "results/publication-builds/generic420-20261027/staged-selection/artifacts/en/figures/staged_selection_budget.pdf": {
+      "bundle": "staged-selection",
+      "kind": "localized_artifact",
+      "sha256": "c81b0f8462dd6dec9eb7f3eac112740f193e7d901677b516dacc3b5db745d86f"
+    },
+    "results/publication-builds/generic420-20261027/staged-selection/artifacts/en/figures/staged_selection_budget.png": {
+      "bundle": "staged-selection",
+      "kind": "localized_artifact",
+      "sha256": "3e228c4c119a2b066bcf6158910708ff32be7268422c886d76e3e56eb93f1835"
+    },
+    "results/publication-builds/generic420-20261027/staged-selection/artifacts/en/figures/staged_selection_budget.svg": {
+      "bundle": "staged-selection",
+      "kind": "localized_artifact",
+      "sha256": "d2a648833398591b6148d3bfea5fee2c50b73c23aa73086110c9fec2541df862"
+    },
+    "results/publication-builds/generic420-20261027/staged-selection/artifacts/en/tables/group_budgets.csv": {
+      "bundle": "staged-selection",
+      "kind": "localized_artifact",
+      "sha256": "86eb7eaf887dcc831b253b33b645faafe035d7fe5af6faf9c0f3ea49fb597d5d"
+    },
+    "results/publication-builds/generic420-20261027/staged-selection/artifacts/en/tables/native_test_comparison.csv": {
+      "bundle": "staged-selection",
+      "kind": "localized_artifact",
+      "sha256": "56828b17f408b5a6ddb29c796dd37696d7992c79d3897082671b22f03c4e7d2e"
+    },
+    "results/publication-builds/generic420-20261027/staged-selection/artifacts/en/tables/primary_budget.csv": {
+      "bundle": "staged-selection",
+      "kind": "localized_artifact",
+      "sha256": "fa176b03622132a34166176be74629fa222fecd4994ae2061aa1de94523414c7"
+    },
+    "results/publication-builds/generic420-20261027/staged-selection/artifacts/en/tables/primary_budget.tex": {
+      "bundle": "staged-selection",
+      "kind": "localized_artifact",
+      "sha256": "d4178e960362979fa12b13de75453fcc93575656bff02fda4e8a2a64f9ebb1a7"
+    },
+    "results/publication-builds/generic420-20261027/staged-selection/artifacts/en/tables/task_budgets.csv": {
+      "bundle": "staged-selection",
+      "kind": "localized_artifact",
+      "sha256": "702d16de6c082226794c4d58f8466cbe0b4a348faf68e4fc790e340bac421db2"
+    },
+    "results/publication-builds/generic420-20261027/staged-selection/artifacts/en/tables/task_budgets.tex": {
+      "bundle": "staged-selection",
+      "kind": "localized_artifact",
+      "sha256": "259648c2f3ca95f778e0b6ea59a85e1d77879889e19c00d80d9bb26f28ba8a7b"
+    },
     "results/supplementary-studies/dissertation-development-2026/figures/ranking_methods.pdf": {
       "bundle": "supplementary-studies/dissertation-development-2026",
       "kind": "figures",
@@ -2130,6 +2186,6 @@
   },
   "language": "en",
   "schema": "dissertation-english-source-index-v1",
-  "scope": "Complete English split-inference, current and frozen paper profiles, registered dissertation supplements, and corrected Generic420 artifacts.",
+  "scope": "Complete English split-inference, current and frozen paper profiles, registered dissertation supplements, corrected Generic420 artifacts, and staged graph–Generic–Native selection.",
   "source_policy": "English assets use the existing English renderers and recorded supplementary exports; the German translation does not alter their measurements."
 }

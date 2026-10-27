@@ -22,6 +22,8 @@ RQ2 evaluates 187 quality-admissible pairs in 21 model–device groups. RQ3 eval
 
 The YOLOv7 case is available in [single-column](../../results/publication-builds/generic420-20261027/paper/publications/mlsys-r30/figures/yolov7_h8_case_single_column.pdf) and [wide](../../results/publication-builds/generic420-20261027/paper/publications/mlsys-r30/figures/yolov7_h8_case.pdf) layouts. Both use the same measured values. English and German assets share their numerical inputs.
 
+The [staged selection figure and tables](../../results/supplementary-studies/staged-selection/artifacts/en/) show the practical graph–Generic–Native procedure. Each group first tests up to five or twelve cuts with Generic, then its two fastest candidates with Native. The resulting mean Native throughput is 96.20% or 99.65% of the best measured result. Exact winners are found in 17 or 19 of the 21 groups. The percentages describe achieved throughput, not the probability of success on a new model. The [analysis](../../results/supplementary-studies/staged-selection/README.md) defines the candidate counts, evaluation and subgroup results.
+
 ## Reproduction and methods
 
 Run from the repository root:

@@ -18,6 +18,9 @@ Each model–device group contributes equally. Loss is measured against its fast
 | Classifiers | 151 | 9 | 3.1189 |
 | Detectors | 36 | 12 | 0.0176 |
 
+The [staged selection analysis](../staged-selection/README.md) combines graph-based preselection, Generic measurements, and two final Native tests. Its budget curves and tables use the same paired candidates.
+
+
 ## Coverage and interpretation
 
 The paired set contains 204 cuts. The quality rule excludes 17. The broader graph-score set selects 20 cuts per model and accelerator, including multi-tensor boundaries. Of 420 planned configurations, 359 have throughput measurements, 61 cannot be executed, and 28 measured cuts exceed the quality limit. The [coverage table](closure_matrix.csv) gives the counts for each group.

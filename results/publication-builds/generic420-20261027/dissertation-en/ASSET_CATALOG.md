@@ -8,6 +8,7 @@ The [current study](README.md) provides the main entry point. This catalog also 
 | mlsys-r30 | 99 | [English artifacts](../paper/publications/mlsys-r30) |
 | rq3-generic420 | 67 | [English artifacts](../paper/rq3-generic420/en) |
 | split-inference | 81 | [English artifacts](../paper) |
+| staged-selection | 11 | [English artifacts](../staged-selection/artifacts/en) |
 | supplementary-studies/dissertation-development-2026 | 21 | [English artifacts](../../../supplementary-studies/dissertation-development-2026) |
 | supplementary-studies/mlsys-selection-20261007 | 37 | [English artifacts](../../../supplementary-studies/mlsys-selection-20261007) |
 | supplementary-studies/native-endpoint-reconstruction | 12 | [English artifacts](../../../supplementary-studies/native-endpoint-reconstruction/tables) |

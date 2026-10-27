@@ -1,0 +1,7 @@
+task,method,k,policy,groups,candidates,native_budget,generic_tests,native_tests,mean_loss_pct,mean_retained_native_pct,median_loss_pct,max_loss_pct,exact_winners,exact_winner_pct,within_1pct,within_5pct,shortlist_best_preserved
+all,bytes,5,cascade_native2,21,187,2,81,42,3.798185625435318,96.20181437456468,0.0,54.46678185867402,17,80.95238095238095,17,18,21
+all,bytes,12,cascade_native2,21,187,2,137,42,0.353070018388509,99.64692998161149,0.0,5.476326145995247,19,90.47619047619048,19,20,20
+classification,bytes,5,cascade_native2,9,151,2,45,18,8.862433126015741,91.13756687398426,0.0,54.46678185867402,5,55.55555555555556,5,6,9
+classification,bytes,12,cascade_native2,9,151,2,101,18,0.8238300429065211,99.17616995709348,0.0,5.476326145995247,7,77.77777777777777,7,8,8
+detection,bytes,5,cascade_native2,12,36,2,36,24,0.0,100.0,0.0,0.0,12,100.0,12,12,12
+detection,bytes,12,cascade_native2,12,36,2,36,24,0.0,100.0,0.0,0.0,12,100.0,12,12,12

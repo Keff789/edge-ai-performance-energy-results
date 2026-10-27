@@ -1,0 +1,14 @@
+\begin{table}[t]
+\centering\small
+\caption{Stufenweise Auswahl auf den gepaarten Schnitten. Pro Gruppe werden bis zu $k$ nach Bytes ausgewählte Schnitte mit Generic und danach bis zu zwei Generic-Favoriten mit Native getestet. Der mittlere Durchsatz bezieht sich auf den besten gemessenen Native-Schnitt je Gruppe. Alle 21 Gruppen zählen gleich. Die Treffer sind beobachtete Ergebnisse und keine Vorhersage für unbekannte Modelle.}
+\label{tab:staged-budget}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrr@{}}
+\toprule
+Generic + Native & Bester Schnitt & \shortstack{Mittlerer Native-\\Durchsatz (\%)} \\
+\midrule
+Bis zu 5 + 2 & 17/21 (81,0\%) & 96,20 \\
+Bis zu 12 + 2 & 19/21 (90,5\%) & 99,65 \\
+\bottomrule
+\end{tabular*}
+\end{table}
