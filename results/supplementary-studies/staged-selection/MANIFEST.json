@@ -1,0 +1,53 @@
+{
+  "schema": "staged-selection-v1",
+  "paired_cuts": 187,
+  "groups": 21,
+  "primary_method": "bytes",
+  "primary_generic_budgets": [
+    5,
+    12
+  ],
+  "maximum_native_tests": 2,
+  "languages": [
+    "en",
+    "de"
+  ],
+  "fitting_performed": false,
+  "hardware_measurements": false,
+  "inputs": {
+    "data/quality_pairs.csv": "69540a82cc648213168ce9cfe9f9aa6206ba31ae4b57ba37ea38d352488796ce",
+    "analysis/complete_rankings.csv": "8cb4bb7e9d7c50f1ace706d2199470567b8864097d3bc1a44828dff9777d37ee",
+    "analysis/aggregate_curves.csv": "0ce131051506a8552ec7693dc7823ef7e1c506a4a3c0693ccea4780c43eade58"
+  },
+  "generator_sha256": "599473c0437ed4ab5e7ef1a649fdfff4341f23dc933a1641d1fda62871a8c8ce",
+  "style_sha256": "9e042dedfc039a7648f48734cd6692c33f0c838f8cac7f6d7b0c35e04881fc03",
+  "files": {
+    "README.md": "84d953239a2f2148a452751f39f8f4d078b711ff8c98593017be79452b63cdd4",
+    "VALIDATION.json": "46bdc5501de3eecc4df68034d86a33a461f5c1c7523428aa09a6093a376348cf",
+    "artifacts/de/figures/staged_selection_budget.csv": "84ef6c211c6a154492c24634b1bc19f18617d5fba6bbe1fd42646c625fa3631d",
+    "artifacts/de/figures/staged_selection_budget.json": "329201613e717d2a5842c7bad3819800fbc179d8ddaee1cb4cc03af8c6644258",
+    "artifacts/de/figures/staged_selection_budget.pdf": "853a399b4b3278c2183cae357f163d5034d56e2454a516c213f0b709405ddebd",
+    "artifacts/de/figures/staged_selection_budget.png": "a57f897f4334723188d0de511e2bd42f84e98781608b6c535203569dbdec2428",
+    "artifacts/de/figures/staged_selection_budget.svg": "8d26e448c5c249d1361a80d0bb1f969c1492dedfda8bf9d2e16884471c35aa20",
+    "artifacts/de/tables/group_budgets.csv": "86eb7eaf887dcc831b253b33b645faafe035d7fe5af6faf9c0f3ea49fb597d5d",
+    "artifacts/de/tables/native_test_comparison.csv": "56828b17f408b5a6ddb29c796dd37696d7992c79d3897082671b22f03c4e7d2e",
+    "artifacts/de/tables/primary_budget.csv": "fa176b03622132a34166176be74629fa222fecd4994ae2061aa1de94523414c7",
+    "artifacts/de/tables/primary_budget.tex": "c0a3cb2bc6232ed440e88bef04b663285d38fb5eef54c8ac30c1b8f2a2104fbd",
+    "artifacts/de/tables/task_budgets.csv": "702d16de6c082226794c4d58f8466cbe0b4a348faf68e4fc790e340bac421db2",
+    "artifacts/de/tables/task_budgets.tex": "74806df8ae79c4e807cacf30ea07e12daa43f3171e70a0442dd89c715e9a07b5",
+    "artifacts/en/figures/staged_selection_budget.csv": "84ef6c211c6a154492c24634b1bc19f18617d5fba6bbe1fd42646c625fa3631d",
+    "artifacts/en/figures/staged_selection_budget.json": "fdd973c18d792d114a54b6f98af883d6a6937e04d9ea5ac6279367742e228fc8",
+    "artifacts/en/figures/staged_selection_budget.pdf": "c81b0f8462dd6dec9eb7f3eac112740f193e7d901677b516dacc3b5db745d86f",
+    "artifacts/en/figures/staged_selection_budget.png": "3e228c4c119a2b066bcf6158910708ff32be7268422c886d76e3e56eb93f1835",
+    "artifacts/en/figures/staged_selection_budget.svg": "d2a648833398591b6148d3bfea5fee2c50b73c23aa73086110c9fec2541df862",
+    "artifacts/en/tables/group_budgets.csv": "86eb7eaf887dcc831b253b33b645faafe035d7fe5af6faf9c0f3ea49fb597d5d",
+    "artifacts/en/tables/native_test_comparison.csv": "56828b17f408b5a6ddb29c796dd37696d7992c79d3897082671b22f03c4e7d2e",
+    "artifacts/en/tables/primary_budget.csv": "fa176b03622132a34166176be74629fa222fecd4994ae2061aa1de94523414c7",
+    "artifacts/en/tables/primary_budget.tex": "d4178e960362979fa12b13de75453fcc93575656bff02fda4e8a2a64f9ebb1a7",
+    "artifacts/en/tables/task_budgets.csv": "702d16de6c082226794c4d58f8466cbe0b4a348faf68e4fc790e340bac421db2",
+    "artifacts/en/tables/task_budgets.tex": "259648c2f3ca95f778e0b6ea59a85e1d77879889e19c00d80d9bb26f28ba8a7b",
+    "data/group_budgets.csv": "08306f3f8a636f7f3dfcc4e7a79e6fa3d878c78bc6822d38a786b93c9432010e",
+    "data/summary.csv": "22ee8c09f4ea217c4d0eb486e1e17392307bc347622c3c0ba2872133c646c329",
+    "data/summary.json": "ab32475ccdc6116d05c2360258c39303d49f270d34cb54351ba09f618ae981aa"
+  }
+}

@@ -61,11 +61,12 @@
   "commands": [
     "python -I -B scripts/split-inference/reproduce.py --publication mlsys-r30 --languages en de --rq2-study results/supplementary-studies/rq2-native-scope-20261027 --generic420-study results/supplementary-studies/rq3-generic420-detector-corrected-20261027 --output results/publication-builds/generic420-20261027/paper --verify",
     "python -I -B scripts/dissertation/reproduce.py --source results/publication-builds/generic420-20261027/paper --rq2-study results/supplementary-studies/rq2-native-scope-20261027 --generic420-study results/supplementary-studies/rq3-generic420-detector-corrected-20261027 --output results/publication-builds/generic420-20261027/dissertation-de --verify",
+    "python -I -B scripts/supplementary-studies/staged-selection/reproduce.py --paired-study results/supplementary-studies/rq2-native-scope-20261027 --output local-output/staged-selection --languages en de --verify",
     "python -I -B scripts/dissertation/finalize_generic420_publication.py"
   ],
   "current_r30_output_targets_verified": true,
-  "english_dissertation_source_files": 425,
-  "finalization_source_sha256": "2d67ae3b30b7636394e9216b99427d6f0b6c15e9514b3a473c3669c7aae906bd",
+  "english_dissertation_source_files": 436,
+  "finalization_source_sha256": "7704b54be9302f7c2398cdc5c54e3eb042abfa06cd19c9ca63d98368a9414a80",
   "frozen_r22_numerical_files_checked": 126,
   "new_measurements_by_publication_build": 0,
   "private_paths_found": [],
@@ -308,5 +309,63 @@
   "rq3_manifest_sha256": "af640e9ac01b4c0197eac8ec5999be3e3db3560db1bbafe9586c734df30cb91e",
   "rq3_study": "results/supplementary-studies/rq3-generic420-detector-corrected-20261027",
   "schema": "bilingual-publication-integration-verification-v1",
+  "staged_selection_en_de_numerics_identical": true,
+  "staged_selection_input_hashes": {
+    "analysis/aggregate_curves.csv": "0ce131051506a8552ec7693dc7823ef7e1c506a4a3c0693ccea4780c43eade58",
+    "analysis/complete_rankings.csv": "8cb4bb7e9d7c50f1ace706d2199470567b8864097d3bc1a44828dff9777d37ee",
+    "data/quality_pairs.csv": "69540a82cc648213168ce9cfe9f9aa6206ba31ae4b57ba37ea38d352488796ce"
+  },
+  "staged_selection_manifest_files_verified": 54,
+  "staged_selection_manifest_sha256": "ca5299e1d15df25ea0293c87521c2d0cb431737a8a5f8930f574fba8c67cbd48",
+  "staged_selection_primary_budgets": [
+    {
+      "candidates": 187,
+      "exact_winner_pct": 80.95238095238095,
+      "exact_winners": 17,
+      "generic_tests": 81,
+      "groups": 21,
+      "k": 5,
+      "max_loss_pct": 54.46678185867402,
+      "mean_loss_pct": 3.798185625435318,
+      "mean_retained_native_pct": 96.20181437456468,
+      "median_loss_pct": 0.0,
+      "method": "bytes",
+      "native_budget": 2,
+      "native_tests": 42,
+      "policy": "cascade_native2",
+      "shortlist_best_preserved": 21,
+      "task": "all",
+      "within_1pct": 17,
+      "within_5pct": 18
+    },
+    {
+      "candidates": 187,
+      "exact_winner_pct": 90.47619047619048,
+      "exact_winners": 19,
+      "generic_tests": 137,
+      "groups": 21,
+      "k": 12,
+      "max_loss_pct": 5.476326145995247,
+      "mean_loss_pct": 0.353070018388509,
+      "mean_retained_native_pct": 99.64692998161149,
+      "median_loss_pct": 0.0,
+      "method": "bytes",
+      "native_budget": 2,
+      "native_tests": 42,
+      "policy": "cascade_native2",
+      "shortlist_best_preserved": 20,
+      "task": "all",
+      "within_1pct": 19,
+      "within_5pct": 20
+    }
+  ],
+  "staged_selection_study": "results/supplementary-studies/staged-selection",
+  "staged_selection_validation": {
+    "direct_graph_aggregate_checks": 60,
+    "fitting_performed": false,
+    "group_policy_budget_checks": 3780,
+    "hardware_measurements": false,
+    "status": "PASS"
+  },
   "status": "PASS"
 }

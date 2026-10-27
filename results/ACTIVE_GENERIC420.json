@@ -7,7 +7,7 @@
   "measurement_notes": "results/supplementary-studies/rq2-native-scope-20261027/DATA_NOTES.md",
   "paper": "results/publication-builds/generic420-20261027/paper",
   "previous_full_performance_energy_dataset_preserved": "results/split-inference",
-  "publication_update": "Reviewed paired inclusion and consolidated presentation; no new hardware measurements.",
+  "publication_update": "Consolidated paired comparison and retrospective graph–Generic–Native selection; no new hardware measurements.",
   "quality_universe_complete": true,
   "reproduce": "python3 scripts/reproduce_current.py --output local-output/current --languages en de",
   "rq2": "results/supplementary-studies/rq2-native-scope-20261027",
@@ -15,5 +15,6 @@
   "rq3": "results/supplementary-studies/rq3-generic420-detector-corrected-20261027",
   "schema": "generic420-current-public-analysis-v1",
   "source_snapshot_unchanged": true,
+  "staged_selection": "results/supplementary-studies/staged-selection",
   "status": "complete"
 }

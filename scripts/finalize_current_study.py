@@ -8,6 +8,7 @@ REPO = Path(__file__).resolve().parents[1]
 CLOSURE = REPO / 'results/supplementary-studies/generic420-closeout-20261027'
 RQ2 = REPO / 'results/supplementary-studies/rq2-native-scope-20261027'
 RQ3 = REPO / 'results/supplementary-studies/rq3-generic420-detector-corrected-20261027'
+STAGED = REPO / 'results/supplementary-studies/staged-selection'
 BUILD = REPO / 'results/publication-builds/generic420-20261027'
 
 
@@ -30,6 +31,9 @@ def main():
     assert integration['status'] == 'PASS'
     assert integration['rq2_summary_sha256'] == info(RQ2 / 'summary.json')['sha256']
     assert integration['rq3_manifest_sha256'] == info(RQ3 / 'MANIFEST.json')['sha256']
+    assert integration['staged_selection_manifest_sha256'] == info(STAGED / 'MANIFEST.json')['sha256']
+    assert integration['staged_selection_validation']['status'] == 'PASS'
+    assert integration['staged_selection_en_de_numerics_identical']
     assert q2['unresolved_candidates'] == q2['corrected_quality_pending'] == 0
     counts = q3['counts']
     assert counts['fps_pending'] == counts['quality_pending_measured'] == 0
@@ -61,6 +65,8 @@ def main():
         '| Models | Admitted pairs | Groups | Mean Native loss (%) |', '|---|---:|---:|---:|']
     for row in families:
         lines.append(f"| {labels[row['family']]} | {row['paired_candidates']} | {row['model_device_groups']} | {row['mean_loss_pct']:.4f} |")
+    lines += ['', 'The [staged selection analysis](../staged-selection/README.md) combines graph-based preselection, '
+        'Generic measurements, and two final Native tests. Its budget curves and tables use the same paired candidates.', '']
     lines += ['', '## Coverage and interpretation', '',
         f"The paired set contains {q2['original_native_population']} cuts. The quality rule excludes {q2['excluded_candidates']}. "
         'The broader graph-score set selects 20 cuts per model and accelerator, including multi-tensor boundaries. '
@@ -90,9 +96,10 @@ def main():
     active.pop('rq2_remaining_gap', None)
     active['measurement_notes'] = str((RQ2 / 'DATA_NOTES.md').relative_to(REPO))
     active['reproduce'] = 'python3 scripts/reproduce_current.py --output local-output/current --languages en de'
+    active['staged_selection'] = str(STAGED.relative_to(REPO))
     active['source_snapshot_unchanged'] = True
-    active['publication_update'] = ('Current source-bound deployment observations and consolidated presentation.'
-        if current else 'Reviewed paired inclusion and consolidated presentation; no new hardware measurements.')
+    active['publication_update'] = ('Current source-bound deployment observations, paired comparison and retrospective graph–Generic–Native selection.'
+        if current else 'Consolidated paired comparison and retrospective graph–Generic–Native selection; no new hardware measurements.')
     active['current_external_capture_count'] = capture_count
     if current_binding:
         active['current_observation_packages'] = {key:current_binding.get(key, [])
@@ -116,6 +123,8 @@ def main():
         'schema': 'current-publication-validation-v2', 'status': 'PASS',
         'integration': str((BUILD / 'INTEGRATION_VALIDATION.json').relative_to(REPO)),
         'integration_sha256': info(BUILD / 'INTEGRATION_VALIDATION.json')['sha256'],
+        'staged_selection': str(STAGED.relative_to(REPO)),
+        'staged_selection_manifest_sha256': info(STAGED / 'MANIFEST.json')['sha256'],
         'RQ1_values_unchanged': not bool(current),
         'b066_values_unchanged': integration['b066_wide_single_numerical_payload_unchanged'],
         'new_hardware_measurements': capture_count > 0,
@@ -125,6 +134,7 @@ def main():
     changes['rq2'] = q2
     changes['current_pairing_review'] = str((RQ2 / 'inputs/PAIRING_REVIEW_b009.json').relative_to(REPO))
     changes['current_pairing_sensitivity'] = str((RQ2 / 'data/pairing_sensitivity.csv').relative_to(REPO))
+    changes['staged_selection_primary_budgets'] = integration['staged_selection_primary_budgets']
     write(CLOSURE / 'RESULT_CHANGES.json', changes)
     b009 = read(CLOSURE / 'closure_b009.json')
     b009['current_rq2_inclusion'] = {'included': True, 'basis': 'Reviewed executable, runtime and observed-input evidence.',
@@ -153,8 +163,9 @@ def main():
         source_backup='PORTABLE_BACKUP_RECEIPT.json describes the retained measurement sources, not a new mirror of this publication update.',
         git_commit_binding='The containing Git commit identifies this publication update.',
         measurement_notes=str((RQ2 / 'DATA_NOTES.md').relative_to(REPO)))
+    manifest['staged_selection'] = str(STAGED.relative_to(REPO))
     paths = set()
-    for root in [RQ2, RQ3, BUILD, CLOSURE]:
+    for root in [RQ2, RQ3, STAGED, BUILD, CLOSURE]:
         paths.update(p for p in root.rglob('*') if p.is_file() and p != CLOSURE / 'MANIFEST.json'
             and not any(part.startswith('.') or part == '__pycache__' for part in p.relative_to(root).parts))
     paths.add(REPO / 'results/ACTIVE_GENERIC420.json')
