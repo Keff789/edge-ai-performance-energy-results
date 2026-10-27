@@ -2223,6 +2223,19 @@
     "uid": "generic|yolo11l|DeepX|deepx_to_trt|b120"
   },
   {
+    "energy_generation": "six_pack_20261027",
+    "energy_source": "sources/DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q.json",
+    "mixed_generations": false,
+    "new_energy": false,
+    "new_performance": false,
+    "new_quality": false,
+    "performance_generation": "six_pack_20261027",
+    "performance_source": "sources/DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q.json",
+    "quality_generation": "six_pack_20261027",
+    "quality_source": "sources/DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q.json",
+    "uid": "generic|yolo11l|DeepX|deepx_to_trt|b511"
+  },
+  {
     "energy_generation": "rev3_consolidated_20261013",
     "energy_source": "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/data/energy/generic_completed/h10_yolo11l_b003_final_20261010/resume_attempts/f156d66912fd4ea9b02e3656e2c9b3d3/measurement/reports/generic_completed_task_energy.json",
     "mixed_generations": true,
@@ -2613,16 +2626,16 @@
     "uid": "generic|yolov7_paper|H10|hailo10h_to_trt|b066"
   },
   {
-    "energy_generation": "rev3_consolidated_20261013",
-    "energy_source": "_supplements/native_fairness_rev3_20261013/payload/energy/generic_completed/h8_yolov7_b009_final_20261010/resume_attempts/20760624a6584914b5c501a18a0f0753/measurement/reports/generic_completed_task_energy.json",
+    "energy_generation": null,
+    "energy_source": null,
     "mixed_generations": true,
     "new_energy": false,
     "new_performance": false,
     "new_quality": false,
-    "performance_generation": "rev3_consolidated_20261013",
-    "performance_source": "_supplements/native_fairness_rev3_20261013/payload/reports/generic_completed/final20261008/orin_nx_hailo8_01/yolov7_paper/b009/generic_completion_results.json",
-    "quality_generation": "pre_refresh16_selected_evidence_reused",
-    "quality_source": "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/direct_references/quality_transfer/final_native_179_20261008/finalized_179_origin_verified/native_producer_validation_summary.json",
+    "performance_generation": "six_pack_20261027_existing_current_Generic_reuse",
+    "performance_source": "sources/b009_existing_accepted_Generic_FPS_and_own_Q.json",
+    "quality_generation": "six_pack_20261027_existing_current_Generic_reuse",
+    "quality_source": "sources/b009_existing_accepted_Generic_FPS_and_own_Q.json",
     "uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009"
   },
   {
@@ -5364,8 +5377,8 @@
     "new_quality": false,
     "performance_generation": "rev3_consolidated_20261013",
     "performance_source": "_supplements/native_fairness_rev3_20261013/payload/native_producers/performance/final20261008/yolo26m__hailo10h_to_trt__b043__orin_nx_hailo10_01__final20261008_staged/summary.json",
-    "quality_generation": "pre_refresh16_selected_evidence_reused",
-    "quality_source": "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/direct_references/quality_transfer/final_native_179_20261008/finalized_179_origin_verified/native_producer_validation_summary.json",
+    "quality_generation": "six_pack_20261027",
+    "quality_source": "sources/H10_yolo26m_b043_actual_N5000.json",
     "uid": "native|yolo26m|H10|hailo10h_to_trt|b043"
   },
   {
@@ -5429,8 +5442,8 @@
     "new_quality": false,
     "performance_generation": "rev3_consolidated_20261013",
     "performance_source": "_supplements/native_fairness_rev3_20261013/payload/native_producers/performance/final20261008/yolo26m__hailo8_to_trt__b043__orin_nx_hailo8_01__final20261008_staged/summary.json",
-    "quality_generation": "pre_refresh16_selected_evidence_reused",
-    "quality_source": "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/direct_references/quality_transfer/final_native_179_20261008/finalized_179_origin_verified/native_producer_validation_summary.json",
+    "quality_generation": "six_pack_20261027",
+    "quality_source": "sources/H8_yolo26m_b043_actual_N5000.json",
     "uid": "native|yolo26m|H8|hailo8_to_trt|b043"
   },
   {
@@ -5785,16 +5798,16 @@
     "uid": "native|yolov7_paper|H10|native_full_tensorrt|full"
   },
   {
-    "energy_generation": "rev3_consolidated_20261013",
-    "energy_source": "_supplements/native_fairness_rev3_20261013/payload/_snapshots/continuous_retry_current_metadata_20261011/quality_transfer/qualified_energy_import/native_yolov7_h8_b009_full_final_20261010/50e77c48339e579b674fd9ee3ca6968925a9c54853cb670bf5b5dcf0dc2fe569/normal_view/reports/native_energy_measurements/native_producer_energy_results.json",
-    "mixed_generations": true,
+    "energy_generation": "six_pack_20261027",
+    "energy_source": "sources/H8_yolov7_b009_actual_native_energy.json",
+    "mixed_generations": false,
     "new_energy": false,
     "new_performance": false,
     "new_quality": false,
-    "performance_generation": "rev3_consolidated_20261013",
-    "performance_source": "_supplements/native_fairness_rev3_20261013/payload/native_producers/performance/H8/hailo8_to_trt/b009/final20261008/summary.json",
-    "quality_generation": "pre_refresh16_selected_evidence_reused",
-    "quality_source": "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/direct_references/quality_transfer/final_native_179_20261008/finalized_179_origin_verified/native_producer_validation_summary.json",
+    "performance_generation": "six_pack_20261027",
+    "performance_source": "sources/h8_b009_native_fps_v3_portable_v2.json",
+    "quality_generation": "six_pack_20261027",
+    "quality_source": "sources/H8_yolov7_b009_actual_N5000.json",
     "uid": "native|yolov7_paper|H8|hailo8_to_trt|b009"
   },
   {

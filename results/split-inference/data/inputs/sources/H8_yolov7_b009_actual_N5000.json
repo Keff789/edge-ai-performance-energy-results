@@ -1,0 +1,1749 @@
+{
+  "capture": {
+    "FPS_or_energy_remeasurement": false,
+    "additional_nms_applied": false,
+    "backend": "hailo8_to_trt",
+    "case_id": "b009",
+    "model_id": "yolov7_paper",
+    "setup_id": "orin_nx_hailo8_01"
+  },
+  "config": {
+    "source_model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+    "timed_completion_contract": {
+      "artifact_hash_policy": "sha256_over_canonical_same_invocation_result_artifact_v1",
+      "comparison_endpoint_contract": {
+        "canonical_completion_policy_id": "decoded_nms_xyxy_original_classaware_postfilter_v2",
+        "class_aware": true,
+        "class_id_semantics": "integer_model_label_index",
+        "contract_family": "decoded_nms",
+        "coordinate_space": "original_image_xyxy_pixels",
+        "endpoint_contract_complete": true,
+        "endpoint_contract_hash": "43612439aff99a683e0c32f17d9bc70074301ae7445e83c8307439856fbf8a08",
+        "input_hw": [
+          640,
+          640
+        ],
+        "iou_threshold": 0.45,
+        "max_detections": 300,
+        "model_family": "yolov7",
+        "model_id": "yolov7_paper",
+        "nms_semantics_id": "class_aware_nms_xyxy_v1",
+        "output_endpoint_id": "detection:decoded_nms:comparison:43612439aff99a683e0c32f17d9bc70074301ae7445e83c8307439856fbf8a08",
+        "output_record_format": "xyxy_score_class",
+        "schema": "onnx-splitpoint/completed-task-comparison-endpoint",
+        "schema_version": 2,
+        "score_semantics": "probability_0_1",
+        "score_threshold": 0.25,
+        "stage": "decoded_nms",
+        "task": "detection"
+      },
+      "completed_endpoint_contract": {
+        "anchor_table_id": "yolov7_paper_standard_anchors_640_v1",
+        "anchors_by_stride": [
+          {
+            "anchors_wh": [
+              [
+                12,
+                16
+              ],
+              [
+                19,
+                36
+              ],
+              [
+                40,
+                28
+              ]
+            ],
+            "grid_hw": [
+              80,
+              80
+            ],
+            "head_role": "p3",
+            "stride": 8
+          },
+          {
+            "anchors_wh": [
+              [
+                36,
+                75
+              ],
+              [
+                76,
+                55
+              ],
+              [
+                72,
+                146
+              ]
+            ],
+            "grid_hw": [
+              40,
+              40
+            ],
+            "head_role": "p4",
+            "stride": 16
+          },
+          {
+            "anchors_wh": [
+              [
+                142,
+                110
+              ],
+              [
+                192,
+                243
+              ],
+              [
+                459,
+                401
+              ]
+            ],
+            "grid_hw": [
+              20,
+              20
+            ],
+            "head_role": "p5",
+            "stride": 32
+          }
+        ],
+        "class_aware": true,
+        "completed_stage": "decoded_nms",
+        "confidence_threshold": 0.25,
+        "contract_source": "frozen_host_decode_nms_inside_measured_interval:v1",
+        "decoder_format": "multiscale_head",
+        "decoder_id": "yolov7_paper_standard_anchor_classaware_nms_v2",
+        "endpoint_contract_complete": true,
+        "endpoint_contract_hash": "5ecd41662f05438f7c1d0bf4d56f04938f57ed234dd87a46a2c45b84f1c63e0c",
+        "energy_scope": "same_frozen_prepared_input_to_post_nms_hotloop",
+        "frozen_postprocess_contract_sha256": "43727025ff99f07d0fd60c4687dad1de5051fcb51f9b56463bb73a0576eb5cfc",
+        "frozen_postprocess_invariant_contract_sha256": "6b69277ae224620a4ce70fc5891eba6206644fa4d398879cd1a4f7a28f07c0d1",
+        "input_hw": [
+          640,
+          640
+        ],
+        "iou_threshold": 0.45,
+        "max_detections": 300,
+        "model_bound_decoder_contract_sha256": "b51ffac66948d89f7c31394b0a44a0aa88617061343a3fd2ec6691a1e9cf215a",
+        "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+        "nms_implementation": "numpy_class_aware_nms_xyxy_v1",
+        "original_wh": [
+          640,
+          426
+        ],
+        "output_endpoint_id": "detection:decoded_nms:5ecd41662f05438f7c1d0bf4d56f04938f57ed234dd87a46a2c45b84f1c63e0c",
+        "performance_scope": "prepared_input_to_post_nms_detections",
+        "raw_output_tensor_signature": {
+          "tensor_count": 3,
+          "tensors": [
+            {
+              "dtype": "float32",
+              "index": 0,
+              "name": "yolov7_stride_8",
+              "rank": 5,
+              "shape": [
+                1,
+                3,
+                80,
+                80,
+                85
+              ]
+            },
+            {
+              "dtype": "float32",
+              "index": 1,
+              "name": "yolov7_stride_16",
+              "rank": 5,
+              "shape": [
+                1,
+                3,
+                40,
+                40,
+                85
+              ]
+            },
+            {
+              "dtype": "float32",
+              "index": 2,
+              "name": "yolov7_stride_32",
+              "rank": 5,
+              "shape": [
+                1,
+                3,
+                20,
+                20,
+                85
+              ]
+            }
+          ]
+        },
+        "schema": "onnx-splitpoint/frozen-native-detection-completed-endpoint",
+        "schema_version": 2,
+        "source_endpoint_contract_hash": "2e579f896f7b7505560b2606b42b3d8ae4d8a7a8d4c9f26fc525e25b3912ce04",
+        "source_stage": "raw_head",
+        "task": "detection"
+      },
+      "completion_mode": "raw_head_frozen_decode_nms",
+      "content_hash_policy": "canonical_materialized_detection_records_without_ui_labels_v1",
+      "contract_sha256": "2c26c1471f15885ee47a7cba6be4eb31811c57028d4ecd11e35711c7ffb81218",
+      "execution_policy": "async_drain_then_completion_tail_then_count_and_timestamp_v1",
+      "hash_layers": {
+        "implementation": {
+          "identity": {
+            "implementation_artifacts": {
+              "harness_base": {
+                "relative_path": "onnx_splitpoint_tool/runners/harness/base.py",
+                "sha256": "938b3713f32e412dd1f57fcc07a397fa1f3b26ed30afbc945d22f1bb082db06c"
+              },
+              "native_detection_postprocess": {
+                "relative_path": "onnx_splitpoint_tool/native_detection_postprocess.py",
+                "sha256": "8c202f4237ec39316a54dda7ea8f71dd19bae4bb02e3311bbd8fed7be43214b8"
+              },
+              "yolo_harness": {
+                "relative_path": "onnx_splitpoint_tool/runners/harness/yolo.py",
+                "sha256": "ef63cbc2ce549fcde0926456d5a0269c583aef29ba7f031980e0241f00ca5965"
+              }
+            },
+            "processor_contract_sha256": "43727025ff99f07d0fd60c4687dad1de5051fcb51f9b56463bb73a0576eb5cfc"
+          },
+          "kind": "implementation",
+          "schema": "onnx-splitpoint/detection-completion-hash-layer",
+          "schema_version": 1,
+          "sha256": "b7de3bfddec8535c75ed9bf9c1ea4b45f735c4703e7ecb16d2cb0fe0ed461453"
+        },
+        "relation": {
+          "identity": {
+            "comparison_endpoint_contract_hash": "43612439aff99a683e0c32f17d9bc70074301ae7445e83c8307439856fbf8a08",
+            "comparison_output_endpoint_id": "detection:decoded_nms:comparison:43612439aff99a683e0c32f17d9bc70074301ae7445e83c8307439856fbf8a08",
+            "completed_endpoint_contract_hash": "5ecd41662f05438f7c1d0bf4d56f04938f57ed234dd87a46a2c45b84f1c63e0c",
+            "completed_output_endpoint_id": "detection:decoded_nms:5ecd41662f05438f7c1d0bf4d56f04938f57ed234dd87a46a2c45b84f1c63e0c",
+            "relation": "physical_source_to_completed_task_to_comparison",
+            "source_endpoint_contract_hash": "2e579f896f7b7505560b2606b42b3d8ae4d8a7a8d4c9f26fc525e25b3912ce04",
+            "source_output_endpoint_id": "detection:raw_head:2e579f896f7b7505560b2606b42b3d8ae4d8a7a8d4c9f26fc525e25b3912ce04"
+          },
+          "kind": "relation",
+          "schema": "onnx-splitpoint/detection-completion-hash-layer",
+          "schema_version": 1,
+          "sha256": "26e16bde3ec50a3661687f461aaaed35c7c460752b920247c19c449c9fa734d4"
+        },
+        "schema": {
+          "identity": {
+            "canonical_sort_policy": "score_desc_class_id_asc_xyxy_lexicographic_v1",
+            "completed_coordinate_space": "original_image_xyxy_pixels",
+            "completed_record_schema": "xyxy_score_class_id_v1",
+            "completion_mode": "raw_head_frozen_decode_nms",
+            "processor_contract_schema": "onnx-splitpoint/frozen-native-detection-postprocess",
+            "processor_contract_schema_version": 2,
+            "processor_contract_sha256": "43727025ff99f07d0fd60c4687dad1de5051fcb51f9b56463bb73a0576eb5cfc",
+            "source_stage": "raw_head",
+            "source_tensor_signature": {
+              "tensor_count": 3,
+              "tensors": [
+                {
+                  "dtype": "float32",
+                  "index": 0,
+                  "name": "output",
+                  "rank": 5,
+                  "shape": [
+                    1,
+                    3,
+                    80,
+                    80,
+                    85
+                  ]
+                },
+                {
+                  "dtype": "float32",
+                  "index": 1,
+                  "name": "clone_1",
+                  "rank": 5,
+                  "shape": [
+                    1,
+                    3,
+                    40,
+                    40,
+                    85
+                  ]
+                },
+                {
+                  "dtype": "float32",
+                  "index": 2,
+                  "name": "clone_2",
+                  "rank": 5,
+                  "shape": [
+                    1,
+                    3,
+                    20,
+                    20,
+                    85
+                  ]
+                }
+              ]
+            },
+            "task": "detection",
+            "yolov7_head_mapping_sha256": "7ec9018f774b76267d3b0a1edfe6bfca1e6236863a458161f7c45a599b0891e4"
+          },
+          "kind": "schema",
+          "schema": "onnx-splitpoint/detection-completion-hash-layer",
+          "schema_version": 1,
+          "sha256": "44b8d38c4ed67df50f2283fe61a40a3c61fc592c86584f7005cc914ed7c4fed3"
+        }
+      },
+      "implementation_sha256": "b7de3bfddec8535c75ed9bf9c1ea4b45f735c4703e7ecb16d2cb0fe0ed461453",
+      "invocation_hash_policy": "execution_contract_observation_source_result_ordinal_v1",
+      "model_family": "yolov7",
+      "model_id": "yolov7_paper",
+      "observation_relation_policy": [
+        "same_hotloop_sentinel",
+        "independent_replay"
+      ],
+      "performance_energy_contract_identity": "same_completion_execution_contract_sha256",
+      "processor_contract": {
+        "anchor_table_id": "yolov7_paper_standard_anchors_640_v1",
+        "anchors_by_stride": [
+          {
+            "anchors_wh": [
+              [
+                12,
+                16
+              ],
+              [
+                19,
+                36
+              ],
+              [
+                40,
+                28
+              ]
+            ],
+            "grid_hw": [
+              80,
+              80
+            ],
+            "head_role": "p3",
+            "stride": 8
+          },
+          {
+            "anchors_wh": [
+              [
+                36,
+                75
+              ],
+              [
+                76,
+                55
+              ],
+              [
+                72,
+                146
+              ]
+            ],
+            "grid_hw": [
+              40,
+              40
+            ],
+            "head_role": "p4",
+            "stride": 16
+          },
+          {
+            "anchors_wh": [
+              [
+                142,
+                110
+              ],
+              [
+                192,
+                243
+              ],
+              [
+                459,
+                401
+              ]
+            ],
+            "grid_hw": [
+              20,
+              20
+            ],
+            "head_role": "p5",
+            "stride": 32
+          }
+        ],
+        "class_aware": true,
+        "confidence_threshold": 0.25,
+        "contract_sha256": "43727025ff99f07d0fd60c4687dad1de5051fcb51f9b56463bb73a0576eb5cfc",
+        "decoder_format": "multiscale_head",
+        "decoder_id": "yolov7_paper_standard_anchor_classaware_nms_v2",
+        "energy_scope": "same_frozen_prepared_input_to_post_nms_hotloop",
+        "execution_policy": "one_serial_host_tail_per_successful_accelerator_output",
+        "host_postprocess_frozen": true,
+        "implementation_artifacts": {
+          "harness_base": {
+            "relative_path": "onnx_splitpoint_tool/runners/harness/base.py",
+            "sha256": "938b3713f32e412dd1f57fcc07a397fa1f3b26ed30afbc945d22f1bb082db06c"
+          },
+          "native_detection_postprocess": {
+            "relative_path": "onnx_splitpoint_tool/native_detection_postprocess.py",
+            "sha256": "8c202f4237ec39316a54dda7ea8f71dd19bae4bb02e3311bbd8fed7be43214b8"
+          },
+          "yolo_harness": {
+            "relative_path": "onnx_splitpoint_tool/runners/harness/yolo.py",
+            "sha256": "ef63cbc2ce549fcde0926456d5a0269c583aef29ba7f031980e0241f00ca5965"
+          }
+        },
+        "input_hw": [
+          640,
+          640
+        ],
+        "invariant_contract_sha256": "6b69277ae224620a4ce70fc5891eba6206644fa4d398879cd1a4f7a28f07c0d1",
+        "invariant_identity": {
+          "anchor_table_id": "yolov7_paper_standard_anchors_640_v1",
+          "anchors_by_stride": [
+            {
+              "anchors_wh": [
+                [
+                  12,
+                  16
+                ],
+                [
+                  19,
+                  36
+                ],
+                [
+                  40,
+                  28
+                ]
+              ],
+              "grid_hw": [
+                80,
+                80
+              ],
+              "head_role": "p3",
+              "stride": 8
+            },
+            {
+              "anchors_wh": [
+                [
+                  36,
+                  75
+                ],
+                [
+                  76,
+                  55
+                ],
+                [
+                  72,
+                  146
+                ]
+              ],
+              "grid_hw": [
+                40,
+                40
+              ],
+              "head_role": "p4",
+              "stride": 16
+            },
+            {
+              "anchors_wh": [
+                [
+                  142,
+                  110
+                ],
+                [
+                  192,
+                  243
+                ],
+                [
+                  459,
+                  401
+                ]
+              ],
+              "grid_hw": [
+                20,
+                20
+              ],
+              "head_role": "p5",
+              "stride": 32
+            }
+          ],
+          "class_aware": true,
+          "confidence_threshold": 0.25,
+          "decoder_format": "multiscale_head",
+          "decoder_id": "yolov7_paper_standard_anchor_classaware_nms_v2",
+          "energy_scope": "same_frozen_prepared_input_to_post_nms_hotloop",
+          "execution_policy": "one_serial_host_tail_per_successful_accelerator_output",
+          "host_postprocess_frozen": true,
+          "implementation_artifacts": {
+            "harness_base": {
+              "relative_path": "onnx_splitpoint_tool/runners/harness/base.py",
+              "sha256": "938b3713f32e412dd1f57fcc07a397fa1f3b26ed30afbc945d22f1bb082db06c"
+            },
+            "native_detection_postprocess": {
+              "relative_path": "onnx_splitpoint_tool/native_detection_postprocess.py",
+              "sha256": "8c202f4237ec39316a54dda7ea8f71dd19bae4bb02e3311bbd8fed7be43214b8"
+            },
+            "yolo_harness": {
+              "relative_path": "onnx_splitpoint_tool/runners/harness/yolo.py",
+              "sha256": "ef63cbc2ce549fcde0926456d5a0269c583aef29ba7f031980e0241f00ca5965"
+            }
+          },
+          "input_hw": [
+            640,
+            640
+          ],
+          "iou_threshold": 0.45,
+          "max_detections": 300,
+          "model_bound_decoder_contract_sha256": "b51ffac66948d89f7c31394b0a44a0aa88617061343a3fd2ec6691a1e9cf215a",
+          "model_family": "yolov7",
+          "model_id": "yolov7_paper",
+          "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+          "multiscale_activation_mode": "logits",
+          "nms_implementation": "numpy_class_aware_nms_xyxy_v1",
+          "output_contract_family": "decoded_nms",
+          "performance_scope": "prepared_input_to_post_nms_detections",
+          "postprocess_included": true,
+          "raw_output_tensor_signature": {
+            "tensor_count": 3,
+            "tensors": [
+              {
+                "dtype": "float32",
+                "index": 0,
+                "name": "yolov7_stride_8",
+                "rank": 5,
+                "shape": [
+                  1,
+                  3,
+                  80,
+                  80,
+                  85
+                ]
+              },
+              {
+                "dtype": "float32",
+                "index": 1,
+                "name": "yolov7_stride_16",
+                "rank": 5,
+                "shape": [
+                  1,
+                  3,
+                  40,
+                  40,
+                  85
+                ]
+              },
+              {
+                "dtype": "float32",
+                "index": 2,
+                "name": "yolov7_stride_32",
+                "rank": 5,
+                "shape": [
+                  1,
+                  3,
+                  20,
+                  20,
+                  85
+                ]
+              }
+            ]
+          },
+          "schema": "onnx-splitpoint/frozen-native-detection-postprocess",
+          "schema_version": 2,
+          "source_contract_family": "raw_head",
+          "task": "detection"
+        },
+        "iou_threshold": 0.45,
+        "max_detections": 300,
+        "model_bound_decoder_contract": {
+          "activation_mode": "logits",
+          "anchor_table_id": "yolov7_paper_standard_anchors_640_v1",
+          "anchors_by_stride": [
+            {
+              "anchors_wh": [
+                [
+                  12,
+                  16
+                ],
+                [
+                  19,
+                  36
+                ],
+                [
+                  40,
+                  28
+                ]
+              ],
+              "grid_hw": [
+                80,
+                80
+              ],
+              "head_role": "p3",
+              "stride": 8
+            },
+            {
+              "anchors_wh": [
+                [
+                  36,
+                  75
+                ],
+                [
+                  76,
+                  55
+                ],
+                [
+                  72,
+                  146
+                ]
+              ],
+              "grid_hw": [
+                40,
+                40
+              ],
+              "head_role": "p4",
+              "stride": 16
+            },
+            {
+              "anchors_wh": [
+                [
+                  142,
+                  110
+                ],
+                [
+                  192,
+                  243
+                ],
+                [
+                  459,
+                  401
+                ]
+              ],
+              "grid_hw": [
+                20,
+                20
+              ],
+              "head_role": "p5",
+              "stride": 32
+            }
+          ],
+          "decode_equations_id": "yolov5_yolov7_xywh_2x_square_v1",
+          "decoder_contract_sha256": "b51ffac66948d89f7c31394b0a44a0aa88617061343a3fd2ec6691a1e9cf215a",
+          "decoder_id": "yolov7_paper_standard_anchor_classaware_nms_v2",
+          "head_to_stride_policy": "validated_grid_geometry_p3_s8_p4_s16_p5_s32_v1",
+          "input_hw": [
+            640,
+            640
+          ],
+          "model_family": "yolov7",
+          "model_id": "yolov7_paper",
+          "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+          "nms_identity": {
+            "class_aware": true,
+            "confidence_threshold": 0.25,
+            "implementation": "numpy_class_aware_nms_xyxy_v1",
+            "iou_threshold": 0.45,
+            "max_detections": 300,
+            "multi_label": false
+          },
+          "objectness_class_combination": "objectness_probability_times_class_probability",
+          "output_format": "multiscale_head",
+          "postprocess_policy_id": "retained_v27546_conf025_iou045_max300_policy_v1",
+          "preprocess_identity": {
+            "color_space": "RGB",
+            "contract_id": "centered_letterbox_rgb_float32_0_1_pad114_v1",
+            "input_dtype": "float32",
+            "input_layout": "NCHW",
+            "input_scale": "divide_by_255",
+            "inverse_geometry": "remove_centered_padding_then_divide_gain_v1",
+            "pad_value": 114,
+            "placement": "centered_integer_floor_remainder_right_bottom",
+            "resize": "bilinear_preserve_aspect_round"
+          },
+          "raw_record_semantics": "xywh_objectness_coco80_class_channels",
+          "schema": "onnx-splitpoint/yolov7-model-bound-decoder",
+          "schema_version": 2,
+          "sigmoid_arithmetic": "clipped_float64_exp_denominator_to_float32_v1",
+          "use_scope": "production"
+        },
+        "model_bound_decoder_contract_sha256": "b51ffac66948d89f7c31394b0a44a0aa88617061343a3fd2ec6691a1e9cf215a",
+        "model_family": "yolov7",
+        "model_id": "yolov7_paper",
+        "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+        "multiscale_activation_mode": "logits",
+        "nms_implementation": "numpy_class_aware_nms_xyxy_v1",
+        "original_wh": [
+          640,
+          426
+        ],
+        "output_contract_family": "decoded_nms",
+        "performance_scope": "prepared_input_to_post_nms_detections",
+        "postprocess_included": true,
+        "raw_output_tensor_signature": {
+          "tensor_count": 3,
+          "tensors": [
+            {
+              "dtype": "float32",
+              "index": 0,
+              "name": "yolov7_stride_8",
+              "rank": 5,
+              "shape": [
+                1,
+                3,
+                80,
+                80,
+                85
+              ]
+            },
+            {
+              "dtype": "float32",
+              "index": 1,
+              "name": "yolov7_stride_16",
+              "rank": 5,
+              "shape": [
+                1,
+                3,
+                40,
+                40,
+                85
+              ]
+            },
+            {
+              "dtype": "float32",
+              "index": 2,
+              "name": "yolov7_stride_32",
+              "rank": 5,
+              "shape": [
+                1,
+                3,
+                20,
+                20,
+                85
+              ]
+            }
+          ]
+        },
+        "schema": "onnx-splitpoint/frozen-native-detection-postprocess",
+        "schema_version": 2,
+        "source_contract_family": "raw_head",
+        "task": "detection"
+      },
+      "relation_sha256": "26e16bde3ec50a3661687f461aaaed35c7c460752b920247c19c449c9fa734d4",
+      "schema": "onnx-splitpoint/detection-completion-execution-contract",
+      "schema_sha256": "44b8d38c4ed67df50f2283fe61a40a3c61fc592c86584f7005cc914ed7c4fed3",
+      "schema_version": 2,
+      "source_endpoint": {
+        "contract_family": "raw_head",
+        "endpoint_contract_hash": "2e579f896f7b7505560b2606b42b3d8ae4d8a7a8d4c9f26fc525e25b3912ce04",
+        "output_endpoint_attestation_sha256": "610dbde9fb9232fddc9decdce2513aef8a321a4cfa0a9070f97237443887d865",
+        "output_endpoint_id": "detection:raw_head:2e579f896f7b7505560b2606b42b3d8ae4d8a7a8d4c9f26fc525e25b3912ce04",
+        "stage": "raw_head",
+        "task": "detection",
+        "tensor_signature": {
+          "tensor_count": 3,
+          "tensors": [
+            {
+              "dtype": "float32",
+              "index": 0,
+              "name": "output",
+              "rank": 5,
+              "shape": [
+                1,
+                3,
+                80,
+                80,
+                85
+              ]
+            },
+            {
+              "dtype": "float32",
+              "index": 1,
+              "name": "clone_1",
+              "rank": 5,
+              "shape": [
+                1,
+                3,
+                40,
+                40,
+                85
+              ]
+            },
+            {
+              "dtype": "float32",
+              "index": 2,
+              "name": "clone_2",
+              "rank": 5,
+              "shape": [
+                1,
+                3,
+                20,
+                20,
+                85
+              ]
+            }
+          ]
+        }
+      },
+      "task": "detection",
+      "yolov7_head_mapping": {
+        "activation_mode": "logits",
+        "anchor_table_id": "yolov7_paper_standard_anchors_640_v1",
+        "expected_strides": [
+          8,
+          16,
+          32
+        ],
+        "head_mapping_sha256": "7ec9018f774b76267d3b0a1edfe6bfca1e6236863a458161f7c45a599b0891e4",
+        "head_record_semantics": "batch_anchor_grid_y_grid_x_xywh_objectness_class_logits",
+        "heads": [
+          {
+            "anchor_wh": [
+              [
+                12,
+                16
+              ],
+              [
+                19,
+                36
+              ],
+              [
+                40,
+                28
+              ]
+            ],
+            "canonical_shape": [
+              1,
+              3,
+              80,
+              80,
+              85
+            ],
+            "grid_hw": [
+              80,
+              80
+            ],
+            "role": "p3",
+            "stride": 8
+          },
+          {
+            "anchor_wh": [
+              [
+                36,
+                75
+              ],
+              [
+                76,
+                55
+              ],
+              [
+                72,
+                146
+              ]
+            ],
+            "canonical_shape": [
+              1,
+              3,
+              40,
+              40,
+              85
+            ],
+            "grid_hw": [
+              40,
+              40
+            ],
+            "role": "p4",
+            "stride": 16
+          },
+          {
+            "anchor_wh": [
+              [
+                142,
+                110
+              ],
+              [
+                192,
+                243
+              ],
+              [
+                459,
+                401
+              ]
+            ],
+            "canonical_shape": [
+              1,
+              3,
+              20,
+              20,
+              85
+            ],
+            "grid_hw": [
+              20,
+              20
+            ],
+            "role": "p5",
+            "stride": 32
+          }
+        ],
+        "input_hw": [
+          640,
+          640
+        ],
+        "mapping_policy": "validated_grid_and_stride_without_name_or_index_v1",
+        "model_family": "yolov7",
+        "objectness_class_combination": "sigmoid_objectness_times_sigmoid_class",
+        "schema": "onnx-splitpoint/yolov7-stride-head-mapping",
+        "schema_version": 2
+      }
+    },
+    "timed_fps_authority": {
+      "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/collected/rep01/native_fifo_results.json",
+      "sha256": "d91bfb09c7c5acf88e3e4f7f26c46880e0456bdfc630ebb17565715ea4142939",
+      "size_bytes": 791378
+    }
+  },
+  "existing_authority": {
+    "archived_binding_sha256": "d4249fae34e3a4b339bd2597a28ebf594083e1c1988ea2f5a29c04f7cdd5d960",
+    "prior_case_sha256": "278d40cdbc480f1776bb2af4e62622f8a6fc44a4842f5a6e3fdc7f2fb775a94d",
+    "selected_energy_source_sha256": "50e77c48339e579b674fd9ee3ca6968925a9c54853cb670bf5b5dcf0dc2fe569",
+    "selected_performance_source_sha256": "76df7a60e31bf4b5a500bd0949b0dc5f77df64ea11bb6b3a78506f0a2c3d97a4"
+  },
+  "identity": {
+    "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+    "physical_host": "orin_nx_hailo8_01",
+    "uid": "native|yolov7_paper|H8|hailo8_to_trt|b009"
+  },
+  "index": {
+    "accuracy_assessment": {
+      "absolute_loss_pp": 0.24333443032452662,
+      "accuracy_class": "reference_close",
+      "confidence_level": 0.95,
+      "policy_id": "accuracy_reporting_v1",
+      "relative_loss": 0.005285896265169955,
+      "relative_loss_ci": [
+        0.002289480032588807,
+        0.008774227346236218
+      ],
+      "technical_fail": false,
+      "uncertainty": "supported",
+      "uncertainty_reason": ""
+    },
+    "actual_capture_handoff": {
+      "path": "followup_source::six_pack_20261027/h8/native_b009_quality_v2/ACTUAL_CAPTURE_HANDOFF.json",
+      "sha256": "e06176fc4db83b9bb1b5288d2af3b7d4481f0640cac22b37880eaa357b6214fa",
+      "size_bytes": 4530
+    },
+    "candidate": {
+      "path": "followup_source::six_pack_20261027/h8/native_b009_quality_v2/collected/results/models/yolov7_paper/benchmark_results/quality_inputs/orin_nx_hailo8_01/results/b009/results_hailo8_to_trt/task_quality_inputs/composed_candidate.json",
+      "sha256": "efc8c33a489bdbf1faa2bcaefd92b2a10cbce2a512d5fec7b869e2c055baf305",
+      "size_bytes": 10355487
+    },
+    "case_key": "H8_yolov7_b009",
+    "completed_at": "2026-10-27T16:24:01.255764+00:00",
+    "completion_evidence": {
+      "path": "followup_source::six_pack_20261027/h8/native_b009_quality_v2/collected/results/models/yolov7_paper/benchmark_results/quality_inputs/orin_nx_hailo8_01/results/b009/results_hailo8_to_trt/task_quality_inputs/native_completion_evidence.json",
+      "sha256": "b36f9fd0a6796481f5854ac77c3bff0298b04a66e0c220ccb59f4c23c39604cc",
+      "size_bytes": 136086699
+    },
+    "consumer_source_freeze": {
+      "path": "followup_source::six_pack_20261027/h10/source_release_v4/SOURCEFREEZE_READY_v1.json",
+      "sha256": "04fbb923b759339bb703afc41d34025894e405db4c0085c0d2f61bd288b208e0",
+      "size_bytes": 10249
+    },
+    "normal_native_admission": "completed_verified_actual_native_producer",
+    "normal_result": {
+      "path": "followup_source::six_pack_20261027/h8/native_b009_quality_v2/collected/results/models/yolov7_paper/benchmark_results/quality_inputs/orin_nx_hailo8_01/results/b009/results_hailo8_to_trt/task_quality_inputs/composed_central_result.json",
+      "sha256": "b0b9de56a09583caa7bf7370596adc9ef76c01b4a6ab1d540c44cee1bdd1b18c",
+      "size_bytes": 371655
+    },
+    "normal_service_shutdown": {
+      "path": "followup_source::six_pack_20261027/central_quality/native_quality_service_v2/NORMAL_SERVICE_SHUTDOWN.json",
+      "sha256": "e04dbc773e53d6f5638a17068cb98f66fb16576e8f6d8edeac90294bf172d089",
+      "size_bytes": 527
+    },
+    "normal_terminal": {
+      "path": "followup_source::six_pack_20261027/central_quality/native_quality_service_v2/NORMAL_TERMINAL.json",
+      "sha256": "d6dca30a7470dd23ace8085a5519022b28cf4d6e8eef602429c74d8736821316",
+      "size_bytes": 527
+    },
+    "original_completed_case_index": {
+      "path": "followup_source::six_pack_20261027/central_quality/native_quality_service_v2/H8_yolov7_b009/NORMAL_COMPLETED_CASE.json",
+      "sha256": "9e02bf3042f02d7cc4aa574d646dbe25768b684a1d1c5345f2eb1b28af0c25e8",
+      "size_bytes": 4446
+    },
+    "primary": {
+      "bootstrap_elapsed_s": 140.0206575191114,
+      "bootstrap_engine": "management_process_pool:onnx_splitpoint_tool.quality_metrics:detection_quality_evaluator",
+      "bootstrap_repetitions": 1000,
+      "bootstrap_repetitions_requested": 1000,
+      "bootstrap_skipped_reason": "",
+      "candidate": 0.45791324238237674,
+      "ci_computed": true,
+      "ci_high": -0.0010764986717898542,
+      "ci_low": -0.0040293753141052635,
+      "decision_basis": "paired_bootstrap_lower_bound",
+      "delta": -0.002433344303245266,
+      "gate_bound_value": -0.0040293753141052635,
+      "legacy_decision": "pass",
+      "margin": 0.01,
+      "metric": "coco_ap_50_95",
+      "n": 5000,
+      "point_estimate_comparison_basis": "float_inclusive_threshold_tolerance",
+      "prediction_identity_verified": false,
+      "reference": 0.460346586685622,
+      "status": "completed",
+      "uncertainty_status": "computed_bootstrap"
+    },
+    "producer_source_freeze": {
+      "path": "followup_source::six_pack_20261027/h10/source_release_v4/SOURCEFREEZE_READY_v1.json",
+      "sha256": "04fbb923b759339bb703afc41d34025894e405db4c0085c0d2f61bd288b208e0",
+      "size_bytes": 10249
+    },
+    "scientific_status": "reference_close",
+    "shared_pool_terminal_pending": false,
+    "source_after": {
+      "path": "followup_source::six_pack_20261027/central_quality/native_quality_service_v2/SOURCE_AFTER.json",
+      "sha256": "9998ea4ed1dd69568dc18d818f141c93e2daa452071a5b8ed572b6eb41d4af5b",
+      "size_bytes": 1578
+    },
+    "source_request": {
+      "path": "followup_source::six_pack_20261027/h8/native_b009_quality_v2/collected/results/models/yolov7_paper/benchmark_results/quality_inputs/orin_nx_hailo8_01/results/b009/results_hailo8_to_trt/task_quality_inputs/composed_request.json",
+      "sha256": "c7af0d2500c8dd58d8d28dca936eec44a1066290d3f5d74e67d2000cfe376415",
+      "size_bytes": 294360
+    },
+    "submitted_at": "2026-10-27T16:21:30.848970+00:00"
+  },
+  "result": {
+    "accuracy_assessment": {
+      "absolute_loss_pp": 0.24333443032452662,
+      "accuracy_class": "reference_close",
+      "confidence_level": 0.95,
+      "policy_id": "accuracy_reporting_v1",
+      "relative_loss": 0.005285896265169955,
+      "relative_loss_ci": [
+        0.002289480032588807,
+        0.008774227346236218
+      ],
+      "technical_fail": false,
+      "uncertainty": "supported",
+      "uncertainty_reason": ""
+    },
+    "artifact_provenance_binding_status": "verified",
+    "artifact_provenance_claim_eligible": true,
+    "backend": "hailo8_to_trt",
+    "candidate_execution_completion_contract_sha256": "2c26c1471f15885ee47a7cba6be4eb31811c57028d4ecd11e35711c7ffb81218",
+    "case_id": "b009",
+    "decoder_contract_sha256": "0b73aab20157af458bc99c3321381f0ae03fc1377b9c7ecf6a78155c21698ea0",
+    "management_cpu_reference": {
+      "canonical_record_endpoint": "decoded_xyxy_score_class_detections",
+      "cpu_threads": 4,
+      "created_at": "2026-10-27T08:01:02+01:00",
+      "dataset_manifest_sha256": "6e6a01aff3f354ef81379ac56359c89080733c338ac2e42b87c039b899d33dd2",
+      "decoder_sha256": "0b73aab20157af458bc99c3321381f0ae03fc1377b9c7ecf6a78155c21698ea0",
+      "execution_location": "central_management",
+      "explicit_existing_reference_reuse": true,
+      "image_ids_sha256": "9eced8e839495a204fb99096d0cc923f5c41e6bce8ba7155b70999686a303768",
+      "include_in_latency_fps_energy": false,
+      "include_in_pareto": false,
+      "include_in_ranking": false,
+      "model_id": "yolov7_paper",
+      "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+      "nms_sha256": "f2d8a5d54567178e8017d7944ae28dc2f1f78de19eda23af31103623a4792373",
+      "preprocessing_sha256": "411898b92628e2a769a2b8ea7aa35faff35373cfacb863c3ab34b243c105b70e",
+      "provider": "onnxruntime_cpu",
+      "quality_contract": {
+        "canonical_coordinate_space": "original_image_xyxy_pixels",
+        "canonical_record_endpoint": "decoded_xyxy_score_class_detections",
+        "contract_scope": "canonical_quality_record_semantics",
+        "dataset": {
+          "coordinate_space": "original_image_xyxy_pixels",
+          "ground_truth_sha256": "a4d6d2cda4ba2c651a0dae652e41ece1c26fd1ed1ea4b168d293c3a5e5bacf50",
+          "image_count": 5000,
+          "image_ids_sha256": "9eced8e839495a204fb99096d0cc923f5c41e6bce8ba7155b70999686a303768",
+          "manifest_name": "manifest.json",
+          "manifest_sha256": "6e6a01aff3f354ef81379ac56359c89080733c338ac2e42b87c039b899d33dd2"
+        },
+        "decoder": {
+          "identity": {
+            "adapter_id": "vendored_yolo_harness_with_local_fallback_v1",
+            "adapter_location": "quality_record_host_postprocessor",
+            "canonical_record_endpoint": "decoded_xyxy_score_class_detections",
+            "confidence_threshold": 0.25,
+            "implementation_runner_sha256": "51952be0a51b51a558ece8f2f3776068738653a5bba2dbbbabddbdc310893cd5",
+            "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "schema": "onnx-splitpoint/detection-decoder-contract",
+            "schema_version": 1,
+            "source_endpoint_has_integrated_nms": false,
+            "source_endpoint_semantics": "raw_multiscale_head",
+            "source_output_format": "multiscale_head",
+            "source_output_names": [
+              "output",
+              "clone_1",
+              "clone_2"
+            ]
+          },
+          "sha256": "0b73aab20157af458bc99c3321381f0ae03fc1377b9c7ecf6a78155c21698ea0"
+        },
+        "model": {
+          "artifact_name": "yolov7_paper.onnx",
+          "sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d"
+        },
+        "nms": {
+          "identity": {
+            "adapter_id": "vendored_yolo_harness_with_local_fallback_v1",
+            "detr_or_bn6_confidence_threshold": 0.25,
+            "detr_or_bn6_iou_threshold": 0.45,
+            "detr_or_bn6_max_detections": 300,
+            "implementation_runner_sha256": "51952be0a51b51a558ece8f2f3776068738653a5bba2dbbbabddbdc310893cd5",
+            "iou_threshold": 0.45,
+            "max_detections": 300,
+            "schema": "onnx-splitpoint/detection-nms-contract",
+            "schema_version": 1
+          },
+          "sha256": "f2d8a5d54567178e8017d7944ae28dc2f1f78de19eda23af31103623a4792373"
+        },
+        "preprocessing": {
+          "identity": {
+            "color_space": "RGB",
+            "contract_scope": "prepared_rgb_uint8_semantics",
+            "image_scale": "norm",
+            "input_domain": "uint8_0_255",
+            "letterbox": true,
+            "letterbox_pad_value": 114,
+            "pad_value": 114,
+            "placement": "floor_top_left_remainder_bottom_right",
+            "preprocess_mode": "letterbox",
+            "resize_interpolation": "bilinear",
+            "resize_rounding": "python_round_ties_to_even",
+            "schema": "onnx-splitpoint/image-preprocessing-contract",
+            "schema_version": 2,
+            "spatial_transform": "centered_letterbox",
+            "target_hw": [
+              640,
+              640
+            ],
+            "task": "detection"
+          },
+          "runtime_input_encoding": {
+            "image_scale": "norm",
+            "input_dtype": "float32",
+            "schema": "onnx-splitpoint/model-input-encoding-contract",
+            "schema_version": 1
+          },
+          "runtime_input_encoding_sha256": "4ceacc87aae48c1f60bb631b6d636603f1b5dabe4b84b6b812d58ba74ebde43e",
+          "sha256": "411898b92628e2a769a2b8ea7aa35faff35373cfacb863c3ab34b243c105b70e"
+        },
+        "quality_contract_sha256": "4fde396b1808ec5f5070b5317d14203224d7d9c8403c06bc2e274176d408eaf6",
+        "quality_record_endpoint": {
+          "identity": {
+            "canonical_record_endpoint": "decoded_xyxy_score_class_detections",
+            "decoder_contract_sha256": "0b73aab20157af458bc99c3321381f0ae03fc1377b9c7ecf6a78155c21698ea0",
+            "implementation_runner_sha256": "51952be0a51b51a558ece8f2f3776068738653a5bba2dbbbabddbdc310893cd5",
+            "nms_contract_sha256": "f2d8a5d54567178e8017d7944ae28dc2f1f78de19eda23af31103623a4792373",
+            "schema": "onnx-splitpoint/detection-quality-record-endpoint-contract",
+            "schema_version": 1,
+            "vendored_endpoint_attestor_sha256": "0667f3368b684ed5df2b801b8283a725d072722115a91f9cff2c3801a3396139"
+          },
+          "sha256": "27ff3f3f2eef6726aea2f450a9c3cd3791a84098bf474b90353e8733a0ae268c"
+        },
+        "quality_record_endpoint_contract_sha256": "27ff3f3f2eef6726aea2f450a9c3cd3791a84098bf474b90353e8733a0ae268c",
+        "schema": "onnx-splitpoint/central-detection-quality-contract",
+        "schema_version": 1,
+        "source_endpoint_is_raw": true,
+        "source_endpoint_role": "canonical_reference_model_output",
+        "task": "detection"
+      },
+      "quality_contract_sha256": "4fde396b1808ec5f5070b5317d14203224d7d9c8403c06bc2e274176d408eaf6",
+      "record_count": 5000,
+      "reference_immutable": true,
+      "reference_path": "followup_source::b009_completion/n5000_capture_v1/evaluation_runs/generic420_h8_yolov7_b009_current6ac_targeted_n5000_deferred_20261027_20261027_071127/quality_management/references/yolov7_paper/by_source_contract/d60c2b5359daa8b5076e580cebf8cdd632638d6369db0f4481f8914cc3dfb5e1/canonical_cpu_reference.json",
+      "reference_sha256": "cbdb1635c89d65090dccc121ca62c7dc69e30674a22cc08454a45c5ad24470e9",
+      "reference_size_bytes": 11109012,
+      "reference_storage": "immutable_source_contract",
+      "schema": "onnx-splitpoint/management-cpu-reference-job",
+      "schema_version": 1,
+      "semantic_reference_only": true,
+      "source_contract_sha256": "sha256:d60c2b5359daa8b5076e580cebf8cdd632638d6369db0f4481f8914cc3dfb5e1",
+      "source_endpoint_is_raw": true,
+      "source_evaluation_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+      "source_reference_path": "retained_source::canonical_cpu_reference.json",
+      "source_status": {
+        "path": "retained_source::management_cpu_reference_status.json",
+        "sha256": "f905570ae26dc001942cb7c366e9ee36490b947089977f7a5bcbd0cff3e5f160",
+        "size_bytes": 6786
+      },
+      "status": "cache_hit",
+      "task": "detection"
+    },
+    "model_id": "yolov7_paper",
+    "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+    "n": 5000,
+    "native_dataset_producer_source": {
+      "capture_execution_unchanged_metadata_alias_only": true,
+      "commit": "48f4ca4d17f38c3e16f388b7cb172fc1548ed3e1",
+      "installed_source_verified": true,
+      "scientific_and_runtime_sources_identical": [
+        "onnx_splitpoint_tool/accuracy_reporting.py",
+        "onnx_splitpoint_tool/native_command_contract.py",
+        "onnx_splitpoint_tool/native_dataset_quality_export.py",
+        "onnx_splitpoint_tool/native_dataset_quality_h10.py",
+        "onnx_splitpoint_tool/native_dataset_quality_h8.py",
+        "onnx_splitpoint_tool/native_detection_postprocess.py",
+        "onnx_splitpoint_tool/native_output_endpoint.py",
+        "onnx_splitpoint_tool/native_split_quality.py",
+        "onnx_splitpoint_tool/native_three_stage.py",
+        "onnx_splitpoint_tool/preprocessing_contract.py",
+        "onnx_splitpoint_tool/quality_cache.py",
+        "onnx_splitpoint_tool/quality_lifecycle.py",
+        "onnx_splitpoint_tool/quality_metrics.py",
+        "onnx_splitpoint_tool/quality_result_enrichment.py",
+        "onnx_splitpoint_tool/quality_service.py",
+        "onnx_splitpoint_tool/quality_statistics_config.py",
+        "onnx_splitpoint_tool/resources/remote_scripts/native_hailo10_trt_e2e_from_benchmarkset.py",
+        "onnx_splitpoint_tool/resources/remote_scripts/native_hailo_trt_fifo_from_benchmarkset.py",
+        "onnx_splitpoint_tool/runners/backends/hailo_backend.py",
+        "onnx_splitpoint_tool/workflow/runner.py",
+        "scripts/native_hailo10_trt_e2e_from_benchmarkset.py"
+      ],
+      "source_freeze": {
+        "path": "followup_source::six_pack_20261027/h10/source_release_v4/SOURCEFREEZE_READY_v1.json",
+        "sha256": "04fbb923b759339bb703afc41d34025894e405db4c0085c0d2f61bd288b208e0",
+        "size_bytes": 10249
+      },
+      "source_manifest": {
+        "path": "followup_source::six_pack_20261027/h10/source_release_v4/source_export/SOURCE_MANIFEST.json",
+        "sha256": "a7908d134e59a6173f24b12f75948f0b573449304f1bddaa7ba6b04a493ab438",
+        "size_bytes": 445761
+      }
+    },
+    "nms_contract_sha256": "f2d8a5d54567178e8017d7944ae28dc2f1f78de19eda23af31103623a4792373",
+    "preprocessing_contract_sha256": "411898b92628e2a769a2b8ea7aa35faff35373cfacb863c3ab34b243c105b70e",
+    "primary": {
+      "bootstrap_elapsed_s": 140.0206575191114,
+      "bootstrap_engine": "management_process_pool:onnx_splitpoint_tool.quality_metrics:detection_quality_evaluator",
+      "bootstrap_repetitions": 1000,
+      "bootstrap_repetitions_requested": 1000,
+      "bootstrap_skipped_reason": "",
+      "candidate": 0.45791324238237674,
+      "ci_computed": true,
+      "ci_high": -0.0010764986717898542,
+      "ci_low": -0.0040293753141052635,
+      "decision_basis": "paired_bootstrap_lower_bound",
+      "delta": -0.002433344303245266,
+      "gate_bound_value": -0.0040293753141052635,
+      "legacy_decision": "pass",
+      "margin": 0.01,
+      "metric": "coco_ap_50_95",
+      "n": 5000,
+      "point_estimate_comparison_basis": "float_inclusive_threshold_tolerance",
+      "prediction_identity_verified": false,
+      "reference": 0.460346586685622,
+      "status": "completed",
+      "uncertainty_status": "computed_bootstrap"
+    },
+    "producer_binding_eligible": true,
+    "runtime_artifacts": [
+      {
+        "path": "retained_source::part1_boundary_metadata.json",
+        "role": "boundary_metadata",
+        "sha256": "c42b6f628163c5b057ad4727793eeb82e0e0bbffe8f53d2a5b31948de040b40b",
+        "size_bytes": 1072
+      },
+      {
+        "path": "retained_source::source_part2_uint8_dequant_bridge.onnx",
+        "role": "build_part2_onnx",
+        "sha256": "323ffa468244a5d6a2e0b6bf30707631cfb271ccdd5ee60ac719b58fd1515f6f",
+        "size_bytes": 150278928
+      },
+      {
+        "path": "retained_source::part2_uint8_dequant_fp16.engine",
+        "role": "engine",
+        "sha256": "bfe8d53a0a6e2cc95c758aa1da3371003bf381dda1dfe4ec8f3302059f2abab1",
+        "size_bytes": 77390956
+      },
+      {
+        "path": "retained_source::engine_build_receipt.json",
+        "role": "engine_build_receipt",
+        "sha256": "37b7130aee9d4b7397f39a679fe18b7bcde1a1a316175b71d107193a40a84ce7",
+        "size_bytes": 2292
+      },
+      {
+        "path": "retained_source::native_trt_meta.json",
+        "role": "native_trt_meta",
+        "sha256": "2c986fc067a16984fb510cffaa31c583cef7ace39530bcc29ee80c33c0452ff3",
+        "size_bytes": 8839
+      },
+      {
+        "path": "retained_source::part1.hef",
+        "role": "part1_runtime",
+        "sha256": "5bb4af0c18be516ece74eeb4958079e17661c43dca0deac136369a09ee153419",
+        "size_bytes": 1500946
+      },
+      {
+        "path": "retained_source::source_part2.onnx",
+        "role": "source_part2_onnx",
+        "sha256": "8e2c9167d8dcb959a4cab257c9410d3a0be4412798c10562a0c4502b8dfe657a",
+        "size_bytes": 150278110
+      },
+      {
+        "path": "retained_source::trtexec",
+        "role": "trtexec",
+        "sha256": "b800990508793a9bf50713d78d4fedfe475381d8cd749abda80909b9197fa1c4",
+        "size_bytes": 1695696
+      }
+    ]
+  },
+  "source_epochs": {
+    "consumer": {
+      "all_Generic_runtime_members_byte_identical_to_42042": true,
+      "base_commit": "12aebf28aa50190aff19a4335ab8fab8e82ff950",
+      "branch": "fix/native-dataset-quality-six-pack-20261027",
+      "canonical_CPU_reference_statistics_and_policy_unchanged": true,
+      "commit": "48f4ca4d17f38c3e16f388b7cb172fc1548ed3e1",
+      "hardware_capture_started": false,
+      "independent_review": "baseline e2bd PASS; actual Native probe CPU full-contract comparison independently matched",
+      "native_FPS_energy_hotloops_unchanged": true,
+      "native_capture_no_additional_NMS": true,
+      "publication": {
+        "path": "followup_source::six_pack_20261027/h10/source_release_v4/PUBLICATION_v1.json",
+        "sha256": "0412aa77079cf87bd11ea57a332f0b2da7cb8de37355d7a62bdf7089090a03da",
+        "size_bytes": 995
+      },
+      "pushed": true,
+      "recorded_at": "2026-10-27T15:55:24.369108+00:00",
+      "remote_branch_head": "48f4ca4d17f38c3e16f388b7cb172fc1548ed3e1",
+      "runner_bundle": {
+        "path": "followup_source::six_pack_20261027/h10/source_release_v4/runner-bundle.tar.gz",
+        "sha256": "34f178139bddebaf1822b837d33ed694f85d6b29407d2ba7ceac7ad8f7510341",
+        "size_bytes": 527819
+      },
+      "runtime_member_count": 42,
+      "runtime_members": {
+        "runner/run_split_onnxruntime.py": {
+          "sha256": "6a95c0e5ec9e934fe6b5af6b862221b2e8bd52cdfe05ee919bc18586a3c442ee",
+          "size_bytes": 1133124
+        },
+        "splitpoint_runners/__init__.py": {
+          "sha256": "470cbbd32fdcf5324896bb072fff2f7a413ca6a50af6d03a36c7a6603aa87066",
+          "size_bytes": 1355
+        },
+        "splitpoint_runners/_types.py": {
+          "sha256": "50251a53b4de0c3bb5ac4e28bba7101691a88b412fe8703c51b47f050af87232",
+          "size_bytes": 2733
+        },
+        "splitpoint_runners/artifacts.py": {
+          "sha256": "57ec7aee2bd8e6d94f2fc7e5b2c7f2663ea82435219d64320007ef90fc970ce5",
+          "size_bytes": 652
+        },
+        "splitpoint_runners/assets/coco80_labels.json": {
+          "sha256": "76ce1473f01bd271bab54429737358a97160629cf970c5ec8384c2777dd0bae9",
+          "size_bytes": 1024
+        },
+        "splitpoint_runners/assets/coco80_labels.txt": {
+          "sha256": "bd17f1ee35d5f3c862a4894605855abbb9dda4b0621fdb0ac4c2c8c7bb7e730a",
+          "size_bytes": 621
+        },
+        "splitpoint_runners/assets/imagenet_labels.json": {
+          "sha256": "47c75d27d7a4c62415c9c1c4536ac98c68e1417b880987dbc5b166c3b7ebf1d9",
+          "size_bytes": 15491
+        },
+        "splitpoint_runners/assets/imagenet_labels.txt": {
+          "sha256": "ee4fa67b1dd46919ef87529b70e25bdd1ec9ebd350de3ad426e6640eb70320a1",
+          "size_bytes": 10488
+        },
+        "splitpoint_runners/backends/__init__.py": {
+          "sha256": "43fd76f0f2048a270920b27535de86deff4af91301c0df41fe064471b0a3ab65",
+          "size_bytes": 343
+        },
+        "splitpoint_runners/backends/base.py": {
+          "sha256": "9528ee48a9daa4e503f537efd92d8611785d1c76182a182f5ef48a5091471d95",
+          "size_bytes": 954
+        },
+        "splitpoint_runners/backends/hailo_backend.py": {
+          "sha256": "4d7d9fbc974953ce680f6c75bb7b19ed22115a0e4e56cf356f1c2f551ea7e472",
+          "size_bytes": 107589
+        },
+        "splitpoint_runners/backends/hailo_utils.py": {
+          "sha256": "5c2540b77a9db1da89a45614adc6fed1ae5e239de6200b44162332f12166d319",
+          "size_bytes": 6601
+        },
+        "splitpoint_runners/backends/ort_backend.py": {
+          "sha256": "bc2e0cff589616508013cc8a7a5915882a95e8e5400471cce94cecc32f3713be",
+          "size_bytes": 3889
+        },
+        "splitpoint_runners/generic_async.py": {
+          "sha256": "371206dbac1ed1f59fee940d421a786faf06da86b57d38a11f41491e3a7277c1",
+          "size_bytes": 12682
+        },
+        "splitpoint_runners/generic_energy.py": {
+          "sha256": "cca625417615bd5723d963b97e85444115ab477733373046d9c34be26b32d21f",
+          "size_bytes": 17134
+        },
+        "splitpoint_runners/generic_mixed_control.py": {
+          "sha256": "cab425c90bc32894537e1c3c03d39a6fb13444f453f99efe0f19c472463f02b0",
+          "size_bytes": 38911
+        },
+        "splitpoint_runners/generic_mixed_control_binding.py": {
+          "sha256": "107cc031243a76f19cba0442d56ae4db2a1a30bbf1ed78d89f8f94d02595aacc",
+          "size_bytes": 40863
+        },
+        "splitpoint_runners/generic_only.py": {
+          "sha256": "b3ee77bcd13fb780cef7b8fb5f772582958d4cc0dfcc481961a70f8a25e3fc86",
+          "size_bytes": 18129
+        },
+        "splitpoint_runners/generic_passthrough.py": {
+          "sha256": "9665058a5e61a52137c8f4d06d51123594075524118d96c8d29f78ab7a37c68e",
+          "size_bytes": 14694
+        },
+        "splitpoint_runners/generic_quality_accounting.py": {
+          "sha256": "38c049b903ec63a2a3a3a63b923e7a7446f9a97beff6ffaafe644d5a05bd6121",
+          "size_bytes": 25923
+        },
+        "splitpoint_runners/generic_quality_completion.py": {
+          "sha256": "85d7c09e9a1431dc0620ce70caef72f40f6c40768d43305db50dc3c558d964d0",
+          "size_bytes": 67421
+        },
+        "splitpoint_runners/generic_quality_endpoint.py": {
+          "sha256": "944ea5a2804685c44edea54601ef113fe2a4df6c5dd0e7ecc87c392841589959",
+          "size_bytes": 9055
+        },
+        "splitpoint_runners/graph_runner.py": {
+          "sha256": "c032de30403135c37b0813c5a48489d888a1ffade72fc20f8d6cdd329fc12012",
+          "size_bytes": 11773
+        },
+        "splitpoint_runners/harness/__init__.py": {
+          "sha256": "37ba36a48e4f620bb6541a94df2dd856b4730ebd2ce5aa5641caf16c058d29d2",
+          "size_bytes": 184
+        },
+        "splitpoint_runners/harness/base.py": {
+          "sha256": "938b3713f32e412dd1f57fcc07a397fa1f3b26ed30afbc945d22f1bb082db06c",
+          "size_bytes": 4631
+        },
+        "splitpoint_runners/harness/classification.py": {
+          "sha256": "7b523df592b8a0338b1396c105e2a380aef587010c4db7fe0dc5ee368b434758",
+          "size_bytes": 18505
+        },
+        "splitpoint_runners/harness/imagenet_labels.json": {
+          "sha256": "37f6476c0636cfc8591655d614c2f2737318b935870a56f0ebae10aa397ae5f7",
+          "size_bytes": 16493
+        },
+        "splitpoint_runners/harness/yolo.py": {
+          "sha256": "ef63cbc2ce549fcde0926456d5a0269c583aef29ba7f031980e0241f00ca5965",
+          "size_bytes": 87397
+        },
+        "splitpoint_runners/interface_transfer.py": {
+          "sha256": "fcdc990edc2727e5dd9f789b43c45be40a93f264f8d994969b25e6de34d65e40",
+          "size_bytes": 2195
+        },
+        "splitpoint_runners/native_command_contract.py": {
+          "sha256": "b9761162f979efd3931797b2b33e31f3fc219de11484ef43aafadfe1eb1a4744",
+          "size_bytes": 85399
+        },
+        "splitpoint_runners/native_deepx_async.py": {
+          "sha256": "4c2ade64af9d63291ba8869899718e5d8e433218a5a2fffd1f194475c8177029",
+          "size_bytes": 31908
+        },
+        "splitpoint_runners/native_detection_postprocess.py": {
+          "sha256": "8c202f4237ec39316a54dda7ea8f71dd19bae4bb02e3311bbd8fed7be43214b8",
+          "size_bytes": 228471
+        },
+        "splitpoint_runners/native_full_input.py": {
+          "sha256": "33394c0e1dbba2b852239cb0a9a81a82fa658ed14e6c1a85ded06ce9c33b3b5e",
+          "size_bytes": 20840
+        },
+        "splitpoint_runners/native_output_endpoint.py": {
+          "sha256": "0667f3368b684ed5df2b801b8283a725d072722115a91f9cff2c3801a3396139",
+          "size_bytes": 56063
+        },
+        "splitpoint_runners/native_split_quality.py": {
+          "sha256": "4df006a9d50b675ec955bc518510ffcd7200ba9c675ecbc5a723fe1570b51af4",
+          "size_bytes": 102918
+        },
+        "splitpoint_runners/native_split_quality_runtime.py": {
+          "sha256": "0e97f0640686a227519920eb51952413d35ab5c2cd8deca5d30809d235249264",
+          "size_bytes": 82503
+        },
+        "splitpoint_runners/native_three_stage.py": {
+          "sha256": "22657a4b26d12ce3962862537ca7f994ebb7324259b5e25d983344277ab0a129",
+          "size_bytes": 38155
+        },
+        "splitpoint_runners/native_trt_from_benchmarkset.py": {
+          "sha256": "13a135734aa155b6e169d891d4f99de4fb90b5b5ef4b886b75e0a80772d7e9b8",
+          "size_bytes": 87785
+        },
+        "splitpoint_runners/preprocessing_contract.py": {
+          "sha256": "9d8faf47e2291a7fe57829c40c16b97a3719c1ba73091b4d4f60e91272516ffe",
+          "size_bytes": 21563
+        },
+        "splitpoint_runners/request_latency.py": {
+          "sha256": "24635235ac27b4e1afb5fa232fcdb92a37a02aa54c280dbfc8e5523d44c1c89a",
+          "size_bytes": 12549
+        },
+        "splitpoint_runners/runners/__init__.py": {
+          "sha256": "ad46f3b3cbd2c43f56c1016fb0be52ce345474b2ba6b51f3b2d8766d4e16020e",
+          "size_bytes": 247
+        },
+        "splitpoint_runners/task_completion.py": {
+          "sha256": "f8fcf6d53bfbf3024f2232d0e0c47d3b9bc7a9ae4c808dc5fb40bab50f105c30",
+          "size_bytes": 34585
+        }
+      },
+      "runtime_python_count": 37,
+      "schema": "onnx-splitpoint/native-dataset-quality-sourcefreeze",
+      "schema_version": 1,
+      "source_checksums": {
+        "path": "followup_source::six_pack_20261027/h10/source_release_v4/source_export/SHA256SUMS.txt",
+        "sha256": "88c3eba8e9350480e1b4ae3b05cf1792422cf4cd551e1a39137131bbb5f1ea3f",
+        "size_bytes": 281318
+      },
+      "source_export_root": "followup_source::six_pack_20261027/h10/source_release_v4/source_export",
+      "source_integrity": {
+        "path": "followup_source::six_pack_20261027/h10/source_release_v4/SOURCE_INTEGRITY.json",
+        "sha256": "9998ea4ed1dd69568dc18d818f141c93e2daa452071a5b8ed572b6eb41d4af5b",
+        "size_bytes": 1578
+      },
+      "source_manifest": {
+        "path": "followup_source::six_pack_20261027/h10/source_release_v4/source_export/SOURCE_MANIFEST.json",
+        "sha256": "a7908d134e59a6173f24b12f75948f0b573449304f1bddaa7ba6b04a493ab438",
+        "size_bytes": 445761
+      },
+      "source_zip": {
+        "path": "followup_source::six_pack_20261027/h10/source_release_v4/source.zip",
+        "sha256": "597423446374330ae55102a4ed19f9f8d414c2373272e06c8762d3554754caae",
+        "size_bytes": 19613969
+      },
+      "tests": {
+        "path": "followup_source::six_pack_20261027/h10/software_tests_v4/PROBE_TEST_RECEIPT.json",
+        "sha256": "f121b50d292d178164df989e63c912c30ea044d6773c35416eb6620e72171e62",
+        "size_bytes": 611
+      }
+    },
+    "producer": {
+      "all_Generic_runtime_members_byte_identical_to_42042": true,
+      "base_commit": "12aebf28aa50190aff19a4335ab8fab8e82ff950",
+      "branch": "fix/native-dataset-quality-six-pack-20261027",
+      "canonical_CPU_reference_statistics_and_policy_unchanged": true,
+      "commit": "48f4ca4d17f38c3e16f388b7cb172fc1548ed3e1",
+      "hardware_capture_started": false,
+      "independent_review": "baseline e2bd PASS; actual Native probe CPU full-contract comparison independently matched",
+      "native_FPS_energy_hotloops_unchanged": true,
+      "native_capture_no_additional_NMS": true,
+      "publication": {
+        "path": "followup_source::six_pack_20261027/h10/source_release_v4/PUBLICATION_v1.json",
+        "sha256": "0412aa77079cf87bd11ea57a332f0b2da7cb8de37355d7a62bdf7089090a03da",
+        "size_bytes": 995
+      },
+      "pushed": true,
+      "recorded_at": "2026-10-27T15:55:24.369108+00:00",
+      "remote_branch_head": "48f4ca4d17f38c3e16f388b7cb172fc1548ed3e1",
+      "runner_bundle": {
+        "path": "followup_source::six_pack_20261027/h10/source_release_v4/runner-bundle.tar.gz",
+        "sha256": "34f178139bddebaf1822b837d33ed694f85d6b29407d2ba7ceac7ad8f7510341",
+        "size_bytes": 527819
+      },
+      "runtime_member_count": 42,
+      "runtime_members": {
+        "runner/run_split_onnxruntime.py": {
+          "sha256": "6a95c0e5ec9e934fe6b5af6b862221b2e8bd52cdfe05ee919bc18586a3c442ee",
+          "size_bytes": 1133124
+        },
+        "splitpoint_runners/__init__.py": {
+          "sha256": "470cbbd32fdcf5324896bb072fff2f7a413ca6a50af6d03a36c7a6603aa87066",
+          "size_bytes": 1355
+        },
+        "splitpoint_runners/_types.py": {
+          "sha256": "50251a53b4de0c3bb5ac4e28bba7101691a88b412fe8703c51b47f050af87232",
+          "size_bytes": 2733
+        },
+        "splitpoint_runners/artifacts.py": {
+          "sha256": "57ec7aee2bd8e6d94f2fc7e5b2c7f2663ea82435219d64320007ef90fc970ce5",
+          "size_bytes": 652
+        },
+        "splitpoint_runners/assets/coco80_labels.json": {
+          "sha256": "76ce1473f01bd271bab54429737358a97160629cf970c5ec8384c2777dd0bae9",
+          "size_bytes": 1024
+        },
+        "splitpoint_runners/assets/coco80_labels.txt": {
+          "sha256": "bd17f1ee35d5f3c862a4894605855abbb9dda4b0621fdb0ac4c2c8c7bb7e730a",
+          "size_bytes": 621
+        },
+        "splitpoint_runners/assets/imagenet_labels.json": {
+          "sha256": "47c75d27d7a4c62415c9c1c4536ac98c68e1417b880987dbc5b166c3b7ebf1d9",
+          "size_bytes": 15491
+        },
+        "splitpoint_runners/assets/imagenet_labels.txt": {
+          "sha256": "ee4fa67b1dd46919ef87529b70e25bdd1ec9ebd350de3ad426e6640eb70320a1",
+          "size_bytes": 10488
+        },
+        "splitpoint_runners/backends/__init__.py": {
+          "sha256": "43fd76f0f2048a270920b27535de86deff4af91301c0df41fe064471b0a3ab65",
+          "size_bytes": 343
+        },
+        "splitpoint_runners/backends/base.py": {
+          "sha256": "9528ee48a9daa4e503f537efd92d8611785d1c76182a182f5ef48a5091471d95",
+          "size_bytes": 954
+        },
+        "splitpoint_runners/backends/hailo_backend.py": {
+          "sha256": "4d7d9fbc974953ce680f6c75bb7b19ed22115a0e4e56cf356f1c2f551ea7e472",
+          "size_bytes": 107589
+        },
+        "splitpoint_runners/backends/hailo_utils.py": {
+          "sha256": "5c2540b77a9db1da89a45614adc6fed1ae5e239de6200b44162332f12166d319",
+          "size_bytes": 6601
+        },
+        "splitpoint_runners/backends/ort_backend.py": {
+          "sha256": "bc2e0cff589616508013cc8a7a5915882a95e8e5400471cce94cecc32f3713be",
+          "size_bytes": 3889
+        },
+        "splitpoint_runners/generic_async.py": {
+          "sha256": "371206dbac1ed1f59fee940d421a786faf06da86b57d38a11f41491e3a7277c1",
+          "size_bytes": 12682
+        },
+        "splitpoint_runners/generic_energy.py": {
+          "sha256": "cca625417615bd5723d963b97e85444115ab477733373046d9c34be26b32d21f",
+          "size_bytes": 17134
+        },
+        "splitpoint_runners/generic_mixed_control.py": {
+          "sha256": "cab425c90bc32894537e1c3c03d39a6fb13444f453f99efe0f19c472463f02b0",
+          "size_bytes": 38911
+        },
+        "splitpoint_runners/generic_mixed_control_binding.py": {
+          "sha256": "107cc031243a76f19cba0442d56ae4db2a1a30bbf1ed78d89f8f94d02595aacc",
+          "size_bytes": 40863
+        },
+        "splitpoint_runners/generic_only.py": {
+          "sha256": "b3ee77bcd13fb780cef7b8fb5f772582958d4cc0dfcc481961a70f8a25e3fc86",
+          "size_bytes": 18129
+        },
+        "splitpoint_runners/generic_passthrough.py": {
+          "sha256": "9665058a5e61a52137c8f4d06d51123594075524118d96c8d29f78ab7a37c68e",
+          "size_bytes": 14694
+        },
+        "splitpoint_runners/generic_quality_accounting.py": {
+          "sha256": "38c049b903ec63a2a3a3a63b923e7a7446f9a97beff6ffaafe644d5a05bd6121",
+          "size_bytes": 25923
+        },
+        "splitpoint_runners/generic_quality_completion.py": {
+          "sha256": "85d7c09e9a1431dc0620ce70caef72f40f6c40768d43305db50dc3c558d964d0",
+          "size_bytes": 67421
+        },
+        "splitpoint_runners/generic_quality_endpoint.py": {
+          "sha256": "944ea5a2804685c44edea54601ef113fe2a4df6c5dd0e7ecc87c392841589959",
+          "size_bytes": 9055
+        },
+        "splitpoint_runners/graph_runner.py": {
+          "sha256": "c032de30403135c37b0813c5a48489d888a1ffade72fc20f8d6cdd329fc12012",
+          "size_bytes": 11773
+        },
+        "splitpoint_runners/harness/__init__.py": {
+          "sha256": "37ba36a48e4f620bb6541a94df2dd856b4730ebd2ce5aa5641caf16c058d29d2",
+          "size_bytes": 184
+        },
+        "splitpoint_runners/harness/base.py": {
+          "sha256": "938b3713f32e412dd1f57fcc07a397fa1f3b26ed30afbc945d22f1bb082db06c",
+          "size_bytes": 4631
+        },
+        "splitpoint_runners/harness/classification.py": {
+          "sha256": "7b523df592b8a0338b1396c105e2a380aef587010c4db7fe0dc5ee368b434758",
+          "size_bytes": 18505
+        },
+        "splitpoint_runners/harness/imagenet_labels.json": {
+          "sha256": "37f6476c0636cfc8591655d614c2f2737318b935870a56f0ebae10aa397ae5f7",
+          "size_bytes": 16493
+        },
+        "splitpoint_runners/harness/yolo.py": {
+          "sha256": "ef63cbc2ce549fcde0926456d5a0269c583aef29ba7f031980e0241f00ca5965",
+          "size_bytes": 87397
+        },
+        "splitpoint_runners/interface_transfer.py": {
+          "sha256": "fcdc990edc2727e5dd9f789b43c45be40a93f264f8d994969b25e6de34d65e40",
+          "size_bytes": 2195
+        },
+        "splitpoint_runners/native_command_contract.py": {
+          "sha256": "b9761162f979efd3931797b2b33e31f3fc219de11484ef43aafadfe1eb1a4744",
+          "size_bytes": 85399
+        },
+        "splitpoint_runners/native_deepx_async.py": {
+          "sha256": "4c2ade64af9d63291ba8869899718e5d8e433218a5a2fffd1f194475c8177029",
+          "size_bytes": 31908
+        },
+        "splitpoint_runners/native_detection_postprocess.py": {
+          "sha256": "8c202f4237ec39316a54dda7ea8f71dd19bae4bb02e3311bbd8fed7be43214b8",
+          "size_bytes": 228471
+        },
+        "splitpoint_runners/native_full_input.py": {
+          "sha256": "33394c0e1dbba2b852239cb0a9a81a82fa658ed14e6c1a85ded06ce9c33b3b5e",
+          "size_bytes": 20840
+        },
+        "splitpoint_runners/native_output_endpoint.py": {
+          "sha256": "0667f3368b684ed5df2b801b8283a725d072722115a91f9cff2c3801a3396139",
+          "size_bytes": 56063
+        },
+        "splitpoint_runners/native_split_quality.py": {
+          "sha256": "4df006a9d50b675ec955bc518510ffcd7200ba9c675ecbc5a723fe1570b51af4",
+          "size_bytes": 102918
+        },
+        "splitpoint_runners/native_split_quality_runtime.py": {
+          "sha256": "0e97f0640686a227519920eb51952413d35ab5c2cd8deca5d30809d235249264",
+          "size_bytes": 82503
+        },
+        "splitpoint_runners/native_three_stage.py": {
+          "sha256": "22657a4b26d12ce3962862537ca7f994ebb7324259b5e25d983344277ab0a129",
+          "size_bytes": 38155
+        },
+        "splitpoint_runners/native_trt_from_benchmarkset.py": {
+          "sha256": "13a135734aa155b6e169d891d4f99de4fb90b5b5ef4b886b75e0a80772d7e9b8",
+          "size_bytes": 87785
+        },
+        "splitpoint_runners/preprocessing_contract.py": {
+          "sha256": "9d8faf47e2291a7fe57829c40c16b97a3719c1ba73091b4d4f60e91272516ffe",
+          "size_bytes": 21563
+        },
+        "splitpoint_runners/request_latency.py": {
+          "sha256": "24635235ac27b4e1afb5fa232fcdb92a37a02aa54c280dbfc8e5523d44c1c89a",
+          "size_bytes": 12549
+        },
+        "splitpoint_runners/runners/__init__.py": {
+          "sha256": "ad46f3b3cbd2c43f56c1016fb0be52ce345474b2ba6b51f3b2d8766d4e16020e",
+          "size_bytes": 247
+        },
+        "splitpoint_runners/task_completion.py": {
+          "sha256": "f8fcf6d53bfbf3024f2232d0e0c47d3b9bc7a9ae4c808dc5fb40bab50f105c30",
+          "size_bytes": 34585
+        }
+      },
+      "runtime_python_count": 37,
+      "schema": "onnx-splitpoint/native-dataset-quality-sourcefreeze",
+      "schema_version": 1,
+      "source_checksums": {
+        "path": "followup_source::six_pack_20261027/h10/source_release_v4/source_export/SHA256SUMS.txt",
+        "sha256": "88c3eba8e9350480e1b4ae3b05cf1792422cf4cd551e1a39137131bbb5f1ea3f",
+        "size_bytes": 281318
+      },
+      "source_export_root": "followup_source::six_pack_20261027/h10/source_release_v4/source_export",
+      "source_integrity": {
+        "path": "followup_source::six_pack_20261027/h10/source_release_v4/SOURCE_INTEGRITY.json",
+        "sha256": "9998ea4ed1dd69568dc18d818f141c93e2daa452071a5b8ed572b6eb41d4af5b",
+        "size_bytes": 1578
+      },
+      "source_manifest": {
+        "path": "followup_source::six_pack_20261027/h10/source_release_v4/source_export/SOURCE_MANIFEST.json",
+        "sha256": "a7908d134e59a6173f24b12f75948f0b573449304f1bddaa7ba6b04a493ab438",
+        "size_bytes": 445761
+      },
+      "source_zip": {
+        "path": "followup_source::six_pack_20261027/h10/source_release_v4/source.zip",
+        "sha256": "597423446374330ae55102a4ed19f9f8d414c2373272e06c8762d3554754caae",
+        "size_bytes": 19613969
+      },
+      "tests": {
+        "path": "followup_source::six_pack_20261027/h10/software_tests_v4/PROBE_TEST_RECEIPT.json",
+        "sha256": "f121b50d292d178164df989e63c912c30ea044d6773c35416eb6620e72171e62",
+        "size_bytes": 611
+      }
+    }
+  },
+  "upstream": {
+    "index_sha256": "6dfb3508ef381290286ca946dcf64d9df3805fac4303dd263a583e3ce337f52b",
+    "normal_result": {
+      "path": "followup_source::six_pack_20261027/h8/native_b009_quality_v2/collected/results/models/yolov7_paper/benchmark_results/quality_inputs/orin_nx_hailo8_01/results/b009/results_hailo8_to_trt/task_quality_inputs/composed_central_result.json",
+      "sha256": "b0b9de56a09583caa7bf7370596adc9ef76c01b4a6ab1d540c44cee1bdd1b18c",
+      "size_bytes": 371655
+    }
+  }
+}

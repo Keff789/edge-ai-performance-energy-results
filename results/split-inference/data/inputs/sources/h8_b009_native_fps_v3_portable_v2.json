@@ -1,0 +1,638 @@
+{
+  "current_quality_or_energy_admission_inferred": false,
+  "identity": {
+    "backend": "hailo8_to_trt",
+    "case_id": "b009",
+    "kind": "split",
+    "model_id": "yolov7_paper",
+    "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+    "physical_host": "orin_nx_hailo8_01",
+    "runner": "native",
+    "setup_id": "H8",
+    "uid": "native|yolov7_paper|H8|hailo8_to_trt|b009"
+  },
+  "normal_receipt": {
+    "actual_capture_action": {
+      "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/ACTION.result.json",
+      "sha256": "6213c81d9056a9e701cfdbe91289228833dc7ec196f1e9e5785f57a6b17bf794",
+      "size_bytes": 3534
+    },
+    "actual_capture_finished_at": "2026-10-27T15:00:36.593502+00:00",
+    "actual_capture_started_at": "2026-10-27T14:59:02.792477+00:00",
+    "cleanup": {
+      "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/CLEANUP_STATUS.json",
+      "sha256": "17b416316d20581a0d363aec71bb33b035ccfe391c5dd036fa24691887d537ac",
+      "size_bytes": 844
+    },
+    "current_preprocessing": {
+      "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/CURRENT_PREPROCESSING_EXECUTION.json",
+      "sha256": "87a377a19bfb6fcdaef27f876bbfdb6c681630743f330c85708cf7b0a04c06a1",
+      "size_bytes": 2383
+    },
+    "fps_median": 44.76443847494783,
+    "fresh_native_N5000_quality_pending": true,
+    "fresh_native_energy_pending": true,
+    "native_execution_completion_contract_sha256": "2c26c1471f15885ee47a7cba6be4eb31811c57028d4ecd11e35711c7ffb81218",
+    "native_runner_sha256": "5ffd823ff94a946d60fcba74562242c576756b4154741fa77ab7689de44e2e4e",
+    "new_hardware_started_by_import": false,
+    "no_historical_preprocessing_execution_inferred": true,
+    "normal_import_action": {
+      "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/normal_import/ACTION.result.json",
+      "sha256": "7811c58b545aea4fc2bee784fe68629bca7a187b9806739eaa82c32565e41238",
+      "size_bytes": 2851
+    },
+    "normal_import_finished_at": "2026-10-27T15:02:02.465028+00:00",
+    "normal_portable_consumer_status": "portable_binding_command_and_consumer_attestation_exact_match",
+    "normal_product_entrypoint": "scripts/native_producer_final_report.py",
+    "normal_repetition_claim_identity_status": "exact",
+    "normal_row_ok": true,
+    "normal_row_status": "ok",
+    "normal_summary": {
+      "json_pointer": "/rows/0",
+      "normal_row_sha256": "32c6ca320c95dc9ee0df507d2ea42ea2be5bb7eeeb2cb57b442118c12b0b1e8c",
+      "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/normal_import/reports/native_producer_combined_summary.json",
+      "sha256": "76df7a60e31bf4b5a500bd0949b0dc5f77df64ea11bb6b3a78506f0a2c3d97a4",
+      "size_bytes": 2937681
+    },
+    "previous_attempts_preserved": [
+      {
+        "classification": "failed_before_timing_output_authority_missing",
+        "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v1"
+      },
+      {
+        "classification": "physically_measured_diagnostic_not_normally_admitted",
+        "excluded_independent_of_FPS": true,
+        "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v2",
+        "reason": "cache_verify_only produced diagnostic_metadata_only portable attestation"
+      }
+    ],
+    "repeats": [
+      {
+        "completed_frames": 1000,
+        "fps_makespan": 44.69742402353799,
+        "native_attestation_status": "local_files_rehashed_and_exact_command_join_verified",
+        "native_command_contract_sha256": "6f6316a869b022cf1698fd0c5683971a522e478ccf082ffd01d43644e87eea92",
+        "process_evidence": [
+          {
+            "clock_domain": "perf_counter_ns:process:1543544",
+            "json_pointer": "/request_latency/clock_domain",
+            "namespace": "dut_native_python",
+            "process_id": 1543544,
+            "producer_source": {
+              "path": "followup_source::h8_diagnostic/original_semantic_controller_release_v1/source_export/onnx_splitpoint_tool/runners/request_latency.py",
+              "sha256": "24635235ac27b4e1afb5fa232fcdb92a37a02aa54c280dbfc8e5523d44c1c89a",
+              "size_bytes": 12549
+            },
+            "producer_source_line": 126,
+            "runtime_instance_id": "fresh_runtime:0e68b1d72ed4087e2e9548593d21b9edbe0ed0d7f64cb65052286e4e03e02847",
+            "source": {
+              "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/collected/rep01/native_fifo_results.json",
+              "sha256": "d91bfb09c7c5acf88e3e4f7f26c46880e0456bdfc630ebb17565715ea4142939",
+              "size_bytes": 791378
+            },
+            "start_ticks": null
+          },
+          {
+            "cleanup_proven": true,
+            "json_pointer": "/capture",
+            "namespace": "controller_ssh",
+            "process_id": 4087008,
+            "returncode": 0,
+            "runtime_instance_id": "fresh_runtime:0e68b1d72ed4087e2e9548593d21b9edbe0ed0d7f64cb65052286e4e03e02847",
+            "source": {
+              "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/transport/ssh_943d7a7e7d514bccb4f66deef053b1fe.json",
+              "sha256": "72d4971797e531915c005253666f8232d53314d623e21cd807487c6a31e968b3",
+              "size_bytes": 27049
+            },
+            "start_ticks": "184137691"
+          }
+        ],
+        "raw_report": {
+          "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/collected/rep01/native_fifo_results.json",
+          "sha256": "d91bfb09c7c5acf88e3e4f7f26c46880e0456bdfc630ebb17565715ea4142939",
+          "size_bytes": 791378
+        },
+        "repeat": 1,
+        "runtime_instance_id": "fresh_runtime:0e68b1d72ed4087e2e9548593d21b9edbe0ed0d7f64cb65052286e4e03e02847",
+        "warmup_completed": 100,
+        "warmup_contract": "fully_drained_before_worker_start"
+      },
+      {
+        "completed_frames": 1000,
+        "fps_makespan": 44.76443847494783,
+        "native_attestation_status": "local_files_rehashed_and_exact_command_join_verified",
+        "native_command_contract_sha256": "1f1795761a3754713e447544db6949c3bb1d07cbeec37a50a33887088b2963be",
+        "process_evidence": [
+          {
+            "clock_domain": "perf_counter_ns:process:1545817",
+            "json_pointer": "/request_latency/clock_domain",
+            "namespace": "dut_native_python",
+            "process_id": 1545817,
+            "producer_source": {
+              "path": "followup_source::h8_diagnostic/original_semantic_controller_release_v1/source_export/onnx_splitpoint_tool/runners/request_latency.py",
+              "sha256": "24635235ac27b4e1afb5fa232fcdb92a37a02aa54c280dbfc8e5523d44c1c89a",
+              "size_bytes": 12549
+            },
+            "producer_source_line": 126,
+            "runtime_instance_id": "fresh_runtime:b3e2b0caf289dadfad032c7a3376940e06e75139a37a70116f911752800fa69a",
+            "source": {
+              "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/collected/rep02/native_fifo_results.json",
+              "sha256": "0b928b878067d61cca733ff857ecf6b9c9a1e13b1622a39136b092e74da4c883",
+              "size_bytes": 791390
+            },
+            "start_ticks": null
+          },
+          {
+            "cleanup_proven": true,
+            "json_pointer": "/capture",
+            "namespace": "controller_ssh",
+            "process_id": 4087248,
+            "returncode": 0,
+            "runtime_instance_id": "fresh_runtime:b3e2b0caf289dadfad032c7a3376940e06e75139a37a70116f911752800fa69a",
+            "source": {
+              "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/transport/ssh_a1ca6d98a4c94c22b7846ec039870ed5.json",
+              "sha256": "0453b25fd43558259489a394fa58c4f8a3e56b64f2bace20d43f8616c10bb36b",
+              "size_bytes": 27049
+            },
+            "start_ticks": "184140539"
+          }
+        ],
+        "raw_report": {
+          "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/collected/rep02/native_fifo_results.json",
+          "sha256": "0b928b878067d61cca733ff857ecf6b9c9a1e13b1622a39136b092e74da4c883",
+          "size_bytes": 791390
+        },
+        "repeat": 2,
+        "runtime_instance_id": "fresh_runtime:b3e2b0caf289dadfad032c7a3376940e06e75139a37a70116f911752800fa69a",
+        "warmup_completed": 100,
+        "warmup_contract": "fully_drained_before_worker_start"
+      },
+      {
+        "completed_frames": 1000,
+        "fps_makespan": 44.830634878290454,
+        "native_attestation_status": "local_files_rehashed_and_exact_command_join_verified",
+        "native_command_contract_sha256": "28c54129c7a4f7acff2ba449d3c8f50e1620a354f48e56a41792a37ec777c443",
+        "process_evidence": [
+          {
+            "clock_domain": "perf_counter_ns:process:1548090",
+            "json_pointer": "/request_latency/clock_domain",
+            "namespace": "dut_native_python",
+            "process_id": 1548090,
+            "producer_source": {
+              "path": "followup_source::h8_diagnostic/original_semantic_controller_release_v1/source_export/onnx_splitpoint_tool/runners/request_latency.py",
+              "sha256": "24635235ac27b4e1afb5fa232fcdb92a37a02aa54c280dbfc8e5523d44c1c89a",
+              "size_bytes": 12549
+            },
+            "producer_source_line": 126,
+            "runtime_instance_id": "fresh_runtime:08d1011792793763eb31dee98efa690749d860ee331a37c90122179dcfa594fc",
+            "source": {
+              "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/collected/rep03/native_fifo_results.json",
+              "sha256": "0d5ca624a9360791dbeca62325d410857487b373e3b6193e162a4ca241f22e98",
+              "size_bytes": 791375
+            },
+            "start_ticks": null
+          },
+          {
+            "cleanup_proven": true,
+            "json_pointer": "/capture",
+            "namespace": "controller_ssh",
+            "process_id": 4087535,
+            "returncode": 0,
+            "runtime_instance_id": "fresh_runtime:08d1011792793763eb31dee98efa690749d860ee331a37c90122179dcfa594fc",
+            "source": {
+              "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/transport/ssh_d40725e1f1e943f9b0711ceb6a558ebf.json",
+              "sha256": "3dcdbe6e4a2da5baa9b5f818d6bc6733a466e70bec8e5bbf1bd53a3f521b94b3",
+              "size_bytes": 27046
+            },
+            "start_ticks": "184143378"
+          }
+        ],
+        "raw_report": {
+          "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/collected/rep03/native_fifo_results.json",
+          "sha256": "0d5ca624a9360791dbeca62325d410857487b373e3b6193e162a4ca241f22e98",
+          "size_bytes": 791375
+        },
+        "repeat": 3,
+        "runtime_instance_id": "fresh_runtime:08d1011792793763eb31dee98efa690749d860ee331a37c90122179dcfa594fc",
+        "warmup_completed": 100,
+        "warmup_contract": "fully_drained_before_worker_start"
+      }
+    ],
+    "schema": "six-pack-normal-native-three-process-FPS-import-receipt-v1",
+    "source_commit": "42042a3fc6269197a771f48d7982dafa8158436d",
+    "sourcefreeze": {
+      "path": "followup_source::h8_diagnostic/original_semantic_controller_release_v1/SOURCEFREEZE_READY_v1.json",
+      "sha256": "0d524a31ee9fc50bfe9ef6245884266c8e813acc20cd0025b36cbc3f6c33c173",
+      "size_bytes": 12973
+    }
+  },
+  "normal_row": {
+    "native_split_final_portable_binding_valid": true,
+    "ok": true,
+    "repetition_claim_identity_status": "exact",
+    "repetition_count_valid": 3,
+    "repetition_independence_verified": true,
+    "status": "ok"
+  },
+  "prior_diagnostic_attempts_retained": [
+    {
+      "classification": "failed_before_timing_output_authority_missing",
+      "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v1"
+    },
+    {
+      "classification": "physically_measured_diagnostic_not_normally_admitted",
+      "excluded_independent_of_FPS": true,
+      "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v2",
+      "reason": "cache_verify_only produced diagnostic_metadata_only portable attestation"
+    }
+  ],
+  "repetitions": [
+    {
+      "actual_source_sha256": "d91bfb09c7c5acf88e3e4f7f26c46880e0456bdfc630ebb17565715ea4142939",
+      "completed_frames": 1000,
+      "completed_task_comparison_endpoint_contract_hash": "43612439aff99a683e0c32f17d9bc70074301ae7445e83c8307439856fbf8a08",
+      "completed_task_completion_mode": "native_three_stage_fast_oracle_outside_timing",
+      "completed_task_endpoint_contract_hash": "5ecd41662f05438f7c1d0bf4d56f04938f57ed234dd87a46a2c45b84f1c63e0c",
+      "completed_work_units": 1000,
+      "completion_execution_contract_sha256": "2c26c1471f15885ee47a7cba6be4eb31811c57028d4ecd11e35711c7ffb81218",
+      "fps_makespan": 44.69742402353799,
+      "measurement_boundary": "workers_ready_to_last_completed_task_frame",
+      "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+      "native_command_contract": {
+        "backend": "hailo8_to_trt",
+        "case": "b009",
+        "engine_sha256": "bfe8d53a0a6e2cc95c758aa1da3371003bf381dda1dfe4ec8f3302059f2abab1",
+        "hef_sha256": "5bb4af0c18be516ece74eeb4958079e17661c43dca0deac136369a09ee153419",
+        "input_image_sha256": "ffe0f0cec3b2e27aab1967229cdf0a0d7751dcdd5800322f0b8ac0dffb3b8a8d",
+        "model": "yolov7_paper",
+        "native_executable_sha256": "7b13b22842816e9accd853f2c752aab43acf2ef6e16f48376b2f61c74c6c614b",
+        "precision": "uint8_dequant_fp16",
+        "prepared_input_contract": {
+          "dtype": "uint8",
+          "format": "raw_runtime_tensor",
+          "layout": "HWC",
+          "letterbox_pad_value": 114,
+          "letterbox_pad_value_effective": 114,
+          "letterbox_pad_value_requested": 114,
+          "name": "yolov7_paper_part1_b9/input_layer1",
+          "normalization": "uint8_0_255",
+          "pad_value_effective": 114,
+          "preprocess": "shared_prepared_rgb_uint8",
+          "preprocess_mode_effective": "letterbox",
+          "preprocess_mode_requested": "letterbox",
+          "shape": [
+            640,
+            640,
+            3
+          ],
+          "shared_rgb_source": "retained_source::current_prepared_rgb.bin",
+          "shared_rgb_source_sha256": "0bd0f530dd401d77b085e0cd847c03cef94346395ff6e852a68f6e615c58b8cb",
+          "source_domain": "uint8_0_255",
+          "source_image": "retained_source::000000000139.jpg",
+          "source_image_sha256": "ffe0f0cec3b2e27aab1967229cdf0a0d7751dcdd5800322f0b8ac0dffb3b8a8d",
+          "task": "detection"
+        },
+        "runner_sha256": "5ffd823ff94a946d60fcba74562242c576756b4154741fa77ab7689de44e2e4e",
+        "setup_id": "orin_nx_hailo8_01"
+      },
+      "postprocess_completed_frames": 1000,
+      "postprocess_completion_verified": true,
+      "postprocess_included": true,
+      "precision": "uint8_dequant_fp16",
+      "request_latency": {
+        "clock_domain": "perf_counter_ns:process:1543544",
+        "count": 1000,
+        "expected_count": 1000,
+        "status": "complete",
+        "task_complete": true
+      },
+      "runtime_instance_id": "fresh_runtime:0e68b1d72ed4087e2e9548593d21b9edbe0ed0d7f64cb65052286e4e03e02847",
+      "timing_input_binding": {
+        "canonical_rgb_sha256": "0bd0f530dd401d77b085e0cd847c03cef94346395ff6e852a68f6e615c58b8cb",
+        "executed_rgb_matches_common_preprocessing": true,
+        "geometry": {
+          "mode": "letterbox",
+          "pad_ltrb": [
+            0,
+            107,
+            0,
+            107
+          ],
+          "pad_value": 114,
+          "resized_hw": [
+            426,
+            640
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "source_hw": [
+            426,
+            640
+          ],
+          "target_hw": [
+            640,
+            640
+          ]
+        },
+        "input_image_sha256": "ffe0f0cec3b2e27aab1967229cdf0a0d7751dcdd5800322f0b8ac0dffb3b8a8d",
+        "preprocessing_contract": {
+          "color_space": "RGB",
+          "contract_scope": "prepared_rgb_uint8_semantics",
+          "image_scale": "norm",
+          "input_domain": "uint8_0_255",
+          "letterbox": true,
+          "letterbox_pad_value": 114,
+          "pad_value": 114,
+          "placement": "floor_top_left_remainder_bottom_right",
+          "preprocess_mode": "letterbox",
+          "resize_interpolation": "bilinear",
+          "resize_rounding": "python_round_ties_to_even",
+          "schema": "onnx-splitpoint/image-preprocessing-contract",
+          "schema_version": 2,
+          "spatial_transform": "centered_letterbox",
+          "target_hw": [
+            640,
+            640
+          ],
+          "task": "detection"
+        },
+        "preprocessing_contract_sha256": "411898b92628e2a769a2b8ea7aa35faff35373cfacb863c3ab34b243c105b70e",
+        "preprocessing_timed": false,
+        "sequence": "single_exact_prepared_feed_repeated"
+      },
+      "warmup": 100,
+      "warmup_contract": "fully_drained_before_worker_start"
+    },
+    {
+      "actual_source_sha256": "0b928b878067d61cca733ff857ecf6b9c9a1e13b1622a39136b092e74da4c883",
+      "completed_frames": 1000,
+      "completed_task_comparison_endpoint_contract_hash": "43612439aff99a683e0c32f17d9bc70074301ae7445e83c8307439856fbf8a08",
+      "completed_task_completion_mode": "native_three_stage_fast_oracle_outside_timing",
+      "completed_task_endpoint_contract_hash": "5ecd41662f05438f7c1d0bf4d56f04938f57ed234dd87a46a2c45b84f1c63e0c",
+      "completed_work_units": 1000,
+      "completion_execution_contract_sha256": "2c26c1471f15885ee47a7cba6be4eb31811c57028d4ecd11e35711c7ffb81218",
+      "fps_makespan": 44.76443847494783,
+      "measurement_boundary": "workers_ready_to_last_completed_task_frame",
+      "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+      "native_command_contract": {
+        "backend": "hailo8_to_trt",
+        "case": "b009",
+        "engine_sha256": "bfe8d53a0a6e2cc95c758aa1da3371003bf381dda1dfe4ec8f3302059f2abab1",
+        "hef_sha256": "5bb4af0c18be516ece74eeb4958079e17661c43dca0deac136369a09ee153419",
+        "input_image_sha256": "ffe0f0cec3b2e27aab1967229cdf0a0d7751dcdd5800322f0b8ac0dffb3b8a8d",
+        "model": "yolov7_paper",
+        "native_executable_sha256": "7b13b22842816e9accd853f2c752aab43acf2ef6e16f48376b2f61c74c6c614b",
+        "precision": "uint8_dequant_fp16",
+        "prepared_input_contract": {
+          "dtype": "uint8",
+          "format": "raw_runtime_tensor",
+          "layout": "HWC",
+          "letterbox_pad_value": 114,
+          "letterbox_pad_value_effective": 114,
+          "letterbox_pad_value_requested": 114,
+          "name": "yolov7_paper_part1_b9/input_layer1",
+          "normalization": "uint8_0_255",
+          "pad_value_effective": 114,
+          "preprocess": "shared_prepared_rgb_uint8",
+          "preprocess_mode_effective": "letterbox",
+          "preprocess_mode_requested": "letterbox",
+          "shape": [
+            640,
+            640,
+            3
+          ],
+          "shared_rgb_source": "retained_source::current_prepared_rgb.bin",
+          "shared_rgb_source_sha256": "0bd0f530dd401d77b085e0cd847c03cef94346395ff6e852a68f6e615c58b8cb",
+          "source_domain": "uint8_0_255",
+          "source_image": "retained_source::000000000139.jpg",
+          "source_image_sha256": "ffe0f0cec3b2e27aab1967229cdf0a0d7751dcdd5800322f0b8ac0dffb3b8a8d",
+          "task": "detection"
+        },
+        "runner_sha256": "5ffd823ff94a946d60fcba74562242c576756b4154741fa77ab7689de44e2e4e",
+        "setup_id": "orin_nx_hailo8_01"
+      },
+      "postprocess_completed_frames": 1000,
+      "postprocess_completion_verified": true,
+      "postprocess_included": true,
+      "precision": "uint8_dequant_fp16",
+      "request_latency": {
+        "clock_domain": "perf_counter_ns:process:1545817",
+        "count": 1000,
+        "expected_count": 1000,
+        "status": "complete",
+        "task_complete": true
+      },
+      "runtime_instance_id": "fresh_runtime:b3e2b0caf289dadfad032c7a3376940e06e75139a37a70116f911752800fa69a",
+      "timing_input_binding": {
+        "canonical_rgb_sha256": "0bd0f530dd401d77b085e0cd847c03cef94346395ff6e852a68f6e615c58b8cb",
+        "executed_rgb_matches_common_preprocessing": true,
+        "geometry": {
+          "mode": "letterbox",
+          "pad_ltrb": [
+            0,
+            107,
+            0,
+            107
+          ],
+          "pad_value": 114,
+          "resized_hw": [
+            426,
+            640
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "source_hw": [
+            426,
+            640
+          ],
+          "target_hw": [
+            640,
+            640
+          ]
+        },
+        "input_image_sha256": "ffe0f0cec3b2e27aab1967229cdf0a0d7751dcdd5800322f0b8ac0dffb3b8a8d",
+        "preprocessing_contract": {
+          "color_space": "RGB",
+          "contract_scope": "prepared_rgb_uint8_semantics",
+          "image_scale": "norm",
+          "input_domain": "uint8_0_255",
+          "letterbox": true,
+          "letterbox_pad_value": 114,
+          "pad_value": 114,
+          "placement": "floor_top_left_remainder_bottom_right",
+          "preprocess_mode": "letterbox",
+          "resize_interpolation": "bilinear",
+          "resize_rounding": "python_round_ties_to_even",
+          "schema": "onnx-splitpoint/image-preprocessing-contract",
+          "schema_version": 2,
+          "spatial_transform": "centered_letterbox",
+          "target_hw": [
+            640,
+            640
+          ],
+          "task": "detection"
+        },
+        "preprocessing_contract_sha256": "411898b92628e2a769a2b8ea7aa35faff35373cfacb863c3ab34b243c105b70e",
+        "preprocessing_timed": false,
+        "sequence": "single_exact_prepared_feed_repeated"
+      },
+      "warmup": 100,
+      "warmup_contract": "fully_drained_before_worker_start"
+    },
+    {
+      "actual_source_sha256": "0d5ca624a9360791dbeca62325d410857487b373e3b6193e162a4ca241f22e98",
+      "completed_frames": 1000,
+      "completed_task_comparison_endpoint_contract_hash": "43612439aff99a683e0c32f17d9bc70074301ae7445e83c8307439856fbf8a08",
+      "completed_task_completion_mode": "native_three_stage_fast_oracle_outside_timing",
+      "completed_task_endpoint_contract_hash": "5ecd41662f05438f7c1d0bf4d56f04938f57ed234dd87a46a2c45b84f1c63e0c",
+      "completed_work_units": 1000,
+      "completion_execution_contract_sha256": "2c26c1471f15885ee47a7cba6be4eb31811c57028d4ecd11e35711c7ffb81218",
+      "fps_makespan": 44.830634878290454,
+      "measurement_boundary": "workers_ready_to_last_completed_task_frame",
+      "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+      "native_command_contract": {
+        "backend": "hailo8_to_trt",
+        "case": "b009",
+        "engine_sha256": "bfe8d53a0a6e2cc95c758aa1da3371003bf381dda1dfe4ec8f3302059f2abab1",
+        "hef_sha256": "5bb4af0c18be516ece74eeb4958079e17661c43dca0deac136369a09ee153419",
+        "input_image_sha256": "ffe0f0cec3b2e27aab1967229cdf0a0d7751dcdd5800322f0b8ac0dffb3b8a8d",
+        "model": "yolov7_paper",
+        "native_executable_sha256": "7b13b22842816e9accd853f2c752aab43acf2ef6e16f48376b2f61c74c6c614b",
+        "precision": "uint8_dequant_fp16",
+        "prepared_input_contract": {
+          "dtype": "uint8",
+          "format": "raw_runtime_tensor",
+          "layout": "HWC",
+          "letterbox_pad_value": 114,
+          "letterbox_pad_value_effective": 114,
+          "letterbox_pad_value_requested": 114,
+          "name": "yolov7_paper_part1_b9/input_layer1",
+          "normalization": "uint8_0_255",
+          "pad_value_effective": 114,
+          "preprocess": "shared_prepared_rgb_uint8",
+          "preprocess_mode_effective": "letterbox",
+          "preprocess_mode_requested": "letterbox",
+          "shape": [
+            640,
+            640,
+            3
+          ],
+          "shared_rgb_source": "retained_source::current_prepared_rgb.bin",
+          "shared_rgb_source_sha256": "0bd0f530dd401d77b085e0cd847c03cef94346395ff6e852a68f6e615c58b8cb",
+          "source_domain": "uint8_0_255",
+          "source_image": "retained_source::000000000139.jpg",
+          "source_image_sha256": "ffe0f0cec3b2e27aab1967229cdf0a0d7751dcdd5800322f0b8ac0dffb3b8a8d",
+          "task": "detection"
+        },
+        "runner_sha256": "5ffd823ff94a946d60fcba74562242c576756b4154741fa77ab7689de44e2e4e",
+        "setup_id": "orin_nx_hailo8_01"
+      },
+      "postprocess_completed_frames": 1000,
+      "postprocess_completion_verified": true,
+      "postprocess_included": true,
+      "precision": "uint8_dequant_fp16",
+      "request_latency": {
+        "clock_domain": "perf_counter_ns:process:1548090",
+        "count": 1000,
+        "expected_count": 1000,
+        "status": "complete",
+        "task_complete": true
+      },
+      "runtime_instance_id": "fresh_runtime:08d1011792793763eb31dee98efa690749d860ee331a37c90122179dcfa594fc",
+      "timing_input_binding": {
+        "canonical_rgb_sha256": "0bd0f530dd401d77b085e0cd847c03cef94346395ff6e852a68f6e615c58b8cb",
+        "executed_rgb_matches_common_preprocessing": true,
+        "geometry": {
+          "mode": "letterbox",
+          "pad_ltrb": [
+            0,
+            107,
+            0,
+            107
+          ],
+          "pad_value": 114,
+          "resized_hw": [
+            426,
+            640
+          ],
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "source_hw": [
+            426,
+            640
+          ],
+          "target_hw": [
+            640,
+            640
+          ]
+        },
+        "input_image_sha256": "ffe0f0cec3b2e27aab1967229cdf0a0d7751dcdd5800322f0b8ac0dffb3b8a8d",
+        "preprocessing_contract": {
+          "color_space": "RGB",
+          "contract_scope": "prepared_rgb_uint8_semantics",
+          "image_scale": "norm",
+          "input_domain": "uint8_0_255",
+          "letterbox": true,
+          "letterbox_pad_value": 114,
+          "pad_value": 114,
+          "placement": "floor_top_left_remainder_bottom_right",
+          "preprocess_mode": "letterbox",
+          "resize_interpolation": "bilinear",
+          "resize_rounding": "python_round_ties_to_even",
+          "schema": "onnx-splitpoint/image-preprocessing-contract",
+          "schema_version": 2,
+          "spatial_transform": "centered_letterbox",
+          "target_hw": [
+            640,
+            640
+          ],
+          "task": "detection"
+        },
+        "preprocessing_contract_sha256": "411898b92628e2a769a2b8ea7aa35faff35373cfacb863c3ab34b243c105b70e",
+        "preprocessing_timed": false,
+        "sequence": "single_exact_prepared_feed_repeated"
+      },
+      "warmup": 100,
+      "warmup_contract": "fully_drained_before_worker_start"
+    }
+  ],
+  "schema": "normal-native-three-process-performance-projection-v1",
+  "source_epochs": {
+    "native_runner_sha256": "5ffd823ff94a946d60fcba74562242c576756b4154741fa77ab7689de44e2e4e",
+    "reported_source_commit": "42042a3fc6269197a771f48d7982dafa8158436d",
+    "sourcefreeze_sha256": "0d524a31ee9fc50bfe9ef6245884266c8e813acc20cd0025b36cbc3f6c33c173"
+  },
+  "upstream": {
+    "normal_summary": {
+      "json_pointer": "/rows/0",
+      "normal_row_sha256": "32c6ca320c95dc9ee0df507d2ea42ea2be5bb7eeeb2cb57b442118c12b0b1e8c",
+      "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/normal_import/reports/native_producer_combined_summary.json",
+      "sha256": "76df7a60e31bf4b5a500bd0949b0dc5f77df64ea11bb6b3a78506f0a2c3d97a4",
+      "size_bytes": 2937681
+    },
+    "raw_reports": [
+      {
+        "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/collected/rep01/native_fifo_results.json",
+        "sha256": "d91bfb09c7c5acf88e3e4f7f26c46880e0456bdfc630ebb17565715ea4142939",
+        "size_bytes": 791378
+      },
+      {
+        "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/collected/rep02/native_fifo_results.json",
+        "sha256": "0b928b878067d61cca733ff857ecf6b9c9a1e13b1622a39136b092e74da4c883",
+        "size_bytes": 791390
+      },
+      {
+        "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/collected/rep03/native_fifo_results.json",
+        "sha256": "0d5ca624a9360791dbeca62325d410857487b373e3b6193e162a4ca241f22e98",
+        "size_bytes": 791375
+      }
+    ],
+    "receipt_sha256": "30885228e24583dd3696fde5b8b51aba06ef29090c2c4a1dca63976504f4d1e9"
+  }
+}

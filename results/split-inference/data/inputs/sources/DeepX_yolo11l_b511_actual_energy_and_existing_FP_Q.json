@@ -1,0 +1,1464 @@
+{
+  "energy_handoff": {
+    "aggregation": "normal producer arithmetic mean of three per-repeat energy/actual-completed-count ratios",
+    "build_allowed": false,
+    "calibration": {
+      "collector_sha256": "913c3f745a71809d85c1e98f56d0ca3265bb5e5492ad2b72407f7ce9bd8c3a46",
+      "evidence_sha256": "9494eea7de1d18167f73854e276bf6f9bba0066c51ff2c81c49737486235cfd1",
+      "full_system_current_scale_factor": 0.9035075097142278
+    },
+    "cleanup": {
+      "at": "2026-10-27T15:41:09.517025+00:00",
+      "cleanup_proven": true,
+      "errors": [],
+      "foreign_processes_stopped": false,
+      "owned_local_active": 0,
+      "owned_remote_active": 0
+    },
+    "completed_at": "2026-10-27T15:41:09.508173+00:00",
+    "controller_branch": "fix/generic-only-energy-entry-20261027",
+    "controller_commit": "c14fa8703430fdc8ad65708e79725281fe485dbc",
+    "controller_source_manifest_sha256": "88d1480240c6b572029b98286df6027de461a64fb50ec3cc9e0d20e319a7791c",
+    "earlier_preflight_failure_physical_captures": 0,
+    "energy_efficiency_claim_eligible": true,
+    "energy_mj_per_completed_image": 326.18722304791913,
+    "energy_mj_per_completed_image_95pct_ci": [
+      325.48872233928415,
+      326.8857237565541
+    ],
+    "evidence": [
+      {
+        "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/normal_result.json",
+        "sha256": "ee1604dd40f7050ae87023c0420f82b5c541ac52f47a95365d0497094751bdd4",
+        "size_bytes": 361492
+      },
+      {
+        "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/production-result.json",
+        "sha256": "0d4593c5609ac4afcb62a943f54dcd60640a29464c2be0e9e4bb0aff05550ae0",
+        "size_bytes": 74
+      },
+      {
+        "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/cleanup-status.json",
+        "sha256": "ba88ddbef2292fdeebab0540ba4223649a794a1f96b2bf7fd6d267fef6cfe2d9",
+        "size_bytes": 181
+      },
+      {
+        "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/worker_cleanup.json",
+        "sha256": "26137920f12b92d2a6f6498be4d81ae7bac4141ba0c4b6edd07b53195beea79c",
+        "size_bytes": 110
+      },
+      {
+        "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/controller_cleanup.json",
+        "sha256": "99752190ec3566c9468b08f775c1773fb190d6f6b7181e7d12ef9423d9a40f65",
+        "size_bytes": 92
+      },
+      {
+        "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/generic_energy_plan.json",
+        "sha256": "15054b9d59fc1e503b28d26cac4ce615d52791d5548652c6821d3330cff3f8ba",
+        "size_bytes": 186145
+      },
+      {
+        "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_sources.json",
+        "sha256": "ed2fea632cbba9f632f93e5a210c2fb068ef9763c975a6a2dbb0f188c30282d7",
+        "size_bytes": 22227
+      },
+      {
+        "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/LATEST_ATTEMPT.json",
+        "sha256": "0e7f1d3cf6f0e1125b7efa8664d5b18aedb217e6a157226169b0845c67b7d2a2",
+        "size_bytes": 1104
+      },
+      {
+        "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/parent_plan.json",
+        "sha256": "cfad9ce57d899dc9e56409358be2f35daf67e070e887d887428cc15d33a02612",
+        "size_bytes": 19249
+      },
+      {
+        "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/measurement/generic_energy_plan.json",
+        "sha256": "97dd24b25d9352091cc4fc4af1465d9f24fa24f683d3dae5b0a30ce9bbdde1ad",
+        "size_bytes": 185254
+      },
+      {
+        "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/measurement/generic_energy_config.json",
+        "sha256": "6e92975e0d67ef2f1beaca18bc6be4b098db344757814e2719dc7d84171ebb35",
+        "size_bytes": 164207
+      },
+      {
+        "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/measurement/energy-runtime-bundle.tar.gz",
+        "sha256": "83747abe61b788145fdfdb76607272e16c86df0b3bb1f7add7b78bdb5e4ec6cc",
+        "size_bytes": 505182
+      },
+      {
+        "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/measurement/performance_result.json",
+        "sha256": "289ffe379badc14bf330d9fe6555144ae51bc40f86bda5c356ee87e5e2bb05f6",
+        "size_bytes": 333599
+      },
+      {
+        "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/measurement/normal_admission_report.json",
+        "sha256": "b9cd03f759f41138970d98ab9d96a0090a9abec9a5e499fd7c0fdbc9462f1c37",
+        "size_bytes": 7031
+      },
+      {
+        "path": "energy/energy_task_budget.json",
+        "sha256": "0c51b864b5f6100f1bca12bd71d531ef2fae178993ef600a7639f05daaa1501b",
+        "size_bytes": 6535
+      },
+      {
+        "path": "CONTROLLER_SOURCE_FREEZE_v3.json",
+        "sha256": "6471910f2820369f2af1503de89cb260d5205a54f86f729576003aab9512cb2c",
+        "size_bytes": 10928
+      },
+      {
+        "path": "BEFORE_HARDWARE_v3.json",
+        "sha256": "371b1ffe6a36014dc5d877d43a564f6da1fa533c73d7426cc4a41ceada755f8c",
+        "size_bytes": 8842
+      },
+      {
+        "path": "OFFLINE_ENERGY_GATES_v3.json",
+        "sha256": "d425f6e49f8b866aec5e3964707c0ca090034a7216b3bb7868429089da6be688",
+        "size_bytes": 2399
+      },
+      {
+        "path": "PREFLIGHT_FAILURE_RECEIPT.json",
+        "sha256": "426433254659e7103ae03fe279742cf9a686b407995f046d9c4f81f52f80bb9f",
+        "size_bytes": 2224
+      },
+      {
+        "path": "runtime_probe/runtime_environment.json",
+        "sha256": "99fab5df0a5775e9c82652965510b914f481962f582468449338880cc11a3ed9",
+        "size_bytes": 1503
+      },
+      {
+        "path": "runtime_probe/configuration_comparison.json",
+        "sha256": "17cb4521695ecd121a407fbc644735970438f67e0a884b722b41e93e52bba15f",
+        "size_bytes": 4281
+      },
+      {
+        "path": "run_v3_resume1_console.log",
+        "sha256": "05782decd5a6386e6386ffddfdd32597eec11d5266b1e699ee51faa1c8a913ed",
+        "size_bytes": 273455
+      }
+    ],
+    "fps": {
+      "actual_producer_commit": "64e8df562ba12951a5d2765bb168b5e84d088d94",
+      "median_fps": "69.40285189366168",
+      "new_fps_capture": false,
+      "result_sha256": "289ffe379badc14bf330d9fe6555144ae51bc40f86bda5c356ee87e5e2bb05f6",
+      "reused": true
+    },
+    "inflight_slots": 4,
+    "invalid_capture_history": {
+      "capture_directory": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/measurement/capture_1",
+      "dropped_samples_in_window": 64,
+      "evidence": [
+        {
+          "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/measurement/capture_1/energy_aggregate.json",
+          "sha256": "ee24c806c69011982900bd626ca427c38389a1c3c8868eea0d2e9ce0a6c98510",
+          "size_bytes": 64034
+        },
+        {
+          "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/measurement/capture_1/artifact_index.json",
+          "sha256": "f482d8c7e32c79f052c83dced09a19a3207023ff5095ce5a54e8e965158979c6",
+          "size_bytes": 13337
+        },
+        {
+          "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/measurement/capture_1/run_000/collector_storage/command_window_markers.json",
+          "sha256": "3f6a867df4349b9167a0dd1882e336e7d6930096481f68bbdbe8ff7c5a1e6718",
+          "size_bytes": 3381
+        },
+        {
+          "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/measurement/capture_1/run_000/collector_storage/fast_firmware.parquet",
+          "sha256": "9db958c3cdad492f88e5b4479e1092813e6511ed586ce44645df6446a2dc8d3c",
+          "size_bytes": 4139200
+        },
+        {
+          "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/measurement/capture_1/run_000/command_window_request_rejection.json",
+          "sha256": "4fee53f3927654a8cda9725e2de487748682118ab2454e92b62076da7bd1b5ad",
+          "size_bytes": 493
+        }
+      ],
+      "excluded_from_energy_values": true,
+      "status": "acquisition_integrity_failed_no_valid_runs"
+    },
+    "invalid_physical_captures": 1,
+    "method": {
+      "calibrated_input_energy_unsubtracted": true,
+      "completed_task_denominator": "actual admitted tasks all completed after drain",
+      "physical_scope": "FS",
+      "primary_method": "command_marker_window",
+      "quality_and_fps_reused": true,
+      "window": "command_window",
+      "workload": "60s task admission plus lossless drain"
+    },
+    "native_pair_created": false,
+    "native_performance_claimed": false,
+    "no_more_hardware_operations_planned": true,
+    "normal_report_verified": true,
+    "package": 6,
+    "physical_collector_starts": 4,
+    "prepared_input_sha256": "027f452e6687eb60e293cd408f0ca77aab7fbe797d287b9a428a16df0b532fb4",
+    "preservation_scope": {
+      "all_attempt_history_required": true,
+      "directory": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3",
+      "old_artifact_source_archives": "reuse existing previously verified preservation references; no new hardware inventory",
+      "shared_budget": "energy/energy_task_budget.json"
+    },
+    "quality": {
+      "existing_status": "reference_close",
+      "new_quality_capture": false,
+      "reused_unchanged": true
+    },
+    "repetitions": [
+      {
+        "accepted_work_drained": true,
+        "actual_measurement_makespan_s": 60.049144934,
+        "admitted_tasks": 4170,
+        "capture_directory": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_1",
+        "command_end_realtime_ns": 1793115459493742911,
+        "command_marker_valid_for_final_energy": true,
+        "command_start_realtime_ns": 1793115395369653504,
+        "command_window_sample_indices_inclusive": [
+          10048,
+          138367
+        ],
+        "completed_at": "2026-10-27T15:37:38.405903+00:00",
+        "completed_tasks": 4170,
+        "configured_admission_duration_s": 60.0,
+        "dropped_samples_in_window": 0,
+        "duplicate_count_in_window": 0,
+        "energy_j": 1359.6483756726368,
+        "energy_mj_per_completed_image": 326.0547663483542,
+        "evidence": [
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_1/energy_aggregate.json",
+            "sha256": "c1f6421e9ed43e0306cf5ddd5b94d6ea4ccb9751f7780f6f70b0b98f58f99889",
+            "size_bytes": 87382
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_1/artifact_index.json",
+            "sha256": "f726f96bd85d633b077d2aaaba6e6913488e209f995270dfbe8c0ca941bea78b",
+            "size_bytes": 19092
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_1_normal_import.json",
+            "sha256": "5f94833a4287a82e51e5c20c2f0a28560b2a1ffa592e8f28e87bd130d36b29e2",
+            "size_bytes": 98468
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/runtime_result_1/generic_energy_results.json",
+            "sha256": "927d241332695375d2d58ce0158bf6535d71dc075be325ca1862f665f97e0f7a",
+            "size_bytes": 194055
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_1/run_000/collector_storage/command_window_markers.json",
+            "sha256": "c5d856329abc8f59ea986270c6884d2773ac262c41ceddd70b777d867e4c4ab7",
+            "size_bytes": 3498
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_1/run_000/collector_storage/fast_firmware.parquet",
+            "sha256": "1f3262a9a8aea4d06d97c4e51fd48ece67a9ee7d3285d6bef2120cf206849a9c",
+            "size_bytes": 4140450
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_1/run_000/preflight/preflight_attestation.json",
+            "sha256": "cdbd1860e6508c23f3a0fc78ae99e1015d8a14dea603c332efe9ab491fcf662d",
+            "size_bytes": 25616
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_1/run_000/command_window_binding.json",
+            "sha256": "b0f1ab02557adfc276ceed8349a7cde4fc299a198e892c33a148fbd4a4b5727a",
+            "size_bytes": 4461
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_1/run_000/command_window_request.json",
+            "sha256": "133f5ae74229063c706735f9382b97e87fd1010355d964daa1a8e6576a69d5f4",
+            "size_bytes": 3324
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_1/run_000/processed/postprocessor_window_result.json",
+            "sha256": "8219f45aa58845c7bd65207d05db24fbdc42e11181559750b972edf69b0bfd70",
+            "size_bytes": 4139
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_1/run_000/workload_timing.txt",
+            "sha256": "66f2d6ee0eed2a3b13e24c3a5c2f66eb0eb479f041a9ca8769340c5958ab2911",
+            "size_bytes": 61
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_1/environment_samples.jsonl",
+            "sha256": "4bd3d6d87b744aa46d1c79d77b0217f2300fd2145454808ce9332cb235fb017c",
+            "size_bytes": 286004
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_1/run_000/environment_observation.json",
+            "sha256": "c7cb4c8c5b5535920c972bef76e0ca57c850ff40dfc9cd143696acc9f6fc91d4",
+            "size_bytes": 318487
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_1/run_000/collector_storage/receive_diagnostics.jsonl",
+            "sha256": "8120f353313d0299a4ed359e17f79c18b4337aac8dcda520696683aae600ebdf",
+            "size_bytes": 511270
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_1/run_000/collector_stdout.log",
+            "sha256": "bf1ba2a63769aef3c52b8d82e847ec3c473fa3887599d258a4d8587b3789dd73",
+            "size_bytes": 3412
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_1/run_000/energy_command.sh",
+            "sha256": "fc5311f3a9d4a19f3f84259f7947a8cff177583c33bbe25e1a47a9f15e02af2d",
+            "size_bytes": 1334
+          }
+        ],
+        "integrated_active_duration_s": 64.1595,
+        "preflight_nonce": "af73b6bd07f147d953a69a50a8850e2e467b3d4caf65f6977863e1bcd9f799c7",
+        "raw_aggregate_sha256": "c1f6421e9ed43e0306cf5ddd5b94d6ea4ccb9751f7780f6f70b0b98f58f99889",
+        "raw_input_energy_provenance_status": "verified_calibrated_input_energy_unsubtracted",
+        "reorder_count_in_window": 0,
+        "repetition": 1,
+        "runtime_pid": 3702023,
+        "runtime_process_start_ticks": 456141024,
+        "runtime_result_sha256": "927d241332695375d2d58ce0158bf6535d71dc075be325ca1862f665f97e0f7a",
+        "status": "normal_collector_and_generic_completion_verified",
+        "warmup_tasks": 0
+      },
+      {
+        "accepted_work_drained": true,
+        "actual_measurement_makespan_s": 60.059251744,
+        "admitted_tasks": 4184,
+        "capture_directory": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_2",
+        "command_end_realtime_ns": 1793115553868030878,
+        "command_marker_valid_for_final_energy": true,
+        "command_start_realtime_ns": 1793115489704268835,
+        "command_window_sample_indices_inclusive": [
+          10048,
+          138431
+        ],
+        "completed_at": "2026-10-27T15:39:12.780308+00:00",
+        "completed_tasks": 4184,
+        "configured_admission_duration_s": 60.0,
+        "dropped_samples_in_window": 0,
+        "duplicate_count_in_window": 0,
+        "energy_j": 1363.9703167433754,
+        "energy_mj_per_completed_image": 325.99672962317766,
+        "evidence": [
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_2/energy_aggregate.json",
+            "sha256": "0345a82283ff400359e3c96843b356fd9f1b41167676835bf92f421a65e4ae9b",
+            "size_bytes": 88618
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_2/artifact_index.json",
+            "sha256": "b42e70325943239555a3ca44d60ac810c1e799b71c8266f82b3e67a38a6706f2",
+            "size_bytes": 19092
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_2_normal_import.json",
+            "sha256": "84ec77c607efbac022044349c8e51e3a80a0a1a065b39342a7c62c8b8d588388",
+            "size_bytes": 99861
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/runtime_result_2/generic_energy_results.json",
+            "sha256": "541f10590bd82098af4326909172c6a7dd46b79fa45c72345f151bd94659abf1",
+            "size_bytes": 194054
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_2/run_000/collector_storage/command_window_markers.json",
+            "sha256": "1ec77d653a900594c735f08edc306e34f3450ca72eb7a010b44555d8595733aa",
+            "size_bytes": 3498
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_2/run_000/collector_storage/fast_firmware.parquet",
+            "sha256": "2935782d837ead3c04842d37f5307b6066631f3423c5dfd9453c8790cb1d9433",
+            "size_bytes": 4140414
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_2/run_000/preflight/preflight_attestation.json",
+            "sha256": "d449966579c258e45ffd35941682516896faa0a9e22bca552dab4dd03d9b1de7",
+            "size_bytes": 25616
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_2/run_000/command_window_binding.json",
+            "sha256": "99c48a490b05a8956e21fd597de03d59d6b57454a9e10114005e3a23c171aa00",
+            "size_bytes": 4461
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_2/run_000/command_window_request.json",
+            "sha256": "815f7b40b1488047f64c14ee24a5630a814d0b0f318a113da375fbde0dc34344",
+            "size_bytes": 3324
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_2/run_000/processed/postprocessor_window_result.json",
+            "sha256": "4218c7d698087f54a11f007706f44360de73c30463c963f9b6400cc2e03bcfab",
+            "size_bytes": 4139
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_2/run_000/workload_timing.txt",
+            "sha256": "5411ab6a31e49a33753730e5440e298fb3c4e2cc6623440a715425c7a17a90af",
+            "size_bytes": 61
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_2/environment_samples.jsonl",
+            "sha256": "320b7d85e10035278a50d3c59806cb00a046726acc5812012821dfc18d3c3a8e",
+            "size_bytes": 285990
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_2/run_000/environment_observation.json",
+            "sha256": "db96d0efe3bfc96f30ee39e4a485c6e9bd3b6eb9c95c25c59658240eb2fcc4b0",
+            "size_bytes": 318475
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_2/run_000/collector_storage/receive_diagnostics.jsonl",
+            "sha256": "8eff4799453584d526bca0358daf76d6609a96dff61b72280f956e41bf267e31",
+            "size_bytes": 511270
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_2/run_000/collector_stdout.log",
+            "sha256": "357b6471a1cb938831186c7c16614bf662f836127e22f228759928b0c5f747dd",
+            "size_bytes": 3412
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_2/run_000/energy_command.sh",
+            "sha256": "19afaba27466b23cf717418a247f06079293814d40be7ab958b1b4424661d15f",
+            "size_bytes": 1334
+          }
+        ],
+        "integrated_active_duration_s": 64.1915,
+        "preflight_nonce": "5c0a2a60c2ec14b9c432983a94b10668bc23430b96cbf1c1dde7958ddad469d9",
+        "raw_aggregate_sha256": "0345a82283ff400359e3c96843b356fd9f1b41167676835bf92f421a65e4ae9b",
+        "raw_input_energy_provenance_status": "verified_calibrated_input_energy_unsubtracted",
+        "reorder_count_in_window": 0,
+        "repetition": 2,
+        "runtime_pid": 3702767,
+        "runtime_process_start_ticks": 456150460,
+        "runtime_result_sha256": "541f10590bd82098af4326909172c6a7dd46b79fa45c72345f151bd94659abf1",
+        "status": "normal_collector_and_generic_completion_verified",
+        "warmup_tasks": 0
+      },
+      {
+        "accepted_work_drained": true,
+        "actual_measurement_makespan_s": 60.056498818,
+        "admitted_tasks": 4181,
+        "capture_directory": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_3",
+        "command_end_realtime_ns": 1793115647914356786,
+        "command_marker_valid_for_final_energy": true,
+        "command_start_realtime_ns": 1793115583792619425,
+        "command_window_sample_indices_inclusive": [
+          10048,
+          138367
+        ],
+        "completed_at": "2026-10-27T15:40:46.845022+00:00",
+        "completed_tasks": 4181,
+        "configured_admission_duration_s": 60.0,
+        "dropped_samples_in_window": 0,
+        "duplicate_count_in_window": 0,
+        "energy_j": 1365.1390340330752,
+        "energy_mj_per_completed_image": 326.51017317222556,
+        "evidence": [
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_3/energy_aggregate.json",
+            "sha256": "3940dc307132b50cba0276295aee4e12097ebcc1d69c792375679121eedd27bc",
+            "size_bytes": 89819
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_3/artifact_index.json",
+            "sha256": "6d18b85b49fa7f21ecb09146c2cd8601b4cb532d09efa1a1f1decc68dbe0a023",
+            "size_bytes": 19092
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_3_normal_import.json",
+            "sha256": "9de2afe131b755fbe35de9779b3c206f05ed1dd790184280250749736a7f57ed",
+            "size_bytes": 101216
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/runtime_result_3/generic_energy_results.json",
+            "sha256": "7d2d7738484271244e25bf691ddc9e08ae6e02e85d52835ca680e88fda9740a0",
+            "size_bytes": 194055
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_3/run_000/collector_storage/command_window_markers.json",
+            "sha256": "396ba5b6fb4d75f79dcf291e2d2427d9afffe1e729cc077b01e0529500a3b47d",
+            "size_bytes": 3496
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_3/run_000/collector_storage/fast_firmware.parquet",
+            "sha256": "d751ed06ed0f9016a6ae5a24758fedfe6b3d2543d124b79fc89ca9be2b39f35f",
+            "size_bytes": 4140426
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_3/run_000/preflight/preflight_attestation.json",
+            "sha256": "a96796cf7d331cfc404995d6d4439fea65257c52c5531698e5856f749e2c3537",
+            "size_bytes": 25616
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_3/run_000/command_window_binding.json",
+            "sha256": "fd915e885e5dc300347b867654c2a2ffe6ce98817bee60d6c6f6732fbe7467c8",
+            "size_bytes": 4459
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_3/run_000/command_window_request.json",
+            "sha256": "0a2e1f5b7919c618915cb63962d3c26579aead1c48a7893d782b1933cd6d0c4f",
+            "size_bytes": 3322
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_3/run_000/processed/postprocessor_window_result.json",
+            "sha256": "be025a5ea7d8b2d070ab4cdf57cb3e00f4d7e0c526fc2383703bb9d40134efd2",
+            "size_bytes": 4137
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_3/run_000/workload_timing.txt",
+            "sha256": "1252b4120e53cd53966c296c71c037b1a6af9d9ea82213fb135c99f442ecbe8a",
+            "size_bytes": 61
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_3/environment_samples.jsonl",
+            "sha256": "bda656136fe515c295282ff745bec325ae1c8c03d731a5a8906b97d899d03022",
+            "size_bytes": 286018
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_3/run_000/environment_observation.json",
+            "sha256": "278c5637261eaa005753a1e8494f48826902caf9de5a6082bfaec2631897d032",
+            "size_bytes": 318498
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_3/run_000/collector_storage/receive_diagnostics.jsonl",
+            "sha256": "6b1bbf47f1fd22b9186d72d905b9d268f8d39e40a16af7e9f7c593df9a31aa46",
+            "size_bytes": 511270
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_3/run_000/collector_stdout.log",
+            "sha256": "c7c4dc46a59ff950767f8dd88a4907d6e03893ffa9c30d5052bb5ea1abd43d43",
+            "size_bytes": 3412
+          },
+          {
+            "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/measurement/capture_3/run_000/energy_command.sh",
+            "sha256": "0d063bfc47ce9c4437edd9970365ada93c5f43b134f3fa628615c29b2f0bbaec",
+            "size_bytes": 1334
+          }
+        ],
+        "integrated_active_duration_s": 64.1595,
+        "preflight_nonce": "96ae9229fa0b865771b9abe9f41c2edbae4de428d9e596657cdbd717af1648c9",
+        "raw_aggregate_sha256": "3940dc307132b50cba0276295aee4e12097ebcc1d69c792375679121eedd27bc",
+        "raw_input_energy_provenance_status": "verified_calibrated_input_energy_unsubtracted",
+        "reorder_count_in_window": 0,
+        "repetition": 3,
+        "runtime_pid": 3703510,
+        "runtime_process_start_ticks": 456159867,
+        "runtime_result_sha256": "7d2d7738484271244e25bf691ddc9e08ae6e02e85d52835ca680e88fda9740a0",
+        "status": "normal_collector_and_generic_completion_verified",
+        "warmup_tasks": 0
+      }
+    ],
+    "runtime_artifacts": {
+      "engine": {
+        "sha256": "4ec11fd7155ccd39b33ebafadfbe85b02e386775ffe58595f0d5ab9852026520"
+      },
+      "part1_runtime": {
+        "sha256": "c5bab072e1363d5533b6f6c60ca54ee747421fa5c080c153d2d01c19051c6f27"
+      }
+    },
+    "schema": "six-pack-deepx-generic-energy-handoff/v1",
+    "separately_staged_energy_validation_source": {
+      "changed_functions": [
+        "generic_energy.validate_config",
+        "generic_energy.validate_energy_result",
+        "generic_only.validate_generic_only_config",
+        "generic_only.compare_serial_reference",
+        "generic_only.validate_serial_reference"
+      ],
+      "changed_validation_modules": [
+        "splitpoint_runners/generic_energy.py",
+        "splitpoint_runners/generic_only.py"
+      ],
+      "clone_files": 37,
+      "evidence_files": 2,
+      "measured_execution_async_timer_drain_policy_unchanged": true,
+      "new_energy_runner_sha256": "1d4692f3ddde5fa7ed7cc1b2f148d532d19cdb7a75fb54db831df1f49a3fc512",
+      "old_remote_sources_overwritten": false,
+      "old_sources_retained": 51,
+      "original_FPS_runner_sha256": "24234b71ad8a56cd1b6de7221f2fb4c8427e27638093ed1a94c363dfd3a78643",
+      "proof": {
+        "path": "OFFLINE_ENERGY_GATES_v3.json",
+        "sha256": "d425f6e49f8b866aec5e3964707c0ca090034a7216b3bb7868429089da6be688",
+        "size_bytes": 2399
+      },
+      "runner_change": "one postflight compare_serial_reference call receives actual energy completed count; ordinary FPS1100 remains unchanged",
+      "source_descriptors_total": 90
+    },
+    "setup_id": "orin_nx_deepx_m1_01",
+    "source_contract_sha256": "5cf927861dfa7cf6a3583a274dddcdd1664e364b0df6b4a7c4fcf197927830d8",
+    "status": "completed_normal_admission",
+    "suffix_input_count": 5,
+    "uid": "generic|yolo11l|DeepX|deepx_to_trt|b511",
+    "valid_repetitions": 3
+  },
+  "energy_normal": {
+    "energy_efficiency_claim_eligible": true,
+    "normal_report_verified": true,
+    "performance_result_sha256": "289ffe379badc14bf330d9fe6555144ae51bc40f86bda5c356ee87e5e2bb05f6"
+  },
+  "fps": {
+    "completed_at": "2026-10-23T23:33:51.129471+00:00",
+    "completion_contract": {
+      "artifact_hash_policy": "sha256_over_canonical_same_invocation_result_artifact_v1",
+      "comparison_endpoint_contract": {
+        "canonical_completion_policy_id": "decoded_nms_xyxy_original_classaware_postfilter_v2",
+        "class_aware": true,
+        "class_id_semantics": "integer_model_label_index",
+        "contract_family": "decoded_nms",
+        "coordinate_space": "original_image_xyxy_pixels",
+        "endpoint_contract_complete": true,
+        "endpoint_contract_hash": "2ace95cb46d14e3d783aa3d914712cf3c4587aeaa84ce15b4fba2635b5e4c67a",
+        "input_hw": [
+          640,
+          640
+        ],
+        "iou_threshold": 0.45,
+        "max_detections": 300,
+        "model_family": "yolo11",
+        "model_id": "yolo11l",
+        "nms_semantics_id": "class_aware_nms_xyxy_v1",
+        "output_endpoint_id": "detection:decoded_nms:comparison:2ace95cb46d14e3d783aa3d914712cf3c4587aeaa84ce15b4fba2635b5e4c67a",
+        "output_record_format": "xyxy_score_class",
+        "schema": "onnx-splitpoint/completed-task-comparison-endpoint",
+        "schema_version": 2,
+        "score_semantics": "probability_0_1",
+        "score_threshold": 0.25,
+        "stage": "decoded_nms",
+        "task": "detection"
+      },
+      "completed_endpoint_contract": {
+        "class_aware": true,
+        "completed_stage": "decoded_nms",
+        "confidence_threshold": 0.25,
+        "contract_source": "frozen_host_decode_nms_inside_measured_interval:v1",
+        "decoder_format": "ultralytics_decoded",
+        "decoder_id": "ultralytics_decoded_classaware_nms_v1",
+        "endpoint_contract_complete": true,
+        "endpoint_contract_hash": "9de85de6d78bd6b695fac51d531b4873a1229ce3555ba27b037f40261d15ca67",
+        "energy_scope": "same_frozen_prepared_input_to_post_nms_hotloop",
+        "frozen_postprocess_contract_sha256": "219d18878ce631491ea62fb82bcfd4e738fe18d62b87ed43feb7be2c61997f90",
+        "frozen_postprocess_invariant_contract_sha256": "b55730e063cc7e1063ea7378970ec2a8988da8adeb6327dff3b54ee93f197533",
+        "input_hw": [
+          640,
+          640
+        ],
+        "iou_threshold": 0.45,
+        "max_detections": 300,
+        "nms_implementation": "numpy_class_aware_nms_xyxy_v1",
+        "original_wh": [
+          640,
+          426
+        ],
+        "output_endpoint_id": "detection:decoded_nms:9de85de6d78bd6b695fac51d531b4873a1229ce3555ba27b037f40261d15ca67",
+        "performance_scope": "prepared_input_to_post_nms_detections",
+        "raw_output_tensor_signature": {
+          "tensor_count": 1,
+          "tensors": [
+            {
+              "dtype": "float32",
+              "index": 0,
+              "name": "output0",
+              "rank": 3,
+              "shape": [
+                1,
+                84,
+                8400
+              ]
+            }
+          ]
+        },
+        "schema": "onnx-splitpoint/frozen-native-detection-completed-endpoint",
+        "schema_version": 1,
+        "source_endpoint_contract_hash": "4ff299deec70a49feb11e468c7adeadea8016934121da91b275994b3229fa431",
+        "source_stage": "decoded_pre_nms",
+        "task": "detection"
+      },
+      "completion_mode": "decoded_pre_nms_frozen_nms",
+      "content_hash_policy": "canonical_materialized_detection_records_without_ui_labels_v1",
+      "contract_sha256": "fbf702080fc6eb36ad797472a1a9109b623a856303291e9cd540c29e832f7ffa",
+      "execution_policy": "async_drain_then_completion_tail_then_count_and_timestamp_v1",
+      "hash_layers": {
+        "implementation": {
+          "identity": {
+            "implementation_artifacts": {
+              "harness_base": {
+                "relative_path": "onnx_splitpoint_tool/runners/harness/base.py",
+                "sha256": "938b3713f32e412dd1f57fcc07a397fa1f3b26ed30afbc945d22f1bb082db06c"
+              },
+              "native_detection_postprocess": {
+                "relative_path": "onnx_splitpoint_tool/native_detection_postprocess.py",
+                "sha256": "8c202f4237ec39316a54dda7ea8f71dd19bae4bb02e3311bbd8fed7be43214b8"
+              },
+              "yolo_harness": {
+                "relative_path": "onnx_splitpoint_tool/runners/harness/yolo.py",
+                "sha256": "ef63cbc2ce549fcde0926456d5a0269c583aef29ba7f031980e0241f00ca5965"
+              }
+            },
+            "processor_contract_sha256": "219d18878ce631491ea62fb82bcfd4e738fe18d62b87ed43feb7be2c61997f90"
+          },
+          "kind": "implementation",
+          "schema": "onnx-splitpoint/detection-completion-hash-layer",
+          "schema_version": 1,
+          "sha256": "19af40a344915aae5d0a5df889b2c6fe6fbf7bf8bb1d03b0668ca3ab8ce2009d"
+        },
+        "relation": {
+          "identity": {
+            "comparison_endpoint_contract_hash": "2ace95cb46d14e3d783aa3d914712cf3c4587aeaa84ce15b4fba2635b5e4c67a",
+            "comparison_output_endpoint_id": "detection:decoded_nms:comparison:2ace95cb46d14e3d783aa3d914712cf3c4587aeaa84ce15b4fba2635b5e4c67a",
+            "completed_endpoint_contract_hash": "9de85de6d78bd6b695fac51d531b4873a1229ce3555ba27b037f40261d15ca67",
+            "completed_output_endpoint_id": "detection:decoded_nms:9de85de6d78bd6b695fac51d531b4873a1229ce3555ba27b037f40261d15ca67",
+            "relation": "physical_source_to_completed_task_to_comparison",
+            "source_endpoint_contract_hash": "4ff299deec70a49feb11e468c7adeadea8016934121da91b275994b3229fa431",
+            "source_output_endpoint_id": "detection:decoded_pre_nms:4ff299deec70a49feb11e468c7adeadea8016934121da91b275994b3229fa431"
+          },
+          "kind": "relation",
+          "schema": "onnx-splitpoint/detection-completion-hash-layer",
+          "schema_version": 1,
+          "sha256": "b2f9761e5443b5d1d15a950e121dfd8e5563f31d5df37849461bd0e445b1c3bd"
+        },
+        "schema": {
+          "identity": {
+            "canonical_sort_policy": "score_desc_class_id_asc_xyxy_lexicographic_v1",
+            "completed_coordinate_space": "original_image_xyxy_pixels",
+            "completed_record_schema": "xyxy_score_class_id_v1",
+            "completion_mode": "decoded_pre_nms_frozen_nms",
+            "processor_contract_schema": "onnx-splitpoint/frozen-native-detection-postprocess",
+            "processor_contract_schema_version": 1,
+            "processor_contract_sha256": "219d18878ce631491ea62fb82bcfd4e738fe18d62b87ed43feb7be2c61997f90",
+            "source_stage": "decoded_pre_nms",
+            "source_tensor_signature": {
+              "tensor_count": 1,
+              "tensors": [
+                {
+                  "dtype": "float32",
+                  "index": 0,
+                  "name": "output0",
+                  "rank": 3,
+                  "shape": [
+                    1,
+                    84,
+                    8400
+                  ]
+                }
+              ]
+            },
+            "task": "detection",
+            "yolov7_head_mapping_sha256": ""
+          },
+          "kind": "schema",
+          "schema": "onnx-splitpoint/detection-completion-hash-layer",
+          "schema_version": 1,
+          "sha256": "32f12a08b36f8429d520014da08560308b5a4f1410c3c75150e7c1d0074e2ee4"
+        }
+      },
+      "implementation_sha256": "19af40a344915aae5d0a5df889b2c6fe6fbf7bf8bb1d03b0668ca3ab8ce2009d",
+      "invocation_hash_policy": "execution_contract_observation_source_result_ordinal_v1",
+      "model_family": "yolo11",
+      "model_id": "yolo11l",
+      "observation_relation_policy": [
+        "same_hotloop_sentinel",
+        "independent_replay"
+      ],
+      "performance_energy_contract_identity": "same_completion_execution_contract_sha256",
+      "processor_contract": {
+        "class_aware": true,
+        "confidence_threshold": 0.25,
+        "contract_sha256": "219d18878ce631491ea62fb82bcfd4e738fe18d62b87ed43feb7be2c61997f90",
+        "decoded_pre_nms_score_policy": {
+          "absolute_tolerance": 1.1920928955078125e-07,
+          "action": "normalize_probability_edges_on_processing_copy",
+          "dtype": "float32",
+          "policy_id": "float32_probability_edges_abs_2pow_minus23_v1"
+        },
+        "decoder_format": "ultralytics_decoded",
+        "decoder_id": "ultralytics_decoded_classaware_nms_v1",
+        "energy_scope": "same_frozen_prepared_input_to_post_nms_hotloop",
+        "execution_policy": "one_serial_host_tail_per_successful_accelerator_output",
+        "host_postprocess_frozen": true,
+        "implementation_artifacts": {
+          "harness_base": {
+            "relative_path": "onnx_splitpoint_tool/runners/harness/base.py",
+            "sha256": "938b3713f32e412dd1f57fcc07a397fa1f3b26ed30afbc945d22f1bb082db06c"
+          },
+          "native_detection_postprocess": {
+            "relative_path": "onnx_splitpoint_tool/native_detection_postprocess.py",
+            "sha256": "8c202f4237ec39316a54dda7ea8f71dd19bae4bb02e3311bbd8fed7be43214b8"
+          },
+          "yolo_harness": {
+            "relative_path": "onnx_splitpoint_tool/runners/harness/yolo.py",
+            "sha256": "ef63cbc2ce549fcde0926456d5a0269c583aef29ba7f031980e0241f00ca5965"
+          }
+        },
+        "input_hw": [
+          640,
+          640
+        ],
+        "invariant_contract_sha256": "b55730e063cc7e1063ea7378970ec2a8988da8adeb6327dff3b54ee93f197533",
+        "invariant_identity": {
+          "class_aware": true,
+          "confidence_threshold": 0.25,
+          "decoded_pre_nms_score_policy": {
+            "absolute_tolerance": 1.1920928955078125e-07,
+            "action": "normalize_probability_edges_on_processing_copy",
+            "dtype": "float32",
+            "policy_id": "float32_probability_edges_abs_2pow_minus23_v1"
+          },
+          "decoder_format": "ultralytics_decoded",
+          "decoder_id": "ultralytics_decoded_classaware_nms_v1",
+          "energy_scope": "same_frozen_prepared_input_to_post_nms_hotloop",
+          "execution_policy": "one_serial_host_tail_per_successful_accelerator_output",
+          "host_postprocess_frozen": true,
+          "implementation_artifacts": {
+            "harness_base": {
+              "relative_path": "onnx_splitpoint_tool/runners/harness/base.py",
+              "sha256": "938b3713f32e412dd1f57fcc07a397fa1f3b26ed30afbc945d22f1bb082db06c"
+            },
+            "native_detection_postprocess": {
+              "relative_path": "onnx_splitpoint_tool/native_detection_postprocess.py",
+              "sha256": "8c202f4237ec39316a54dda7ea8f71dd19bae4bb02e3311bbd8fed7be43214b8"
+            },
+            "yolo_harness": {
+              "relative_path": "onnx_splitpoint_tool/runners/harness/yolo.py",
+              "sha256": "ef63cbc2ce549fcde0926456d5a0269c583aef29ba7f031980e0241f00ca5965"
+            }
+          },
+          "input_hw": [
+            640,
+            640
+          ],
+          "iou_threshold": 0.45,
+          "max_detections": 300,
+          "model_family": "yolo11",
+          "model_id": "yolo11l",
+          "nms_implementation": "numpy_class_aware_nms_xyxy_v1",
+          "output_contract_family": "decoded_nms",
+          "performance_scope": "prepared_input_to_post_nms_detections",
+          "postprocess_included": true,
+          "raw_output_tensor_signature": {
+            "tensor_count": 1,
+            "tensors": [
+              {
+                "dtype": "float32",
+                "index": 0,
+                "name": "output0",
+                "rank": 3,
+                "shape": [
+                  1,
+                  84,
+                  8400
+                ]
+              }
+            ]
+          },
+          "schema": "onnx-splitpoint/frozen-native-detection-postprocess",
+          "schema_version": 1,
+          "source_contract_family": "decoded_pre_nms",
+          "task": "detection"
+        },
+        "iou_threshold": 0.45,
+        "max_detections": 300,
+        "model_family": "yolo11",
+        "model_id": "yolo11l",
+        "multiscale_activation_mode": null,
+        "nms_implementation": "numpy_class_aware_nms_xyxy_v1",
+        "original_wh": [
+          640,
+          426
+        ],
+        "output_contract_family": "decoded_nms",
+        "performance_scope": "prepared_input_to_post_nms_detections",
+        "postprocess_included": true,
+        "raw_output_tensor_signature": {
+          "tensor_count": 1,
+          "tensors": [
+            {
+              "dtype": "float32",
+              "index": 0,
+              "name": "output0",
+              "rank": 3,
+              "shape": [
+                1,
+                84,
+                8400
+              ]
+            }
+          ]
+        },
+        "schema": "onnx-splitpoint/frozen-native-detection-postprocess",
+        "schema_version": 1,
+        "source_contract_family": "decoded_pre_nms",
+        "task": "detection"
+      },
+      "relation_sha256": "b2f9761e5443b5d1d15a950e121dfd8e5563f31d5df37849461bd0e445b1c3bd",
+      "schema": "onnx-splitpoint/detection-completion-execution-contract",
+      "schema_sha256": "32f12a08b36f8429d520014da08560308b5a4f1410c3c75150e7c1d0074e2ee4",
+      "schema_version": 2,
+      "source_endpoint": {
+        "contract_family": "decoded_pre_nms",
+        "endpoint_contract_hash": "4ff299deec70a49feb11e468c7adeadea8016934121da91b275994b3229fa431",
+        "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+        "output_endpoint_attestation_sha256": "9746506063c7ee6cf49d6be9f4167c44390d08a4203767a33a091368a39def43",
+        "output_endpoint_id": "detection:decoded_pre_nms:4ff299deec70a49feb11e468c7adeadea8016934121da91b275994b3229fa431",
+        "stage": "decoded_pre_nms",
+        "task": "detection",
+        "tensor_signature": {
+          "tensor_count": 1,
+          "tensors": [
+            {
+              "dtype": "float32",
+              "index": 0,
+              "name": "output0",
+              "rank": 3,
+              "shape": [
+                1,
+                84,
+                8400
+              ]
+            }
+          ]
+        }
+      },
+      "task": "detection",
+      "yolov7_head_mapping": {}
+    },
+    "input_binding": {
+      "prepared_input": {
+        "c_contiguous": true,
+        "dtype": "uint8",
+        "format": "npy",
+        "input_name": "images",
+        "layout": "HWC",
+        "local_path": "retained_source::027f452e6687eb60e293cd408f0ca77aab7fbe797d287b9a428a16df0b532fb4.npy",
+        "path": "retained_source::0000_0.npy",
+        "sha256": "027f452e6687eb60e293cd408f0ca77aab7fbe797d287b9a428a16df0b532fb4",
+        "shape": [
+          640,
+          640,
+          3
+        ],
+        "size_bytes": 1228928
+      },
+      "prepared_input_contract": {
+        "dtype": "uint8",
+        "image_preprocessing_contract": {
+          "color_space": "RGB",
+          "contract_scope": "prepared_rgb_uint8_semantics",
+          "image_scale": "norm",
+          "input_domain": "uint8_0_255",
+          "letterbox": true,
+          "letterbox_pad_value": 114,
+          "pad_value": 114,
+          "placement": "floor_top_left_remainder_bottom_right",
+          "preprocess_mode": "letterbox",
+          "resize_interpolation": "bilinear",
+          "resize_rounding": "python_round_ties_to_even",
+          "schema": "onnx-splitpoint/image-preprocessing-contract",
+          "schema_version": 2,
+          "spatial_transform": "centered_letterbox",
+          "target_hw": [
+            640,
+            640
+          ],
+          "task": "detection"
+        },
+        "layout": "HWC",
+        "letterbox": true,
+        "letterbox_pad_value": 114,
+        "normalization": "embedded_dxcom_preprocessing",
+        "preprocess_mode": "letterbox",
+        "shape": [
+          640,
+          640,
+          3
+        ],
+        "source_domain": "uint8_0_255",
+        "source_image": "retained_source::000000000139.jpg",
+        "source_image_sha256": "ffe0f0cec3b2e27aab1967229cdf0a0d7751dcdd5800322f0b8ac0dffb3b8a8d",
+        "task": "detection"
+      },
+      "preprocessing_timed": false,
+      "runtime_input_format": "uint8",
+      "sequence": "single_exact_prepared_feed_repeated",
+      "source_image": "retained_source::000000000139.jpg",
+      "source_image_sha256": "ffe0f0cec3b2e27aab1967229cdf0a0d7751dcdd5800322f0b8ac0dffb3b8a8d"
+    },
+    "repetitions": [
+      {
+        "completed_task_count": 1000,
+        "completed_task_fps": 68.93188082246797,
+        "pid": 3538646,
+        "warmup_completed_count": 100
+      },
+      {
+        "completed_task_count": 1000,
+        "completed_task_fps": 69.40285189366168,
+        "pid": 3538737,
+        "warmup_completed_count": 100
+      },
+      {
+        "completed_task_count": 1000,
+        "completed_task_fps": 69.47191778492947,
+        "pid": 3538827,
+        "warmup_completed_count": 100
+      }
+    ]
+  },
+  "identity": {
+    "backend": "deepx_to_trt",
+    "case_id": "b511",
+    "kind": "split",
+    "model_id": "yolo11l",
+    "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+    "physical_host": "orin_nx_deepx_m1_01",
+    "runner": "generic",
+    "setup_id": "DeepX",
+    "uid": "generic|yolo11l|DeepX|deepx_to_trt|b511"
+  },
+  "normal_admission": {
+    "admission_mode": "generic_only",
+    "case_key": "yolo11l|b511|deepx_to_trt|float32_layout_fp16|orin_nx_deepx_m1_01|deepx|detection:decoded_pre_nms:4ff299deec70a49feb11e468c7adeadea8016934121da91b275994b3229fa431",
+    "completion_attestations": [
+      {
+        "attestation_sha256": "57b0245b8643499fc9608e279c5d05a672fe0c559f270972ffdc7240300b2f8f",
+        "completed_work_units": 1100,
+        "execution_id": "20261024_012252_01b19ae7",
+        "process_identity": {
+          "boot_id": "d9c896d0-c325-452c-872b-e43a8dbf23ac",
+          "pid": 3538646,
+          "process_start_ticks": 424436682
+        },
+        "repetition_index": 1
+      },
+      {
+        "attestation_sha256": "57b0245b8643499fc9608e279c5d05a672fe0c559f270972ffdc7240300b2f8f",
+        "completed_work_units": 1100,
+        "execution_id": "20261024_012252_01b19ae7",
+        "process_identity": {
+          "boot_id": "d9c896d0-c325-452c-872b-e43a8dbf23ac",
+          "pid": 3538737,
+          "process_start_ticks": 424439325
+        },
+        "repetition_index": 2
+      },
+      {
+        "attestation_sha256": "57b0245b8643499fc9608e279c5d05a672fe0c559f270972ffdc7240300b2f8f",
+        "completed_work_units": 1100,
+        "execution_id": "20261024_012252_01b19ae7",
+        "process_identity": {
+          "boot_id": "d9c896d0-c325-452c-872b-e43a8dbf23ac",
+          "pid": 3538827,
+          "process_start_ticks": 424442035
+        },
+        "repetition_index": 3
+      }
+    ],
+    "eligible_for_generic_only_execution": true,
+    "native_performance_claimed": false,
+    "quality_eligible": true,
+    "quality_status": "reference_close",
+    "reasons": []
+  },
+  "quality": {
+    "accuracy_assessment": {
+      "absolute_loss_pp": 0.308842500990808,
+      "accuracy_class": "reference_close",
+      "confidence_level": 0.95,
+      "policy_id": "accuracy_reporting_v1",
+      "relative_loss": 0.006615784261392742,
+      "relative_loss_ci": [
+        0.0010019249454663861,
+        0.012919037496733763
+      ],
+      "technical_fail": false,
+      "uncertainty": "supported",
+      "uncertainty_reason": ""
+    },
+    "decoder_contract_sha256": "5de65e9ea7bc42d48148b26b18a9cf057e4931e2a474e0e6b1846969bd233c2e",
+    "management_cpu_reference": {
+      "canonical_record_endpoint": "decoded_xyxy_score_class_detections",
+      "cpu_threads": 4,
+      "created_at": "2026-10-24T00:48:50+02:00",
+      "dataset_manifest_sha256": "6e6a01aff3f354ef81379ac56359c89080733c338ac2e42b87c039b899d33dd2",
+      "decoder_sha256": "9c6973ff5e94f09286afb7e52da9824c3ec7bb989e982efdac59fb0aa5dc131b",
+      "execution_location": "central_management",
+      "explicit_existing_reference_reuse": true,
+      "image_ids_sha256": "9eced8e839495a204fb99096d0cc923f5c41e6bce8ba7155b70999686a303768",
+      "include_in_latency_fps_energy": false,
+      "include_in_pareto": false,
+      "include_in_ranking": false,
+      "model_id": "yolo11l",
+      "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+      "nms_sha256": "f2d8a5d54567178e8017d7944ae28dc2f1f78de19eda23af31103623a4792373",
+      "preprocessing_sha256": "411898b92628e2a769a2b8ea7aa35faff35373cfacb863c3ab34b243c105b70e",
+      "provider": "onnxruntime_cpu",
+      "quality_contract": {
+        "canonical_coordinate_space": "original_image_xyxy_pixels",
+        "canonical_record_endpoint": "decoded_xyxy_score_class_detections",
+        "contract_scope": "canonical_quality_record_semantics",
+        "dataset": {
+          "coordinate_space": "original_image_xyxy_pixels",
+          "ground_truth_sha256": "a4d6d2cda4ba2c651a0dae652e41ece1c26fd1ed1ea4b168d293c3a5e5bacf50",
+          "image_count": 5000,
+          "image_ids_sha256": "9eced8e839495a204fb99096d0cc923f5c41e6bce8ba7155b70999686a303768",
+          "manifest_name": "manifest.json",
+          "manifest_sha256": "6e6a01aff3f354ef81379ac56359c89080733c338ac2e42b87c039b899d33dd2"
+        },
+        "decoder": {
+          "identity": {
+            "adapter_id": "vendored_yolo_harness_with_local_fallback_v1",
+            "adapter_location": "quality_record_host_postprocessor",
+            "canonical_record_endpoint": "decoded_xyxy_score_class_detections",
+            "confidence_threshold": 0.25,
+            "implementation_runner_sha256": "51952be0a51b51a558ece8f2f3776068738653a5bba2dbbbabddbdc310893cd5",
+            "labels_sha256": "a2bb9c8218affdef450cc85951e6a5abc5e4d956cd37b1be3d04840ae0120c8e",
+            "schema": "onnx-splitpoint/detection-decoder-contract",
+            "schema_version": 1,
+            "source_endpoint_has_integrated_nms": false,
+            "source_endpoint_semantics": "ultralytics_decoded",
+            "source_output_format": "ultralytics_decoded",
+            "source_output_names": [
+              "output0"
+            ]
+          },
+          "sha256": "9c6973ff5e94f09286afb7e52da9824c3ec7bb989e982efdac59fb0aa5dc131b"
+        },
+        "model": {
+          "artifact_name": "yolo11l.onnx",
+          "sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147"
+        },
+        "nms": {
+          "identity": {
+            "adapter_id": "vendored_yolo_harness_with_local_fallback_v1",
+            "detr_or_bn6_confidence_threshold": 0.25,
+            "detr_or_bn6_iou_threshold": 0.45,
+            "detr_or_bn6_max_detections": 300,
+            "implementation_runner_sha256": "51952be0a51b51a558ece8f2f3776068738653a5bba2dbbbabddbdc310893cd5",
+            "iou_threshold": 0.45,
+            "max_detections": 300,
+            "schema": "onnx-splitpoint/detection-nms-contract",
+            "schema_version": 1
+          },
+          "sha256": "f2d8a5d54567178e8017d7944ae28dc2f1f78de19eda23af31103623a4792373"
+        },
+        "preprocessing": {
+          "identity": {
+            "color_space": "RGB",
+            "contract_scope": "prepared_rgb_uint8_semantics",
+            "image_scale": "norm",
+            "input_domain": "uint8_0_255",
+            "letterbox": true,
+            "letterbox_pad_value": 114,
+            "pad_value": 114,
+            "placement": "floor_top_left_remainder_bottom_right",
+            "preprocess_mode": "letterbox",
+            "resize_interpolation": "bilinear",
+            "resize_rounding": "python_round_ties_to_even",
+            "schema": "onnx-splitpoint/image-preprocessing-contract",
+            "schema_version": 2,
+            "spatial_transform": "centered_letterbox",
+            "target_hw": [
+              640,
+              640
+            ],
+            "task": "detection"
+          },
+          "runtime_input_encoding": {
+            "image_scale": "norm",
+            "input_dtype": "float32",
+            "schema": "onnx-splitpoint/model-input-encoding-contract",
+            "schema_version": 1
+          },
+          "runtime_input_encoding_sha256": "4ceacc87aae48c1f60bb631b6d636603f1b5dabe4b84b6b812d58ba74ebde43e",
+          "sha256": "411898b92628e2a769a2b8ea7aa35faff35373cfacb863c3ab34b243c105b70e"
+        },
+        "quality_contract_sha256": "56d7fa5194f9d347eaf44ec5de7f7d2dc82f10ddacbc83e94197fbf635db78f8",
+        "quality_record_endpoint": {
+          "identity": {
+            "canonical_record_endpoint": "decoded_xyxy_score_class_detections",
+            "decoder_contract_sha256": "9c6973ff5e94f09286afb7e52da9824c3ec7bb989e982efdac59fb0aa5dc131b",
+            "implementation_runner_sha256": "51952be0a51b51a558ece8f2f3776068738653a5bba2dbbbabddbdc310893cd5",
+            "nms_contract_sha256": "f2d8a5d54567178e8017d7944ae28dc2f1f78de19eda23af31103623a4792373",
+            "schema": "onnx-splitpoint/detection-quality-record-endpoint-contract",
+            "schema_version": 1,
+            "vendored_endpoint_attestor_sha256": "0667f3368b684ed5df2b801b8283a725d072722115a91f9cff2c3801a3396139"
+          },
+          "sha256": "9f575b63f302e87d46ef9be82621bb1e904dac8843d780507244dbfa6bbc8abc"
+        },
+        "quality_record_endpoint_contract_sha256": "9f575b63f302e87d46ef9be82621bb1e904dac8843d780507244dbfa6bbc8abc",
+        "schema": "onnx-splitpoint/central-detection-quality-contract",
+        "schema_version": 1,
+        "source_endpoint_is_raw": false,
+        "source_endpoint_role": "canonical_reference_model_output",
+        "task": "detection"
+      },
+      "quality_contract_sha256": "56d7fa5194f9d347eaf44ec5de7f7d2dc82f10ddacbc83e94197fbf635db78f8",
+      "record_count": 5000,
+      "reference_immutable": true,
+      "reference_path": "retained_source::canonical_cpu_reference.json",
+      "reference_sha256": "c2e55949edebe83bca1498005a01bebcf751ab339905655475eb5274970d2e6c",
+      "reference_size_bytes": 10374270,
+      "reference_storage": "immutable_source_contract",
+      "schema": "onnx-splitpoint/management-cpu-reference-job",
+      "schema_version": 1,
+      "semantic_reference_only": true,
+      "source_contract_sha256": "sha256:045c9e9089920b3aff0e839d06698778269068688317da79067e6894441fd05d",
+      "source_endpoint_is_raw": false,
+      "source_evaluation_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+      "source_reference_path": "retained_source::canonical_cpu_reference.json",
+      "source_status": {
+        "path": "retained_source::management_cpu_reference_status.json",
+        "sha256": "c6f1715b65fa87d33afc5b23d1b2d13b1ce2d719989a659c67acc9e69f7589a4",
+        "size_bytes": 6731
+      },
+      "status": "cache_hit",
+      "task": "detection"
+    },
+    "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+    "nms_contract_sha256": "a01d438a32ee1e981d8676e0e138d56ae7cd55079ac3ca77f6f02329d330a5d9",
+    "preprocessing_contract_sha256": "411898b92628e2a769a2b8ea7aa35faff35373cfacb863c3ab34b243c105b70e",
+    "primary": {
+      "bootstrap_elapsed_s": 229.135412693955,
+      "bootstrap_engine": "management_process_pool:onnx_splitpoint_tool.quality_metrics:detection_quality_evaluator",
+      "bootstrap_repetitions": 1000,
+      "bootstrap_repetitions_requested": 1000,
+      "bootstrap_skipped_reason": "",
+      "candidate": 0.4637383165951622,
+      "ci_computed": true,
+      "ci_high": -0.00046661727823944115,
+      "ci_low": -0.00605561369200288,
+      "decision_basis": "paired_bootstrap_lower_bound",
+      "delta": -0.00308842500990808,
+      "gate_bound_value": -0.00605561369200288,
+      "legacy_decision": "pass",
+      "margin": 0.01,
+      "metric": "coco_ap_50_95",
+      "n": 5000,
+      "point_estimate_comparison_basis": "float_inclusive_threshold_tolerance",
+      "prediction_identity_verified": false,
+      "reference": 0.46682674160507026,
+      "status": "completed",
+      "uncertainty_status": "computed_bootstrap"
+    }
+  },
+  "quality_completed_at": null,
+  "upstream": {
+    "energy_handoff_sha256": "8e0915876f82a1ba2f2bd06987ab73a053d6ba880f0e4c8b6c18359e8b0f4fc0",
+    "energy_normal": {
+      "path": "energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/resume_attempts/ee66c383b6204f50b2ff3e4ad72de5c1/normal_result.json",
+      "sha256": "ee1604dd40f7050ae87023c0420f82b5c541ac52f47a95365d0497094751bdd4",
+      "size_bytes": 361492
+    },
+    "existing_binding_sha256": "aab2b781157e32bc234f1c5d98622f02775a46a7ae86edc92d16d141262ea548",
+    "fps": {
+      "completed_at": "2026-10-23T23:33:51.129471+00:00",
+      "energy_parent_local_alias": {
+        "path": "rq2_detector_followup_20261027/six_pack_20261027/deepx/energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/measurement/performance_result.json",
+        "sha256": "289ffe379badc14bf330d9fe6555144ae51bc40f86bda5c356ee87e5e2bb05f6",
+        "size_bytes": 333599
+      },
+      "median_fps": 69.40285189366168,
+      "median_pointer": "/completed_task_fps_median",
+      "path": "measurements/generic_only/v19_DeepX_yolo11l_Source67_wave34_four_b511_b537_b584_b602/measurements/orin_nx_deepx_m1_01/yolo11l/creation_snapshot_v1_554cb4b47dc7c7e0226d6ac9c0fea2b1f3c08e85c08a4155684d09920d7b9b57/results/orin_nx_deepx_m1_01/yolo11l/b511/generic_completion_results.json",
+      "repetitions": [
+        {
+          "boot_id": "d9c896d0-c325-452c-872b-e43a8dbf23ac",
+          "completed_at": "2026-10-23T23:32:57.018535+00:00",
+          "completed_task_count": 1000,
+          "completed_task_fps": 68.93188082246797,
+          "measured_makespan_seconds": 14.507075508,
+          "pid": 3538646,
+          "pointer": "/repetitions/0",
+          "process_start_ticks": 424436682,
+          "repetition_index": 1,
+          "warmup_completed_count": 100
+        },
+        {
+          "boot_id": "d9c896d0-c325-452c-872b-e43a8dbf23ac",
+          "completed_at": "2026-10-23T23:33:23.396224+00:00",
+          "completed_task_count": 1000,
+          "completed_task_fps": 69.40285189366168,
+          "measured_makespan_seconds": 14.4086298,
+          "pid": 3538737,
+          "pointer": "/repetitions/1",
+          "process_start_ticks": 424439325,
+          "repetition_index": 2,
+          "warmup_completed_count": 100
+        },
+        {
+          "boot_id": "d9c896d0-c325-452c-872b-e43a8dbf23ac",
+          "completed_at": "2026-10-23T23:33:50.565242+00:00",
+          "completed_task_count": 1000,
+          "completed_task_fps": 69.47191778492947,
+          "measured_makespan_seconds": 14.394305381,
+          "pid": 3538827,
+          "pointer": "/repetitions/2",
+          "process_start_ticks": 424442035,
+          "repetition_index": 3,
+          "warmup_completed_count": 100
+        }
+      ],
+      "sha256": "289ffe379badc14bf330d9fe6555144ae51bc40f86bda5c356ee87e5e2bb05f6",
+      "size_bytes": 333599
+    },
+    "normal_admission": {
+      "actual_decision": {
+        "admission_mode": "generic_only",
+        "case_key": "yolo11l|b511|deepx_to_trt|float32_layout_fp16|orin_nx_deepx_m1_01|deepx|detection:decoded_pre_nms:4ff299deec70a49feb11e468c7adeadea8016934121da91b275994b3229fa431",
+        "completion_attestations": [
+          {
+            "attestation_sha256": "57b0245b8643499fc9608e279c5d05a672fe0c559f270972ffdc7240300b2f8f",
+            "completed_work_units": 1100,
+            "execution_id": "20261024_012252_01b19ae7",
+            "process_identity": {
+              "boot_id": "d9c896d0-c325-452c-872b-e43a8dbf23ac",
+              "pid": 3538646,
+              "process_start_ticks": 424436682
+            },
+            "repetition_index": 1
+          },
+          {
+            "attestation_sha256": "57b0245b8643499fc9608e279c5d05a672fe0c559f270972ffdc7240300b2f8f",
+            "completed_work_units": 1100,
+            "execution_id": "20261024_012252_01b19ae7",
+            "process_identity": {
+              "boot_id": "d9c896d0-c325-452c-872b-e43a8dbf23ac",
+              "pid": 3538737,
+              "process_start_ticks": 424439325
+            },
+            "repetition_index": 2
+          },
+          {
+            "attestation_sha256": "57b0245b8643499fc9608e279c5d05a672fe0c559f270972ffdc7240300b2f8f",
+            "completed_work_units": 1100,
+            "execution_id": "20261024_012252_01b19ae7",
+            "process_identity": {
+              "boot_id": "d9c896d0-c325-452c-872b-e43a8dbf23ac",
+              "pid": 3538827,
+              "process_start_ticks": 424442035
+            },
+            "repetition_index": 3
+          }
+        ],
+        "eligible_for_generic_only_execution": true,
+        "native_performance_claimed": false,
+        "quality_eligible": true,
+        "quality_status": "reference_close",
+        "reasons": []
+      },
+      "canonical_row_sha256": "7ded630aec1d5f6ceb5934322d54ef1b43174043d4f6cac6479a4c289ab10a76",
+      "energy_parent_local_alias": {
+        "path": "rq2_detector_followup_20261027/six_pack_20261027/deepx/energy/generic_completed/yolo11l_deepx_b511_3x60s_v3/measurement/normal_admission_report.json",
+        "sha256": "b9cd03f759f41138970d98ab9d96a0090a9abec9a5e499fd7c0fdbc9462f1c37",
+        "size_bytes": 7031
+      },
+      "path": "measurements/generic_only/v19_DeepX_yolo11l_Source67_wave34_four_b511_b537_b584_b602/measurements/orin_nx_deepx_m1_01/yolo11l/creation_snapshot_v1_554cb4b47dc7c7e0226d6ac9c0fea2b1f3c08e85c08a4155684d09920d7b9b57/reports/generic_only_admissions.json",
+      "pointer": "/rows/0",
+      "sha256": "b9cd03f759f41138970d98ab9d96a0090a9abec9a5e499fd7c0fdbc9462f1c37",
+      "size_bytes": 7031
+    },
+    "quality": {
+      "accuracy_assessment": {
+        "absolute_loss_pp": 0.308842500990808,
+        "accuracy_class": "reference_close",
+        "confidence_level": 0.95,
+        "policy_id": "accuracy_reporting_v1",
+        "relative_loss": 0.006615784261392742,
+        "relative_loss_ci": [
+          0.0010019249454663861,
+          0.012919037496733763
+        ],
+        "technical_fail": false,
+        "uncertainty": "supported",
+        "uncertainty_reason": ""
+      },
+      "artifact_provenance_binding_status": "verified",
+      "artifact_provenance_claim_eligible": true,
+      "candidate_ap_pointer": "/primary/candidate",
+      "candidate_execution_completion_contract_sha256": "1f4b13c4bfbf7f55e517255272c3087c0ba0cb04431a98232511b0d0f977757d",
+      "candidate_predictions_sha256": "0457dde7a10dcb86cd3a925ee488f4626f78851919e987b2bcce5efa11028a1b",
+      "evaluated_images": 5000,
+      "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+      "n": 5000,
+      "path": "measurements/generic_only/v19_DeepX_yolo11l_Source67_wave34_four_b511_b537_b584_b602/observations/b511/quality_result.json",
+      "policy_sha256": "d50d6d5d43d2e9a58350e1e5499ed276ed7f2b6c67f79d5a07c10088f8ae8900",
+      "primary": {
+        "bootstrap_elapsed_s": 229.135412693955,
+        "bootstrap_engine": "management_process_pool:onnx_splitpoint_tool.quality_metrics:detection_quality_evaluator",
+        "bootstrap_repetitions": 1000,
+        "bootstrap_repetitions_requested": 1000,
+        "bootstrap_skipped_reason": "",
+        "candidate": 0.4637383165951622,
+        "ci_computed": true,
+        "ci_high": -0.00046661727823944115,
+        "ci_low": -0.00605561369200288,
+        "decision_basis": "paired_bootstrap_lower_bound",
+        "delta": -0.00308842500990808,
+        "gate_bound_value": -0.00605561369200288,
+        "legacy_decision": "pass",
+        "margin": 0.01,
+        "metric": "coco_ap_50_95",
+        "n": 5000,
+        "point_estimate_comparison_basis": "float_inclusive_threshold_tolerance",
+        "prediction_identity_verified": false,
+        "reference": 0.46682674160507026,
+        "status": "completed",
+        "uncertainty_status": "computed_bootstrap"
+      },
+      "primary_pointer": "/primary",
+      "producer_binding_eligible": true,
+      "quality_contract_sha256": "e1bd6d4c61bca204b0d01d1151f107004675166c6ff6b0dab40c0c7099bcc10c",
+      "quality_decision": "reference_close",
+      "quality_result_contract_version": 3,
+      "reference_ap_pointer": "/primary/reference",
+      "reference_identity": "20a4e276bb131949752460cfb9330d6bfc6e10c97f58fbc4e21a3930c1f07451",
+      "reference_predictions_sha256": "45306cc9e77393a202c260d5a4a80c581e2ef321d68749ac580f8b414ea6452f",
+      "reporting_policy": {
+        "confidence_level": 0.95,
+        "dataset_policy": "preserve_images_and_denominators",
+        "energy_window_policy": "unchanged_command",
+        "interval_kind": "paired_bootstrap_two_sided_relative_loss",
+        "loss_definition": "(reference-candidate)/reference",
+        "policy_id": "accuracy_reporting_v1",
+        "preserve_historical_results": true,
+        "primary_metrics": {
+          "classification": "top1_accuracy",
+          "detection": "coco_ap_50_95"
+        },
+        "quality_affects_technical_pass": false,
+        "relative_loss_threshold": 0.05,
+        "secondary_metrics": "report_warning_only",
+        "technical_fail_only": true,
+        "uncertainty_band_high": 0.07,
+        "uncertainty_band_low": 0.03
+      },
+      "runtime_artifacts": [
+        {
+          "backend": "deepx_m1",
+          "name": "model.dxnn",
+          "role": "stage1_runtime",
+          "sha256": "c5bab072e1363d5533b6f6c60ca54ee747421fa5c080c153d2d01c19051c6f27",
+          "size_bytes": 48536082
+        },
+        {
+          "backend": "native_tensorrt",
+          "name": "part2_fp16.engine",
+          "role": "stage2_runtime",
+          "sha256": "4ec11fd7155ccd39b33ebafadfbe85b02e386775ffe58595f0d5ab9852026520",
+          "size_bytes": 6549748
+        }
+      ],
+      "seed_schema": {
+        "image_count": 5000,
+        "repetitions": 1000,
+        "schema": "numpy-pcg64-index-plan-v1",
+        "seed": 20260710
+      },
+      "sha256": "46e166166d16a10c525aae1dd2a7e8b12d8378daa941f0afb445f33df95c8031",
+      "size_bytes": 176726,
+      "source_request_sha256": "sha256:a4f31da4825135c5f57cad6ad25b77bb89750c2a6751d1e2b1f1f9e70fd1643b",
+      "status": "completed",
+      "technical_status": "completed",
+      "validation_dataset_manifest_sha256": "6e6a01aff3f354ef81379ac56359c89080733c338ac2e42b87c039b899d33dd2"
+    }
+  }
+}

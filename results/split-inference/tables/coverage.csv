@@ -26,7 +26,7 @@ resnet50,H10,native,split,19,19,19,19,19,0
 resnet50,H8,generic,split,19,19,19,19,19,0
 resnet50,H8,native,full,2,2,2,2,2,0
 resnet50,H8,native,split,19,19,19,19,19,0
-yolo11l,DeepX,generic,split,3,3,3,3,3,0
+yolo11l,DeepX,generic,split,4,4,4,4,4,0
 yolo11l,DeepX,native,full,2,2,2,2,2,0
 yolo11l,DeepX,native,split,3,3,3,3,3,0
 yolo11l,H10,generic,split,3,3,3,3,3,0
@@ -59,6 +59,6 @@ yolov7_paper,DeepX,native,split,3,3,3,3,3,0
 yolov7_paper,H10,generic,split,3,3,3,3,3,0
 yolov7_paper,H10,native,full,2,2,2,2,2,1
 yolov7_paper,H10,native,split,3,3,3,3,3,0
-yolov7_paper,H8,generic,split,3,3,3,3,3,0
+yolov7_paper,H8,generic,split,3,3,2,2,3,0
 yolov7_paper,H8,native,full,2,2,2,2,2,1
 yolov7_paper,H8,native,split,3,3,3,3,3,0

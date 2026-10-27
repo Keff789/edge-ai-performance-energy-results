@@ -1,0 +1,1564 @@
+{
+  "expected_packages": [
+    "native_H8_yolov7_b009_FPS",
+    "native_H8_yolov7_b009_quality",
+    "native_H8_yolov7_b009_energy",
+    "native_H8_yolo26m_b043_quality",
+    "native_H10_yolo26m_b043_quality",
+    "generic_DeepX_yolo11l_b511_energy"
+  ],
+  "observations": [
+    {
+      "generation": "six_pack_20261027_existing_current_Generic_reuse",
+      "identity": {
+        "backend": "hailo8_to_trt",
+        "case_id": "b009",
+        "kind": "split",
+        "model_id": "yolov7_paper",
+        "runner": "generic",
+        "setup_id": "H8"
+      },
+      "identity_evidence": {
+        "model_sha256": {
+          "pointer": "/proofs/accepted_rows/rows/0/model_sha256",
+          "source": "b009_current_generic"
+        },
+        "physical_host": {
+          "pointer": "/proofs/actual_FPS_result/identity/setup_id",
+          "source": "b009_current_generic"
+        },
+        "uid": {
+          "pointer": "/proofs/portable_projection/rows/0/generic_uid",
+          "source": "b009_current_generic"
+        }
+      },
+      "metrics": {
+        "performance": {
+          "acquisition_origin": "reused_existing",
+          "actual_result": "b009_current_generic",
+          "actual_result_sha256": {
+            "pointer": "/proofs/portable_projection/rows/0/actual_FPS_result_sha256",
+            "source": "b009_current_generic"
+          },
+          "completed_at": {
+            "pointer": "/proofs/actual_FPS_result/completed_at",
+            "source": "b009_current_generic"
+          },
+          "normal_admission": {
+            "accepted": {
+              "pointer": "/rows/0/observation_contract/valid",
+              "source": "b009_current_generic"
+            },
+            "checks": [
+              {
+                "actual": {
+                  "pointer": "/proofs/actual_terminal/status",
+                  "source": "b009_current_generic"
+                },
+                "expected": "complete"
+              },
+              {
+                "actual": {
+                  "pointer": "/proofs/actual_terminal/exitcode",
+                  "source": "b009_current_generic"
+                },
+                "expected": 0
+              },
+              {
+                "actual": {
+                  "pointer": "/proofs/actual_cleanup/active_owned_remote_operations",
+                  "source": "b009_current_generic"
+                },
+                "expected": 0
+              },
+              {
+                "actual": {
+                  "pointer": "/proofs/normal_receipt/Native_performance_or_quality_admission_inferred",
+                  "source": "b009_current_generic"
+                },
+                "expected": false
+              },
+              {
+                "actual": {
+                  "pointer": "/proofs/normal_receipt/normal_FPS_API",
+                  "source": "b009_current_generic"
+                },
+                "expected": "generic_completion_reporting.validate_completion_case"
+              }
+            ],
+            "normal_api": "generic_completion_reporting.validate_completion_case"
+          },
+          "repetitions": [
+            {
+              "completed_tasks": {
+                "pointer": "/proofs/actual_FPS_result/repetitions/0/completed_task_count",
+                "source": "b009_current_generic"
+              },
+              "fps": {
+                "pointer": "/proofs/actual_FPS_result/repetitions/0/completed_task_fps",
+                "source": "b009_current_generic"
+              },
+              "pid": {
+                "pointer": "/proofs/actual_FPS_result/repetitions/0/pid",
+                "source": "b009_current_generic"
+              },
+              "warmups": {
+                "pointer": "/proofs/actual_FPS_result/repetitions/0/warmup_completed_count",
+                "source": "b009_current_generic"
+              }
+            },
+            {
+              "completed_tasks": {
+                "pointer": "/proofs/actual_FPS_result/repetitions/1/completed_task_count",
+                "source": "b009_current_generic"
+              },
+              "fps": {
+                "pointer": "/proofs/actual_FPS_result/repetitions/1/completed_task_fps",
+                "source": "b009_current_generic"
+              },
+              "pid": {
+                "pointer": "/proofs/actual_FPS_result/repetitions/1/pid",
+                "source": "b009_current_generic"
+              },
+              "warmups": {
+                "pointer": "/proofs/actual_FPS_result/repetitions/1/warmup_completed_count",
+                "source": "b009_current_generic"
+              }
+            },
+            {
+              "completed_tasks": {
+                "pointer": "/proofs/actual_FPS_result/repetitions/2/completed_task_count",
+                "source": "b009_current_generic"
+              },
+              "fps": {
+                "pointer": "/proofs/actual_FPS_result/repetitions/2/completed_task_fps",
+                "source": "b009_current_generic"
+              },
+              "pid": {
+                "pointer": "/proofs/actual_FPS_result/repetitions/2/pid",
+                "source": "b009_current_generic"
+              },
+              "warmups": {
+                "pointer": "/proofs/actual_FPS_result/repetitions/2/warmup_completed_count",
+                "source": "b009_current_generic"
+              }
+            }
+          ]
+        },
+        "quality": {
+          "acquisition_origin": "reused_existing",
+          "actual_result": "b009_current_generic",
+          "actual_result_sha256": {
+            "pointer": "/proofs/portable_projection/rows/0/actual_published_quality_result_sha256",
+            "source": "b009_current_generic"
+          },
+          "bootstrap_repetitions": {
+            "pointer": "/proofs/actual_quality_result/primary/bootstrap_repetitions",
+            "source": "b009_current_generic"
+          },
+          "completed_at": {
+            "pointer": "/proofs/actual_quality_case_index/quality_completed_at",
+            "source": "b009_current_generic"
+          },
+          "n": {
+            "pointer": "/proofs/actual_quality_result/primary/n",
+            "source": "b009_current_generic"
+          },
+          "normal_admission": {
+            "accepted": {
+              "pointer": "/proofs/actual_quality_case_index/normal_final_guard_completed",
+              "source": "b009_current_generic"
+            },
+            "checks": [
+              {
+                "actual": {
+                  "pointer": "/proofs/actual_terminal/status",
+                  "source": "b009_current_generic"
+                },
+                "expected": "complete"
+              },
+              {
+                "actual": {
+                  "pointer": "/proofs/actual_terminal/exitcode",
+                  "source": "b009_current_generic"
+                },
+                "expected": 0
+              },
+              {
+                "actual": {
+                  "pointer": "/proofs/actual_cleanup/active_owned_remote_operations",
+                  "source": "b009_current_generic"
+                },
+                "expected": 0
+              },
+              {
+                "actual": {
+                  "pointer": "/proofs/normal_receipt/Native_performance_or_quality_admission_inferred",
+                  "source": "b009_current_generic"
+                },
+                "expected": false
+              },
+              {
+                "actual": {
+                  "pointer": "/proofs/normal_receipt/normal_Quality_API",
+                  "source": "b009_current_generic"
+                },
+                "expected": "generic_only_plan.validate_quality_reference"
+              }
+            ],
+            "normal_api": "generic_only_plan.validate_quality_reference"
+          },
+          "performance_source_sha256": {
+            "pointer": "/proofs/portable_projection/rows/0/actual_FPS_result_sha256",
+            "source": "b009_current_generic"
+          },
+          "primary_observation": {
+            "pointer": "/proofs/actual_quality_result/primary",
+            "source": "b009_current_generic"
+          },
+          "quality_class": {
+            "pointer": "/proofs/normal_receipt/quality_status",
+            "source": "b009_current_generic"
+          },
+          "quality_eligible": {
+            "pointer": "/proofs/normal_receipt/quality_eligible",
+            "source": "b009_current_generic"
+          },
+          "reference": {
+            "pointer": "/proofs/actual_quality_result/primary/reference",
+            "source": "b009_current_generic"
+          },
+          "value": {
+            "pointer": "/proofs/actual_quality_result/primary/candidate",
+            "source": "b009_current_generic"
+          }
+        }
+      },
+      "prior_case_sha256": "9456d96b85fb55db59d8f2ea9ce413578d9d222078fe50dc6906ac96e3b1a44d",
+      "runtime_fields": {
+        "completed_endpoint_contract_sha256": {
+          "pointer": "/proofs/actual_FPS_result/completion_contract/completed_endpoint_contract/endpoint_contract_hash",
+          "source": "b009_current_generic"
+        },
+        "completion_contract_sha256": {
+          "pointer": "/proofs/actual_FPS_result/completion_contract/contract_sha256",
+          "source": "b009_current_generic"
+        },
+        "contract_decoder": {
+          "pointer": "/proofs/actual_quality_result/decoder_contract_sha256",
+          "source": "b009_current_generic"
+        },
+        "contract_nms": {
+          "pointer": "/proofs/actual_quality_result/nms_contract_sha256",
+          "source": "b009_current_generic"
+        },
+        "contract_preprocessing": {
+          "pointer": "/proofs/actual_FPS_result/input_binding/preprocessing_contract_sha256",
+          "source": "b009_current_generic"
+        },
+        "prepared_input_sha256": {
+          "pointer": "/proofs/actual_FPS_result/input_binding/prepared_input/sha256",
+          "source": "b009_current_generic"
+        }
+      },
+      "uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009"
+    },
+    {
+      "generation": "six_pack_20261027",
+      "identity": {
+        "backend": "hailo8_to_trt",
+        "case_id": "b009",
+        "kind": "split",
+        "model_id": "yolov7_paper",
+        "runner": "native",
+        "setup_id": "H8"
+      },
+      "identity_evidence": {
+        "model_sha256": {
+          "pointer": "/identity/model_sha256",
+          "source": "h8_b009_native_fps_v3"
+        },
+        "physical_host": {
+          "pointer": "/identity/physical_host",
+          "source": "h8_b009_native_fps_v3"
+        },
+        "uid": {
+          "pointer": "/identity/uid",
+          "source": "h8_b009_native_fps_v3"
+        }
+      },
+      "metrics": {
+        "energy": {
+          "acquisition_origin": "new_capture",
+          "actual_result": "H8_yolov7_b009_actual_native_energy",
+          "actual_result_sha256": {
+            "pointer": "/upstream/normal_result/sha256",
+            "source": "H8_yolov7_b009_actual_native_energy"
+          },
+          "completed_at": {
+            "pointer": "/cleanup/finished_at",
+            "source": "H8_yolov7_b009_actual_native_energy"
+          },
+          "normal_admission": {
+            "accepted": {
+              "pointer": "/normal_row/energy_quality_qualified",
+              "source": "H8_yolov7_b009_actual_native_energy"
+            },
+            "checks": [
+              {
+                "actual": {
+                  "pointer": "/normal/complete",
+                  "source": "H8_yolov7_b009_actual_native_energy"
+                },
+                "expected": true
+              },
+              {
+                "actual": {
+                  "pointer": "/normal/ok",
+                  "source": "H8_yolov7_b009_actual_native_energy"
+                },
+                "expected": true
+              },
+              {
+                "actual": {
+                  "pointer": "/normal_run/energy_aggregate_verified",
+                  "source": "H8_yolov7_b009_actual_native_energy"
+                },
+                "expected": true
+              },
+              {
+                "actual": {
+                  "pointer": "/normal_run/energy_aggregate_valid_repeat_count",
+                  "source": "H8_yolov7_b009_actual_native_energy"
+                },
+                "expected": 3
+              },
+              {
+                "actual": {
+                  "pointer": "/aggregate/energy_efficiency_claim_eligible",
+                  "source": "H8_yolov7_b009_actual_native_energy"
+                },
+                "expected": true
+              },
+              {
+                "actual": {
+                  "pointer": "/cleanup/cleanup_proven",
+                  "source": "H8_yolov7_b009_actual_native_energy"
+                },
+                "expected": true
+              }
+            ],
+            "normal_api": "normal_native_dataset_energy_results_completed_point_admission"
+          },
+          "package_label": "native_H8_yolov7_b009_energy",
+          "performance_source_sha256": {
+            "pointer": "/performance_authority/normal_summary/sha256",
+            "source": "H8_yolov7_b009_actual_native_energy"
+          },
+          "repetitions": [
+            {
+              "actual_result": "H8_yolov7_b009_actual_native_energy",
+              "source_sha256": {
+                "pointer": "/repetitions/0/source/sha256",
+                "source": "H8_yolov7_b009_actual_native_energy"
+              },
+              "values": {
+                "completed_tasks": {
+                  "pointer": "/repetitions/0/values/energy_work_units_used",
+                  "source": "H8_yolov7_b009_actual_native_energy"
+                },
+                "duration_s": {
+                  "pointer": "/repetitions/0/values/scientific_primary_active_duration_s",
+                  "source": "H8_yolov7_b009_actual_native_energy"
+                },
+                "energy_j": {
+                  "pointer": "/repetitions/0/values/scientific_primary_energy_j",
+                  "source": "H8_yolov7_b009_actual_native_energy"
+                },
+                "requested_duration_s": {
+                  "pointer": "/repetitions/0/values/energy_configured_workload_duration_s",
+                  "source": "H8_yolov7_b009_actual_native_energy"
+                }
+              }
+            },
+            {
+              "actual_result": "H8_yolov7_b009_actual_native_energy",
+              "source_sha256": {
+                "pointer": "/repetitions/1/source/sha256",
+                "source": "H8_yolov7_b009_actual_native_energy"
+              },
+              "values": {
+                "completed_tasks": {
+                  "pointer": "/repetitions/1/values/energy_work_units_used",
+                  "source": "H8_yolov7_b009_actual_native_energy"
+                },
+                "duration_s": {
+                  "pointer": "/repetitions/1/values/scientific_primary_active_duration_s",
+                  "source": "H8_yolov7_b009_actual_native_energy"
+                },
+                "energy_j": {
+                  "pointer": "/repetitions/1/values/scientific_primary_energy_j",
+                  "source": "H8_yolov7_b009_actual_native_energy"
+                },
+                "requested_duration_s": {
+                  "pointer": "/repetitions/1/values/energy_configured_workload_duration_s",
+                  "source": "H8_yolov7_b009_actual_native_energy"
+                }
+              }
+            },
+            {
+              "actual_result": "H8_yolov7_b009_actual_native_energy",
+              "source_sha256": {
+                "pointer": "/repetitions/2/source/sha256",
+                "source": "H8_yolov7_b009_actual_native_energy"
+              },
+              "values": {
+                "completed_tasks": {
+                  "pointer": "/repetitions/2/values/energy_work_units_used",
+                  "source": "H8_yolov7_b009_actual_native_energy"
+                },
+                "duration_s": {
+                  "pointer": "/repetitions/2/values/scientific_primary_active_duration_s",
+                  "source": "H8_yolov7_b009_actual_native_energy"
+                },
+                "energy_j": {
+                  "pointer": "/repetitions/2/values/scientific_primary_energy_j",
+                  "source": "H8_yolov7_b009_actual_native_energy"
+                },
+                "requested_duration_s": {
+                  "pointer": "/repetitions/2/values/energy_configured_workload_duration_s",
+                  "source": "H8_yolov7_b009_actual_native_energy"
+                }
+              }
+            }
+          ],
+          "system_scope": {
+            "pointer": "/aggregate/energy_physical_scope",
+            "source": "H8_yolov7_b009_actual_native_energy"
+          }
+        },
+        "performance": {
+          "acquisition_origin": "new_capture",
+          "actual_result": "h8_b009_native_fps_v3",
+          "actual_result_sha256": {
+            "pointer": "/upstream/normal_summary/sha256",
+            "source": "h8_b009_native_fps_v3"
+          },
+          "completed_at": {
+            "pointer": "/normal_receipt/actual_capture_finished_at",
+            "source": "h8_b009_native_fps_v3"
+          },
+          "normal_admission": {
+            "accepted": {
+              "pointer": "/normal_row/native_split_final_portable_binding_valid",
+              "source": "h8_b009_native_fps_v3"
+            },
+            "checks": [
+              {
+                "actual": {
+                  "pointer": "/normal_row/status",
+                  "source": "h8_b009_native_fps_v3"
+                },
+                "expected": "ok"
+              },
+              {
+                "actual": {
+                  "pointer": "/normal_row/ok",
+                  "source": "h8_b009_native_fps_v3"
+                },
+                "expected": true
+              },
+              {
+                "actual": {
+                  "pointer": "/normal_row/repetition_count_valid",
+                  "source": "h8_b009_native_fps_v3"
+                },
+                "expected": 3
+              },
+              {
+                "actual": {
+                  "pointer": "/normal_row/repetition_claim_identity_status",
+                  "source": "h8_b009_native_fps_v3"
+                },
+                "expected": "exact"
+              },
+              {
+                "actual": {
+                  "pointer": "/normal_row/native_split_final_portable_binding_valid",
+                  "source": "h8_b009_native_fps_v3"
+                },
+                "expected": true
+              },
+              {
+                "actual": {
+                  "pointer": "/normal_row/repetition_independence_verified",
+                  "source": "h8_b009_native_fps_v3"
+                },
+                "expected": true
+              }
+            ],
+            "normal_api": "scripts/native_producer_final_report.py"
+          },
+          "package_label": "native_H8_yolov7_b009_FPS",
+          "repetitions": [
+            {
+              "clock_domain": {
+                "pointer": "/repetitions/0/request_latency/clock_domain",
+                "source": "h8_b009_native_fps_v3"
+              },
+              "completed_tasks": {
+                "pointer": "/repetitions/0/completed_frames",
+                "source": "h8_b009_native_fps_v3"
+              },
+              "fps": {
+                "pointer": "/repetitions/0/fps_makespan",
+                "source": "h8_b009_native_fps_v3"
+              },
+              "runtime_instance_id": {
+                "pointer": "/repetitions/0/runtime_instance_id",
+                "source": "h8_b009_native_fps_v3"
+              },
+              "warmups": {
+                "pointer": "/repetitions/0/warmup",
+                "source": "h8_b009_native_fps_v3"
+              }
+            },
+            {
+              "clock_domain": {
+                "pointer": "/repetitions/1/request_latency/clock_domain",
+                "source": "h8_b009_native_fps_v3"
+              },
+              "completed_tasks": {
+                "pointer": "/repetitions/1/completed_frames",
+                "source": "h8_b009_native_fps_v3"
+              },
+              "fps": {
+                "pointer": "/repetitions/1/fps_makespan",
+                "source": "h8_b009_native_fps_v3"
+              },
+              "runtime_instance_id": {
+                "pointer": "/repetitions/1/runtime_instance_id",
+                "source": "h8_b009_native_fps_v3"
+              },
+              "warmups": {
+                "pointer": "/repetitions/1/warmup",
+                "source": "h8_b009_native_fps_v3"
+              }
+            },
+            {
+              "clock_domain": {
+                "pointer": "/repetitions/2/request_latency/clock_domain",
+                "source": "h8_b009_native_fps_v3"
+              },
+              "completed_tasks": {
+                "pointer": "/repetitions/2/completed_frames",
+                "source": "h8_b009_native_fps_v3"
+              },
+              "fps": {
+                "pointer": "/repetitions/2/fps_makespan",
+                "source": "h8_b009_native_fps_v3"
+              },
+              "runtime_instance_id": {
+                "pointer": "/repetitions/2/runtime_instance_id",
+                "source": "h8_b009_native_fps_v3"
+              },
+              "warmups": {
+                "pointer": "/repetitions/2/warmup",
+                "source": "h8_b009_native_fps_v3"
+              }
+            }
+          ]
+        },
+        "quality": {
+          "acquisition_origin": "new_capture",
+          "actual_result": "H8_yolov7_b009_actual_N5000",
+          "actual_result_sha256": {
+            "pointer": "/upstream/normal_result/sha256",
+            "source": "H8_yolov7_b009_actual_N5000"
+          },
+          "bootstrap_repetitions": {
+            "pointer": "/result/primary/bootstrap_repetitions",
+            "source": "H8_yolov7_b009_actual_N5000"
+          },
+          "completed_at": {
+            "pointer": "/index/completed_at",
+            "source": "H8_yolov7_b009_actual_N5000"
+          },
+          "n": {
+            "pointer": "/result/primary/n",
+            "source": "H8_yolov7_b009_actual_N5000"
+          },
+          "normal_admission": {
+            "accepted": {
+              "pointer": "/index/normal_native_admission",
+              "source": "H8_yolov7_b009_actual_N5000"
+            },
+            "checks": [
+              {
+                "actual": {
+                  "pointer": "/result/artifact_provenance_claim_eligible",
+                  "source": "H8_yolov7_b009_actual_N5000"
+                },
+                "expected": true
+              },
+              {
+                "actual": {
+                  "pointer": "/result/producer_binding_eligible",
+                  "source": "H8_yolov7_b009_actual_N5000"
+                },
+                "expected": true
+              },
+              {
+                "actual": {
+                  "pointer": "/index/shared_pool_terminal_pending",
+                  "source": "H8_yolov7_b009_actual_N5000"
+                },
+                "expected": false
+              }
+            ],
+            "normal_api": "normal_native_dataset_quality_result_admission"
+          },
+          "package_label": "native_H8_yolov7_b009_quality",
+          "performance_source_sha256": {
+            "pointer": "/existing_authority/selected_performance_source_sha256",
+            "source": "H8_yolov7_b009_actual_N5000"
+          },
+          "primary_observation": {
+            "pointer": "/result/primary",
+            "source": "H8_yolov7_b009_actual_N5000"
+          },
+          "quality_class": {
+            "pointer": "/result/accuracy_assessment/accuracy_class",
+            "source": "H8_yolov7_b009_actual_N5000"
+          },
+          "reference": {
+            "pointer": "/result/primary/reference",
+            "source": "H8_yolov7_b009_actual_N5000"
+          },
+          "relative_loss_ci": {
+            "pointer": "/result/accuracy_assessment/relative_loss_ci",
+            "source": "H8_yolov7_b009_actual_N5000"
+          },
+          "value": {
+            "pointer": "/result/primary/candidate",
+            "source": "H8_yolov7_b009_actual_N5000"
+          }
+        }
+      },
+      "native_binding": {
+        "archived_binding_sha256": "d4249fae34e3a4b339bd2597a28ebf594083e1c1988ea2f5a29c04f7cdd5d960",
+        "generic_comparison": {
+          "completed_endpoint_contract_sha256": {
+            "pointer": "/proofs/actual_FPS_result/completion_contract/completed_endpoint_contract/endpoint_contract_hash",
+            "source": "b009_current_generic"
+          },
+          "performance_source_sha256": {
+            "pointer": "/proofs/portable_projection/rows/0/actual_FPS_result_sha256",
+            "source": "b009_current_generic"
+          },
+          "prepared_inputs_sha256": {
+            "pointer": "/proofs/actual_FPS_result/input_binding/prepared_input/sha256",
+            "source": "b009_current_generic"
+          },
+          "preprocessing_sha256": {
+            "pointer": "/proofs/actual_FPS_result/input_binding/preprocessing_contract_sha256",
+            "source": "b009_current_generic"
+          }
+        },
+        "identity": {
+          "boundary_id": {
+            "pointer": "/proofs/portable_projection/rows/0/boundary_id",
+            "source": "b009_current_generic"
+          },
+          "completed_endpoint_contract_sha256": {
+            "pointer": "/repetitions/0/completed_task_endpoint_contract_hash",
+            "source": "h8_b009_native_fps_v3"
+          },
+          "completion_contract_sha256": {
+            "pointer": "/repetitions/0/completion_execution_contract_sha256",
+            "source": "h8_b009_native_fps_v3"
+          },
+          "model_sha256": {
+            "pointer": "/repetitions/0/model_sha256",
+            "source": "h8_b009_native_fps_v3"
+          },
+          "part1_sha256": {
+            "pointer": "/repetitions/0/native_command_contract/hef_sha256",
+            "source": "h8_b009_native_fps_v3"
+          },
+          "part2_engine_sha256": {
+            "pointer": "/repetitions/0/native_command_contract/engine_sha256",
+            "source": "h8_b009_native_fps_v3"
+          },
+          "prepared_inputs_sha256": {
+            "pointer": "/repetitions/0/native_command_contract/prepared_input_contract/shared_rgb_source_sha256",
+            "source": "h8_b009_native_fps_v3"
+          },
+          "preprocessing_sha256": {
+            "pointer": "/repetitions/0/timing_input_binding/preprocessing_contract_sha256",
+            "source": "h8_b009_native_fps_v3"
+          }
+        },
+        "normal_admission": {
+          "accepted": {
+            "pointer": "/normal_row/native_split_final_portable_binding_valid",
+            "source": "h8_b009_native_fps_v3"
+          },
+          "checks": [
+            {
+              "actual": {
+                "pointer": "/normal_row/status",
+                "source": "h8_b009_native_fps_v3"
+              },
+              "expected": "ok"
+            },
+            {
+              "actual": {
+                "pointer": "/normal_row/ok",
+                "source": "h8_b009_native_fps_v3"
+              },
+              "expected": true
+            },
+            {
+              "actual": {
+                "pointer": "/normal_row/repetition_count_valid",
+                "source": "h8_b009_native_fps_v3"
+              },
+              "expected": 3
+            },
+            {
+              "actual": {
+                "pointer": "/normal_row/repetition_claim_identity_status",
+                "source": "h8_b009_native_fps_v3"
+              },
+              "expected": "exact"
+            },
+            {
+              "actual": {
+                "pointer": "/normal_row/native_split_final_portable_binding_valid",
+                "source": "h8_b009_native_fps_v3"
+              },
+              "expected": true
+            },
+            {
+              "actual": {
+                "pointer": "/normal_row/repetition_independence_verified",
+                "source": "h8_b009_native_fps_v3"
+              },
+              "expected": true
+            }
+          ],
+          "normal_api": "scripts/native_producer_final_report.py"
+        }
+      },
+      "prior_case_sha256": "278d40cdbc480f1776bb2af4e62622f8a6fc44a4842f5a6e3fdc7f2fb775a94d",
+      "runtime_fields": {
+        "comparison_endpoint": {
+          "pointer": "/repetitions/0/completed_task_comparison_endpoint_contract_hash",
+          "source": "h8_b009_native_fps_v3"
+        },
+        "completed_endpoint_contract_sha256": {
+          "pointer": "/repetitions/0/completed_task_endpoint_contract_hash",
+          "source": "h8_b009_native_fps_v3"
+        },
+        "completion_contract_sha256": {
+          "pointer": "/repetitions/0/completion_execution_contract_sha256",
+          "source": "h8_b009_native_fps_v3"
+        },
+        "completion_mode": {
+          "pointer": "/repetitions/0/completed_task_completion_mode",
+          "source": "h8_b009_native_fps_v3"
+        },
+        "contract_decoder": {
+          "pointer": "/result/decoder_contract_sha256",
+          "source": "H8_yolov7_b009_actual_N5000"
+        },
+        "contract_nms": {
+          "pointer": "/result/nms_contract_sha256",
+          "source": "H8_yolov7_b009_actual_N5000"
+        },
+        "contract_preprocessing": {
+          "pointer": "/repetitions/0/timing_input_binding/preprocessing_contract_sha256",
+          "source": "h8_b009_native_fps_v3"
+        },
+        "energy_actual_acquisition": {
+          "pointer": "/acquisition",
+          "source": "H8_yolov7_b009_actual_native_energy"
+        },
+        "energy_claim_comparable": {
+          "pointer": "/source_scope/claim_comparable",
+          "source": "H8_yolov7_b009_actual_native_energy"
+        },
+        "energy_full_baseline_comparison_released": {
+          "pointer": "/source_scope/full_baseline_comparison_released",
+          "source": "H8_yolov7_b009_actual_native_energy"
+        },
+        "measured_completion_mode": {
+          "pointer": "/repetitions/0/completed_task_completion_mode",
+          "source": "h8_b009_native_fps_v3"
+        },
+        "measurement_boundary": {
+          "pointer": "/repetitions/0/measurement_boundary",
+          "source": "h8_b009_native_fps_v3"
+        },
+        "performance_source_epochs": {
+          "pointer": "/source_epochs",
+          "source": "h8_b009_native_fps_v3"
+        },
+        "precision": {
+          "pointer": "/repetitions/0/precision",
+          "source": "h8_b009_native_fps_v3"
+        },
+        "prepared_input_sha256": {
+          "pointer": "/repetitions/0/native_command_contract/prepared_input_contract/shared_rgb_source_sha256",
+          "source": "h8_b009_native_fps_v3"
+        },
+        "quality_reference_sha256": {
+          "pointer": "/result/management_cpu_reference/reference_sha256",
+          "source": "H8_yolov7_b009_actual_N5000"
+        },
+        "quality_source_epochs": {
+          "pointer": "/source_epochs",
+          "source": "H8_yolov7_b009_actual_N5000"
+        }
+      },
+      "uid": "native|yolov7_paper|H8|hailo8_to_trt|b009"
+    },
+    {
+      "generation": "six_pack_20261027",
+      "identity": {
+        "backend": "hailo10h_to_trt",
+        "case_id": "b043",
+        "kind": "split",
+        "model_id": "yolo26m",
+        "runner": "native",
+        "setup_id": "H10"
+      },
+      "identity_evidence": {
+        "model_sha256": {
+          "pointer": "/identity/model_sha256",
+          "source": "H10_yolo26m_b043_actual_N5000"
+        },
+        "physical_host": {
+          "pointer": "/identity/physical_host",
+          "source": "H10_yolo26m_b043_actual_N5000"
+        },
+        "uid": {
+          "pointer": "/identity/uid",
+          "source": "H10_yolo26m_b043_actual_N5000"
+        }
+      },
+      "metrics": {
+        "quality": {
+          "acquisition_origin": "new_capture",
+          "actual_result": "H10_yolo26m_b043_actual_N5000",
+          "actual_result_sha256": {
+            "pointer": "/upstream/normal_result/sha256",
+            "source": "H10_yolo26m_b043_actual_N5000"
+          },
+          "bootstrap_repetitions": {
+            "pointer": "/result/primary/bootstrap_repetitions",
+            "source": "H10_yolo26m_b043_actual_N5000"
+          },
+          "completed_at": {
+            "pointer": "/index/completed_at",
+            "source": "H10_yolo26m_b043_actual_N5000"
+          },
+          "n": {
+            "pointer": "/result/primary/n",
+            "source": "H10_yolo26m_b043_actual_N5000"
+          },
+          "normal_admission": {
+            "accepted": {
+              "pointer": "/index/normal_native_admission",
+              "source": "H10_yolo26m_b043_actual_N5000"
+            },
+            "checks": [
+              {
+                "actual": {
+                  "pointer": "/result/artifact_provenance_claim_eligible",
+                  "source": "H10_yolo26m_b043_actual_N5000"
+                },
+                "expected": true
+              },
+              {
+                "actual": {
+                  "pointer": "/result/producer_binding_eligible",
+                  "source": "H10_yolo26m_b043_actual_N5000"
+                },
+                "expected": true
+              },
+              {
+                "actual": {
+                  "pointer": "/index/shared_pool_terminal_pending",
+                  "source": "H10_yolo26m_b043_actual_N5000"
+                },
+                "expected": false
+              }
+            ],
+            "normal_api": "normal_native_dataset_quality_result_admission"
+          },
+          "package_label": "native_H10_yolo26m_b043_quality",
+          "performance_source_sha256": {
+            "pointer": "/existing_authority/selected_performance_source_sha256",
+            "source": "H10_yolo26m_b043_actual_N5000"
+          },
+          "primary_observation": {
+            "pointer": "/result/primary",
+            "source": "H10_yolo26m_b043_actual_N5000"
+          },
+          "quality_class": {
+            "pointer": "/result/accuracy_assessment/accuracy_class",
+            "source": "H10_yolo26m_b043_actual_N5000"
+          },
+          "reference": {
+            "pointer": "/result/primary/reference",
+            "source": "H10_yolo26m_b043_actual_N5000"
+          },
+          "relative_loss_ci": {
+            "pointer": "/result/accuracy_assessment/relative_loss_ci",
+            "source": "H10_yolo26m_b043_actual_N5000"
+          },
+          "value": {
+            "pointer": "/result/primary/candidate",
+            "source": "H10_yolo26m_b043_actual_N5000"
+          }
+        }
+      },
+      "native_binding": {
+        "archived_binding_sha256": "a3a24a638979a4ae768e76ca50f0077602532ea8b51b11500a973ca592c5e19f",
+        "identity": {
+          "boundary_id": {
+            "pointer": "/existing_authority/boundary_id",
+            "source": "H10_yolo26m_b043_actual_N5000"
+          },
+          "completion_contract_sha256": {
+            "pointer": "/config/timed_completion_contract/contract_sha256",
+            "source": "H10_yolo26m_b043_actual_N5000"
+          },
+          "model_sha256": {
+            "pointer": "/config/source_model_sha256",
+            "source": "H10_yolo26m_b043_actual_N5000"
+          },
+          "part1_sha256": {
+            "pointer": "/result/runtime_artifacts/5/sha256",
+            "source": "H10_yolo26m_b043_actual_N5000"
+          },
+          "part2_engine_sha256": {
+            "pointer": "/result/runtime_artifacts/2/sha256",
+            "source": "H10_yolo26m_b043_actual_N5000"
+          },
+          "preprocessing_sha256": {
+            "pointer": "/result/preprocessing_contract_sha256",
+            "source": "H10_yolo26m_b043_actual_N5000"
+          }
+        },
+        "normal_admission": {
+          "accepted": {
+            "pointer": "/index/normal_native_admission",
+            "source": "H10_yolo26m_b043_actual_N5000"
+          },
+          "checks": [
+            {
+              "actual": {
+                "pointer": "/result/artifact_provenance_claim_eligible",
+                "source": "H10_yolo26m_b043_actual_N5000"
+              },
+              "expected": true
+            },
+            {
+              "actual": {
+                "pointer": "/result/producer_binding_eligible",
+                "source": "H10_yolo26m_b043_actual_N5000"
+              },
+              "expected": true
+            },
+            {
+              "actual": {
+                "pointer": "/index/shared_pool_terminal_pending",
+                "source": "H10_yolo26m_b043_actual_N5000"
+              },
+              "expected": false
+            }
+          ],
+          "normal_api": "normal_native_dataset_quality_result_admission"
+        }
+      },
+      "prior_case_sha256": "c310a381b06f33d9f9635b938f86c3d95579eb9fb3ace31cb47cf0ff27bd5c01",
+      "runtime_fields": {
+        "contract_decoder": {
+          "pointer": "/result/decoder_contract_sha256",
+          "source": "H10_yolo26m_b043_actual_N5000"
+        },
+        "contract_nms": {
+          "pointer": "/result/nms_contract_sha256",
+          "source": "H10_yolo26m_b043_actual_N5000"
+        },
+        "quality_reference_sha256": {
+          "pointer": "/result/management_cpu_reference/reference_sha256",
+          "source": "H10_yolo26m_b043_actual_N5000"
+        },
+        "quality_source_epochs": {
+          "pointer": "/source_epochs",
+          "source": "H10_yolo26m_b043_actual_N5000"
+        }
+      },
+      "uid": "native|yolo26m|H10|hailo10h_to_trt|b043"
+    },
+    {
+      "generation": "six_pack_20261027",
+      "identity": {
+        "backend": "hailo8_to_trt",
+        "case_id": "b043",
+        "kind": "split",
+        "model_id": "yolo26m",
+        "runner": "native",
+        "setup_id": "H8"
+      },
+      "identity_evidence": {
+        "model_sha256": {
+          "pointer": "/identity/model_sha256",
+          "source": "H8_yolo26m_b043_actual_N5000"
+        },
+        "physical_host": {
+          "pointer": "/identity/physical_host",
+          "source": "H8_yolo26m_b043_actual_N5000"
+        },
+        "uid": {
+          "pointer": "/identity/uid",
+          "source": "H8_yolo26m_b043_actual_N5000"
+        }
+      },
+      "metrics": {
+        "quality": {
+          "acquisition_origin": "new_capture",
+          "actual_result": "H8_yolo26m_b043_actual_N5000",
+          "actual_result_sha256": {
+            "pointer": "/upstream/normal_result/sha256",
+            "source": "H8_yolo26m_b043_actual_N5000"
+          },
+          "bootstrap_repetitions": {
+            "pointer": "/result/primary/bootstrap_repetitions",
+            "source": "H8_yolo26m_b043_actual_N5000"
+          },
+          "completed_at": {
+            "pointer": "/index/completed_at",
+            "source": "H8_yolo26m_b043_actual_N5000"
+          },
+          "n": {
+            "pointer": "/result/primary/n",
+            "source": "H8_yolo26m_b043_actual_N5000"
+          },
+          "normal_admission": {
+            "accepted": {
+              "pointer": "/index/normal_native_admission",
+              "source": "H8_yolo26m_b043_actual_N5000"
+            },
+            "checks": [
+              {
+                "actual": {
+                  "pointer": "/result/artifact_provenance_claim_eligible",
+                  "source": "H8_yolo26m_b043_actual_N5000"
+                },
+                "expected": true
+              },
+              {
+                "actual": {
+                  "pointer": "/result/producer_binding_eligible",
+                  "source": "H8_yolo26m_b043_actual_N5000"
+                },
+                "expected": true
+              },
+              {
+                "actual": {
+                  "pointer": "/index/shared_pool_terminal_pending",
+                  "source": "H8_yolo26m_b043_actual_N5000"
+                },
+                "expected": false
+              }
+            ],
+            "normal_api": "normal_native_dataset_quality_result_admission"
+          },
+          "package_label": "native_H8_yolo26m_b043_quality",
+          "performance_source_sha256": {
+            "pointer": "/existing_authority/selected_performance_source_sha256",
+            "source": "H8_yolo26m_b043_actual_N5000"
+          },
+          "primary_observation": {
+            "pointer": "/result/primary",
+            "source": "H8_yolo26m_b043_actual_N5000"
+          },
+          "quality_class": {
+            "pointer": "/result/accuracy_assessment/accuracy_class",
+            "source": "H8_yolo26m_b043_actual_N5000"
+          },
+          "reference": {
+            "pointer": "/result/primary/reference",
+            "source": "H8_yolo26m_b043_actual_N5000"
+          },
+          "relative_loss_ci": {
+            "pointer": "/result/accuracy_assessment/relative_loss_ci",
+            "source": "H8_yolo26m_b043_actual_N5000"
+          },
+          "value": {
+            "pointer": "/result/primary/candidate",
+            "source": "H8_yolo26m_b043_actual_N5000"
+          }
+        }
+      },
+      "native_binding": {
+        "archived_binding_sha256": "3996d0aa0a213ed9a8c4fb6ed889ddadb74671e655d7aa75c81062935a18b692",
+        "identity": {
+          "boundary_id": {
+            "pointer": "/existing_authority/boundary_id",
+            "source": "H8_yolo26m_b043_actual_N5000"
+          },
+          "completion_contract_sha256": {
+            "pointer": "/config/timed_completion_contract/contract_sha256",
+            "source": "H8_yolo26m_b043_actual_N5000"
+          },
+          "model_sha256": {
+            "pointer": "/config/source_model_sha256",
+            "source": "H8_yolo26m_b043_actual_N5000"
+          },
+          "part1_sha256": {
+            "pointer": "/result/runtime_artifacts/5/sha256",
+            "source": "H8_yolo26m_b043_actual_N5000"
+          },
+          "part2_engine_sha256": {
+            "pointer": "/result/runtime_artifacts/2/sha256",
+            "source": "H8_yolo26m_b043_actual_N5000"
+          },
+          "preprocessing_sha256": {
+            "pointer": "/result/preprocessing_contract_sha256",
+            "source": "H8_yolo26m_b043_actual_N5000"
+          }
+        },
+        "normal_admission": {
+          "accepted": {
+            "pointer": "/index/normal_native_admission",
+            "source": "H8_yolo26m_b043_actual_N5000"
+          },
+          "checks": [
+            {
+              "actual": {
+                "pointer": "/result/artifact_provenance_claim_eligible",
+                "source": "H8_yolo26m_b043_actual_N5000"
+              },
+              "expected": true
+            },
+            {
+              "actual": {
+                "pointer": "/result/producer_binding_eligible",
+                "source": "H8_yolo26m_b043_actual_N5000"
+              },
+              "expected": true
+            },
+            {
+              "actual": {
+                "pointer": "/index/shared_pool_terminal_pending",
+                "source": "H8_yolo26m_b043_actual_N5000"
+              },
+              "expected": false
+            }
+          ],
+          "normal_api": "normal_native_dataset_quality_result_admission"
+        }
+      },
+      "prior_case_sha256": "f34bbe9cb3bcefad290fd2e75809b797ec54e3c0068e123fe434974d8d4f938b",
+      "runtime_fields": {
+        "contract_decoder": {
+          "pointer": "/result/decoder_contract_sha256",
+          "source": "H8_yolo26m_b043_actual_N5000"
+        },
+        "contract_nms": {
+          "pointer": "/result/nms_contract_sha256",
+          "source": "H8_yolo26m_b043_actual_N5000"
+        },
+        "quality_reference_sha256": {
+          "pointer": "/result/management_cpu_reference/reference_sha256",
+          "source": "H8_yolo26m_b043_actual_N5000"
+        },
+        "quality_source_epochs": {
+          "pointer": "/source_epochs",
+          "source": "H8_yolo26m_b043_actual_N5000"
+        }
+      },
+      "uid": "native|yolo26m|H8|hailo8_to_trt|b043"
+    },
+    {
+      "generation": "six_pack_20261027",
+      "identity": {
+        "backend": "deepx_to_trt",
+        "case_id": "b511",
+        "kind": "split",
+        "model_id": "yolo11l",
+        "runner": "generic",
+        "setup_id": "DeepX"
+      },
+      "identity_evidence": {
+        "model_sha256": {
+          "pointer": "/identity/model_sha256",
+          "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+        },
+        "physical_host": {
+          "pointer": "/identity/physical_host",
+          "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+        },
+        "uid": {
+          "pointer": "/identity/uid",
+          "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+        }
+      },
+      "metrics": {
+        "energy": {
+          "acquisition_origin": "new_capture",
+          "actual_result": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q",
+          "actual_result_sha256": {
+            "pointer": "/upstream/energy_normal/sha256",
+            "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+          },
+          "completed_at": {
+            "pointer": "/energy_handoff/completed_at",
+            "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+          },
+          "normal_admission": {
+            "accepted": {
+              "pointer": "/energy_normal/normal_report_verified",
+              "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+            },
+            "checks": [
+              {
+                "actual": {
+                  "pointer": "/energy_normal/energy_efficiency_claim_eligible",
+                  "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+                },
+                "expected": true
+              }
+            ],
+            "normal_api": "normal_generic_completed_energy_report"
+          },
+          "package_label": "generic_DeepX_yolo11l_b511_energy",
+          "performance_source_sha256": {
+            "pointer": "/energy_normal/performance_result_sha256",
+            "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+          },
+          "repetitions": [
+            {
+              "actual_result": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q",
+              "source_sha256": {
+                "pointer": "/energy_handoff/repetitions/0/raw_aggregate_sha256",
+                "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+              },
+              "values": {
+                "completed_tasks": {
+                  "pointer": "/energy_handoff/repetitions/0/completed_tasks",
+                  "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+                },
+                "duration_s": {
+                  "pointer": "/energy_handoff/repetitions/0/integrated_active_duration_s",
+                  "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+                },
+                "energy_j": {
+                  "pointer": "/energy_handoff/repetitions/0/energy_j",
+                  "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+                },
+                "requested_duration_s": {
+                  "pointer": "/energy_handoff/repetitions/0/configured_admission_duration_s",
+                  "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+                }
+              }
+            },
+            {
+              "actual_result": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q",
+              "source_sha256": {
+                "pointer": "/energy_handoff/repetitions/1/raw_aggregate_sha256",
+                "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+              },
+              "values": {
+                "completed_tasks": {
+                  "pointer": "/energy_handoff/repetitions/1/completed_tasks",
+                  "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+                },
+                "duration_s": {
+                  "pointer": "/energy_handoff/repetitions/1/integrated_active_duration_s",
+                  "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+                },
+                "energy_j": {
+                  "pointer": "/energy_handoff/repetitions/1/energy_j",
+                  "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+                },
+                "requested_duration_s": {
+                  "pointer": "/energy_handoff/repetitions/1/configured_admission_duration_s",
+                  "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+                }
+              }
+            },
+            {
+              "actual_result": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q",
+              "source_sha256": {
+                "pointer": "/energy_handoff/repetitions/2/raw_aggregate_sha256",
+                "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+              },
+              "values": {
+                "completed_tasks": {
+                  "pointer": "/energy_handoff/repetitions/2/completed_tasks",
+                  "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+                },
+                "duration_s": {
+                  "pointer": "/energy_handoff/repetitions/2/integrated_active_duration_s",
+                  "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+                },
+                "energy_j": {
+                  "pointer": "/energy_handoff/repetitions/2/energy_j",
+                  "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+                },
+                "requested_duration_s": {
+                  "pointer": "/energy_handoff/repetitions/2/configured_admission_duration_s",
+                  "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+                }
+              }
+            }
+          ],
+          "system_scope": {
+            "pointer": "/energy_handoff/method/physical_scope",
+            "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+          }
+        },
+        "performance": {
+          "acquisition_origin": "reused_existing",
+          "actual_result": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q",
+          "actual_result_sha256": {
+            "pointer": "/upstream/fps/sha256",
+            "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+          },
+          "completed_at": {
+            "pointer": "/fps/completed_at",
+            "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+          },
+          "normal_admission": {
+            "accepted": {
+              "pointer": "/normal_admission/eligible_for_generic_only_execution",
+              "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+            },
+            "checks": [
+              {
+                "actual": {
+                  "pointer": "/normal_admission/quality_eligible",
+                  "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+                },
+                "expected": true
+              },
+              {
+                "actual": {
+                  "pointer": "/energy_handoff/native_pair_created",
+                  "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+                },
+                "expected": false
+              }
+            ],
+            "normal_api": "normal_generic_only_execution_admission"
+          },
+          "repetitions": [
+            {
+              "completed_tasks": {
+                "pointer": "/fps/repetitions/0/completed_task_count",
+                "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+              },
+              "fps": {
+                "pointer": "/fps/repetitions/0/completed_task_fps",
+                "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+              },
+              "pid": {
+                "pointer": "/fps/repetitions/0/pid",
+                "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+              },
+              "warmups": {
+                "pointer": "/fps/repetitions/0/warmup_completed_count",
+                "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+              }
+            },
+            {
+              "completed_tasks": {
+                "pointer": "/fps/repetitions/1/completed_task_count",
+                "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+              },
+              "fps": {
+                "pointer": "/fps/repetitions/1/completed_task_fps",
+                "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+              },
+              "pid": {
+                "pointer": "/fps/repetitions/1/pid",
+                "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+              },
+              "warmups": {
+                "pointer": "/fps/repetitions/1/warmup_completed_count",
+                "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+              }
+            },
+            {
+              "completed_tasks": {
+                "pointer": "/fps/repetitions/2/completed_task_count",
+                "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+              },
+              "fps": {
+                "pointer": "/fps/repetitions/2/completed_task_fps",
+                "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+              },
+              "pid": {
+                "pointer": "/fps/repetitions/2/pid",
+                "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+              },
+              "warmups": {
+                "pointer": "/fps/repetitions/2/warmup_completed_count",
+                "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+              }
+            }
+          ]
+        },
+        "quality": {
+          "acquisition_origin": "reused_existing",
+          "actual_result": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q",
+          "actual_result_sha256": {
+            "pointer": "/upstream/quality/sha256",
+            "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+          },
+          "bootstrap_repetitions": {
+            "pointer": "/quality/primary/bootstrap_repetitions",
+            "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+          },
+          "completed_at": {
+            "pointer": "/quality_completed_at",
+            "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+          },
+          "n": {
+            "pointer": "/quality/primary/n",
+            "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+          },
+          "normal_admission": {
+            "accepted": {
+              "pointer": "/normal_admission/eligible_for_generic_only_execution",
+              "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+            },
+            "checks": [
+              {
+                "actual": {
+                  "pointer": "/normal_admission/quality_eligible",
+                  "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+                },
+                "expected": true
+              },
+              {
+                "actual": {
+                  "pointer": "/energy_handoff/native_pair_created",
+                  "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+                },
+                "expected": false
+              }
+            ],
+            "normal_api": "normal_generic_only_execution_admission"
+          },
+          "performance_source_sha256": {
+            "pointer": "/upstream/fps/sha256",
+            "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+          },
+          "primary_observation": {
+            "pointer": "/quality/primary",
+            "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+          },
+          "quality_class": {
+            "pointer": "/quality/accuracy_assessment/accuracy_class",
+            "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+          },
+          "quality_eligible": {
+            "pointer": "/normal_admission/quality_eligible",
+            "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+          },
+          "reference": {
+            "pointer": "/quality/primary/reference",
+            "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+          },
+          "relative_loss_ci": {
+            "pointer": "/quality/accuracy_assessment/relative_loss_ci",
+            "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+          },
+          "value": {
+            "pointer": "/quality/primary/candidate",
+            "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+          }
+        }
+      },
+      "new_case": {
+        "backend": "deepx_to_trt",
+        "case_id": "b511",
+        "fps": null,
+        "kind": "split",
+        "model_id": "yolo11l",
+        "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+        "physical_host": "orin_nx_deepx_m1_01",
+        "quality_relative_loss": null,
+        "raw_j_per_task": null,
+        "runner": "generic",
+        "setup_id": "DeepX",
+        "task": "detection",
+        "uid": "generic|yolo11l|DeepX|deepx_to_trt|b511"
+      },
+      "prior_case_sha256": null,
+      "runtime_fields": {
+        "contract_decoder": {
+          "pointer": "/quality/decoder_contract_sha256",
+          "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+        },
+        "contract_nms": {
+          "pointer": "/quality/nms_contract_sha256",
+          "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+        },
+        "contract_preprocessing": {
+          "pointer": "/quality/preprocessing_contract_sha256",
+          "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+        },
+        "part2_input_count": {
+          "pointer": "/energy_handoff/suffix_input_count",
+          "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+        },
+        "quality_reference_sha256": {
+          "pointer": "/quality/management_cpu_reference/reference_sha256",
+          "source": "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q"
+        }
+      },
+      "uid": "generic|yolo11l|DeepX|deepx_to_trt|b511"
+    }
+  ],
+  "schema": "current-deployment-observations-v1",
+  "sources": {
+    "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q": {
+      "path": "sources/DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q.json",
+      "sha256": "8174b7e6ed70f3105e7179ed772c1d8b3f4cc199570d34f1268262517bca2050"
+    },
+    "H10_yolo26m_b043_actual_N5000": {
+      "path": "sources/H10_yolo26m_b043_actual_N5000.json",
+      "sha256": "c738b00416e9be93e6f3280fba7ac32eec026d5d8b974b447430de3e1aff9af7"
+    },
+    "H8_yolo26m_b043_actual_N5000": {
+      "path": "sources/H8_yolo26m_b043_actual_N5000.json",
+      "sha256": "df3f2573318cf0048ef2f2a5d4728a31681c099078f6a567f33f98a190f4d9bb"
+    },
+    "H8_yolov7_b009_actual_N5000": {
+      "path": "sources/H8_yolov7_b009_actual_N5000.json",
+      "sha256": "3f7cb9badd004d059f2f7708a9bdfc85106490ba22b690253d0f25daf4b7983c"
+    },
+    "H8_yolov7_b009_actual_native_energy": {
+      "path": "sources/H8_yolov7_b009_actual_native_energy.json",
+      "sha256": "e32df52639f49adabcd52b18b3c403bcf47af6ee03a2667281dc02a3f8dea48d"
+    },
+    "b009_current_generic": {
+      "path": "sources/b009_existing_accepted_Generic_FPS_and_own_Q.json",
+      "sha256": "a79e3496ade5f4ccd3b03b90378d70024529ccc5f53f17d820a788cf316d3917"
+    },
+    "h8_b009_native_fps_v3": {
+      "path": "sources/h8_b009_native_fps_v3_portable_v2.json",
+      "sha256": "45edf85eb8c2e0482ff85984b32eb5c2f144d4e55fe39d40fc6af0aa4a1b582d"
+    }
+  },
+  "state": "all_six_new_measurement_packages_normally_admitted"
+}
