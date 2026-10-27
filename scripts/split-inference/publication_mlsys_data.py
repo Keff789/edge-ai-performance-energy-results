@@ -61,7 +61,9 @@ def quality_loss(row):
 
 def eligible(row, tolerance=.05):
     loss = quality_loss(row)
-    return loss is not None and loss <= tolerance
+    current_quality_admitted = ('quality' not in row.get('current_observation_metric_updates', [])
+                                or row.get('normal_quality') is True)
+    return current_quality_admitted and loss is not None and loss <= tolerance
 
 
 def paired_rows(rows, tolerance=None):
@@ -362,6 +364,7 @@ def build(repo_root, broad_output, profile_output):
     repo, broad, output = map(Path, [repo_root, broad_output, profile_output])
     output.mkdir(parents=True, exist_ok=True)
     rows = read(broad / 'data/PAPER_DATASET.json')
+    current_observations = (broad/'data/current_observation_binding.json').is_file()
     config = read(broad / 'data/analysis_config.json')
     models = config['model_order']
     index = {r['uid']: r for r in rows}
@@ -399,7 +402,7 @@ def build(repo_root, broad_output, profile_output):
         winner_rows.append(dict(model=r['model'], label=LABELS.get(r['model'], r['model']),
             split_uid=r['split_uid'], full_uid=r['global_full_uid'], host_full_uid=r['host_full_uid'],
             split_setup=r['split_setup'], split_case=r['split_case'], split_runner=r['split_runner'],
-            split_label=r['split_setup'] + '/' + r['split_case'], full_label=full_label(full),
+            split_label=(r['split_runner'].title()+' ' if current_observations else '') + r['split_setup'] + '/' + r['split_case'], full_label=full_label(full),
             split_fps=r['split_fps'], full_fps=r['global_full_fps'],
             split_mj=r['split_mj_per_image'], full_mj=r['global_full_mj_per_image'],
             split_quality=100 * split['quality_value'], full_quality=100 * full['quality_value'],

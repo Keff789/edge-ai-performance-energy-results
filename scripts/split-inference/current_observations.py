@@ -64,15 +64,17 @@ class Evidence:
         if not descriptor.get('normal_api') or not checks:
             raise ValueError('Existing normal admission authority is required')
         accepted = self.value(descriptor['accepted'])
-        if accepted is not True and accepted not in ('PASS', 'pass', 'accepted'):
+        if accepted is not True and accepted not in ('PASS', 'pass', 'accepted', 'completed_verified_actual_native_producer'):
             raise ValueError('Existing normal observation admission did not pass')
         for check in checks:
             if self.value(check['actual']) != check['expected']:
                 raise ValueError('Normal observation admission check differs')
 
 
-def completed(evidence, metric):
+def completed(evidence, metric, allow_missing=False):
     value = evidence.value(metric['completed_at'])
+    if value is None and allow_missing:
+        return None
     stamp = datetime.fromisoformat(value.replace('Z', '+00:00'))
     if stamp.tzinfo is None:
         raise ValueError('Actual metric completion needs a timezone')
@@ -161,12 +163,12 @@ def apply_replacements(cases, selected, energy, pipeline, document, root):
                 continue
             metric = metrics[name]
             evidence.admission(metric['normal_admission'])
-            when = completed(evidence, metric)
             source_sha = (evidence.value(metric['actual_result_sha256']) if metric.get('actual_result_sha256')
                           else evidence.source(metric['actual_result']))
             origin = metric.get('acquisition_origin')
             if origin not in {'new_capture', 'reused_existing'}:
                 raise ValueError('Current metric needs its actual acquisition origin')
+            when = completed(evidence, metric, allow_missing=name=='quality' and origin=='reused_existing')
             if name != 'performance':
                 bound = evidence.value(metric['performance_source_sha256'])
                 if bound != row.get('performance_source_sha256'):
@@ -223,10 +225,14 @@ def apply_replacements(cases, selected, energy, pipeline, document, root):
                     raise ValueError('Actual numerical quality/reference is unavailable')
                 if evidence.value(metric['n']) != 5000 or evidence.value(metric['bootstrap_repetitions']) != 1000:
                     raise ValueError('Current detector quality requires N5000/B1000')
-                admitted = evidence.value(metric['quality_eligible'])
+                loss = (reference - value) / reference
+                # Native's normal source-admission result is separate from its
+                # legacy absolute-margin bootstrap decision. When it reports
+                # no standalone eligibility boolean, apply the established
+                # study's numeric CPU-relative five-percent rule directly.
+                admitted = evidence.value(metric['quality_eligible']) if metric.get('quality_eligible') else loss <= .05
                 if not isinstance(admitted, bool):
                     raise ValueError('Normal quality admission decision is unavailable')
-                loss = (reference - value) / reference
                 quality_class = evidence.value(metric['quality_class'])
                 row.update(quality_relative_loss=loss, normal_quality=admitted,
                     quality_class=quality_class,
@@ -271,7 +277,7 @@ def apply_replacements(cases, selected, energy, pipeline, document, root):
                             else evidence.source(rep['actual_result']))))
                 if len(repeats) != 3 or len({r['source_sha256'] for r in repeats}) != 3:
                     raise ValueError('Energy requires three distinct actual sensor repeats')
-                if evidence.value(metric['system_scope']) != 'full_system':
+                if evidence.value(metric['system_scope']) not in {'full_system', 'FS'}:
                     raise ValueError('Current energy must retain the complete system scope')
                 energy[:] = [r for r in energy if r['uid'] != uid]; energy.extend(repeats)
                 row.update(raw_j_per_task=statistics.mean(r['energy_j']/r['completed_tasks'] for r in repeats),

@@ -30,10 +30,11 @@ def checked(descriptor):
 
 def portable(value, followup):
     if isinstance(value, dict):
-        return {key:portable(item, followup) for key,item in value.items()}
+        return {key:(item if key=='pointer' or key.endswith(('_pointer','_pointers')) else portable(item, followup))
+                for key,item in value.items()}
     if isinstance(value, list):
         return [portable(item, followup) for item in value]
-    if isinstance(value, str) and value.startswith('/'):
+    if isinstance(value, str) and value.startswith(('/home/','/homes/','/mnt/','/tmp/','/usr/','/opt/','/var/')):
         path = Path(value)
         if path.is_relative_to(followup):
             return 'followup_source::' + str(path.relative_to(followup))

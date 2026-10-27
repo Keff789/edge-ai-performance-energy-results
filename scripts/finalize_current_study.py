@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Refresh the current study overview and file index after artifact generation."""
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -26,6 +27,10 @@ def info(path):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--release-evidence', type=Path,
+        help='Fresh current-source/backup closure metadata; required after current observations change.')
+    args = parser.parse_args()
     q2, q3 = read(RQ2 / 'summary.json'), read(RQ3 / 'MANIFEST.json')
     integration = read(BUILD / 'INTEGRATION_VALIDATION.json')
     assert integration['status'] == 'PASS'
@@ -43,6 +48,34 @@ def main():
     current_binding = read(current_binding_path) if current_binding_path.is_file() else {}
     assert not current_binding.get('pending_packages'), 'Declared current measurement packages are still pending'
     current = [row for row in deployments if row.get('current_observation_metric_updates')]
+    prior_release = read(CLOSURE/'MANIFEST.json')
+    generic_core = prior_release.get('generic420_core', prior_release)
+    source_keys = ['ledger_sha256', 'selection_sha256', 'snapshot_id', 'export_manifest_sha256',
+        'used_tool_revisions', 'tool_environment', 'raw_preservation_complete']
+    release_evidence = None
+    if current:
+        if args.release_evidence is None:
+            raise ValueError('Current observations require fresh --release-evidence; prior snapshot/backup metadata cannot certify new captures')
+        release_evidence = read(args.release_evidence)
+        if release_evidence.get('raw_preservation_complete') is not False:
+            raise ValueError('The accepted historical raw limitation remains false globally; current packages have their own preservation scope')
+        if release_evidence['current_dataset_sha256'] != info(REPO/'results/split-inference/data/PAPER_DATASET.json')['sha256']:
+            raise ValueError('Release evidence does not bind the current deployment dataset')
+        if release_evidence['current_observations_sha256'] != current_binding['observations_sha256']:
+            raise ValueError('Release evidence does not bind the current replacement input')
+        receipts = release_evidence.get('current_measurement_package_preservation_receipts')
+        if release_evidence.get('current_measurement_packages_raw_preserved') is not True or not receipts:
+            raise ValueError('Current measurement-package raw preservation is not closed')
+        covered = (set(receipts) if isinstance(receipts, dict) else
+            {label for receipt in receipts for label in
+             ([receipt['package_label']] if receipt.get('package_label') else receipt.get('packages', []))})
+        if not set(current_binding.get('expected_packages', [])) <= covered:
+            raise ValueError('Current preservation receipts do not cover every declared package')
+        if any(release_evidence[key] != generic_core[key] for key in ['ledger_sha256','selection_sha256']):
+            raise ValueError('The frozen Generic420 core changed')
+        if any(key not in release_evidence for key in source_keys) or not all(release_evidence.get(key)
+                for key in source_keys if key != 'raw_preservation_complete'):
+            raise ValueError('Current snapshot/tool/source metadata is incomplete')
     capture_count = sum(row.get(metric+'_acquisition_origin') == 'new_capture'
         for row in current for metric in row['current_observation_metric_updates'])
     native_changed = any(row['runner'] == 'native' for row in current)
@@ -97,7 +130,13 @@ def main():
     active['measurement_notes'] = str((RQ2 / 'DATA_NOTES.md').relative_to(REPO))
     active['reproduce'] = 'python3 scripts/reproduce_current.py --output local-output/current --languages en de'
     active['staged_selection'] = str(STAGED.relative_to(REPO))
-    active['source_snapshot_unchanged'] = True
+    active['source_snapshot_unchanged'] = not bool(current)
+    active['generic420_core_unchanged'] = True
+    if release_evidence:
+        active['current_source_snapshot_id'] = release_evidence['snapshot_id']
+        active['current_observations_sha256'] = release_evidence['current_observations_sha256']
+        active['current_dataset_sha256'] = release_evidence['current_dataset_sha256']
+        active['generic420_core_snapshot_id'] = generic_core['snapshot_id']
     active['publication_update'] = ('Current source-bound deployment observations, paired comparison and retrospective graph–Generic–Native selection.'
         if current else 'Consolidated paired comparison and retrospective graph–Generic–Native selection; no new hardware measurements.')
     active['current_external_capture_count'] = capture_count
@@ -145,9 +184,18 @@ def main():
             current_recipe_binding_verified=True, current_native_binding=b009_current['current_native_binding'],
             historical_review_retained=True)
     write(CLOSURE / 'closure_b009.json', b009)
-    old = read(CLOSURE / 'MANIFEST.json')
-    manifest = {key: old[key] for key in ['ledger_sha256', 'selection_sha256', 'snapshot_id',
-        'export_manifest_sha256', 'used_tool_revisions', 'tool_environment', 'raw_preservation_complete']}
+    manifest = {key:(release_evidence or prior_release)[key] for key in source_keys}
+    if release_evidence:
+        manifest['generic420_core'] = {key:generic_core[key] for key in
+            ['ledger_sha256','selection_sha256','snapshot_id','export_manifest_sha256']}
+        manifest['current_source_closure'] = dict(evidence_sha256=info(args.release_evidence)['sha256'],
+            current_dataset_sha256=release_evidence['current_dataset_sha256'],
+            current_observations_sha256=release_evidence['current_observations_sha256'],
+            current_measurement_packages_raw_preserved=True,
+            preservation_receipts=release_evidence['current_measurement_package_preservation_receipts'])
+        manifest['historical_raw_preservation_limitation'] = release_evidence.get('historical_raw_preservation_limitation',
+            prior_release.get('historical_raw_preservation_limitation',
+                'Known prior raw limitations are retained in PORTABLE_BACKUP_RECEIPT.json; current package preservation is reported separately.'))
     manifest.update(schema='current-split-study-release-v2', status='complete', counts=counts,
         rq2_counts={'planned': q2['original_native_population'], 'paired': q2['pair_count'],
             'quality_admitted': q2['quality_pair_count'], 'quality_excluded': q2['excluded_candidates'],
@@ -160,7 +208,8 @@ def main():
         hardware_measurements_performed_by_generator=False, current_external_capture_count=capture_count,
         RQ1_YOLOv7_case_numerical_evidence_unchanged=not any(row['model_id']=='yolov7_paper' and row['setup_id']=='H8' for row in current),
         RQ1_b066_numerical_evidence_unchanged=integration['b066_wide_single_numerical_payload_unchanged'],
-        source_backup='PORTABLE_BACKUP_RECEIPT.json describes the retained measurement sources, not a new mirror of this publication update.',
+        source_backup=('Current source closure binds the new metric sources and exact preservation receipts; the frozen Generic420 core is retained separately.'
+            if current else 'PORTABLE_BACKUP_RECEIPT.json describes the retained measurement sources, not a new mirror of this publication update.'),
         git_commit_binding='The containing Git commit identifies this publication update.',
         measurement_notes=str((RQ2 / 'DATA_NOTES.md').relative_to(REPO)))
     manifest['staged_selection'] = str(STAGED.relative_to(REPO))
@@ -168,6 +217,40 @@ def main():
     for root in [RQ2, RQ3, STAGED, BUILD, CLOSURE]:
         paths.update(p for p in root.rglob('*') if p.is_file() and p != CLOSURE / 'MANIFEST.json'
             and not any(part.startswith('.') or part == '__pycache__' for part in p.relative_to(root).parts))
+    broad = REPO/'results/split-inference'
+    broad_manifest = broad/'BROAD_GENERATED_MANIFEST.json'
+    if current and not broad_manifest.is_file():
+        raise ValueError('Current broad generated/input inventory is missing')
+    if broad_manifest.is_file():
+        paths.add(broad_manifest)
+        inventory = read(broad_manifest)
+        for prefix, entries in [(broad, inventory['output_files']), (REPO, inventory['input_sources'])]:
+            for name, expected in entries.items():
+                path = (prefix/name).resolve()
+                if not path.is_relative_to(REPO) or not path.is_file() or info(path) != expected:
+                    raise ValueError('Current broad file is missing or differs from its inventory: '+name)
+                paths.add(path)
+    # Exact referenced archive inputs are included without mirroring entire
+    # historical study trees or treating them as new measurements.
+    for source in read(RQ2/'INPUT_MANIFEST.json')['sources']:
+        path = (REPO/source['path']).resolve()
+        if path.is_relative_to(REPO) and path.is_file():
+            if info(path)['sha256'] != source['sha256']:
+                raise ValueError('RQ2 referenced input changed: '+source['path'])
+            paths.add(path)
+    for name in ['README.md','scripts/README.md','scripts/split-inference/README.md',
+            'scripts/split-inference/CURRENT_OBSERVATIONS.md','scripts/split-inference/config.json',
+            'scripts/dissertation/README.md','publications/mlsys/README.md','publications/dissertation/README.md',
+            'docs/archival_studies.md']:
+        if (REPO/name).is_file():
+            paths.add(REPO/name)
+    for directory in ['scripts/split-inference','scripts/dissertation',
+            'scripts/supplementary-studies/rq2-native-scope-20261027',
+            'scripts/supplementary-studies/rq3-generic420','scripts/supplementary-studies/staged-selection']:
+        paths.update(path for path in (REPO/directory).glob('requirements*.txt') if path.is_file())
+        if (REPO/directory/'README.md').is_file():
+            paths.add(REPO/directory/'README.md')
+    paths.update((REPO/'scripts/dissertation/locales').glob('*.json'))
     paths.add(REPO / 'results/ACTIVE_GENERIC420.json')
     manifest['output_files'] = {str(p.relative_to(REPO)): info(p) for p in sorted(paths)}
     source_paths = {p for p in (REPO / 'scripts').rglob('*.py') if '__pycache__' not in p.parts}

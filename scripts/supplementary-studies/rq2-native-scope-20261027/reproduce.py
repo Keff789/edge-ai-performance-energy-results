@@ -952,7 +952,8 @@ def run(output, repo=REPO, numeric_only=False, verify_reference=None, input_path
     validation = dict(result='PASS', validation_scope='Offline importer and evidence accounting only; this does not claim hardware or missing quality PASS.',
         original_native_population_fully_accounted=len(audit) == len(bindings),
         every_original_cut_admitted_excluded_or_unresolved=sum(r['quality_admitted'] + r['excluded'] + r['unresolved'] for r in coverage) == len(bindings),
-        final_actual_import_accounting_verified=accounting is not None,
+        final_actual_import_accounting_verified=accounting is not None and actual_counts == accounting['counts'],
+        historical_generic_import_accounting_bound=accounting is not None,
         no_fixed420_admission_filter=True, selection_precedes_quality=True, original_native_and_full_records_modified=False,
         current_native_replacements_source_bound=bool(current_native),
         no_new_fps_old_energy_joint_measurement=True, weights_refitted=False)
@@ -1013,6 +1014,8 @@ def run(output, repo=REPO, numeric_only=False, verify_reference=None, input_path
             'current replacements and all source identities are listed separately. Other cases are not assigned a new quality contract.\n\n'
             'Active deployment rows replace only declared, normally admitted metrics; original observations remain archived. '
             'Full measurements are unchanged. Generic throughput never inherits energy from a different performance observation. '
+            'The broad RQ1 deployment dataset retains unchanged Generic FPS/energy observations from their recorded generations; '
+            'these are separate observations from the current Generic FPS used in this RQ2 comparison. '
             'The current input manifest and source-bound replacement records identify the observations used here.\n')
     return summary
 

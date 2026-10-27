@@ -14,7 +14,7 @@ import shutil
 from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build_paper_dataset import build, read, write
+from build_paper_dataset import build, read, write, write_generated_manifest
 
 
 def validate_config(c):
@@ -185,6 +185,10 @@ def format_table_index(output):
     md += ['', 'The complete [deployment dataset](../data/PAPER_DATASET.csv), '
            '[metric sources](../data/METRIC_SOURCES.csv), [measurement generations](../data/MEASUREMENT_GENERATIONS.csv) '
            'and [summary](../data/summary.json) use the same broad selection.']
+    if (output/'data/current_observation_binding.json').is_file():
+        md += ['', 'Only declared current observations replace prior metrics. Unchanged Generic FPS/energy rows retain their '
+               'recorded generations and are separate from the current Generic FPS observations used by RQ2. '
+               'Replacing FPS clears energy unless the normal source explicitly binds that energy to the same observation.']
     (output/'tables'/'README.md').write_text('\n'.join(md) + '\n')
 
 
@@ -362,6 +366,7 @@ def main():
         if a.numeric_only: command.append('--numeric-only')
         subprocess.run(command,check=True)
         summary['generic420_artifacts']='rq3-generic420'
+    write_generated_manifest(a.inputs, a.output, effective_current)
     print(json.dumps(summary,sort_keys=True),flush=True)
 
 if __name__=='__main__':

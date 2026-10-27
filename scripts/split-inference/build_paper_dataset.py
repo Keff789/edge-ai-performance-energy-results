@@ -7,6 +7,7 @@ once here and shared by tables, figures and report. No hardware or network code.
 """
 import collections
 import csv
+import hashlib
 import json
 import math
 import statistics
@@ -51,6 +52,38 @@ def table(p, rows):
 def emit(p, rows):
     table(p.with_suffix('.csv'), rows)
     write(p.with_suffix('.json'), rows)
+
+
+def write_generated_manifest(inputs, output, current_observations=None):
+    """Finite current broad outputs and their actual curated source inventory."""
+    inputs, output = Path(inputs), Path(output)
+    repo = Path(__file__).resolve().parents[2]
+    describe = lambda path:dict(sha256=hashlib.sha256(path.read_bytes()).hexdigest(), size_bytes=path.stat().st_size)
+    files = {str(path.relative_to(output)):describe(path) for folder in ['data','tables','figures']
+        for path in sorted((output/folder).rglob('*')) if path.is_file() and
+        not any(part.startswith('.') or part in {'__pycache__','inputs'} for part in path.relative_to(output).parts)}
+    for name in ['README.md','FINDINGS.md','CAPTIONS.md','METHODS.md','METHODS_PARAGRAPH.tex']:
+        if (output/name).is_file():
+            files[name] = describe(output/name)
+    sources = set()
+    if (inputs/'MANIFEST.json').is_file():
+        sources.add(inputs/'MANIFEST.json')
+        sources.update(inputs/name for name in read(inputs/'MANIFEST.json'))
+    else:
+        sources.update(path for path in inputs.glob('*.json') if path.is_file())
+    if current_observations is not None and current_observations is not False:
+        current = Path(current_observations)
+        if current.is_file():
+            sources.add(current)
+            sources.update(current.parent/source['path'] for source in read(current)['sources'].values())
+    inventory = {}
+    for path in sorted(sources):
+        path = path.resolve()
+        name = str(path.relative_to(repo)) if path.is_relative_to(repo) else 'external_source::'+path.name
+        inventory[name] = describe(path)
+    write(output/'BROAD_GENERATED_MANIFEST.json', dict(schema='current-broad-generated-files-v1',
+        output_files=files, input_sources=inventory,
+        scope='Current broad data/tables/figures only; historical publication profile trees are not included.'))
 
 
 def grouped(rows, keys):
@@ -693,7 +726,7 @@ def build(inputs, output, config, current_observations=None):
              'historical_strict_excluded_pairs_retained':sum(r['source_claim_flag'] is True and r['semantic_comparable'] is False for r in native_pairs),
              'nonclaim_performance_full_values_retained':sum(r['included_performance'] and not r['normal_performance_claim'] for r in fulls),
              'normalization_direction_changes':sum(positive(r['energy_ratio']) and positive(r['comparison_energy_ratio']) and (r['energy_ratio']<1)!=(r['comparison_energy_ratio']<1) for r in native_pairs),
-             'generations':{axis:dict(collections.Counter(r.get(axis+'_generation','unknown') for r in data)) for axis in ['performance','energy','quality']},
+             'generations':{axis:dict(collections.Counter(r.get(axis+'_generation') or 'unavailable' for r in data)) for axis in ['performance','energy','quality']},
              'missing_fields':{'performance_uids':[r['uid'] for r in data if not r['included_performance']],
                                'energy_uids':[r['uid'] for r in data if not r['included_energy']],
                                'quality_uids':[r['uid'] for r in data if not numeric(r.get('quality_value'))]},
@@ -712,4 +745,5 @@ def build(inputs, output, config, current_observations=None):
         summary['new_quality_evaluations'] = summary['current_external_captures']['quality']
     write(O/'data'/'summary.json',summary)
     write(O/'data'/'analysis_config.json',config)
+    write_generated_manifest(I, O, replacement_path)
     return summary

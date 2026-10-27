@@ -20,6 +20,7 @@ SCRIPT = Path(__file__).resolve().parents[1]
 REPO = SCRIPT.parents[1]
 sys.path.insert(0, str(SCRIPT))
 import publication_mlsys_data as data
+from build_paper_dataset import build as build_dataset
 
 
 # Model order is the published seven-model order, with H8/H10/DeepX per model.
@@ -63,8 +64,11 @@ class R22DataChecks(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.tmp = tempfile.TemporaryDirectory(prefix='r22-data-test-')
+        cls.broad = Path(cls.tmp.name)/'archived-broad'
+        build_dataset(REPO/'results/split-inference/data/inputs', cls.broad,
+                      json.loads((SCRIPT/'config.json').read_text()), current_observations=False)
         cls.output = Path(cls.tmp.name)/'profile'
-        cls.context = data.build(REPO, REPO/'results/split-inference', cls.output)
+        cls.context = data.build(REPO, cls.broad, cls.output)
 
     @classmethod
     def tearDownClass(cls):
@@ -184,7 +188,7 @@ class R22DataChecks(unittest.TestCase):
                 self.close(row[prefix+'_fps'],source['fps'])
                 self.close(row[prefix+'_mj'],1000*source['energy_j_per_image'])
                 self.close(row[prefix+'_quality'],100*source['quality_value'])
-        old=json.loads((REPO/'results/split-inference/tables/table3_top2_native.json').read_text())
+        old=json.loads((self.broad/'tables/table3_top2_native.json').read_text())
         current=json.loads((self.output/'tables/current_top2_relative.json').read_text())
         for expected,actual in zip(old,current):
             self.assertEqual(expected,{key:actual[key] for key in expected})
@@ -206,7 +210,7 @@ class R22DataChecks(unittest.TestCase):
 
     def test_profile_generation_is_deterministic_and_imports_no_numeric_or_plot_package(self):
         second=Path(self.tmp.name)/'second'
-        data.build(REPO,REPO/'results/split-inference',second)
+        data.build(REPO,self.broad,second)
         for path in self.output.rglob('*'):
             if path.is_file():self.assertEqual(path.read_bytes(),(second/path.relative_to(self.output)).read_bytes(),str(path))
         self.assertFalse(any(name in sys.modules for name in ['matplotlib','numpy','pandas','scipy']))

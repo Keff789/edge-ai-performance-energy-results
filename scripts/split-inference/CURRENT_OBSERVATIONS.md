@@ -34,6 +34,8 @@ Each observation contains:
 
 Every metric declares `actual_result`, actual `completed_at` reference,
 `acquisition_origin` (`new_capture` or `reused_existing`), and `normal_admission`.
+An already admitted reused quality result may retain a null completion timestamp
+when its original file did not record one; a new capture requires its actual time.
 The latter identifies the existing `normal_api`, an `accepted` actual-source
 reference, and `checks` of `{actual: <reference>, expected: <value>}`. Source and
 normal admission checks are separate from the measured quality outcome.
@@ -68,7 +70,7 @@ Energy supplies three `repetitions`. Each has `actual_result` (or an exact
 `source_sha256` reference) and `values` references for `energy_j`,
 `completed_tasks`, `duration_s`, and `requested_duration_s`. The requested window
 is 60 seconds; integration uses actual observed duration and completed images.
-`system_scope` must resolve to `full_system`. The normal relation proof's
+`system_scope` must resolve to `full_system` or its normal `FS` alias. The normal relation proof's
 `performance_source_sha256` must equal the selected actual FPS source. Energy
 is the arithmetic mean of actual per-repeat E/N, without substituting FPS×time.
 
