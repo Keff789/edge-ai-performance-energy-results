@@ -1,14 +1,14 @@
 \begin{table}[t]
 \centering\small
-\caption{Staged selection on the paired cuts. Each group tests up to $k$ Bytes-selected cuts with Generic and then up to two Generic favourites with Native. Mean throughput is relative to the best measured Native cut in each group. All 21 groups receive equal weight. The winner column counts observed successes, not a prediction for unseen models.}
+\caption{Staged-selection budgets per model--device group. Budgets are maxima. Exact winners, mean and lowest retained Native throughput refer to the best measured Native cut in each group. All 21 groups receive equal weight.}
 \label{tab:staged-budget}
 \setlength{\tabcolsep}{3pt}
-\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrr@{}}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}crrr@{}}
 \toprule
-Generic + Native & Exact winner & \shortstack{Mean Native\\throughput (\%)} \\
+\shortstack{Tests\\Generic + Native} & \shortstack{Exact\\winners} & \shortstack{Mean\\(\%)} & \shortstack{Lowest\\(\%)} \\
 \midrule
-Up to 5 + 2 & 17/21 (81.0\%) & 96.20 \\
-Up to 12 + 2 & 19/21 (90.5\%) & 99.65 \\
+5 + 2 & 17/21 & 96.20 & 45.53 \\
+12 + 2 & 19/21 & 99.65 & 94.52 \\
 \bottomrule
 \end{tabular*}
 \end{table}

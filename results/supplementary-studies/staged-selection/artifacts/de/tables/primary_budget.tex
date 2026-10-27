@@ -1,14 +1,14 @@
 \begin{table}[t]
 \centering\small
-\caption{Stufenweise Auswahl auf den gepaarten Schnitten. Pro Gruppe werden bis zu $k$ nach Bytes ausgewählte Schnitte mit Generic und danach bis zu zwei Generic-Favoriten mit Native getestet. Der mittlere Durchsatz bezieht sich auf den besten gemessenen Native-Schnitt je Gruppe. Alle 21 Gruppen zählen gleich. Die Treffer sind beobachtete Ergebnisse und keine Vorhersage für unbekannte Modelle.}
+\caption{Testbudgets je Modell--Gerät-Gruppe. Die Budgets sind Höchstwerte. Exakte Treffer sowie der mittlere und niedrigste erreichte Native-Durchsatz beziehen sich auf den besten gemessenen Native-Schnitt der jeweiligen Gruppe. Alle 21 Gruppen werden gleich gewichtet.}
 \label{tab:staged-budget}
 \setlength{\tabcolsep}{3pt}
-\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrr@{}}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}crrr@{}}
 \toprule
-Generic + Native & Bester Schnitt & \shortstack{Mittlerer Native-\\Durchsatz (\%)} \\
+\shortstack{Tests\\Generic + Native} & \shortstack{Exakte\\Treffer} & \shortstack{Mittel\\(\%)} & \shortstack{Minimum\\(\%)} \\
 \midrule
-Bis zu 5 + 2 & 17/21 (81,0\%) & 96,20 \\
-Bis zu 12 + 2 & 19/21 (90,5\%) & 99,65 \\
+5 + 2 & 17/21 & 96,20 & 45,53 \\
+12 + 2 & 19/21 & 99,65 & 94,52 \\
 \bottomrule
 \end{tabular*}
 \end{table}

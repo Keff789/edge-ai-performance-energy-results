@@ -4,10 +4,16 @@ This analysis reconstructs staged selection from 187 quality-admissible paired c
 
 Order cuts by increasing boundary size, measure up to k cuts with Generic, then measure up to two Generic favourites with Native and retain the faster result.
 
-| Maximum Generic + Native tests per group | Exact Native winner | Mean Native throughput retained |
-|---|---:|---:|
-| 5 + 2 | 17/21 (81.0%) | 96.20% |
-| 12 + 2 | 19/21 (90.5%) | 99.65% |
+| Maximum Generic + Native tests per group | Exact Native winner | Mean Native throughput retained | Lowest retained throughput |
+|---|---:|---:|---:|
+| 5 + 2 | 17/21 (81.0%) | 96.20% | 45.53% |
+| 12 + 2 | 19/21 (90.5%) | 99.65% | 94.52% |
+
+For classifier groups, the two budgets retain 91.14% and 99.18% of the best Native throughput on average. Both budgets test all three paired cuts in each detector group and recover its Native winner.
+
+The lowest five-test result is resnet50/H10: b002 reaches 500.66 FPS, compared with 1099.54 FPS at b095. The best cut has Bytes rank 12. Ranks 5–12 share the same 802,816-byte boundary, so the fixed configuration-identity tie order decides which equal-sized cut enters the five-cut shortlist. With twelve Generic tests, the selected cut is b095 and retains 100.00%. The rankings and per-group choices are preserved in the input rankings and [group results](data/group_budgets.csv).
+
+Testing the same five-cut shortlists directly uses 81 Native tests and retains 96.20% mean throughput. The staged procedure uses 81 Generic and 42 Native tests for the same result. Fewer Native tests do not establish a reduction in total testing time. Existing Generic measurements can be reused before Native testing.
 
 The throughput percentage is the equally weighted mean of per-group ratios to the best measured Native cut. It is not the probability of finding that cut. Exact-winner counts are observed successes in this paired set.
 

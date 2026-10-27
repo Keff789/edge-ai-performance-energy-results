@@ -67,7 +67,7 @@ def main():
     assert len(points) == 38 and all(row in staged_summary for row in points)
     flow_payloads = [json.loads((staged / f'artifacts/{language}/figures/staged_selection_flow.json').read_text())
         for language in ['en', 'de']]
-    translated = {'language', 'labels', 'count_labels'}
+    translated = {'language', 'labels', 'count_labels', 'caption'}
     assert {key: value for key, value in flow_payloads[0].items() if key not in translated} == {
         key: value for key, value in flow_payloads[1].items() if key not in translated}
     flow = flow_payloads[0]

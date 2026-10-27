@@ -194,24 +194,20 @@ def export_tables(output, summaries, details, language):
     write_csv(table / 'primary_budget.csv', primary)
     n = primary[0]['groups']
     if language == 'en':
-        caption = ('Staged selection on the paired cuts. Each group tests up to $k$ Bytes-selected cuts with Generic '
-                   'and then up to two Generic favourites with Native. Mean throughput is relative to the best measured '
-                   f'Native cut in each group. All {n} groups receive equal weight. The winner column counts observed '
-                   'successes, not a prediction for unseen models.')
-        header = r'Generic + Native & Exact winner & \shortstack{Mean Native\\throughput (\%)} \\'
-        lead = 'Up to '
+        caption = ('Staged-selection budgets per model--device group. Budgets are maxima. Exact winners, mean and '
+                   'lowest retained Native throughput refer to the best measured Native cut in each group. '
+                   f'All {n} groups receive equal weight.')
+        header = r'\shortstack{Tests\\Generic + Native} & \shortstack{Exact\\winners} & \shortstack{Mean\\(\%)} & \shortstack{Lowest\\(\%)} \\'
     else:
-        caption = ('Stufenweise Auswahl auf den gepaarten Schnitten. Pro Gruppe werden bis zu $k$ nach Bytes '
-                   'ausgewählte Schnitte mit Generic und danach bis zu zwei Generic-Favoriten mit Native getestet. '
-                   'Der mittlere Durchsatz bezieht sich auf den besten gemessenen Native-Schnitt je Gruppe. '
-                   f'Alle {n} Gruppen zählen gleich. Die Treffer sind beobachtete Ergebnisse und keine Vorhersage für unbekannte Modelle.')
-        header = r'Generic + Native & Bester Schnitt & \shortstack{Mittlerer Native-\\Durchsatz (\%)} \\'
-        lead = 'Bis zu '
+        caption = ('Testbudgets je Modell--Gerät-Gruppe. Die Budgets sind Höchstwerte. Exakte Treffer sowie der mittlere '
+                   'und niedrigste erreichte Native-Durchsatz beziehen sich auf den besten gemessenen Native-Schnitt '
+                   f'der jeweiligen Gruppe. Alle {n} Gruppen werden gleich gewichtet.')
+        header = r'\shortstack{Tests\\Generic + Native} & \shortstack{Exakte\\Treffer} & \shortstack{Mittel\\(\%)} & \shortstack{Minimum\\(\%)} \\'
     lines = [r'\begin{table}[t]', r'\centering\small', r'\caption{' + caption + '}',
              r'\label{tab:staged-budget}', r'\setlength{\tabcolsep}{3pt}',
-             r'\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrr@{}}', r'\toprule', header, r'\midrule']
+             r'\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}crrr@{}}', r'\toprule', header, r'\midrule']
     for row in primary:
-        lines.append(f"{lead}{row['k']} + 2 & {row['exact_winners']}/{row['groups']} ({number(row['exact_winner_pct'], language, 1)}\\%) & {number(row['mean_retained_native_pct'], language)} " + r'\\')
+        lines.append(f"{row['k']} + 2 & {row['exact_winners']}/{row['groups']} & {number(row['mean_retained_native_pct'], language)} & {number(100-row['max_loss_pct'], language)} " + r'\\')
     lines += [r'\bottomrule', r'\end{tabular*}', r'\end{table}', '']
     (table / 'primary_budget.tex').write_text('\n'.join(lines), encoding='utf-8')
     task_rows = [row for row in summaries if row['method'] == 'bytes' and row['policy'] == 'cascade_native2' and row['k'] in PRIMARY_BUDGETS]
@@ -395,8 +391,14 @@ def export_flow(output, spec_data, language):
             options = {'metadata': {'Date': None}}
         fig.savefig(folder / f'staged_selection_flow.{suffix}', dpi=220, **options)
     plt.close(fig)
+    caption = ('Conceptual selection workflow, illustrated with the 615 graph boundaries of YOLO11l. '
+               'The five Generic and two Native tests illustrate a budget after candidate-pool construction. '
+               'The paired detector evaluation contains three supported cuts per group.' if language == 'en' else
+               'Konzeptioneller Auswahlablauf am Beispiel der 615 Graphgrenzen von YOLO11l. '
+               'Fünf Generic- und zwei Native-Tests veranschaulichen ein Budget nach Bildung der Kandidatenmenge. '
+               'Die gepaarte Detektorauswertung umfasst drei unterstützte Schnitte je Gruppe.')
     write_json(folder / 'staged_selection_flow.json', dict(spec_data, language=language,
-                                                          labels=labels, count_labels=count_labels))
+                                                          labels=labels, count_labels=count_labels, caption=caption))
 
 
 def main():
@@ -431,10 +433,42 @@ def main():
     info = ['# Graph–Generic–Native selection', '',
             f'This analysis reconstructs staged selection from {len(pairs)} quality-admissible paired cuts in {len(groups)} model–device groups.', '',
             'Order cuts by increasing boundary size, measure up to k cuts with Generic, then measure up to two Generic favourites with Native and retain the faster result.', '',
-            '| Maximum Generic + Native tests per group | Exact Native winner | Mean Native throughput retained |',
-            '|---|---:|---:|']
+            '| Maximum Generic + Native tests per group | Exact Native winner | Mean Native throughput retained | Lowest retained throughput |',
+            '|---|---:|---:|---:|']
     for row in primary:
-        info.append(f"| {row['k']} + 2 | {row['exact_winners']}/{row['groups']} ({row['exact_winner_pct']:.1f}%) | {row['mean_retained_native_pct']:.2f}% |")
+        info.append(f"| {row['k']} + 2 | {row['exact_winners']}/{row['groups']} ({row['exact_winner_pct']:.1f}%) | {row['mean_retained_native_pct']:.2f}% | {100-row['max_loss_pct']:.2f}% |")
+    worst = min((row for row in details if row['method'] == 'bytes' and row['k'] == 5
+                 and row['policy'] == 'cascade_native2'), key=lambda row: row['retained_native_pct'])
+    group = [row for row in pairs if (row['model'], row['setup']) == (worst['model'], worst['setup'])]
+    best = min(group, key=lambda row: (-float(row['native_fps']), row['native_uid']))
+    ordered = sorted((row for row in ranking if row['method'] == 'bytes'
+                      and (row['model'], row['setup']) == (worst['model'], worst['setup'])),
+                     key=lambda row: int(row['rank']))
+    best_rank = next(row for row in ordered if row['native_uid'] == best['native_uid'])
+    tied = [row for row in ordered if float(row['score']) == float(best_rank['score'])]
+    assert [row['native_uid'] for row in tied] == sorted(row['native_uid'] for row in tied)
+    extended = next(row for row in details if row['method'] == 'bytes' and row['k'] == 12
+                    and row['policy'] == 'cascade_native2'
+                    and (row['model'], row['setup']) == (worst['model'], worst['setup']))
+    classifier = [row for row in summaries if row['task'] == 'classification' and row['method'] == 'bytes'
+                  and row['policy'] == 'cascade_native2' and row['k'] in PRIMARY_BUDGETS]
+    small = next(row for row in primary if row['k'] == 5)
+    direct = next(row for row in summaries if row['task'] == 'all' and row['method'] == 'bytes'
+                  and row['policy'] == 'direct_graph_all_native' and row['k'] == 5)
+    info += ['', f"For classifier groups, the two budgets retain {classifier[0]['mean_retained_native_pct']:.2f}% and "
+             f"{classifier[1]['mean_retained_native_pct']:.2f}% of the best Native throughput on average. "
+             'Both budgets test all three paired cuts in each detector group and recover its Native winner.', '',
+             f"The lowest five-test result is {worst['model']}/{worst['setup']}: {worst['selected_cut']} reaches "
+             f"{worst['selected_native_fps']:.2f} FPS, compared with {float(best['native_fps']):.2f} FPS at {best['case']}. "
+             f"The best cut has Bytes rank {best_rank['rank']}. Ranks {tied[0]['rank']}–{tied[-1]['rank']} share "
+             f"the same {int(float(best_rank['score'])):,}-byte boundary, so the fixed configuration-identity tie order "
+             'decides which equal-sized cut enters the five-cut shortlist. '
+             f"With twelve Generic tests, the selected cut is {extended['selected_cut']} and retains {extended['retained_native_pct']:.2f}%. "
+             'The rankings and per-group choices are preserved in the input rankings and [group results](data/group_budgets.csv).', '',
+             f"Testing the same five-cut shortlists directly uses {direct['native_tests']} Native tests and retains "
+             f"{direct['mean_retained_native_pct']:.2f}% mean throughput. The staged procedure uses {small['generic_tests']} "
+             f"Generic and {small['native_tests']} Native tests for the same result. Fewer Native tests do not establish "
+             'a reduction in total testing time. Existing Generic measurements can be reused before Native testing.']
     info += ['', 'The throughput percentage is the equally weighted mean of per-group ratios to the best measured Native cut. It is not the probability of finding that cut. Exact-winner counts are observed successes in this paired set.', '',
              'A group with fewer than k candidates tests all of them. The paired detector groups contain only three cuts. The broader Generic study remains a separate assessment of graph preselection on more detector candidates.', '',
              'The calculation uses previously measured FPS and quality-admissible candidates. Test counts exclude compilation, quality evaluation, fitting and engineering. No total search-time saving is measured.', '',
