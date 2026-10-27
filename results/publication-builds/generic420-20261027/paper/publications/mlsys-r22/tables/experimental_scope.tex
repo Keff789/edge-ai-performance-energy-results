@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering\small
+\caption{Platforms, dataset, and measurement protocol for the deployment comparison.}
+\label{tab:experimental-scope}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.23\linewidth}>{\raggedright\arraybackslash}p{0.71\linewidth}@{}}
+\toprule
+Aspect & Scope \\
+\midrule
+Platforms & Three Orin NX hosts with H8, H10, or DX. \\
+Models & MobileNetV3-L, RegNet-X 1.6GF, ResNet-50, YOLO11l, YOLO26m, YOLO26s, YOLOv7. \\
+Coverage & 204 paired Native/Generic cuts and 42 host-specific Full alternatives. \\
+Inputs & ImageNet validation at $224\times224$ and COCO 2017 validation at $640\times640$. \\
+Precision & TensorRT Full builds enable FP16. Split bridges use float32 layout conversion or uint8 dequantization to FP16. Accelerator precision follows the compiled artifact. \\
+Performance & Three independent process runs of 1,000 completed tasks. Available path records specify batch 1 and 100 drained warmups. \\
+Energy & Input shunt with INA225 acquisition. Three 60-s repetitions at the calibrated DC system input, without idle subtraction. \\
+Quality & Shared 5,000-image evaluation sets, bound by dataset hashes. 1,000 paired-bootstrap replicates. \\
+\bottomrule
+\end{tabular}
+\end{table*}

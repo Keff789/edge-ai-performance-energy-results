@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering\small
+\caption{Erforderliche Aufgabenausgaben und Abschlussarbeiten. Generic, Native und Full verwenden denselben modellspezifischen Vergleichsvertrag. Der kompilierte Graph bestimmt, ob Dekodierung und Unterdrückung im Modell oder im Host-Code stattfinden. Erforderliche Ausgabeverarbeitung und Materialisierung liegen vor dem Aufgabenabschluss.}
+\label{tab:supp-endpoint-contracts}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.31\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}@{}}
+\toprule
+Modell oder Ausgabepfad & Fertiges Ergebnis & Erforderliche Verarbeitung \\
+\midrule
+MobileNet, RegNet, ResNet & Synchronisierte Klassifikatorausgaben und geordnete Top1/Top5 & Ausgabematerialisierung und Top1/Top5-Verarbeitung. \\
+YOLO11l und YOLOv7 & Boxen in Originalbildkoordinaten, Wahrscheinlichkeiten und Klassenindizes & Modellspezifische Dekodierung und klassenabhängige NMS, soweit nicht bereits im Modell ausgeführt, anschließend Materialisierung. \\
+YOLO26m/s, Rohkopf-Pfade & Dasselbe Detektionsdatenformat & Rohköpfe dekodieren und erforderliche NMS ausführen. Dies umfasst Hailo-Full-Pfade. \\
+YOLO26m/s, integrierte Ausgaben & Dasselbe Detektionsdatenformat & Integrierte Detektionen filtern und normalisieren, Letterboxing rückgängig machen und Ausgaben materialisieren. Gültige integrierte Ausgaben erhalten keinen zusätzlichen NMS-Durchlauf. \\
+\bottomrule
+\end{tabular}
+\end{table*}

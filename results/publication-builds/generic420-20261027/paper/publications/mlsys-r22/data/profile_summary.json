@@ -1,0 +1,29 @@
+{
+  "evidence": {
+    "predictions": 151,
+    "r15_processes": 100,
+    "r15_source_files": 126,
+    "r20": {
+      "archive_reconstructed_files": 0,
+      "generator_verified": true,
+      "hashed_files": 8,
+      "mode": "read_only_compact_projection_verification",
+      "new_hardware_or_quality_runs": false,
+      "status": "PASS",
+      "value_checks": {
+        "case_quality_rows": 3,
+        "detectors": 96,
+        "energy_configurations": 75,
+        "energy_windows": 225,
+        "workloads": 450
+      }
+    },
+    "ridge_folds": 9
+  },
+  "figures": 8,
+  "profile": "mlsys-r22",
+  "reference_occurrences": 37,
+  "scientific_scope": "Current broad data with a separate numerical 5% quality view; independent historical/scheduling/stage cohorts.",
+  "tables": 28,
+  "unique_assets": 36
+}

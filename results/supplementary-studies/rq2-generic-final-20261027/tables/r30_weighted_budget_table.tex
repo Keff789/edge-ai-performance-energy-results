@@ -1,0 +1,12 @@
+% Native throughput loss using 159 verified quality-eligible pairs in 13 model/device groups. Generic uses the final measurement snapshot. Default, shared and model-held-out graph weights and full graph normalizations are frozen from the prior study; no refit. Every group has equal weight and tests min(k,n) candidates. This is a retrospective paired subset, not all 420 Generic candidates.
+\begin{tabular}{lrrr}
+\toprule
+Method & $k=1$ & $k=3$ & $k=5$ \\
+\midrule
+Bytes & 23.07 & 15.06 & 6.14 \\
+Generic & 2.16 & 0.42 & 0.00 \\
+Weighted (default) & 18.41 & 16.18 & 11.90 \\
+Weighted (frozen shared) & 22.28 & 8.21 & 4.78 \\
+Weighted (frozen model held-out) & 25.67 & 18.32 & 7.91 \\
+\bottomrule
+\end{tabular}

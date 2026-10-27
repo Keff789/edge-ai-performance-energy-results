@@ -1,0 +1,22 @@
+# Classifier selection loss (%) and winner coverage after the numerical 5% quality filter
+
+Classifier selection loss (%) and winner coverage after the numerical 5% quality filter. The 9 groups receive equal weight; coverage counts groups. Random values are exact expectations. Budgets count held-out Native trials only; 151 distinct training configurations across folds, Generic acquisition, compilation and quality evaluation are additional costs.
+
+## Selection loss (%)
+
+| Method | k=1 | k=3 | k=5 |
+| --- | --- | --- | --- |
+| Generic | 32.804 | 23.768 | 20.448 |
+| Calibrated Generic | 28.319 | 23.146 | 15.431 |
+| Uniform random | 32.290 | 15.406 | 9.104 |
+| Boundary bytes | 32.966 | 21.747 | 8.862 |
+
+## Winner coverage
+
+| Method | k=1 | k=3 | k=5 |
+| --- | --- | --- | --- |
+| Generic | 1 | 2 | 3 |
+| Calibrated Generic | 1 | 3 | 4 |
+| Uniform random | 0.603 | 1.808 | 3.014 |
+| Boundary bytes | 1 | 3 | 5 |
+

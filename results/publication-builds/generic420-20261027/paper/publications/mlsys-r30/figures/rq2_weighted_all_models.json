@@ -1,0 +1,426 @@
+{
+  "caption": "Native throughput loss using 159 verified quality-eligible pairs in 13 model/device groups. Generic uses the final measurement snapshot. Default, shared and model-held-out graph weights and full graph normalizations are frozen from the prior study; no refit. Every group has equal weight and tests min(k,n) candidates. This is a retrospective paired subset, not all 420 Generic candidates.",
+  "method_labels": {
+    "bytes": "Bytes",
+    "generic": "Generic",
+    "weighted_cv": "Weighted (frozen model held-out)",
+    "weighted_default": "Weighted (default)",
+    "weighted_pooled": "Weighted (frozen shared)"
+  },
+  "schema": "rq2-final-weighted-v1",
+  "scope": "Existing Native measurements on the verified intersection with final fixed420 Generic candidates; no Native values imputed or remeasured.",
+  "series": {
+    "bytes": [
+      {
+        "k": 1,
+        "mean_loss_pct": 23.070948650636925
+      },
+      {
+        "k": 2,
+        "mean_loss_pct": 16.79423001279533
+      },
+      {
+        "k": 3,
+        "mean_loss_pct": 15.055958795772039
+      },
+      {
+        "k": 4,
+        "mean_loss_pct": 11.341821949538534
+      },
+      {
+        "k": 5,
+        "mean_loss_pct": 6.135530625703206
+      },
+      {
+        "k": 6,
+        "mean_loss_pct": 3.2413299035402225
+      },
+      {
+        "k": 7,
+        "mean_loss_pct": 2.917553251205688
+      },
+      {
+        "k": 8,
+        "mean_loss_pct": 2.917553251205688
+      },
+      {
+        "k": 9,
+        "mean_loss_pct": 2.3913076121561887
+      },
+      {
+        "k": 10,
+        "mean_loss_pct": 2.1795092923539476
+      },
+      {
+        "k": 11,
+        "mean_loss_pct": 0.6741012391266984
+      },
+      {
+        "k": 12,
+        "mean_loss_pct": 0.1490880184741109
+      },
+      {
+        "k": 13,
+        "mean_loss_pct": 0.01044026526258585
+      },
+      {
+        "k": 14,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 15,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 16,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 17,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 18,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 19,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 20,
+        "mean_loss_pct": 0.0
+      }
+    ],
+    "generic": [
+      {
+        "k": 1,
+        "mean_loss_pct": 2.1592394401146824
+      },
+      {
+        "k": 2,
+        "mean_loss_pct": 0.4212558573842498
+      },
+      {
+        "k": 3,
+        "mean_loss_pct": 0.4212558573842498
+      },
+      {
+        "k": 4,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 5,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 6,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 7,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 8,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 9,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 10,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 11,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 12,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 13,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 14,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 15,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 16,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 17,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 18,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 19,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 20,
+        "mean_loss_pct": 0.0
+      }
+    ],
+    "weighted_cv": [
+      {
+        "k": 1,
+        "mean_loss_pct": 25.669642536713695
+      },
+      {
+        "k": 2,
+        "mean_loss_pct": 18.842069914688665
+      },
+      {
+        "k": 3,
+        "mean_loss_pct": 18.321129463910438
+      },
+      {
+        "k": 4,
+        "mean_loss_pct": 16.919319112161016
+      },
+      {
+        "k": 5,
+        "mean_loss_pct": 7.914897026145669
+      },
+      {
+        "k": 6,
+        "mean_loss_pct": 4.776365401164011
+      },
+      {
+        "k": 7,
+        "mean_loss_pct": 4.733922010304431
+      },
+      {
+        "k": 8,
+        "mean_loss_pct": 4.201619038161903
+      },
+      {
+        "k": 9,
+        "mean_loss_pct": 2.1795092923539476
+      },
+      {
+        "k": 10,
+        "mean_loss_pct": 1.5910813383871467
+      },
+      {
+        "k": 11,
+        "mean_loss_pct": 0.39423719485591413
+      },
+      {
+        "k": 12,
+        "mean_loss_pct": 0.1490880184741109
+      },
+      {
+        "k": 13,
+        "mean_loss_pct": 0.1490880184741109
+      },
+      {
+        "k": 14,
+        "mean_loss_pct": 0.1490880184741109
+      },
+      {
+        "k": 15,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 16,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 17,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 18,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 19,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 20,
+        "mean_loss_pct": 0.0
+      }
+    ],
+    "weighted_default": [
+      {
+        "k": 1,
+        "mean_loss_pct": 18.41284407712689
+      },
+      {
+        "k": 2,
+        "mean_loss_pct": 17.029547632326263
+      },
+      {
+        "k": 3,
+        "mean_loss_pct": 16.17681949522799
+      },
+      {
+        "k": 4,
+        "mean_loss_pct": 14.162697179551982
+      },
+      {
+        "k": 5,
+        "mean_loss_pct": 11.900750863258915
+      },
+      {
+        "k": 6,
+        "mean_loss_pct": 10.769357417851289
+      },
+      {
+        "k": 7,
+        "mean_loss_pct": 10.61421206628415
+      },
+      {
+        "k": 8,
+        "mean_loss_pct": 9.825181573786447
+      },
+      {
+        "k": 9,
+        "mean_loss_pct": 8.854982777404885
+      },
+      {
+        "k": 10,
+        "mean_loss_pct": 8.247072460296994
+      },
+      {
+        "k": 11,
+        "mean_loss_pct": 5.669469965545187
+      },
+      {
+        "k": 12,
+        "mean_loss_pct": 5.669469965545187
+      },
+      {
+        "k": 13,
+        "mean_loss_pct": 3.5682248217264374
+      },
+      {
+        "k": 14,
+        "mean_loss_pct": 3.5464162634587013
+      },
+      {
+        "k": 15,
+        "mean_loss_pct": 1.6098245267525988
+      },
+      {
+        "k": 16,
+        "mean_loss_pct": 1.082857315306284
+      },
+      {
+        "k": 17,
+        "mean_loss_pct": 1.082857315306284
+      },
+      {
+        "k": 18,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 19,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 20,
+        "mean_loss_pct": 0.0
+      }
+    ],
+    "weighted_pooled": [
+      {
+        "k": 1,
+        "mean_loss_pct": 22.282156499367304
+      },
+      {
+        "k": 2,
+        "mean_loss_pct": 9.700486874184689
+      },
+      {
+        "k": 3,
+        "mean_loss_pct": 8.212976215109503
+      },
+      {
+        "k": 4,
+        "mean_loss_pct": 6.789357305092346
+      },
+      {
+        "k": 5,
+        "mean_loss_pct": 4.776365401164011
+      },
+      {
+        "k": 6,
+        "mean_loss_pct": 4.776365401164011
+      },
+      {
+        "k": 7,
+        "mean_loss_pct": 4.733922010304431
+      },
+      {
+        "k": 8,
+        "mean_loss_pct": 4.201619038161903
+      },
+      {
+        "k": 9,
+        "mean_loss_pct": 2.1795092923539476
+      },
+      {
+        "k": 10,
+        "mean_loss_pct": 1.5910813383871467
+      },
+      {
+        "k": 11,
+        "mean_loss_pct": 0.39423719485591413
+      },
+      {
+        "k": 12,
+        "mean_loss_pct": 0.1490880184741109
+      },
+      {
+        "k": 13,
+        "mean_loss_pct": 0.1490880184741109
+      },
+      {
+        "k": 14,
+        "mean_loss_pct": 0.1490880184741109
+      },
+      {
+        "k": 15,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 16,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 17,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 18,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 19,
+        "mean_loss_pct": 0.0
+      },
+      {
+        "k": 20,
+        "mean_loss_pct": 0.0
+      }
+    ]
+  },
+  "source_sha256": "36d7e6dbf16d92b9cf9e4da3960c78e1bda4dc02e16cb651881e48d6a539b6a5",
+  "weights_status": "frozen original weights; no refit or new holdout validation"
+}

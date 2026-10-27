@@ -1,0 +1,16 @@
+method,target_success,groups,minimum_budget
+bytes,0.9,13,12
+bytes,0.95,13,14
+bytes,1.0,13,14
+generic,0.9,13,2
+generic,0.95,13,4
+generic,1.0,13,4
+weighted_default,0.9,13,15
+weighted_default,0.95,13,18
+weighted_default,1.0,13,18
+weighted_pooled,0.9,13,12
+weighted_pooled,0.95,13,15
+weighted_pooled,1.0,13,15
+weighted_cv,0.9,13,12
+weighted_cv,0.95,13,15
+weighted_cv,1.0,13,15

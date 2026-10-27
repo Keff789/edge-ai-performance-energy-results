@@ -1,0 +1,318 @@
+[
+  {
+    "identity_valid_pairs": 17,
+    "model": "mobilenet_v3_large",
+    "native_identity_unavailable": 3,
+    "pair_exclusion_reasons": {
+      "no_existing_artifact_bound_native_pair": 3
+    },
+    "planned": 20,
+    "quality_exclusion_reasons": {},
+    "quality_pair_exclusions": 0,
+    "quality_pairs": 17,
+    "setup": "DeepX",
+    "status": "evaluated"
+  },
+  {
+    "identity_valid_pairs": 17,
+    "model": "mobilenet_v3_large",
+    "native_identity_unavailable": 3,
+    "pair_exclusion_reasons": {
+      "no_existing_artifact_bound_native_pair": 3
+    },
+    "planned": 20,
+    "quality_exclusion_reasons": {
+      "final_generic_quality_accuracy_loss": 8,
+      "native_quality_loss_above_5pct": 8
+    },
+    "quality_pair_exclusions": 8,
+    "quality_pairs": 9,
+    "setup": "H10",
+    "status": "evaluated"
+  },
+  {
+    "identity_valid_pairs": 17,
+    "model": "mobilenet_v3_large",
+    "native_identity_unavailable": 3,
+    "pair_exclusion_reasons": {
+      "no_existing_artifact_bound_native_pair": 3
+    },
+    "planned": 20,
+    "quality_exclusion_reasons": {
+      "final_generic_quality_accuracy_loss": 9,
+      "native_quality_loss_above_5pct": 9
+    },
+    "quality_pair_exclusions": 9,
+    "quality_pairs": 8,
+    "setup": "H8",
+    "status": "evaluated"
+  },
+  {
+    "identity_valid_pairs": 20,
+    "model": "regnet_x_1_6gf",
+    "native_identity_unavailable": 0,
+    "pair_exclusion_reasons": {},
+    "planned": 20,
+    "quality_exclusion_reasons": {},
+    "quality_pair_exclusions": 0,
+    "quality_pairs": 20,
+    "setup": "DeepX",
+    "status": "evaluated"
+  },
+  {
+    "identity_valid_pairs": 20,
+    "model": "regnet_x_1_6gf",
+    "native_identity_unavailable": 0,
+    "pair_exclusion_reasons": {},
+    "planned": 20,
+    "quality_exclusion_reasons": {},
+    "quality_pair_exclusions": 0,
+    "quality_pairs": 20,
+    "setup": "H10",
+    "status": "evaluated"
+  },
+  {
+    "identity_valid_pairs": 20,
+    "model": "regnet_x_1_6gf",
+    "native_identity_unavailable": 0,
+    "pair_exclusion_reasons": {},
+    "planned": 20,
+    "quality_exclusion_reasons": {},
+    "quality_pair_exclusions": 0,
+    "quality_pairs": 20,
+    "setup": "H8",
+    "status": "evaluated"
+  },
+  {
+    "identity_valid_pairs": 19,
+    "model": "resnet50",
+    "native_identity_unavailable": 1,
+    "pair_exclusion_reasons": {
+      "no_existing_artifact_bound_native_pair": 1
+    },
+    "planned": 20,
+    "quality_exclusion_reasons": {},
+    "quality_pair_exclusions": 0,
+    "quality_pairs": 19,
+    "setup": "DeepX",
+    "status": "evaluated"
+  },
+  {
+    "identity_valid_pairs": 19,
+    "model": "resnet50",
+    "native_identity_unavailable": 1,
+    "pair_exclusion_reasons": {
+      "no_existing_artifact_bound_native_pair": 1
+    },
+    "planned": 20,
+    "quality_exclusion_reasons": {},
+    "quality_pair_exclusions": 0,
+    "quality_pairs": 19,
+    "setup": "H10",
+    "status": "evaluated"
+  },
+  {
+    "identity_valid_pairs": 19,
+    "model": "resnet50",
+    "native_identity_unavailable": 1,
+    "pair_exclusion_reasons": {
+      "no_existing_artifact_bound_native_pair": 1
+    },
+    "planned": 20,
+    "quality_exclusion_reasons": {},
+    "quality_pair_exclusions": 0,
+    "quality_pairs": 19,
+    "setup": "H8",
+    "status": "evaluated"
+  },
+  {
+    "identity_valid_pairs": 2,
+    "model": "yolo11l",
+    "native_identity_unavailable": 18,
+    "pair_exclusion_reasons": {
+      "no_existing_artifact_bound_native_pair": 18
+    },
+    "planned": 20,
+    "quality_exclusion_reasons": {},
+    "quality_pair_exclusions": 0,
+    "quality_pairs": 2,
+    "setup": "DeepX",
+    "status": "evaluated"
+  },
+  {
+    "identity_valid_pairs": 2,
+    "model": "yolo11l",
+    "native_identity_unavailable": 18,
+    "pair_exclusion_reasons": {
+      "generic_throughput_unavailable": 9,
+      "no_existing_artifact_bound_native_pair": 18
+    },
+    "planned": 20,
+    "quality_exclusion_reasons": {
+      "final_generic_quality_accuracy_loss": 2
+    },
+    "quality_pair_exclusions": 2,
+    "quality_pairs": 0,
+    "setup": "H10",
+    "status": "unavailable_no_quality_eligible_native_generic_pairs"
+  },
+  {
+    "identity_valid_pairs": 2,
+    "model": "yolo11l",
+    "native_identity_unavailable": 18,
+    "pair_exclusion_reasons": {
+      "generic_throughput_unavailable": 12,
+      "no_existing_artifact_bound_native_pair": 18
+    },
+    "planned": 20,
+    "quality_exclusion_reasons": {
+      "final_generic_quality_accuracy_loss": 2
+    },
+    "quality_pair_exclusions": 2,
+    "quality_pairs": 0,
+    "setup": "H8",
+    "status": "unavailable_no_quality_eligible_native_generic_pairs"
+  },
+  {
+    "identity_valid_pairs": 3,
+    "model": "yolo26m",
+    "native_identity_unavailable": 17,
+    "pair_exclusion_reasons": {
+      "no_existing_artifact_bound_native_pair": 17
+    },
+    "planned": 20,
+    "quality_exclusion_reasons": {},
+    "quality_pair_exclusions": 0,
+    "quality_pairs": 3,
+    "setup": "DeepX",
+    "status": "evaluated"
+  },
+  {
+    "identity_valid_pairs": 3,
+    "model": "yolo26m",
+    "native_identity_unavailable": 17,
+    "pair_exclusion_reasons": {
+      "generic_throughput_unavailable": 11,
+      "no_existing_artifact_bound_native_pair": 17
+    },
+    "planned": 20,
+    "quality_exclusion_reasons": {
+      "final_generic_quality_accuracy_loss": 3
+    },
+    "quality_pair_exclusions": 3,
+    "quality_pairs": 0,
+    "setup": "H10",
+    "status": "unavailable_no_quality_eligible_native_generic_pairs"
+  },
+  {
+    "identity_valid_pairs": 3,
+    "model": "yolo26m",
+    "native_identity_unavailable": 17,
+    "pair_exclusion_reasons": {
+      "generic_throughput_unavailable": 11,
+      "no_existing_artifact_bound_native_pair": 17
+    },
+    "planned": 20,
+    "quality_exclusion_reasons": {
+      "final_generic_quality_accuracy_loss": 3
+    },
+    "quality_pair_exclusions": 3,
+    "quality_pairs": 0,
+    "setup": "H8",
+    "status": "unavailable_no_quality_eligible_native_generic_pairs"
+  },
+  {
+    "identity_valid_pairs": 2,
+    "model": "yolo26s",
+    "native_identity_unavailable": 18,
+    "pair_exclusion_reasons": {
+      "no_existing_artifact_bound_native_pair": 18
+    },
+    "planned": 20,
+    "quality_exclusion_reasons": {},
+    "quality_pair_exclusions": 0,
+    "quality_pairs": 2,
+    "setup": "DeepX",
+    "status": "evaluated"
+  },
+  {
+    "identity_valid_pairs": 2,
+    "model": "yolo26s",
+    "native_identity_unavailable": 18,
+    "pair_exclusion_reasons": {
+      "generic_throughput_unavailable": 9,
+      "no_existing_artifact_bound_native_pair": 18
+    },
+    "planned": 20,
+    "quality_exclusion_reasons": {
+      "final_generic_quality_accuracy_loss": 2
+    },
+    "quality_pair_exclusions": 2,
+    "quality_pairs": 0,
+    "setup": "H10",
+    "status": "unavailable_no_quality_eligible_native_generic_pairs"
+  },
+  {
+    "identity_valid_pairs": 2,
+    "model": "yolo26s",
+    "native_identity_unavailable": 18,
+    "pair_exclusion_reasons": {
+      "generic_throughput_unavailable": 9,
+      "no_existing_artifact_bound_native_pair": 18
+    },
+    "planned": 20,
+    "quality_exclusion_reasons": {
+      "final_generic_quality_accuracy_loss": 2
+    },
+    "quality_pair_exclusions": 2,
+    "quality_pairs": 0,
+    "setup": "H8",
+    "status": "unavailable_no_quality_eligible_native_generic_pairs"
+  },
+  {
+    "identity_valid_pairs": 1,
+    "model": "yolov7_paper",
+    "native_identity_unavailable": 19,
+    "pair_exclusion_reasons": {
+      "no_existing_artifact_bound_native_pair": 19
+    },
+    "planned": 20,
+    "quality_exclusion_reasons": {},
+    "quality_pair_exclusions": 0,
+    "quality_pairs": 1,
+    "setup": "DeepX",
+    "status": "evaluated"
+  },
+  {
+    "identity_valid_pairs": 1,
+    "model": "yolov7_paper",
+    "native_identity_unavailable": 19,
+    "pair_exclusion_reasons": {
+      "no_existing_artifact_bound_native_pair": 19
+    },
+    "planned": 20,
+    "quality_exclusion_reasons": {
+      "final_generic_quality_accuracy_loss": 1
+    },
+    "quality_pair_exclusions": 1,
+    "quality_pairs": 0,
+    "setup": "H10",
+    "status": "unavailable_no_quality_eligible_native_generic_pairs"
+  },
+  {
+    "identity_valid_pairs": 1,
+    "model": "yolov7_paper",
+    "native_identity_unavailable": 19,
+    "pair_exclusion_reasons": {
+      "no_existing_artifact_bound_native_pair": 19
+    },
+    "planned": 20,
+    "quality_exclusion_reasons": {
+      "final_generic_quality_unavailable": 1
+    },
+    "quality_pair_exclusions": 1,
+    "quality_pairs": 0,
+    "setup": "H8",
+    "status": "unavailable_no_quality_eligible_native_generic_pairs"
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "CURRENT_modified": false,
+  "accepted_FPS": true,
+  "accepted_FPS_value": 41.29120249862124,
+  "check_scope": "Only CURRENT and exact already referenced b009 evidence bytes and unchanged blocking guard expression; no repeated broad audit or full join reattempt.",
+  "completed_at": "2026-10-26T23:38:56.689644+00:00",
+  "current_closure_category": "open",
+  "current_quality_status": "unavailable",
+  "evidence": {
+    "exact_guard_receipt": {
+      "filename": "H8_B009_ACTUAL_INDEPENDENT_PREPROCESS_GUARD_EXACT_KEYS_NO_ADMISSION_v1.json",
+      "report_relative_path": "continuation_v3_20261022/quality_only_ten_existing_fps_matching_preparation_v1/actual_Y7_b009_original_native_backing_facts_v1/H8_B009_ACTUAL_INDEPENDENT_PREPROCESS_GUARD_EXACT_KEYS_NO_ADMISSION_v1.json",
+      "sha256": "74870820520da89db23f296ee410aeb005acc9620e74bf665375a4566f02f454",
+      "size_bytes": 2743
+    },
+    "final_hold": {
+      "filename": "H8_B009_FINAL_HOLD_ORIGINAL_EXECUTION_POLICY_AUTHORITY_MISSING_NO_FIX_NO_PUBLISH_v1.json",
+      "report_relative_path": "continuation_v3_20261022/quality_only_ten_existing_fps_matching_preparation_v1/actual_Y7_b009_original_native_backing_facts_v1/H8_B009_FINAL_HOLD_ORIGINAL_EXECUTION_POLICY_AUTHORITY_MISSING_NO_FIX_NO_PUBLISH_v1.json",
+      "sha256": "d22b37cc45515acdd5537408819c4dbd87ffebd717b8849e13446a68a4c42c51",
+      "size_bytes": 4487
+    },
+    "normal_relation_receipt": {
+      "filename": "H8_B009_ACTUAL_UNMODIFIED_P8_NORMAL_RELATION_AND_EXACT_ORIGINAL_IDENTITY_BLOCKER_NO_IMPORT_v1.json",
+      "report_relative_path": "continuation_v3_20261022/quality_only_ten_existing_fps_matching_preparation_v1/actual_Y7_b009_original_native_backing_facts_v1/H8_B009_ACTUAL_UNMODIFIED_P8_NORMAL_RELATION_AND_EXACT_ORIGINAL_IDENTITY_BLOCKER_NO_IMPORT_v1.json",
+      "sha256": "9a528a585da9bfa5dca9f0d366cf8ba73e9819c6967cb64e54ee5bb81581b974",
+      "size_bytes": 5342
+    },
+    "original_FPS": {
+      "filename": "generic_completion_results.json",
+      "location_scope": "outside_report_root",
+      "sha256": "6ee2178cdae608cf48ea40cf2d7691d5e280d5e9184fbe9ff252ce55b3a95d59",
+      "size_bytes": 231910
+    },
+    "saved_quality_own_admission": {
+      "filename": "b009_NORMAL_QUALITY_ADMISSION.json",
+      "report_relative_path": "continuation_v3_20261022/deferred_h8_yolo26s_uint8_corrected2_central_Main6b59_v1/dx_incremental_v6/execution_quality_only_h8_yolov7_b009_SourceA814_consumerMain6b59_v6_01/0_yolov7_paper_orin_nx_hailo8_01_b009/completion/b009_NORMAL_QUALITY_ADMISSION.json",
+      "sha256": "5a3b1ed3d960030793e4e16ab4698603578ee16690673d8e9a05b86df3dcc0ab",
+      "size_bytes": 1644351
+    },
+    "saved_quality_result": {
+      "filename": "composed_central_result.json",
+      "report_relative_path": "continuation_v3_20261022/local_quality_runs/yolov7_H8_b009_qualityonly_sourcea814_original_uint8_full20_local_v1/generic420_h8_yolov7_b009_qualityonly_sourcea814_original_uint8_full20_deferred_v1_20261026_002609/models/yolov7_paper/benchmark_results/quality_inputs/orin_nx_hailo8_01/results/b009/results_hailo8_to_trt/task_quality_inputs/composed_central_result.json",
+      "sha256": "86ec8a6279f789e062962de8217a6f1ee1eb5f3195165ac8f938526f2664d45a",
+      "size_bytes": 183970
+    }
+  },
+  "exact_remaining_gap": "No authentic observed original execution-policy/recipe binding proves that the historical Native prepared feed executed the complete SHA411898 recipe. Shared single-image prepared tensor0bd0f530 and image equality do not supply the missing policy authority. No field is inferred or inserted.",
+  "generic_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
+  "hardware_or_inference_or_build_started": false,
+  "normal_relation_previously_called": true,
+  "normal_relation_previously_passed": false,
+  "original_FPS_preprocessing_contract_sha256": null,
+  "saved_Q_preprocessing_contract_sha256": "411898b92628e2a769a2b8ea7aa35faff35373cfacb863c3ab34b243c105b70e",
+  "saved_independent_quality_class": "accuracy_loss",
+  "saved_quality_joined_to_accepted_FPS": false,
+  "schema": "generic420-b009-bounded-closure-v1",
+  "status": "QUALITY_JOIN_HELD",
+  "unchanged_normal_preprocessing_guard_passes": false
+}

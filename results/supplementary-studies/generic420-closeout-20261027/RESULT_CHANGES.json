@@ -1,0 +1,178 @@
+{
+  "schema": "generic420-result-changes-v1",
+  "rq2_target": "Native throughput on the artifact-verified intersection",
+  "rq2": {
+    "classifier_quality_pairs": 151,
+    "detector_quality_pairs": 8,
+    "energy_policy": "Original Native, Full and Generic energy records stay in their original dataset. No refreshed Generic rate is paired to old energy as one joint observation.",
+    "excluded_candidates": 228,
+    "exclusion_reasons": {
+      "generic_throughput_unavailable": 61,
+      "no_existing_artifact_bound_native_pair": 228
+    },
+    "final_generic_observations": 359,
+    "group_count": 21,
+    "groups_without_quality_pairs": 8,
+    "mean_final_generic_loss_pct": 2.1592394401146824,
+    "mean_old_generic_loss_same_pairs_pct": 22.959196291816436,
+    "models": [
+      "mobilenet_v3_large",
+      "regnet_x_1_6gf",
+      "resnet50",
+      "yolo11l",
+      "yolo26m",
+      "yolo26s",
+      "yolov7_paper"
+    ],
+    "native_precision_unknown_but_same_bound_executable": 4,
+    "pair_count": 192,
+    "prior_full_quality_scope_mean_loss_pct": 15.077128973324955,
+    "prior_published_pairs": 204,
+    "prior_published_quality_pairs": 187,
+    "quality_group_count": 13,
+    "quality_pair_count": 159,
+    "schema": "rq2-final-pairs-v1",
+    "scope": "Existing Native measurements on the verified intersection with final fixed420 Generic candidates; no Native values imputed or remeasured.",
+    "weight_policy": "All prior vectors and original full graph normalization universes frozen; no new fit. Prior holdout status describes original training, not a new validation on this subset.",
+    "weights": {
+      "default": {
+        "w_comm": 1.0,
+        "w_imb": 3.0,
+        "w_tensors": 0.2
+      },
+      "model_held_out": {
+        "mobilenet_v3_large": {
+          "w_comm": 1.0,
+          "w_imb": 0.5693428877923351,
+          "w_tensors": 0.2
+        },
+        "regnet_x_1_6gf": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        },
+        "resnet50": {
+          "w_comm": 1.0,
+          "w_imb": 0.025084670679042267,
+          "w_tensors": 0.2
+        },
+        "yolo11l": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        },
+        "yolo26m": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        },
+        "yolo26s": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        },
+        "yolov7_paper": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        }
+      },
+      "shared": {
+        "w_comm": 1.0,
+        "w_imb": 0.15799266978091375,
+        "w_tensors": 0.2
+      }
+    }
+  },
+  "rq3_target": "Measured Generic throughput among quality-admitted candidates",
+  "rq3_previous": {
+    "source_package": "RQ3_Umsetzung_20261025",
+    "eligible": 253,
+    "groups": 19,
+    "fps_measured": 296,
+    "primary_loss_pct": {
+      "boundary_size": {
+        "k1": 23.718549086616747,
+        "k3": 11.266258563272055,
+        "k5": 3.4866824241411387,
+        "mean_1_3_5": 12.823830024676646
+      },
+      "weighted_default": {
+        "k1": 21.32851496804461,
+        "k3": 18.492314369479868,
+        "k5": 11.099556364732,
+        "mean_1_3_5": 16.97346190075216
+      },
+      "global": {
+        "k1": 20.92028428160449,
+        "k3": 10.007735695390092,
+        "k5": 4.330838425085545,
+        "mean_1_3_5": 11.752952800693377
+      },
+      "task": {
+        "k1": 22.22888781306736,
+        "k3": 14.576753693682704,
+        "k5": 6.4914863224249135,
+        "mean_1_3_5": 14.432375943058325
+      },
+      "device": {
+        "k1": 24.90739701535388,
+        "k3": 12.553617064040251,
+        "k5": 5.223927225601154,
+        "mean_1_3_5": 14.22831376833176
+      },
+      "task_device": {
+        "k1": 19.064570411903205,
+        "k3": 11.93957928484874,
+        "k5": 7.390314569081633,
+        "mean_1_3_5": 12.798154755277858
+      }
+    }
+  },
+  "rq3_current": {
+    "eligible": 315,
+    "groups": 21,
+    "fps_measured": 359,
+    "primary_loss_pct": {
+      "boundary_size": {
+        "k1": 24.87513748011432,
+        "k3": 15.669239123105424,
+        "k5": 5.68142468504013,
+        "mean_1_3_5": 15.408600429419957
+      },
+      "weighted_default": {
+        "k1": 22.35507822195964,
+        "k3": 19.559088800193624,
+        "k5": 13.36952690443844,
+        "mean_1_3_5": 18.427897975530566
+      },
+      "global": {
+        "k1": 25.11224916550437,
+        "k3": 17.098464119688863,
+        "k5": 6.076341880497676,
+        "mean_1_3_5": 16.095685055230305
+      },
+      "task": {
+        "k1": 27.134172722088827,
+        "k3": 20.05782706175568,
+        "k5": 9.60878315872168,
+        "mean_1_3_5": 18.933594314188728
+      },
+      "device": {
+        "k1": 25.79270558818432,
+        "k3": 13.552372286245236,
+        "k5": 7.0408144129478,
+        "mean_1_3_5": 15.461964095792453
+      },
+      "task_device": {
+        "k1": 21.02951537467167,
+        "k3": 14.381381567225338,
+        "k5": 9.669794637816768,
+        "mean_1_3_5": 15.026897193237923
+      }
+    }
+  },
+  "rq3_cohort_comparison_note": "The 25 October package and 27 October snapshot have different candidate/group coverage and quality decisions. These aggregate changes are not a paired constant-cohort comparison. The prespecified main fitted method remains global; task_device remains supplemental.",
+  "main_method_prespecified": "global",
+  "joint_Graph_Generic_Native_search_pipeline_experimentally_validated": false
+}

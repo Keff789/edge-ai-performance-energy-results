@@ -1,0 +1,42 @@
+{
+  "current_deployment_candidate_check": {
+    "full": {
+      "energy_mj": 315.2272215384534,
+      "fps": 63.178587945126715,
+      "rate_basis": "independent performance cohort median",
+      "uid": "native|yolo11l|DeepX|native_full_deepx|full"
+    },
+    "full_still_faster_and_lower_energy": true,
+    "split": {
+      "energy_mj": 558.6350777794886,
+      "fps": 51.426740194226014,
+      "rate_basis": "independent performance cohort median",
+      "uid": "native|yolo11l|H10|hailo10h_to_trt|b062"
+    }
+  },
+  "historical_same_window": {
+    "energy_change_pct": -9.303400348627456,
+    "full": {
+      "energy_mj": 707.3628164913566,
+      "fps": 35.52575537369155,
+      "rate_basis": "mean of per-energy-window completed_count / duration",
+      "uid": "energy|base|yolo11l|full|orin_nx_hailo8_01|native_full_tensorrt|hailo8"
+    },
+    "full_candidates": 6,
+    "quality_admissible_fulls": 5,
+    "split": {
+      "energy_mj": 641.5540217558388,
+      "fps": 37.09576116064978,
+      "rate_basis": "mean of per-energy-window completed_count / duration",
+      "uid": "energy|base|yolo11l|b062|orin_nx_hailo10_01|hailo10h_to_trt|hailo10h"
+    },
+    "throughput_gain_pct": 4.419345262172492
+  },
+  "input_files": [
+    "results/supplementary-studies/mlsys-selection-20261007/inputs/analysis/best_cases_inputs/energy_repeats.csv",
+    "results/supplementary-studies/thesis20-ranking-20261005/source/deep_analysis/tables/energy_cases.csv",
+    "results/split-inference/data/PAPER_DATASET.json"
+  ],
+  "scope": "Historical energy-window rates and current performance medians remain separate cohorts.",
+  "source_mapping": "Canonical historical energy_cases.csv differs from the R22 copy only in its final line ending; CSV records are identical."
+}

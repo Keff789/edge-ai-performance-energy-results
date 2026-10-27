@@ -1,0 +1,16 @@
+% Erzeugt durch analysis/build_review_additions.py. Nicht manuell bearbeiten.
+\begin{table}[t]
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\caption{Nachträgliche Sensitivität gegenüber der Toleranz des relativen Qualitätsverlusts, über 195 Split-Konfigurationen der sechs Modelle mit aktueller Energie. Der nach Native-FPS ausgewählte Full und die lokale semantische Anforderung bleiben fest. Alle achtzehn ausgewählten Fulls erfüllen auch die Toleranz von 1\%. Die Zählung verlangt, dass beide Qualitäts-Punktschätzer innerhalb der Toleranz liegen, und verwendet separate Native-Durchsatz- und Energiemessungen. Archivierte Qualitätskennzeichnungen werden nicht neu definiert. YOLOv7 ist ausgeschlossen.}
+\label{tab:quality_tolerance}
+\begin{tabular}{rrrrr}
+\toprule
+Toleranz & Zulässig & Schneller & Weniger Energie & Beides\\
+\midrule
+1\% & 105 & 38 & 51 & 31\\
+2\% & 136 & 63 & 74 & 51\\
+5\% & 178 & 82 & 102 & 67\\
+\bottomrule
+\end{tabular}
+\end{table}

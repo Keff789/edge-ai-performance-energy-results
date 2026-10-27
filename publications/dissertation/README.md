@@ -1,5 +1,7 @@
 # Dissertation
 
+Latest generated EN/DE evidence: [Generic420 follow-up, 27 October 2026](../../results/supplementary-studies/generic420-closeout-20261027/README.md), with explicit current RQ2 and RQ3 inputs. The existing Native/Full/energy studies and frozen RQ1/YOLOv7 numerical evidence remain intact. Dissertation prose is unchanged.
+
 ## Deutsche Split-Grafiken und Tabellen
 
 Die [deutsche Sammlung](de/README.md) enthält 58 Grafikfamilien und die verfügbaren

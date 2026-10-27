@@ -1,0 +1,7 @@
+method,label,groups,all_hits,classification_hits,detection_hits,median_loss_pct,mean_loss_pct,energy_groups,mean_energy_excess_pct
+cut_bytes_only,Smallest boundary bytes,21,6,0,6,3.77011716274378,25.284490584318174,18,55.086118543738316
+weighted_score,Weighted graph score,21,6,0,6,13.787922051758938,17.283459484091725,18,24.566293306336096
+onnx_real_boundary_hardware_aware,H10 accelerator-fit score,21,6,0,6,12.814016457659816,19.64894571630482,18,32.02200724451843
+cycle_time_no_handover,Cycle without handover,21,6,0,6,13.787922051758938,17.283459484091725,18,24.566293306336096
+stored_predicted_stream_fps,Streaming-rate heuristic,21,7,0,7,9.250584281689866,17.422851649581155,18,24.566293306336096
+measured_generic_completion,Measured Generic completion,21,11,3,8,0.0,12.741933938579638,18,28.06710125494995

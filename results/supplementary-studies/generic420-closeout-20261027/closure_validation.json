@@ -1,0 +1,67 @@
+{
+  "CURRENT_unchanged_during_extraction": true,
+  "all_21_groups_have_20_selected": true,
+  "all_group_partitions_sum_to_planned": true,
+  "bounded_b009_normal_guard_still_fails": true,
+  "completed_at": "2026-10-26T23:38:56.689644+00:00",
+  "no_hardware_or_model_inference_or_build_started": true,
+  "no_private_absolute_paths_in_JSON_outputs": true,
+  "output_files": [
+    {
+      "filename": "closure_matrix.csv",
+      "report_relative_path": "postprocess_rq3_20261027/closure_matrix.csv",
+      "sha256": "3111baf42b0362c287ef6eff8cd48fe9ea0119294fe27e286a938500576c7f8a",
+      "size_bytes": 859
+    },
+    {
+      "filename": "closure_matrix.json",
+      "report_relative_path": "postprocess_rq3_20261027/closure_matrix.json",
+      "sha256": "83319bd401cc3410247052ad48934a8c9d2488dee3b47e4c94bd9fc67347b3aa",
+      "size_bytes": 10138
+    },
+    {
+      "filename": "closure_cases.csv",
+      "report_relative_path": "postprocess_rq3_20261027/closure_cases.csv",
+      "sha256": "7f61e8ac5b661f02af0e0ce4fc8c05e1511b71bd1b9180ace6e0960504ff2df2",
+      "size_bytes": 311247
+    },
+    {
+      "filename": "closure_cases.json",
+      "report_relative_path": "postprocess_rq3_20261027/closure_cases.json",
+      "sha256": "7230cedbdd4be2124613b10c5ff2d0ac1abc5194c6d129d71f02b5f5e6c9e461",
+      "size_bytes": 614976
+    },
+    {
+      "filename": "closure_b009.json",
+      "report_relative_path": "postprocess_rq3_20261027/closure_b009.json",
+      "sha256": "b85799cbd6f48fa63fdf84b9aa82939f5a260cbe8820540a27f135f05494ec54",
+      "size_bytes": 4197
+    },
+    {
+      "filename": "closure_process_status.json",
+      "report_relative_path": "postprocess_rq3_20261027/closure_process_status.json",
+      "sha256": "7693040d1e26f26ea4bca04e5c222664ed4e83b0321030c10c98eb85c77bf38f",
+      "size_bytes": 2248
+    }
+  ],
+  "schema": "generic420-closure-validation-v1",
+  "selection_and_ledger_UID_sets_exactly_equal": true,
+  "selection_identity_fields_verified": [
+    "model",
+    "setup",
+    "case_id",
+    "model_sha256",
+    "boundary_id"
+  ],
+  "totals": {
+    "FPS": 359,
+    "compile_failed": 37,
+    "open": 1,
+    "planned": 420,
+    "quality_eligible": 315,
+    "quality_exclusion": 43,
+    "technical_exclusion": 61,
+    "unsupported": 24
+  },
+  "totals_agree_with_CURRENT_summary": true
+}

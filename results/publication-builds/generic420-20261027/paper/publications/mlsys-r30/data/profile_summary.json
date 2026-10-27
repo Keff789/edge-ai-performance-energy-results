@@ -1,0 +1,138 @@
+{
+  "profile": "mlsys-r30",
+  "frozen_numerical_profile": "mlsys-r22",
+  "weighted_scope": {
+    "evaluated_quality_pairs": 159,
+    "model_device_groups": 13,
+    "classifier_pairs": 151,
+    "detector_pairs": 8,
+    "models": [
+      "mobilenet_v3_large",
+      "regnet_x_1_6gf",
+      "resnet50",
+      "yolo11l",
+      "yolo26m",
+      "yolo26s",
+      "yolov7_paper"
+    ],
+    "groups_without_quality_pairs": 8,
+    "scope": "Existing Native measurements on the verified intersection with final fixed420 Generic candidates; no Native values imputed or remeasured."
+  },
+  "weighted_weights": {
+    "w_comm": 1.0,
+    "w_imb": 0.15799266978091375,
+    "w_tensors": 0.2
+  },
+  "new_asset_ids": [
+    "r30_weighted_budget_table",
+    "r30_weighted_fold_table",
+    "r30_weighted_macros",
+    "r30_weighted_operations_table",
+    "rq2_weighted_all_models",
+    "yolov7_h8_case_single_column"
+  ],
+  "measurement_changes": false,
+  "old_evidence_reference": "results/split-inference/publications/mlsys-r22/data/r15_evidence_validation.json",
+  "final_rq2_scope": {
+    "schema": "rq2-final-pairs-v1",
+    "pair_count": 192,
+    "quality_pair_count": 159,
+    "group_count": 21,
+    "quality_group_count": 13,
+    "models": [
+      "mobilenet_v3_large",
+      "regnet_x_1_6gf",
+      "resnet50",
+      "yolo11l",
+      "yolo26m",
+      "yolo26s",
+      "yolov7_paper"
+    ],
+    "classifier_quality_pairs": 151,
+    "detector_quality_pairs": 8,
+    "final_generic_observations": 359,
+    "prior_published_pairs": 204,
+    "prior_published_quality_pairs": 187,
+    "excluded_candidates": 228,
+    "exclusion_reasons": {
+      "no_existing_artifact_bound_native_pair": 228,
+      "generic_throughput_unavailable": 61
+    },
+    "native_precision_unknown_but_same_bound_executable": 4,
+    "scope": "Existing Native measurements on the verified intersection with final fixed420 Generic candidates; no Native values imputed or remeasured.",
+    "mean_final_generic_loss_pct": 2.1592394401146824,
+    "mean_old_generic_loss_same_pairs_pct": 22.959196291816436,
+    "prior_full_quality_scope_mean_loss_pct": 15.077128973324955,
+    "weights": {
+      "default": {
+        "w_comm": 1.0,
+        "w_imb": 3.0,
+        "w_tensors": 0.2
+      },
+      "shared": {
+        "w_comm": 1.0,
+        "w_imb": 0.15799266978091375,
+        "w_tensors": 0.2
+      },
+      "model_held_out": {
+        "mobilenet_v3_large": {
+          "w_comm": 1.0,
+          "w_imb": 0.5693428877923351,
+          "w_tensors": 0.2
+        },
+        "regnet_x_1_6gf": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        },
+        "resnet50": {
+          "w_comm": 1.0,
+          "w_imb": 0.025084670679042267,
+          "w_tensors": 0.2
+        },
+        "yolo11l": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        },
+        "yolo26m": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        },
+        "yolo26s": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        },
+        "yolov7_paper": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        }
+      }
+    },
+    "weight_policy": "All prior vectors and original full graph normalization universes frozen; no new fit. Prior holdout status describes original training, not a new validation on this subset.",
+    "energy_policy": "Original Native, Full and Generic energy records stay in their original dataset. No refreshed Generic rate is paired to old energy as one joint observation.",
+    "groups_without_quality_pairs": 8
+  },
+  "historical_weighted_scope": {
+    "all_source_pairs": 204,
+    "all_source_quality_eligible_pairs": 187,
+    "evaluated_quality_pairs": 187,
+    "classifier_pairs": 151,
+    "detector_pairs": 36,
+    "model_device_groups": 21,
+    "models": [
+      "mobilenet_v3_large",
+      "regnet_x_1_6gf",
+      "resnet50",
+      "yolo11l",
+      "yolo26m",
+      "yolo26s",
+      "yolov7_paper"
+    ],
+    "missing_models_due_incomplete_features": []
+  },
+  "weighted_weight_policy": "All prior vectors and original full graph normalization universes frozen; no new fit. Prior holdout status describes original training, not a new validation on this subset."
+}

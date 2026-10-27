@@ -1,0 +1,51 @@
+{
+  "schema": "generic420-public-feature-provenance-v1",
+  "repository": "Keff789/edge-ai-performance-energy-results",
+  "repository_commit": "1f3734bf0a190e4541dc843c957730280e0f6eb4",
+  "feature_source": "Published RQ2 feature CSV and complete regular workflow normalization universe; rechecked against every frozen boundary identity",
+  "operation_proxy": "analytic-operation-proxy-r29-extended-v1",
+  "published_graph_features": {
+    "path": "results/supplementary-studies/rq2-weighted-20261020/features/graph_boundary_features.csv",
+    "sha256": "05856138ad5eb5de1f05f8b57d234d4bd14bd2acc0713a4b3cc984955d24da2e",
+    "all420_boundary_ids_match": true,
+    "all_model_sha256_match": true,
+    "all_workflow_candidate_features_complete": true
+  },
+  "published_normalization": {
+    "path": "results/supplementary-studies/rq2-weighted-20261020/features/normalization_universes.json",
+    "sha256": "a00131150b5578f31ac7ecb184f5b2bf71a24f2a435cde725020cf864a8619d0"
+  },
+  "frozen_selection_sha256": "b084b0d2e0844c736877adf12279f582427d244376f8077e51cef66c73a0e895",
+  "ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+  "export_manifest_sha256": "4e97e816d9636e2fca341ddb5c38a79b795e2ca6c475be382e6855f053e4bbc0",
+  "package_audit": {
+    "repository": "Keff789/edge-ai-performance-energy-results",
+    "repository_commit": "1f3734bf0a190e4541dc843c957730280e0f6eb4",
+    "source_paths": [
+      "results/supplementary-studies/rq2-weighted-20261020/features/graph_boundary_features.csv",
+      "results/supplementary-studies/rq2-weighted-20261020/features/normalization_universes.json",
+      "scripts/supplementary-studies/rq2-weighted-20261020/analyze_weighted.py",
+      "scripts/supplementary-studies/rq2-weighted-20261020/augment_graph_features.py"
+    ],
+    "graph_git_blob": "105765817255ec19158d406dc9551cd5d9ef5721",
+    "validation": {
+      "frozen_rows": 420,
+      "exact_boundary_identity_joined_rows": 420,
+      "model_hashes_equal": true,
+      "all_model_names_cases_boundary_indices_match": true,
+      "bytes_tensors_input_counts_equal": true,
+      "all_workflow_members": true
+    },
+    "previous_objective": "equal-weight mean Native-throughput loss across k=1,3,5 and model/device groups",
+    "new_target": "Generic throughput; keep budget objective but apply tocurrentqualifiedmeasuredcandidategroups",
+    "operation_proxy": "analytic-operation-proxy-r29-extended-v1",
+    "normalization": "permodel full regularworkflowuniverse; C=minmax(log10(1+Comm)); Iraw=abs(2Fleft/Ftotal\u22121); T=minmax(max(crossing_tensor_count\u22121,0))",
+    "hashes": {
+      "published_normalization_universes.json": "d3365988eea722dd7559ce8ae5da1fc101a090f4e64d9c21d552a32379b235a6",
+      "previous_analyze_weighted.py": "8731b37d6cc2607bd953b61b967f80360cdd6badde216a5035d4eb9a629c3126",
+      "previous_augment_graph_features.py": "586f57261ecb787339368d70484086a999fa998fbfb1f2ff4a03f296aed92560",
+      "published_graph_boundary_features.csv": "6825c3b6347adb6388b2a055bf0ebdc7654ed67a41a028675a8ab55165b0b7c3"
+    }
+  },
+  "file_byte_note": "The package audit copies add a final newline to the repository feature CSV and normalization JSON. Parsed values are identical; consumed source hashes above refer to the original repository files."
+}

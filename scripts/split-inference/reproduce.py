@@ -287,7 +287,11 @@ def main():
     ap.add_argument('--verify',action='store_true',help='Run independent checks and compare generated scientific artifacts to the checked-in results')
     ap.add_argument('--languages', nargs='+', choices=['en', 'de'], default=['en'],
                     help='English exports are preserved; adding de creates a German dissertation tree under output/de.')
+    ap.add_argument('--generic420-study',type=Path,help='Optional curated Generic420 study; adds localized RQ3 figures and tables under output/rq3-generic420')
+    ap.add_argument('--rq2-study', type=Path, help='Verified current Generic/Native paired study for the current publication; historical measurements remain unchanged')
     a=ap.parse_args()
+    if a.rq2_study and a.publication != 'mlsys-r30':
+        ap.error('--rq2-study requires --publication mlsys-r30')
     os.environ.setdefault('MPLCONFIGDIR', str(a.output.resolve().parent / '.matplotlib-cache'))
     assert not a.output.exists() or not any(a.output.iterdir()), 'Use a fresh output directory'
     config=read(a.config);validate_config(config)
@@ -308,14 +312,14 @@ def main():
     build_profile(root.parents[1],a.output,numeric_only=a.numeric_only)
     if a.publication=='mlsys-r30':
         from publication_mlsys_r30 import build_profile as build_r30
-        build_r30(root.parents[1],a.output,numeric_only=a.numeric_only)
+        build_r30(root.parents[1],a.output,numeric_only=a.numeric_only, rq2_study=a.rq2_study)
     if a.verify and a.publication=='mlsys-r30':
         # R30 preserves scientific R22 payloads while intentionally using newer
         # paper layouts. Do not compare the old raster/vector rendering bytes.
         subprocess.run([sys.executable, '-I', '-B', str(root/'validation/check_mlsys_profile.py'),
                         '--repo',str(root.parents[1]),'--output',str(a.output)], check=True)
         from publication_mlsys_r30 import verify_profile
-        print(json.dumps(verify_profile(root.parents[1],a.output),sort_keys=True))
+        print(json.dumps(verify_profile(root.parents[1],a.output, rq2_study=a.rq2_study),sort_keys=True))
     elif a.verify:
         subprocess.run([sys.executable, '-I', '-B', str(root/'validation/test_edge_cases.py')], check=True)
         for name in ['test_mlsys_data.py','test_mlsys_evidence.py','test_mlsys_figures.py','test_mlsys_profile.py']:
@@ -334,7 +338,14 @@ def main():
         exporter = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(exporter)
         summary['german_export'] = exporter.build(root.parents[1], a.output, a.output / 'de',
-                                                 numeric_only=a.numeric_only)
+                                                 numeric_only=a.numeric_only, rq2_study=a.rq2_study)
+    if a.generic420_study:
+        renderer=root.parent/'supplementary-studies/rq3-generic420/render_artifacts.py'
+        command=[sys.executable,str(renderer),'--study',str(a.generic420_study),
+                 '--out',str(a.output/'rq3-generic420'),'--languages',*a.languages]
+        if a.numeric_only: command.append('--numeric-only')
+        subprocess.run(command,check=True)
+        summary['generic420_artifacts']='rq3-generic420'
     print(json.dumps(summary,sort_keys=True),flush=True)
 
 if __name__=='__main__':

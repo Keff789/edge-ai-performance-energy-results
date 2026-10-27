@@ -1,0 +1,46 @@
+{
+  "accepted_FPS_missing_import": 0,
+  "complete_FPS_pending_import": [],
+  "completed_at": "2026-10-26T23:38:56.689644+00:00",
+  "latest_quality_service": {
+    "admission_closed": true,
+    "all_started_workers_exited_0": true,
+    "configured_worker_budget": 6,
+    "dispatcher_alive": false,
+    "final_receipt": {
+      "filename": "DEEPX_YOLOV7_B306_SINGLE_SOURCEB4_V6_FINAL_RESULT_AND_GENUINE_SHUTDOWN_OBSERVED_BY_ROOT_v1.json",
+      "report_relative_path": "continuation_v3_20261022/deferred_h8_yolo26s_uint8_corrected2_central_Main6b59_v1/dx_incremental_v6/execution_deepx_yolov7_b306_SINGLE_SourceB4_consumer56fc_v6_01/DEEPX_YOLOV7_B306_SINGLE_SOURCEB4_V6_FINAL_RESULT_AND_GENUINE_SHUTDOWN_OBSERVED_BY_ROOT_v1.json",
+      "sha256": "a6db20e1a738209e1ad94fc9657a2e25ec76d924dd8100191c2a9cfa6cebedfa",
+      "size_bytes": 13789
+    },
+    "finished": true,
+    "finished_at": "2026-10-26T23:12:09.623653+00:00",
+    "group_count": 0,
+    "inflight_count": 0,
+    "manager_alive": false,
+    "queue_size": 0,
+    "shutdown_receipt": {
+      "filename": "NEW_CPU_SERVICE_SHUTDOWN.json",
+      "report_relative_path": "continuation_v3_20261022/deferred_h8_yolo26s_uint8_corrected2_central_Main6b59_v1/dx_incremental_v6/execution_deepx_yolov7_b306_SINGLE_SourceB4_consumer56fc_v6_01/NEW_CPU_SERVICE_SHUTDOWN.json",
+      "sha256": "aa007de265f350b59dfbdd9588cdfc1a1ef8eef3ccb2c995bc7990a187ec242b",
+      "size_bytes": 527
+    },
+    "workers_actually_started": 4
+  },
+  "local_process_observation": {
+    "job_process_count": 0,
+    "job_processes": [],
+    "observed_at": "2026-10-26T23:38:56.689613+00:00",
+    "read_only_squashfuse_helpers_excluded": 34,
+    "scope": "local processes whose command line references this report root"
+  },
+  "progress_receipt": {
+    "filename": "PROGRESS_20261026T233320Z.json",
+    "report_relative_path": "continuation_v3_20261022/PROGRESS_20261026T233320Z.json",
+    "sha256": "5b6c15e3305a79e670474eb38de87a2baec2f29d3696d66fe6a7a3e001e854b7",
+    "size_bytes": 13694
+  },
+  "remote_status_scope": "No fresh remote execution or process scan; original normal terminal receipts and final progress are retained.",
+  "schema": "generic420-existing-work-closure-status-v1",
+  "supported_FPS_pending": 0
+}

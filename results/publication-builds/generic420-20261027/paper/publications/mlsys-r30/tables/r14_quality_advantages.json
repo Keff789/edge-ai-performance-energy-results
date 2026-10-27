@@ -1,0 +1,42 @@
+[
+  {
+    "admissible_fulls": 42,
+    "both_vs_fastest_full": 65,
+    "eligibility": "All measured",
+    "faster_than_fastest_full": 105,
+    "gate": "unrestricted",
+    "lower_energy_than_fastest_full": 77,
+    "lower_energy_than_minimum_full": 72,
+    "native_candidates": 204
+  },
+  {
+    "admissible_fulls": 28,
+    "both_vs_fastest_full": 32,
+    "eligibility": "<=1% loss",
+    "faster_than_fastest_full": 58,
+    "gate": "quality_1pct",
+    "lower_energy_than_fastest_full": 40,
+    "lower_energy_than_minimum_full": 37,
+    "native_candidates": 114
+  },
+  {
+    "admissible_fulls": 30,
+    "both_vs_fastest_full": 52,
+    "eligibility": "<=2% loss",
+    "faster_than_fastest_full": 88,
+    "gate": "quality_2pct",
+    "lower_energy_than_fastest_full": 61,
+    "lower_energy_than_minimum_full": 56,
+    "native_candidates": 147
+  },
+  {
+    "admissible_fulls": 33,
+    "both_vs_fastest_full": 62,
+    "eligibility": "<=5% loss",
+    "faster_than_fastest_full": 102,
+    "gate": "quality_5pct",
+    "lower_energy_than_fastest_full": 74,
+    "lower_energy_than_minimum_full": 69,
+    "native_candidates": 187
+  }
+]

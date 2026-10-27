@@ -1,0 +1,16 @@
+% Erzeugt durch analysis/build_review_additions.py. Nicht manuell bearbeiten.
+\begin{table}[t]
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\caption{Empfindlichkeit der Rate gegenüber längeren Messfenstern für die führenden H10-Klassifikatorkonfigurationen. $S_N$ verwendet die drei Native-Wiederholungen mit je 1,000 Aufgaben. $S_E$ verwendet den Mittelwert der wiederholungsweisen $N/T$ aus den separaten Energiemessungen. Die durch Native ausgewählte Full-Identität bleibt fest. Angegeben sind mittlere Split-Fensterdauern. Dies sind vorhandene Messungen, kein neues thermisches Experiment oder Experiment mit kontrollierter Dauer.}
+\label{tab:long_window}
+\begin{tabular}{lrrr}
+\toprule
+Konfiguration & $S_N$ & $S_E$ & Fenster (s)\\
+\midrule
+MobileNet-V3-L/b074 & 1.50$\times$ & 1.53$\times$ & 62.03\\
+RegNet-X/b123 & 4.80$\times$ & 5.06$\times$ & 62.13\\
+ResNet-50/b095 & 2.02$\times$ & 2.10$\times$ & 62.26\\
+\bottomrule
+\end{tabular}
+\end{table}

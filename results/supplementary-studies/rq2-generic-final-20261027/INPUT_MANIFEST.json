@@ -1,0 +1,31 @@
+{
+  "schema": "rq2-final-input-manifest-v1",
+  "source_selection_sha256": "b084b0d2e0844c736877adf12279f582427d244376f8077e51cef66c73a0e895",
+  "source_snapshot_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+  "sources": [
+    {
+      "path": "results/supplementary-studies/rq2-generic-final-20261027/inputs/final_generic420.json",
+      "sha256": "72131dd51d2d5070deb378fc4dca18a959f0ee174b9b7900b87d3a997eb489d8"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-weighted-20261020/inputs/current_graph_feature_inputs.zip",
+      "sha256": "c9fe64b0a67ff74c987b030d9db412dbaa5008a293d85dbf9fb05b504b1ace1a"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-weighted-20261020/analysis/candidate_features.csv",
+      "sha256": "e05d0df3111bcefabca689849ffbee936ebd33f5d8ae41dce86f9b224d26b681"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-weighted-20261020/analysis/summary.json",
+      "sha256": "15f1a2238c3346b96f46b98c90dc116c81ae0660e7efd7f59b7e5f584cad8220"
+    },
+    {
+      "path": "results/split-inference/data/PAPER_DATASET.json",
+      "sha256": "03a0924016e6298587d366a45903d6b3a19d8f8aa08e831fdfa0f5b7f0725bcd"
+    },
+    {
+      "path": "results/split-inference/publications/mlsys-r22/data/quality_selection_groups.json",
+      "sha256": "458ea36a8fc897d2ce0a3bbf90303e9268324f6cb415f14a9a04484d9729b47a"
+    }
+  ]
+}

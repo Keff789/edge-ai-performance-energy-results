@@ -1,0 +1,606 @@
+{
+  "caption": "Native throughput loss using 159 verified quality-eligible pairs in 13 model/device groups. Generic uses the final measurement snapshot. Default, shared and model-held-out graph weights and full graph normalizations are frozen from the prior study; no refit. Every group has equal weight and tests min(k,n) candidates. This is a retrospective paired subset, not all 420 Generic candidates.",
+  "points": [
+    {
+      "exact_success_fraction": 0.3076923076923077,
+      "groups": 13,
+      "k": 1,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 0.46153846153846156,
+      "groups": 13,
+      "k": 2,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 0.5384615384615384,
+      "groups": 13,
+      "k": 3,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 0.6923076923076923,
+      "groups": 13,
+      "k": 4,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 0.6923076923076923,
+      "groups": 13,
+      "k": 5,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 0.7692307692307693,
+      "groups": 13,
+      "k": 6,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 0.7692307692307693,
+      "groups": 13,
+      "k": 7,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 0.7692307692307693,
+      "groups": 13,
+      "k": 8,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 0.7692307692307693,
+      "groups": 13,
+      "k": 9,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 0.7692307692307693,
+      "groups": 13,
+      "k": 10,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 0.7692307692307693,
+      "groups": 13,
+      "k": 11,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 0.9230769230769231,
+      "groups": 13,
+      "k": 12,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 0.9230769230769231,
+      "groups": 13,
+      "k": 13,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 14,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 15,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 16,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 17,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 18,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 19,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 20,
+      "method": "bytes"
+    },
+    {
+      "exact_success_fraction": 0.6153846153846154,
+      "groups": 13,
+      "k": 1,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 0.9230769230769231,
+      "groups": 13,
+      "k": 2,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 0.9230769230769231,
+      "groups": 13,
+      "k": 3,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 4,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 5,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 6,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 7,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 8,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 9,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 10,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 11,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 12,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 13,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 14,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 15,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 16,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 17,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 18,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 19,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 20,
+      "method": "generic"
+    },
+    {
+      "exact_success_fraction": 0.38461538461538464,
+      "groups": 13,
+      "k": 1,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 0.46153846153846156,
+      "groups": 13,
+      "k": 2,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 0.46153846153846156,
+      "groups": 13,
+      "k": 3,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 0.46153846153846156,
+      "groups": 13,
+      "k": 4,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 0.5384615384615384,
+      "groups": 13,
+      "k": 5,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 0.5384615384615384,
+      "groups": 13,
+      "k": 6,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 0.6153846153846154,
+      "groups": 13,
+      "k": 7,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 0.6153846153846154,
+      "groups": 13,
+      "k": 8,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 0.6153846153846154,
+      "groups": 13,
+      "k": 9,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 0.6153846153846154,
+      "groups": 13,
+      "k": 10,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 0.6923076923076923,
+      "groups": 13,
+      "k": 11,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 0.6923076923076923,
+      "groups": 13,
+      "k": 12,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 0.7692307692307693,
+      "groups": 13,
+      "k": 13,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 0.8461538461538461,
+      "groups": 13,
+      "k": 14,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 0.9230769230769231,
+      "groups": 13,
+      "k": 15,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 0.9230769230769231,
+      "groups": 13,
+      "k": 16,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 0.9230769230769231,
+      "groups": 13,
+      "k": 17,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 18,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 19,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 20,
+      "method": "weighted_default"
+    },
+    {
+      "exact_success_fraction": 0.46153846153846156,
+      "groups": 13,
+      "k": 1,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 0.46153846153846156,
+      "groups": 13,
+      "k": 2,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 0.5384615384615384,
+      "groups": 13,
+      "k": 3,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 0.6153846153846154,
+      "groups": 13,
+      "k": 4,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 0.6923076923076923,
+      "groups": 13,
+      "k": 5,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 0.6923076923076923,
+      "groups": 13,
+      "k": 6,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 0.6923076923076923,
+      "groups": 13,
+      "k": 7,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 0.6923076923076923,
+      "groups": 13,
+      "k": 8,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 0.7692307692307693,
+      "groups": 13,
+      "k": 9,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 0.7692307692307693,
+      "groups": 13,
+      "k": 10,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 0.8461538461538461,
+      "groups": 13,
+      "k": 11,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 0.9230769230769231,
+      "groups": 13,
+      "k": 12,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 0.9230769230769231,
+      "groups": 13,
+      "k": 13,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 0.9230769230769231,
+      "groups": 13,
+      "k": 14,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 15,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 16,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 17,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 18,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 19,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 20,
+      "method": "weighted_pooled"
+    },
+    {
+      "exact_success_fraction": 0.38461538461538464,
+      "groups": 13,
+      "k": 1,
+      "method": "weighted_cv"
+    },
+    {
+      "exact_success_fraction": 0.38461538461538464,
+      "groups": 13,
+      "k": 2,
+      "method": "weighted_cv"
+    },
+    {
+      "exact_success_fraction": 0.5384615384615384,
+      "groups": 13,
+      "k": 3,
+      "method": "weighted_cv"
+    },
+    {
+      "exact_success_fraction": 0.5384615384615384,
+      "groups": 13,
+      "k": 4,
+      "method": "weighted_cv"
+    },
+    {
+      "exact_success_fraction": 0.6153846153846154,
+      "groups": 13,
+      "k": 5,
+      "method": "weighted_cv"
+    },
+    {
+      "exact_success_fraction": 0.6923076923076923,
+      "groups": 13,
+      "k": 6,
+      "method": "weighted_cv"
+    },
+    {
+      "exact_success_fraction": 0.6923076923076923,
+      "groups": 13,
+      "k": 7,
+      "method": "weighted_cv"
+    },
+    {
+      "exact_success_fraction": 0.6923076923076923,
+      "groups": 13,
+      "k": 8,
+      "method": "weighted_cv"
+    },
+    {
+      "exact_success_fraction": 0.7692307692307693,
+      "groups": 13,
+      "k": 9,
+      "method": "weighted_cv"
+    },
+    {
+      "exact_success_fraction": 0.7692307692307693,
+      "groups": 13,
+      "k": 10,
+      "method": "weighted_cv"
+    },
+    {
+      "exact_success_fraction": 0.8461538461538461,
+      "groups": 13,
+      "k": 11,
+      "method": "weighted_cv"
+    },
+    {
+      "exact_success_fraction": 0.9230769230769231,
+      "groups": 13,
+      "k": 12,
+      "method": "weighted_cv"
+    },
+    {
+      "exact_success_fraction": 0.9230769230769231,
+      "groups": 13,
+      "k": 13,
+      "method": "weighted_cv"
+    },
+    {
+      "exact_success_fraction": 0.9230769230769231,
+      "groups": 13,
+      "k": 14,
+      "method": "weighted_cv"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 15,
+      "method": "weighted_cv"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 16,
+      "method": "weighted_cv"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 17,
+      "method": "weighted_cv"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 18,
+      "method": "weighted_cv"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 19,
+      "method": "weighted_cv"
+    },
+    {
+      "exact_success_fraction": 1,
+      "groups": 13,
+      "k": 20,
+      "method": "weighted_cv"
+    }
+  ],
+  "scope": "Existing Native measurements on the verified intersection with final fixed420 Generic candidates; no Native values imputed or remeasured."
+}

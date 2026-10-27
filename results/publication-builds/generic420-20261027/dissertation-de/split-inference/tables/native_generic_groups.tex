@@ -1,0 +1,31 @@
+% Benötigt booktabs, longtable und siunitx.
+\begingroup\small
+\begin{longtable}{l l r r r S[table-format=1.3] S[table-format=1.3]}
+\caption{Alle gemessenen Native/Generic-Paare je Modell und System. Jede Anzahl vorteilhafter Fälle behält ihren eigenen Nenner. Beide Vorteile erfordern beobachtete FPS und Energie. Verhältnisse sind Native/Generic. FPS über eins und Energie einschließlich Host unter eins sprechen für Native. Dies sind Mediane über Betriebspunkte, keine Wiederholungsintervalle.}\\
+\toprule
+Modell & System & Schneller / $n_P$ & Weniger Energie / $n_E$ & Beides / $n_J$ & {\shortstack{Medianes\\FPS-Verhältnis}} & {\shortstack{Medianes\\Energieverhältnis}} \\
+\midrule\endhead
+MobileNetV3-L & DeepX & 12/17 & 14/17 & 12/17 & 1.254 & 0.830 \\
+MobileNetV3-L & H10 & 17/17 & 17/17 & 17/17 & 2.399 & 0.510 \\
+MobileNetV3-L & H8 & 17/17 & 17/17 & 17/17 & 1.614 & 0.615 \\
+RegNet-X 1.6GF & DeepX & 13/20 & 15/20 & 13/20 & 1.268 & 0.831 \\
+RegNet-X 1.6GF & H10 & 20/20 & 20/20 & 20/20 & 1.646 & 0.703 \\
+RegNet-X 1.6GF & H8 & 20/20 & 20/20 & 20/20 & 1.413 & 0.686 \\
+ResNet-50 & DeepX & 18/19 & 19/19 & 18/19 & 2.320 & 0.559 \\
+ResNet-50 & H10 & 19/19 & 19/19 & 19/19 & 2.778 & 0.501 \\
+ResNet-50 & H8 & 19/19 & 19/19 & 19/19 & 1.509 & 0.696 \\
+YOLO11l & DeepX & 3/3 & 3/3 & 3/3 & 1.060 & 0.958 \\
+YOLO11l & H10 & 3/3 & 3/3 & 3/3 & 1.898 & 0.685 \\
+YOLO11l & H8 & 3/3 & 3/3 & 3/3 & 1.014 & 0.964 \\
+YOLO26m & DeepX & 3/3 & 3/3 & 3/3 & 1.545 & 0.795 \\
+YOLO26m & H10 & 3/3 & 3/3 & 3/3 & 2.075 & 0.665 \\
+YOLO26m & H8 & 0/3 & 3/3 & 0/3 & 0.990 & 0.985 \\
+YOLO26s & DeepX & 3/3 & 3/3 & 3/3 & 1.589 & 0.764 \\
+YOLO26s & H10 & 3/3 & 3/3 & 3/3 & 2.418 & 0.569 \\
+YOLO26s & H8 & 1/3 & 3/3 & 1/3 & 0.987 & 0.992 \\
+YOLOv7 & DeepX & 3/3 & 3/3 & 3/3 & 1.377 & 0.823 \\
+YOLOv7 & H10 & 3/3 & 3/3 & 3/3 & 1.748 & 0.697 \\
+YOLOv7 & H8 & 3/3 & 3/3 & 3/3 & 1.110 & 0.894 \\
+\bottomrule
+\end{longtable}
+\endgroup

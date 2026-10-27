@@ -1,5 +1,7 @@
 # Offline analysis
 
+For the latest Generic420 follow-up, use the [curated-input reproduction commands](../results/supplementary-studies/generic420-closeout-20261027/README.md#reproduction-from-published-inputs). Both `--rq2-study` and `--generic420-study` must be passed to reproduce the current paired RQ2 and Generic-target RQ3 outputs together. The frozen publication presets remain reproducible without these optional inputs.
+
 | Analysis | Instructions |
 |---|---|
 | v49 hardware confirmation and energy supplements | [Separate R3 tables, own-interval energy supplements and offline paired-quality analysis](supplementary-studies/thesis-v49-confirmation-20261019/README.md) |

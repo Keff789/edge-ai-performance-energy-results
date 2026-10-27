@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Zusätzliche analytische Zählregeln. $L$ ist die Länge des Reduktionsvektors. TopK wählt $K$ Werte aus einer Länge $N$. Die Zählung gilt je Vektor, außer für elementweises Mod.}
+\label{tab:weighted-operations}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Operation & Anzahl \\
+\midrule
+Stabiles Softmax & $6L-3$ \\
+ReduceMax & $2(L-1)$ \\
+Ganzzahliges Mod & Eine pro Ausgabeelement \\
+TopK-Referenz & $3\sum_{j=0}^{K-1}(N-j-1)$ \\
+\bottomrule
+\end{tabular}
+\end{table}

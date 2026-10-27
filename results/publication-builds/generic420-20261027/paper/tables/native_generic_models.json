@@ -1,0 +1,44 @@
+[
+  {
+    "energy_ratio": 0.6515796198545335,
+    "fps_ratio": 1.7559041750021194,
+    "model": "mobilenet_v3_large",
+    "n_setups": 3
+  },
+  {
+    "energy_ratio": 0.7402415542168104,
+    "fps_ratio": 1.442102801750347,
+    "model": "regnet_x_1_6gf",
+    "n_setups": 3
+  },
+  {
+    "energy_ratio": 0.5852582693861994,
+    "fps_ratio": 2.202205167531849,
+    "model": "resnet50",
+    "n_setups": 3
+  },
+  {
+    "energy_ratio": 0.8687971167461268,
+    "fps_ratio": 1.3242106844394388,
+    "model": "yolo11l",
+    "n_setups": 3
+  },
+  {
+    "energy_ratio": 0.8148378531010835,
+    "fps_ratio": 1.5366231097765446,
+    "model": "yolo26m",
+    "n_setups": 3
+  },
+  {
+    "energy_ratio": 0.7746916045918814,
+    "fps_ratio": 1.6645621221948257,
+    "model": "yolo26s",
+    "n_setups": 3
+  },
+  {
+    "energy_ratio": 0.8045763784899455,
+    "fps_ratio": 1.4114463495155993,
+    "model": "yolov7_paper",
+    "n_setups": 3
+  }
+]

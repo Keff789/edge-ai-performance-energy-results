@@ -1,0 +1,29 @@
+{
+  "caption": "Additional analytic operation rules. $L$ is the reduction-vector length. TopK selects $K$ values from length $N$. Counts are per vector except for elementwise Mod.",
+  "operation_feature_contract": "analytic-operation-proxy-r29-extended-v1",
+  "rows": [
+    {
+      "count_unit": "per reduction vector",
+      "operation": "Stable Softmax",
+      "rule": "6L - 3"
+    },
+    {
+      "count_unit": "per reduction vector",
+      "operation": "ReduceMax",
+      "rule": "2(L - 1)"
+    },
+    {
+      "count_unit": "per output element",
+      "operation": "Integer Mod",
+      "rule": "1"
+    },
+    {
+      "count_unit": "per vector",
+      "operation": "TopK reference",
+      "rule": "3 * sum(N - j - 1, j=0,...,K-1)"
+    }
+  ],
+  "source_sha256": {
+    "summary.json": "15f1a2238c3346b96f46b98c90dc116c81ae0660e7efd7f59b7e5f584cad8220"
+  }
+}

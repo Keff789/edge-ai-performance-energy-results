@@ -1,0 +1,26 @@
+% Kompatibilitätsdefinitionen historischer Methodennamen.
+\providecommand{\cutbytes}{\texttt{cut\_bytes}}
+\providecommand{\weighted}{\texttt{weighted}}
+\providecommand{\hardware}{\texttt{hardware}}
+\providecommand{\cycle}{\texttt{cycle}}
+\providecommand{\stream}{\texttt{stream}}
+\providecommand{\generic}{Generic}
+\begin{table*}[t]
+\caption{Auswahl aus festen Kandidatenmengen in 21 Modell/System-Gruppen. Klassifikatorgruppen enthalten 17--20 Kandidaten, Detektorgruppen drei. YOLOv7 verwendet historische Generic-Messungen und die berichtete abschließende Native-Messreihe. Für die anderen Modelle bleiben ihre archivierten Messungen erhalten. Der Durchsatzverlust bezieht sich auf den Native-Gewinner. Der Energiemehrbedarf verwendet die 18 Gruppen mit zugeordneten Energienachweisen, ohne YOLOv7. Alle Gruppen sind gleich gewichtet.}
+\label{tab:selectors}
+\centering\small
+\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Native-Top1-Treffer} & \multicolumn{2}{c}{Durchsatzverlust $L_R$ (\%)} & Mittlerer Energie-\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-6}
+Auswahlregel & Alle /21 & Klassif. /9 & Detekt. /12 & Median & Mittelwert & \shortstack[l]{mehrbedarf\\/18 (\%)}\\
+\midrule
+\shortstack[l]{Kleinste Grenzdatenmenge\\(\cutbytes)} & 6 & 0 & 6 & 3.77 & 25.28 & 55.09\\
+\shortstack[l]{Historischer gewichteter\\Score (\weighted)} & 6 & 0 & 6 & 13.79 & 17.28 & 24.57\\
+\shortstack[l]{Gespeicherte\\H10-Anpassung (\hardware)} & 6 & 0 & 6 & 12.81 & 19.65 & 32.02\\
+\shortstack[l]{Heuristischer Zyklus\\ohne Übergabe (\cycle)} & 6 & 0 & 6 & 13.79 & 17.28 & 24.57\\
+\shortstack[l]{Gespeicherte Streaming-Rate\\(\stream)} & 7 & 0 & 7 & 9.25 & 17.42 & 24.57\\
+\shortstack[l]{Gemessener \generic{}-\\Aufgabenabschluss} & 11 & 3 & 8 & 0.00 & 12.74 & 28.07\\
+\bottomrule
+\end{tabular}
+\end{table*}

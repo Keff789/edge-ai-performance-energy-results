@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering\small\TableSetup
+\caption{Durchsatz vollständig abgeschlossener Detektionen für die B500-Matrix, einschließlich des festgelegten Host-Decoders und NMS. Intervalle sind Bootstrap-Intervalle für den Median von drei Wiederholungen in neuen Prozessen. Qualität ist die separat zugeordnete Datensatzentscheidung.}
+\label{tab:evaluation:yolov7_standard_native}
+\begin{tabularx}{\linewidth}{@{}L{1.55cm}Y S[table-format=2.2]r l@{}}
+\toprule
+\textbf{System} & \textbf{Pfad} & {\textbf{FPS}} & \textbf{95\%-Intervall} & \textbf{Qualität} \\
+\midrule
+DEEPX & Split b044 & 12.41 & \num{11.71}--\num{12.42} & bestanden \\
+ & Beschleuniger-Full & 9.73 & \num{9.71}--\num{9.95} & bestanden \\
+ & TensorRT Full & 12.58 & \num{12.56}--\num{12.66} & bestanden \\
+\addlinespace[.3em]
+Hailo-10H & Split b044 & 16.92 & \num{16.82}--\num{16.97} & bestanden \\
+ & Beschleuniger-Full & 9.04 & \num{9.01}--\num{9.05} & nicht bestanden \\
+ & TensorRT Full & 18.69 & \num{18.59}--\num{18.78} & bestanden \\
+\addlinespace[.3em]
+Hailo-8 & Split b044 & 15.85 & \num{15.74}--\num{15.85} & bestanden \\
+ & Beschleuniger-Full & 16.18 & \num{16.17}--\num{16.19} & nicht bestanden \\
+ & TensorRT Full & 18.84 & \num{18.81}--\num{18.87} & bestanden \\
+\bottomrule
+\end{tabularx}
+\end{table}

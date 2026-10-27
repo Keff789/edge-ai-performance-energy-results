@@ -1,0 +1,18 @@
+% Requires booktabs. Input inside a table/table* environment after its caption.
+% The SAME split selected in Table 3, compared with the fastest Full on its physical host and with the globally fastest Full. This table does not reselect the largest relative gain. R_host and R_global use the explicitly named Full denominators. Selection uses unrounded observed cohort FPS across all setups and Native/Generic splits; exact ties use ascending UID. Energy is the mean calibrated host-inclusive J/image, displayed as mJ/image, of each exact FPS-selected UID. Energy and quality never veto the FPS selection. NA denotes a missing candidate or metric, with explicit reasons and full original records in CSV/JSON. These retrospective deployment comparisons do not imply equal quality, equal timed endpoints, an isolated split effect or statistically significant differences.
+\label{tab:fastest-split-baselines}
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\begin{tabular}{l l r l r l r r r}
+\toprule
+Model & Selected split & Split FPS & \shortstack{Fastest Full\\same host} & \shortstack{Host Full\\FPS} & \shortstack{Globally fastest\\Full} & \shortstack{Global Full\\FPS} & $R_{\mathrm{host}}$ & $R_{\mathrm{global}}$ \\
+\midrule
+MobileNetV3-L & \shortstack[l]{Native\\DeepX/b135} & 1552 & \shortstack[l]{DeepX\\(DeepX host)} & 1469 & \shortstack[l]{DeepX\\(DeepX host)} & 1469 & 1.06 & 1.06 \\
+RegNet-X 1.6GF & \shortstack[l]{Native\\H10/b123} & 1367 & \shortstack[l]{TRT\\(H10 host)} & 316 & \shortstack[l]{DeepX\\(DeepX host)} & 538 & 4.33 & 2.54 \\
+ResNet-50 & \shortstack[l]{Native\\H10/b095} & 1100 & \shortstack[l]{TRT\\(H10 host)} & 522 & \shortstack[l]{DeepX\\(DeepX host)} & 656 & 2.11 & 1.68 \\
+YOLO11l & \shortstack[l]{Native\\H10/b120} & 53 & \shortstack[l]{TRT\\(H10 host)} & 39 & \shortstack[l]{DeepX\\(DeepX host)} & 63 & 1.36 & 0.84 \\
+YOLO26m & \shortstack[l]{Native\\H10/b043} & 110 & \shortstack[l]{TRT\\(H10 host)} & 84 & \shortstack[l]{TRT\\(H8 host)} & 85 & 1.31 & 1.30 \\
+YOLO26s & \shortstack[l]{Native\\H8/b021} & 187 & \shortstack[l]{TRT\\(H8 host)} & 151 & \shortstack[l]{TRT\\(DeepX host)} & 152 & 1.24 & 1.23 \\
+YOLOv7 & \shortstack[l]{Native\\H8/b066} & 113 & \shortstack[l]{TRT\\(H8 host)} & 53 & \shortstack[l]{DeepX\\(DeepX host)} & 83 & 2.13 & 1.35 \\
+\bottomrule
+\end{tabular}
+\endgroup

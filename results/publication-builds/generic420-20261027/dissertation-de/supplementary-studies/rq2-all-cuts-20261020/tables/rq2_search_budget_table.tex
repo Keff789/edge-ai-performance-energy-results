@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering\small
+\caption{Kleinstes maximales Testbudget an Native-Tests je Klassifikatorgruppe. Jeder Messdatensatz umfasst neun Gruppen. Die Spalten verlangen ein exaktes Optimum in acht oder neun Gruppen oder einen Cut innerhalb von 1\% bzw. 5\% des Native-Optimums in allen neun Gruppen. Das Testbudget ist jeweils auf die Zahl der Kandidaten begrenzt. Die Durchsatztoleranzen sind vom Qualitätsfilter der Konfiguration-Auswertung getrennt.}
+\label{tab:rq2-search-budgets}
+\begin{tabular}{llrrrr}
+\toprule
+Messdatensatz & Auswahlregel & Exakt, 8/9 & Exakt, 9/9 & $\leq1\%$, 9/9 & $\leq5\%$, 9/9\\
+\midrule
+Graph-Score-Vergleich & Bytes & 12 & 13 & 13 & 11\\
+ & Weighted & 18 & 19 & 19 & 19\\
+ & Fit-H10 & 15 & 19 & 19 & 19\\
+ & Cycle & 18 & 18 & 18 & 18\\
+ & Stream & 18 & 18 & 18 & 18\\
+ & Generic & 15 & 18 & 18 & 18\\
+\midrule
+Deployment-Vergleich & Bytes & 12 & 14 & 13 & 11\\
+ & Generic & 17 & 18 & 18 & 18\\
+ & Kalibriert & 13 & 18 & 18 & 18\\
+\bottomrule
+\end{tabular}
+\end{table*}

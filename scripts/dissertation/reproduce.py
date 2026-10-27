@@ -76,8 +76,10 @@ def scientific_payload(value):
     return value
 
 
-def build(repo, source, output, *, numeric_only=False, supplementary=True, strict=True):
+def build(repo, source, output, *, numeric_only=False, supplementary=True, strict=True, rq2_study=None):
     repo, source, output = map(lambda p: Path(p).resolve(), (repo, source, output))
+    if rq2_study is not None and not (source / 'publications/mlsys-r30').is_dir():
+        raise ValueError('--rq2-study requires an English source with the mlsys-r30 profile.')
     if output.exists() and any(output.iterdir()):
         raise ValueError('Use an empty output directory: ' + str(output))
     if output == repo or output == source or output in source.parents:
@@ -113,8 +115,8 @@ def build(repo, source, output, *, numeric_only=False, supplementary=True, stric
             from publication_mlsys_r30 import build_profile as build_r30, verify_profile
             build_r22(repo, broad, numeric_only=numeric_only)
             if (source / 'publications/mlsys-r30').is_dir():
-                build_r30(repo, broad, numeric_only=numeric_only)
-                numeric_checks.append(verify_profile(repo, broad))
+                build_r30(repo, broad, numeric_only=numeric_only, rq2_study=rq2_study)
+                numeric_checks.append(verify_profile(repo, broad, rq2_study=rq2_study))
                 if not numeric_only:
                     from schematic import render_schematic
                     schematic_report = render_schematic(repo, broad / 'publications/mlsys-r30/figures')
@@ -278,9 +280,20 @@ def main():
     parser.add_argument('--no-supplementary', action='store_true')
     parser.add_argument('--verify', action='store_true', help='Require complete label coverage and unchanged numerical payloads (default).')
     parser.add_argument('--collect-labels', action='store_true', help=argparse.SUPPRESS)
+    parser.add_argument('--generic420-study',type=Path,help='Optional curated Generic420 study; add German RQ3 figures and tables')
+    parser.add_argument('--rq2-study', type=Path, help='Verified current Generic/Native paired study; use the same study as the English publication')
     args = parser.parse_args()
-    print(json.dumps(build(REPO, args.source, args.output, numeric_only=args.numeric_only,
-                           supplementary=not args.no_supplementary, strict=not args.collect_labels), ensure_ascii=False))
+    summary=build(REPO, args.source, args.output, numeric_only=args.numeric_only,
+                  supplementary=not args.no_supplementary, strict=not args.collect_labels, rq2_study=args.rq2_study)
+    if args.generic420_study:
+        import subprocess
+        renderer=REPO/'scripts/supplementary-studies/rq3-generic420/render_artifacts.py'
+        command=[sys.executable,str(renderer),'--study',str(args.generic420_study),
+                 '--out',str(args.output/'rq3-generic420'),'--languages','de']
+        if args.numeric_only: command.append('--numeric-only')
+        subprocess.run(command,check=True)
+        summary['generic420_artifacts']='rq3-generic420'
+    print(json.dumps(summary,ensure_ascii=False))
 
 
 if __name__ == '__main__':

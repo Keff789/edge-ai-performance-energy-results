@@ -1,0 +1,76 @@
+{
+  "CURRENT_changed_during_backup": false,
+  "accepted_FPS_result_container_coverage": {
+    "accepted_rows": 359,
+    "missing_container_rows": [],
+    "original_containers_not_found": 0,
+    "original_containers_retained": 359
+  },
+  "alias_reconciliation_zip_bytes": 834899,
+  "alias_reconciliation_zip_sha256": "34831ff881e7e64a085e64f5455a371fb05270d2bf9e5133e0ae82c4d65dc719",
+  "analysis_core_complete": true,
+  "core_bytes": 414055502,
+  "core_files": 1110,
+  "first_supplement_zip_sha256": "8c99d7f965fcf0a3e18a61bd944839d3926247db9eb70896e7eaa190ee130662",
+  "individual_FPS_repeat_preservation": {
+    "all_accepted_rows": 359,
+    "every_accepted_row_has_three_individual_values": true,
+    "individual_repeat_values": 1077,
+    "missing_original_container_does_not_mean_missing_individual_repeat_values": true,
+    "no_prediction_reconstruction_claim": "User-authorized cleanup allowed deletion of last completed-Q per-image prediction copies. These deleted captures are not restored or guaranteed recoverable.",
+    "retained_in_pinned_ledger": [
+      "rows[].effective_repeats",
+      "rows[].effective_generic_fps",
+      "rows[].attempts.fps (original schema varies for reused/fresh runs)",
+      "rows[].source_authorities",
+      "rows[].model_sha256",
+      "rows[].actual_artifact_authority",
+      "rows[].quality_status",
+      "rows[].quality_eligible",
+      "quality statistics and input/configuration hashes wherever embedded in original row authorities"
+    ]
+  },
+  "input_configuration_status_counts": {
+    "prediction_capture_or_dataset_payload_excluded": 295,
+    "preserved_exact_bytes": 367,
+    "remote_or_external_reference_only": 168,
+    "some_expected_versions_unpreserved": 3,
+    "unresolved_metadata": 1
+  },
+  "intentional_limitations": [
+    "No full raw backup certification; deleted completed-Q per-image captures are not reconstructed.",
+    "Compiled model payloads and datasets are not duplicated.",
+    "Remote runtime paths are retained as hashed provenance; existing large archive payloads were not restored or fully rehashed."
+  ],
+  "ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+  "model_artifact_identity_references": 1494,
+  "original_FPS_container_verification": {
+    "accepted_original_result_containers_SHA_verified": 359,
+    "all_three_values_match_for_every_accepted_row": true,
+    "containers_with_completion_contract": 359,
+    "containers_with_expected_runtime_artifacts": 359,
+    "containers_with_input_binding": 359,
+    "individual_FPS_values_verified_against_frozen_ledger": 1077,
+    "per_repeat_completed_equals_requested_counts": 1077,
+    "positive_per_repeat_measured_makespans": 1077
+  },
+  "quality_input_verification_zip_bytes": 585121,
+  "quality_input_verification_zip_sha256": "93e625a9d01e0ac92267d04e21e768049dce356d8187c0de5ba1fc4a7b92eb07",
+  "quality_metadata_status_counts": {
+    "per_image_validation_payload_excluded": 8,
+    "prediction_capture_or_dataset_payload_excluded": 306,
+    "preserved_exact_bytes": 744
+  },
+  "raw_preservation_complete": false,
+  "remaining_historical_metadata_limitations": [
+    "Some prior cancelled-run admissions/observations/plans and a historical reader-source version no longer match their original hashes; current accepted result containers are retained.",
+    "One earlier group execution-plan digest is unavailable; original executed input bindings, completion contracts and expected runtime-artifact fields are verified separately for every accepted result container."
+  ],
+  "runner_source_status_counts": {
+    "preserved_exact_bytes": 630,
+    "some_expected_versions_unpreserved": 1
+  },
+  "schema": "rq3-portable-backup-receipt-v1",
+  "snapshot_relative_to_sprite_reports_job": "paper_rq3_snapshots/rq3_postprocess_20261027/generic420_36d0a02e1b941edb",
+  "source_write_operations": 0
+}

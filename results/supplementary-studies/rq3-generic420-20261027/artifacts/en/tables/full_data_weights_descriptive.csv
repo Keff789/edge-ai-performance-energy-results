@@ -1,0 +1,13 @@
+Ranking,Model class,Accelerator,$w_C$,$w_I$,$w_T$,Training loss (%)
+Shared fitted weights,All models,All accelerators,0.8650,0.1275,0.0075,13.20
+Fit by task,Classifiers,All accelerators,0.8550,0.1350,0.0100,15.18
+Fit by task,Detectors,All accelerators,0.8650,0.0950,0.0400,11.18
+Fit by accelerator,All models,DeepX,0.7575,0.0775,0.1650,12.52
+Fit by accelerator,All models,H10,0.8725,0.0150,0.1125,11.77
+Fit by accelerator,All models,H8,0.4475,0.3425,0.2100,6.62
+Fit by task and accelerator,Classifiers,DeepX,0.9750,0.0250,0.0000,8.16
+Fit by task and accelerator,Classifiers,H10,0.6400,0.3325,0.0275,11.42
+Fit by task and accelerator,Classifiers,H8,0.0000,0.0000,1.0000,8.67
+Fit by task and accelerator,Detectors,DeepX,0.8600,0.1325,0.0075,15.12
+Fit by task and accelerator,Detectors,H10,0.8700,0.0150,0.1150,7.60
+Fit by task and accelerator,Detectors,H8,0.6775,0.3000,0.0225,0.91

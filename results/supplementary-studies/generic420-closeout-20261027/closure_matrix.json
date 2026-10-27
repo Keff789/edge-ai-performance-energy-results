@@ -1,0 +1,360 @@
+{
+  "accounting": {
+    "FPS": "Orthogonal accepted FPS availability; do not add FPS to the partition.",
+    "disjoint_partition": "planned = quality_eligible + quality_exclusion + technical_exclusion + open",
+    "missing_FPS": "JSON null / CSV blank; never zero",
+    "open": "Selected cell lacking admitted quality or unresolved execution; b009 is the only current open cell.",
+    "quality_exclusion": "An admitted measured quality accuracy_loss, preserved as a scientific result.",
+    "technical_exclusion": "Bound original COMPILE_FAILED or UNSUPPORTED; never count unavailable quality here a second time."
+  },
+  "completed_at": "2026-10-26T23:38:56.689644+00:00",
+  "completion_scope": "FPS_COMPLETE_QUALITY_ONE_HISTORICAL_JOIN_HELD",
+  "groups": [
+    {
+      "FPS": 20,
+      "compile_failed": 0,
+      "model": "mobilenet_v3_large",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 10,
+      "quality_exclusion": 10,
+      "setup": "H8",
+      "technical_exclusion": 0,
+      "unsupported": 0
+    },
+    {
+      "FPS": 20,
+      "compile_failed": 0,
+      "model": "mobilenet_v3_large",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 11,
+      "quality_exclusion": 9,
+      "setup": "H10",
+      "technical_exclusion": 0,
+      "unsupported": 0
+    },
+    {
+      "FPS": 20,
+      "compile_failed": 0,
+      "model": "mobilenet_v3_large",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 19,
+      "quality_exclusion": 1,
+      "setup": "DeepX",
+      "technical_exclusion": 0,
+      "unsupported": 0
+    },
+    {
+      "FPS": 20,
+      "compile_failed": 0,
+      "model": "regnet_x_1_6gf",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 20,
+      "quality_exclusion": 0,
+      "setup": "H8",
+      "technical_exclusion": 0,
+      "unsupported": 0
+    },
+    {
+      "FPS": 20,
+      "compile_failed": 0,
+      "model": "regnet_x_1_6gf",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 20,
+      "quality_exclusion": 0,
+      "setup": "H10",
+      "technical_exclusion": 0,
+      "unsupported": 0
+    },
+    {
+      "FPS": 20,
+      "compile_failed": 0,
+      "model": "regnet_x_1_6gf",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 20,
+      "quality_exclusion": 0,
+      "setup": "DeepX",
+      "technical_exclusion": 0,
+      "unsupported": 0
+    },
+    {
+      "FPS": 20,
+      "compile_failed": 0,
+      "model": "resnet50",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 20,
+      "quality_exclusion": 0,
+      "setup": "H8",
+      "technical_exclusion": 0,
+      "unsupported": 0
+    },
+    {
+      "FPS": 20,
+      "compile_failed": 0,
+      "model": "resnet50",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 20,
+      "quality_exclusion": 0,
+      "setup": "H10",
+      "technical_exclusion": 0,
+      "unsupported": 0
+    },
+    {
+      "FPS": 20,
+      "compile_failed": 0,
+      "model": "resnet50",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 20,
+      "quality_exclusion": 0,
+      "setup": "DeepX",
+      "technical_exclusion": 0,
+      "unsupported": 0
+    },
+    {
+      "FPS": 8,
+      "compile_failed": 12,
+      "model": "yolo11l",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 6,
+      "quality_exclusion": 2,
+      "setup": "H8",
+      "technical_exclusion": 12,
+      "unsupported": 0
+    },
+    {
+      "FPS": 11,
+      "compile_failed": 9,
+      "model": "yolo11l",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 9,
+      "quality_exclusion": 2,
+      "setup": "H10",
+      "technical_exclusion": 9,
+      "unsupported": 0
+    },
+    {
+      "FPS": 20,
+      "compile_failed": 0,
+      "model": "yolo11l",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 20,
+      "quality_exclusion": 0,
+      "setup": "DeepX",
+      "technical_exclusion": 0,
+      "unsupported": 0
+    },
+    {
+      "FPS": 9,
+      "compile_failed": 5,
+      "model": "yolo26m",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 4,
+      "quality_exclusion": 5,
+      "setup": "H8",
+      "technical_exclusion": 11,
+      "unsupported": 6
+    },
+    {
+      "FPS": 9,
+      "compile_failed": 5,
+      "model": "yolo26m",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 6,
+      "quality_exclusion": 3,
+      "setup": "H10",
+      "technical_exclusion": 11,
+      "unsupported": 6
+    },
+    {
+      "FPS": 20,
+      "compile_failed": 0,
+      "model": "yolo26m",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 20,
+      "quality_exclusion": 0,
+      "setup": "DeepX",
+      "technical_exclusion": 0,
+      "unsupported": 0
+    },
+    {
+      "FPS": 11,
+      "compile_failed": 3,
+      "model": "yolo26s",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 5,
+      "quality_exclusion": 6,
+      "setup": "H8",
+      "technical_exclusion": 9,
+      "unsupported": 6
+    },
+    {
+      "FPS": 11,
+      "compile_failed": 3,
+      "model": "yolo26s",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 9,
+      "quality_exclusion": 2,
+      "setup": "H10",
+      "technical_exclusion": 9,
+      "unsupported": 6
+    },
+    {
+      "FPS": 20,
+      "compile_failed": 0,
+      "model": "yolo26s",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 20,
+      "quality_exclusion": 0,
+      "setup": "DeepX",
+      "technical_exclusion": 0,
+      "unsupported": 0
+    },
+    {
+      "FPS": 20,
+      "compile_failed": 0,
+      "model": "yolov7_paper",
+      "open": 1,
+      "planned": 20,
+      "quality_eligible": 18,
+      "quality_exclusion": 1,
+      "setup": "H8",
+      "technical_exclusion": 0,
+      "unsupported": 0
+    },
+    {
+      "FPS": 20,
+      "compile_failed": 0,
+      "model": "yolov7_paper",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 18,
+      "quality_exclusion": 2,
+      "setup": "H10",
+      "technical_exclusion": 0,
+      "unsupported": 0
+    },
+    {
+      "FPS": 20,
+      "compile_failed": 0,
+      "model": "yolov7_paper",
+      "open": 0,
+      "planned": 20,
+      "quality_eligible": 20,
+      "quality_exclusion": 0,
+      "setup": "DeepX",
+      "technical_exclusion": 0,
+      "unsupported": 0
+    }
+  ],
+  "open_cells": [
+    {
+      "case_id": "b009",
+      "effective_generic_fps": 41.29120249862124,
+      "generic_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
+      "model": "yolov7_paper",
+      "quality_status": "unavailable",
+      "setup": "H8"
+    }
+  ],
+  "provenance": {
+    "CURRENT": {
+      "filename": "CURRENT.json",
+      "report_relative_path": "status420/CURRENT.json",
+      "sha256": "5108a6fa185b8b4e895ecae48cf3460c40ed18513b078e293d04471d4569356e",
+      "size_bytes": 346
+    },
+    "closure_builder": {
+      "filename": "build_closure420.py",
+      "report_relative_path": "postprocess_rq3_20261027/build_closure420.py",
+      "sha256": "0cac6a11206d016a031efef6bc745976ce9ae6ebca2ef66e9e8080d9aef33510",
+      "size_bytes": 18692
+    },
+    "completed_at": "2026-10-26T23:38:56.689644+00:00",
+    "incremental_consolidator": {
+      "filename": "consolidate_incremental_fps420.py",
+      "report_relative_path": "continuation_v3_20261022/report_incremental_fr10_partial_v1/normal_import_sources_v3/consolidate_incremental_fps420.py",
+      "sha256": "b1e8a44ecdbd46b843b70cc28b578cd8ac3027268e208e23f5e9363f96cca2ef",
+      "size_bytes": 16890
+    },
+    "last_quality_consumer_commit": "56fc4f2495d617483dce71966ea7accf92ef4a21",
+    "last_quality_consumer_source_manifest": {
+      "filename": "SOURCE_MANIFEST.json",
+      "report_relative_path": "continuation_v3_20261022/generic_historical_sha_only_source_sizes_consumer_product_v1/source_export/SOURCE_MANIFEST.json",
+      "sha256": "d5361195a24cc9f05f97399b592bc877245c6421fe4323a06586b96c82d818a9",
+      "size_bytes": 442357
+    },
+    "ledger": {
+      "filename": "scope_ledger.json",
+      "report_relative_path": "status420/fr58_deepx_y7_b306_single_sourceb4_incremental_v1/scope_ledger.json",
+      "sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+      "size_bytes": 83854220
+    },
+    "ledger_generator": {
+      "filename": "build_scope420_ledger.py",
+      "report_relative_path": "continuation_v3_20261022/report_incremental_fr10_partial_v1/normal_import_sources_v3/build_scope420_ledger.py",
+      "sha256": "7d04ee8ca3c329491d10e3851c991e4bb10e59aeb9774a3eb8cfa5447f202201",
+      "size_bytes": 63294
+    },
+    "normal_b009_import_commit": "6f0d8f26d6f1426000e78f72afedeae6a722298a",
+    "normal_b009_import_module": {
+      "filename": "historical_quality_import.py",
+      "location_scope": "outside_report_root",
+      "sha256": "bfbea759480dc01759661f5baa442cb259fecd4bbddc617279faa31526f98a3e",
+      "size_bytes": 37108
+    },
+    "reused_original_runner_revisions": [
+      {
+        "commit": "8346d43d526221bd9d138943122206b658d56cbf",
+        "runner_bundle": {
+          "sha256": "a837bd56e8d72b501e42fac27ffc3d2b041848ebf616111f531efe14e1190ed8",
+          "size_bytes": 457074
+        },
+        "version": "2.92.0"
+      },
+      {
+        "commit": "599a1fe924d74f9eb96073ea283a34c4feeb1795",
+        "runner_bundle": {
+          "sha256": "b4f13ac1522e88f5d2118c27d3aa2ffab6d761f758c1361d5f56a712680f2853",
+          "size_bytes": null
+        },
+        "version": "2.95.5"
+      }
+    ],
+    "revision_scope": "Mixed original execution sources are retained; latest consumer commit is not attributed to all FPS acquisitions.",
+    "selection": {
+      "filename": "frozen_candidates420.json",
+      "report_relative_path": "selection420/frozen_candidates420.json",
+      "sha256": "b084b0d2e0844c736877adf12279f582427d244376f8077e51cef66c73a0e895",
+      "size_bytes": 1059383
+    },
+    "selection_replay_product_commit": "599a1fe924d74f9eb96073ea283a34c4feeb1795"
+  },
+  "schema": "generic420-compact-closure-matrix-v1",
+  "totals": {
+    "FPS": 359,
+    "compile_failed": 37,
+    "open": 1,
+    "planned": 420,
+    "quality_eligible": 315,
+    "quality_exclusion": 43,
+    "technical_exclusion": 61,
+    "unsupported": 24
+  }
+}
