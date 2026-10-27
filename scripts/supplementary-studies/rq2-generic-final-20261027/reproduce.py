@@ -66,6 +66,9 @@ def load_public(repo):
         pairs = list(csv.DictReader(io.StringIO(archive.read('current_pair_feature_bindings.csv').decode())))
         graph = list(csv.DictReader(io.StringIO(archive.read('graph_boundary_features.csv').decode())))
     data = read(repo/'results/split-inference/data/PAPER_DATASET.json')
+    # Current replacements carry the exact prior deployment record. Historical
+    # commands continue to reproduce their original Native measurements.
+    data = [row.get('archived_deployment_record', row) if row.get('runner') == 'native' else row for row in data]
     # The maintained extension already audits detector operation rules. Reuse
     # those public derived features; do not substitute incomplete old counters.
     with (repo/OLD/'analysis/candidate_features.csv').open() as stream:

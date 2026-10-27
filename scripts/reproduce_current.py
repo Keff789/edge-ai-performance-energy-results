@@ -80,6 +80,11 @@ def main() -> None:
     parser.add_argument('--verify', action='store_true', help='Verification is always enabled.')
     parser.add_argument('--reuse-studies', action='store_true',
                         help='Render the already reproduced published studies without fitting again.')
+    parser.add_argument('--deployment-inputs', type=Path,
+                        default=REPO/'results/split-inference/data/inputs',
+                        help='Established curated deployment input directory.')
+    parser.add_argument('--current-observations', type=Path,
+                        help='Source-bound current metric replacements for RQ1 and Native RQ2.')
     args = parser.parse_args()
     output = args.output.resolve()
     if output.exists() and any(output.iterdir()):
@@ -90,16 +95,34 @@ def main() -> None:
     # English data and assets are the common source of the German presentation.
     languages = list(dict.fromkeys(['en', *args.languages]))
     rq2, rq3 = RQ2, RQ3
+    replacements = args.current_observations or args.deployment_inputs/'current_observations.json'
+    native_arguments = []
+    if replacements.is_file():
+        # Materialize the same curated deployment rows before either analysis.
+        # This performs no fit and leaves the archived input rows untouched.
+        sys.path.insert(0, str(REPO/'scripts/split-inference'))
+        from build_paper_dataset import build
+        configuration = json.loads((REPO/'scripts/split-inference/config.json').read_text())
+        build(args.deployment_inputs, output/'current-deployments', configuration,
+              current_observations=replacements)
+        native_arguments = ['--native-dataset', output/'current-deployments/data/PAPER_DATASET.json']
+        if args.reuse_studies:
+            import hashlib
+            actual = hashlib.sha256(Path(native_arguments[1]).read_bytes()).hexdigest()
+            published = json.loads((RQ2/'summary.json').read_text()).get('current_native_dataset_sha256')
+            if actual != published:
+                parser.error('Reused RQ2 study does not bind the selected current deployment observations')
     if not args.reuse_studies:
         rq2, rq3 = output / 'rq2', output / 'rq3'
         run('scripts/supplementary-studies/rq2-native-scope-20261027/reproduce.py',
-            '--input', RQ2 / 'inputs/observations.json', '--output', rq2, '--verify')
+            '--input', RQ2 / 'inputs/observations.json', '--output', rq2, '--verify', *native_arguments)
         run('scripts/supplementary-studies/rq3-generic420/reproduce.py',
             '--inputs', RQ3 / 'inputs', '--output', rq3, '--languages', *languages)
     run('scripts/supplementary-studies/rq3-generic420/verify.py', '--study', rq3)
     run('scripts/split-inference/reproduce.py', '--publication', 'mlsys-r30',
         '--languages', 'en', '--rq2-study', rq2, '--generic420-study', rq3,
-        '--output', output / 'paper', '--verify')
+        '--inputs', args.deployment_inputs, '--output', output / 'paper', '--verify',
+        *(['--current-observations', replacements] if replacements.is_file() else []))
     if 'de' in languages:
         run('scripts/dissertation/reproduce.py', '--source', output / 'paper',
             '--rq2-study', rq2, '--generic420-study', rq3,

@@ -350,7 +350,7 @@ def equal_model_summary(rows):
     return group_rows, model_rows, out
 
 
-def build(inputs, output, config):
+def build(inputs, output, config, current_observations=None):
     I, O = Path(inputs), Path(output)
     T = O/'tables'
     C = read(I/'cases.json')
@@ -359,6 +359,17 @@ def build(inputs, output, config):
     E = {r['uid']: r for r in read(I/'selected_evidence.json')}
     ER = read(I/'energy_repeats.json')
     P = read(I/'pipeline_repeats.json')
+    replacement_path = (None if current_observations is False else
+        Path(current_observations) if current_observations else I/'current_observations.json')
+    if current_observations not in (None, False) and not replacement_path.is_file():
+        raise FileNotFoundError('Current observation input does not exist: ' + str(replacement_path))
+    replacement_history = []
+    if replacement_path is not None and replacement_path.is_file():
+        from current_observations import apply_replacements
+        C, selected, ER, P, replacement_history = apply_replacements(C, list(E.values()), ER, P,
+            read(replacement_path), replacement_path.parent)
+        E = {row['uid']: row for row in selected}
+    archived = {row['uid']: row for row in replacement_history}
     R = collections.defaultdict(list)
     for r in ER:
         R[r['uid']].append(r)
@@ -397,6 +408,14 @@ def build(inputs, output, config):
             d['quality_reference_delta_percentage_points'] = 100*(d['quality_value']-d['quality_reference_value'])
         else:
             d['quality_reference_delta_percentage_points'] = None
+        if c['uid'] in archived and archived[c['uid']]['case'] is not None:
+            prior = dict(archived[c['uid']]['case'])
+            for key, value in archived[c['uid']]['selected_evidence'].items():
+                prior.setdefault(key, value)
+            prior['physical_host'] = HOSTS.get(prior['setup_id'], prior['setup_id'])
+            prior['energy_j_per_image'] = prior.get('raw_j_per_task')
+            prior['energy_mj_per_image'] = 1000*prior['raw_j_per_task'] if positive(prior.get('raw_j_per_task')) else None
+            d['archived_deployment_record'] = prior
         data.append(d)
         uncertainty.append({'uid': c['uid'], 'model': c['model_id'], 'setup': c['setup_id'], 'runner': c['runner'],
                             'stored_fps': c.get('fps'), 'n_performance': d['performance_n'],
@@ -417,8 +436,10 @@ def build(inputs, output, config):
                             'original_current_quality_source_sha256': c.get('quality_source_sha256') if metric=='quality' else None,
                             'original_field': d.get(metric+'_original_field'), 'generation': d.get(metric+'_generation'),
                             'runtime': d.get('runtime', c['backend']), 'repeat_or_image_n': n,
-                            'remeasured_in_refresh16': bool(c.get('refresh16')) and not bool(c.get('native_refresh')) if metric!='quality' else False,
-                            'remeasured_in_native_a4': bool(c.get('native_refresh')) if metric!='quality' else False,
+                            'remeasured_in_refresh16': (bool(c.get('refresh16')) and not bool(c.get('native_refresh'))
+                                and metric not in c.get('current_observation_metric_updates', []) and value is not None) if metric!='quality' else False,
+                            'remeasured_in_native_a4': (bool(c.get('native_refresh')) and
+                                metric not in c.get('current_observation_metric_updates', []) and value is not None) if metric!='quality' else False,
                             'repeat_sources': [r.get('source_sha256') for r in rr] if metric=='energy' else None})
         generations.append({'uid': c['uid'], 'performance_generation': d.get('performance_generation'),
                             'energy_generation': d.get('energy_generation'), 'quality_generation': d.get('quality_generation'),
@@ -428,6 +449,20 @@ def build(inputs, output, config):
                             'mixed_generations': len({d.get(x+'_generation') for x in ['performance','energy','quality']})>1})
     M = {r['uid']:r for r in data}
     emit(O/'data'/'PAPER_DATASET', data)
+    if replacement_history:
+        document = read(replacement_path)
+        expected_packages = document.get('expected_packages', [])
+        accepted_packages = sorted(metric['package_label'] for row in document['observations']
+            for metric in row['metrics'].values() if metric.get('package_label'))
+        write(O/'data/current_observation_history.json', replacement_history)
+        write(O/'data/current_observation_inputs.json', document)
+        import hashlib
+        write(O/'data/current_observation_binding.json', dict(
+            schema='current-deployment-input-binding-v1',
+            observations_sha256=hashlib.sha256(replacement_path.read_bytes()).hexdigest(),
+            sources=document['sources'], expected_packages=expected_packages,
+            accepted_packages=accepted_packages, pending_packages=sorted(set(expected_packages)-set(accepted_packages)),
+            prior_rows_preserved=True, hardware_measurements_performed_by_generator=False))
     emit(T/'PARETO_POINTS', pareto_points(data))
     emit(O/'data'/'METRIC_SOURCES', sources)
     emit(O/'data'/'MEASUREMENT_GENERATIONS', generations)
@@ -664,6 +699,17 @@ def build(inputs, output, config):
                                'quality_uids':[r['uid'] for r in data if not numeric(r.get('quality_value'))]},
              'energy_unit':'J/image','display_energy_unit':'mJ/image','posthoc_only':True,
              'selection':'broad numeric observations; original flags and work differences retained'}
+    if replacement_history:
+        replacements = [row for row in data if row.get('current_observation_metric_updates')]
+        summary.update(current_observation_replacements=len(replacements),
+            current_added_deployments=sum(row['case'] is None for row in replacement_history),
+            current_external_captures={metric:sum(metric in row['current_observation_metric_updates'] and
+                row.get(metric+'_acquisition_origin') == 'new_capture' for row in replacements)
+                for metric in ['performance', 'quality', 'energy']},
+            hardware_measurements_performed_by_generator=False,
+            current_observation_packages=dict(expected=expected_packages, accepted=accepted_packages,
+                pending=sorted(set(expected_packages)-set(accepted_packages))))
+        summary['new_quality_evaluations'] = summary['current_external_captures']['quality']
     write(O/'data'/'summary.json',summary)
     write(O/'data'/'analysis_config.json',config)
     return summary

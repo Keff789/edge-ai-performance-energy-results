@@ -145,9 +145,76 @@ def check_science(output):
             'fps_repeats':48,'energy_repeats':48,'globally_faster':6,'globally_faster_and_lower_energy':3}
 
 
-def validate(repo, output):
+def check_current_science(repo, output, current_observations=None, deployment_inputs=None):
+    """Independently select current RQ1 winners after exact source replay."""
+    from publication_mlsys_r30 import current_rq1_binding
+    binding = current_rq1_binding(repo, output, current_observations, deployment_inputs)
+    assert binding is not None, 'Current RQ1 has no source binding'
+    rows = read(output / 'data/PAPER_DATASET.json')
+    by_uid = {row['uid']: row for row in rows}
+    def positive(value):
+        return isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value) and value > 0
+    def eligible(row):
+        q, reference = row.get('quality_value'), row.get('quality_reference_value')
+        return (positive(reference) and isinstance(q, (int, float)) and not isinstance(q, bool)
+                and math.isfinite(q) and (reference-q)/reference <= .05)
+    admitted = [row for row in rows if eligible(row)]
+    fastest = lambda pool: min((row for row in pool if positive(row.get('fps'))),
+                              key=lambda row: (-row['fps'], row['uid']))
+    profile = output / 'publications/mlsys-r30'
+    winners = read(profile / 'tables/best_cases_table.json')
+    models = read(output / 'data/analysis_config.json')['model_order']
+    assert [row['model'] for row in winners] == models
+    selected_uids = []
+    for winner in winners:
+        pool = [row for row in admitted if row['model_id'] == winner['model']]
+        split = fastest([row for row in pool if row['kind'] == 'split'])
+        full = fastest([row for row in pool if row['kind'] == 'full'])
+        host = fastest([row for row in pool if row['kind'] == 'full' and row['physical_host'] == split['physical_host']])
+        assert (winner['split_uid'], winner['full_uid'], winner['host_full_uid']) == (split['uid'], full['uid'], host['uid'])
+        close(winner['split_fps'], split['fps']);close(winner['full_fps'], full['fps'])
+        close(winner['R_global'], split['fps']/full['fps']);close(winner['R_host'], split['fps']/host['fps'])
+        for key, value in [('split_mj', split.get('energy_mj_per_image')), ('full_mj', full.get('energy_mj_per_image'))]:
+            if value is None:
+                assert winner[key] is None
+            else:
+                close(winner[key], value)
+        ratio = split['energy_j_per_image']/full['energy_j_per_image'] if positive(split.get('energy_j_per_image')) and positive(full.get('energy_j_per_image')) else None
+        if ratio is None:
+            assert winner['energy_ratio'] is None
+        else:
+            close(winner['energy_ratio'], ratio)
+        selected_uids.extend([full['uid'], split['uid']])
+    selected_uids += [row['uid'] for row in rows if row['model_id'] == 'yolov7_paper'
+        and row['setup_id'] == 'H8' and row['kind'] == 'full'
+        and row['backend'] in {'native_full_hailo8', 'native_full_tensorrt'}]
+    ranges = read(profile / 'tables/r21_winner_repeat_ranges.json')
+    assert {row['uid'] for row in ranges} == set(selected_uids)
+    for row in ranges:
+        original = by_uid[row['uid']]
+        if row['fps_repeats']:
+            close(statistics.median(row['fps_repeats']), original['fps'])
+        if row['energy_repeats_mj_per_image']:
+            close(statistics.mean(row['energy_repeats_mj_per_image']), original['energy_mj_per_image'])
+        assert len(row['energy_repeat_source_bindings']) == len(row['energy_repeats_mj_per_image'])
+    return {'configurations': len(rows), 'quality_admissible': len(admitted),
+        'globally_faster': sum(row['R_global'] > 1 for row in winners),
+        'globally_faster_and_lower_energy': sum(row['R_global'] > 1 and row['energy_ratio'] is not None and row['energy_ratio'] < 1 for row in winners),
+        'current_rq1_observations': binding}
+
+
+def validate(repo, output, current_observations=None, deployment_inputs=None):
     repo, output = Path(repo),Path(output)
     manifest=check_inventory(repo,output)
+    if (output / 'data/current_observation_binding.json').is_file():
+        science = check_current_science(repo, output, current_observations, deployment_inputs)
+        archived = repo / 'results/split-inference' / OUTPUT_ROOT
+        expected = {str(path.relative_to(archived)): path.read_bytes() for path in archived.rglob('*') if path.is_file()}
+        actual = {str(path.relative_to(output / OUTPUT_ROOT)): path.read_bytes()
+                  for path in (output / OUTPUT_ROOT).rglob('*') if path.is_file()}
+        assert actual == expected, 'Archived R22 bytes changed in current publication'
+        return dict(status='PASS', archived_unique_assets=manifest['unique_asset_count'],
+                    archived_profile_files=len(expected), **science)
     science=check_science(output)
     # Independent generators recompute from canonical source records; compare
     # every registered payload/table/figure coordinate, not only headline values.
@@ -173,5 +240,7 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--repo',type=Path,required=True)
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--current-observations',type=Path)
+    parser.add_argument('--deployment-inputs',type=Path)
     args=parser.parse_args()
-    print(json.dumps(validate(args.repo,args.output),sort_keys=True))
+    print(json.dumps(validate(args.repo,args.output,args.current_observations,args.deployment_inputs),sort_keys=True))

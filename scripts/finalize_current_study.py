@@ -34,14 +34,28 @@ def main():
     counts = q3['counts']
     assert counts['fps_pending'] == counts['quality_pending_measured'] == 0
     families = [r for r in q2['family_selection_results'] if r['scope'] == 'quality_admitted']
+    deployments = read(REPO/'results/split-inference/data/PAPER_DATASET.json')
+    current_binding_path = REPO/'results/split-inference/data/current_observation_binding.json'
+    current_binding = read(current_binding_path) if current_binding_path.is_file() else {}
+    assert not current_binding.get('pending_packages'), 'Declared current measurement packages are still pending'
+    current = [row for row in deployments if row.get('current_observation_metric_updates')]
+    capture_count = sum(row.get(metric+'_acquisition_origin') == 'new_capture'
+        for row in current for metric in row['current_observation_metric_updates'])
+    native_changed = any(row['runner'] == 'native' for row in current)
+    energy_changed = any('energy' in row['current_observation_metric_updates'] or
+        ('performance' in row['current_observation_metric_updates'] and row.get('energy_source_sha256') is None)
+        for row in current)
+    b009_current = next((row for row in current if (row['model_id'], row['setup_id'], row['case_id'], row['runner'])
+        == ('yolov7_paper', 'H8', 'b009', 'native')), None)
+    b009_fresh = bool(b009_current and 'performance' in b009_current['current_observation_metric_updates'])
     labels = {'all': 'All models', 'classification': 'Classifiers', 'detection': 'Detectors'}
     lines = ['# Split selection: current results', '',
         'Seven vision models are evaluated on Jetson Orin NX systems paired with Hailo-8, Hailo-10H or DeepX DX-M1. '
         'The study examines deployment benefits, selection with Generic, and graph-based shortlists.', '',
         '| Question | Data and results |', '|---|---|',
         '| RQ1: When does splitting improve deployment? | [Split and Full comparisons](../../split-inference/tables/fastest_split_baselines.md), including throughput, quality and energy. |',
-        '| RQ2: Can Generic select a fast Native cut? | [Paired comparison](../rq2-native-scope-20261027/README.md) on 204 cuts, with 187 passing the quality rule. |',
-        '| RQ3: How well do graph scores narrow the search? | [Graph-score comparison](../rq3-generic420-detector-corrected-20261027/README.md) on 331 quality-admissible cuts. |', '',
+        f"| RQ2: Can Generic select a fast Native cut? | [Paired comparison](../rq2-native-scope-20261027/README.md) on {q2['original_native_population']} cuts, with {q2['quality_pair_count']} passing the quality rule. |",
+        f"| RQ3: How well do graph scores narrow the search? | [Graph-score comparison](../rq3-generic420-detector-corrected-20261027/README.md) on {counts['eligible']} quality-admissible cuts. |", '',
         '## Generic recommendations', '',
         'Each model–device group contributes equally. Loss is measured against its fastest Native cut.', '',
         '| Models | Admitted pairs | Groups | Mean Native loss (%) |', '|---|---:|---:|---:|']
@@ -55,9 +69,11 @@ def main():
         'The [coverage table](closure_matrix.csv) gives the counts for each group.', '',
         'Both selection analyses apply the 5% relative quality-loss rule. RQ2 evaluates Native throughput and RQ3 Generic throughput. '
         'The [measurement notes](../rq2-native-scope-20261027/DATA_NOTES.md) record source details that affect interpretation. '
-        'The paired b009 observation is included using the reviewed executable and input evidence. '
-        'Removing it leaves all Generic recommendation results unchanged. '
-        'Energy comparisons use measurements of the same runtime configuration.', '',
+        + ('The paired b009 observation uses the new normally admitted Native observation and its current input binding; '
+         'the historical metadata review remains archived. ' if b009_fresh else
+         'The paired b009 observation is included using the reviewed executable and input evidence. '
+         'Removing it leaves all Generic recommendation results unchanged. ')
+        + 'Energy comparisons use measurements of the same runtime configuration.', '',
         '## Figures, tables and reproduction', '',
         '[Paper figures and tables](../../publication-builds/generic420-20261027/paper/README.md) · '
         '[German dissertation collection](../../publication-builds/generic420-20261027/dissertation-de/README.md) · '
@@ -75,7 +91,13 @@ def main():
     active['measurement_notes'] = str((RQ2 / 'DATA_NOTES.md').relative_to(REPO))
     active['reproduce'] = 'python3 scripts/reproduce_current.py --output local-output/current --languages en de'
     active['source_snapshot_unchanged'] = True
-    active['publication_update'] = 'Reviewed paired inclusion and consolidated presentation; no new hardware measurements.'
+    active['publication_update'] = ('Current source-bound deployment observations and consolidated presentation.'
+        if current else 'Reviewed paired inclusion and consolidated presentation; no new hardware measurements.')
+    active['current_external_capture_count'] = capture_count
+    if current_binding:
+        active['current_observation_packages'] = {key:current_binding.get(key, [])
+            for key in ['expected_packages', 'accepted_packages', 'pending_packages']}
+    active['hardware_measurements_performed_by_generator'] = False
     write(REPO / 'results/ACTIVE_GENERIC420.json', active)
     write(CLOSURE / 'RQ2_VALIDATION.json', {
         'schema': 'rq2-current-validation-v2', 'result': 'PASS',
@@ -94,8 +116,11 @@ def main():
         'schema': 'current-publication-validation-v2', 'status': 'PASS',
         'integration': str((BUILD / 'INTEGRATION_VALIDATION.json').relative_to(REPO)),
         'integration_sha256': info(BUILD / 'INTEGRATION_VALIDATION.json')['sha256'],
-        'RQ1_and_b066_values_unchanged': integration['b066_wide_single_numerical_payload_unchanged'],
-        'new_hardware_measurements': False})
+        'RQ1_values_unchanged': not bool(current),
+        'b066_values_unchanged': integration['b066_wide_single_numerical_payload_unchanged'],
+        'new_hardware_measurements': capture_count > 0,
+        'hardware_measurements_performed_by_generator': False,
+        'current_external_capture_count': capture_count})
     changes = read(CLOSURE / 'RESULT_CHANGES.json')
     changes['rq2'] = q2
     changes['current_pairing_review'] = str((RQ2 / 'inputs/PAIRING_REVIEW_b009.json').relative_to(REPO))
@@ -105,6 +130,10 @@ def main():
     b009['current_rq2_inclusion'] = {'included': True, 'basis': 'Reviewed executable, runtime and observed-input evidence.',
         'historical_full_recipe_binding_verified': False,
         'review': str((RQ2 / 'inputs/PAIRING_REVIEW_b009.json').relative_to(REPO))}
+    if b009_fresh:
+        b009['current_rq2_inclusion'].update(basis='New normally admitted Native observation with actual current input/completion binding.',
+            current_recipe_binding_verified=True, current_native_binding=b009_current['current_native_binding'],
+            historical_review_retained=True)
     write(CLOSURE / 'closure_b009.json', b009)
     old = read(CLOSURE / 'MANIFEST.json')
     manifest = {key: old[key] for key in ['ledger_sha256', 'selection_sha256', 'snapshot_id',
@@ -114,8 +143,13 @@ def main():
             'quality_admitted': q2['quality_pair_count'], 'quality_excluded': q2['excluded_candidates'],
             'groups': q2['quality_group_count'], 'unresolved': q2['unresolved_candidates']},
         active_pointer='results/ACTIVE_GENERIC420.json',
-        native_full_energy_measurements_unchanged=True, new_hardware_measurements_by_this_update=False,
-        RQ1_YOLOv7_case_numerical_evidence_unchanged=True,
+        native_full_energy_measurements_unchanged=not (native_changed or energy_changed),
+        native_measurements_unchanged=not native_changed, full_measurements_unchanged=True,
+        energy_measurements_unchanged=not energy_changed,
+        new_hardware_measurements_by_this_update=capture_count > 0,
+        hardware_measurements_performed_by_generator=False, current_external_capture_count=capture_count,
+        RQ1_YOLOv7_case_numerical_evidence_unchanged=not any(row['model_id']=='yolov7_paper' and row['setup_id']=='H8' for row in current),
+        RQ1_b066_numerical_evidence_unchanged=integration['b066_wide_single_numerical_payload_unchanged'],
         source_backup='PORTABLE_BACKUP_RECEIPT.json describes the retained measurement sources, not a new mirror of this publication update.',
         git_commit_binding='The containing Git commit identifies this publication update.',
         measurement_notes=str((RQ2 / 'DATA_NOTES.md').relative_to(REPO)))

@@ -72,6 +72,85 @@ def module(path, name):
     return result
 
 
+def current_rq1_binding(repo, broad_output, current_observations=None, deployment_inputs=None):
+    """Rebuild the source-admitted rows before accepting current RQ1 changes."""
+    repo, broad = Path(repo), Path(broad_output)
+    path = broad / 'data/current_observation_binding.json'
+    if not path.is_file():
+        return None
+    inputs = Path(deployment_inputs) if deployment_inputs else repo / 'results/split-inference/data/inputs'
+    source = Path(current_observations) if current_observations else inputs / 'current_observations.json'
+    assert source.is_file(), 'Current RQ1 needs its original observation input and source directory'
+    read = lambda p: json.loads(Path(p).read_text())
+    binding, document = read(path), read(source)
+    assert binding['schema'] == 'current-deployment-input-binding-v1'
+    assert binding['observations_sha256'] == digest(source), 'Current observation input changed'
+    assert binding['sources'] == document['sources']
+    assert binding['prior_rows_preserved'] is True
+    assert binding['hardware_measurements_performed_by_generator'] is False
+    assert read(broad / 'data/current_observation_inputs.json') == document
+    from build_paper_dataset import build
+    with tempfile.TemporaryDirectory(prefix='r30-current-source-check-') as temporary:
+        expected = Path(temporary)
+        config = read(broad / 'data/analysis_config.json')
+        build(inputs, expected, config, current_observations=source)
+        for name in ['data/PAPER_DATASET.json', 'data/current_observation_history.json',
+                     'tables/energy_repeats.json', 'tables/pipeline_repeats.json',
+                     'tables/table3_top2_native.json']:
+            assert read(broad / name) == read(expected / name), 'Source-bound current data differs: ' + name
+        archived_output = expected / 'archived'
+        build(repo / 'results/split-inference/data/inputs', archived_output, config, current_observations=False)
+        archived = read(archived_output / 'data/PAPER_DATASET.json')
+        archived_sha256 = digest(archived_output / 'data/PAPER_DATASET.json')
+    rows = read(broad / 'data/PAPER_DATASET.json')
+    current = {row['uid']: row for row in rows}
+    assert len(current) == len(rows), 'Duplicate current RQ1 UID'
+    affected = {row['uid'] for row in document['observations']}
+    archived_uids = {row['uid'] for row in archived}
+    assert archived_uids <= set(current), 'Archived deployment UID removed'
+    assert set(current) - archived_uids <= affected, 'New deployment lacks observation authority'
+    literal_b066 = 'native|yolov7_paper|H8|hailo8_to_trt|b066'
+    for row in archived:
+        if row['kind'] == 'full' or row['uid'] == literal_b066:
+            assert current.get(row['uid']) == row, 'Archived Full or literal b066 changed: ' + row['uid']
+        elif row['uid'] not in affected:
+            assert current[row['uid']] == row, 'Unaffected archived deployment changed: ' + row['uid']
+    observations = sorted(document['observations'], key=lambda row: row['uid'])
+    history = read(broad / 'data/current_observation_history.json')
+    assert {row['uid'] for row in history} == {row['uid'] for row in observations}
+    return {'schema': 'mlsys-r30-source-bound-current-rq1-v1',
+        'paper_dataset_sha256': digest(broad / 'data/PAPER_DATASET.json'),
+        'archived_paper_dataset_sha256': archived_sha256,
+        'observation_inputs_sha256': digest(source), 'sources': binding['sources'],
+        'observation_history_sha256': digest(broad / 'data/current_observation_history.json'),
+        'affected_observations': [dict(uid=row['uid'], generation=row['generation'],
+            metrics=sorted(row['metrics'])) for row in observations],
+        'expected_packages': binding.get('expected_packages', []),
+        'accepted_packages': binding.get('accepted_packages', []),
+        'pending_packages': binding.get('pending_packages', []),
+        'new_native_measurements': any(row['uid'].startswith('native|') and any(
+            metric.get('acquisition_origin') == 'new_capture' for metric in row['metrics'].values())
+            for row in observations),
+        'full_baselines_unchanged': True, 'literal_b066_unchanged': True,
+        'archived_r22_unchanged': True, 'hardware_measurements_performed_by_generator': False}
+
+
+def current_core_reference(repo, broad_output):
+    """Fresh numerical core exports; historical weighted studies are not fitted."""
+    from publication_mlsys_data import build
+    from publication_mlsys import build_methods
+    from publication_mlsys_figures import write_figure_data
+    with tempfile.TemporaryDirectory(prefix='r30-current-core-check-') as temporary:
+        output = Path(temporary)
+        context = build(repo, broad_output, output)
+        build_methods(Path(repo), Path(broad_output), output)
+        _, payload = write_figure_data(output, context)
+        payload['system_overview'] = current_schematic(Path(repo), output, True)
+        (output / 'figures/FIGURE_DATA.json').write_text(json.dumps(payload, sort_keys=True, indent=2) + '\n')
+        return {str(path.relative_to(output)): path.read_bytes() for path in output.rglob('*')
+                if path.is_file() and path.suffix in {'.json', '.csv', '.tex'}}
+
+
 def current_schematic(repo, output, numeric_only):
     """Render the maintained author vector; this is not the old R22 schematic."""
     source = repo / 'publications/mlsys/figure1/source.zip'
@@ -163,10 +242,14 @@ def current_weighted_validation(study):
     manifest=json.loads((study/'INPUT_MANIFEST.json').read_text())
     return {'result':'PASS','scope':current_weighted_scope(summary),'source_snapshot_sha256':manifest['source_snapshot_sha256'],
         'input_manifest_sha256':digest(study/'INPUT_MANIFEST.json'),'frozen_weights':summary['weights'],
-        'weight_policy':summary['weight_policy'],'weights_refitted':False,'new_native_measurements':False,
+        'weight_policy':summary['weight_policy'],'weights_refitted':False,
+        'new_native_measurements':any(summary.get('current_native_external_captures', {}).values()),
         'refreshed_fps_joined_to_old_energy':False,
         'publication_status':summary.get('publication_status','historical_snapshot'),
-        'validation_scope':'Offline reproduction and identity accounting; unresolved scientific evidence remains unresolved.'}
+        'validation_scope':'Offline reproduction and identity accounting; unresolved scientific evidence remains unresolved.',
+        **({'hardware_measurements_performed_by_generator':False,
+            'current_native_external_captures':summary['current_native_external_captures']}
+            if 'current_native_external_captures' in summary else {})}
 
 
 def apply_final_rq2(repo,output,study,numeric_only):
@@ -196,8 +279,15 @@ def apply_final_rq2(repo,output,study,numeric_only):
     return summary
 
 
-def verify_profile(repo, broad_output, rq2_study=None):
+def verify_profile(repo, broad_output, rq2_study=None, current_observations=None, deployment_inputs=None):
+    repo, broad_output = Path(repo), Path(broad_output)
+    rq1_current = current_rq1_binding(repo, broad_output, current_observations, deployment_inputs)
+    core_reference = current_core_reference(repo, broad_output) if rq1_current else {}
     output = broad_output / 'publications' / PROFILE
+    if rq1_current:
+        assert json.loads((output / 'data/current_rq1_binding.json').read_text()) == rq1_current
+        for name in core_reference:
+            assert (output / name).is_file(), 'Missing current source-derived RQ1 export: ' + name
     old = repo / 'results/split-inference/publications/mlsys-r22/figures/FIGURE_DATA.json'
     assert (output / 'data/frozen_r22_figure_data.json').read_bytes() == old.read_bytes()
     frozen = json.loads(old.read_text())
@@ -226,6 +316,9 @@ def verify_profile(repo, broad_output, rq2_study=None):
             if actual.suffix not in ['.csv', '.json', '.tex']:
                 continue
             name = actual.relative_to(output)
+            if str(name) == 'data/current_rq1_binding.json':
+                assert rq1_current is not None and json.loads(actual.read_text()) == rq1_current
+                checked.append(str(name));continue
             if rq2_study and str(name)=='data/weighted_validation.json':
                 assert json.loads(actual.read_text())==current_weighted_validation(rq2_study),'Current weighted validation differs'
                 checked.append(str(name));continue
@@ -238,7 +331,13 @@ def verify_profile(repo, broad_output, rq2_study=None):
                 assert actual.read_bytes()==changed[str(name)].read_bytes(),f'Final RQ2 asset differs: {name}'
                 checked.append(str(name));continue
             if rq2_study and str(name) in combined:
-                actual_data=json.loads(actual.read_text());expected_data=json.loads((target/name).read_text())
+                actual_data=json.loads(actual.read_text());expected_data=json.loads(
+                    core_reference[str(name)] if str(name) in core_reference else (target/name).read_bytes())
+                if str(name) == 'data/profile_summary.json' and rq1_current:
+                    assert actual_data.pop('current_rq1_observations') == rq1_current
+                    assert actual_data.pop('measurement_changes') is True
+                    expected_data.pop('current_rq1_observations', None)
+                    expected_data.pop('measurement_changes', None)
                 for key in combined[str(name)]:
                     actual_data.pop(key,None);expected_data.pop(key,None)
                 assert actual_data==expected_data,f'Unrelated frozen R30 values changed: {name}'
@@ -264,15 +363,28 @@ def verify_profile(repo, broad_output, rq2_study=None):
                         'quality_exact_hits':sum(r['exact_hit'] for r in json.loads((Path(rq2_study)/'data/quality_selection_groups.json').read_text()))}
                     assert all(current[k]==v for k,v in expected_updates.items()),'Refreshed RQ2 summary differs'
                 checked.append(str(name));continue
+            if str(name) == 'data/profile_summary.json' and rq1_current:
+                actual_data=json.loads(actual.read_text());expected_data=json.loads((target/name).read_text())
+                assert actual_data.pop('current_rq1_observations') == rq1_current
+                assert actual_data.pop('measurement_changes') is True
+                expected_data.pop('current_rq1_observations', None);expected_data.pop('measurement_changes', None)
+                assert actual_data == expected_data, 'Unrelated profile summary changed'
+                checked.append(str(name));continue
+            if str(name) in core_reference:
+                assert actual.read_bytes() == core_reference[str(name)], f'Current source-derived RQ1 differs: {name}'
+                checked.append(str(name));continue
             assert (target / name).is_file(), f'Missing R30 reference: {name}'
             assert actual.read_bytes() == (target / name).read_bytes(), f'R30 differs: {name}'
             checked.append(str(name))
     return {'result': 'PASS', 'files_checked': len(checked), 'frozen_r22_files_checked': r22_checked,
-            'frozen_r22_numerical_payload_unchanged': True, 'yolo_payload_unchanged': True}
+            'frozen_r22_numerical_payload_unchanged': True, 'yolo_payload_unchanged': True,
+            **({'current_rq1_observations': rq1_current} if rq1_current else {})}
 
 
-def build_profile(repo_root, broad_output, numeric_only=False, rq2_study=None):
+def build_profile(repo_root, broad_output, numeric_only=False, rq2_study=None,
+                  current_observations=None, deployment_inputs=None):
     repo, broad_output = Path(repo_root), Path(broad_output)
+    current = current_rq1_binding(repo, broad_output, current_observations, deployment_inputs)
     output = broad_output / 'publications' / PROFILE
     output.mkdir(parents=True, exist_ok=True)
     frozen = broad_output / 'publications/mlsys-r22'
@@ -286,12 +398,18 @@ def build_profile(repo_root, broad_output, numeric_only=False, rq2_study=None):
     from publication_mlsys_figures import render, write_figure_data, PAPER_STYLE, PAPER_PALETTE
     from publication_mlsys_r30_assets import render_weighted, render_yolo_single_column, write_weighted_tables
     context = build(repo, broad_output, output)
+    if current:
+        from publication_mlsys import build_methods
+        context['assets'].update(build_methods(repo, broad_output, output))
+        (output / 'data/current_rq1_binding.json').write_text(json.dumps(current, sort_keys=True, indent=2) + '\n')
     if numeric_only:
         _, payload = write_figure_data(output, context)
     else:
         _, payload = render(output, context, uniform_typography=True, uniform_palette=True)
-    assert (output / 'figures/FIGURE_DATA.json').read_bytes() == (frozen / 'figures/FIGURE_DATA.json').read_bytes()
-    shutil.copyfile(output / 'figures/FIGURE_DATA.json', output / 'data/frozen_r22_figure_data.json')
+    if not current:
+        assert (output / 'figures/FIGURE_DATA.json').read_bytes() == (frozen / 'figures/FIGURE_DATA.json').read_bytes()
+    assert payload['yolov7_h8_case'] == json.loads((frozen / 'figures/FIGURE_DATA.json').read_text())['yolov7_h8_case']
+    shutil.copyfile(frozen / 'figures/FIGURE_DATA.json', output / 'data/frozen_r22_figure_data.json')
     assets = render_yolo_single_column(output, payload['yolov7_h8_case'], numeric_only)
     payload['system_overview'] = current_schematic(repo, output, numeric_only)
     (output / 'figures/FIGURE_DATA.json').write_text(json.dumps(payload, sort_keys=True, indent=2) + '\n')
@@ -324,6 +442,18 @@ def build_profile(repo_root, broad_output, numeric_only=False, rq2_study=None):
     core_assets = json.loads((frozen / 'ASSET_MANIFEST.json').read_text())['assets']
     bind_output_targets(core_assets, repo, output)
     for asset in core_assets:
+        if current:
+            metadata = context['assets'].get(asset['asset_id'], {})
+            figure = next((Path(name).stem for name in asset['outputs']
+                           if name.startswith('figures/') and Path(name).stem in payload), None)
+            if figure:
+                metadata = payload[figure]
+            for key in ['input_uids', 'input_files', 'data_generation', 'generator']:
+                if key in metadata:
+                    asset[key] = metadata[key]
+            asset['input_files'] = list(dict.fromkeys(asset['input_files'] + [
+                str(profile_output_reference(repo, output) / 'data/current_rq1_binding.json')]))
+            asset['verification'] = 'Source-admitted current dataset reproduction; archived R22, Full baselines and literal b066 remain unchanged.'
         if asset['asset_id'] == 'fig:runners':
             asset['generator'] = 'scripts/split-inference/publication_mlsys_r30.py:current_schematic'
             asset['caption'] = payload['system_overview']['scope']
@@ -331,7 +461,8 @@ def build_profile(repo_root, broad_output, numeric_only=False, rq2_study=None):
         if final_rq2 and any('generic_selection_loss' in p for p in asset['outputs']):
             current_rq2_asset_metadata(asset, repo, rq2_study)
             asset['generator']=str(rq2_engine_source(repo,rq2_study).relative_to(repo))+':render'
-            asset['data_generation']='Current compatible Generic observations with original artifact-bound Native measurements; study metadata records the observation policy and audit status.'
+            asset['data_generation']=('Current source-bound Generic and Native observations; original records remain archived and study metadata records observation authority.'
+                if current else 'Current compatible Generic observations with original artifact-bound Native measurements; study metadata records the observation policy and audit status.')
     manifest = {'profile': PROFILE, 'frozen_profile': 'mlsys-r22',
         'scope': 'Current paper presentation plus the seven-model weighted analysis; original measurements unchanged.',
         'existing_core_assets': core_assets,
@@ -344,7 +475,7 @@ def build_profile(repo_root, broad_output, numeric_only=False, rq2_study=None):
         'numeric_only': numeric_only}
     if final_rq2:
         manifest['current_rq2_override']={'study':rq2_study_name(repo,rq2_study),
-            'scope':final_rq2,'frozen_rq1_and_yolov7':True,
+            'scope':final_rq2,'frozen_rq1_and_yolov7':not bool(current),
             'asset_files':sorted(final_rq2_files(Path(rq2_study)))}
         manifest['scope']='Frozen RQ1 and YOLOv7 evidence; current RQ2 recomputed using the verified study population and observation policy.'
         manifest['existing_rq2_assets']['historical_graph_generator']=str(old_source.relative_to(repo))
@@ -353,12 +484,19 @@ def build_profile(repo_root, broad_output, numeric_only=False, rq2_study=None):
         manifest['existing_rq2_assets']['scope']='Current Generic scatter, Native success and search budgets use the verified original Native population study; historical graph campaign remains unchanged.'
         for name in ['rq2_weighted_all_models','r30_weighted_budget_table','r30_weighted_macros']:
             if name in assets:
-                assets[name]['caption']='Current Generic / original Native verified pairs, frozen prior graph weights. See data/rq2_final_summary.json for counts, singleton groups, pending evidence and quality contract limitations.'
+                assets[name]['caption']=('Current source-bound Generic / Native verified pairs with original records archived, frozen prior graph weights. '
+                    if current else 'Current Generic / original Native verified pairs, frozen prior graph weights. ') + 'See data/rq2_final_summary.json for counts, singleton groups, pending evidence and quality contract limitations.'
                 assets[name]['generator']=str(rq2_engine_source(repo,rq2_study).relative_to(repo))+':render'
                 assets[name]['source_sha256']={'rq2_final_input_manifest':digest(Path(rq2_study)/'INPUT_MANIFEST.json'),
                     'rq2_final_summary':digest(Path(rq2_study)/'summary.json')}
                 if 'optimized_status' in assets[name]:assets[name]['optimized_status']='Frozen prior shared weights; no fit on the current paired subset.'
                 if 'held_out_status' in assets[name]:assets[name]['held_out_status']='Frozen prior model-held-out vectors; prior training scope retained separately.'
+    if current:
+        manifest['current_rq1_observations'] = current
+        manifest['scope'] = 'Source-admitted current deployment observations; archived R22, Full baselines and the literal b066 case remain unchanged.'
+        manifest['core_presentation'] = 'Current PAPER_DATASET drives RQ1; data/frozen_r22_figure_data.json preserves the archived R22 payload.'
+        if final_rq2:
+            manifest['current_rq2_override']['archived_r22_and_literal_b066_unchanged'] = True
     (output / 'ASSET_MANIFEST.json').write_text(json.dumps(manifest, indent=2) + '\n')
     profile_summary={
         'profile': PROFILE, 'frozen_numerical_profile': 'mlsys-r22',
@@ -371,6 +509,9 @@ def build_profile(repo_root, broad_output, numeric_only=False, rq2_study=None):
         profile_summary['historical_weighted_scope']=profile_summary['weighted_scope']
         profile_summary['weighted_scope']=current_weighted_scope(final_rq2)
         profile_summary['weighted_weight_policy']=final_rq2['weight_policy']
+    if current:
+        profile_summary['current_rq1_observations'] = current
+        profile_summary['measurement_changes'] = True
     (output / 'data/profile_summary.json').write_text(json.dumps(profile_summary, indent=2) + '\n')
     sources = [HERE / 'publication_mlsys_r30.py', HERE / 'publication_mlsys_r30_assets.py',
                HERE / 'publication_mlsys_figures.py', weighted_source, old_source]
@@ -385,6 +526,12 @@ def build_profile(repo_root, broad_output, numeric_only=False, rq2_study=None):
         'output_sha256': profile_output_hashes(output)}
     if final_rq2:
         provenance['input_sha256'][rq2_study_name(repo,rq2_study)+'/INPUT_MANIFEST.json']=digest(Path(rq2_study)/'INPUT_MANIFEST.json')
+    if current:
+        provenance['measurement_changes'] = True
+        provenance['hardware_measurements_performed_by_generator'] = False
+        provenance['current_rq1_observations'] = current
+        for name in ['PAPER_DATASET.json', 'current_observation_binding.json', 'current_observation_inputs.json', 'current_observation_history.json']:
+            provenance['input_sha256']['results/split-inference/data/' + name] = digest(broad_output / 'data' / name)
     (output / 'PROVENANCE.json').write_text(json.dumps(provenance, indent=2) + '\n')
     (output / 'README.md').write_text(f'''# MLSys R30 paper assets
 
@@ -420,4 +567,11 @@ python3 scripts/reproduce_current.py --output local-output/current --languages e
 The build includes the graph-selection analysis and English/German artifacts.
 `ASSET_MANIFEST.json` maps the outputs to their sources.
 """)
+    if current:
+        readme = output / 'README.md'
+        text = readme.read_text().replace(
+            'The core measurement figures use the common paper style and their frozen R22 numerical data.',
+            'The core measurement figures use the source-admitted current PAPER_DATASET and the common paper style.')
+        readme.write_text(text + '\nCurrent observation identities, source hashes, affected metrics and pending packages are in '
+            '`data/current_rq1_binding.json`. Archived R22, all Full baselines, and the literal b066 case remain unchanged.\n')
     return manifest

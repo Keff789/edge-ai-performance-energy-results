@@ -11,6 +11,7 @@ from collections import Counter, defaultdict
 import copy
 import csv
 from datetime import datetime
+import hashlib
 import importlib.util
 import json
 import math
@@ -30,7 +31,49 @@ legacy = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(legacy)
 OLD, METHODS, LABELS = legacy.OLD, legacy.METHODS, legacy.LABELS
 read, sha, write_json, write_csv = legacy.read, legacy.sha, legacy.write_json, legacy.write_csv
-quality_loss, load_public = legacy.quality_loss, legacy.load_public
+quality_loss = legacy.quality_loss
+
+
+def canonical_sha(value):
+    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(',', ':'), allow_nan=False).encode()).hexdigest()
+
+
+def load_public(repo, native_dataset_path=None):
+    """Apply explicit current Native bindings while preserving archived cuts."""
+    bindings, graph, data, frozen = legacy.load_public(repo)
+    dataset = Path(native_dataset_path) if native_dataset_path else Path(repo)/'results/split-inference/data/PAPER_DATASET.json'
+    by_native = {row['config_id']: uid for uid, row in bindings.items()}
+    for native in read(dataset):
+        binding = native.get('current_native_binding')
+        if not binding:
+            continue
+        uid = by_native.get(native['uid'])
+        if uid is None or native['runner'] != 'native':
+            raise ValueError('A current observation cannot add a Native RQ2 cut')
+        original = bindings[uid]
+        unsigned = {key: value for key, value in binding.items() if key != 'evidence_sha256'}
+        if binding.get('evidence_sha256') != canonical_sha(unsigned):
+            raise ValueError('Current Native replacement proof hash differs')
+        if binding.get('archived_binding_sha256') != canonical_sha(original):
+            raise ValueError('Current Native replacement changes the archived cut identity')
+        expected = dict(model_sha256=original['native_resolved_model_sha256'],
+            part1_sha256=original['native_part1_artifact_sha256'],
+            part2_engine_sha256=original['native_part2_engine_sha256'],
+            boundary_id=original['resolved_boundary_id'])
+        if any(binding['identity'].get(key) != value for key, value in expected.items()):
+            raise ValueError('Current Native executable/graph binding differs')
+        if binding.get('performance_source_sha256') != native['performance_source_sha256'] or not binding.get('normal_source_sha256'):
+            raise ValueError('Current Native observation lacks its actual source authority')
+        if 'performance' in native.get('current_observation_metric_updates', []):
+            comparison = binding.get('generic_comparison', {})
+            if not comparison.get('performance_source_sha256') or any(not binding['identity'].get(key) or
+                    binding['identity'][key] != comparison.get(key) for key in
+                    ['preprocessing_sha256', 'prepared_inputs_sha256', 'completed_endpoint_contract_sha256']):
+                raise ValueError('Current Native/Generic actual completed-task relation differs')
+        replacement = dict(original, native_performance_source_sha256=native['performance_source_sha256'])
+        replacement['active_native_replacement_evidence_sha256'] = binding['evidence_sha256']
+        bindings[uid], data[native['uid']] = replacement, native
+    return bindings, graph, data, frozen
 
 
 def positive(value):
@@ -62,6 +105,8 @@ def bind(row, original, native):
     """Original exact-artifact checks remain mandatory for every RQ2 cut."""
     try:
         reasons, proof = legacy.bind(row, original, native)
+        if original and original.get('active_native_replacement_evidence_sha256'):
+            proof['active_native_replacement_evidence_sha256'] = original['active_native_replacement_evidence_sha256']
         relation = row.get('product_reuse_relation') or {}
         if relation.get('verified') is True and relation.get('evidence_sha256') and original and native:
             required = dict(model_sha256=row.get('model_sha256'), setup_id=row.get('setup_id'),
@@ -528,7 +573,7 @@ def acquisition_index(observations):
     return result
 
 
-def run(output, repo=REPO, numeric_only=False, verify_reference=None, input_path=None):
+def run(output, repo=REPO, numeric_only=False, verify_reference=None, input_path=None, native_dataset_path=None):
     output, repo = Path(output), Path(repo)
     if output.exists() and any(output.iterdir()):
         raise ValueError('Choose an empty output directory')
@@ -540,11 +585,28 @@ def run(output, repo=REPO, numeric_only=False, verify_reference=None, input_path
     if accounting is not None and accounting.get('inputs_sha256') != sha(input_path):
         accounting = None
     closure_cases = {row['generic_uid']: row for row in accounting['cases']} if accounting else {}
-    bindings, graph, data, frozen = load_public(repo)
+    bindings, graph, data, frozen = load_public(repo, native_dataset_path)
+    current_native = [row for row in data.values() if row.get('current_native_binding')]
     fixed = set(observations.get('fixed420_uids', []))
     indexed = defaultdict(list)
+    active_observations = []
     for row in observations['rows']:
+        original = bindings.get(row['generic_uid'])
+        native = data.get(original['config_id']) if original else None
+        binding = (native or {}).get('current_native_binding')
+        if binding and 'performance' in native.get('current_observation_metric_updates', []):
+            row = copy.deepcopy(row)
+            preprocessing = row.get('observation_contract', {}).get('preprocessing_sha256')
+            if (preprocessing and preprocessing == binding['identity']['preprocessing_sha256'] and
+                    row.get('performance_source_sha256') == binding['generic_comparison']['performance_source_sha256']):
+                row['pair_compatibility'] = dict(verified=True, evidence_sha256=binding['evidence_sha256'],
+                    basis='new_normal_Native_observation_with_same_actual_Generic_preprocessing')
+                row.pop('pairing_review', None)
+            else:
+                row['pair_compatibility'] = dict(verified=False, reason='current_Native_and_Generic_preprocessing_not_bound')
+                row.pop('pairing_review', None)
         indexed[row['generic_uid']].append(row)
+        active_observations.append(row)
     acquisitions = acquisition_index(observations)
     audit, pairs = [], []
     for uid, original in sorted(bindings.items()):
@@ -572,6 +634,8 @@ def run(output, repo=REPO, numeric_only=False, verify_reference=None, input_path
         quality = generic_quality(row)
         native_loss = quality_loss(native)
         native_reasons = ['native_quality_unavailable'] if native_loss is None else ['native_quality_loss_above_5pct'] if native_loss > .05 else []
+        if ('quality' in native.get('current_observation_metric_updates', []) and native.get('normal_quality') is not True):
+            native_reasons.append('current_native_normal_quality_not_admitted')
         admitted = quality['admitted'] and not native_reasons
         q_reasons = sorted(set(native_reasons + quality['reasons'] + (row.get('quality_binding', {}).get('normal_exclusion_reasons', []) if not quality['admitted'] else [])))
         source = row.get('observation_origin', 'remeasured' if row.get('observation_mode') == 'new_current_job_measurement' else 'recovered')
@@ -598,7 +662,8 @@ def run(output, repo=REPO, numeric_only=False, verify_reference=None, input_path
             pairing_basis=proof.get('pairing_basis', 'artifact_and_recorded_contract_binding'),
             pairing_metadata_note=proof.get('pairing_metadata_note'),
             full_historical_recipe_binding_verified=proof.get('full_historical_recipe_binding_verified'),
-            native_quality_scope='Preserved historical normal quality observation; exact selected timed Native endpoint AP is not established by its numeric record alone.',
+            native_quality_scope=('Actual selected timed Native completion records, evaluated by the normal quality workflow.'
+                if native.get('quality_timed_endpoint_bound') else 'Preserved historical normal quality observation; exact selected timed Native endpoint AP is not established by its numeric record alone.'),
             native_quality_evidence_sha256=native.get('quality_evidence_sha256'),
             native_quality_source_sha256=native.get('quality_source_sha256'), native_quality_generation=native.get('quality_generation'),
             native_timed_completion_mode=native.get('measured_completion_mode'),
@@ -612,11 +677,20 @@ def run(output, repo=REPO, numeric_only=False, verify_reference=None, input_path
             performance_source_epochs=row.get('source_epochs', {}), generic_quality_source_epochs=row.get('quality_binding', {}).get('source_epochs', {}),
             generic_quality_legacy_1pct_decision=row.get('quality_binding', {}).get('legacy_1pct_decision'),
             generic_quality_legacy_1pct_margin_absolute_ap=row.get('quality_binding', {}).get('legacy_1pct_margin_absolute_ap'),
-            native_cpu_reference_sha256=row.get('quality_binding', {}).get('preserved_Native_quality_reference_binding', {}).get('cpu_reference_sha256'),
+            native_cpu_reference_sha256=native.get('quality_reference_sha256') or row.get('quality_binding', {}).get('preserved_Native_quality_reference_binding', {}).get('cpu_reference_sha256'),
             generic_cpu_reference_sha256=row.get('quality_binding', {}).get('cpu_reference_sha256'),
             preserved_native_quality_reference_binding=row.get('quality_binding', {}).get('preserved_Native_quality_reference_binding'),
             completion_provenance=row.get('completion_provenance'), quality_correction=row.get('quality_correction'),
             typed_quality_import_authorities=row.get('typed_quality_import_authorities', [])))
+        if native.get('current_native_binding'):
+            pairs[-1].update(native_replacement_evidence_sha256=native['current_native_binding']['evidence_sha256'],
+                native_quality_timed_endpoint_bound=native.get('quality_timed_endpoint_bound', False),
+                native_performance_source_epochs=native.get('performance_source_epochs', {}),
+                native_quality_source_epochs=native.get('quality_source_epochs', {}))
+            if row.get('completion_provenance'):
+                pairs[-1]['completion_provenance'] = dict(historical=row['completion_provenance'],
+                    current_native_quality_timed_endpoint_bound=native.get('quality_timed_endpoint_bound', False),
+                    current_native_quality_source_sha256=native.get('quality_source_sha256'))
 
     quality = [r for r in pairs if r['quality_eligible']]
     selected, quality_selected = groups(pairs), groups(quality)
@@ -644,9 +718,15 @@ def run(output, repo=REPO, numeric_only=False, verify_reference=None, input_path
             pair_exclusion_reasons=dict(Counter(reason for r in records for reason in r['exclusion_reasons'])),
             quality_exclusion_reasons=dict(Counter(reason for r in records for reason in r['quality_exclusion_reasons'])),
             status='evaluated' if eligible else 'unavailable_no_quality_admitted_pair'))
+        if current_native:
+            native_group = [row for row in current_native if row['model_id'] == model and row['setup_id'] == setup]
+            coverage[-1].update(native_observations_replaced=len(native_group),
+                **{'native_new_'+metric+'_captured':sum(metric in row['current_observation_metric_updates'] and
+                    row.get(metric+'_acquisition_origin') == 'new_capture' for row in native_group)
+                    for metric in ['performance', 'quality', 'energy']})
     audit_index = {row['generic_uid']: row for row in audit}
     standalone = []
-    for row in observations['rows']:
+    for row in active_observations:
         uid = row['generic_uid']
         original = bindings.get(uid)
         if not original:
@@ -684,10 +764,11 @@ def run(output, repo=REPO, numeric_only=False, verify_reference=None, input_path
             pair_status=own_pair_status, pair_hold_reasons=sorted(set(own_pair_reasons)),
             historical_pair_hold_reasons=historical_pair_reasons if closed.get('current_pair_hold_explanation') else [],
             current_pair_hold_explanation=closed.get('current_pair_hold_explanation'),
-            native_cpu_reference_sha256=row.get('quality_binding', {}).get('preserved_Native_quality_reference_binding', {}).get('cpu_reference_sha256'),
+            native_cpu_reference_sha256=native.get('quality_reference_sha256') or row.get('quality_binding', {}).get('preserved_Native_quality_reference_binding', {}).get('cpu_reference_sha256'),
             generic_cpu_reference_sha256=row.get('quality_binding', {}).get('cpu_reference_sha256'),
             pair_quality_exclusion_reasons=pair_audit['quality_exclusion_reasons'] if chosen_for_pair else ['observation_not_selected_for_native_pair'],
-            native_quality_scope='Preserved historical normal quality; exact timed Native endpoint AP is not asserted.'))
+            native_quality_scope=('Actual selected timed Native completion records, evaluated by the normal quality workflow.'
+                if native.get('quality_timed_endpoint_bound') else 'Preserved historical normal quality; exact timed Native endpoint AP is not asserted.')))
     families = family_results(pairs, quality, selected, quality_selected, comparison, bindings)
     previous = read(repo / 'results/split-inference/publications/mlsys-r22/data/quality_selection_groups.json')
     imports_complete = bool(accounting is not None and not accounting.get('remaining_actual_quality_import_UIDs') and not any(row['corrected_quality_pending'] for row in audit))
@@ -737,13 +818,30 @@ def run(output, repo=REPO, numeric_only=False, verify_reference=None, input_path
         corrected_quality_pending=sum(r['corrected_quality_pending'] for r in audit),
         reviewed_metadata_pairs=sum(bool(r.get('pairing_metadata_note')) for r in pairs),
         energy_policy='Original Native, Full and Generic energy records stay in their original dataset. No refreshed Generic rate is paired to old energy as one joint observation.')
+    if current_native:
+        summary.update(current_native_dataset_sha256=sha(native_dataset_path or repo/'results/split-inference/data/PAPER_DATASET.json'),
+            current_native_replacement_count=len(current_native),
+            current_native_replacements=[dict(native_uid=row['uid'], metric_updates=row['current_observation_metric_updates'],
+                performance_source_sha256=row['performance_source_sha256'], quality_source_sha256=row.get('quality_source_sha256'),
+                energy_source_sha256=row.get('energy_source_sha256'), evidence_sha256=row['current_native_binding']['evidence_sha256'])
+                for row in current_native],
+            native_quality_policy='Use only own bound current normal quality for explicitly replaced Native observations; missing current quality remains unavailable. Retain historical Native quality and the established <=5% gate for unchanged cuts. Prior values and source-scoped postfilter differences remain archived.',
+            prior_actual_accounting_retained_as_history=accounting is not None,
+            scope='All original artifact-bound measured Native cut identities; current normal Native observations replace only their source-bound archived predecessors. RQ3 membership remains an annotation; no imputation or new Native cuts.',
+            energy_policy='Archived Native/Full/Generic energy observations are preserved. Current curated energy requires its exact selected FPS-source relation; no refreshed Generic rate inherits old energy.')
+        summary['historical_quality_timed_contract_difference_cases'] = summary['known_quality_timed_contract_difference_cases']
+        summary['known_quality_timed_contract_difference_cases'] = [row['generic_uid'] for row in pairs
+            if row.get('completion_provenance') and not row.get('native_quality_timed_endpoint_bound')]
+        summary['current_native_external_captures'] = {metric:sum(metric in row['current_observation_metric_updates'] and
+            row.get(metric+'_acquisition_origin') == 'new_capture' for row in current_native)
+            for metric in ['performance', 'quality', 'energy']}
     if accounting is not None:
         actual_counts = dict(original_native_cases=len(bindings), generic_sources_found=summary['source_found'],
             actual_performance_candidates=len(observations['rows']), compatible_selected_pairs=len(pairs),
             quality_admitted_pairs=len(quality), excluded=summary['excluded_candidates'], unresolved=summary['unresolved_candidates'],
             new_fps_captured=summary['new_fps_captured'], new_quality_captured=summary['new_quality_captured'],
             corrected_quality_pending=summary['corrected_quality_pending'])
-        if actual_counts != accounting['counts']:
+        if actual_counts != accounting['counts'] and not current_native:
             raise ValueError('Publication reproduction differs from the bound actual import accounting')
     sources = [OLD / 'inputs/current_graph_feature_inputs.zip', OLD / 'analysis/candidate_features.csv', OLD / 'analysis/summary.json',
                Path('results/split-inference/data/PAPER_DATASET.json'), POLICY]
@@ -762,6 +860,9 @@ def run(output, repo=REPO, numeric_only=False, verify_reference=None, input_path
         except ValueError:
             name = str(path)
         proof_sources.append(dict(path=name, sha256=sha(path)))
+    if native_dataset_path is not None and sha(native_dataset_path) != sha(repo/'results/split-inference/data/PAPER_DATASET.json'):
+        sources = [path for path in sources if str(path) != 'results/split-inference/data/PAPER_DATASET.json']
+        proof_sources.append(dict(path='current-curated-build/data/PAPER_DATASET.json', sha256=sha(native_dataset_path)))
     manifest = dict(schema='rq2-native-scope-input-manifest-v1', source_snapshot_sha256=observations.get('source_snapshot_sha256'),
         source_selection_sha256=observations.get('source_selection_sha256'), sources=[dict(path=str(p), sha256=sha(repo / p)) for p in sources] + [dict(path=input_name, sha256=sha(input_path))] + proof_sources)
     write_json(output / 'INPUT_MANIFEST.json', manifest)
@@ -826,13 +927,34 @@ def run(output, repo=REPO, numeric_only=False, verify_reference=None, input_path
         (output / 'tables' / f'{name}.md').write_text(caption + '\n\n' + '\n'.join([
             '| ' + ' | '.join(headers) + ' |', '| ' + ' | '.join(['---'] * len(headers)) + ' |'] + [
             '| ' + ' | '.join(row) + ' |' for row in values]) + '\n')
-    write_json(output / 'data/quality_contract_provenance.json', observations.get('completion_provenance', {}))
+    provenance = copy.deepcopy(observations.get('completion_provenance', {}))
+    if current_native:
+        provenance['current_native_observations'] = [dict(native_uid=row['uid'],
+            metric_updates=row['current_observation_metric_updates'],
+            performance_source_sha256=row['performance_source_sha256'],
+            quality_source_sha256=row.get('quality_source_sha256'),
+            quality_timed_endpoint_bound=row.get('quality_timed_endpoint_bound', False),
+            binding_evidence_sha256=row['current_native_binding']['evidence_sha256']) for row in current_native]
+        provenance['native_gate'] = summary['native_quality_policy']
+        provenance['limitation'] = ('Historical additional-NMS evaluations remain archived in cases. '
+            'Explicit current Native observations use their own normal selected-timed-completion evaluation; '
+            'this replacement is bounded to the listed source identities. Other historical cases remain unassessed here.')
+        for case in provenance.get('cases', []):
+            native_uid = case['generic_uid'].replace('generic|', 'native|', 1)
+            native = data.get(native_uid, {})
+            if native.get('quality_timed_endpoint_bound'):
+                case['historical_native_quality_retained_as_archive'] = True
+                case['current_native_quality_timed_endpoint_bound'] = True
+                case['current_native_quality_source_sha256'] = native['quality_source_sha256']
+                case['current_native_binding_evidence_sha256'] = native['current_native_binding']['evidence_sha256']
+    write_json(output / 'data/quality_contract_provenance.json', provenance)
     render(output, numeric_only)
     validation = dict(result='PASS', validation_scope='Offline importer and evidence accounting only; this does not claim hardware or missing quality PASS.',
         original_native_population_fully_accounted=len(audit) == len(bindings),
         every_original_cut_admitted_excluded_or_unresolved=sum(r['quality_admitted'] + r['excluded'] + r['unresolved'] for r in coverage) == len(bindings),
         final_actual_import_accounting_verified=accounting is not None,
         no_fixed420_admission_filter=True, selection_precedes_quality=True, original_native_and_full_records_modified=False,
+        current_native_replacements_source_bound=bool(current_native),
         no_new_fps_old_energy_joint_measurement=True, weights_refitted=False)
     if verify_reference:
         validation['published_reference'] = legacy.verify(output, verify_reference)
@@ -875,6 +997,23 @@ def run(output, repo=REPO, numeric_only=False, verify_reference=None, input_path
         "Their exact source mapping is retained in `data/quality_contract_provenance.json`.\n\n"
         "Native, Full and energy measurements retain their recorded values. Generic throughput is not combined with energy from a different run. "
         "The archived import receipts preserve the acquisition history; the current input manifest identifies the observations used here.\n")
+    if current_native:
+        b009 = next((row for row in current_native if row['uid'] == 'native|yolov7_paper|H8|hailo8_to_trt|b009'), None)
+        note = ('H8/YOLOv7/b009 uses a new normal Native observation with its actual current preprocessing and completion binding. '
+            'The current Generic observation is unchanged. The original Native row and its incomplete historical preprocessing '
+            'metadata review remain archived; their missing historical hash has not been reconstructed.\n\n'
+            if b009 and 'performance' in b009['current_observation_metric_updates'] else
+            'H8/YOLOv7/b009 retains the reviewed executable, runtime and observed-input evidence. '
+            'Its complete historical Native preprocessing recipe was not logged and has not been reconstructed. '
+            'The review remains in inputs/PAIRING_REVIEW_b009.json; data/pairing_sensitivity.csv reports the paired sensitivity.\n\n')
+        (output/'DATA_NOTES.md').write_text('# Measurement notes\n\n' + note +
+            'Quality uses Top-1 accuracy for classifiers and COCO AP50:95 for detectors relative to their own CPU-ONNX reference. '
+            'The explicitly listed current Native quality observations evaluate actual selected timed completion records. '
+            'Prior evaluations with an additional NMS step remain historical evidence in data/quality_contract_provenance.json; '
+            'current replacements and all source identities are listed separately. Other cases are not assigned a new quality contract.\n\n'
+            'Active deployment rows replace only declared, normally admitted metrics; original observations remain archived. '
+            'Full measurements are unchanged. Generic throughput never inherits energy from a different performance observation. '
+            'The current input manifest and source-bound replacement records identify the observations used here.\n')
     return summary
 
 
@@ -882,8 +1021,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--input', type=Path)
+    parser.add_argument('--native-dataset', type=Path, help='Current curated PAPER_DATASET with explicit Native replacement bindings')
     parser.add_argument('--numeric-only', action='store_true')
     parser.add_argument('--verify', action='store_true')
     args = parser.parse_args()
-    print(json.dumps(run(args.output.resolve(), numeric_only=args.numeric_only, input_path=args.input,
+    print(json.dumps(run(args.output.resolve(), numeric_only=args.numeric_only, input_path=args.input, native_dataset_path=args.native_dataset,
                          verify_reference=REPO / STUDY if args.verify else None), indent=2))

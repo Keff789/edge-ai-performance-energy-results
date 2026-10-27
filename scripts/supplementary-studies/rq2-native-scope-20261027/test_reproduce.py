@@ -35,6 +35,46 @@ class NativeScopeTests(unittest.TestCase):
         native = self.data[old['config_id']]
         return row, old, native
 
+    def test_current_native_replacement_requires_exact_archived_cut_binding(self):
+        row, original, native = self.candidate()
+        replacement = copy.deepcopy(native)
+        replacement.update(fps=native['fps']*.9, performance_source_sha256='f'*64,
+            current_observation_metric_updates=['performance'], archived_deployment_record=native)
+        binding = dict(archived_binding_sha256=engine.canonical_sha(original),
+            performance_source_sha256=replacement['performance_source_sha256'],
+            normal_source_sha256={'normal_admission':'a'*64}, identity=dict(
+                model_sha256=original['native_resolved_model_sha256'],
+                part1_sha256=original['native_part1_artifact_sha256'],
+                part2_engine_sha256=original['native_part2_engine_sha256'],
+                boundary_id=original['resolved_boundary_id'], preprocessing_sha256='b'*64,
+                completion_contract_sha256='c'*64, prepared_inputs_sha256='d'*64,
+                completed_endpoint_contract_sha256='e'*64), generic_comparison=dict(
+                    performance_source_sha256=row['performance_source_sha256'],
+                    preprocessing_sha256='b'*64, prepared_inputs_sha256='d'*64,
+                    completed_endpoint_contract_sha256='e'*64))
+        binding['evidence_sha256'] = engine.canonical_sha(binding)
+        replacement['current_native_binding'] = binding
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp)/'PAPER_DATASET.json'
+            engine.write_json(path, [replacement])
+            bindings, _, data, _ = engine.load_public(engine.REPO, path)
+            self.assertEqual(len(bindings), len(self.bindings))
+            self.assertEqual(data[native['uid']]['fps'], native['fps']*.9)
+            self.assertEqual(bindings[row['generic_uid']]['native_performance_source_sha256'], 'f'*64)
+            self.assertEqual(self.bindings[row['generic_uid']]['native_performance_source_sha256'], original['native_performance_source_sha256'])
+            binding['identity']['part1_sha256'] = 'wrong-artifact'
+            binding['evidence_sha256'] = engine.canonical_sha({k:v for k,v in binding.items() if k!='evidence_sha256'})
+            engine.write_json(path, [replacement])
+            with self.assertRaisesRegex(ValueError, 'executable/graph binding differs'):
+                engine.load_public(engine.REPO, path)
+
+    def test_new_generic_deployment_cannot_expand_native_population(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp)/'PAPER_DATASET.json'
+            engine.write_json(path, [dict(uid='generic|detector|DeepX|split|b511', runner='generic')])
+            bindings, _, _, _ = engine.load_public(engine.REPO, path)
+            self.assertEqual(set(bindings), set(self.bindings))
+
     def out420_candidate(self):
         fixed = {r['generic_uid'] for r in self.previous['rows']}
         uid = next(uid for uid in self.bindings if uid not in fixed)

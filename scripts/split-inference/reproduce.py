@@ -10,6 +10,7 @@ import hashlib
 import os
 import json
 import subprocess
+import shutil
 from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -279,6 +280,8 @@ def main():
     expected=root.parents[1]/'results/split-inference'
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--inputs',type=Path,default=expected/'data/inputs')
+    ap.add_argument('--current-observations', type=Path,
+                    help='Optional source-bound current metric replacements; otherwise inputs/current_observations.json is used when present')
     ap.add_argument('--config',type=Path,default=root/'config.json')
     ap.add_argument('--output',type=Path,required=True)
     ap.add_argument('--numeric-only',action='store_true',help='Regenerate and verify numerical tables without plotting dependencies')
@@ -292,6 +295,8 @@ def main():
     a=ap.parse_args()
     if a.rq2_study and a.publication != 'mlsys-r30':
         ap.error('--rq2-study requires --publication mlsys-r30')
+    if a.current_observations and a.publication != 'mlsys-r30':
+        ap.error('--current-observations requires --publication mlsys-r30')
     os.environ.setdefault('MPLCONFIGDIR', str(a.output.resolve().parent / '.matplotlib-cache'))
     assert not a.output.exists() or not any(a.output.iterdir()), 'Use a fresh output directory'
     config=read(a.config);validate_config(config)
@@ -301,7 +306,10 @@ def main():
         assert p.resolve().is_relative_to(a.inputs.resolve()),name
         assert hashlib.sha256(p.read_bytes()).hexdigest()==h,('input changed',name)
     a.output.mkdir(parents=True,exist_ok=True)
-    summary=build(a.inputs,a.output,config)
+    effective_current = (a.current_observations or a.inputs/'current_observations.json') if a.publication=='mlsys-r30' else False
+    summary=build(a.inputs,a.output,config,current_observations=effective_current if effective_current and effective_current.is_file() else
+        a.current_observations if a.current_observations else False)
+    current_mode = (a.output/'data/current_observation_binding.json').is_file()
     format_tables(a.output)
     if not a.numeric_only:
         from render_figures import render
@@ -309,17 +317,25 @@ def main():
         from generate_report import render as report
         report(a.output)
     from publication_mlsys import build_profile
-    build_profile(root.parents[1],a.output,numeric_only=a.numeric_only)
+    if current_mode:
+        # The R22 directory is an explicitly archived reference. Current RQ1
+        # assets are generated separately by R30 from the current broad rows.
+        shutil.copytree(expected/'publications/mlsys-r22', a.output/'publications/mlsys-r22')
+    else:
+        build_profile(root.parents[1],a.output,numeric_only=a.numeric_only)
     if a.publication=='mlsys-r30':
         from publication_mlsys_r30 import build_profile as build_r30
-        build_r30(root.parents[1],a.output,numeric_only=a.numeric_only, rq2_study=a.rq2_study)
+        build_r30(root.parents[1],a.output,numeric_only=a.numeric_only, rq2_study=a.rq2_study,
+            **(dict(current_observations=effective_current, deployment_inputs=a.inputs) if current_mode else {}))
     if a.verify and a.publication=='mlsys-r30':
         # R30 preserves scientific R22 payloads while intentionally using newer
         # paper layouts. Do not compare the old raster/vector rendering bytes.
         subprocess.run([sys.executable, '-I', '-B', str(root/'validation/check_mlsys_profile.py'),
-                        '--repo',str(root.parents[1]),'--output',str(a.output)], check=True)
+                        '--repo',str(root.parents[1]),'--output',str(a.output),
+                        *(['--current-observations',str(effective_current),'--deployment-inputs',str(a.inputs)] if current_mode else [])], check=True)
         from publication_mlsys_r30 import verify_profile
-        print(json.dumps(verify_profile(root.parents[1],a.output, rq2_study=a.rq2_study),sort_keys=True))
+        print(json.dumps(verify_profile(root.parents[1],a.output, rq2_study=a.rq2_study,
+            **(dict(current_observations=effective_current, deployment_inputs=a.inputs) if current_mode else {})),sort_keys=True))
     elif a.verify:
         subprocess.run([sys.executable, '-I', '-B', str(root/'validation/test_edge_cases.py')], check=True)
         for name in ['test_mlsys_data.py','test_mlsys_evidence.py','test_mlsys_figures.py','test_mlsys_profile.py']:
