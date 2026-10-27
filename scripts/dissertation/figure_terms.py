@@ -26,6 +26,8 @@ DYNAMIC_TRANSLATIONS = [
 NEUTRAL_PATTERNS = [
     r'^b\d+$',
     r'^(?:N|G|Native|Generic) (?:F|E|F=E) b\d+$',
+    r'^(?:DeepX|H8|H10)/b\d+ · (?:Native|Generic)$',
+    r'^(?:MobileNet V3|RegNetX-1.6GF|ResNet50|YOLO11l|YOLO26m|YOLO26s|YOLOv7) / (?:DeepX|H8|H10)\s+n=\d+/\d+(?:\s+=)?$',
     r'^(?:DeepX|H8|H10|DX|Hailo8|Hailo10H|Hailo-8|Hailo-10H|TensorRT|TRT)(?: Full)?$',
     r'^(?:DeepX|H8|H10), n=\d+$',
     r'^(?:DeepX|H8|H10)\s+\(\d+\)$',

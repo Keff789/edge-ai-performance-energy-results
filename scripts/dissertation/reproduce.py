@@ -130,7 +130,19 @@ def build(repo, source, output, *, numeric_only=False, supplementary=True, stric
                 render(broad)
             from publication_mlsys import build_profile as build_r22
             from publication_mlsys_r30 import build_profile as build_r30, verify_profile
-            build_r22(repo, broad, numeric_only=numeric_only)
+            if (broad / 'data/current_observation_binding.json').is_file():
+                # R22 retains its original cohort while the current R30 below
+                # replays the source-admitted deployment replacements.
+                from build_paper_dataset import build as build_dataset
+                archived = work / 'archived-split'
+                configuration = json.loads((broad / 'data/analysis_config.json').read_text())
+                build_dataset(repo / 'results/split-inference/data/inputs', archived,
+                              configuration, current_observations=False)
+                build_r22(repo, archived, numeric_only=numeric_only)
+                shutil.copytree(archived / 'publications/mlsys-r22',
+                                broad / 'publications/mlsys-r22', dirs_exist_ok=True)
+            else:
+                build_r22(repo, broad, numeric_only=numeric_only)
             if (source / 'publications/mlsys-r30').is_dir():
                 build_r30(repo, broad, numeric_only=numeric_only, rq2_study=rq2_study)
                 numeric_checks.append(verify_profile(repo, broad, rq2_study=rq2_study))
