@@ -265,7 +265,7 @@ def export_figure(output, summaries, language):
     ax.set_xlim(1.6, max(row['k'] for row in rows) + .4)
     ax.set_xticks([2, 5, 10, 12, 15, 20])
     if language == 'en':
-        ax.set_xlabel('Maximum Generic tests per group')
+        ax.set_xlabel('Max. Generic tests per combination')
         ax.set_ylabel('Mean Native throughput retained (%)')
         connector = 'Generic + 2 Native'
     else:
