@@ -26,6 +26,7 @@ Earlier publication assets can be reproduced with their own documented commands.
 | [THESIS20 selection and energy](../results/supplementary-studies/thesis20-ranking-20261005/README.md) | Earlier split-selection and energy analysis |
 | [Earlier MLSys selection analysis](../results/supplementary-studies/mlsys-selection-20261007/README.md) | Split/Full comparisons, quality sensitivity and graph inventory |
 | [Dissertation development](../results/supplementary-studies/dissertation-development-2026/README.md) | Ranking proxies, decoder and compiler studies |
+| [Dissertation v56 sources and fixed exports](../results/supplementary-studies/dissertation-v56/README.md) | Historical generators, compact source inputs, and the preserved thesis presentation assets |
 | [Hailo-8 HAR comparison](../results/supplementary-studies/hailo8-har-20260912/README.md) | Numerical development diagnosis |
 | [Native endpoint reconstruction](../results/supplementary-studies/native-endpoint-reconstruction/README.md) | Archived completion, decoder and pipeline measurements |
 | [YOLOv7 completion and stage costs](../results/supplementary-studies/yolov7-completion-20261007/README.md) | Software diagnosis and stage profiles |

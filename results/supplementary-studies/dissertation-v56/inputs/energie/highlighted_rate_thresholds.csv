@@ -1,0 +1,121 @@
+workload_id,workload_label,source,mode,highlighted_rate_sps,threshold_pct,minimum_passing_duration_s,selection_rule
+gemma3-4b,Gemma3-4B,pico,anti_alias,2000,0.1,0.1,shortest tested duration for which that duration and every longer tested duration pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,2000,0.5,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,2000,1.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,2000,2.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemma3-4b,Gemma3-4B,pico,anti_alias,2000,5.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemma3-4b,Gemma3-4B,pico,phase_only,2000,0.1,,shortest tested duration for which that duration and every longer tested duration pass
+gemma3-4b,Gemma3-4B,pico,phase_only,2000,0.5,2.0,shortest tested duration for which that duration and every longer tested duration pass
+gemma3-4b,Gemma3-4B,pico,phase_only,2000,1.0,0.5,shortest tested duration for which that duration and every longer tested duration pass
+gemma3-4b,Gemma3-4B,pico,phase_only,2000,2.0,0.1,shortest tested duration for which that duration and every longer tested duration pass
+gemma3-4b,Gemma3-4B,pico,phase_only,2000,5.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,2000,0.1,0.1,shortest tested duration for which that duration and every longer tested duration pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,2000,0.5,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,2000,1.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,2000,2.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemma3-4b,Gemma3-4B,tek,anti_alias,2000,5.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemma3-4b,Gemma3-4B,tek,phase_only,2000,0.1,,shortest tested duration for which that duration and every longer tested duration pass
+gemma3-4b,Gemma3-4B,tek,phase_only,2000,0.5,5.0,shortest tested duration for which that duration and every longer tested duration pass
+gemma3-4b,Gemma3-4B,tek,phase_only,2000,1.0,1.0,shortest tested duration for which that duration and every longer tested duration pass
+gemma3-4b,Gemma3-4B,tek,phase_only,2000,2.0,0.5,shortest tested duration for which that duration and every longer tested duration pass
+gemma3-4b,Gemma3-4B,tek,phase_only,2000,5.0,0.05,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,pico,anti_alias,2000,0.1,0.1,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,pico,anti_alias,2000,0.5,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,pico,anti_alias,2000,1.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,pico,anti_alias,2000,2.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,pico,anti_alias,2000,5.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,pico,phase_only,2000,0.1,,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,pico,phase_only,2000,0.5,5.0,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,pico,phase_only,2000,1.0,1.0,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,pico,phase_only,2000,2.0,0.2,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,pico,phase_only,2000,5.0,0.05,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,tek,anti_alias,2000,0.1,0.1,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,tek,anti_alias,2000,0.5,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,tek,anti_alias,2000,1.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,tek,anti_alias,2000,2.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,tek,anti_alias,2000,5.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,tek,phase_only,2000,0.1,,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,tek,phase_only,2000,0.5,5.0,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,tek,phase_only,2000,1.0,1.0,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,tek,phase_only,2000,2.0,0.2,shortest tested duration for which that duration and every longer tested duration pass
+gemmfp32,GEMM-FP32,tek,phase_only,2000,5.0,0.05,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,pico,anti_alias,2000,0.1,0.05,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,pico,anti_alias,2000,0.5,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,pico,anti_alias,2000,1.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,pico,anti_alias,2000,2.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,pico,anti_alias,2000,5.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,pico,phase_only,2000,0.1,,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,pico,phase_only,2000,0.5,1.0,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,pico,phase_only,2000,1.0,0.2,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,pico,phase_only,2000,2.0,0.05,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,pico,phase_only,2000,5.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,tek,anti_alias,2000,0.1,0.05,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,tek,anti_alias,2000,0.5,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,tek,anti_alias,2000,1.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,tek,anti_alias,2000,2.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,tek,anti_alias,2000,5.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,tek,phase_only,2000,0.1,,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,tek,phase_only,2000,0.5,2.0,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,tek,phase_only,2000,1.0,0.5,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,tek,phase_only,2000,2.0,0.1,shortest tested duration for which that duration and every longer tested duration pass
+gemmint8,GEMM-INT8,tek,phase_only,2000,5.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,pico,anti_alias,2000,0.1,0.05,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,pico,anti_alias,2000,0.5,0.02,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,pico,anti_alias,2000,1.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,pico,anti_alias,2000,2.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,pico,anti_alias,2000,5.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,pico,phase_only,2000,0.1,,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,pico,phase_only,2000,0.5,5.0,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,pico,phase_only,2000,1.0,1.0,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,pico,phase_only,2000,2.0,0.2,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,pico,phase_only,2000,5.0,0.05,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,tek,anti_alias,2000,0.1,0.05,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,tek,anti_alias,2000,0.5,0.02,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,tek,anti_alias,2000,1.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,tek,anti_alias,2000,2.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,tek,anti_alias,2000,5.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,tek,phase_only,2000,0.1,,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,tek,phase_only,2000,0.5,5.0,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,tek,phase_only,2000,1.0,1.0,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,tek,phase_only,2000,2.0,0.5,shortest tested duration for which that duration and every longer tested duration pass
+resnet50,ResNet-50 FP32,tek,phase_only,2000,5.0,0.05,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,pico,anti_alias,2000,0.1,0.1,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,pico,anti_alias,2000,0.5,0.02,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,pico,anti_alias,2000,1.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,pico,anti_alias,2000,2.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,pico,anti_alias,2000,5.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,pico,phase_only,2000,0.1,,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,pico,phase_only,2000,0.5,5.0,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,pico,phase_only,2000,1.0,1.0,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,pico,phase_only,2000,2.0,0.2,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,pico,phase_only,2000,5.0,0.1,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,tek,anti_alias,2000,0.1,0.1,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,tek,anti_alias,2000,0.5,0.02,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,tek,anti_alias,2000,1.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,tek,anti_alias,2000,2.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,tek,anti_alias,2000,5.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,tek,phase_only,2000,0.1,,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,tek,phase_only,2000,0.5,5.0,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,tek,phase_only,2000,1.0,1.0,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,tek,phase_only,2000,2.0,0.5,shortest tested duration for which that duration and every longer tested duration pass
+yolofp32,YOLO-FP32,tek,phase_only,2000,5.0,0.1,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,pico,anti_alias,2000,0.1,0.1,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,pico,anti_alias,2000,0.5,0.02,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,pico,anti_alias,2000,1.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,pico,anti_alias,2000,2.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,pico,anti_alias,2000,5.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,pico,phase_only,2000,0.1,,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,pico,phase_only,2000,0.5,5.0,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,pico,phase_only,2000,1.0,1.0,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,pico,phase_only,2000,2.0,0.2,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,pico,phase_only,2000,5.0,0.05,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,tek,anti_alias,2000,0.1,0.1,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,tek,anti_alias,2000,0.5,0.02,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,tek,anti_alias,2000,1.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,tek,anti_alias,2000,2.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,tek,anti_alias,2000,5.0,0.02,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,tek,phase_only,2000,0.1,,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,tek,phase_only,2000,0.5,10.0,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,tek,phase_only,2000,1.0,2.0,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,tek,phase_only,2000,2.0,0.5,shortest tested duration for which that duration and every longer tested duration pass
+yoloint8,YOLO-INT8,tek,phase_only,2000,5.0,0.1,shortest tested duration for which that duration and every longer tested duration pass

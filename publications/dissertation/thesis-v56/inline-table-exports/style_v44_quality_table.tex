@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering\small\TableSetup
+\caption{Interne Ergebnisse zur gepaarten Qualität für die neun B500-Bereitstellungsidentitäten. Diese $Q$-Metriken unterscheiden sich von den oben genannten offiziellen COCO-Metriken. Die aufgezeichneten Entscheidungen basieren auf den ungerundeten Daten.}
+\label{tab:evaluation:yolov7_standard_quality}
+\begin{tabularx}{\linewidth}{@{}L{1.55cm}Y S[table-format=1.3] S[table-format=1.3] S[table-format=1.3]l@{}}
+\toprule
+\textbf{Einrichtung} & \textbf{Pfad} & {$Q$} & {$Q^{50}$} & {$Q^{75}$} & \textbf{Qualität} \\
+\midrule
+DEEPX & Split b044 & 0.460 & 0.610 & 0.498 & bestanden \\
+ & Beschleuniger Full & 0.456 & 0.605 & 0.493 & bestanden \\
+ & TensorRT Full & 0.461 & 0.610 & 0.499 & bestanden \\
+\addlinespace[.3em]
+Hailo-10H & Split b044 & 0.458 & 0.608 & 0.494 & bestanden \\
+ & Beschleuniger Full & 0.420 & 0.610 & 0.472 & fail \\
+ & TensorRT Full & 0.461 & 0.610 & 0.499 & bestanden \\
+\addlinespace[.3em]
+Hailo-8 & Split b044 & 0.460 & 0.607 & 0.497 & bestanden \\
+ & Beschleuniger Full & 0.415 & 0.598 & 0.467 & fail \\
+ & TensorRT Full & 0.461 & 0.610 & 0.499 & bestanden \\
+\bottomrule
+\end{tabularx}
+\end{table}

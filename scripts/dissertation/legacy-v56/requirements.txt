@@ -1,0 +1,8 @@
+# Optional dependencies for the preserved historical generators.
+# No new version pins: use a compatible existing analysis environment.
+matplotlib
+numpy
+pandas
+scipy
+Pillow
+PyMuPDF

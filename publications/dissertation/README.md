@@ -32,3 +32,12 @@ Die [Installationshinweise](../../scripts/README.md) beschreiben die Python-Abh�
 Die [ergänzenden Analysen](../../results/supplementary-studies/README.md) enthalten unter anderem Stufenkosten und zusätzliche Methodenprüfungen. Die [Hailo-10H-Formatmessungen](../../results/split-inference/microbenchmarks/README.md), [Messreihen zur Energieerfassung](../../results/energy-measurement/galleries/direct-sweeps.md) und [Spektralanalysen](../../results/energy-measurement/galleries/spectra-jetson.md) können unabhängig davon verwendet werden.
 
 Frühere Fassungen und Entwicklungsversuche sind im [Forschungsarchiv](../../docs/archival_studies.md) verzeichnet. Die dortigen Ergebnisse behalten ihren jeweiligen Untersuchungsumfang. Die aktuelle Split-Auswertung ist über die oben verlinkten Sammlungen zugänglich.
+
+## Trennung von Auswertung und LaTeX-Projekt
+
+Auswerteskripte, Datengrundlagen und erzeugte Abbildungen werden in diesem
+Repository gepflegt. Das LaTeX-Projekt übernimmt die benötigten fertigen Exporte
+mit Commit- und Hashnachweis. Es benötigt zum Bauen keine Auswertungsskripte.
+
+Der [eingefrorene Satzstand v56](thesis-v56/README.md) dokumentiert die
+verwendeten Darstellungen und die ausgelagerten historischen Quellen.

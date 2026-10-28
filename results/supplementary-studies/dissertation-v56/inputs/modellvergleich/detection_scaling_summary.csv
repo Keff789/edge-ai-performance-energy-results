@@ -1,0 +1,4 @@
+model,params_m,gflops,best_full_backend,best_full_fps,best_hailo_to_trt_boundary,best_hailo_to_trt_fps,relative_effect_pct,quality_note
+YOLO26s,10.010,22.838,TensorRT full,71.10,b213,48.70,-31.5,"split beats CUDA but not TensorRT full; small negative/control case"
+YOLO26m,21.896,75.398,TensorRT full,38.43,b041,40.54,5.5,"mini-COCO AP50 approx 0.750 vs 0.760 TensorRT full"
+YOLO11l,25.372,87.613,TensorRT full,29.74,b065,36.80,23.8,"strong throughput case; raw-head Hailo contract; mixed task quality reported separately"
