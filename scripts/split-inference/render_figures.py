@@ -73,14 +73,13 @@ def group(rows, keys):
     return result
 
 
-def annotate_tradeoff(ax, selected, points, renderer):
+def annotate_tradeoff(ax, selected, points, renderer, fontsize=11):
     """Place text only, without moving any measured coordinate.
 
     A stable finite search penalizes overlapping labels and observed markers.
     Leader lines bind the labels to their exact observations; the selected text
     offsets are exported alongside their UIDs for inspection.
     """
-    fontsize = 11
     font = FontProperties(size=fontsize)
     px_per_pt = ax.figure.dpi / 72
     occupied = []
@@ -316,6 +315,151 @@ def render_fastest_deployments(output, save):
           'reference_x': 1.0, 'reference_y': 1.0, 'annotations': annotations}, main=True)
 
 
+def render_tradeoffs(output, save, rows, ids, models, figure_profile='paper'):
+    # The same exported observations and flags drive every trade-off panel.
+    pareto = read(output / 'tables' / 'PARETO_POINTS.json')
+    assert {r['uid'] for r in pareto} == set(ids), 'Pareto table/dataset identities differ'
+    for point in pareto:
+        if point['included']:
+            source = ids[point['uid']]
+            assert point['fps'] == source['fps']
+            assert point['energy_mj_per_image'] == source['energy_mj_per_image']
+            assert point['quality_value'] == (source.get('quality_value') if finite(source.get('quality_value')) else None)
+    tradeoff_setups = ['H8', 'H10', 'DeepX']
+    for model in models:
+        mr = [r for r in rows if r['model_id'] == model]
+        model_points = [r for r in pareto if r['model'] == model]
+        qv = [r['quality_percent'] for r in model_points if r['included'] and r['quality_percent'] is not None]
+        norm = Normalize(min(qv) if qv else 0, max(qv) if qv and max(qv)>min(qv) else (min(qv)+1 if qv else 100))
+        cmap = plt.get_cmap('viridis')
+        # At 7-inch manuscript width, 11/12-point text remains 7.7/8.4 point.
+        # These settings are local so the established quality views are intact.
+        if figure_profile == 'dissertation':
+            fig, axes = plt.subplots(len(tradeoff_setups), 1, figsize=(4.8, 5.8))
+            fig.subplots_adjust(left=.13, right=.81, bottom=.15, top=.925, hspace=.66)
+        else:
+            fig, axes = plt.subplots(1, len(tradeoff_setups), figsize=(10.0, 5.5), layout='constrained')
+        payload, front_groups, pending_annotations = [], [], []
+        for ax, setup in zip(axes, tradeoff_setups):
+            sr = [r for r in model_points if r['setup'] == setup]
+            good = [r for r in sr if r['included']]
+            front = [r for r in good if r['pareto_all']]
+            coordinates = sorted({(r['fps'], r['energy_mj_per_image']) for r in front})
+            if len(coordinates) >= 2:
+                ax.plot([xy[0] for xy in coordinates], [xy[1] for xy in coordinates],
+                        color='#444444', linewidth=.85, zorder=1)
+            front_groups.append({'model': model, 'setup': setup,
+                                 'front_uids': [r['uid'] for r in front],
+                                 'front_coordinates': [{'fps': x, 'energy_mj_per_image': y} for x, y in coordinates],
+                                 'n_observations': len(good), 'n_front_uids': len(front),
+                                 'n_front_coordinates': len(coordinates), 'line_drawn': len(coordinates) >= 2})
+            for r in good:
+                q = r['quality_percent']
+                size = 66 if r['kind'] != 'split' else 31
+                ax.scatter(r['fps'], r['energy_mj_per_image'], marker=MARKERS[label(r)],
+                           s=size,
+                           facecolor=cmap(norm(q)) if q is not None else '#b5b5b5',
+                           edgecolor='#222222', linewidth=.4, alpha=.9,
+                           zorder=4 if r['kind'] != 'split' else 2)
+                if r['pareto_all']:
+                    ax.scatter(r['fps'], r['energy_mj_per_image'], marker=MARKERS[label(r)],
+                               s=size + 60, facecolor='none', edgecolor='#111111', linewidth=1.1, zorder=6)
+                source = ids[r['uid']]
+                payload.append(dict(r, endpoint_notes=source.get('endpoint_notes', source.get('execution_notes', []))))
+            selected_labels = [(r, 'TRT Full' if label(r) == 'TRT Full' else 'Vendor Full')
+                               for r in good if r['kind'] != 'split']
+            for runner in ['native', 'generic']:
+                candidates = [r for r in good if r['kind'] == 'split' and r['runner'] == runner]
+                if not candidates:
+                    continue
+                fastest = min(candidates, key=lambda r:(-r['fps'], r['uid']))
+                lowest = min(candidates, key=lambda r:(r['energy_mj_per_image'], r['uid']))
+                prefix = 'N' if runner == 'native' else 'G'
+                if fastest['uid'] == lowest['uid']:
+                    selected_labels.append((fastest, f'{prefix} F=E {fastest["case"]}'))
+                else:
+                    selected_labels.extend([(fastest, f'{prefix} F {fastest["case"]}'),
+                                            (lowest, f'{prefix} E {lowest["case"]}')])
+            if figure_profile == 'dissertation':
+                ax.set_title(f'{setup}   n={len(good)} · front={len(front)}', fontsize=9, loc='left', pad=4)
+            else:
+                ax.set_title(f'{setup}\nn={len(good)} · front={len(front)}', fontsize=12)
+            ax.tick_params(axis='both', labelsize=8.5 if figure_profile == 'dissertation' else 11)
+            if good and min(r['fps'] for r in good)>0 and max(r['fps'] for r in good)/min(r['fps'] for r in good)>12:
+                ax.set_xscale('log')
+                ax.xaxis.set_major_formatter(ScalarFormatter())
+                ax.set_xlabel('Log scale', fontsize=11)
+            if good and min(r['energy_mj_per_image'] for r in good)>0 and max(r['energy_mj_per_image'] for r in good)/min(r['energy_mj_per_image'] for r in good)>12:
+                ax.set_yscale('log')
+                ax.yaxis.set_major_formatter(ScalarFormatter())
+                ax.set_ylabel('Log scale', fontsize=11)
+            else:
+                ax.yaxis.set_major_locator(MaxNLocator(4))
+            if ax.get_xscale() == 'linear':
+                ax.xaxis.set_major_locator(MaxNLocator(4))
+            ax.margins(x=.22, y=.22)
+            ax.grid(alpha=.16, linewidth=.6)
+            ax.set_axisbelow(True)
+            if figure_profile == 'dissertation':
+                ax.set_xlabel('Throughput (images/s)' + (' · log scale' if ax.get_xscale() == 'log' else ''), fontsize=9)
+                ax.set_ylabel('Energy (mJ/image)' + ('\nlog scale' if ax.get_yscale() == 'log' else ''), fontsize=9)
+            pending_annotations.append((ax, selected_labels, good))
+        handles = [Line2D([], [], marker=MARKERS[k], color='none', markerfacecolor='#aaaaaa',
+                          markeredgecolor='#222222', label=k.title() if k in ['native','generic'] else k,
+                          markersize=6) for k in MARKERS]
+        handles.append(Line2D([], [], marker='o', color='none', markerfacecolor='none',
+                              markeredgecolor='#111111', markeredgewidth=1.1, markersize=9,
+                              label='Empirical Pareto point'))
+        if any(r['included'] and r['quality_percent'] is None for r in model_points):
+            handles.append(Line2D([], [], marker='o', color='none', markerfacecolor='#b5b5b5',
+                                  markeredgecolor='#222222', markersize=6, label='Quality missing'))
+        sm = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
+        if figure_profile == 'dissertation':
+            fig.legend(handles=handles, loc='lower center', bbox_to_anchor=(.5, .005),
+                       ncol=3, frameon=False, fontsize=9, columnspacing=1.2, handletextpad=.45)
+            colorbar = fig.colorbar(sm, cax=fig.add_axes([.87, .22, .027, .58]))
+            colorbar.set_label(quality_label(mr), fontsize=9)
+            colorbar.ax.tick_params(labelsize=8.5)
+            fig.suptitle('F: fastest · E: lowest energy · N/G: Native/Generic', y=.985, fontsize=8.5)
+        else:
+            fig.legend(handles=handles, loc='outside lower center', ncol=3, frameon=False, fontsize=11)
+            colorbar = fig.colorbar(sm, ax=axes, shrink=.82, pad=.018)
+            colorbar.set_label(quality_label(mr), fontsize=12)
+            colorbar.ax.tick_params(labelsize=11)
+            axes[1].set_xlabel('Throughput (images/s) →' +
+                               ('\nH10: log scale' if axes[1].get_xscale() == 'log' else ''), fontsize=12)
+            fig.supylabel('Host-inclusive energy (mJ/image) ↓', fontsize=12)
+            fig.suptitle(NAMES.get(model, model) + '\nF: fastest · E: lowest energy · N/G: Native/Generic', fontsize=13)
+        colorbar.solids.set_rasterized(False)
+        colorbar.solids.set_edgecolor('face')
+        # Freeze the solved layout before selecting text offsets, so the offsets
+        # remain identical across the vector and PNG backends.
+        fig.canvas.draw()
+        fig.set_layout_engine('none')
+        annotations = []
+        for ax, selected, good in pending_annotations:
+            annotations.extend(annotate_tradeoff(ax, selected, good, fig.canvas.get_renderer(),
+                                                 fontsize=8.5 if figure_profile == 'dissertation' else 11))
+        cap = ('All ' + str(len(payload)) + ' observed deployments of ' + NAMES.get(model, model) +
+               ', by host setup; axes are scaled separately. Color shows selected dataset quality on one model-wide scale '
+               '(gray: missing). Energy is calibrated host-inclusive mean(E/N), in mJ/image. '
+               'Outer outlines mark the empirical two-dimensional Pareto front: maximize FPS, minimize energy, including both Fulls. '
+               'Quality is displayed, never a filter or third front objective. F/E label runner optima; F=E means one UID. '
+               'Straight segments only guide between distinct observed front coordinates; intermediate configurations are unproven. '
+               'Singleton fronts have no line. Timed work and quality differ; see METHODS.md and the exported endpoint notes.')
+        if any(r.get('task') == 'detection' for r in mr):
+            cap += (' Native detector oracles are outside timing; Generic records decoded NMS; '
+                    'Fulls retain their recorded host-tail or normalization work.')
+        save(fig, '04_tradeoff_' + model, cap,
+             {'scope_uids': [r['uid'] for r in mr], 'points': payload,
+              'omitted_uids': [r['uid'] for r in model_points if not r['included']],
+              'omitted_points': [r for r in model_points if not r['included']],
+              'pareto_front': dict(PARETO_DEFINITION, groups=front_groups),
+              'quality_color_scale': {'metric': quality_label(mr), 'min_percent': norm.vmin, 'max_percent': norm.vmax,
+                                      'shared_across_setups': True, 'missing_color': '#b5b5b5'},
+              'annotations': annotations}, main=model == 'regnet_x_1_6gf')
+
+
 def render(output):
     output = Path(output)
     dataset_path = output / 'data' / 'PAPER_DATASET.json'
@@ -519,129 +663,7 @@ def render(output):
          'All observed Native/Generic ratios by model/setup. Every dot is one paired split, spread vertically only for readability; the black tick marks the within-group median. No point is removed because of quality or old admission flags.',
          {'pairs': ng, 'model_setup_medians': balanced})
 
-    # The same exported observations and flags drive every trade-off panel.
-    pareto = read(output / 'tables' / 'PARETO_POINTS.json')
-    assert {r['uid'] for r in pareto} == set(ids), 'Pareto table/dataset identities differ'
-    for point in pareto:
-        if point['included']:
-            source = ids[point['uid']]
-            assert point['fps'] == source['fps']
-            assert point['energy_mj_per_image'] == source['energy_mj_per_image']
-            assert point['quality_value'] == (source.get('quality_value') if finite(source.get('quality_value')) else None)
-    tradeoff_setups = ['H8', 'H10', 'DeepX']
-    for model in models:
-        mr = [r for r in rows if r['model_id'] == model]
-        model_points = [r for r in pareto if r['model'] == model]
-        qv = [r['quality_percent'] for r in model_points if r['included'] and r['quality_percent'] is not None]
-        norm = Normalize(min(qv) if qv else 0, max(qv) if qv and max(qv)>min(qv) else (min(qv)+1 if qv else 100))
-        cmap = plt.get_cmap('viridis')
-        # At 7-inch manuscript width, 11/12-point text remains 7.7/8.4 point.
-        # These settings are local so the established quality views are intact.
-        fig, axes = plt.subplots(1, len(tradeoff_setups), figsize=(10.0, 5.5), layout='constrained')
-        payload, front_groups, pending_annotations = [], [], []
-        for ax, setup in zip(axes, tradeoff_setups):
-            sr = [r for r in model_points if r['setup'] == setup]
-            good = [r for r in sr if r['included']]
-            front = [r for r in good if r['pareto_all']]
-            coordinates = sorted({(r['fps'], r['energy_mj_per_image']) for r in front})
-            if len(coordinates) >= 2:
-                ax.plot([xy[0] for xy in coordinates], [xy[1] for xy in coordinates],
-                        color='#444444', linewidth=.85, zorder=1)
-            front_groups.append({'model': model, 'setup': setup,
-                                 'front_uids': [r['uid'] for r in front],
-                                 'front_coordinates': [{'fps': x, 'energy_mj_per_image': y} for x, y in coordinates],
-                                 'n_observations': len(good), 'n_front_uids': len(front),
-                                 'n_front_coordinates': len(coordinates), 'line_drawn': len(coordinates) >= 2})
-            for r in good:
-                q = r['quality_percent']
-                size = 66 if r['kind'] != 'split' else 31
-                ax.scatter(r['fps'], r['energy_mj_per_image'], marker=MARKERS[label(r)],
-                           s=size,
-                           facecolor=cmap(norm(q)) if q is not None else '#b5b5b5',
-                           edgecolor='#222222', linewidth=.4, alpha=.9,
-                           zorder=4 if r['kind'] != 'split' else 2)
-                if r['pareto_all']:
-                    ax.scatter(r['fps'], r['energy_mj_per_image'], marker=MARKERS[label(r)],
-                               s=size + 60, facecolor='none', edgecolor='#111111', linewidth=1.1, zorder=6)
-                source = ids[r['uid']]
-                payload.append(dict(r, endpoint_notes=source.get('endpoint_notes', source.get('execution_notes', []))))
-            selected_labels = [(r, 'TRT Full' if label(r) == 'TRT Full' else 'Vendor Full')
-                               for r in good if r['kind'] != 'split']
-            for runner in ['native', 'generic']:
-                candidates = [r for r in good if r['kind'] == 'split' and r['runner'] == runner]
-                if not candidates:
-                    continue
-                fastest = min(candidates, key=lambda r:(-r['fps'], r['uid']))
-                lowest = min(candidates, key=lambda r:(r['energy_mj_per_image'], r['uid']))
-                prefix = 'N' if runner == 'native' else 'G'
-                if fastest['uid'] == lowest['uid']:
-                    selected_labels.append((fastest, f'{prefix} F=E {fastest["case"]}'))
-                else:
-                    selected_labels.extend([(fastest, f'{prefix} F {fastest["case"]}'),
-                                            (lowest, f'{prefix} E {lowest["case"]}')])
-            ax.set_title(f'{setup}\nn={len(good)} · front={len(front)}', fontsize=12)
-            ax.tick_params(axis='both', labelsize=11)
-            if good and min(r['fps'] for r in good)>0 and max(r['fps'] for r in good)/min(r['fps'] for r in good)>12:
-                ax.set_xscale('log')
-                ax.xaxis.set_major_formatter(ScalarFormatter())
-                ax.set_xlabel('Log scale', fontsize=11)
-            if good and min(r['energy_mj_per_image'] for r in good)>0 and max(r['energy_mj_per_image'] for r in good)/min(r['energy_mj_per_image'] for r in good)>12:
-                ax.set_yscale('log')
-                ax.yaxis.set_major_formatter(ScalarFormatter())
-                ax.set_ylabel('Log scale', fontsize=11)
-            else:
-                ax.yaxis.set_major_locator(MaxNLocator(4))
-            if ax.get_xscale() == 'linear':
-                ax.xaxis.set_major_locator(MaxNLocator(4))
-            ax.margins(x=.22, y=.22)
-            ax.grid(alpha=.16, linewidth=.6)
-            ax.set_axisbelow(True)
-            pending_annotations.append((ax, selected_labels, good))
-        handles = [Line2D([], [], marker=MARKERS[k], color='none', markerfacecolor='#aaaaaa',
-                          markeredgecolor='#222222', label=k.title() if k in ['native','generic'] else k,
-                          markersize=6) for k in MARKERS]
-        handles.append(Line2D([], [], marker='o', color='none', markerfacecolor='none',
-                              markeredgecolor='#111111', markeredgewidth=1.1, markersize=9,
-                              label='Empirical Pareto point'))
-        if any(r['included'] and r['quality_percent'] is None for r in model_points):
-            handles.append(Line2D([], [], marker='o', color='none', markerfacecolor='#b5b5b5',
-                                  markeredgecolor='#222222', markersize=6, label='Quality missing'))
-        fig.legend(handles=handles, loc='outside lower center', ncol=3, frameon=False, fontsize=11)
-        sm = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
-        colorbar = fig.colorbar(sm, ax=axes, shrink=.82, pad=.018)
-        colorbar.solids.set_rasterized(False)
-        colorbar.solids.set_edgecolor('face')
-        colorbar.set_label(quality_label(mr), fontsize=12)
-        colorbar.ax.tick_params(labelsize=11)
-        axes[1].set_xlabel('Throughput (images/s) →' +
-                           ('\nH10: log scale' if axes[1].get_xscale() == 'log' else ''), fontsize=12)
-        fig.supylabel('Host-inclusive energy (mJ/image) ↓', fontsize=12)
-        fig.suptitle(NAMES.get(model, model) + '\nF: fastest · E: lowest energy · N/G: Native/Generic', fontsize=13)
-        # Freeze the solved layout before selecting text offsets, so the offsets
-        # remain identical across the vector and PNG backends.
-        fig.canvas.draw()
-        fig.set_layout_engine('none')
-        annotations = []
-        for ax, selected, good in pending_annotations:
-            annotations.extend(annotate_tradeoff(ax, selected, good, fig.canvas.get_renderer()))
-        cap = ('All ' + str(len(payload)) + ' observed deployments of ' + NAMES.get(model, model) +
-               ', by host setup; axes are scaled separately. Color shows selected dataset quality on one model-wide scale '
-               '(gray: missing). Energy is calibrated host-inclusive mean(E/N), in mJ/image. '
-               'Outer outlines mark the empirical two-dimensional Pareto front: maximize FPS, minimize energy, including both Fulls. '
-               'Quality is displayed, never a filter or third front objective. F/E label runner optima; F=E means one UID. '
-               'Straight segments only guide between distinct observed front coordinates; intermediate configurations are unproven. '
-               'Singleton fronts have no line. Timed work and quality differ; see METHODS.md and the exported endpoint notes.')
-        if any(r.get('task') == 'detection' for r in mr):
-            cap += (' Native detector oracles are outside timing; Generic records decoded NMS; '
-                    'Fulls retain their recorded host-tail or normalization work.')
-        save(fig, '04_tradeoff_' + model, cap,
-             {'scope_uids': [r['uid'] for r in mr], 'points': payload,
-              'omitted_uids': [r['uid'] for r in model_points if not r['included']],
-              'omitted_points': [r for r in model_points if not r['included']],
-              'pareto_front': dict(PARETO_DEFINITION, groups=front_groups),
-              'quality_color_scale': {'metric': quality_label(mr), 'min_percent': norm.vmin, 'max_percent': norm.vmax,
-                                      'shared_across_setups': True, 'missing_color': '#b5b5b5'},
-              'annotations': annotations}, main=model == 'regnet_x_1_6gf')
+    render_tradeoffs(output, save, rows, ids, models)
 
     # Optima cover every runner and group; count candidates independently per axis.
     optima = []

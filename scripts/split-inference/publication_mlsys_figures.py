@@ -36,6 +36,13 @@ PAPER_STYLE = {
     'svg.hashsalt': 'mlsys-r22-publication-20261018', 'savefig.facecolor': 'white',
     'figure.facecolor': 'white', 'text.usetex': False,
 }
+# The dissertation uses 9-point labels near the caption size. Rendered page
+# dimensions are chosen to avoid enlarging labels through LaTeX scaling.
+DISSERTATION_STYLE = dict(PAPER_STYLE, **{
+    'font.size': 9, 'axes.titlesize': 9, 'axes.labelsize': 9,
+    'xtick.labelsize': 8.5, 'ytick.labelsize': 8.5, 'legend.fontsize': 8.5,
+})
+
 METHODS = ['cut_bytes_only', 'weighted_score', 'onnx_real_boundary_hardware_aware',
            'cycle_time_no_handover', 'stored_predicted_stream_fps', 'measured_generic_completion']
 METHOD_LABELS = ['Cut\npayload', 'Weighted\nscore', 'HW fit\n(H10)',
@@ -323,7 +330,8 @@ def write_figure_data(profile_output, context):
     return index, payload
 
 
-def render(profile_output, context, uniform_typography=False, uniform_palette=False):
+def render(profile_output, context, uniform_typography=False, uniform_palette=False,
+           figure_profile="paper", figure_data=None, figure_names=None):
     """Render paper figures; preserve the frozen R22 presentation by default.
 
     uniform_typography applies PAPER_STYLE to the statistical heatmap too.
@@ -339,12 +347,28 @@ def render(profile_output, context, uniform_typography=False, uniform_palette=Fa
     from matplotlib.ticker import FuncFormatter, MaxNLocator
     import numpy as np
 
-    index, payload = write_figure_data(profile_output, context)
+    if figure_profile not in ('paper', 'dissertation'):
+        raise ValueError('Unknown figure profile: ' + figure_profile)
+    if figure_data is None:
+        index, payload = write_figure_data(profile_output, context)
+    else:
+        # Re-render a published payload without recomputing any measurements.
+        payload = figure_data
+        index = None  # fixed-payload rendering does not rewrite the published index
     output = Path(profile_output) / 'figures'
-    styles = PAPER_STYLE
+    output.mkdir(parents=True, exist_ok=True)
+    styles = DISSERTATION_STYLE if figure_profile == 'dissertation' else PAPER_STYLE
     dimensions = {name: (width, height) for name, _, _, width, height in FIGURES}
+    if figure_profile == 'dissertation':
+        dimensions.update(fastest_split_baseline_comparison=(3.7, 2.75),
+                          fastest_deployment_tradeoff=(4.5, 2.85),
+                          resnet_h8_energy_current=(3.7, 2.6),
+                          yolov7_h8_case=(4.9, 2.55))
 
     def save(fig, name):
+        if figure_names is not None and name not in figure_names:
+            plt.close(fig)
+            return
         fig.savefig(output / (name + '.pdf'), metadata={'Creator': 'MLSys R22 offline renderer',
                     'Producer': 'Matplotlib', 'CreationDate': None, 'ModDate': None})
         fig.savefig(output / (name + '.svg'), metadata={'Creator': 'MLSys R22 offline renderer', 'Date': None})
@@ -389,48 +413,49 @@ def render(profile_output, context, uniform_typography=False, uniform_palette=Fa
                         arrowprops={'arrowstyle': '-', 'color': '#777777', 'lw': .45, 'shrinkA': 1, 'shrinkB': 3}, zorder=6)
 
     with plt.rc_context(styles):
-        # The conceptual figure is generated from its versioned source geometry.
-        name = 'system_overview'
-        spec = payload[name]['specification']
-        with plt.rc_context({'font.family': 'DejaVu Sans', 'font.size': 7}):
-            fig = plt.figure(figsize=dimensions[name])
-            ax = fig.add_axes([0, 0, 1, 1])
-            ax.set(xlim=(0, spec['canvas'][0]), ylim=(0, spec['canvas'][1]))
-            ax.axis('off')
-            ink = '#292929'
-            blue, orange, cut_color = ([PAPER_PALETTE[key] for key in ['blue', 'orange', 'green']]
-                                      if uniform_palette else ['#236fa4', '#ba6400', '#466258'])
-            cut_x = spec['cut_x']
-            ax.text(120, 180, spec['heading'], ha='center', va='center', fontsize=7.5, color=ink)
-            for runner in spec['runners']:
-                y = runner['y']
-                ax.text(3, y + 35, runner['name'], fontsize=8.4, fontweight='bold', va='center', color=ink)
-                ax.text(237, y + 35, runner['runtime'], fontsize=6.9, ha='right', va='center', color=ink)
-                for bounds, face, title, color in [(spec['prefix_bounds'], '#edf4fa', 'Accelerator prefix', blue),
-                                                   (spec['suffix_bounds'], '#fff2e4', 'GPU suffix', orange)]:
-                    left, right = bounds
-                    ax.add_patch(FancyBboxPatch((left, y - 13), right - left, 26,
-                                 boxstyle='round,pad=0,rounding_size=2.7', linewidth=0, facecolor=face, zorder=0))
-                    ax.text((left + right) / 2, y + 19, title, color=color, fontsize=7.1, ha='center', va='center')
-                nodes = [(x, y + offset) for x, offset in spec['nodes']]
-                for start, end in [(nodes[a], nodes[b]) for a, b in spec['edges']] + [(nodes[-1], (202, y))]:
-                    ax.add_patch(FancyArrowPatch(start, end, arrowstyle='-|>', mutation_scale=5,
-                                 color=ink, linewidth=.7, shrinkA=3.3, shrinkB=3.3, zorder=2))
-                for i, (x, yy) in enumerate(nodes):
-                    color = '#777777' if i == 0 else blue if x < cut_x else orange
-                    ax.add_patch(Circle((x, yy), radius=2.6 if i == 0 else 3.1, facecolor='white',
-                                        edgecolor=color, linewidth=1, zorder=3))
-                ax.text(10, y - 21, 'Input', ha='center', va='center', fontsize=6.8, color=ink)
-                ax.add_patch(FancyBboxPatch((202, y - 10.5), 35, 21, boxstyle='round,pad=0,rounding_size=2',
-                                            linewidth=.65, edgecolor='#888888', facecolor='#f6f6f6', zorder=3))
-                ax.text(219.5, y, 'Task\ncompletion', ha='center', va='center', fontsize=6.5, linespacing=1.15, color=ink, zorder=4)
-                ax.plot([cut_x, cut_x], [y - 14, y + 14], color=cut_color, lw=.85, ls=(0, (2.2, 2.1)), zorder=4)
-                ax.add_patch(Rectangle((cut_x - 2.8, y - 1.8), 5.6, 3.6, facecolor='white', edgecolor=cut_color, lw=.9, zorder=5))
-                ax.text(cut_x, y - 21, '1 tensor', ha='center', va='center', fontsize=7, color=cut_color)
-            ax.plot([3, 237], [97, 97], color='#dedede', lw=.6)
-            for y, text in zip([17, 6], spec['notes']):
-                ax.text(120, y, text, ha='center', va='center', fontsize=6.6, color=ink)
-            save(fig, name)
+        if figure_names is None or 'system_overview' in figure_names:
+            # The conceptual figure is generated from its versioned source geometry.
+            name = 'system_overview'
+            spec = payload[name]['specification']
+            with plt.rc_context({'font.family': 'DejaVu Sans', 'font.size': 7}):
+                fig = plt.figure(figsize=dimensions[name])
+                ax = fig.add_axes([0, 0, 1, 1])
+                ax.set(xlim=(0, spec['canvas'][0]), ylim=(0, spec['canvas'][1]))
+                ax.axis('off')
+                ink = '#292929'
+                blue, orange, cut_color = ([PAPER_PALETTE[key] for key in ['blue', 'orange', 'green']]
+                                          if uniform_palette else ['#236fa4', '#ba6400', '#466258'])
+                cut_x = spec['cut_x']
+                ax.text(120, 180, spec['heading'], ha='center', va='center', fontsize=7.5, color=ink)
+                for runner in spec['runners']:
+                    y = runner['y']
+                    ax.text(3, y + 35, runner['name'], fontsize=8.4, fontweight='bold', va='center', color=ink)
+                    ax.text(237, y + 35, runner['runtime'], fontsize=6.9, ha='right', va='center', color=ink)
+                    for bounds, face, title, color in [(spec['prefix_bounds'], '#edf4fa', 'Accelerator prefix', blue),
+                                                       (spec['suffix_bounds'], '#fff2e4', 'GPU suffix', orange)]:
+                        left, right = bounds
+                        ax.add_patch(FancyBboxPatch((left, y - 13), right - left, 26,
+                                     boxstyle='round,pad=0,rounding_size=2.7', linewidth=0, facecolor=face, zorder=0))
+                        ax.text((left + right) / 2, y + 19, title, color=color, fontsize=7.1, ha='center', va='center')
+                    nodes = [(x, y + offset) for x, offset in spec['nodes']]
+                    for start, end in [(nodes[a], nodes[b]) for a, b in spec['edges']] + [(nodes[-1], (202, y))]:
+                        ax.add_patch(FancyArrowPatch(start, end, arrowstyle='-|>', mutation_scale=5,
+                                     color=ink, linewidth=.7, shrinkA=3.3, shrinkB=3.3, zorder=2))
+                    for i, (x, yy) in enumerate(nodes):
+                        color = '#777777' if i == 0 else blue if x < cut_x else orange
+                        ax.add_patch(Circle((x, yy), radius=2.6 if i == 0 else 3.1, facecolor='white',
+                                            edgecolor=color, linewidth=1, zorder=3))
+                    ax.text(10, y - 21, 'Input', ha='center', va='center', fontsize=6.8, color=ink)
+                    ax.add_patch(FancyBboxPatch((202, y - 10.5), 35, 21, boxstyle='round,pad=0,rounding_size=2',
+                                                linewidth=.65, edgecolor='#888888', facecolor='#f6f6f6', zorder=3))
+                    ax.text(219.5, y, 'Task\ncompletion', ha='center', va='center', fontsize=6.5, linespacing=1.15, color=ink, zorder=4)
+                    ax.plot([cut_x, cut_x], [y - 14, y + 14], color=cut_color, lw=.85, ls=(0, (2.2, 2.1)), zorder=4)
+                    ax.add_patch(Rectangle((cut_x - 2.8, y - 1.8), 5.6, 3.6, facecolor='white', edgecolor=cut_color, lw=.9, zorder=5))
+                    ax.text(cut_x, y - 21, '1 tensor', ha='center', va='center', fontsize=7, color=cut_color)
+                ax.plot([3, 237], [97, 97], color='#dedede', lw=.6)
+                for y, text in zip([17, 6], spec['notes']):
+                    ax.text(120, y, text, ha='center', va='center', fontsize=6.6, color=ink)
+                save(fig, name)
 
         name = 'fastest_split_baseline_comparison'
         data = payload[name]
@@ -519,6 +544,8 @@ def render(profile_output, context, uniform_typography=False, uniform_palette=Fa
         fig.subplots_adjust(left=.055, right=.99, bottom=.22, top=.78, wspace=.32)
         colors = [PAPER_PALETTE[key] for key in ['gray', 'blue', 'green']]
         labels = [p['configuration'].replace(' Full', '\nFull').replace('Split ', 'Split\n') for p in points]
+        if figure_profile == 'dissertation':
+            labels = [label.replace('Hailo8', 'H8').replace('TensorRT', 'TRT') for label in labels]
         panels = [
             ('throughput_fps', '(a) Throughput', 'FPS · higher is better', [0, 40, 80, 120], 130, 0),
             ('system_energy_mj_per_image', '(b) System energy', 'mJ/image · lower is better', [0, 200, 400, 600], 720, 2),
@@ -535,8 +562,8 @@ def render(profile_output, context, uniform_typography=False, uniform_palette=Fa
             ax.tick_params(axis='x', length=0, pad=5)
             ax.tick_params(axis='y', length=2.5, pad=2)
             ax.grid(axis='y', color='#dddddd', linewidth=.45, zorder=0)
-            ax.set_title(title, pad=25, fontweight='bold')
-            ax.text(.5, 1.055, unit, transform=ax.transAxes, ha='center', va='bottom', fontsize=8.8)
+            ax.set_title(title, pad=22 if figure_profile == 'dissertation' else 25, fontweight='bold')
+            ax.text(.5, 1.055, unit, transform=ax.transAxes, ha='center', va='bottom', fontsize=8 if figure_profile == 'dissertation' else 8.8)
             if field == 'coco_ap_50_95_percent' and data['quality_threshold_percent'] is not None:
                 ax.axhline(data['quality_threshold_percent'], color='#333333', lw=.75, ls=(0, (3, 2)), zorder=4)
             for bar, value in zip(bars, values):
@@ -549,6 +576,8 @@ def render(profile_output, context, uniform_typography=False, uniform_palette=Fa
         save(fig, name)
 
         for name in ['quality_generic_selection_loss', 'current_generic_selection_loss']:
+            if figure_names is not None and name not in figure_names:
+                continue
             data = payload[name]
             fig, ax = plt.subplots(figsize=dimensions[name])
             for setup in SETUPS:
@@ -566,50 +595,51 @@ def render(profile_output, context, uniform_typography=False, uniform_palette=Fa
             fig.tight_layout(pad=.3)
             save(fig, name)
 
-        name = 'selector_loss_heatmap'
-        data = payload[name]
-        groups, methods = data['group_order'], data['methods']
-        heatmap_style = PAPER_STYLE if uniform_typography else {
-            'font.family': 'DejaVu Sans', 'font.size': 8, 'axes.labelsize': 8}
-        with plt.rc_context(heatmap_style):
-            matrix = np.full((len(groups), len(methods)), np.nan)
-            lookup = {}
-            for point in data['points']:
-                matrix[point['y'], point['x']] = point['loss_pct']
-                lookup[(point['model_id'], point['setup_id'], point['method'])] = point
-            fig, ax = plt.subplots(figsize=dimensions[name])
-            fig.subplots_adjust(left=.275, right=.895, bottom=.025, top=.85)
-            im = ax.imshow(matrix, cmap='YlOrRd', vmin=0, vmax=max(90, np.nanmax(matrix)), aspect='auto', interpolation='nearest')
-            ax.grid(False)
-            for i in range(len(groups)):
-                for j in range(len(methods)):
-                    value = matrix[i, j]
-                    ax.text(j, i, f'{value:.1f}' if finite(value) else 'NA', ha='center', va='center',
-                            fontsize=7.5, color='white' if value >= 49 else '#202020')
-            hits = [sum(str(p['top1_hit_tie_aware']).lower() in ['true', '1'] for p in data['points'] if p['method'] == method)
-                    for method in methods]
-            ax.set_xticks(range(len(methods)), [f'{METHOD_LABELS[METHODS.index(method)]}\n{hit}/{len(groups)} hits'
-                                               for method, hit in zip(methods, hits)])
-            ax.xaxis.tick_top()
-            ax.tick_params(axis='x', length=0, pad=6, labelsize=7.5)
-            ax.set_yticks(range(len(groups)), [f'{setup}  ({lookup[(model, setup, methods[0])]["n"]})'
-                                              for model, setup in groups])
-            ax.tick_params(axis='y', length=0, pad=5, labelsize=7.5)
-            for tick, (_, setup) in zip(ax.get_yticklabels(), groups):
-                tick.set_color(COLORS[setup])
-            for model in dict.fromkeys(model for model, _ in groups):
-                positions = [i for i, (m, _) in enumerate(groups) if m == model]
-                ax.text(-.175, 1 - (sum(positions) / len(positions) + .5) / len(groups), MODEL_LABELS.get(model, model),
-                        transform=ax.transAxes, ha='right', va='center', fontsize=7.5, color='#222222')
-                if positions[-1] < len(groups) - 1:
-                    ax.axhline(positions[-1] + .5, color='white', lw=1.8)
-            for x in range(len(methods) - 1):
-                ax.axvline(x + .5, color='white', lw=.55)
-            for spine in ax.spines.values():
-                spine.set_visible(False)
-            color_axes = fig.add_axes([.92, .16, .017, .53])
-            colorbar = fig.colorbar(im, cax=color_axes, ticks=[0, 20, 40, 60, 80])
-            colorbar.ax.tick_params(labelsize=7.5, width=.5, length=2)
-            colorbar.set_label('Native throughput loss (%)', fontsize=8, labelpad=6)
-            save(fig, name)
+        if figure_names is None or 'selector_loss_heatmap' in figure_names:
+            name = 'selector_loss_heatmap'
+            data = payload[name]
+            groups, methods = data['group_order'], data['methods']
+            heatmap_style = PAPER_STYLE if uniform_typography else {
+                'font.family': 'DejaVu Sans', 'font.size': 8, 'axes.labelsize': 8}
+            with plt.rc_context(heatmap_style):
+                matrix = np.full((len(groups), len(methods)), np.nan)
+                lookup = {}
+                for point in data['points']:
+                    matrix[point['y'], point['x']] = point['loss_pct']
+                    lookup[(point['model_id'], point['setup_id'], point['method'])] = point
+                fig, ax = plt.subplots(figsize=dimensions[name])
+                fig.subplots_adjust(left=.275, right=.895, bottom=.025, top=.85)
+                im = ax.imshow(matrix, cmap='YlOrRd', vmin=0, vmax=max(90, np.nanmax(matrix)), aspect='auto', interpolation='nearest')
+                ax.grid(False)
+                for i in range(len(groups)):
+                    for j in range(len(methods)):
+                        value = matrix[i, j]
+                        ax.text(j, i, f'{value:.1f}' if finite(value) else 'NA', ha='center', va='center',
+                                fontsize=7.5, color='white' if value >= 49 else '#202020')
+                hits = [sum(str(p['top1_hit_tie_aware']).lower() in ['true', '1'] for p in data['points'] if p['method'] == method)
+                        for method in methods]
+                ax.set_xticks(range(len(methods)), [f'{METHOD_LABELS[METHODS.index(method)]}\n{hit}/{len(groups)} hits'
+                                                   for method, hit in zip(methods, hits)])
+                ax.xaxis.tick_top()
+                ax.tick_params(axis='x', length=0, pad=6, labelsize=7.5)
+                ax.set_yticks(range(len(groups)), [f'{setup}  ({lookup[(model, setup, methods[0])]["n"]})'
+                                                  for model, setup in groups])
+                ax.tick_params(axis='y', length=0, pad=5, labelsize=7.5)
+                for tick, (_, setup) in zip(ax.get_yticklabels(), groups):
+                    tick.set_color(COLORS[setup])
+                for model in dict.fromkeys(model for model, _ in groups):
+                    positions = [i for i, (m, _) in enumerate(groups) if m == model]
+                    ax.text(-.175, 1 - (sum(positions) / len(positions) + .5) / len(groups), MODEL_LABELS.get(model, model),
+                            transform=ax.transAxes, ha='right', va='center', fontsize=7.5, color='#222222')
+                    if positions[-1] < len(groups) - 1:
+                        ax.axhline(positions[-1] + .5, color='white', lw=1.8)
+                for x in range(len(methods) - 1):
+                    ax.axvline(x + .5, color='white', lw=.55)
+                for spine in ax.spines.values():
+                    spine.set_visible(False)
+                color_axes = fig.add_axes([.92, .16, .017, .53])
+                colorbar = fig.colorbar(im, cax=color_axes, ticks=[0, 20, 40, 60, 80])
+                colorbar.ax.tick_params(labelsize=7.5, width=.5, length=2)
+                colorbar.set_label('Native throughput loss (%)', fontsize=8, labelpad=6)
+                save(fig, name)
     return index, payload

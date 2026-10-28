@@ -393,10 +393,10 @@ def family_results(pairs, eligible, selected, quality_selected, comparison, bind
     return result
 
 
-def plot_selection_loss(points, language='en'):
+def plot_selection_loss(points, language='en', figure_profile='paper'):
     """Show every model/device group; place large losses outside the scale."""
     sys.path.insert(0, str(REPO / 'scripts/split-inference'))
-    from publication_mlsys_figures import PAPER_STYLE, PAPER_PALETTE
+    from publication_mlsys_figures import PAPER_STYLE, PAPER_PALETTE, DISSERTATION_STYLE
     import matplotlib.pyplot as plt
     from matplotlib.lines import Line2D
     models = ['mobilenet_v3_large', 'regnet_x_1_6gf', 'resnet50',
@@ -404,8 +404,8 @@ def plot_selection_loss(points, language='en'):
     labels = ['MobileNetV3-L', 'RegNet-X', 'ResNet-50', 'YOLO11l',
               'YOLO26m', 'YOLO26s', 'YOLOv7']
     position = {name: index for index, name in enumerate(models)}
-    with plt.rc_context(PAPER_STYLE):
-        fig, ax = plt.subplots(figsize=(3.6, 2.62))
+    with plt.rc_context(DISSERTATION_STYLE if figure_profile == 'dissertation' else PAPER_STYLE):
+        fig, ax = plt.subplots(figsize=(4.65, 2.85) if figure_profile == 'dissertation' else (3.6, 2.62))
         fig.subplots_adjust(left=.30, right=.79, bottom=.18, top=.88)
         handles = []
         for setup, marker, color, offset in [('H8', 'o', 'blue', -.14),
@@ -429,7 +429,7 @@ def plot_selection_loss(points, language='en'):
                     value = f'{loss:.2f}%' if language == 'en' else f'{loss:.2f} %'.replace('.', ',')
                     note = 'off scale' if language == 'en' else 'außerhalb'
                     ax.text(1.14, y, value + '\n' + note, transform=ax.get_yaxis_transform(),
-                            ha='left', va='center', fontsize=7, color=color, clip_on=False)
+                            ha='left', va='center', fontsize=8.5 if figure_profile == 'dissertation' else 7, color=color, clip_on=False)
                 else:
                     ax.scatter([loss], [y], marker=marker, s=19,
                                facecolors='none' if row.get('singleton') else color,
@@ -437,7 +437,7 @@ def plot_selection_loss(points, language='en'):
         ax.set(xlim=(-.2, 6), ylim=(6.55, -.55), xticks=list(range(7)),
                yticks=list(range(7)), yticklabels=labels,
                xlabel='Native throughput lost (%)' if language == 'en' else 'Native-Durchsatzverlust (%)')
-        ax.tick_params(axis='y', labelsize=8, length=3, pad=3)
+        ax.tick_params(axis='y', labelsize=8.5 if figure_profile == 'dissertation' else 8, length=3, pad=3)
         ax.grid(axis='x', color='#DDDDDD', linewidth=.55)
         ax.legend(handles=handles, frameon=False, ncol=3, loc='lower center',
                   bbox_to_anchor=(.5, 1.015), columnspacing=1.0, handletextpad=.3,
@@ -445,7 +445,9 @@ def plot_selection_loss(points, language='en'):
         return fig
 
 
-def render(output, numeric_only):
+def render(output, numeric_only, figure_profile='paper'):
+    if figure_profile not in ('paper', 'dissertation'):
+        raise ValueError('Unknown figure profile: ' + figure_profile)
     summary = read(output / 'summary.json')
     with (output / 'analysis/aggregate_curves.csv').open() as stream:
         raw = list(csv.DictReader(stream))
@@ -526,25 +528,29 @@ def render(output, numeric_only):
     if numeric_only:
         return
     sys.path.insert(0, str(REPO / 'scripts/split-inference'))
-    from publication_mlsys_figures import PAPER_STYLE, PAPER_PALETTE
+    from publication_mlsys_figures import PAPER_STYLE, PAPER_PALETTE, DISSERTATION_STYLE
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
-    colors = ['green', 'blue', 'yellow', 'dark_gray', 'purple']
-    with plt.rc_context(PAPER_STYLE):
+    colors = ['blue', 'dark_gray', 'orange', 'green', 'purple'] if figure_profile == 'dissertation' else ['green', 'blue', 'yellow', 'dark_gray', 'purple']
+    labels = dict(LABELS)
+    if figure_profile == 'dissertation':
+        labels.update(bytes='Boundary size', weighted_default='Standard weights',
+                      weighted_pooled='Shared fitted weights', weighted_cv='Model-held-out weights')
+    with plt.rc_context(DISSERTATION_STYLE if figure_profile == 'dissertation' else PAPER_STYLE):
         for name, points, ylabel, key in [
             ('rq2_weighted_all_models', [dict(method=m, **r) for m in METHODS for r in series[m]], 'Mean Native throughput loss (%)', 'mean_loss_pct'),
             ('rq2_native_success', success, 'Exact Native optimum found (%)', 'exact_success_fraction')]:
-            fig, ax = plt.subplots(figsize=(3.6, 2.95))
+            fig, ax = plt.subplots(figsize=(4.65, 2.95) if figure_profile == 'dissertation' else (3.6, 2.95))
             for method, color in zip(METHODS, colors):
                 selected = [r for r in points if r['method'] == method and r[key] is not None]
-                ax.plot([r['k'] for r in selected], [100*r[key] if name == 'rq2_native_success' else r[key] for r in selected], label=LABELS[method], color=PAPER_PALETTE[color], lw=1.2)
-            ax.set(xlim=(.8, 20.2), xlabel='Maximum Native trials per group', ylabel=ylabel, xticks=[1, 3, 5, 10, 15, 20])
-            ax.legend(frameon=False, fontsize=6); fig.tight_layout()
+                ax.plot([r['k'] for r in selected], [100*r[key] if name == 'rq2_native_success' else r[key] for r in selected], label=labels[method], color=PAPER_PALETTE[color], lw=1.2)
+            ax.set(xlim=(.8, 20.2), xlabel='Maximum Native tests per combination', ylabel=ylabel, xticks=[1, 3, 5, 10, 15, 20])
+            ax.legend(frameon=False, fontsize=8.5 if figure_profile == 'dissertation' else 6); fig.tight_layout()
             legacy.save_figure(fig, output / 'figures' / name); plt.close(fig)
         for name in ['current_generic_selection_loss', 'quality_generic_selection_loss']:
             points = read(output / 'figures' / f'{name}.json')['points']
-            fig = plot_selection_loss(points)
+            fig = plot_selection_loss(points, figure_profile=figure_profile)
             legacy.save_figure(fig, output / 'figures' / name)
             plt.close(fig)
         for ext in ['pdf', 'svg', 'png']:

@@ -88,3 +88,65 @@ Die statischen Kataloge [figures_de.json](locales/figures_de.json) und [tables_d
 Für neue Beschriftungen werden die Kataloge ergänzt und die Ausgabe erneut erzeugt. Die englischen Quelldaten und die bestehenden englischen Ergebnisse bleiben dabei unverändert.
 
 Der Umfang dieses Exports ist **Split-Inferenz einschließlich der ergänzenden Split-Studien**. Die Energiemessung besitzt ein [separates Auswertetool](../energy-measurement/README.md) und ist nicht Bestandteil dieses Exports.
+
+## English final-thesis profile
+
+The English thesis export uses the final 451-configuration deployment dataset,
+187 quality-admissible Native/Generic pairs, and the 331-cut broader Generic
+study. It does not replace the independent historical confirmation study.
+
+```sh
+python3 scripts/dissertation/export_thesis_selection.py \
+  --output local-output/thesis-en --figure-profile dissertation
+python3 scripts/dissertation/export_frozen_thesis_figures.py \
+  --output local-output/thesis-en-fixed
+```
+
+The first output directory must be new or empty. The first command redraws
+15 current figures using the existing deployment, RQ2, staged-selection and
+trade-off renderers. Fonts are approximately 9 points at the intended printed
+width, matching the dissertation captions rather than enlarging the graphics.
+The seven compact galleries use three vertical accelerator panels in a 4.8 by
+5.8 inch canvas, with one shared quality scale per model. Main selection plots
+are 4.65 inches wide; the workflow and YOLOv7 case use 4.9 inches. Insert the
+PDFs at their natural width to retain the intended font size.
+
+The staged workflow illustrates YOLO11l's 615 graph boundaries, followed by
+five Generic and two Native tests. It is not a measured 615-cut campaign.
+The budget graph retains one- and two-Native-test curves. The redundant
+classifier/detector graph-shortlist plot is omitted from this thesis export;
+its numerical comparison remains in the tables. The quality table lists CPU,
+Full and Split quality plus the Split-minus-Full difference; CPU-relative
+quality losses are not duplicated as extra columns.
+
+`tables/` contains 10 LaTeX files from full-precision published records or their
+current official exports. `MANIFEST.json` records input, source and output
+hashes. `VALIDATION.json` checks 116 unchanged CSV/JSON payloads, 60 staged
+aggregate comparisons and 3,780 combination-policy-budget cases. All seven
+gallery payloads retain their exact 450 measured points and 34 same-setup
+Pareto points. No fitting, quality reclassification or hardware measurement
+is performed. The canonical English exports are in
+`publications/dissertation/thesis-v56/en/current-selection/`.
+
+The second command copies 13 fixed English publication exports: eleven
+energy plots, the DAG-cut schematic and the independent stage-cost plot.
+These exact v48 layouts came from the author's English v56 source archive.
+They are preserved as PDFs, not represented as newly data-driven renderings.
+Their source archive, original paths, hashes and related numerical evidence
+are documented in `ENERGY_SOURCE_MANIFEST.json` and
+`METHODS_SOURCE_MANIFEST.json` under
+`publications/dissertation/thesis-v56/en/`. The optional `--project` argument
+installs these checked PDFs at their existing LaTeX paths. The drawing bundle
+supplied by the author remains the source for the other conceptual diagrams.
+
+Copy only the PDFs and required TeX files into the LaTeX project. The temporary
+`render_work/` folder is not needed for compilation. The default paper geometry
+remains unchanged; the modified publication renderer was checked against the
+previous renderer with 41 byte-identical paper outputs.
+
+## Supplied DrawIO diagrams
+
+The English DrawIO-7 bundle is exported separately with
+`scripts/dissertation/drawio/update_drawio_thesis.py`. Its
+[README](drawio/README.md) documents the input bundle, typography and two
+factual corrections. Only PDF exports enter the LaTeX project.

@@ -1,0 +1,19 @@
+\begin{table}[!htb]
+\centering\small\setlength{\tabcolsep}{3pt}
+\caption{Quality of the global throughput winners (\%). Classification uses Top1 and detection uses COCO AP$_{50:95}$. $\Delta q$ is Split minus Full in percentage points. The CPU reference is used for quality eligibility.}
+\label{tab:review:quality}
+
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Model & CPU & Full & Split & $\Delta q$ (pp) \\
+\midrule
+MobileNetV3-L & 73.70 & 71.72 & 72.02 & +0.30 \\
+RegNet-X & 78.94 & 78.70 & 79.16 & +0.46 \\
+ResNet-50 & 80.44 & 80.54 & 80.16 & -0.38 \\
+YOLO11l & 46.68 & 45.67 & 46.37 & +0.71 \\
+YOLO26m & 44.90 & 44.82 & 44.03 & -0.79 \\
+YOLO26s & 40.09 & 40.11 & 39.18 & -0.93 \\
+YOLOv7 & 46.03 & 45.86 & 45.74 & -0.12 \\
+\bottomrule
+\end{tabular}
+\end{table}

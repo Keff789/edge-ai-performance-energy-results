@@ -194,9 +194,9 @@ def export_tables(output, summaries, details, language):
     write_csv(table / 'primary_budget.csv', primary)
     n = primary[0]['groups']
     if language == 'en':
-        caption = ('Staged-selection budgets per model--device group. Budgets are maxima. Exact winners, mean and '
-                   'lowest retained Native throughput refer to the best measured Native cut in each group. '
-                   f'All {n} groups receive equal weight.')
+        caption = ('Staged-selection budgets per model--accelerator combination. Budgets are maxima. Exact winners, mean and '
+                   'lowest retained Native throughput refer to the best measured Native cut in each combination. '
+                   f'All {n} combinations receive equal weight.')
         header = r'\shortstack{Tests\\Generic + Native} & \shortstack{Exact\\winners} & \shortstack{Mean\\(\%)} & \shortstack{Lowest\\(\%)} \\'
     else:
         caption = ('Testbudgets je Modell--Gerät-Gruppe. Die Budgets sind Höchstwerte. Exakte Treffer sowie der mittlere '
@@ -233,7 +233,7 @@ def export_tables(output, summaries, details, language):
     (table / 'task_budgets.tex').write_text('\n'.join(lines), encoding='utf-8')
 
 
-def export_figure(output, summaries, language):
+def export_figure(output, summaries, language, figure_profile='paper'):
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
@@ -241,12 +241,12 @@ def export_figure(output, summaries, language):
     spec = importlib.util.spec_from_file_location('staged_selection_style', style_path)
     style = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(style)
-    plt.rcParams.update(style.PAPER_STYLE)
+    plt.rcParams.update(style.DISSERTATION_STYLE if figure_profile == 'dissertation' else style.PAPER_STYLE)
     plt.rcParams['svg.hashsalt'] = 'staged-selection-r41'
     rows = [row for row in summaries if row['task'] == 'all' and row['method'] == 'bytes'
             and row['policy'] in ('cascade_native1', 'cascade_native2') and row['k'] >= 2]
     rows.sort(key=lambda row: (row['native_budget'], row['k']))
-    fig, ax = plt.subplots(figsize=(3.35, 2.55))
+    fig, ax = plt.subplots(figsize=(4.65, 2.85) if figure_profile == 'dissertation' else (3.35, 2.55))
     fig.subplots_adjust(left=.18, bottom=.225, right=.97, top=.86)
     for budget, color, linestyle, marker in [(2, 'blue', '-', 'o'), (1, 'orange', '--', 's')]:
         series = [row for row in rows if row['native_budget'] == budget]
@@ -255,7 +255,7 @@ def export_figure(output, summaries, language):
                 color=style.PAPER_PALETTE[color], linewidth=1.35, linestyle=linestyle,
                 marker=marker, markersize=2.3, label=label, zorder=4 if budget == 2 else 3)
     ax.legend(loc='lower center', bbox_to_anchor=(.5, 1.01), ncol=2, frameon=False,
-              fontsize=7.2, handlelength=1.7, columnspacing=1.1, handletextpad=.45, borderpad=0)
+              fontsize=8.5 if figure_profile == 'dissertation' else 7.2, handlelength=1.7, columnspacing=1.1, handletextpad=.45, borderpad=0)
 
     ax.axhline(100, color='#a7a7a7', linewidth=.6, linestyle=(0, (3, 3)), zorder=1)
     ax.grid(axis='y', color='#dddddd', linewidth=.45, zorder=0)
@@ -279,7 +279,7 @@ def export_figure(output, summaries, language):
         label = f"{k} {connector}\n{number(row['mean_retained_native_pct'], language)}%"
         ax.scatter([k], [row['mean_retained_native_pct']], s=18, color=style.PAPER_PALETTE['blue'], zorder=4)
         ax.annotate(label, xy=(k, row['mean_retained_native_pct']), xytext=(xtext, ytext),
-                    ha='center', va='center', fontsize=8,
+                    ha='center', va='center', fontsize=9 if figure_profile == 'dissertation' else 8,
                     arrowprops=dict(arrowstyle='-', color='#777777', linewidth=.6),
                     bbox=dict(facecolor='white', edgecolor='none', pad=1.5), zorder=5)
     folder = output / 'artifacts' / language / 'figures'
@@ -322,7 +322,7 @@ def flow_spec(source):
                 geometry_note='Each square represents one option at that illustrative stage. All squares have equal size; process boxes do not encode quantity.')
 
 
-def export_flow(output, spec_data, language):
+def export_flow(output, spec_data, language, figure_profile='paper'):
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
@@ -332,7 +332,7 @@ def export_flow(output, spec_data, language):
     spec = importlib.util.spec_from_file_location('staged_flow_style', style_path)
     style = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(style)
-    plt.rcParams.update(style.PAPER_STYLE)
+    plt.rcParams.update(style.DISSERTATION_STYLE if figure_profile == 'dissertation' else style.PAPER_STYLE)
     plt.rcParams['svg.hashsalt'] = 'staged-selection-flow-r41'
     count, model = spec_data['graph_candidates'], spec_data['example_model_label']
     if language == 'en':
@@ -351,34 +351,39 @@ def export_flow(output, spec_data, language):
             ('Gewählter Split', 'Schnelleres Native-Ergebnis'),
         ]
         count_labels = [f'{count} mögliche Cuts', '5 Cuts testen', '2 Cuts testen', '1 gewählter Cut']
-    fig, ax = plt.subplots(figsize=(7.0, 2.48))
+    fig, ax = plt.subplots(figsize=(4.9, 2.2) if figure_profile == 'dissertation' else (7.0, 2.48))
     fig.subplots_adjust(left=.005, right=.995, bottom=.015, top=.985)
     ax.set_xlim(0, 7)
-    ax.set_ylim(0, 2.48)
+    ax.set_ylim(0, 2.75 if figure_profile == 'dissertation' else 2.48)
     ax.set_aspect('equal')
     ax.axis('off')
     centers = [.875, 2.625, 4.375, 6.125]
     palette = ['blue', 'orange', 'green', 'dark_gray']
     counts = spec_data['stage_counts']
-    grid_bottom, step = .95, .038
+    grid_bottom, step = (1.12 if figure_profile == 'dissertation' else .95), .038
     for i, (center, n, color_name, lines) in enumerate(zip(centers, counts, palette, labels)):
         color = style.PAPER_PALETTE[color_name]
         columns = 25 if i == 0 else n
         rows = math.ceil(n / columns)
         xs = [center + ((j % columns) - (columns - 1) / 2) * step for j in range(n)]
         ys = [grid_bottom + (j // columns) * step for j in range(n)]
-        ax.scatter(xs, ys, s=3.2, marker='s', c=color, linewidths=0, zorder=2)
+        ax.scatter(xs, ys, s=1.8 if figure_profile == 'dissertation' else 3.2, marker='s', c=color, linewidths=0, zorder=2)
         label_y = grid_bottom + rows * step + .12
-        ax.text(center, label_y, count_labels[i], ha='center', va='bottom', fontsize=10.5, fontweight='bold')
+        ax.text(center, label_y, count_labels[i], ha='center', va='bottom', fontsize=9.5 if figure_profile == 'dissertation' else 10.5, fontweight='bold')
         if i == 0:
-            ax.text(center, label_y + .22, model, ha='center', va='bottom', fontsize=9)
+            ax.text(center, label_y + .22, model, ha='center', va='bottom', fontsize=9 if figure_profile == 'dissertation' else 9)
         pale = tuple(.94 + .06 * component for component in to_rgb(color))
-        width, height, y = 1.43, .48, .14
+        width, height, y = (1.52, .68, .10) if figure_profile == 'dissertation' else (1.43, .48, .14)
         ax.add_patch(FancyBboxPatch((center - width / 2, y), width, height,
                                    boxstyle='round,pad=0.025,rounding_size=0.045',
                                    linewidth=.8, edgecolor=color, facecolor=pale))
-        ax.text(center, y + .32, lines[0], ha='center', va='center', fontsize=9.5, fontweight='bold')
-        ax.text(center, y + .13, lines[1], ha='center', va='center', fontsize=7.4)
+        title = lines[0]
+        subtitle = lines[1]
+        if figure_profile == 'dissertation':
+            title = title.replace('Graph preselection', 'Graph\npreselection')
+            subtitle = subtitle.replace('Pool selection + Bytes', 'Pool + boundary size').replace('Measure throughput', 'Universal runner').replace('Test the two fastest', 'Test top two')
+        ax.text(center, y + (.45 if figure_profile == 'dissertation' else .32), title, ha='center', va='center', fontsize=9 if figure_profile == 'dissertation' else 9.5, fontweight='bold')
+        ax.text(center, y + (.16 if figure_profile == 'dissertation' else .13), subtitle, ha='center', va='center', fontsize=8.3 if figure_profile == 'dissertation' else 7.4)
     for left, right in zip(centers[:-1], centers[1:]):
         ax.add_patch(FancyArrowPatch((left + .77, .38), (right - .77, .38), arrowstyle='-|>',
                                     mutation_scale=9, linewidth=.8,
@@ -409,6 +414,8 @@ def main():
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--languages', nargs='+', choices=('en', 'de'), default=['en', 'de'])
     parser.add_argument('--verify', action='store_true', help='Check against the paired study direct graph curves.')
+    parser.add_argument('--figure-profile', choices=('paper', 'dissertation'), default='paper',
+                        help='Dissertation uses wider axes and larger type. Numerical data are unchanged.')
     args = parser.parse_args()
     source, output = args.paired_study.resolve(), args.output.resolve()
     if output == source or source in output.parents or output in source.parents:
@@ -426,8 +433,8 @@ def main():
     schematic = flow_spec(args.graph_metadata)
     for language in dict.fromkeys(args.languages):
         export_tables(output, summaries, details, language)
-        export_figure(output, summaries, language)
-        export_flow(output, schematic, language)
+        export_figure(output, summaries, language, args.figure_profile)
+        export_flow(output, schematic, language, args.figure_profile)
     groups = {(row['model'], row['setup']) for row in pairs}
     primary = [row for row in summaries if row['task'] == 'all' and row['method'] == 'bytes' and row['policy'] == 'cascade_native2' and row['k'] in PRIMARY_BUDGETS]
     info = ['# Graph–Generic–Native selection', '',
@@ -481,7 +488,7 @@ def main():
     (output / 'README.md').write_text('\n'.join(info), encoding='utf-8')
     manifest = dict(schema='staged-selection-v1', paired_cuts=len(pairs), groups=len(groups),
                     primary_method='bytes', primary_generic_budgets=list(PRIMARY_BUDGETS), maximum_native_tests=2,
-                    languages=list(dict.fromkeys(args.languages)), fitting_performed=False, hardware_measurements=False,
+                    languages=list(dict.fromkeys(args.languages)), figure_profile=args.figure_profile, fitting_performed=False, hardware_measurements=False,
                     inputs={str(path.relative_to(source)): sha(path) for path in sources},
                     schematic_source=schematic['source'],
                     generator_sha256=sha(Path(__file__)),
