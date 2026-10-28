@@ -1,6 +1,6 @@
 {
   "schema": "english-dissertation-selection-assets-v1",
-  "repository_commit": "e0f2c439e1e5431fd0644e068b87010be1a20453",
+  "repository_commit": "1dc92dbd4f73c52cb298d3562d0d0a927c37f671",
   "published_data_baseline": "aed301819663b5fa27bd5731fb74fef3e46ee927",
   "figure_profile": "dissertation",
   "inputs": {
@@ -23,11 +23,11 @@
     "scripts/dissertation/export_thesis_selection.py": "98b34c4ad9054b3aa15f9a1fac2e22699986cd07b45e9ad2ae345a646973d6f6",
     "scripts/split-inference/render_figures.py": "fdbd794a9a7dd5554c493b3b9187a38071b925f9cc4bc4e76f1a01458f6a4d72",
     "scripts/split-inference/publication_mlsys_figures.py": "636518e54239e52c114c9a5ad68711fdca1ee5d4c3ec2ce7af99aa9d2f8d2680",
-    "scripts/supplementary-studies/staged-selection/reproduce.py": "72abd88627d8929900d3a08ceabc93f410ba5d49253fcec0207a7006e84d0c53",
+    "scripts/supplementary-studies/staged-selection/reproduce.py": "7cfa06fd9c15ccb9d75675909de46df971574ee0c38ae3ebe6f308be81fc04e2",
     "scripts/supplementary-studies/rq2-native-scope-20261027/reproduce.py": "02fbb9f3a669b16df385674da93355d5952b31f21a20efb9849b230491187b2c"
   },
   "generator_sha256": "98b34c4ad9054b3aa15f9a1fac2e22699986cd07b45e9ad2ae345a646973d6f6",
-  "note": "Source commit identifies the published numeric data. Local generator changes affect presentation only. Historical confirmation assets are deliberately excluded.",
+  "note": "Source checkout identifies the unchanged numerical inputs. The dissertation workflow marks illustrative budgets; the paper profile and numerical results are unchanged. Earlier confirmation assets are excluded from this exporter.",
   "files": {
     "GALLERY_DATA.json": "15ee00666478ffaa4de2b66d51ac5bf91df73b5757a7af6bac26f815dd65c1c6",
     "VALIDATION.json": "4eab289eaea2e85b15eba70bc583071290d080bcb3ef7d319f92947f9449e801",
@@ -43,8 +43,8 @@
     "tables/staged_budget.tex": "ce29dd8bb4c587c91138e7af7c43fbf386db9a40ed24c77dbd9788eb1dec4ada",
     "figures/yolov7_h8_case.png": "8b034338894bdb7f24f0c49fe2f2c8af0499e038dc5766c6b0b0f48bd6b27205",
     "figures/04_tradeoff_resnet50.svg": "58ea179ae6a8fa24ca4536b5b19a27308427a404b4b4634bb9c565bbd606f50c",
-    "figures/staged_selection_flow.png": "23a001f03de2c032e8e390549e22eb76bb46a8125132a0af4c8cfe4c7fd87880",
-    "figures/staged_selection_flow.svg": "37d1f658483ff4e8764d8567631ac09b02d469b186aa204887bd10b63e11d07d",
+    "figures/staged_selection_flow.png": "7b30a2bb1c8443713866d93f368ab821ab60afbd9011f84117e20001757a78d0",
+    "figures/staged_selection_flow.svg": "e8f2cfb45c31e6e41d404208ae034b96a12b324f35d438f7f7aa0092332dbee2",
     "figures/staged_selection_budget.png": "423edf534ca6f04bc0c344158ab721fbf38b11d1727a77c17e6c4fcd59661ad5",
     "figures/fastest_deployment_tradeoff.png": "88e7fa8e9c8622a3854624c68b435cfeea27b57b543c39dc5e6c5428d1d21f05",
     "figures/04_tradeoff_mobilenet_v3_large.pdf": "d0eb59a06c4f51a25859091175d2c922887eed5dbfcaa0cdf2e2a5821cd3b235",
@@ -61,7 +61,7 @@
     "figures/04_tradeoff_resnet50.png": "76885fb88c5a7f39aeeae1abfaf2ba74fed803ae96a391bf61a29130540557b1",
     "figures/fastest_split_baseline_comparison.pdf": "4a74b612b785dfc0c3b34801f0eeff953d26b0a8880b3874f082a996fc79249b",
     "figures/staged_selection_budget.pdf": "cdc629be19f938962bd4e7147e362ddeb0341f15be971d3f797a109376ad9c0f",
-    "figures/staged_selection_flow.pdf": "0f852cee1094db12a5eb39eb9f257cae39132dbe06c027bc8dba843132de3598",
+    "figures/staged_selection_flow.pdf": "29fdee82acbfc2700ebfb03e78dd5c0a42daa7aa1846a6b4ab580a5c62086341",
     "figures/staged_selection_budget.svg": "3270cbb3bd5b773c287ff594e5f43992ffb399683866196f7921d225ebfd1d4d",
     "figures/04_tradeoff_regnet_x_1_6gf.png": "5a1210b21e0e57a01aadc685b3959396819806d6a83a10ef8baec0136dec5624",
     "figures/04_tradeoff_yolo26s.pdf": "0fd63c0f0986ac0e3561ad4973630f71778f930e4e5295bade025af6685ce1b1",

@@ -351,6 +351,11 @@ def export_flow(output, spec_data, language, figure_profile='paper'):
             ('Gewählter Split', 'Schnelleres Native-Ergebnis'),
         ]
         count_labels = [f'{count} mögliche Cuts', '5 Cuts testen', '2 Cuts testen', '1 gewählter Cut']
+    if figure_profile == 'dissertation':
+        # The graph inventory supplies the size example, not a measured
+        # 615-to-five search. Mark the test budgets in the figure itself.
+        count_labels[0] = (f'{count} graph boundaries' if language == 'en'
+                           else f'{count} Graphgrenzen')
     fig, ax = plt.subplots(figsize=(4.9, 2.2) if figure_profile == 'dissertation' else (7.0, 2.48))
     fig.subplots_adjust(left=.005, right=.995, bottom=.015, top=.985)
     ax.set_xlim(0, 7)
@@ -369,7 +374,13 @@ def export_flow(output, spec_data, language, figure_profile='paper'):
         ys = [grid_bottom + (j // columns) * step for j in range(n)]
         ax.scatter(xs, ys, s=1.8 if figure_profile == 'dissertation' else 3.2, marker='s', c=color, linewidths=0, zorder=2)
         label_y = grid_bottom + rows * step + .12
-        ax.text(center, label_y, count_labels[i], ha='center', va='bottom', fontsize=9.5 if figure_profile == 'dissertation' else 10.5, fontweight='bold')
+        count_fontsize = (8.8 if i == 0 else 9.5) if figure_profile == 'dissertation' else 10.5
+        ax.text(center, label_y, count_labels[i], ha='center', va='bottom', fontsize=count_fontsize, fontweight='bold')
+        if figure_profile == 'dissertation' and i in (1, 2):
+            ax.text(center, label_y + .22,
+                    'Example budget' if language == 'en' else 'Beispielbudget',
+                    ha='center', va='bottom', fontsize=8.3,
+                    color=style.PAPER_PALETTE['dark_gray'])
         if i == 0:
             ax.text(center, label_y + .22, model, ha='center', va='bottom', fontsize=9 if figure_profile == 'dissertation' else 9)
         pale = tuple(.94 + .06 * component for component in to_rgb(color))
@@ -381,7 +392,7 @@ def export_flow(output, spec_data, language, figure_profile='paper'):
         subtitle = lines[1]
         if figure_profile == 'dissertation':
             title = title.replace('Graph preselection', 'Graph\npreselection')
-            subtitle = subtitle.replace('Pool selection + Bytes', 'Pool + boundary size').replace('Measure throughput', 'Universal runner').replace('Test the two fastest', 'Test top two')
+            subtitle = subtitle.replace('Pool selection + Bytes', 'Pool + Bytes ranking').replace('Measure throughput', 'Universal runner').replace('Test the two fastest', 'Test top two')
         ax.text(center, y + (.45 if figure_profile == 'dissertation' else .32), title, ha='center', va='center', fontsize=9 if figure_profile == 'dissertation' else 9.5, fontweight='bold')
         ax.text(center, y + (.16 if figure_profile == 'dissertation' else .13), subtitle, ha='center', va='center', fontsize=8.3 if figure_profile == 'dissertation' else 7.4)
     for left, right in zip(centers[:-1], centers[1:]):

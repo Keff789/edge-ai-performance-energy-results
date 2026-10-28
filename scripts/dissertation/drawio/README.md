@@ -22,13 +22,16 @@ text width; their source fonts are enlarged, rather than shrinking their
 already small labels. Manual line spacing and a few line breaks are adjusted
 to avoid collisions. A small number of long narrow labels use 6.6–8.0 pt.
 
-Two previously documented factual clarifications are retained:
+Two factual clarifications and one explanatory label are retained:
 
 - The unsupported ISP and H.264 blocks and their arrows are removed from the
   Hailo-8 schematic. Hailo's response confirms that Hailo-8 has no encoder:
   https://community.hailo.ai/t/ffmpeg-and-hailo-8-support/1278
 - The stage-cost diagram says `Compiled subgraph`, replacing
   `Workload + calibration`, to avoid treating calibration as timed computation.
+- The system-boundary schematic says `System input and downstream power paths`,
+  replacing the planning-style note about channel wiring. The drawing remains
+  schematic and does not claim a wiring validation for every measurement.
 
 The DrawIO-cell text comparison verifies that these are the only semantic
 changes. All other text values are preserved apart from whitespace and line

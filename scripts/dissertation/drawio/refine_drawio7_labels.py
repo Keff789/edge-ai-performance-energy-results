@@ -26,6 +26,9 @@ for p in sorted((ROOT/'Export_SVG').rglob('*.svg')):
   txt=' '.join(e.itertext());tt=norm(txt)
   if n=='01' and '1024-core' in tt:font(e,7.7)
   if n=='03' and 'Resource layout' in tt:font(e,6.6)
+  if n=='11' and tt=='Measurement boundaries; channel wiring to be defined for each measurement series':
+   new='System input and downstream power paths'
+   e.text=new;drawval(tt,new);edits.append({'old':tt,'new':new})
   if n=='11' and tt=='Voltage regulator':lines(e,'Voltage\nregulator')
   if n=='11' and 'auxiliary components' in tt:font(e,7.8)
   if n=='12' and tt.startswith('Edge node'):lines(e,'Edge\nnode '+tt[-1])
