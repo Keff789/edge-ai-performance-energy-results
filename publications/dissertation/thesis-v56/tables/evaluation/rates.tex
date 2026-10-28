@@ -1,0 +1,23 @@
+\begin{table}[!htb]
+\centering\small\setlength{\tabcolsep}{3pt}
+\caption{Energieintervallraten $N/T$ im ursprünglichen Einsatzvergleich, basierend auf drei Wiederholungen jeder ausgewählten Split-Aufteilung (S) und des Full-Modus (F). Median und beobachteter Bereich basieren auf der aufgezeichneten Integrationsdauer und nicht auf angenommenen 60 Sekunden. $\Delta R$ vergleicht diesen Median mit der Durchsatzrate aus den kurzen Leistungsmessungen.}
+\label{tab:review:rates}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}l c S[table-format=4.0] S[table-format=4.0] r S[table-format=+2.1]@{}}
+\toprule
+Modell & & {Kurz-FPS} & {$N/T$} & {Bereich} & {$\Delta R$ (\%)} \\
+\midrule
+MobileNetV3-L & S & 1552 & 1569 & 1569--1571 & +1.1 \\
+MobileNetV3-L & F & 1469 & 1441 & 1441--1441 & -1.9 \\
+RegNet-X & S & 1367 & 1528 & 1523--1534 & +11.7 \\
+RegNet-X & F & 538 & 529 & 529--530 & -1.7 \\
+ResNet-50 & S & 1100 & 1065 & 1062--1066 & -3.1 \\
+ResNet-50 & F & 656 & 645 & 644--646 & -1.6 \\
+YOLO11l & S & 53 & 45 & 44--48 & -16.0 \\
+YOLO11l & F & 63 & 62 & 62--62 & -2.1 \\
+YOLO26m & S & 110 & 105 & 105--106 & -4.5 \\
+YOLO26m & F & 85 & 81 & 81--81 & -4.0 \\
+YOLO26s & S & 187 & 181 & 181--182 & -3.0 \\
+YOLO26s & F & 152 & 147 & 147--147 & -3.4 \\
+YOLOv7 & S & 113 & 110 & 109--110 & -2.9 \\
+YOLOv7 & F & 83 & 82 & 81--82 & -2.2 \\
+\bottomrule\end{tabular*}\end{table}

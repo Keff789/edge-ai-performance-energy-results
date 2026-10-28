@@ -1,0 +1,54 @@
+{
+  "source_remote_bundle": "remote_20260528_215525.zip",
+  "model": "resnet50",
+  "task": "classification",
+  "validation_subset": "imagenette mini, 50 samples in remote run",
+  "runs": {
+    "ort_tensorrt": [
+      {
+        "case": "b059",
+        "top1": 0.82,
+        "top5": 0.96,
+        "full_ms": 7.5861,
+        "composed_ms": 7.7791,
+        "pipeline_cycle_ms": 4.5418,
+        "pipeline_fps": 220.18
+      },
+      {
+        "case": "b054",
+        "top1": 0.82,
+        "top5": 0.96,
+        "full_ms": 7.6459,
+        "composed_ms": 7.9827,
+        "pipeline_cycle_ms": 4.5383,
+        "pipeline_fps": 220.35
+      }
+    ],
+    "deepx_m1_full": {
+      "top1": 0.84,
+      "top5": 0.94,
+      "full_ms": 9.117,
+      "npu_processing_ms": 4.553,
+      "valid": true
+    },
+    "tensorrt_to_deepx_m1": [
+      {
+        "case": "b059",
+        "top1": 0.0,
+        "top5": 0.06,
+        "part1_ms": 7.4867,
+        "part2_ms": 12.0193,
+        "composed_ms": 21.0135,
+        "pipeline_cycle_ms": 12.8143,
+        "pipeline_fps": 78.04,
+        "valid": false
+      },
+      {
+        "case": "b054",
+        "valid": false,
+        "error_class": "case_runner_failed"
+      }
+    ]
+  },
+  "interpretation": "TensorRT and DeepX full are valid; TensorRT-to-DeepX stage-two DXNN builds and runs for one case but fails classification validation under ORT proxy calibration."
+}

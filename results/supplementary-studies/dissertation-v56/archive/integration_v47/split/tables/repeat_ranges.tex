@@ -1,0 +1,38 @@
+\begin{table}[!htb]
+\centering
+\caption{Beobachtete Minimal- und Maximalwerte über drei Wiederholungen für die Gesamtsieger in Tabelle~\ref{tab:evaluation:global_winners} und die zusätzlichen Full-Referenzen im Fall von YOLOv7. Die FPS-Werte stammen aus Leistungsläufen, die Energiewerte aus separaten Läufen. Es handelt sich hierbei um Bereiche, nicht um Konfidenzintervalle. Die FPS-Endwerte sind auf ganze Zahlen gerundet.}
+\label{tab:evaluation:repeat_ranges}
+\begingroup\small\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}l S[table-format=4.0]@{--}S[table-format=4.0] S[table-format=3.2]@{--}S[table-format=3.2]@{}}
+\toprule
+Bereitstellung & \multicolumn{2}{c}{FPS} & \multicolumn{2}{c}{mJ/Bild} \\
+\midrule
+MobileNetV3-L / DX Full & 1458 & 1470 & 11.98 & 12.05 \\
+MobileNetV3-L / DX/b135 & 1441 & 1570 & 12.58 & 12.59 \\
+\addlinespace[1pt]
+RegNet-X / DX Full & 538 & 541 & 31.48 & 31.63 \\
+RegNet-X / H10/b123 & 1103 & 1386 & 15.78 & 15.88 \\
+\addlinespace[1pt]
+ResNet-50 / DX Full & 655 & 659 & 27.64 & 27.66 \\
+ResNet-50 / H10/b095 & 1074 & 1114 & 29.42 & 29.50 \\
+\addlinespace[1pt]
+YOLO11l / DX Full & 63 & 63 & 314.56 & 315.72 \\
+YOLO11l / H10/b120 & 53 & 53 & 537.63 & 567.69 \\
+\addlinespace[1pt]
+YOLO26m / TRT (H8) & 85 & 85 & 399.41 & 400.41 \\
+YOLO26m / H10/b043 & 110 & 111 & 319.55 & 319.76 \\
+\addlinespace[1pt]
+YOLO26s / TRT (DX) & 152 & 152 & 186.79 & 188.63 \\
+YOLO26s / H8/b021 & 187 & 188 & 157.56 & 157.72 \\
+\addlinespace[1pt]
+YOLOv7 / DX Full & 83 & 84 & 268.19 & 270.38 \\
+YOLOv7 / H8/b066 & 112 & 113 & 329.43 & 330.50 \\
+\midrule
+\multicolumn{5}{l}{Weitere YOLOv7-Referenzen auf H8} \\
+YOLOv7 / H8 Full & 32 & 32 & 549.54 & 550.25 \\
+YOLOv7 / TRT (H8) & 53 & 53 & 596.63 & 599.40 \\
+\bottomrule
+\end{tabular}
+\endgroup
+\par\smallskip\parbox{\linewidth}{\footnotesize Der Bereich der Energiewerte für YOLO26s/H8 b021 wurde anhand der passenden Wiederholungen im Repository rekonstruiert und ergänzt den Paper-Auszug. Alle übrigen Bereiche stimmen mit der übernommenen Zusammenstellung für das Paper überein.}
+\end{table}

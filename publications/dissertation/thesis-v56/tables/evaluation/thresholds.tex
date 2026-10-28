@@ -1,0 +1,30 @@
+\begin{table}[!htb]
+\centering\small\setlength{\tabcolsep}{3pt}
+\caption{„Schnellste zulässige Split-Aufteilung“ und „Full“ nach jedem Qualitätsfilter. Beide Referenzen werden erneut ausgewählt. Verhältnisse über eins begünstigen die Split-Aufteilung ausschließlich hinsichtlich des gemessenen Durchsatzes.}
+\label{tab:review:thresholds}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}l r l l S[table-format=1.3]@{}}
+\toprule
+Modell & {Verlust (\%)} & Split & Full & {Verhältnis} \\
+\midrule
+MobileNetV3-L & 1 & DeepX b001 & H8 TRT & 0.816 \\
+MobileNetV3-L & 2 & DeepX b108 & H8 TRT & 1.501 \\
+MobileNetV3-L & 5 & DeepX b135 & DeepX NPU & 1.056 \\
+RegNet-X & 1 & H10 b123 & DeepX NPU & 2.539 \\
+RegNet-X & 2 & H10 b123 & DeepX NPU & 2.539 \\
+RegNet-X & 5 & H10 b123 & DeepX NPU & 2.539 \\
+ResNet-50 & 1 & H10 b095 & DeepX NPU & 1.676 \\
+ResNet-50 & 2 & H10 b095 & DeepX NPU & 1.676 \\
+ResNet-50 & 5 & H10 b095 & DeepX NPU & 1.676 \\
+YOLO11l & 1 & DeepX b062 & H8 TRT & 1.262 \\
+YOLO11l & 2 & DeepX b062 & H8 TRT & 1.262 \\
+YOLO11l & 5 & H10 b120 & DeepX NPU & 0.843 \\
+YOLO26m & 1 & DeepX b043 & H8 TRT & 1.159 \\
+YOLO26m & 2 & DeepX b043 & H8 TRT & 1.159 \\
+YOLO26m & 5 & H10 b043 & H8 TRT & 1.301 \\
+YOLO26s & 1 & DeepX b021 & DeepX TRT & 1.076 \\
+YOLO26s & 2 & DeepX b021 & DeepX TRT & 1.076 \\
+YOLO26s & 5 & H8 b021 & DeepX TRT & 1.232 \\
+YOLOv7 & 1 & H8 b066 & DeepX NPU & 1.353 \\
+YOLOv7 & 2 & H8 b066 & DeepX NPU & 1.353 \\
+YOLOv7 & 5 & H8 b066 & DeepX NPU & 1.353 \\
+\bottomrule\end{tabular*}\end{table}

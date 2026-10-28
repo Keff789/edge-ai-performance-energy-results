@@ -1,0 +1,49 @@
+Workload,Setup,Tolerance [\%],Minimum tested duration [s]
+Gemma3-4B,PicoScope/INA225 setup,0.5,2.000
+Gemma3-4B,PicoScope/INA225 setup,1.0,0.500
+Gemma3-4B,PicoScope/INA225 setup,2.0,0.100
+Gemma3-4B,PicoScope/INA225 setup,5.0,0.020
+Gemma3-4B,Tektronix setup,0.5,5.000
+Gemma3-4B,Tektronix setup,1.0,1.000
+Gemma3-4B,Tektronix setup,2.0,0.500
+Gemma3-4B,Tektronix setup,5.0,0.050
+GEMM-FP32,PicoScope/INA225 setup,0.5,5.000
+GEMM-FP32,PicoScope/INA225 setup,1.0,1.000
+GEMM-FP32,PicoScope/INA225 setup,2.0,0.200
+GEMM-FP32,PicoScope/INA225 setup,5.0,0.050
+GEMM-FP32,Tektronix setup,0.5,5.000
+GEMM-FP32,Tektronix setup,1.0,1.000
+GEMM-FP32,Tektronix setup,2.0,0.200
+GEMM-FP32,Tektronix setup,5.0,0.050
+GEMM-INT8,PicoScope/INA225 setup,0.5,1.000
+GEMM-INT8,PicoScope/INA225 setup,1.0,0.200
+GEMM-INT8,PicoScope/INA225 setup,2.0,0.050
+GEMM-INT8,PicoScope/INA225 setup,5.0,0.020
+GEMM-INT8,Tektronix setup,0.5,2.000
+GEMM-INT8,Tektronix setup,1.0,0.500
+GEMM-INT8,Tektronix setup,2.0,0.100
+GEMM-INT8,Tektronix setup,5.0,0.020
+ResNet-50 FP32,PicoScope/INA225 setup,0.5,5.000
+ResNet-50 FP32,PicoScope/INA225 setup,1.0,1.000
+ResNet-50 FP32,PicoScope/INA225 setup,2.0,0.200
+ResNet-50 FP32,PicoScope/INA225 setup,5.0,0.050
+ResNet-50 FP32,Tektronix setup,0.5,5.000
+ResNet-50 FP32,Tektronix setup,1.0,1.000
+ResNet-50 FP32,Tektronix setup,2.0,0.500
+ResNet-50 FP32,Tektronix setup,5.0,0.050
+YOLO-FP32,PicoScope/INA225 setup,0.5,5.000
+YOLO-FP32,PicoScope/INA225 setup,1.0,1.000
+YOLO-FP32,PicoScope/INA225 setup,2.0,0.200
+YOLO-FP32,PicoScope/INA225 setup,5.0,0.100
+YOLO-FP32,Tektronix setup,0.5,5.000
+YOLO-FP32,Tektronix setup,1.0,1.000
+YOLO-FP32,Tektronix setup,2.0,0.500
+YOLO-FP32,Tektronix setup,5.0,0.100
+YOLO-INT8,PicoScope/INA225 setup,0.5,5.000
+YOLO-INT8,PicoScope/INA225 setup,1.0,1.000
+YOLO-INT8,PicoScope/INA225 setup,2.0,0.200
+YOLO-INT8,PicoScope/INA225 setup,5.0,0.050
+YOLO-INT8,Tektronix setup,0.5,10.000
+YOLO-INT8,Tektronix setup,1.0,2.000
+YOLO-INT8,Tektronix setup,2.0,0.500
+YOLO-INT8,Tektronix setup,5.0,0.100

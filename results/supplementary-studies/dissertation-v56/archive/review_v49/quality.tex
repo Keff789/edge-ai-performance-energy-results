@@ -1,0 +1,16 @@
+\begin{table}[!htb]
+\centering\small\setlength{\tabcolsep}{3pt}
+\caption{Gesamtsieger: CPU-Referenzwert und gemessene Qualität (\%), relative CPU-Verluste $L$ (\%) sowie die Differenz zwischen Split- und Full-Modus $\Delta q$ (Prozentpunkte). Ein negativer Verlust bedeutet eine Verbesserung. Bei der Klassifikation wird Top1 verwendet. Bei der Erkennung wird die erfasste AP-Metrik herangezogen, wobei die Einschränkungen des Auswertungsverfahrens im Text erläutert werden.}
+\label{tab:review:quality}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}l S[table-format=+2.2] S[table-format=+2.2] S[table-format=+2.2] S[table-format=+2.2] S[table-format=+2.2] S[table-format=+1.2]@{}}
+\toprule
+Modell & {CPU} & {Full} & {Split} & {$L_F$} & {$L_S$} & {$\Delta q$} \\
+\midrule
+MobileNetV3-L & 73.70 & 71.72 & 72.02 & 2.69 & 2.28 & +0.30 \\
+RegNet-X & 78.94 & 78.70 & 79.16 & 0.30 & -0.28 & +0.46 \\
+ResNet-50 & 80.44 & 80.54 & 80.16 & -0.12 & 0.35 & -0.38 \\
+YOLO11l & 46.68 & 45.67 & 45.55 & 2.17 & 2.42 & -0.12 \\
+YOLO26m & 44.90 & 44.82 & 43.66 & 0.18 & 2.75 & -1.15 \\
+YOLO26s & 40.09 & 40.11 & 39.18 & -0.05 & 2.26 & -0.93 \\
+YOLOv7 & 46.03 & 45.86 & 45.74 & 0.38 & 0.64 & -0.12 \\
+\bottomrule\end{tabular*}\end{table}

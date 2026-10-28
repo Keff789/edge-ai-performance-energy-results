@@ -7,3 +7,11 @@ results/supplementary-studies/rq2-native-scope-20261027/figures/*.svg whitespace
 results/publication-builds/generic420-20261027/**/*.md whitespace=-blank-at-eof
 # Python csv.writer uses the standard CSV CRLF terminator.
 results/supplementary-studies/generic420-closeout-20261027/*.csv whitespace=cr-at-eol
+
+# Preserve the original CSV bytes in the frozen dissertation input snapshot.
+results/supplementary-studies/dissertation-v56/inputs/**/*.csv whitespace=cr-at-eol
+
+# Frozen source sidecars retain their Windows line endings and Markdown hard breaks.
+results/supplementary-studies/dissertation-v56/inputs/modellvergleich/*.json whitespace=cr-at-eol
+results/supplementary-studies/dissertation-v56/inputs/modellvergleich/*.md whitespace=cr-at-eol
+results/supplementary-studies/dissertation-v56/inputs/energie/MULTI_WORKLOAD_SUMMARY.md whitespace=-blank-at-eol

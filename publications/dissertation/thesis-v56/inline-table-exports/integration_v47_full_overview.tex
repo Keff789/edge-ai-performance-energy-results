@@ -1,0 +1,20 @@
+\begin{table}[!htb]
+\centering
+\caption{Durchsatz der Full-Modellausführung und kalibrierter Systemenergieverbrauch. Orin/TensorRT-Werte sind arithmetische Mittelwerte der drei hostspezifischen FPS-Mediane und mittleren Energien. Die zugehörigen Daten enthalten alle einzelnen Hosts. Bei Split-Vergleichen wird die schnellste tatsächliche Full-Konfiguration verwendet. $\dagger$ kennzeichnet einen relativen Qualitätsverlust von mehr als 5\%. Alle TensorRT-Fulls erfüllen diese Regel.}
+\label{tab:evaluation:full_overview}
+\begingroup\small\setlength{\tabcolsep}{2.8pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}l S[table-format=4.0] S[table-format=4.2] S[table-format=3.0] S[table-format=4.2] S[table-format=3.0] S[table-format=4.2] S[table-format=4.0] S[table-format=3.2]@{}}
+\toprule
+ & \multicolumn{2}{c}{Orin / TensorRT (Mittel)} & \multicolumn{2}{c}{Hailo8} & \multicolumn{2}{c}{Hailo10H} & \multicolumn{2}{c}{DeepX} \\ \cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9} Modell & {FPS} & {mJ/Bild} & {FPS} & {mJ/Bild} & {FPS} & {mJ/Bild} & {FPS} & {mJ/Bild} \\
+\midrule
+MobileNetV3-L & 718 & 28.18 & {118$^{\dagger}$} & 126.75 & {210$^{\dagger}$} & 74.96 & 1469 & 12.01 \\
+RegNet-X 1.6GF & 321 & 74.43 & 362 & 43.24 & 259 & 61.79 & 538 & 31.54 \\
+ResNet-50 & 521 & 55.35 & 122 & 132.45 & 184 & 89.54 & 656 & 27.65 \\
+YOLO11l & 39 & 669.75 & {11$^{\dagger}$} & 1426.62 & 11 & 1659.47 & 63 & 315.23 \\
+YOLO26m & 84 & 393.12 & {18$^{\dagger}$} & 935.03 & {14$^{\dagger}$} & 1290.53 & 80 & 239.32 \\
+YOLO26s & 151 & 192.66 & {23$^{\dagger}$} & 701.73 & {15$^{\dagger}$} & 1108.70 & 105 & 176.81 \\
+YOLOv7 & 51 & 598.39 & {32$^{\dagger}$} & 549.84 & {33$^{\dagger}$} & 601.83 & 83 & 269.44 \\
+\bottomrule
+\end{tabular*}
+\endgroup
+\end{table}

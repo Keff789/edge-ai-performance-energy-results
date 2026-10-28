@@ -1,0 +1,46 @@
+{
+  "revision": 56,
+  "date": "2026-10-22",
+  "paper_source": "R35, 2026-10-21",
+  "analysis": "analysis/r35_analysis_work/reproduce_async_paired.py",
+  "scope": {
+    "source_pairs": 204,
+    "new_expected": 136,
+    "new_complete": 132,
+    "included_groups": 19,
+    "included_quality_pairs": 181,
+    "classifier_groups": 9,
+    "detector_groups": 10,
+    "excluded_groups": [
+      {
+        "model": "yolo26s",
+        "setup": "H10"
+      },
+      {
+        "model": "yolov7_paper",
+        "setup": "DeepX"
+      }
+    ],
+    "historical_H8_groups": 7
+  },
+  "figures": [
+    {
+      "thesis_path": "9_resources/paper_sync_v56/figures/rq2_generic_selection_loss.pdf",
+      "companion_source": "analysis/r35_analysis_work/results/en/rq2_generic_selection_loss.pdf",
+      "sha256": "f0d82cae5b75430ed4e050a20c09d430ce24339e3a0473416089ebccb1d60f91",
+      "english_original_sha256": "1862ef2169737fc6181ff5a1a689f07b923b92ea076ae24921d4d7f761a83e2b",
+      "language": "de",
+      "modification": "Nur Beschriftungen lokalisiert; numerische Texte und nichttextuelle Vektorpfade unverändert."
+    },
+    {
+      "thesis_path": "9_resources/paper_sync_v56/figures/rq2_weighted_all_models.pdf",
+      "companion_source": "analysis/r35_analysis_work/results/en/rq2_weighted_all_models.pdf",
+      "sha256": "5f4e86b6384bb979bdbee891e004ff8a58177fd7b2050c5a272233c3d5d72fac",
+      "english_original_sha256": "ad6fb695d922afb73b6292024e12b4677529d2ad3cf254737058d0b8e7ba44df",
+      "language": "de",
+      "modification": "Nur Beschriftungen lokalisiert; numerische Texte und nichttextuelle Vektorpfade unverändert."
+    }
+  ],
+  "public_repository_status": "Local reproducible update; public integration pending.",
+  "german_editorial_revision": "2026-10-25 / DE clean 1"
+}
