@@ -269,7 +269,7 @@ def export_figure(output, summaries, language, figure_profile='paper'):
         ax.set_ylabel('Mean Native throughput retained (%)')
         connector = 'Generic + 2 Native'
     else:
-        ax.set_xlabel('Maximale Generic-Tests je Gruppe')
+        ax.set_xlabel('Maximale Generic-Tests je Kombination')
         ax.set_ylabel('Mittlerer Native-Durchsatzanteil (%)')
         connector = 'Generic + 2 Native'
     for k in PRIMARY_BUDGETS:
@@ -282,6 +282,9 @@ def export_figure(output, summaries, language, figure_profile='paper'):
                     ha='center', va='center', fontsize=9 if figure_profile == 'dissertation' else 8,
                     arrowprops=dict(arrowstyle='-', color='#777777', linewidth=.6),
                     bbox=dict(facecolor='white', edgecolor='none', pad=1.5), zorder=5)
+    if language == 'de':
+        from matplotlib.ticker import FuncFormatter
+        ax.yaxis.set_major_formatter(FuncFormatter(lambda value, _: f'{value:g}'.replace('.', ',')))
     folder = output / 'artifacts' / language / 'figures'
     folder.mkdir(parents=True, exist_ok=True)
     for suffix in ('pdf', 'svg', 'png'):
@@ -350,7 +353,7 @@ def export_flow(output, spec_data, language, figure_profile='paper'):
             ('Native', 'Die zwei schnellsten prüfen'),
             ('Gewählter Split', 'Schnelleres Native-Ergebnis'),
         ]
-        count_labels = [f'{count} mögliche Cuts', '5 Cuts testen', '2 Cuts testen', '1 gewählter Cut']
+        count_labels = [f'{count} mögliche Schnitte', '5 Schnitte testen', '2 Schnitte testen', '1 gewählter Schnitt']
     if figure_profile == 'dissertation':
         # The graph inventory supplies the size example, not a measured
         # 615-to-five search. Mark the test budgets in the figure itself.
@@ -392,6 +395,9 @@ def export_flow(output, spec_data, language, figure_profile='paper'):
         subtitle = lines[1]
         if figure_profile == 'dissertation':
             title = title.replace('Graph preselection', 'Graph\npreselection')
+            if language == 'de':
+                title = title.replace('Graph-Vorauswahl', 'Graph-\nVorauswahl')
+                subtitle = subtitle.replace('Kandidatenmenge + Bytes', 'Kandidaten + Bytes').replace('Die zwei schnellsten prüfen', 'Zwei Schnellste\nprüfen').replace('Schnelleres Native-Ergebnis', 'Schnelleres\nNative-Ergebnis')
             subtitle = subtitle.replace('Pool selection + Bytes', 'Pool + Bytes ranking').replace('Measure throughput', 'Universal runner').replace('Test the two fastest', 'Test top two')
         ax.text(center, y + (.45 if figure_profile == 'dissertation' else .32), title, ha='center', va='center', fontsize=9 if figure_profile == 'dissertation' else 9.5, fontweight='bold')
         ax.text(center, y + (.16 if figure_profile == 'dissertation' else .13), subtitle, ha='center', va='center', fontsize=8.3 if figure_profile == 'dissertation' else 7.4)

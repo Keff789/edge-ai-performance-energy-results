@@ -315,7 +315,7 @@ def render_fastest_deployments(output, save):
           'reference_x': 1.0, 'reference_y': 1.0, 'annotations': annotations}, main=True)
 
 
-def render_tradeoffs(output, save, rows, ids, models, figure_profile='paper'):
+def render_tradeoffs(output, save, rows, ids, models, figure_profile='paper', label_transform=None):
     # The same exported observations and flags drive every trade-off panel.
     pareto = read(output / 'tables' / 'PARETO_POINTS.json')
     assert {r['uid'] for r in pareto} == set(ids), 'Pareto table/dataset identities differ'
@@ -403,6 +403,10 @@ def render_tradeoffs(output, save, rows, ids, models, figure_profile='paper'):
             if figure_profile == 'dissertation':
                 ax.set_xlabel('Throughput (images/s)' + (' · log scale' if ax.get_xscale() == 'log' else ''), fontsize=9)
                 ax.set_ylabel('Energy (mJ/image)' + ('\nlog scale' if ax.get_yscale() == 'log' else ''), fontsize=9)
+            # Localized labels must be measured in their displayed language
+            # before the bounded annotation-placement search.
+            if label_transform is not None:
+                selected_labels = [(row, label_transform(text)) for row, text in selected_labels]
             pending_annotations.append((ax, selected_labels, good))
         handles = [Line2D([], [], marker=MARKERS[k], color='none', markerfacecolor='#aaaaaa',
                           markeredgecolor='#222222', label=k.title() if k in ['native','generic'] else k,
@@ -417,7 +421,8 @@ def render_tradeoffs(output, save, rows, ids, models, figure_profile='paper'):
         if figure_profile == 'dissertation':
             fig.legend(handles=handles, loc='lower center', bbox_to_anchor=(.5, .005),
                        ncol=3, frameon=False, fontsize=9, columnspacing=1.2, handletextpad=.45)
-            colorbar = fig.colorbar(sm, cax=fig.add_axes([.87, .22, .027, .58]))
+            colorbar_x = .865 if label_transform is not None else .87
+            colorbar = fig.colorbar(sm, cax=fig.add_axes([colorbar_x, .22, .027, .58]))
             colorbar.set_label(quality_label(mr), fontsize=9)
             colorbar.ax.tick_params(labelsize=8.5)
             fig.suptitle('F: fastest · E: lowest energy · N/G: Native/Generic', y=.985, fontsize=8.5)

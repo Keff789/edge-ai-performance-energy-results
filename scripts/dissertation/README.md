@@ -89,7 +89,7 @@ Für neue Beschriftungen werden die Kataloge ergänzt und die Ausgabe erneut erz
 
 Der Umfang dieses Exports ist **Split-Inferenz einschließlich der ergänzenden Split-Studien**. Die Energiemessung besitzt ein [separates Auswertetool](../energy-measurement/README.md) und ist nicht Bestandteil dieses Exports.
 
-## English final-thesis profile
+## Final-thesis profiles (English and German)
 
 The English thesis export uses the final 451-configuration deployment dataset,
 187 quality-admissible Native/Generic pairs, and the 331-cut broader Generic
@@ -143,6 +143,38 @@ Copy only the PDFs and required TeX files into the LaTeX project. The temporary
 `render_work/` folder is not needed for compilation. The default paper geometry
 remains unchanged; the modified publication renderer was checked against the
 previous renderer with 41 byte-identical paper outputs.
+
+### German final-thesis profile
+
+```sh
+python3 scripts/dissertation/export_thesis_selection.py \
+  --language de --figures-only --figure-profile dissertation \
+  --output local-output/thesis-de
+python3 scripts/dissertation/export_frozen_thesis_figures.py \
+  --language de --output local-output/thesis-de-fixed
+```
+
+The current German profile uses the same 15 renderers and published inputs as
+the English profile. `--figures-only` keeps independently maintained thesis
+tables out of this figure export. The static label catalog and declared dynamic
+rules run before layout. Deliberate line breaks survive translation; annotation
+placement measures the displayed German text. Decimal commas affect numeric
+labels only, not model names or JSON/CSV data. Generic, Native, Full, Bytes and
+Weighted remain method names. Unknown labels fail the export.
+
+`TRANSLATION_AUDIT.json`, `VALIDATION.json` and `MANIFEST.json` record coverage,
+exactly unchanged scientific payloads, source hashes and output hashes. The
+German staged workflow wraps longer labels inside its original canvas. The
+English profile retains its existing outputs; all 15 PDF checksums were verified
+against the previously published English thesis selection after these changes.
+
+The frozen export accepts `--language de` and verifies the existing German
+counterparts against their source manifest. PyMuPDF is needed for its checks of
+page dimensions, drawing commands and numerical labels. The German energy
+figures with compressed translated labels are recreated from the same published
+summary/curve CSVs by `render_thesis_energy_de.py`; their typography is checked
+at the original LaTeX inclusion widths. This is presentation only: no raw
+signal processing, new measurement, fitting or replacement cohort is used.
 
 ## Supplied DrawIO diagrams
 

@@ -1,0 +1,1947 @@
+{
+  "schema": "german-dissertation-results-figure-import-v1",
+  "status": "PASS",
+  "base_results_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+  "figure_count": 28,
+  "counts": {
+    "results_published_german_exact_bytes": 4,
+    "results_german_same_data_energy_render": 9,
+    "results_current_german_render": 15
+  },
+  "source_data_modified": false,
+  "english_outputs_modified": false,
+  "statistical_reanalysis": false,
+  "current_validation": {
+    "status": "PASS",
+    "deployment_configurations": 451,
+    "energy_values": 450,
+    "paired_cuts": 187,
+    "staged": {
+      "status": "PASS",
+      "direct_graph_aggregate_checks": 60,
+      "group_policy_budget_checks": 3780,
+      "fitting_performed": false,
+      "hardware_measurements": false
+    },
+    "gallery_models": 7,
+    "gallery_points": 450,
+    "gallery_frontier_points": 34,
+    "gallery_numeric_payloads_unchanged": true,
+    "deployment_numeric_payload_unchanged": true,
+    "unchanged_payload_count": 116,
+    "unchanged_payloads": [
+      "ACTUAL_IMPORT_ACCOUNTING.json",
+      "INPUT_MANIFEST.json",
+      "summary.json",
+      "VALIDATION.json",
+      "tables/r14_budget_details.csv",
+      "tables/family_selection_summary.csv",
+      "tables/pair_group_coverage.json",
+      "tables/native_generic_quality_observations.json",
+      "tables/rq2_search_budget_table.csv",
+      "tables/r30_weighted_budget_table.json",
+      "tables/current_selection_groups.csv",
+      "tables/pair_group_coverage.csv",
+      "tables/rq2_search_budget_table.json",
+      "tables/r14_budget_details.json",
+      "tables/current_selection_groups.json",
+      "tables/r30_weighted_budget_table.csv",
+      "tables/family_selection_summary.json",
+      "tables/native_generic_quality_observations.csv",
+      "inputs/extra_independent_generic_quality_resolution.json",
+      "inputs/extra_projection_manifest.json",
+      "inputs/extra_observation_proofs.json",
+      "inputs/provenance_overlay_005.json",
+      "inputs/quality_overlay_002.json",
+      "inputs/provenance_overlay_001.json",
+      "inputs/typed_quality_admission_002.json",
+      "inputs/current_observation_validation.json",
+      "inputs/extra_RQ1_b066_scope_check.json",
+      "inputs/performance_overlay_000.json",
+      "inputs/extra_native_quality_reference_bindings.json",
+      "inputs/typed_quality_admission_000.json",
+      "inputs/provenance_overlay_003.json",
+      "inputs/SOURCE_PROJECTION_MANIFEST.json",
+      "inputs/quality_overlay_009.json",
+      "inputs/provenance_overlay_004.json",
+      "inputs/provenance_overlay_000.json",
+      "inputs/quality_overlay_000.json",
+      "inputs/quality_overlay_008.json",
+      "inputs/OBSERVATION_POLICY_v1.json",
+      "inputs/typed_quality_admission_005.json",
+      "inputs/current_generic_observations.json",
+      "inputs/historical_b009_preprocessing_closure.json",
+      "inputs/native_quality_completion_H10_b043.json",
+      "inputs/observations.json",
+      "inputs/native_quality_completion_H8_b043.json",
+      "inputs/typed_quality_admission_003.json",
+      "inputs/historical_b009_exact_guard_receipt.json",
+      "inputs/extra_quality_proofs.json",
+      "inputs/typed_quality_admission_006.json",
+      "inputs/current_fps_reuse_after_quality_fix.json",
+      "inputs/provenance_overlay_002.json",
+      "inputs/historical_b009_normal_relation_receipt.json",
+      "inputs/quality_overlay_003.json",
+      "inputs/extra_final_authority_report.json",
+      "inputs/historical_b009_final_hold.json",
+      "inputs/extra_generic_observations.json",
+      "inputs/quality_contract_provenance.json",
+      "inputs/quality_overlay_005.json",
+      "inputs/quality_overlay_004.json",
+      "inputs/current_observation_proofs.json",
+      "inputs/typed_quality_admission_004.json",
+      "inputs/quality_affected_scope.json",
+      "inputs/quality_affected_scope_validation.json",
+      "inputs/typed_quality_admission_007.json",
+      "inputs/quality_overlay_001.json",
+      "inputs/quality_overlay_007.json",
+      "inputs/typed_quality_admission_001.json",
+      "inputs/quality_overlay_006.json",
+      "inputs/PAIRING_REVIEW_b009.json",
+      "data/historical_quality_observations.json",
+      "data/old_final_same_pairs_comparison.csv",
+      "data/quality_pairs.json",
+      "data/selection_groups.csv",
+      "data/old_final_same_pairs_comparison.json",
+      "data/current_pairs.csv",
+      "data/family_selection_summary.csv",
+      "data/budget_groups.json",
+      "data/selection_groups.json",
+      "data/old_final_same_pairs_rankings.csv",
+      "data/pairing_sensitivity.csv",
+      "data/quality_pairs.csv",
+      "data/historical_quality_observations.csv",
+      "data/pair_group_coverage.json",
+      "data/quality_selection_groups.json",
+      "data/pair_group_coverage.csv",
+      "data/pair_identity_audit.json",
+      "data/current_pairs.json",
+      "data/quality_selection_groups.csv",
+      "data/non_population_observations.json",
+      "data/quality_contract_provenance.json",
+      "data/old_final_same_pairs_rankings.json",
+      "data/pair_identity_audit.csv",
+      "data/budget_groups.csv",
+      "data/non_population_observations.csv",
+      "data/runner_graph_comparison.csv",
+      "data/family_selection_summary.json",
+      "data/standalone_generic_observations.json",
+      "data/standalone_generic_observations.csv",
+      "analysis/aggregate_curves.csv",
+      "analysis/complete_rankings.csv",
+      "analysis/group_curves.csv",
+      "analysis/key_budget_results.csv",
+      "figures/rq2_weighted_all_models.csv",
+      "figures/rq2_native_success.json",
+      "figures/rq2_weighted_all_models.json",
+      "figures/current_generic_selection_loss.json",
+      "figures/quality_generic_selection_loss.csv",
+      "figures/rq2_generic_selection_loss.csv",
+      "figures/rq2_generic_selection_loss.json",
+      "figures/current_generic_selection_loss.csv",
+      "figures/rq2_native_success.csv",
+      "figures/quality_generic_selection_loss.json",
+      "staged/data/group_budgets.csv",
+      "staged/data/summary.csv",
+      "staged/data/summary.json",
+      "staged/artifacts/en/figures/staged_selection_budget.csv",
+      "staged/artifacts/en/figures/staged_selection_budget.json"
+    ],
+    "refitting": false,
+    "hardware_measurements": false
+  },
+  "energy_geometry_validation": {
+    "coordinate_values": 20758,
+    "maximum_error_bp": 3.112792967385758e-05,
+    "tolerance_bp": 0.002,
+    "note": "EN PDF geometry is used only as an independent validation reference; all drawing values originate in existing CSVs."
+  },
+  "generator_changes": [
+    "scripts/dissertation/README.md",
+    "scripts/dissertation/export_frozen_thesis_figures.py",
+    "scripts/dissertation/export_thesis_selection.py",
+    "scripts/dissertation/figure_terms.py",
+    "scripts/dissertation/german_labels.py",
+    "scripts/dissertation/locales/figures_de.json",
+    "scripts/dissertation/test_german_export.py",
+    "scripts/split-inference/render_figures.py",
+    "scripts/supplementary-studies/staged-selection/reproduce.py",
+    "scripts/dissertation/render_thesis_energy_de.py"
+  ],
+  "generator_diff": "redaktion/RESULTS_GENERATOR_DIFF.patch",
+  "figures": [
+    {
+      "project_asset": "9_resources/integration_v47/methods/stage_costs.pdf",
+      "figure_numbers": [
+        "6.4"
+      ],
+      "language": "de",
+      "source_kind": "results_published_german_exact_bytes",
+      "origin": "publications/dissertation/thesis-v56/de/figures/methods/stage_costs.pdf",
+      "sha256": "524e34f26840aedd38828f4087b516cb160b2a3ed74157eaf19d5f9a76bdb274",
+      "project_sha256": "524e34f26840aedd38828f4087b516cb160b2a3ed74157eaf19d5f9a76bdb274",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/figures/methods/stage_costs.pdf",
+      "english_original_sha256": "609a224fdf89333d84f97b6ce1fbe79e5f4fa6565f54a709c97353069cce057d",
+      "command": "python scripts/dissertation/export_frozen_thesis_figures.py --language de --output <empty-output>",
+      "numerical_equality": {
+        "file": "figures/methods/stage_costs.pdf",
+        "source": "publications/dissertation/thesis-v56/figures/kostenmodelle/stage_costs.pdf",
+        "language": "de",
+        "english_reference": "publications/dissertation/thesis-v56/en/figures/methods/stage_costs.pdf",
+        "english_reference_sha256": "609a224fdf89333d84f97b6ce1fbe79e5f4fa6565f54a709c97353069cce057d",
+        "identical_page_dimensions": true,
+        "identical_vector_drawing_commands": true,
+        "vector_drawing_counts": [
+          33
+        ],
+        "identical_numeric_label_tokens": true,
+        "numeric_label_token_counts": [
+          15
+        ],
+        "sha256": "524e34f26840aedd38828f4087b516cb160b2a3ed74157eaf19d5f9a76bdb274",
+        "include_width": "\\linewidth",
+        "placed_modal_font_bp": 8.433020819888121,
+        "source_kind": "published_german_exact_bytes",
+        "pdf_width_bp": 345.6000061035156,
+        "include_width_bp": 355.42098132004986,
+        "font_sizes_bp": {
+          "8.2": 18,
+          "8.5": 1,
+          "7.303": 1,
+          "7.461": 1
+        },
+        "smallest_placed_font_bp": 7.510530615566213
+      },
+      "typography": {
+        "include_width": "\\linewidth",
+        "include_width_bp": 355.42098132004986,
+        "pdf_width_bp": 345.6000061035156,
+        "placed_modal_font_bp": 8.433,
+        "smallest_placed_font_bp": 7.510511462991142,
+        "font_histogram": {
+          "8.433": 18,
+          "8.742": 1,
+          "7.511": 1,
+          "7.673": 1
+        },
+        "text_below_8bp": [
+          {
+            "text": "Produzent P",
+            "placed_font_bp": 7.511
+          },
+          {
+            "text": "Konsument C",
+            "placed_font_bp": 7.673
+          }
+        ],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/layout_v48/energy/figures/cross_workload_spectra.pdf",
+      "figure_numbers": [
+        "4.6"
+      ],
+      "language": "de",
+      "source_kind": "results_german_same_data_energy_render",
+      "origin": "publications/dissertation/thesis-v56/de/figures/energy/cross_workload_spectra.pdf",
+      "sha256": "81cb232e35bfb9d76cae99f61ac8560ffc186358cb7297f7e1a28945ae55ed1b",
+      "project_sha256": "81cb232e35bfb9d76cae99f61ac8560ffc186358cb7297f7e1a28945ae55ed1b",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/figures/energy/cross_workload_spectra.pdf",
+      "english_original_sha256": "4c102aeda661e3ff19af5d89921312e765fe15b18e3a4a70cfcfa62538668b46",
+      "command": "python scripts/dissertation/export_frozen_thesis_figures.py --language de --output <empty-output>",
+      "numerical_equality": {
+        "file": "figures/energy/cross_workload_spectra.pdf",
+        "language": "de",
+        "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/cross_workload_spectra.pdf",
+        "english_reference_sha256": "4c102aeda661e3ff19af5d89921312e765fe15b18e3a4a70cfcfa62538668b46",
+        "sha256": "81cb232e35bfb9d76cae99f61ac8560ffc186358cb7297f7e1a28945ae55ed1b",
+        "include_width": "\\linewidth",
+        "placed_modal_font_bp": 8.711298453167998,
+        "source_kind": "published_summary_data_rerender",
+        "source_inputs": {
+          "results/energy-measurement/data/spectra/pico_vs_tek_psd/data/curves/Jetson_Orin_NX__gemmfp32__tek__power__excess__existing_full_record.csv": "5de86c02d9ee7060d2a7861496276eb443818a4a3d072824b37ba233b390033c",
+          "results/energy-measurement/data/spectra/pico_vs_tek_psd/data/curves/Jetson_Orin_NX__gemmint8__tek__power__excess__existing_full_record.csv": "81373862066a5dab400260995373f67148f2c874f387130327eab9815ce2302f",
+          "results/energy-measurement/data/spectra/pico_vs_tek_psd/data/curves/Jetson_Orin_NX__yolofp32__tek__power__excess__existing_full_record.csv": "468bcf4da2ed0a28fdaba0b758c76043c94aba15ca448c6c1cc5b147ac3cbe46",
+          "results/energy-measurement/data/spectra/pico_vs_tek_psd/data/curves/Jetson_Orin_NX__yoloint8__tek__power__excess__existing_full_record.csv": "6e73256a7b26195e91c08dc92fd08f7596a447cfcc951b2ca4b852a615d4764a",
+          "results/energy-measurement/data/spectra/pico_vs_tek_psd/data/curves/Jetson_Orin_NX__gemma3-4b__tek__power__excess__existing_full_record.csv": "92dd4e52ee7bc215724d74d23c2f921b30c5aa086f0b863cf6e3241c2078f037",
+          "results/energy-measurement/data/spectra/pico_vs_tek_psd/data/curves/Jetson_Orin_NX__resnet50__tek__power__excess__existing_full_record.csv": "84874206ba4acf6d899722264b08b43fe88c416d84be5ccc8f73475fd644f0b9"
+        },
+        "data_payload": "figures/energy/cross_workload_spectra.json",
+        "data_payload_sha256": "ef5ef5b34efbb8e2dba6d6e79a87ab331914b92209e70527802c0791729558bc",
+        "exact_source_rows_retained": true,
+        "statistics_recomputed": false,
+        "english_numeric_geometry_check": {
+          "status": "PASS",
+          "tolerance_bp": 0.002,
+          "reference_use": "validation only; no PDF data used in rendering",
+          "checks": [
+            {
+              "series": "gemmfp32/PSD",
+              "checked_values": 2964,
+              "maximum_error_bp": 8.907310530048562e-06
+            },
+            {
+              "series": "gemmfp32/CDF",
+              "checked_values": 224,
+              "maximum_error_bp": 1.5435793557116995e-05
+            },
+            {
+              "series": "gemmint8/PSD",
+              "checked_values": 3208,
+              "maximum_error_bp": 8.057488003032631e-06
+            },
+            {
+              "series": "gemmint8/CDF",
+              "checked_values": 226,
+              "maximum_error_bp": 1.5220452041830868e-05
+            },
+            {
+              "series": "yolofp32/PSD",
+              "checked_values": 3086,
+              "maximum_error_bp": 7.989498826077579e-06
+            },
+            {
+              "series": "yolofp32/CDF",
+              "checked_values": 464,
+              "maximum_error_bp": 1.52982543681901e-05
+            },
+            {
+              "series": "yoloint8/PSD",
+              "checked_values": 2886,
+              "maximum_error_bp": 8.102639384333088e-06
+            },
+            {
+              "series": "yoloint8/CDF",
+              "checked_values": 378,
+              "maximum_error_bp": 1.5565183446142328e-05
+            },
+            {
+              "series": "gemma3-4b/PSD",
+              "checked_values": 3360,
+              "maximum_error_bp": 8.105663255264517e-06
+            },
+            {
+              "series": "gemma3-4b/CDF",
+              "checked_values": 352,
+              "maximum_error_bp": 1.5532878137491934e-05
+            },
+            {
+              "series": "resnet50/PSD",
+              "checked_values": 3004,
+              "maximum_error_bp": 8.037466884047717e-06
+            },
+            {
+              "series": "resnet50/CDF",
+              "checked_values": 412,
+              "maximum_error_bp": 1.5532878137491934e-05
+            }
+          ],
+          "checked_values": 20564
+        },
+        "same_canvas_as_english": true,
+        "pdf_width_bp": 489.6000061035156,
+        "include_width_bp": 355.42098132004986,
+        "font_sizes_bp": {
+          "12.0": 30
+        },
+        "smallest_placed_font_bp": 8.711298453167998,
+        "clipped_text": [],
+        "published_german_counterpart_check": {
+          "source": "publications/dissertation/thesis-v56/figures/energie/cross_workload_spectra.pdf",
+          "identical_page_dimensions": true,
+          "identical_vector_drawing_commands": true,
+          "vector_drawing_counts": [
+            63
+          ],
+          "identical_numeric_label_tokens": true,
+          "numeric_label_token_counts": [
+            28
+          ]
+        },
+        "generator": "scripts/dissertation/render_thesis_energy_de.py",
+        "generator_sha256": "48ad3df0c3cfdf8fe1e4f880e380ab4a6d29b9ea8f2c21bda8a94d8c7fcc9f15"
+      },
+      "typography": {
+        "include_width": "\\linewidth",
+        "include_width_bp": 355.42098132004986,
+        "pdf_width_bp": 489.6000061035156,
+        "placed_modal_font_bp": 8.711,
+        "smallest_placed_font_bp": 8.711298453167998,
+        "font_histogram": {
+          "8.711": 30
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/layout_v48/energy/figures/current_verification.pdf",
+      "figure_numbers": [
+        "4.3"
+      ],
+      "language": "de",
+      "source_kind": "results_published_german_exact_bytes",
+      "origin": "publications/dissertation/thesis-v56/de/figures/energy/current_verification.pdf",
+      "sha256": "5926de10b35e863071e528a7d3ffc726609fef5ae96467ed2c243bc7a21d74c5",
+      "project_sha256": "5926de10b35e863071e528a7d3ffc726609fef5ae96467ed2c243bc7a21d74c5",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/figures/energy/current_verification.pdf",
+      "english_original_sha256": "dfb29398d5ab37a65f785bb237fd7fde327595e898c574a999ccd0f70629494c",
+      "command": "python scripts/dissertation/export_frozen_thesis_figures.py --language de --output <empty-output>",
+      "numerical_equality": {
+        "file": "figures/energy/current_verification.pdf",
+        "source": "publications/dissertation/thesis-v56/figures/energie/current_verification.pdf",
+        "language": "de",
+        "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/current_verification.pdf",
+        "english_reference_sha256": "dfb29398d5ab37a65f785bb237fd7fde327595e898c574a999ccd0f70629494c",
+        "identical_page_dimensions": true,
+        "identical_vector_drawing_commands": true,
+        "vector_drawing_counts": [
+          95
+        ],
+        "identical_numeric_label_tokens": true,
+        "numeric_label_token_counts": [
+          10
+        ],
+        "sha256": "5926de10b35e863071e528a7d3ffc726609fef5ae96467ed2c243bc7a21d74c5",
+        "include_width": "247.68bp",
+        "placed_modal_font_bp": 8.600000331377755,
+        "source_kind": "published_german_exact_bytes",
+        "pdf_width_bp": 316.79998779296875,
+        "include_width_bp": 247.68,
+        "font_sizes_bp": {
+          "11.0": 10,
+          "10.5": 2,
+          "10.605": 1
+        },
+        "smallest_placed_font_bp": 8.209091225406038
+      },
+      "typography": {
+        "include_width": "247.68bp",
+        "include_width_bp": 247.68,
+        "pdf_width_bp": 316.79998779296875,
+        "placed_modal_font_bp": 8.6,
+        "smallest_placed_font_bp": 8.209091225406038,
+        "font_histogram": {
+          "8.6": 10,
+          "8.209": 2,
+          "8.291": 1
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/layout_v48/energy/figures/duration_comparison.pdf",
+      "figure_numbers": [
+        "4.12"
+      ],
+      "language": "de",
+      "source_kind": "results_german_same_data_energy_render",
+      "origin": "publications/dissertation/thesis-v56/de/figures/energy/duration_comparison.pdf",
+      "sha256": "e221bfaf3805b802d3fe3d062acf024f14168f2eba9f6071fea5d181ab6748b4",
+      "project_sha256": "e221bfaf3805b802d3fe3d062acf024f14168f2eba9f6071fea5d181ab6748b4",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/figures/energy/duration_comparison.pdf",
+      "english_original_sha256": "08570f5e78cc179bebebfdeccc8e464fb5a8fc243453f4039beb552f9ff394b6",
+      "command": "python scripts/dissertation/export_frozen_thesis_figures.py --language de --output <empty-output>",
+      "numerical_equality": {
+        "file": "figures/energy/duration_comparison.pdf",
+        "language": "de",
+        "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/duration_comparison.pdf",
+        "english_reference_sha256": "08570f5e78cc179bebebfdeccc8e464fb5a8fc243453f4039beb552f9ff394b6",
+        "sha256": "e221bfaf3805b802d3fe3d062acf024f14168f2eba9f6071fea5d181ab6748b4",
+        "include_width": "337.75bp",
+        "placed_modal_font_bp": 8.991030092592593,
+        "source_kind": "published_summary_data_rerender",
+        "source_inputs": {
+          "results/energy-measurement/tables/tim/duration.csv": "c9d9a4e55b95cde7ad053aca50851fb5fb1a7a1b9d80c383a8eef3ac9a318909"
+        },
+        "data_payload": "figures/energy/duration_comparison.json",
+        "data_payload_sha256": "f5bd80b0a77106d85dbf09c840784b97ec3d07fd6338fc9ed2fc5a25cb1d9436",
+        "exact_source_rows_retained": true,
+        "statistics_recomputed": false,
+        "english_numeric_geometry_check": {
+          "status": "PASS",
+          "tolerance_bp": 0.002,
+          "reference_use": "validation only; no PDF data used in rendering",
+          "checks": [
+            {
+              "series": "Jetson/gemm_fp32",
+              "checked_values": 10,
+              "maximum_error_bp": 1.4912992043036866e-05
+            },
+            {
+              "series": "Jetson/gemm_fp16",
+              "checked_values": 10,
+              "maximum_error_bp": 1.0171698278327312e-05
+            },
+            {
+              "series": "Jetson/gemm_int8",
+              "checked_values": 10,
+              "maximum_error_bp": 6.691993689855735e-06
+            },
+            {
+              "series": "Jetson/yolo_fp32",
+              "checked_values": 10,
+              "maximum_error_bp": 2.6116968712130983e-06
+            },
+            {
+              "series": "Jetson/yolo_fp16",
+              "checked_values": 10,
+              "maximum_error_bp": 9.808059729721208e-06
+            },
+            {
+              "series": "Jetson/yolo_int8",
+              "checked_values": 10,
+              "maximum_error_bp": 8.470261249726718e-06
+            },
+            {
+              "series": "Jetson/random_pattern_yolo",
+              "checked_values": 10,
+              "maximum_error_bp": 5.4436519505429715e-06
+            },
+            {
+              "series": "Hailo/gemm",
+              "checked_values": 10,
+              "maximum_error_bp": 1.0791074146254687e-05
+            },
+            {
+              "series": "Hailo/yolo",
+              "checked_values": 10,
+              "maximum_error_bp": 1.2095689442048752e-05
+            },
+            {
+              "series": "Hailo/random_pattern_yolo",
+              "checked_values": 10,
+              "maximum_error_bp": 3.112792967385758e-05
+            }
+          ],
+          "checked_values": 100
+        },
+        "same_canvas_as_english": true,
+        "pdf_width_bp": 432.0,
+        "include_width_bp": 337.75,
+        "font_sizes_bp": {
+          "11.5": 23
+        },
+        "smallest_placed_font_bp": 8.991030092592593,
+        "clipped_text": [],
+        "published_german_counterpart_check": {
+          "source": "publications/dissertation/thesis-v56/figures/energie/duration_comparison.pdf",
+          "identical_page_dimensions": true,
+          "identical_vector_drawing_commands": true,
+          "vector_drawing_counts": [
+            294
+          ],
+          "identical_numeric_label_tokens": true,
+          "numeric_label_token_counts": [
+            14
+          ]
+        },
+        "generator": "scripts/dissertation/render_thesis_energy_de.py",
+        "generator_sha256": "48ad3df0c3cfdf8fe1e4f880e380ab4a6d29b9ea8f2c21bda8a94d8c7fcc9f15"
+      },
+      "typography": {
+        "include_width": "337.75bp",
+        "include_width_bp": 337.75,
+        "pdf_width_bp": 432.0,
+        "placed_modal_font_bp": 8.991,
+        "smallest_placed_font_bp": 8.991030092592593,
+        "font_histogram": {
+          "8.991": 23
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/layout_v48/energy/figures/fp16_objectives.pdf",
+      "figure_numbers": [
+        "4.5"
+      ],
+      "language": "de",
+      "source_kind": "results_german_same_data_energy_render",
+      "origin": "publications/dissertation/thesis-v56/de/figures/energy/fp16_objectives.pdf",
+      "sha256": "96ec8e53af49d07c5de9d32825cf1e50d0e6803b70cd06a98f036ddb3963c460",
+      "project_sha256": "96ec8e53af49d07c5de9d32825cf1e50d0e6803b70cd06a98f036ddb3963c460",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/figures/energy/fp16_objectives.pdf",
+      "english_original_sha256": "df9dd600f321d44024e7cca876d92d9f2ad8326e16f1bbb6b61ff75e52721613",
+      "command": "python scripts/dissertation/export_frozen_thesis_figures.py --language de --output <empty-output>",
+      "numerical_equality": {
+        "file": "figures/energy/fp16_objectives.pdf",
+        "language": "de",
+        "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/fp16_objectives.pdf",
+        "english_reference_sha256": "df9dd600f321d44024e7cca876d92d9f2ad8326e16f1bbb6b61ff75e52721613",
+        "sha256": "96ec8e53af49d07c5de9d32825cf1e50d0e6803b70cd06a98f036ddb3963c460",
+        "include_width": "346.19bp",
+        "placed_modal_font_bp": 8.990932948854109,
+        "source_kind": "published_summary_data_rerender",
+        "source_inputs": {
+          "results/energy-measurement/tables/tim/fp16_energy.csv": "921542c6840c2d678cef63617602608e03c9db8f4e804c903c1476d59f10c6cc",
+          "results/energy-measurement/tables/tim/fp16_coverage.csv": "92449385ff956fc5a3e5c72ffe9a5428382976a277903dd7ecdb9a62822b64d5"
+        },
+        "data_payload": "figures/energy/fp16_objectives.json",
+        "data_payload_sha256": "99a978d9f34f3bdbfeb1d85d3c41a5486d74df5f6816f17814cf6409d7de000a",
+        "exact_source_rows_retained": true,
+        "statistics_recomputed": false,
+        "english_numeric_geometry_check": {
+          "status": "PASS",
+          "tolerance_bp": 0.002,
+          "reference_use": "validation only; no PDF data used in rendering",
+          "checks": [
+            {
+              "series": "Q95",
+              "checked_values": 3,
+              "maximum_error_bp": 9.209513564201188e-06
+            },
+            {
+              "series": "above Nyquist",
+              "checked_values": 3,
+              "maximum_error_bp": 5.382144806276301e-06
+            }
+          ],
+          "checked_values": 6
+        },
+        "same_canvas_as_english": true,
+        "pdf_width_bp": 442.79998779296875,
+        "include_width_bp": 346.19,
+        "font_sizes_bp": {
+          "11.5": 21
+        },
+        "smallest_placed_font_bp": 8.990932948854109,
+        "clipped_text": [],
+        "published_german_counterpart_check": {
+          "source": "publications/dissertation/thesis-v56/figures/energie/fp16_objectives.pdf",
+          "identical_page_dimensions": true,
+          "identical_vector_drawing_commands": true,
+          "vector_drawing_counts": [
+            69
+          ],
+          "identical_numeric_label_tokens": true,
+          "numeric_label_token_counts": [
+            18
+          ]
+        },
+        "generator": "scripts/dissertation/render_thesis_energy_de.py",
+        "generator_sha256": "48ad3df0c3cfdf8fe1e4f880e380ab4a6d29b9ea8f2c21bda8a94d8c7fcc9f15"
+      },
+      "typography": {
+        "include_width": "346.19bp",
+        "include_width_bp": 346.19,
+        "pdf_width_bp": 442.79998779296875,
+        "placed_modal_font_bp": 8.991,
+        "smallest_placed_font_bp": 8.990932948854109,
+        "font_histogram": {
+          "8.991": 21
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/layout_v48/energy/figures/hailo_meters.pdf",
+      "figure_numbers": [
+        "4.10"
+      ],
+      "language": "de",
+      "source_kind": "results_german_same_data_energy_render",
+      "origin": "publications/dissertation/thesis-v56/de/figures/energy/hailo_meters.pdf",
+      "sha256": "6a6127d19a4e9c715c7ac2e997bafc33cfebf59bfd8ab569cf19a6172d6007fe",
+      "project_sha256": "6a6127d19a4e9c715c7ac2e997bafc33cfebf59bfd8ab569cf19a6172d6007fe",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/figures/energy/hailo_meters.pdf",
+      "english_original_sha256": "9b1e7309fc6f53c32545d7eb419bec79b99e2f0b293285a7333c707f23985921",
+      "command": "python scripts/dissertation/export_frozen_thesis_figures.py --language de --output <empty-output>",
+      "numerical_equality": {
+        "file": "figures/energy/hailo_meters.pdf",
+        "language": "de",
+        "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/hailo_meters.pdf",
+        "english_reference_sha256": "9b1e7309fc6f53c32545d7eb419bec79b99e2f0b293285a7333c707f23985921",
+        "sha256": "6a6127d19a4e9c715c7ac2e997bafc33cfebf59bfd8ab569cf19a6172d6007fe",
+        "include_width": "337.75bp",
+        "placed_modal_font_bp": 8.991030092592593,
+        "source_kind": "published_summary_data_rerender",
+        "source_inputs": {
+          "results/energy-measurement/tables/tim/paired_300s.csv": "c11dc88e47f11fbf33d3683f355062c442444ecaddd1fb4b37f61df1e30e4381"
+        },
+        "data_payload": "figures/energy/hailo_meters.json",
+        "data_payload_sha256": "c5a735f135a33e89bb919b480622f85181ad8b5b4a9dd46aa7ba6db90284dd4c",
+        "exact_source_rows_retained": true,
+        "statistics_recomputed": false,
+        "english_numeric_geometry_check": {
+          "status": "PASS",
+          "tolerance_bp": 0.002,
+          "reference_use": "validation only; no PDF data used in rendering",
+          "checks": [
+            {
+              "series": "firmware",
+              "checked_values": 3,
+              "maximum_error_bp": 1.2617009446103111e-05
+            },
+            {
+              "series": "hailo_rt",
+              "checked_values": 3,
+              "maximum_error_bp": 1.3262255492918484e-05
+            },
+            {
+              "series": "shelly",
+              "checked_values": 3,
+              "maximum_error_bp": 1.6508999522102386e-05
+            }
+          ],
+          "checked_values": 9
+        },
+        "same_canvas_as_english": true,
+        "pdf_width_bp": 432.0,
+        "include_width_bp": 337.75,
+        "font_sizes_bp": {
+          "11.5": 16
+        },
+        "smallest_placed_font_bp": 8.991030092592593,
+        "clipped_text": [],
+        "published_german_counterpart_check": {
+          "source": "publications/dissertation/thesis-v56/figures/energie/hailo_meters.pdf",
+          "identical_page_dimensions": true,
+          "identical_vector_drawing_commands": true,
+          "vector_drawing_counts": [
+            38
+          ],
+          "identical_numeric_label_tokens": true,
+          "numeric_label_token_counts": [
+            6
+          ]
+        },
+        "generator": "scripts/dissertation/render_thesis_energy_de.py",
+        "generator_sha256": "48ad3df0c3cfdf8fe1e4f880e380ab4a6d29b9ea8f2c21bda8a94d8c7fcc9f15"
+      },
+      "typography": {
+        "include_width": "337.75bp",
+        "include_width_bp": 337.75,
+        "pdf_width_bp": 432.0,
+        "placed_modal_font_bp": 8.991,
+        "smallest_placed_font_bp": 8.991030092592593,
+        "font_histogram": {
+          "8.991": 16
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/layout_v48/energy/figures/hailo_spectral_tail.pdf",
+      "figure_numbers": [
+        "4.8"
+      ],
+      "language": "de",
+      "source_kind": "results_german_same_data_energy_render",
+      "origin": "publications/dissertation/thesis-v56/de/figures/energy/hailo_spectral_tail.pdf",
+      "sha256": "5a0c37fb219ccb5d9e0cb935194dceb82d44e522fdfd326e45b9b737ad9cd7ed",
+      "project_sha256": "5a0c37fb219ccb5d9e0cb935194dceb82d44e522fdfd326e45b9b737ad9cd7ed",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/figures/energy/hailo_spectral_tail.pdf",
+      "english_original_sha256": "2faa8de8a27d436090a95a9611977e8e96d3ddef3e12a50fda1d052779a0caeb",
+      "command": "python scripts/dissertation/export_frozen_thesis_figures.py --language de --output <empty-output>",
+      "numerical_equality": {
+        "file": "figures/energy/hailo_spectral_tail.pdf",
+        "language": "de",
+        "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/hailo_spectral_tail.pdf",
+        "english_reference_sha256": "2faa8de8a27d436090a95a9611977e8e96d3ddef3e12a50fda1d052779a0caeb",
+        "sha256": "5a0c37fb219ccb5d9e0cb935194dceb82d44e522fdfd326e45b9b737ad9cd7ed",
+        "include_width": "247.68bp",
+        "placed_modal_font_bp": 8.990909437349472,
+        "source_kind": "published_summary_data_rerender",
+        "source_inputs": {
+          "results/energy-measurement/tables/tim/hailo_spectra.csv": "16991e60335c93ec72df79b71673085545b07c3cd9dbe25eef49401748ac3795"
+        },
+        "data_payload": "figures/energy/hailo_spectral_tail.json",
+        "data_payload_sha256": "5871c38453a54aab7c6b79d1d361f9b40a35361555d3d9c22ac045e668765009",
+        "exact_source_rows_retained": true,
+        "statistics_recomputed": false,
+        "english_numeric_geometry_check": {
+          "status": "PASS",
+          "tolerance_bp": 0.002,
+          "reference_use": "validation only; no PDF data used in rendering",
+          "checks": [
+            {
+              "series": "active",
+              "checked_values": 2,
+              "maximum_error_bp": 5.284318604026339e-06
+            },
+            {
+              "series": "excess",
+              "checked_values": 2,
+              "maximum_error_bp": 6.88064289988688e-06
+            }
+          ],
+          "checked_values": 4
+        },
+        "same_canvas_as_english": true,
+        "pdf_width_bp": 316.79998779296875,
+        "include_width_bp": 247.68,
+        "font_sizes_bp": {
+          "11.5": 12
+        },
+        "smallest_placed_font_bp": 8.990909437349472,
+        "clipped_text": [],
+        "published_german_counterpart_check": {
+          "source": "publications/dissertation/thesis-v56/figures/energie/hailo_spectral_tail.pdf",
+          "identical_page_dimensions": true,
+          "identical_vector_drawing_commands": true,
+          "vector_drawing_counts": [
+            44
+          ],
+          "identical_numeric_label_tokens": true,
+          "numeric_label_token_counts": [
+            8
+          ]
+        },
+        "generator": "scripts/dissertation/render_thesis_energy_de.py",
+        "generator_sha256": "48ad3df0c3cfdf8fe1e4f880e380ab4a6d29b9ea8f2c21bda8a94d8c7fcc9f15"
+      },
+      "typography": {
+        "include_width": "247.68bp",
+        "include_width_bp": 247.68,
+        "pdf_width_bp": 316.79998779296875,
+        "placed_modal_font_bp": 8.991,
+        "smallest_placed_font_bp": 8.990909437349472,
+        "font_histogram": {
+          "8.991": 12
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/layout_v48/energy/figures/hailo_variable_intervals.pdf",
+      "figure_numbers": [
+        "4.11"
+      ],
+      "language": "de",
+      "source_kind": "results_german_same_data_energy_render",
+      "origin": "publications/dissertation/thesis-v56/de/figures/energy/hailo_variable_intervals.pdf",
+      "sha256": "3ef9075b072137b98ec820c6811c51638f48f0d4014af1d0f55e63fda716b03a",
+      "project_sha256": "3ef9075b072137b98ec820c6811c51638f48f0d4014af1d0f55e63fda716b03a",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/figures/energy/hailo_variable_intervals.pdf",
+      "english_original_sha256": "eb163d77679583f27b9c3c076c01038ab340dac639b4d6e1269a82d34ef0c1cb",
+      "command": "python scripts/dissertation/export_frozen_thesis_figures.py --language de --output <empty-output>",
+      "numerical_equality": {
+        "file": "figures/energy/hailo_variable_intervals.pdf",
+        "language": "de",
+        "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/hailo_variable_intervals.pdf",
+        "english_reference_sha256": "eb163d77679583f27b9c3c076c01038ab340dac639b4d6e1269a82d34ef0c1cb",
+        "sha256": "3ef9075b072137b98ec820c6811c51638f48f0d4014af1d0f55e63fda716b03a",
+        "include_width": "247.68bp",
+        "placed_modal_font_bp": 8.990909437349472,
+        "source_kind": "published_summary_data_rerender",
+        "source_inputs": {
+          "results/energy-measurement/tables/tim/hailo_variable_interval_comparison.csv": "c3711378383ba2bcdf0afdcfde28c4e712aa8da0cdd4f5d24fb9f0e0504c8497"
+        },
+        "data_payload": "figures/energy/hailo_variable_intervals.json",
+        "data_payload_sha256": "ed2edb961633770a95c5373d4561a8fa597f96bde438688bcd3a3872e44e1c80",
+        "exact_source_rows_retained": true,
+        "statistics_recomputed": false,
+        "english_numeric_geometry_check": {
+          "status": "PASS",
+          "tolerance_bp": 0.002,
+          "reference_use": "validation only; no PDF data used in rendering",
+          "checks": [
+            {
+              "series": "P_median_pct",
+              "checked_values": 10,
+              "maximum_error_bp": 1.035288416773028e-05
+            },
+            {
+              "series": "E_median_pct",
+              "checked_values": 10,
+              "maximum_error_bp": 4.700778276855999e-06
+            },
+            {
+              "series": "T_median_pct",
+              "checked_values": 10,
+              "maximum_error_bp": 5.634877595639409e-06
+            }
+          ],
+          "checked_values": 30
+        },
+        "same_canvas_as_english": true,
+        "pdf_width_bp": 316.79998779296875,
+        "include_width_bp": 247.68,
+        "font_sizes_bp": {
+          "11.5": 12
+        },
+        "smallest_placed_font_bp": 8.990909437349472,
+        "clipped_text": [],
+        "published_german_counterpart_check": {
+          "source": "publications/dissertation/thesis-v56/figures/energie/hailo_variable_intervals.pdf",
+          "identical_page_dimensions": true,
+          "identical_vector_drawing_commands": true,
+          "vector_drawing_counts": [
+            70
+          ],
+          "identical_numeric_label_tokens": true,
+          "numeric_label_token_counts": [
+            7
+          ]
+        },
+        "generator": "scripts/dissertation/render_thesis_energy_de.py",
+        "generator_sha256": "48ad3df0c3cfdf8fe1e4f880e380ab4a6d29b9ea8f2c21bda8a94d8c7fcc9f15"
+      },
+      "typography": {
+        "include_width": "247.68bp",
+        "include_width_bp": 247.68,
+        "pdf_width_bp": 316.79998779296875,
+        "placed_modal_font_bp": 8.991,
+        "smallest_placed_font_bp": 8.990909437349472,
+        "font_histogram": {
+          "8.991": 12
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/layout_v48/energy/figures/jetson_deployed_meters.pdf",
+      "figure_numbers": [
+        "4.9"
+      ],
+      "language": "de",
+      "source_kind": "results_german_same_data_energy_render",
+      "origin": "publications/dissertation/thesis-v56/de/figures/energy/jetson_deployed_meters.pdf",
+      "sha256": "da13ebf860bc67493e77f0cb007d0eab60f7d66cb1df9cac8077ac8420171b35",
+      "project_sha256": "da13ebf860bc67493e77f0cb007d0eab60f7d66cb1df9cac8077ac8420171b35",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/figures/energy/jetson_deployed_meters.pdf",
+      "english_original_sha256": "4ee64bd1acc85230eece412fe42042be6bccd33701e73b9d171e0f6bd8825960",
+      "command": "python scripts/dissertation/export_frozen_thesis_figures.py --language de --output <empty-output>",
+      "numerical_equality": {
+        "file": "figures/energy/jetson_deployed_meters.pdf",
+        "language": "de",
+        "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/jetson_deployed_meters.pdf",
+        "english_reference_sha256": "4ee64bd1acc85230eece412fe42042be6bccd33701e73b9d171e0f6bd8825960",
+        "sha256": "da13ebf860bc67493e77f0cb007d0eab60f7d66cb1df9cac8077ac8420171b35",
+        "include_width": "270.20bp",
+        "placed_modal_font_bp": 8.99102993380529,
+        "source_kind": "published_summary_data_rerender",
+        "source_inputs": {
+          "results/energy-measurement/tables/tim/paired_300s.csv": "c11dc88e47f11fbf33d3683f355062c442444ecaddd1fb4b37f61df1e30e4381"
+        },
+        "data_payload": "figures/energy/jetson_deployed_meters.json",
+        "data_payload_sha256": "c8f687f0f352d5ca8a338c597bc7d3862bed9bfb31474da336573182fdb9ce7d",
+        "exact_source_rows_retained": true,
+        "statistics_recomputed": false,
+        "english_numeric_geometry_check": {
+          "status": "PASS",
+          "tolerance_bp": 0.002,
+          "reference_use": "validation only; no PDF data used in rendering",
+          "checks": [
+            {
+              "series": "firmware",
+              "checked_values": 7,
+              "maximum_error_bp": 1.3451776084139055e-05
+            },
+            {
+              "series": "jetson",
+              "checked_values": 7,
+              "maximum_error_bp": 8.299040501924537e-06
+            },
+            {
+              "series": "shelly",
+              "checked_values": 7,
+              "maximum_error_bp": 8.333549544659036e-06
+            }
+          ],
+          "checked_values": 21
+        },
+        "same_canvas_as_english": true,
+        "pdf_width_bp": 345.6000061035156,
+        "include_width_bp": 270.2,
+        "font_sizes_bp": {
+          "11.5": 16
+        },
+        "smallest_placed_font_bp": 8.99102993380529,
+        "clipped_text": [],
+        "published_german_counterpart_check": {
+          "source": "publications/dissertation/thesis-v56/figures/energie/jetson_deployed_meters.pdf",
+          "identical_page_dimensions": true,
+          "identical_vector_drawing_commands": true,
+          "vector_drawing_counts": [
+            47
+          ],
+          "identical_numeric_label_tokens": true,
+          "numeric_label_token_counts": [
+            12
+          ]
+        },
+        "generator": "scripts/dissertation/render_thesis_energy_de.py",
+        "generator_sha256": "48ad3df0c3cfdf8fe1e4f880e380ab4a6d29b9ea8f2c21bda8a94d8c7fcc9f15"
+      },
+      "typography": {
+        "include_width": "270.20bp",
+        "include_width_bp": 270.2,
+        "pdf_width_bp": 345.6000061035156,
+        "placed_modal_font_bp": 8.991,
+        "smallest_placed_font_bp": 8.99102993380529,
+        "font_histogram": {
+          "8.991": 16
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/layout_v48/energy/figures/jetson_rate_duration.pdf",
+      "figure_numbers": [
+        "4.4"
+      ],
+      "language": "de",
+      "source_kind": "results_published_german_exact_bytes",
+      "origin": "publications/dissertation/thesis-v56/de/figures/energy/jetson_rate_duration.pdf",
+      "sha256": "5ee0cbbdbb350da8352a178d25dd737f1d06b67485ca1e911ea6407eb3c92de9",
+      "project_sha256": "5ee0cbbdbb350da8352a178d25dd737f1d06b67485ca1e911ea6407eb3c92de9",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/figures/energy/jetson_rate_duration.pdf",
+      "english_original_sha256": "44ca8a73471a639996e1ca55e4ef5f85268f9a2a4b9e4372881b92355b124c30",
+      "command": "python scripts/dissertation/export_frozen_thesis_figures.py --language de --output <empty-output>",
+      "numerical_equality": {
+        "file": "figures/energy/jetson_rate_duration.pdf",
+        "source": "publications/dissertation/thesis-v56/figures/energie/jetson_rate_duration.pdf",
+        "language": "de",
+        "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/jetson_rate_duration.pdf",
+        "english_reference_sha256": "44ca8a73471a639996e1ca55e4ef5f85268f9a2a4b9e4372881b92355b124c30",
+        "identical_page_dimensions": true,
+        "identical_vector_drawing_commands": true,
+        "vector_drawing_counts": [
+          68
+        ],
+        "identical_numeric_label_tokens": true,
+        "numeric_label_token_counts": [
+          13
+        ],
+        "sha256": "5ee0cbbdbb350da8352a178d25dd737f1d06b67485ca1e911ea6407eb3c92de9",
+        "include_width": "247.68bp",
+        "placed_modal_font_bp": 8.600000331377755,
+        "source_kind": "published_german_exact_bytes",
+        "pdf_width_bp": 316.79998779296875,
+        "include_width_bp": 247.68,
+        "font_sizes_bp": {
+          "11.0": 9,
+          "10.426": 1,
+          "10.413": 1,
+          "10.4": 1,
+          "9.546": 1,
+          "9.647": 1
+        },
+        "smallest_placed_font_bp": 7.463236651212004
+      },
+      "typography": {
+        "include_width": "247.68bp",
+        "include_width_bp": 247.68,
+        "pdf_width_bp": 316.79998779296875,
+        "placed_modal_font_bp": 8.6,
+        "smallest_placed_font_bp": 7.463276543791667,
+        "font_histogram": {
+          "8.6": 9,
+          "8.152": 1,
+          "8.141": 1,
+          "8.131": 1,
+          "7.463": 1,
+          "7.542": 1
+        },
+        "text_below_8bp": [
+          {
+            "text": "1%-Kriterium",
+            "placed_font_bp": 7.463
+          },
+          {
+            "text": "0.5%-Kriterium",
+            "placed_font_bp": 7.542
+          }
+        ],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/layout_v48/energy/figures/native_cdf.pdf",
+      "figure_numbers": [
+        "4.7"
+      ],
+      "language": "de",
+      "source_kind": "results_german_same_data_energy_render",
+      "origin": "publications/dissertation/thesis-v56/de/figures/energy/native_cdf.pdf",
+      "sha256": "763fef649055c4c8ed8c70ad845a520f227cc877b1bec2cb07d76e178f7fcd04",
+      "project_sha256": "763fef649055c4c8ed8c70ad845a520f227cc877b1bec2cb07d76e178f7fcd04",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/figures/energy/native_cdf.pdf",
+      "english_original_sha256": "d68dd43902f4da1a1106a51e2ff234b51a36c2e4f15f7fcb114148af5b287e5f",
+      "command": "python scripts/dissertation/export_frozen_thesis_figures.py --language de --output <empty-output>",
+      "numerical_equality": {
+        "file": "figures/energy/native_cdf.pdf",
+        "language": "de",
+        "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/native_cdf.pdf",
+        "english_reference_sha256": "d68dd43902f4da1a1106a51e2ff234b51a36c2e4f15f7fcb114148af5b287e5f",
+        "sha256": "763fef649055c4c8ed8c70ad845a520f227cc877b1bec2cb07d76e178f7fcd04",
+        "include_width": "270.20bp",
+        "placed_modal_font_bp": 8.99102993380529,
+        "source_kind": "published_summary_data_rerender",
+        "source_inputs": {
+          "results/energy-measurement/tables/tim/native_spectral_comparison.csv": "71396de22b56a4c14b9f1f4ac8dbf16db5ea7ba15bd78c8c2e8d374114331a38"
+        },
+        "data_payload": "figures/energy/native_cdf.json",
+        "data_payload_sha256": "b6881a7845cfd211c8c17e6165e42ce6a480c7b1a92733f23551a386450c788e",
+        "exact_source_rows_retained": true,
+        "statistics_recomputed": false,
+        "english_numeric_geometry_check": {
+          "status": "PASS",
+          "tolerance_bp": 0.002,
+          "reference_use": "validation only; no PDF data used in rendering",
+          "checks": [
+            {
+              "series": "max_abs_cdf_difference_pp",
+              "checked_values": 6,
+              "maximum_error_bp": 4.225663275292391e-06
+            },
+            {
+              "series": "conditional_0_77khz_max_abs_cdf_difference_pp",
+              "checked_values": 6,
+              "maximum_error_bp": 5.4676144767284995e-06
+            }
+          ],
+          "checked_values": 12
+        },
+        "same_canvas_as_english": true,
+        "pdf_width_bp": 345.6000061035156,
+        "include_width_bp": 270.2,
+        "font_sizes_bp": {
+          "11.5": 16
+        },
+        "smallest_placed_font_bp": 8.99102993380529,
+        "clipped_text": [],
+        "published_german_counterpart_check": {
+          "source": "publications/dissertation/thesis-v56/figures/energie/native_cdf.pdf",
+          "identical_page_dimensions": true,
+          "identical_vector_drawing_commands": true,
+          "vector_drawing_counts": [
+            38
+          ],
+          "identical_numeric_label_tokens": true,
+          "numeric_label_token_counts": [
+            16
+          ]
+        },
+        "generator": "scripts/dissertation/render_thesis_energy_de.py",
+        "generator_sha256": "48ad3df0c3cfdf8fe1e4f880e380ab4a6d29b9ea8f2c21bda8a94d8c7fcc9f15"
+      },
+      "typography": {
+        "include_width": "270.20bp",
+        "include_width_bp": 270.2,
+        "pdf_width_bp": 345.6000061035156,
+        "placed_modal_font_bp": 8.991,
+        "smallest_placed_font_bp": 8.99102993380529,
+        "font_histogram": {
+          "8.991": 16
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/layout_v48/energy/figures/pause_sequence.pdf",
+      "figure_numbers": [
+        "4.13"
+      ],
+      "language": "de",
+      "source_kind": "results_german_same_data_energy_render",
+      "origin": "publications/dissertation/thesis-v56/de/figures/energy/pause_sequence.pdf",
+      "sha256": "991ae765fc54b74b4032f9d7d74fde4981e06d0b3d0d9939c737cbca092d0b90",
+      "project_sha256": "991ae765fc54b74b4032f9d7d74fde4981e06d0b3d0d9939c737cbca092d0b90",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/figures/energy/pause_sequence.pdf",
+      "english_original_sha256": "7dc0cbcd257ab746ffc049ecc39d68be2aa01026331880aaac03f1b61b2473c2",
+      "command": "python scripts/dissertation/export_frozen_thesis_figures.py --language de --output <empty-output>",
+      "numerical_equality": {
+        "file": "figures/energy/pause_sequence.pdf",
+        "language": "de",
+        "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/pause_sequence.pdf",
+        "english_reference_sha256": "7dc0cbcd257ab746ffc049ecc39d68be2aa01026331880aaac03f1b61b2473c2",
+        "sha256": "991ae765fc54b74b4032f9d7d74fde4981e06d0b3d0d9939c737cbca092d0b90",
+        "include_width": "337.75bp",
+        "placed_modal_font_bp": 8.991030092592593,
+        "source_kind": "published_summary_data_rerender",
+        "source_inputs": {
+          "results/energy-measurement/tables/tim/pause_timing.csv": "e13ff842b017b752d2c9bfec67ebd5de0bfeaaa772721c5e5b1d33f236c1103a"
+        },
+        "data_payload": "figures/energy/pause_sequence.json",
+        "data_payload_sha256": "f43c73107eecdd64f710c10f817f400e319ace5cb2d3adfd4e4ff65757988a7d",
+        "exact_source_rows_retained": true,
+        "statistics_recomputed": false,
+        "english_numeric_geometry_check": {
+          "status": "PASS",
+          "tolerance_bp": 0.002,
+          "reference_use": "validation only; no PDF data used in rendering",
+          "checks": [
+            {
+              "series": "trt_s/20",
+              "checked_values": 3,
+              "maximum_error_bp": 7.446349840734001e-06
+            },
+            {
+              "series": "trt_s/120",
+              "checked_values": 3,
+              "maximum_error_bp": 3.0990312609446846e-06
+            },
+            {
+              "series": "gpu_before_5s_median_C/20",
+              "checked_values": 3,
+              "maximum_error_bp": 8.076474642848552e-06
+            },
+            {
+              "series": "gpu_before_5s_median_C/120",
+              "checked_values": 3,
+              "maximum_error_bp": 1.3647420416873501e-05
+            }
+          ],
+          "checked_values": 12
+        },
+        "same_canvas_as_english": true,
+        "pdf_width_bp": 432.0,
+        "include_width_bp": 337.75,
+        "font_sizes_bp": {
+          "11.5": 24
+        },
+        "smallest_placed_font_bp": 8.991030092592593,
+        "clipped_text": [],
+        "published_german_counterpart_check": {
+          "source": "publications/dissertation/thesis-v56/figures/energie/pause_sequence.pdf",
+          "identical_page_dimensions": true,
+          "identical_vector_drawing_commands": true,
+          "vector_drawing_counts": [
+            47
+          ],
+          "identical_numeric_label_tokens": true,
+          "numeric_label_token_counts": [
+            21
+          ]
+        },
+        "generator": "scripts/dissertation/render_thesis_energy_de.py",
+        "generator_sha256": "48ad3df0c3cfdf8fe1e4f880e380ab4a6d29b9ea8f2c21bda8a94d8c7fcc9f15"
+      },
+      "typography": {
+        "include_width": "337.75bp",
+        "include_width_bp": 337.75,
+        "pdf_width_bp": 432.0,
+        "placed_modal_font_bp": 8.991,
+        "smallest_placed_font_bp": 8.991030092592593,
+        "font_histogram": {
+          "8.991": 24
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/layout_v48/evaluation/figures/resnet_energy.pdf",
+      "figure_numbers": [
+        "8.4"
+      ],
+      "language": "de",
+      "source_kind": "results_current_german_render",
+      "origin": "publications/dissertation/thesis-v56/de/current-selection/figures/resnet_h8_energy_current.pdf",
+      "sha256": "aa19fd1863f978b73c8d26f9e2663e56d115ea9b5427e5c6ae4ad19f3cb5fa71",
+      "project_sha256": "aa19fd1863f978b73c8d26f9e2663e56d115ea9b5427e5c6ae4ad19f3cb5fa71",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/current-selection/figures/resnet_h8_energy_current.pdf",
+      "english_original_sha256": "4d68d0e1cc728d646401e5982ddee92bb1ddb7c2a6fd8905298ab066134d3e40",
+      "command": "python scripts/dissertation/export_thesis_selection.py --language de --figures-only --figure-profile dissertation --output <empty-output>",
+      "numerical_equality": {
+        "same_published_data_revision": true,
+        "no_measurement_or_fitting": true,
+        "validation": "publications/dissertation/thesis-v56/de/current-selection/VALIDATION.json",
+        "english_regression": "15/15 PDFs byte-identical",
+        "published_deployment_figure_data_unchanged": true
+      },
+      "typography": {
+        "include_width": "3.7in",
+        "include_width_bp": 266.40000000000003,
+        "pdf_width_bp": 266.3999938964844,
+        "placed_modal_font_bp": 8.5,
+        "smallest_placed_font_bp": 7.500000171833215,
+        "font_histogram": {
+          "8.5": 11,
+          "9.0": 2,
+          "8.0": 2,
+          "7.5": 3
+        },
+        "text_below_8bp": [
+          {
+            "text": "Native-Splits",
+            "placed_font_bp": 7.5
+          },
+          {
+            "text": "H8 Full",
+            "placed_font_bp": 7.5
+          },
+          {
+            "text": "TensorRT Full",
+            "placed_font_bp": 7.5
+          }
+        ],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/layout_v48/methods/dag_cut.pdf",
+      "figure_numbers": [
+        "6.1"
+      ],
+      "language": "de",
+      "source_kind": "results_published_german_exact_bytes",
+      "origin": "publications/dissertation/thesis-v56/de/figures/methods/dag_cut.pdf",
+      "sha256": "b8ecb072db36db32a16337ad5669c3570286aeddc29665c4ea7e60a05a2d86bd",
+      "project_sha256": "b8ecb072db36db32a16337ad5669c3570286aeddc29665c4ea7e60a05a2d86bd",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/figures/methods/dag_cut.pdf",
+      "english_original_sha256": "081a88de9691c832cebea7f8774c5801280936853c94e05581bd1efc70783f5a",
+      "command": "python scripts/dissertation/export_frozen_thesis_figures.py --language de --output <empty-output>",
+      "numerical_equality": {
+        "file": "figures/methods/dag_cut.pdf",
+        "source": "publications/dissertation/thesis-v56/illustrations/methoden/dag_cut.pdf",
+        "language": "de",
+        "english_reference": "publications/dissertation/thesis-v56/en/figures/methods/dag_cut.pdf",
+        "english_reference_sha256": "081a88de9691c832cebea7f8774c5801280936853c94e05581bd1efc70783f5a",
+        "identical_page_dimensions": true,
+        "identical_vector_drawing_commands": true,
+        "vector_drawing_counts": [
+          20
+        ],
+        "identical_numeric_label_tokens": true,
+        "numeric_label_token_counts": [
+          2
+        ],
+        "sha256": "b8ecb072db36db32a16337ad5669c3570286aeddc29665c4ea7e60a05a2d86bd",
+        "include_width": "3.95in",
+        "placed_modal_font_bp": 8.566265410203044,
+        "source_kind": "published_german_exact_bytes",
+        "pdf_width_bp": 298.79998779296875,
+        "include_width_bp": 284.40000000000003,
+        "font_sizes_bp": {
+          "9.0": 6,
+          "6.3": 2,
+          "8.5": 1
+        },
+        "smallest_placed_font_bp": 5.996385787142132,
+        "smallest_font_note": "The smallest glyphs are mathematical C1/C2 subscripts; ordinary labels remain about 8–8.6 pt."
+      },
+      "typography": {
+        "include_width": "3.95in",
+        "include_width_bp": 284.40000000000003,
+        "pdf_width_bp": 298.79998779296875,
+        "placed_modal_font_bp": 8.566,
+        "smallest_placed_font_bp": 5.996385968684961,
+        "font_histogram": {
+          "8.566": 6,
+          "5.996": 2,
+          "8.09": 1
+        },
+        "text_below_8bp": [
+          {
+            "text": "1",
+            "placed_font_bp": 5.996
+          },
+          {
+            "text": "2",
+            "placed_font_bp": 5.996
+          }
+        ],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": true
+      }
+    },
+    {
+      "project_asset": "9_resources/results_final/figures/04_tradeoff_mobilenet_v3_large.pdf",
+      "figure_numbers": [
+        "D.1"
+      ],
+      "language": "de",
+      "source_kind": "results_current_german_render",
+      "origin": "publications/dissertation/thesis-v56/de/current-selection/figures/04_tradeoff_mobilenet_v3_large.pdf",
+      "sha256": "98ea164facc79bdb6f7395d5083a8aa988b50b78a35c6c41d2eb5db79e6aefa6",
+      "project_sha256": "98ea164facc79bdb6f7395d5083a8aa988b50b78a35c6c41d2eb5db79e6aefa6",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/current-selection/figures/04_tradeoff_mobilenet_v3_large.pdf",
+      "english_original_sha256": "d0eb59a06c4f51a25859091175d2c922887eed5dbfcaa0cdf2e2a5821cd3b235",
+      "command": "python scripts/dissertation/export_thesis_selection.py --language de --figures-only --figure-profile dissertation --output <empty-output>",
+      "numerical_equality": {
+        "same_published_data_revision": true,
+        "no_measurement_or_fitting": true,
+        "validation": "publications/dissertation/thesis-v56/de/current-selection/VALIDATION.json",
+        "english_regression": "15/15 PDFs byte-identical",
+        "exact_measurements_and_pareto_membership": true,
+        "excluded_from_comparison": "Presentation-only annotation text and offsets"
+      },
+      "typography": {
+        "include_width": "4.8in",
+        "include_width_bp": 345.59999999999997,
+        "pdf_width_bp": 345.6000061035156,
+        "placed_modal_font_bp": 8.5,
+        "smallest_placed_font_bp": 8.4999998498846,
+        "font_histogram": {
+          "8.5": 44,
+          "9.0": 15
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/results_final/figures/04_tradeoff_regnet_x_1_6gf.pdf",
+      "figure_numbers": [
+        "D.2"
+      ],
+      "language": "de",
+      "source_kind": "results_current_german_render",
+      "origin": "publications/dissertation/thesis-v56/de/current-selection/figures/04_tradeoff_regnet_x_1_6gf.pdf",
+      "sha256": "d101d036c848feee3944d7bf276aa2a86395480416954dc1b9e1a2ae9a681ce0",
+      "project_sha256": "d101d036c848feee3944d7bf276aa2a86395480416954dc1b9e1a2ae9a681ce0",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/current-selection/figures/04_tradeoff_regnet_x_1_6gf.pdf",
+      "english_original_sha256": "e8b1b474e065f6b600b61f7633a0e8d0395d46e96d4705f9d640b893a6ca608c",
+      "command": "python scripts/dissertation/export_thesis_selection.py --language de --figures-only --figure-profile dissertation --output <empty-output>",
+      "numerical_equality": {
+        "same_published_data_revision": true,
+        "no_measurement_or_fitting": true,
+        "validation": "publications/dissertation/thesis-v56/de/current-selection/VALIDATION.json",
+        "english_regression": "15/15 PDFs byte-identical",
+        "exact_measurements_and_pareto_membership": true,
+        "excluded_from_comparison": "Presentation-only annotation text and offsets"
+      },
+      "typography": {
+        "include_width": "4.8in",
+        "include_width_bp": 345.59999999999997,
+        "pdf_width_bp": 345.6000061035156,
+        "placed_modal_font_bp": 8.5,
+        "smallest_placed_font_bp": 8.4999998498846,
+        "font_histogram": {
+          "8.5": 46,
+          "9.0": 15
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/results_final/figures/04_tradeoff_resnet50.pdf",
+      "figure_numbers": [
+        "D.3"
+      ],
+      "language": "de",
+      "source_kind": "results_current_german_render",
+      "origin": "publications/dissertation/thesis-v56/de/current-selection/figures/04_tradeoff_resnet50.pdf",
+      "sha256": "0009dc02072407dbd06ff2752a800ef508de3eaf5cb13a30e3a00ce67fb0fb52",
+      "project_sha256": "0009dc02072407dbd06ff2752a800ef508de3eaf5cb13a30e3a00ce67fb0fb52",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/current-selection/figures/04_tradeoff_resnet50.pdf",
+      "english_original_sha256": "251ac54f1ebcd57b6df5ce7d1c6f2504a35cc8d51033284c5e22704335017d86",
+      "command": "python scripts/dissertation/export_thesis_selection.py --language de --figures-only --figure-profile dissertation --output <empty-output>",
+      "numerical_equality": {
+        "same_published_data_revision": true,
+        "no_measurement_or_fitting": true,
+        "validation": "publications/dissertation/thesis-v56/de/current-selection/VALIDATION.json",
+        "english_regression": "15/15 PDFs byte-identical",
+        "exact_measurements_and_pareto_membership": true,
+        "excluded_from_comparison": "Presentation-only annotation text and offsets"
+      },
+      "typography": {
+        "include_width": "4.8in",
+        "include_width_bp": 345.59999999999997,
+        "pdf_width_bp": 345.6000061035156,
+        "placed_modal_font_bp": 8.5,
+        "smallest_placed_font_bp": 8.4999998498846,
+        "font_histogram": {
+          "8.5": 45,
+          "9.0": 15
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/results_final/figures/04_tradeoff_yolo11l.pdf",
+      "figure_numbers": [
+        "D.4"
+      ],
+      "language": "de",
+      "source_kind": "results_current_german_render",
+      "origin": "publications/dissertation/thesis-v56/de/current-selection/figures/04_tradeoff_yolo11l.pdf",
+      "sha256": "9f84e1111c24e71b46acec2317972d653d36624e630714dd9e29ee47026dc208",
+      "project_sha256": "9f84e1111c24e71b46acec2317972d653d36624e630714dd9e29ee47026dc208",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/current-selection/figures/04_tradeoff_yolo11l.pdf",
+      "english_original_sha256": "72abf545a1d1084c990841e633a910b9538a093d5ed18f6b6cf9e10491103b91",
+      "command": "python scripts/dissertation/export_thesis_selection.py --language de --figures-only --figure-profile dissertation --output <empty-output>",
+      "numerical_equality": {
+        "same_published_data_revision": true,
+        "no_measurement_or_fitting": true,
+        "validation": "publications/dissertation/thesis-v56/de/current-selection/VALIDATION.json",
+        "english_regression": "15/15 PDFs byte-identical",
+        "exact_measurements_and_pareto_membership": true,
+        "excluded_from_comparison": "Presentation-only annotation text and offsets"
+      },
+      "typography": {
+        "include_width": "4.8in",
+        "include_width_bp": 345.59999999999997,
+        "pdf_width_bp": 345.6000061035156,
+        "placed_modal_font_bp": 8.5,
+        "smallest_placed_font_bp": 8.4999998498846,
+        "font_histogram": {
+          "8.5": 41,
+          "9.0": 15
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/results_final/figures/04_tradeoff_yolo26m.pdf",
+      "figure_numbers": [
+        "D.5"
+      ],
+      "language": "de",
+      "source_kind": "results_current_german_render",
+      "origin": "publications/dissertation/thesis-v56/de/current-selection/figures/04_tradeoff_yolo26m.pdf",
+      "sha256": "7f3feea405e1a8cd25620c80ca5ca2ca476290174e685b16922807bc95dd4efe",
+      "project_sha256": "7f3feea405e1a8cd25620c80ca5ca2ca476290174e685b16922807bc95dd4efe",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/current-selection/figures/04_tradeoff_yolo26m.pdf",
+      "english_original_sha256": "3770287ed7dbf84ceb7dc709a1146fafc29645b09d0e26a82afe21d51bc199cd",
+      "command": "python scripts/dissertation/export_thesis_selection.py --language de --figures-only --figure-profile dissertation --output <empty-output>",
+      "numerical_equality": {
+        "same_published_data_revision": true,
+        "no_measurement_or_fitting": true,
+        "validation": "publications/dissertation/thesis-v56/de/current-selection/VALIDATION.json",
+        "english_regression": "15/15 PDFs byte-identical",
+        "exact_measurements_and_pareto_membership": true,
+        "excluded_from_comparison": "Presentation-only annotation text and offsets"
+      },
+      "typography": {
+        "include_width": "4.8in",
+        "include_width_bp": 345.59999999999997,
+        "pdf_width_bp": 345.6000061035156,
+        "placed_modal_font_bp": 8.5,
+        "smallest_placed_font_bp": 8.4999998498846,
+        "font_histogram": {
+          "8.5": 41,
+          "9.0": 15
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/results_final/figures/04_tradeoff_yolo26s.pdf",
+      "figure_numbers": [
+        "D.6"
+      ],
+      "language": "de",
+      "source_kind": "results_current_german_render",
+      "origin": "publications/dissertation/thesis-v56/de/current-selection/figures/04_tradeoff_yolo26s.pdf",
+      "sha256": "b98f1bab8174e04aea5cae37f4ab70682a3412af3b46fb920795b58e21c64e04",
+      "project_sha256": "b98f1bab8174e04aea5cae37f4ab70682a3412af3b46fb920795b58e21c64e04",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/current-selection/figures/04_tradeoff_yolo26s.pdf",
+      "english_original_sha256": "0fd63c0f0986ac0e3561ad4973630f71778f930e4e5295bade025af6685ce1b1",
+      "command": "python scripts/dissertation/export_thesis_selection.py --language de --figures-only --figure-profile dissertation --output <empty-output>",
+      "numerical_equality": {
+        "same_published_data_revision": true,
+        "no_measurement_or_fitting": true,
+        "validation": "publications/dissertation/thesis-v56/de/current-selection/VALIDATION.json",
+        "english_regression": "15/15 PDFs byte-identical",
+        "exact_measurements_and_pareto_membership": true,
+        "excluded_from_comparison": "Presentation-only annotation text and offsets"
+      },
+      "typography": {
+        "include_width": "4.8in",
+        "include_width_bp": 345.59999999999997,
+        "pdf_width_bp": 345.6000061035156,
+        "placed_modal_font_bp": 8.5,
+        "smallest_placed_font_bp": 8.4999998498846,
+        "font_histogram": {
+          "8.5": 45,
+          "9.0": 15
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/results_final/figures/04_tradeoff_yolov7_paper.pdf",
+      "figure_numbers": [
+        "D.7"
+      ],
+      "language": "de",
+      "source_kind": "results_current_german_render",
+      "origin": "publications/dissertation/thesis-v56/de/current-selection/figures/04_tradeoff_yolov7_paper.pdf",
+      "sha256": "603ae3e5e2d6a9741617b817287730c3e33e8290f0f61506f60ae3a86a07cc6c",
+      "project_sha256": "603ae3e5e2d6a9741617b817287730c3e33e8290f0f61506f60ae3a86a07cc6c",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/current-selection/figures/04_tradeoff_yolov7_paper.pdf",
+      "english_original_sha256": "6af7182285ac7efb66b4ba8c8eb7ffc7fab43f20a2d8b64dcac5398956d3ee3b",
+      "command": "python scripts/dissertation/export_thesis_selection.py --language de --figures-only --figure-profile dissertation --output <empty-output>",
+      "numerical_equality": {
+        "same_published_data_revision": true,
+        "no_measurement_or_fitting": true,
+        "validation": "publications/dissertation/thesis-v56/de/current-selection/VALIDATION.json",
+        "english_regression": "15/15 PDFs byte-identical",
+        "exact_measurements_and_pareto_membership": true,
+        "excluded_from_comparison": "Presentation-only annotation text and offsets"
+      },
+      "typography": {
+        "include_width": "4.8in",
+        "include_width_bp": 345.59999999999997,
+        "pdf_width_bp": 345.6000061035156,
+        "placed_modal_font_bp": 8.5,
+        "smallest_placed_font_bp": 8.4999998498846,
+        "font_histogram": {
+          "8.5": 41,
+          "9.0": 15
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/results_final/figures/fastest_deployment_tradeoff.pdf",
+      "figure_numbers": [
+        "8.1"
+      ],
+      "language": "de",
+      "source_kind": "results_current_german_render",
+      "origin": "publications/dissertation/thesis-v56/de/current-selection/figures/fastest_deployment_tradeoff.pdf",
+      "sha256": "2c3d87d4c9da3159cc5fd159c0e433779f9fcf62cacda780848656f18e3fc1ff",
+      "project_sha256": "2c3d87d4c9da3159cc5fd159c0e433779f9fcf62cacda780848656f18e3fc1ff",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/current-selection/figures/fastest_deployment_tradeoff.pdf",
+      "english_original_sha256": "6b43fe89a35503530d5b3eedd4f6584fae6795c60a03d3bd2a607a44fdd6c956",
+      "command": "python scripts/dissertation/export_thesis_selection.py --language de --figures-only --figure-profile dissertation --output <empty-output>",
+      "numerical_equality": {
+        "same_published_data_revision": true,
+        "no_measurement_or_fitting": true,
+        "validation": "publications/dissertation/thesis-v56/de/current-selection/VALIDATION.json",
+        "english_regression": "15/15 PDFs byte-identical",
+        "published_deployment_figure_data_unchanged": true
+      },
+      "typography": {
+        "include_width": "4.5in",
+        "include_width_bp": 324.0,
+        "pdf_width_bp": 324.0,
+        "placed_modal_font_bp": 8.5,
+        "smallest_placed_font_bp": 8.0,
+        "font_histogram": {
+          "8.5": 17,
+          "9.0": 2,
+          "8.0": 7
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/results_final/figures/fastest_split_baseline_comparison.pdf",
+      "figure_numbers": [
+        "8.2"
+      ],
+      "language": "de",
+      "source_kind": "results_current_german_render",
+      "origin": "publications/dissertation/thesis-v56/de/current-selection/figures/fastest_split_baseline_comparison.pdf",
+      "sha256": "01c3965ede895db6d7b98afb12fe70807aaf42ded3ec5547b2e978db8cff182e",
+      "project_sha256": "01c3965ede895db6d7b98afb12fe70807aaf42ded3ec5547b2e978db8cff182e",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/current-selection/figures/fastest_split_baseline_comparison.pdf",
+      "english_original_sha256": "4a74b612b785dfc0c3b34801f0eeff953d26b0a8880b3874f082a996fc79249b",
+      "command": "python scripts/dissertation/export_thesis_selection.py --language de --figures-only --figure-profile dissertation --output <empty-output>",
+      "numerical_equality": {
+        "same_published_data_revision": true,
+        "no_measurement_or_fitting": true,
+        "validation": "publications/dissertation/thesis-v56/de/current-selection/VALIDATION.json",
+        "english_regression": "15/15 PDFs byte-identical",
+        "published_deployment_figure_data_unchanged": true
+      },
+      "typography": {
+        "include_width": "3.7in",
+        "include_width_bp": 266.40000000000003,
+        "pdf_width_bp": 266.3999938964844,
+        "placed_modal_font_bp": 8.5,
+        "smallest_placed_font_bp": 7.199999974225019,
+        "font_histogram": {
+          "8.5": 13,
+          "9.0": 1,
+          "7.5": 4,
+          "7.2": 6
+        },
+        "text_below_8bp": [
+          {
+            "text": "1,06",
+            "placed_font_bp": 7.5
+          },
+          {
+            "text": "2,54",
+            "placed_font_bp": 7.2
+          },
+          {
+            "text": "4,33",
+            "placed_font_bp": 7.2
+          },
+          {
+            "text": "1,68",
+            "placed_font_bp": 7.2
+          },
+          {
+            "text": "2,11",
+            "placed_font_bp": 7.2
+          },
+          {
+            "text": "1,10",
+            "placed_font_bp": 7.5
+          },
+          {
+            "text": "1,30 / 1,31",
+            "placed_font_bp": 7.5
+          },
+          {
+            "text": "1,23 / 1,24",
+            "placed_font_bp": 7.5
+          },
+          {
+            "text": "1,35",
+            "placed_font_bp": 7.2
+          },
+          {
+            "text": "2,13",
+            "placed_font_bp": 7.2
+          }
+        ],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/results_final/figures/rq2_generic_selection_loss.pdf",
+      "figure_numbers": [
+        "8.5"
+      ],
+      "language": "de",
+      "source_kind": "results_current_german_render",
+      "origin": "publications/dissertation/thesis-v56/de/current-selection/figures/rq2_generic_selection_loss.pdf",
+      "sha256": "151ab809cc6c930035f619d57590ce9bbdfc9fad4f83bd5b3a87378f19b8b1c1",
+      "project_sha256": "151ab809cc6c930035f619d57590ce9bbdfc9fad4f83bd5b3a87378f19b8b1c1",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/current-selection/figures/rq2_generic_selection_loss.pdf",
+      "english_original_sha256": "df28dd8f0b8683f5a93713735f7c444d42c7c076d05087a1a328746c56f4bdb4",
+      "command": "python scripts/dissertation/export_thesis_selection.py --language de --figures-only --figure-profile dissertation --output <empty-output>",
+      "numerical_equality": {
+        "same_published_data_revision": true,
+        "no_measurement_or_fitting": true,
+        "validation": "publications/dissertation/thesis-v56/de/current-selection/VALIDATION.json",
+        "english_regression": "15/15 PDFs byte-identical",
+        "csv_json_payloads_unchanged": true
+      },
+      "typography": {
+        "include_width": "4.65in",
+        "include_width_bp": 334.8,
+        "pdf_width_bp": 334.79998779296875,
+        "placed_modal_font_bp": 8.5,
+        "smallest_placed_font_bp": 8.000000291685346,
+        "font_histogram": {
+          "8.5": 16,
+          "9.0": 1,
+          "8.0": 3
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/results_final/figures/rq2_weighted_all_models.pdf",
+      "figure_numbers": [
+        "8.6"
+      ],
+      "language": "de",
+      "source_kind": "results_current_german_render",
+      "origin": "publications/dissertation/thesis-v56/de/current-selection/figures/rq2_weighted_all_models.pdf",
+      "sha256": "adefdd9feca6f7fc9ff51039010daa3284b03034a923cadf4ffd91dfa4a02d17",
+      "project_sha256": "adefdd9feca6f7fc9ff51039010daa3284b03034a923cadf4ffd91dfa4a02d17",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/current-selection/figures/rq2_weighted_all_models.pdf",
+      "english_original_sha256": "adb2440d0b697a2c438585bc33a8d5134c287d59fa473e5cf4d9aca4ae2b25ff",
+      "command": "python scripts/dissertation/export_thesis_selection.py --language de --figures-only --figure-profile dissertation --output <empty-output>",
+      "numerical_equality": {
+        "same_published_data_revision": true,
+        "no_measurement_or_fitting": true,
+        "validation": "publications/dissertation/thesis-v56/de/current-selection/VALIDATION.json",
+        "english_regression": "15/15 PDFs byte-identical",
+        "csv_json_payloads_unchanged": true
+      },
+      "typography": {
+        "include_width": "4.65in",
+        "include_width_bp": 334.8,
+        "pdf_width_bp": 334.79998779296875,
+        "placed_modal_font_bp": 8.5,
+        "smallest_placed_font_bp": 8.500000309915679,
+        "font_histogram": {
+          "8.5": 19,
+          "9.0": 2
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/results_final/figures/staged_selection_budget.pdf",
+      "figure_numbers": [
+        "8.8"
+      ],
+      "language": "de",
+      "source_kind": "results_current_german_render",
+      "origin": "publications/dissertation/thesis-v56/de/current-selection/figures/staged_selection_budget.pdf",
+      "sha256": "bb4ac5bc06192d1a6e0cbba7c58ac8ab48cc0a897b2482af907d30f397831e90",
+      "project_sha256": "bb4ac5bc06192d1a6e0cbba7c58ac8ab48cc0a897b2482af907d30f397831e90",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/current-selection/figures/staged_selection_budget.pdf",
+      "english_original_sha256": "cdc629be19f938962bd4e7147e362ddeb0341f15be971d3f797a109376ad9c0f",
+      "command": "python scripts/dissertation/export_thesis_selection.py --language de --figures-only --figure-profile dissertation --output <empty-output>",
+      "numerical_equality": {
+        "same_published_data_revision": true,
+        "no_measurement_or_fitting": true,
+        "validation": "publications/dissertation/thesis-v56/de/current-selection/VALIDATION.json",
+        "english_regression": "15/15 PDFs byte-identical",
+        "staged_direct_aggregate_checks": 60,
+        "staged_group_policy_budget_checks": 3780
+      },
+      "typography": {
+        "include_width": "4.65in",
+        "include_width_bp": 334.8,
+        "pdf_width_bp": 334.79998779296875,
+        "placed_modal_font_bp": 8.5,
+        "smallest_placed_font_bp": 8.500000309915679,
+        "font_histogram": {
+          "8.5": 15,
+          "9.0": 6
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/results_final/figures/staged_selection_flow.pdf",
+      "figure_numbers": [
+        "8.7"
+      ],
+      "language": "de",
+      "source_kind": "results_current_german_render",
+      "origin": "publications/dissertation/thesis-v56/de/current-selection/figures/staged_selection_flow.pdf",
+      "sha256": "306dbfe1fa4cd5aa03699c6d89e2985256416723320dd0d1265a3646dd49e358",
+      "project_sha256": "306dbfe1fa4cd5aa03699c6d89e2985256416723320dd0d1265a3646dd49e358",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/current-selection/figures/staged_selection_flow.pdf",
+      "english_original_sha256": "29fdee82acbfc2700ebfb03e78dd5c0a42daa7aa1846a6b4ab580a5c62086341",
+      "command": "python scripts/dissertation/export_thesis_selection.py --language de --figures-only --figure-profile dissertation --output <empty-output>",
+      "numerical_equality": {
+        "same_published_data_revision": true,
+        "no_measurement_or_fitting": true,
+        "validation": "publications/dissertation/thesis-v56/de/current-selection/VALIDATION.json",
+        "english_regression": "15/15 PDFs byte-identical",
+        "staged_direct_aggregate_checks": 60,
+        "staged_group_policy_budget_checks": 3780
+      },
+      "typography": {
+        "include_width": "4.9in",
+        "include_width_bp": 352.8,
+        "pdf_width_bp": 352.79998779296875,
+        "placed_modal_font_bp": 8.3,
+        "smallest_placed_font_bp": 8.300000477918438,
+        "font_histogram": {
+          "8.8": 1,
+          "9.0": 6,
+          "8.3": 8,
+          "9.5": 3
+        },
+        "text_below_8bp": [],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": false
+      }
+    },
+    {
+      "project_asset": "9_resources/results_final/figures/yolov7_h8_case.pdf",
+      "figure_numbers": [
+        "8.3"
+      ],
+      "language": "de",
+      "source_kind": "results_current_german_render",
+      "origin": "publications/dissertation/thesis-v56/de/current-selection/figures/yolov7_h8_case.pdf",
+      "sha256": "44b051eeb38812e1abe54297ca1ad1839d1bdf14c08c270b1f6fb57c4ab0c041",
+      "project_sha256": "44b051eeb38812e1abe54297ca1ad1839d1bdf14c08c270b1f6fb57c4ab0c041",
+      "source_commit": "3cc8ad92fb1a58e6e793561e489d323e19f15a01",
+      "english_original": "publications/dissertation/thesis-v56/en/current-selection/figures/yolov7_h8_case.pdf",
+      "english_original_sha256": "7b9ec642293d254988f4abb5be76da8b03e338eb62be9ff9593bd916540370d7",
+      "command": "python scripts/dissertation/export_thesis_selection.py --language de --figures-only --figure-profile dissertation --output <empty-output>",
+      "numerical_equality": {
+        "same_published_data_revision": true,
+        "no_measurement_or_fitting": true,
+        "validation": "publications/dissertation/thesis-v56/de/current-selection/VALIDATION.json",
+        "english_regression": "15/15 PDFs byte-identical",
+        "published_deployment_figure_data_unchanged": true
+      },
+      "typography": {
+        "include_width": "4.9in",
+        "include_width_bp": 352.8,
+        "pdf_width_bp": 352.79998779296875,
+        "placed_modal_font_bp": 8.5,
+        "smallest_placed_font_bp": 6.300000408717579,
+        "font_histogram": {
+          "8.5": 29,
+          "8.0": 3,
+          "9.0": 12,
+          "6.3": 1
+        },
+        "text_below_8bp": [
+          {
+            "text": "50:95",
+            "placed_font_bp": 6.3
+          }
+        ],
+        "text_outside_page_bbox": [],
+        "mathematical_subscripts_exempt": true
+      }
+    }
+  ],
+  "unresolved": []
+}

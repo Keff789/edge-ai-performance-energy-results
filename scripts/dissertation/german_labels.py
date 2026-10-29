@@ -13,7 +13,8 @@ HERE = Path(__file__).resolve().parent
 
 
 class GermanLabels:
-    def __init__(self):
+    def __init__(self, decimal_comma=False):
+        self.decimal_comma = decimal_comma
         self.catalog = json.loads((HERE / 'locales/figures_de.json').read_text(encoding='utf-8'))
         self.targets = set(self.catalog.values())
         self.rules = []
@@ -30,10 +31,16 @@ class GermanLabels:
     def translate(self, text):
         if not isinstance(text, str) or not text.strip():
             return text
+        if self.decimal_comma and re.fullmatch(r'[+−\-0-9.,%×/ =]+', text):
+            return text.replace('.', ',')
         if text in self.catalog:
             return self.catalog[text]
         if text in self.targets:
             return text
+        # Preserve deliberate multiline labels; normalizing them first collapses
+        # compact bar labels and causes overlaps in the dissertation profile.
+        if '\n' in text:
+            return '\n'.join(self.translate(line) for line in text.split('\n'))
         normalized = re.sub(r'\s+', ' ', text).strip()
         if normalized in self.catalog:
             return self.catalog[normalized]

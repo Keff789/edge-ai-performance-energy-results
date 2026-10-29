@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="OpenAI" version="32.6.4" type="device">
+  <diagram id="bilder-01" name="11 · System- und Modulmessgrenzen">
+    <mxGraphModel dx="1400" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="760" math="0" shadow="0" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="text-3" value="System- und Modulmessgrenzen" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.619;fontStyle=1;align=left;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="1">
+          <mxGeometry x="36.000" y="27.227" width="575.769" height="42.112" as="geometry" />
+        </mxCell>
+        <mxCell id="text-4" value="Systemeingang und nachgelagerte Versorgungspfade" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=32.764;fontStyle=0;align=left;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="1">
+          <mxGeometry x="54.000" y="78.643" width="787.125" height="37.679" as="geometry" />
+        </mxCell>
+        <mxCell id="node-5" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#F7FAF8;strokeColor=#90AA98;strokeWidth=1.2;fontColor=#18354A;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=24;fontStyle=1;align=left;verticalAlign=top;spacing=20;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;dashed=1;dashPattern=6 5;" vertex="1" parent="1">
+          <mxGeometry x="334" y="155" width="1030" height="444" as="geometry" />
+        </mxCell>
+        <mxCell id="text-6" value="Erfasster Systembereich" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=32.764;fontStyle=1;align=left;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="node-5">
+          <mxGeometry x="24.000" y="12.993" width="388.223" height="37.679" as="geometry" />
+        </mxCell>
+        <mxCell id="supply" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#F6ECE1;strokeColor=#C4A281;strokeWidth=1.3;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="306" width="250" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="text-8" value="DC-Versorgung" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=32.764;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="supply">
+          <mxGeometry x="1.953" y="17.693" width="246.093" height="37.679" as="geometry" />
+        </mxCell>
+        <mxCell id="text-9" value="19 V" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.619;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="supply">
+          <mxGeometry x="85.337" y="64.927" width="79.325" height="42.112" as="geometry" />
+        </mxCell>
+        <mxCell id="text-10" value="im gepaarten&#10;Versuch" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.066;fontStyle=0;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="supply">
+          <mxGeometry x="35.267" y="102.851" width="179.465" height="69.152" as="geometry" />
+        </mxCell>
+        <mxCell id="measure" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#EAF1EC;strokeColor=#90AA98;strokeWidth=1.3;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;" vertex="1" parent="node-5">
+          <mxGeometry x="42" y="151" width="240" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="text-12" value="Gesamtsystem-&#10;messgrenze" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=32.764;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="measure">
+          <mxGeometry x="-3.997" y="47.554" width="247.994" height="75.357" as="geometry" />
+        </mxCell>
+        <mxCell id="regulator" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#F6ECE1;strokeColor=#C4A281;strokeWidth=1.3;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="node-5">
+          <mxGeometry x="356" y="169" width="226" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="text-14" value="Spannungs-&#10;regler" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=32.764;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="regulator">
+          <mxGeometry x="16.345" y="29.204" width="193.310" height="75.357" as="geometry" />
+        </mxCell>
+        <mxCell id="module" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#E8EFF6;strokeColor=#8AA6BD;strokeWidth=1.3;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="node-5">
+          <mxGeometry x="668" y="78" width="330" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="text-17" value="5-V-Modulversorgung" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.066;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="module">
+          <mxGeometry x="7.649" y="27.539" width="314.702" height="34.576" as="geometry" />
+        </mxCell>
+        <mxCell id="text-18" value="Jetson / SMARC" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.837;fontStyle=0;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="module">
+          <mxGeometry x="49.042" y="68.426" width="231.916" height="35.463" as="geometry" />
+        </mxCell>
+        <mxCell id="aux" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#E8EFF6;strokeColor=#8AA6BD;strokeWidth=1.3;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="node-5">
+          <mxGeometry x="668" y="274" width="330" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="text-21" value="Beschleuniger +&#10;Hilfskomponenten" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.837;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="aux">
+          <mxGeometry x="28.504" y="-3.405" width="272.991" height="70.925" as="geometry" />
+        </mxCell>
+        <mxCell id="text-22" value="Getrennte&#10;Versorgungspfade" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=29.680;fontStyle=0;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="aux">
+          <mxGeometry x="41.742" y="70.430" width="246.515" height="68.264" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-23" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=block;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#AA8058;strokeWidth=2.8;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;arcSize=10;" edge="1" parent="1" source="supply" target="measure">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="286" y="395" as="sourcePoint" />
+            <mxPoint x="376" y="395" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-24" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=block;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#AA8058;strokeWidth=2.8;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;arcSize=10;" edge="1" parent="node-5" source="measure" target="regulator">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="282" y="240" as="sourcePoint" />
+            <mxPoint x="356" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-25" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=block;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#AA8058;strokeWidth=2.8;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;arcSize=10;" edge="1" parent="node-5" source="regulator" target="module">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="582" y="240" as="sourcePoint" />
+            <mxPoint x="668" y="147" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="624" y="240" />
+              <mxPoint x="624" y="147" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-26" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=block;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#AA8058;strokeWidth=2.8;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;arcSize=10;" edge="1" parent="node-5" source="regulator" target="aux">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="582" y="240" as="sourcePoint" />
+            <mxPoint x="668" y="343" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="624" y="240" />
+              <mxPoint x="624" y="343" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="node-27" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=none;strokeColor=none;strokeWidth=1.4;fontColor=#18354A;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;" vertex="1" parent="1">
+          <mxGeometry x="376" y="659" width="956" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="text-29" value="Einschließlich nachgelagerter Wandlungsverluste" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=32.764;fontStyle=0;align=left;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="node-27">
+          <mxGeometry x="0.000" y="4.993" width="719.599" height="37.679" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-30" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=none;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#5F8570;strokeWidth=1.8;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;dashed=1;dashPattern=5 4;exitX=0.5;exitY=1;entryX=0.125;entryY=0;arcSize=10;" edge="1" parent="1" source="measure" target="node-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="496" y="484" as="sourcePoint" />
+            <mxPoint x="495.5" y="659" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="496" y="630" />
+              <mxPoint x="495.5" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

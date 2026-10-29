@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "command": "python scripts/dissertation/export_thesis_selection.py --language en --figures-only --figure-profile dissertation --output <empty-dir>",
+  "english_pdf_count": 15,
+  "all_byte_identical": true,
+  "figures": [
+    {
+      "file": "04_tradeoff_mobilenet_v3_large.pdf",
+      "reference_sha256": "d0eb59a06c4f51a25859091175d2c922887eed5dbfcaa0cdf2e2a5821cd3b235",
+      "reproduced_sha256": "d0eb59a06c4f51a25859091175d2c922887eed5dbfcaa0cdf2e2a5821cd3b235"
+    },
+    {
+      "file": "04_tradeoff_regnet_x_1_6gf.pdf",
+      "reference_sha256": "e8b1b474e065f6b600b61f7633a0e8d0395d46e96d4705f9d640b893a6ca608c",
+      "reproduced_sha256": "e8b1b474e065f6b600b61f7633a0e8d0395d46e96d4705f9d640b893a6ca608c"
+    },
+    {
+      "file": "04_tradeoff_resnet50.pdf",
+      "reference_sha256": "251ac54f1ebcd57b6df5ce7d1c6f2504a35cc8d51033284c5e22704335017d86",
+      "reproduced_sha256": "251ac54f1ebcd57b6df5ce7d1c6f2504a35cc8d51033284c5e22704335017d86"
+    },
+    {
+      "file": "04_tradeoff_yolo11l.pdf",
+      "reference_sha256": "72abf545a1d1084c990841e633a910b9538a093d5ed18f6b6cf9e10491103b91",
+      "reproduced_sha256": "72abf545a1d1084c990841e633a910b9538a093d5ed18f6b6cf9e10491103b91"
+    },
+    {
+      "file": "04_tradeoff_yolo26m.pdf",
+      "reference_sha256": "3770287ed7dbf84ceb7dc709a1146fafc29645b09d0e26a82afe21d51bc199cd",
+      "reproduced_sha256": "3770287ed7dbf84ceb7dc709a1146fafc29645b09d0e26a82afe21d51bc199cd"
+    },
+    {
+      "file": "04_tradeoff_yolo26s.pdf",
+      "reference_sha256": "0fd63c0f0986ac0e3561ad4973630f71778f930e4e5295bade025af6685ce1b1",
+      "reproduced_sha256": "0fd63c0f0986ac0e3561ad4973630f71778f930e4e5295bade025af6685ce1b1"
+    },
+    {
+      "file": "04_tradeoff_yolov7_paper.pdf",
+      "reference_sha256": "6af7182285ac7efb66b4ba8c8eb7ffc7fab43f20a2d8b64dcac5398956d3ee3b",
+      "reproduced_sha256": "6af7182285ac7efb66b4ba8c8eb7ffc7fab43f20a2d8b64dcac5398956d3ee3b"
+    },
+    {
+      "file": "fastest_deployment_tradeoff.pdf",
+      "reference_sha256": "6b43fe89a35503530d5b3eedd4f6584fae6795c60a03d3bd2a607a44fdd6c956",
+      "reproduced_sha256": "6b43fe89a35503530d5b3eedd4f6584fae6795c60a03d3bd2a607a44fdd6c956"
+    },
+    {
+      "file": "fastest_split_baseline_comparison.pdf",
+      "reference_sha256": "4a74b612b785dfc0c3b34801f0eeff953d26b0a8880b3874f082a996fc79249b",
+      "reproduced_sha256": "4a74b612b785dfc0c3b34801f0eeff953d26b0a8880b3874f082a996fc79249b"
+    },
+    {
+      "file": "resnet_h8_energy_current.pdf",
+      "reference_sha256": "4d68d0e1cc728d646401e5982ddee92bb1ddb7c2a6fd8905298ab066134d3e40",
+      "reproduced_sha256": "4d68d0e1cc728d646401e5982ddee92bb1ddb7c2a6fd8905298ab066134d3e40"
+    },
+    {
+      "file": "rq2_generic_selection_loss.pdf",
+      "reference_sha256": "df28dd8f0b8683f5a93713735f7c444d42c7c076d05087a1a328746c56f4bdb4",
+      "reproduced_sha256": "df28dd8f0b8683f5a93713735f7c444d42c7c076d05087a1a328746c56f4bdb4"
+    },
+    {
+      "file": "rq2_weighted_all_models.pdf",
+      "reference_sha256": "adb2440d0b697a2c438585bc33a8d5134c287d59fa473e5cf4d9aca4ae2b25ff",
+      "reproduced_sha256": "adb2440d0b697a2c438585bc33a8d5134c287d59fa473e5cf4d9aca4ae2b25ff"
+    },
+    {
+      "file": "staged_selection_budget.pdf",
+      "reference_sha256": "cdc629be19f938962bd4e7147e362ddeb0341f15be971d3f797a109376ad9c0f",
+      "reproduced_sha256": "cdc629be19f938962bd4e7147e362ddeb0341f15be971d3f797a109376ad9c0f"
+    },
+    {
+      "file": "staged_selection_flow.pdf",
+      "reference_sha256": "29fdee82acbfc2700ebfb03e78dd5c0a42daa7aa1846a6b4ab580a5c62086341",
+      "reproduced_sha256": "29fdee82acbfc2700ebfb03e78dd5c0a42daa7aa1846a6b4ab580a5c62086341"
+    },
+    {
+      "file": "yolov7_h8_case.pdf",
+      "reference_sha256": "7b9ec642293d254988f4abb5be76da8b03e338eb62be9ff9593bd916540370d7",
+      "reproduced_sha256": "7b9ec642293d254988f4abb5be76da8b03e338eb62be9ff9593bd916540370d7"
+    }
+  ]
+}

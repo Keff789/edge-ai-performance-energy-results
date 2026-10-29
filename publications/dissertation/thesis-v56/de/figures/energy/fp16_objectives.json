@@ -1,0 +1,118 @@
+{
+  "schema": "thesis-energy-de-render-data-v1",
+  "language": "de",
+  "figure": "fp16_objectives",
+  "scientific_transformations": "Only existing plotted unit conversions (Hz to kHz, complementary percentages, and PSD dB display); no new statistics.",
+  "source_inputs": [
+    "results/energy-measurement/tables/tim/fp16_energy.csv",
+    "results/energy-measurement/tables/tim/fp16_coverage.csv"
+  ],
+  "source_rows": {
+    "fp16_energy": [
+      {
+        "cohort": "all_ids_0_to_14",
+        "rate_sps": 50,
+        "expected_ids": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]",
+        "used_ids": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]",
+        "complete_cohort": true,
+        "all_intervals_104s_within_2us": true,
+        "window_bases": "[\"centered_104s_within_yaml_indices_independent_sensitivity\"]",
+        "min_duration_s": 103.9999998,
+        "max_duration_s": 103.9999998,
+        "n_offset_cases": 960,
+        "native_pooled_Q95_pct": 0.6349568548870242,
+        "via_1M_pooled_Q95_pct": 0.6320849061057772,
+        "native_max_pct": 1.2363061805900015,
+        "via_1M_max_pct": 1.2299353640799433,
+        "original_window_and_selection_provenance_confirmed": false
+      },
+      {
+        "cohort": "all_ids_0_to_14",
+        "rate_sps": 85,
+        "expected_ids": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]",
+        "used_ids": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]",
+        "complete_cohort": true,
+        "all_intervals_104s_within_2us": true,
+        "window_bases": "[\"centered_104s_within_yaml_indices_independent_sensitivity\"]",
+        "min_duration_s": 103.9999998,
+        "max_duration_s": 103.9999998,
+        "n_offset_cases": 960,
+        "native_pooled_Q95_pct": 0.4940385479202204,
+        "via_1M_pooled_Q95_pct": 0.4894829763716718,
+        "native_max_pct": 0.8783758253321633,
+        "via_1M_max_pct": 0.8792852661348484,
+        "original_window_and_selection_provenance_confirmed": false
+      },
+      {
+        "cohort": "all_ids_0_to_14",
+        "rate_sps": 2000,
+        "expected_ids": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]",
+        "used_ids": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]",
+        "complete_cohort": true,
+        "all_intervals_104s_within_2us": true,
+        "window_bases": "[\"centered_104s_within_yaml_indices_independent_sensitivity\"]",
+        "min_duration_s": 103.9999998,
+        "max_duration_s": 103.9999998,
+        "n_offset_cases": 960,
+        "native_pooled_Q95_pct": 0.0932397714293653,
+        "via_1M_pooled_Q95_pct": 0.0926199696216102,
+        "native_max_pct": 0.1368488142153899,
+        "via_1M_max_pct": 0.1357220933945585,
+        "original_window_and_selection_provenance_confirmed": false
+      }
+    ],
+    "fp16_coverage": [
+      {
+        "rate_sps": 2000.0,
+        "median_pct": 3.7618490857520457,
+        "q05_pct": 3.549749137352897,
+        "q95_pct": 4.083949256503056,
+        "n": 15
+      },
+      {
+        "rate_sps": 125000.0,
+        "median_pct": 97.69485712768578,
+        "q05_pct": 97.5407884421667,
+        "q95_pct": 97.84717958826144,
+        "n": 15
+      },
+      {
+        "rate_sps": 160000.0,
+        "median_pct": 99.34662022192057,
+        "q05_pct": 99.31955963392936,
+        "q95_pct": 99.3705417224018,
+        "n": 15
+      }
+    ]
+  },
+  "plotted_series": [
+    {
+      "panel": 0,
+      "y": [
+        0.6349568548870242,
+        0.4940385479202204,
+        0.0932397714293653
+      ],
+      "field": "native_pooled_Q95_pct"
+    },
+    {
+      "panel": 1,
+      "y": [
+        96.23815091424795,
+        2.305142872314221,
+        0.6533797780794259
+      ],
+      "lower": [
+        95.91605074349694,
+        2.15282041173856,
+        0.6294582775982036
+      ],
+      "upper": [
+        96.45025086264711,
+        2.4592115578332994,
+        0.6804403660706413
+      ],
+      "field": "100 - coverage percentage"
+    }
+  ]
+}

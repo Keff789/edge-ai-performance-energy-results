@@ -6,6 +6,7 @@ translated by word substitution. The caller should record unmatched labels.
 import re
 
 DYNAMIC_TRANSLATIONS = [
+    (r'^(DeepX|H8|H10)\s+n=(\d+) · front=(\d+)$', r'\1   n=\2 · Pareto-Punkte=\3'),
     (r'^(DeepX|H8|H10): quality (\d+)/(\d+)$', r'\1: Qualität \2/\3'),
     (r'^(.+): selected existing dataset quality$', r'\1: gemessene Datensatzqualität'),
     (r'^(\d+)/(\d+) hits$', r'\1/\2 Treffer'),

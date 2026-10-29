@@ -33,6 +33,14 @@ class TranslationContract(unittest.TestCase):
         self.assertFalse(labels.known('A new unreviewed scientific claim', 'A new unreviewed scientific claim'))
         self.assertEqual(labels.translate('157.56'), '157.56')
 
+    def test_decimal_display_and_deliberate_line_breaks(self):
+        labels = GermanLabels(decimal_comma=True)
+        self.assertEqual(labels.translate('1.30 / 1.31'), '1,30 / 1,31')
+        self.assertEqual(labels.translate('RegNet X 1.6GF'), 'RegNet X 1.6GF')
+        self.assertEqual(labels.translate('H8\nFull'), 'H8\nFull')
+        self.assertEqual(labels.translate('Split\nb066'), 'Split\nb066')
+        self.assertEqual(labels.translate('H8   n=40 · front=2'), 'H8   n=40 · Pareto-Punkte=2')
+
     def test_numeric_rows_and_structural_identifiers(self):
         source = r'''\begin{table}
 \label{tab:current-selection-groups}

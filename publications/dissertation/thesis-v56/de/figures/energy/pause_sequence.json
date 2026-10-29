@@ -1,0 +1,95 @@
+{
+  "schema": "thesis-energy-de-render-data-v1",
+  "language": "de",
+  "figure": "pause_sequence",
+  "scientific_transformations": "Only existing plotted unit conversions (Hz to kHz, complementary percentages, and PSD dB display); no new statistics.",
+  "source_inputs": [
+    "results/energy-measurement/tables/tim/pause_timing.csv"
+  ],
+  "source_rows": {
+    "pause_timing": [
+      {
+        "index": 1,
+        "pause_s": 20,
+        "actual_pause_s": 20.000125579,
+        "trt_s": 104.197,
+        "gpu_before_5s_median_C": 72.468
+      },
+      {
+        "index": 2,
+        "pause_s": 120,
+        "actual_pause_s": 120.000140872,
+        "trt_s": 96.1504,
+        "gpu_before_5s_median_C": 58.781
+      },
+      {
+        "index": 3,
+        "pause_s": 120,
+        "actual_pause_s": 120.000126626,
+        "trt_s": 96.0432,
+        "gpu_before_5s_median_C": 58.218
+      },
+      {
+        "index": 4,
+        "pause_s": 20,
+        "actual_pause_s": 20.000155839,
+        "trt_s": 105.302,
+        "gpu_before_5s_median_C": 73.562
+      },
+      {
+        "index": 5,
+        "pause_s": 20,
+        "actual_pause_s": 20.000141032,
+        "trt_s": 107.508,
+        "gpu_before_5s_median_C": 75.968
+      },
+      {
+        "index": 6,
+        "pause_s": 120,
+        "actual_pause_s": 120.000127411,
+        "trt_s": 96.3311,
+        "gpu_before_5s_median_C": 59.031
+      }
+    ]
+  },
+  "plotted_series": [
+    {
+      "field": "trt_s",
+      "index": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "values": [
+        104.197,
+        96.1504,
+        96.0432,
+        105.302,
+        107.508,
+        96.3311
+      ]
+    },
+    {
+      "field": "gpu_before_5s_median_C",
+      "index": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "values": [
+        72.468,
+        58.781,
+        58.218,
+        73.562,
+        75.968,
+        59.031
+      ]
+    }
+  ]
+}
