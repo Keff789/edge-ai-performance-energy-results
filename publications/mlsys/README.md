@@ -24,6 +24,21 @@ The YOLOv7 case is available in [single-column](../../results/publication-builds
 
 The [staged selection figure and tables](../../results/supplementary-studies/staged-selection/artifacts/en/) show the practical graph–Generic–Native procedure. Each group first tests up to five or twelve cuts with Generic, then its two fastest candidates with Native. The resulting mean Native throughput is 96.20% or 99.65% of the best measured result. Exact winners are found in 17 or 19 of the 21 groups. The lowest retained throughput rises from 45.53% to 94.52%. Classifier means are 91.14% and 99.18%, while both budgets cover all three cuts in each paired detector group. Direct Native tests of the five-cut shortlists give the same result using 81 Native tests. The staged procedure instead uses 81 Generic and 42 Native tests, without an established total-time saving. The percentages describe achieved throughput, not the probability of success on a new model. The [analysis](../../results/supplementary-studies/staged-selection/README.md) defines the candidate counts, evaluation and subgroup results.
 
+Additional [selection-failure tables](../../results/supplementary-studies/staged-selection/artifacts/en/tables/selection_failures_k5.tex) identify graph-preselection and Generic-ranking misses. A separate [workflow figure](../../results/supplementary-studies/staged-selection/artifacts/en/figures/staged_selection_flow_review.pdf) distinguishes a conceptual prospective search from the retrospective replay evaluated in this study.
+
+## Additional review tables
+
+The [compact deployment table](../../results/supplementary-studies/mlsys-review-tables-20261030/artifacts/en/tables/best_cases_quality_table.md) combines the global throughput winners with energy change and the direct quality difference in percentage points. [German presentation exports](../../results/supplementary-studies/mlsys-review-tables-20261030/artifacts/de/tables/) retain identical CSV/JSON values. Existing tables and the underlying selection remain unchanged. Full refers to single-backend full-model execution.
+
+The additional export is included in `scripts/reproduce_current.py`. It can also be regenerated independently from the current full-precision winner export:
+
+```sh
+python3 scripts/split-inference/render_review_tables.py \
+  --output local-output/review-tables --languages en de
+```
+
+The [retrospective Native energy-selection analysis](../../results/supplementary-studies/native-energy-selection-20261030/README.md) selects minimum-energy cuts subject to 95% or 99% of the best measured Native throughput in each combination. It uses all 187 admissible Native cuts in 21 combinations, preserves the Full comparisons, and makes no limited-budget energy-search claim.
+
 ## Reproduction and methods
 
 Run from the repository root:

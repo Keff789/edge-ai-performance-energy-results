@@ -1,0 +1,15 @@
+\begin{table*}[t]
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\caption{Retrospektive Native-Energieauswahl unter den gemessenen qualitätszulässigen Splits mit mindestens 95\% des höchsten Native-Durchsatzes derselben Modell--Beschleuniger-Kombination. Nur geänderte Entscheidungen sind aufgeführt. Alle Kandidaten erfüllen die 5\%-Grenze für den relativen Qualitätsverlust zur CPU-Referenz. Die Energieänderung bezieht sich auf den schnellsten Native-Split, nicht auf Full. Die Analyse setzt Durchsatz- und Energiemessungen für alle zulässigen Schnitte voraus und untersucht weder eine Energie-Rangfolge bei begrenztem Budget noch statistische Signifikanz.}
+\label{tab:energy-floor-95}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllrrrr@{}}
+\toprule
+Kombination & Schnellster Schnitt & Gewählter Schnitt & Erhalten (\%) & \shortstack{Energie schnellster\\(mJ/Bild)} & \shortstack{Energie gewählter\\(mJ/Bild)} & \shortstack{Energieänderung\\(\%)} \\
+\midrule
+RegNet-X/DeepX & b109 & b115 & 99.83 & 30.69 & 30.05 & -2.07 \\
+ResNet-50/H8 & b038 & b060 & 98.06 & 49.92 & 45.17 & -9.50 \\
+YOLO26m/H8 & b038 & b043 & 99.79 & 360.60 & 355.99 & -1.28 \\
+\bottomrule
+\end{tabular*}
+\end{table*}

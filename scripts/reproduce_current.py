@@ -166,6 +166,12 @@ def main() -> None:
             '--study', rq3, '--out', localized_graph, '--languages', *languages)
         shutil.rmtree(output / 'paper/rq3-generic420')
         shutil.move(str(localized_graph), str(output / 'paper/rq3-generic420'))
+    run('scripts/split-inference/render_review_tables.py',
+        '--winner-quality', output / 'paper/publications/mlsys-r30/tables/r14_winner_quality.json',
+        '--output', output / 'review-tables', '--languages', *languages)
+    run('scripts/split-inference/energy_aware_selection.py',
+        '--dataset', output / 'paper/data/PAPER_DATASET.json',
+        '--output', output / 'native-energy-selection', '--languages', *languages)
     write_overview(output, rq2, rq3, languages)
     (output / 'BUILD.json').write_text(json.dumps({
         'schema': 'current-study-build-v1',
@@ -173,6 +179,8 @@ def main() -> None:
         'rq2_source': os.path.relpath(rq2, output),
         'rq3_source': os.path.relpath(rq3, output),
         'staged_selection': 'staged-selection',
+        'review_tables': 'review-tables',
+        'energy_selection': 'native-energy-selection',
         'studies_recomputed': not args.reuse_studies,
         'verification_enabled': True,
         'hardware_measurements': False,

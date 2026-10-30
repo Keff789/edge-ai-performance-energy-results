@@ -32,3 +32,9 @@ Reproduce from the repository root:
 ```sh
 python3 scripts/supplementary-studies/staged-selection/reproduce.py --output local-output/staged-selection --languages en de --verify
 ```
+
+## Selection failures
+
+Additional [five-test](artifacts/en/tables/selection_failures_k5.tex) and [twelve-test](artifacts/en/tables/selection_failures_k12.tex) tables identify the selected and best measured Native cuts, their throughput, and the stage that excludes the optimum. [All 42 diagnostics](artifacts/en/tables/selection_diagnostics.csv) retain full precision. German exports use the same numerical CSVs. All four five-test failures originate in graph preselection. At twelve tests, the remaining RegNet/H8 miss originates in the Generic ranking; the ResNet/H8 miss remains a graph-preselection failure. These tables use the unchanged archived candidates and measurements.
+
+The additional [workflow view](artifacts/en/figures/staged_selection_flow_review.pdf) separates a conceptual prospective search from the retrospective replay evaluated here. The prospective path applies graph preselection before compilation and task-quality validation. The replay starts with the already measured, quality-admissible paired pool. [German version](artifacts/de/figures/staged_selection_flow_review.pdf). The original illustrative workflow figure is retained.

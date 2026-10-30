@@ -1,0 +1,15 @@
+% Generated from the archived paired measurements; no new hardware measurements.
+\begin{table*}[t]
+\centering\small
+\caption{Fehlfälle der stufenweisen Auswahl mit bis zu 12 Generic- und zwei Native-Tests. Die FPS-Werte stammen aus der gemessenen Native-Ausführung. Der erhaltene Durchsatz bezieht sich auf den besten gemessenen Native-Schnitt. Die letzten Spalten zeigen, ob ein Native-Optimum in der Graph-Vorauswahl liegt und welche Stufe es ausschließt. Graph bezeichnet die Graph-Vorauswahl, Generic die anschließende Rangfolge nach Generic-Durchsatz.}
+\label{tab:staged-failures-12}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrlrrcl@{}}
+\toprule
+Modell/System & Auswahl & FPS & Bester Schnitt & FPS & Anteil (\%) & \shortstack{Optimum in\\Vorauswahl} & Fehlerstufe \\
+\midrule
+RegNet-X/H8 & b066 & 583,69 & b073 & 617,51 & 94,52 & Ja & Generic\\
+ResNet-50/H8 & b060 & 570,07 & b038 & 581,33 & 98,06 & Nein & Graph\\
+\bottomrule
+\end{tabular*}
+\end{table*}

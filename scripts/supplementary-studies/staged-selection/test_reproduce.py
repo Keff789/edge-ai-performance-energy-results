@@ -74,6 +74,27 @@ class SelectionTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Invalid throughput'):
             module.evaluate(pairs, ranking, 2)
 
+    def test_diagnostics_distinguish_graph_and_generic_failures(self):
+        graph, graph_rank = fixture([(10, 10)] * 5 + [(100, 200)], model='graph')
+        generic, generic_rank = fixture([(1, 200), (100, 50), (90, 40)], model='generic')
+        pairs, ranking = graph + generic, graph_rank + generic_rank
+        diagnostics = module.failure_diagnostics(module.evaluate(pairs, ranking), pairs, ranking)
+        by_key = {(row['model'], row['generic_budget']): row for row in diagnostics}
+        self.assertEqual(by_key['graph', 5]['failure_stage'], 'graph_preselection')
+        self.assertFalse(by_key['graph', 5]['best_native_in_graph_shortlist'])
+        self.assertEqual(by_key['graph', 5]['best_native_bytes_rank'], 6)
+        self.assertEqual(by_key['graph', 12]['failure_stage'], 'none')
+        self.assertEqual(by_key['generic', 5]['failure_stage'], 'generic_ranking')
+        self.assertTrue(by_key['generic', 5]['best_native_in_graph_shortlist'])
+        self.assertFalse(by_key['generic', 5]['best_native_tested'])
+
+    def test_diagnostics_accept_any_tied_native_optimum(self):
+        pairs, ranking = fixture([(1, 200), (100, 200), (90, 40)])
+        diagnostics = module.failure_diagnostics(module.evaluate(pairs, ranking), pairs, ranking)
+        self.assertTrue(all(row['failure_stage'] == 'none' for row in diagnostics))
+        self.assertTrue(all(row['best_native_tested'] for row in diagnostics))
+        self.assertEqual(diagnostics[0]['best_native_cuts'], 'b001;b002')
+
     def test_published_direct_graph_curves(self):
         source = module.DEFAULT_STUDY
         details = module.evaluate(module.read_csv(source / 'data/quality_pairs.csv'),

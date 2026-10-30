@@ -186,6 +186,96 @@ def number(value, language, digits=2):
     return value.replace('.', ',') if language == 'de' else value
 
 
+def failure_diagnostics(details, pairs, ranking_rows):
+    """Explain selection failures without changing the evaluated candidate pool.
+
+    A graph failure excludes every measured Native optimum from the graph
+    shortlist. A Generic failure retains an optimum there but excludes all
+    optima from the candidates subsequently tested with Native.
+    """
+    groups = defaultdict(list)
+    for row in pairs:
+        groups[row['model'], row['setup']].append(row)
+    ranks = {(row['model'], row['setup'], row['native_uid']): int(row['rank'])
+             for row in ranking_rows if row['method'] == 'bytes'}
+    result = []
+    for row in details:
+        if row['method'] != 'bytes' or row['policy'] != 'cascade_native2' or row['k'] not in PRIMARY_BUDGETS:
+            continue
+        group = groups[row['model'], row['setup']]
+        best_fps = max(float(candidate['native_fps']) for candidate in group)
+        optima = sorted((candidate for candidate in group if float(candidate['native_fps']) == best_fps),
+                        key=lambda candidate: candidate['native_uid'])
+        graph_cuts = set(row['graph_shortlist'].split(';'))
+        tested_cuts = set(row['native_tested'].split(';'))
+        optimum_in_graph = any(candidate['case'] in graph_cuts for candidate in optima)
+        optimum_tested = any(candidate['case'] in tested_cuts for candidate in optima)
+        chosen = next(candidate for candidate in group if candidate['case'] == row['selected_cut'])
+        shortlist_fps = max(float(candidate['native_fps']) for candidate in group if candidate['case'] in graph_cuts)
+        if (float(chosen['native_fps']) != row['selected_native_fps'] or best_fps != row['best_native_fps']
+                or shortlist_fps != row['shortlist_best_native_fps']
+                or optimum_tested != bool(row['exact_native_winner'])
+                or (row['selected_native_fps'] == shortlist_fps) != bool(row['preserves_shortlist_best'])):
+            raise ValueError('Inconsistent staged-selection diagnostic: ' + str((row['model'], row['setup'], row['k'])))
+        failure_stage = ('none' if optimum_tested else
+                         'generic_ranking' if optimum_in_graph else 'graph_preselection')
+        result.append(dict(model=row['model'], setup=row['setup'], generic_budget=row['k'], native_budget=2,
+                           selected_cut=row['selected_cut'], selected_native_fps=row['selected_native_fps'],
+                           best_native_cut=optima[0]['case'], best_native_cuts=';'.join(candidate['case'] for candidate in optima),
+                           best_native_fps=best_fps, retained_native_pct=row['retained_native_pct'],
+                           best_native_bytes_rank=min(ranks[row['model'], row['setup'], candidate['native_uid']] for candidate in optima),
+                           best_native_in_graph_shortlist=optimum_in_graph, best_native_tested=optimum_tested,
+                           preserves_shortlist_best=bool(row['preserves_shortlist_best']), failure_stage=failure_stage))
+    expected = len(groups) * len(PRIMARY_BUDGETS)
+    if len(result) != expected or len({(row['model'], row['setup'], row['generic_budget']) for row in result}) != expected:
+        raise ValueError('Incomplete staged-selection diagnostics')
+    return result
+
+
+def export_failure_tables(output, diagnostics, language):
+    """Add review tables while preserving all previously generated outputs."""
+    folder = output / 'artifacts' / language / 'tables'
+    folder.mkdir(parents=True, exist_ok=True)
+    write_csv(folder / 'selection_diagnostics.csv', diagnostics)
+    names = {'mobilenet_v3_large': 'MobileNetV3-L', 'regnet_x_1_6gf': 'RegNet-X',
+             'resnet50': 'ResNet-50', 'yolo11l': 'YOLO11l', 'yolo26m': 'YOLO26m',
+             'yolo26s': 'YOLO26s', 'yolov7_paper': 'YOLOv7'}
+    for budget in PRIMARY_BUDGETS:
+        rows = [row for row in diagnostics if row['generic_budget'] == budget and row['failure_stage'] != 'none']
+        if not rows:
+            continue
+        write_csv(folder / f'selection_failures_k{budget}.csv', rows)
+        if language == 'en':
+            caption = (f'Staged-selection failures with up to {budget} Generic and two Native tests. '
+                       'Selected and best FPS use measured Native throughput. Retained throughput is relative to the best measured Native cut. '
+                       'The final columns indicate whether a Native optimum is in the graph shortlist and which stage excludes it. '
+                       'Graph denotes graph preselection; Generic denotes the subsequent Generic throughput ranking.')
+            header = (r'Model/setup & Selected & FPS & Best cut & FPS & Retained (\%) & '
+                      r'\shortstack{Optimum in\\graph shortlist} & Failure stage \\')
+            stages = {'graph_preselection': 'Graph', 'generic_ranking': 'Generic'}
+        else:
+            caption = (f'Fehlfälle der stufenweisen Auswahl mit bis zu {budget} Generic- und zwei Native-Tests. '
+                       'Die FPS-Werte stammen aus der gemessenen Native-Ausführung. Der erhaltene Durchsatz bezieht sich auf den besten gemessenen Native-Schnitt. '
+                       'Die letzten Spalten zeigen, ob ein Native-Optimum in der Graph-Vorauswahl liegt und welche Stufe es ausschließt. '
+                       'Graph bezeichnet die Graph-Vorauswahl, Generic die anschließende Rangfolge nach Generic-Durchsatz.')
+            header = (r'Modell/System & Auswahl & FPS & Bester Schnitt & FPS & Anteil (\%) & '
+                      r'\shortstack{Optimum in\\Vorauswahl} & Fehlerstufe \\')
+            stages = {'graph_preselection': 'Graph', 'generic_ranking': 'Generic'}
+        lines = ['% Generated from the archived paired measurements; no new hardware measurements.',
+                 r'\begin{table*}[t]', r'\centering\small', r'\caption{' + caption + '}',
+                 r'\label{tab:staged-failures-' + str(budget) + '}', r'\setlength{\tabcolsep}{3pt}',
+                 r'\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrlrrcl@{}}', r'\toprule', header, r'\midrule']
+        for row in rows:
+            in_graph = ('Yes' if row['best_native_in_graph_shortlist'] else 'No') if language == 'en' else ('Ja' if row['best_native_in_graph_shortlist'] else 'Nein')
+            cells = [names.get(row['model'], row['model'].replace('_', r'\_')) + '/' + row['setup'],
+                     row['selected_cut'], number(row['selected_native_fps'], language), row['best_native_cut'],
+                     number(row['best_native_fps'], language), number(row['retained_native_pct'], language),
+                     in_graph, stages[row['failure_stage']]]
+            lines.append(' & '.join(cells) + r'\\')
+        lines += [r'\bottomrule', r'\end{tabular*}', r'\end{table*}', '']
+        (folder / f'selection_failures_k{budget}.tex').write_text('\n'.join(lines), encoding='utf-8')
+
+
 def export_tables(output, summaries, details, language):
     table = output / 'artifacts' / language / 'tables'
     table.mkdir(parents=True, exist_ok=True)
@@ -423,6 +513,118 @@ def export_flow(output, spec_data, language, figure_profile='paper'):
                                                           labels=labels, count_labels=count_labels, caption=caption))
 
 
+def export_review_flow(output, spec_data, language, figure_profile='paper', paired_cuts=187, combinations=21):
+    """Distinguish a prospective search from the retrospective selection replay.
+
+    This additional view preserves the existing illustrative workflow figure.
+    The prospective path is conceptual; it is not a measured full-graph trial.
+    """
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
+    from matplotlib.colors import to_rgb
+    style_path = REPO / 'scripts/split-inference/publication_mlsys_figures.py'
+    style_spec = importlib.util.spec_from_file_location('staged_review_flow_style', style_path)
+    style = importlib.util.module_from_spec(style_spec)
+    style_spec.loader.exec_module(style)
+    plt.rcParams.update(style.DISSERTATION_STYLE if figure_profile == 'dissertation' else style.PAPER_STYLE)
+    plt.rcParams['svg.hashsalt'] = 'staged-selection-review-flow-v1'
+    if language == 'en':
+        titles = ['Prospective deployment selection', 'Retrospective evaluation in this study']
+        prospective = [('Graph boundaries', 'Construct candidate pool'),
+                       ('Graph preselection', 'Rank by Bytes'),
+                       ('Compilation + quality', 'Validate candidate cuts'),
+                       ('Generic', 'Measure throughput'),
+                       ('Native + selection', 'Test top two; retain faster')]
+        retrospective = [('Measured eligible pool', f'{paired_cuts} paired cuts / {combinations} combinations'),
+                         ('Graph preselection', 'Bytes: select up to k cuts'),
+                         ('Generic replay', 'Rank recorded throughput'),
+                         ('Native replay + selection', 'Evaluate top two; retain faster')]
+        notes = ['Conceptual procedure. Compilation failures and quality rejections incur additional search costs.',
+                 'Replay starts after compilation and quality validation; their costs are excluded from the reported test budgets.']
+        caption = ('Prospective deployment selection and the retrospective evaluation used in this study. '
+                   'A prospective search constructs a candidate pool, applies graph preselection, and compiles and quality-validates '
+                   'candidates before throughput testing. The retrospective replay starts from already measured, quality-admissible '
+                   'paired cuts and evaluates the Bytes--Generic--Native sequence using their recorded throughputs. '
+                   'The prospective path is conceptual, not an evaluated search across every graph boundary. '
+                   'Paired detector combinations contain only three cuts.')
+    else:
+        titles = ['Prospektive Implementierungsauswahl', 'Retrospektive Auswertung dieser Studie']
+        prospective = [('Graphgrenzen', 'Kandidatenmenge bilden'),
+                       ('Graph-Vorauswahl', 'Nach Bytes ordnen'),
+                       ('Kompilierung\n+ Qualität', 'Kandidaten validieren'),
+                       ('Generic', 'Durchsatz messen'),
+                       ('Native + Auswahl', 'Top zwei testen;\nschnelleren wählen')]
+        retrospective = [('Gemessene zulässige\nKandidatenmenge', f'{paired_cuts} Schnittpaare / {combinations} Kombinationen'),
+                         ('Graph-Vorauswahl', 'Bytes: bis zu k Schnitte'),
+                         ('Generic-Replay', 'Gemessenen Durchsatz ordnen'),
+                         ('Native-Replay + Auswahl', 'Top zwei prüfen;\nschnelleren wählen')]
+        notes = ['Konzeptioneller Ablauf. Kompilierungsfehler und Qualitätsausschlüsse verursachen zusätzlichen Suchaufwand.',
+                 'Das Replay beginnt nach Kompilierung und Qualitätsprüfung; deren Aufwand ist in den Testbudgets nicht enthalten.']
+        caption = ('Prospektive Auswahl einer Implementierung und retrospektive Auswertung dieser Studie. '
+                   'Die prospektive Suche bildet eine Kandidatenmenge, nimmt eine Graph-Vorauswahl vor und kompiliert und '
+                   'validiert die Kandidaten vor den Durchsatztests. Das retrospektive Replay beginnt mit bereits gemessenen, '
+                   'qualitätszulässigen Schnittpaaren und wertet die Folge Bytes--Generic--Native anhand der gespeicherten '
+                   'Durchsatzwerte aus. Der prospektive Pfad ist konzeptionell; eine Suche über alle Graphgrenzen wurde nicht '
+                   'ausgewertet. Die gepaarten Detektorkombinationen umfassen jeweils nur drei Schnitte.')
+    fig, ax = plt.subplots(figsize=(7.0, 3.15) if figure_profile == 'paper' else (7.0, 3.35))
+    fig.subplots_adjust(left=.01, right=.99, bottom=.025, top=.985)
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 4.5)
+    ax.axis('off')
+    palette = style.PAPER_PALETTE
+
+    def draw_row(items, centers, y, widths, colors):
+        for (title, subtitle), center, width, color_name in zip(items, centers, widths, colors):
+            color = palette[color_name]
+            pale = tuple(.96 + .04 * component for component in to_rgb(color))
+            ax.add_patch(FancyBboxPatch((center - width / 2, y), width, .9,
+                                       boxstyle='round,pad=0.025,rounding_size=0.045',
+                                       linewidth=.8, edgecolor=color, facecolor=pale))
+            ax.text(center, y + .65, title, ha='center', va='center', fontsize=8.1,
+                    fontweight='bold', color=palette['dark_gray'])
+            ax.text(center, y + .25, subtitle, ha='center', va='center', fontsize=7.0,
+                    color=palette['dark_gray'])
+        for left, right, left_width, right_width in zip(centers[:-1], centers[1:], widths[:-1], widths[1:]):
+            ax.add_patch(FancyArrowPatch((left + left_width / 2 + .02, y + .45),
+                                        (right - right_width / 2 - .02, y + .45),
+                                        arrowstyle='-|>', mutation_scale=8, linewidth=.8,
+                                        color=palette['dark_gray']))
+
+    ax.text(.06, 4.24, titles[0], ha='left', va='center', fontsize=10.2, fontweight='bold')
+    draw_row(prospective, [.92, 2.96, 5.0, 7.04, 9.08], 2.98, [1.74] * 5,
+             ['dark_gray', 'blue', 'dark_gray', 'orange', 'green'])
+    ax.text(.06, 2.68, notes[0], ha='left', va='center', fontsize=7.25, color=palette['dark_gray'])
+    ax.plot([.06, 9.94], [2.34, 2.34], color='#c8cdd3', linewidth=.65)
+    ax.text(.06, 2.02, titles[1], ha='left', va='center', fontsize=10.2, fontweight='bold')
+    draw_row(retrospective, [1.2, 3.73, 6.26, 8.8], .75, [2.25] * 4,
+             ['dark_gray', 'blue', 'orange', 'green'])
+    ax.text(.06, .4, notes[1], ha='left', va='center', fontsize=7.1, color=palette['dark_gray'])
+    folder = output / 'artifacts' / language / 'figures'
+    folder.mkdir(parents=True, exist_ok=True)
+    for suffix in ('pdf', 'svg', 'png'):
+        options = {'metadata': {'CreationDate': None, 'ModDate': None}} if suffix == 'pdf' else {}
+        if suffix == 'svg':
+            options = {'metadata': {'Date': None}}
+        fig.savefig(folder / f'staged_selection_flow_review.{suffix}', dpi=240, **options)
+    plt.close(fig)
+    # Rasterize the exact vector artifact for a matching preview. This avoids
+    # backend-specific clipping of long localized strings in Agg text output.
+    import fitz
+    with fitz.open(folder / 'staged_selection_flow_review.pdf') as document:
+        document[0].get_pixmap(dpi=240, alpha=False).save(folder / 'staged_selection_flow_review.png')
+    write_json(folder / 'staged_selection_flow_review.json', dict(
+        schema='staged-selection-review-flow-v1', language=language,
+        kind='prospective_and_retrospective_workflows', prospective_path_measured=False,
+        prospective_stages=[{'title': title, 'description': subtitle} for title, subtitle in prospective],
+        retrospective_stages=[{'title': title, 'description': subtitle} for title, subtitle in retrospective],
+        paired_cuts=paired_cuts, model_accelerator_combinations=combinations,
+        retrospective_input_scope='Previously measured, quality-admissible paired cuts.',
+        prospective_rejections='Compilation and quality failures consume search effort; not included in replay budgets.',
+        graph_example_source=spec_data['source'], notes=notes, caption=caption))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--paired-study', type=Path, default=DEFAULT_STUDY)
@@ -442,6 +644,7 @@ def main():
     pairs, ranking = read_csv(sources[0]), read_csv(sources[1])
     details = evaluate(pairs, ranking)
     summaries = aggregate(details)
+    diagnostics = failure_diagnostics(details, pairs, ranking)
     validation = verify(details, summaries, read_csv(sources[2])) if args.verify else {'status': 'not_requested'}
     write_csv(output / 'data/group_budgets.csv', details)
     write_csv(output / 'data/summary.csv', summaries)
@@ -450,8 +653,11 @@ def main():
     schematic = flow_spec(args.graph_metadata)
     for language in dict.fromkeys(args.languages):
         export_tables(output, summaries, details, language)
+        export_failure_tables(output, diagnostics, language)
         export_figure(output, summaries, language, args.figure_profile)
         export_flow(output, schematic, language, args.figure_profile)
+        export_review_flow(output, schematic, language, args.figure_profile,
+                           paired_cuts=len(pairs), combinations=len({(row['model'], row['setup']) for row in pairs}))
     groups = {(row['model'], row['setup']) for row in pairs}
     primary = [row for row in summaries if row['task'] == 'all' and row['method'] == 'bytes' and row['policy'] == 'cascade_native2' and row['k'] in PRIMARY_BUDGETS]
     info = ['# Graph–Generic–Native selection', '',

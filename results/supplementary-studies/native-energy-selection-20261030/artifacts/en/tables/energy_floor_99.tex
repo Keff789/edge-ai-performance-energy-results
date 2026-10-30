@@ -1,0 +1,14 @@
+\begin{table*}[t]
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\caption{Retrospective Native energy selection among quality-admissible measured splits with at least 99\% of the fastest Native throughput in the same model--accelerator combination. Only changed choices are listed. All candidates satisfy the 5\% CPU-relative quality-loss rule. Energy change refers to the fastest Native split, not to Full execution. The analysis assumes measured throughput and energy for all admitted cuts; it does not evaluate limited-budget energy ranking or statistical significance.}
+\label{tab:energy-floor-99}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllrrrr@{}}
+\toprule
+Combination & Fastest cut & Selected cut & Retained (\%) & \shortstack{Fastest energy\\(mJ/image)} & \shortstack{Selected energy\\(mJ/image)} & \shortstack{Energy change\\(\%)} \\
+\midrule
+RegNet-X/DeepX & b109 & b115 & 99.83 & 30.69 & 30.05 & -2.07 \\
+YOLO26m/H8 & b038 & b043 & 99.79 & 360.60 & 355.99 & -1.28 \\
+\bottomrule
+\end{tabular*}
+\end{table*}

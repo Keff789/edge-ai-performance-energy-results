@@ -20,3 +20,7 @@ Run the targeted tests with:
 ```sh
 python3 -m unittest discover -s scripts/supplementary-studies/staged-selection -p 'test_*.py'
 ```
+
+The generator also exports `selection_diagnostics.csv` for all 21 combinations at budgets five and twelve, plus `selection_failures_k5` and `selection_failures_k12` tables in English and German. Failure stages distinguish a Native optimum excluded by graph preselection from one present in the graph shortlist but excluded by Generic ranking. Tied Native optima are handled without treating an alternative optimal cut as a failure. Existing outputs remain unchanged.
+
+`staged_selection_flow_review` adds a separate prospective-versus-retrospective workflow view. The original workflow figure is retained. Rendering this additional PNG preview uses PyMuPDF (`pymupdf`), which is also used by the current publication renderer.

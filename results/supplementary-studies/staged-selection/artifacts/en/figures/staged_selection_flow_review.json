@@ -1,0 +1,59 @@
+{
+  "schema": "staged-selection-review-flow-v1",
+  "language": "en",
+  "kind": "prospective_and_retrospective_workflows",
+  "prospective_path_measured": false,
+  "prospective_stages": [
+    {
+      "title": "Graph boundaries",
+      "description": "Construct candidate pool"
+    },
+    {
+      "title": "Graph preselection",
+      "description": "Rank by Bytes"
+    },
+    {
+      "title": "Compilation + quality",
+      "description": "Validate candidate cuts"
+    },
+    {
+      "title": "Generic",
+      "description": "Measure throughput"
+    },
+    {
+      "title": "Native + selection",
+      "description": "Test top two; retain faster"
+    }
+  ],
+  "retrospective_stages": [
+    {
+      "title": "Measured eligible pool",
+      "description": "187 paired cuts / 21 combinations"
+    },
+    {
+      "title": "Graph preselection",
+      "description": "Bytes: select up to k cuts"
+    },
+    {
+      "title": "Generic replay",
+      "description": "Rank recorded throughput"
+    },
+    {
+      "title": "Native replay + selection",
+      "description": "Evaluate top two; retain faster"
+    }
+  ],
+  "paired_cuts": 187,
+  "model_accelerator_combinations": 21,
+  "retrospective_input_scope": "Previously measured, quality-admissible paired cuts.",
+  "prospective_rejections": "Compilation and quality failures consume search effort; not included in replay budgets.",
+  "graph_example_source": {
+    "path": "results/supplementary-studies/rq3-generic420-detector-corrected-20261027/inputs/feature_metadata.json",
+    "sha256": "af4acf61eb65dbf3d75b2fd77011a22867fb339ab3f9b9643663832de6af36a8"
+  },
+  "notes": [
+    "Conceptual procedure. Compilation failures and quality rejections incur additional search costs.",
+    "Replay starts after compilation and quality validation; their costs are excluded from the reported test budgets."
+  ],
+  "caption": "Prospective deployment selection and the retrospective evaluation used in this study. A prospective search constructs a candidate pool, applies graph preselection, and compiles and quality-validates candidates before throughput testing. The retrospective replay starts from already measured, quality-admissible paired cuts and evaluates the Bytes--Generic--Native sequence using their recorded throughputs. The prospective path is conceptual, not an evaluated search across every graph boundary. Paired detector combinations contain only three cuts."
+}
