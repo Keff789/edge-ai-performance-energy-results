@@ -45,6 +45,7 @@ def write_overview(output: Path, rq2: Path, rq3: Path, languages: list[str]) -> 
         '| Split benefits and paired runner selection | [Paper assets](paper/publications/mlsys-r30/) |',
         '| Graph-selected shortlists | [English artifacts](paper/rq3-generic420/en/) |',
         '| Graph–Generic–Native selection | [Workflow, budget curves and tables](staged-selection/artifacts/en/) |',
+        '| YOLOv7 graph boundaries and measured throughput | [Aligned boundary plots](boundary-performance/artifacts/en/) |',
     ]
     if 'de' in languages:
         lines.append('| German dissertation artifacts | [German collection](dissertation-de/README.md) |')
@@ -82,14 +83,18 @@ def write_overview(output: Path, rq2: Path, rq3: Path, languages: list[str]) -> 
         'Both wide and single-column YOLOv7 variants are included.\n\n'
         '[Graph–Generic–Native budgets](../staged-selection/artifacts/en/) use the same paired measurements.\n\n'
         '[Selection workflow](../staged-selection/artifacts/en/figures/staged_selection_flow.pdf).\n\n'
+        '[YOLOv7 graph boundaries and measured throughput](../boundary-performance/artifacts/en/figures/yolov7_h8_boundary_performance.pdf) '
+        'share the same boundary axis.\n\n'
         '[Reproduce the complete study](../README.md).\n')
     if 'de' in languages:
         german = output / 'dissertation-de/README.md'
         lines = [line for line in german.read_text().splitlines()
-                 if not line.startswith('[Auswahl mit Graph, Generic und Native]')]
+                 if not line.startswith(('[Auswahl mit Graph, Generic und Native]', '[YOLOv7: Grenztensorgröße und Durchsatz]'))]
         german.write_text('\n'.join(lines).rstrip() + '\n\n[Auswahl mit Graph, Generic und Native](../staged-selection/artifacts/de/): '
                           '[Ablaufgrafik](../staged-selection/artifacts/de/figures/staged_selection_flow.pdf), '
-                          'Budgetgrafiken und Tabellen aus denselben Messpaaren.\n')
+                          'Budgetgrafiken und Tabellen aus denselben Messpaaren.\n\n'
+                          '[YOLOv7: Grenztensorgröße und Durchsatz](../boundary-performance/artifacts/de/figures/yolov7_h8_boundary_performance.pdf) '
+                          'entlang derselben Schnittpositionen.\n')
 
 
 def main() -> None:
@@ -172,6 +177,13 @@ def main() -> None:
     run('scripts/split-inference/energy_aware_selection.py',
         '--dataset', output / 'paper/data/PAPER_DATASET.json',
         '--output', output / 'native-energy-selection', '--languages', *languages)
+    run('scripts/split-inference/boundary_performance.py',
+        '--graph-features', REPO / 'results/supplementary-studies/rq2-weighted-20261020/features/graph_boundary_features.csv',
+        '--graph-universe', rq3 / 'inputs/graph_universe.csv',
+        '--feature-metadata', rq3 / 'inputs/feature_metadata.json',
+        '--candidates', rq3 / 'inputs/candidates.csv',
+        '--dataset', output / 'paper/data/PAPER_DATASET.json',
+        '--output', output / 'boundary-performance', '--languages', *languages, '--verify')
     write_overview(output, rq2, rq3, languages)
     (output / 'BUILD.json').write_text(json.dumps({
         'schema': 'current-study-build-v1',
@@ -181,6 +193,7 @@ def main() -> None:
         'staged_selection': 'staged-selection',
         'review_tables': 'review-tables',
         'energy_selection': 'native-energy-selection',
+        'boundary_performance': 'boundary-performance',
         'studies_recomputed': not args.reuse_studies,
         'verification_enabled': True,
         'hardware_measurements': False,
