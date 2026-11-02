@@ -2,7 +2,7 @@
   "schema": "boundary-performance-artifacts-v1",
   "generator": {
     "path": "scripts/split-inference/boundary_performance.py",
-    "sha256": "f0db63a866bfde5a107caf9dd15a523c20bf7e805e849758fb0869ace0b8eb4b"
+    "sha256": "e26c885fab6b5cb37ad218babf0756f225eeefc9a95bd3eb148e2f9e17981347"
   },
   "sources": {
     "graph_universe": {
@@ -17,6 +17,14 @@
       "path": "results/supplementary-studies/rq3-generic420-detector-corrected-20261027/inputs/feature_metadata.json",
       "sha256": "af4acf61eb65dbf3d75b2fd77011a22867fb339ab3f9b9643663832de6af36a8"
     },
+    "node_audit": {
+      "path": "results/supplementary-studies/rq2-weighted-20261020/features/node_operation_audit.json",
+      "sha256": "ae649c429d4d6316671d343891feb74d37a903bbad4ca7e5f1e7465bb9c289d2"
+    },
+    "normalization": {
+      "path": "results/supplementary-studies/rq2-weighted-20261020/features/normalization_universes.json",
+      "sha256": "a00131150b5578f31ac7ecb184f5b2bf71a24f2a435cde725020cf864a8619d0"
+    },
     "candidates": {
       "path": "results/supplementary-studies/rq3-generic420-detector-corrected-20261027/inputs/candidates.csv",
       "sha256": "2ae7f582bdede39030a6420dff7a214654c37ede531b1b83047f4d269ae018e2"
@@ -29,51 +37,51 @@
   "outputs": [
     {
       "path": "README.md",
-      "sha256": "5f4fc8224b10a3649db2a3a9a55c4aa2661fd34e99c0ee616eae42d1fd47b72d"
+      "sha256": "185c3520da18cad14fdfbe705f6bf752d486fc442297a7aa6f718e62c74de941"
     },
     {
       "path": "artifacts/de/figures/yolov7_h8_boundary_performance.pdf",
-      "sha256": "fa77a4cd57d332c53068663ae505711f14f63b4e8e39b459ddd564f65f8cf662"
+      "sha256": "dad254886c6a1be1edfec108ebe6a0f97f9b5bd23f7b17b9d487f85dda2e4bac"
     },
     {
       "path": "artifacts/de/figures/yolov7_h8_boundary_performance.png",
-      "sha256": "6f9548b9f9a111d16aacadd69c05f26aebad99f904a439a7b034427edd1115bc"
+      "sha256": "44d8c1376d2661d6fbe0b0b5085b53703a6682cb3b884314fa5317d01ae158e7"
     },
     {
       "path": "artifacts/de/figures/yolov7_h8_boundary_performance.svg",
-      "sha256": "a2b22faf7255deb7bf74d0eda2356c1a531f74831d3188682223143042d78611"
+      "sha256": "7a9413d5a7a5f18cc701af35c875f7f67ad0361543aff739373939e2ac6bda40"
     },
     {
       "path": "artifacts/de/figures/yolov7_h8_boundary_performance_caption.tex",
-      "sha256": "165d6b7de496d69b288ff22d6cdc90590b70026f62e6185b078a444364145731"
+      "sha256": "42665a50f9e380b7d732ce5b53a37c22647f565a026358a6273c10a789a746cf"
     },
     {
       "path": "artifacts/en/figures/yolov7_h8_boundary_performance.pdf",
-      "sha256": "b2aa8fc0e88e4a87363c28bc966d2e6b989c103d96e60f1fbd4d1a703462925f"
+      "sha256": "e57490dd11f419517a1e5bd39bd9424da62af6f0823016bd53e60b8104fa7b51"
     },
     {
       "path": "artifacts/en/figures/yolov7_h8_boundary_performance.png",
-      "sha256": "39e9ee8e2e0be697d82b101ff8a8526300fd81d0895c77c8cdf2e57fd6cd575a"
+      "sha256": "a804044bf2f9fbd9a54bf5beabe6871aa9a3fb4cf9b2ef87f7adab2fd3b4f7ed"
     },
     {
       "path": "artifacts/en/figures/yolov7_h8_boundary_performance.svg",
-      "sha256": "f7f9acdcd91018fdec8127b85963e1c0b32c3cab8e071ebada7f2854ff97f534"
+      "sha256": "c46d5ead1fcaa9161e23056b161079e3c1f83e387816d6b28b688397ce828c65"
     },
     {
       "path": "artifacts/en/figures/yolov7_h8_boundary_performance_caption.tex",
-      "sha256": "d59db75f885da5a39044b565edc44b35f5f835848e53e2c8ab582e1b9f8e89cb"
+      "sha256": "f95cc50890c40daa3d66aa42c6851e7914edfee950d771541e499783fc91293b"
     },
     {
       "path": "data/yolov7_h8_boundary_performance.json",
-      "sha256": "5e2af9b80a54f8df6707a9bdb986f4d7a4338ac815634d99d643a7445a305f73"
+      "sha256": "697a59fe528dd7ebff25a806c9781e85894e5d36668b0564dc3022942ce3d74d"
     },
     {
       "path": "data/yolov7_h8_boundary_performance_graph_boundaries.csv",
-      "sha256": "2e7313179a719c874a28063e8a5ed42556f9859f47506ff4cc492a836b3d15fc"
+      "sha256": "895d50e2ce18f0b145f2179b632edbd0a09c52bcd143d139fad777b07edcaa51"
     },
     {
       "path": "data/yolov7_h8_boundary_performance_measurements.csv",
-      "sha256": "ecbd098aabbf46f4bd70758fce544281254424b846fcb8f44be709fb1592f911"
+      "sha256": "eb445a0fabcbd197f4a79029e56d4d080fb26361087cbd0cef333badd4b2b6d0"
     }
   ]
 }

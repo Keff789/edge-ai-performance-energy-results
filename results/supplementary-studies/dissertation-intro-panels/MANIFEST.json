@@ -1,0 +1,160 @@
+{
+  "schema": "standalone-mlsys-panels-v1",
+  "languages": [
+    "en",
+    "de"
+  ],
+  "generator": {
+    "path": "scripts/dissertation/intro_panels.py",
+    "sha256": "5b611b0a2ff869169175f46d0526431d2fd13ff01fbf8ee327079bcad6d95a4c"
+  },
+  "source": {
+    "source": "Author-supplied Figure1_uRECS_Photo_Optimiert.svg from MLSys_Split_Selection_R50_Final_LaTeX.zip, version6",
+    "source_svg_sha256": "476ae9a401915e31c8b39d0ef689ff3aae6be5e27cb0e226796a4d5d763ee268",
+    "normalization": "Embedded PNG extracted byte-for-byte to urecs_board_original.png; SVG retains the same objects and references the external image.",
+    "image_sha256": "f3fa1a99baf34ae8b5b317db23279dfa1c58c3d80bd38846091ce3fc3a100f9e",
+    "svg_sha256": "e149ba1c54a1fa87006be69db78884bbef87fc38aad8f26810997e8e70eb1d88",
+    "original_caption": "Overview of heterogeneous split execution on u.RECS. (a) Unpopulated carrier and module locations. (b) Host-mediated execution with transfer, conversion, buffering, and synchronization; completion includes output materialization and required postprocessing. (c) The Generic runner supports single- and multi-tensor boundaries; the current Native interface requires one suffix input. Illustrative cuts differ. Paired measurements use identical compatible cuts and compiled subgraphs.\n"
+  },
+  "panel_geometry": {
+    "urecs_modular_hardware": {
+      "heading": "(a) Modular u.RECS hardware",
+      "viewbox": [
+        20,
+        52,
+        330,
+        346
+      ],
+      "width_in": 3.0,
+      "de": "Modulare u.RECS-Trägerplatine. Die Markierungen zeigen die vorgesehenen Positionen für SMARC, Jetson NX und KI-Beschleunigermodule.",
+      "en": "Modular u.RECS carrier board. The overlays identify the intended locations for SMARC, Jetson NX and AI accelerator modules."
+    },
+    "accelerator_gpu_execution": {
+      "heading": "(b) Evaluated execution",
+      "viewbox": [
+        358,
+        40,
+        634,
+        137
+      ],
+      "width_in": 4.9,
+      "de": "Ausführung einer Inferenz auf Beschleuniger und GPU. Das Präfix läuft auf dem externen Beschleuniger. Seine Grenztensoren gelangen über PCIe in Host-Puffer und anschließend per CUDA-Transfer zum TensorRT-Suffix. Die erforderliche Nachverarbeitung gehört zur Fertigstellung des Ergebnisses.",
+      "en": "Accelerator–GPU inference. The external accelerator executes the prefix. Its boundary tensors pass through PCIe and host buffers before a CUDA transfer to the TensorRT suffix. Completing the result includes the required output processing."
+    },
+    "runner_interfaces": {
+      "heading": "(c) Runner interfaces",
+      "viewbox": [
+        358,
+        232,
+        634,
+        163
+      ],
+      "width_in": 4.9,
+      "de": "Unterstützte Tensorgrenzen von Generic und Native. Generic verbindet Teilgraphen mit einem oder mehreren Grenztensoren. Die aktuelle Native-Implementierung erwartet genau einen Eingang des GPU-Suffixes. Die Beispiele zeigen unterschiedliche mögliche Schnitte. Im gepaarten Vergleich verwenden beide Ausführungsmodule denselben kompatiblen Schnitt.",
+      "en": "Boundary interfaces supported by Generic and Native. Generic connects subgraphs with one or several boundary tensors. The current Native implementation accepts exactly one GPU-suffix input. These examples show different possible cuts; the paired comparison uses the same compatible cut in both runners."
+    }
+  },
+  "rendered_photo_jpeg_sha256": "75285e08393733028853f2980e0044161adc037b9faaecb63bde61b1cce9c3ee",
+  "outputs": [
+    {
+      "path": "README.md",
+      "sha256": "507e476a0beb4280339a089f5fea1216ce939dc3be1a789a6e4363048f13e1a8"
+    },
+    {
+      "path": "artifacts/de/figures/accelerator_gpu_execution.pdf",
+      "sha256": "1ff6e6d2b5079943f8403976851b1ed9765f29b53f1d1414067967514f93adb8"
+    },
+    {
+      "path": "artifacts/de/figures/accelerator_gpu_execution.png",
+      "sha256": "64ef0cff7824bf0f312efe65e3b10ecb9257d26441b2680d9d3c2dc982cf2e06"
+    },
+    {
+      "path": "artifacts/de/figures/accelerator_gpu_execution.svg",
+      "sha256": "ff1fafc60b5730412a8ce79d000a4cc99421d374a2bbea1643f29cc0f12a6cf6"
+    },
+    {
+      "path": "artifacts/de/figures/accelerator_gpu_execution_caption.tex",
+      "sha256": "aa960e22edf2485a1b8aebcabd555dd6532dd01c821f4c0a045f22ca47dd84e9"
+    },
+    {
+      "path": "artifacts/de/figures/runner_interfaces.pdf",
+      "sha256": "3b1e7c445cd911cbbdae1fc0024aff7a8c069560c05ca4ef396618fa4b387401"
+    },
+    {
+      "path": "artifacts/de/figures/runner_interfaces.png",
+      "sha256": "e388bf6470864f98de48f0358cb93da0c796295b74a39fd871e7555d0765a201"
+    },
+    {
+      "path": "artifacts/de/figures/runner_interfaces.svg",
+      "sha256": "7972d9a189d6a242dfa667bad0c05c5adfabddad0d8dafe5006dba319b378d93"
+    },
+    {
+      "path": "artifacts/de/figures/runner_interfaces_caption.tex",
+      "sha256": "2a117b7997388671ff88e513219f2e808d70c507b6032ee8b7222b4a76b4f1da"
+    },
+    {
+      "path": "artifacts/de/figures/urecs_modular_hardware.pdf",
+      "sha256": "1600c95abcbc317eaff1193dfc693068d8076cba3b69227f94bb2cc7973d9c5c"
+    },
+    {
+      "path": "artifacts/de/figures/urecs_modular_hardware.png",
+      "sha256": "af9c2d6c960c90caff9dc88780c41b97677bd72c75c64cf287d10f2375ba5144"
+    },
+    {
+      "path": "artifacts/de/figures/urecs_modular_hardware.svg",
+      "sha256": "56d31c6771129c473ee9d14a26976e2ca0309e87a369ef114063b6cec9375d6d"
+    },
+    {
+      "path": "artifacts/de/figures/urecs_modular_hardware_caption.tex",
+      "sha256": "ca5aabfce4484c433a7bd7c3e5ce0265626ad942ad6817ce6161a7c76b56e108"
+    },
+    {
+      "path": "artifacts/en/figures/accelerator_gpu_execution.pdf",
+      "sha256": "ce99e35fdc6d01f6e7043e7465f15e602b913a952d490e20689ff64290b654f7"
+    },
+    {
+      "path": "artifacts/en/figures/accelerator_gpu_execution.png",
+      "sha256": "a684f9e67d45db0377f7d677bc300f2416b14a0695885b56f9db7bc544aa883b"
+    },
+    {
+      "path": "artifacts/en/figures/accelerator_gpu_execution.svg",
+      "sha256": "01d74bbc7936f3b67e70ca6dbdb72430cb11cdd077d68f06ea51fcb99c5be891"
+    },
+    {
+      "path": "artifacts/en/figures/accelerator_gpu_execution_caption.tex",
+      "sha256": "4960033d37a1b789f3d7d1aa63eabe9709d457e96ffeea236a42829a468967d3"
+    },
+    {
+      "path": "artifacts/en/figures/runner_interfaces.pdf",
+      "sha256": "845aeb415d889a4d3cbb3da99d20c94e65adb11b0cf407e80bc8711fea9036ab"
+    },
+    {
+      "path": "artifacts/en/figures/runner_interfaces.png",
+      "sha256": "222eddaa541eb955e3fcd895cbb7b66a17feb902f5dabe247df0c66724db2031"
+    },
+    {
+      "path": "artifacts/en/figures/runner_interfaces.svg",
+      "sha256": "53165643b000e511636b855c4581e77430a702f45e0a8528cc3c4c7249c9e2ca"
+    },
+    {
+      "path": "artifacts/en/figures/runner_interfaces_caption.tex",
+      "sha256": "e9604b9e0bcbf2ef5f1e58803fb82a5018263290f6bf77b1b9436d947558da9b"
+    },
+    {
+      "path": "artifacts/en/figures/urecs_modular_hardware.pdf",
+      "sha256": "b7d8635dcef47e4f30443c52481683100f6376f0e4a576173a06848729b8fea7"
+    },
+    {
+      "path": "artifacts/en/figures/urecs_modular_hardware.png",
+      "sha256": "da2bccd7c7351df6fc089ad762e97d3d27487b7e48408fd048a64f34cad04ba2"
+    },
+    {
+      "path": "artifacts/en/figures/urecs_modular_hardware.svg",
+      "sha256": "5b69be0e87be82cd98ff4e4c8060d523a73391827c985d9d913922d545dbb791"
+    },
+    {
+      "path": "artifacts/en/figures/urecs_modular_hardware_caption.tex",
+      "sha256": "45855ba3f1bb2be55d919b1144834a11988f0c4f0da41bc19617007363f8b959"
+    }
+  ]
+}

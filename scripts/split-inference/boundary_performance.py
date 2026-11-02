@@ -16,10 +16,13 @@ from publication_mlsys_figures import DISSERTATION_STYLE, MODEL_LABELS, PAPER_PA
 
 ROOT = Path(__file__).resolve().parents[2]
 STUDY = ROOT / 'results/supplementary-studies/rq3-generic420-detector-corrected-20261027'
+FEATURES = ROOT / 'results/supplementary-studies/rq2-weighted-20261020/features'
 DEFAULTS = {
     'graph_universe': STUDY / 'inputs/graph_universe.csv',
     'graph_features': ROOT / 'results/supplementary-studies/rq2-weighted-20261020/features/graph_boundary_features.csv',
     'feature_metadata': STUDY / 'inputs/feature_metadata.json',
+    'node_audit': FEATURES / 'node_operation_audit.json',
+    'normalization': FEATURES / 'normalization_universes.json',
     'candidates': STUDY / 'inputs/candidates.csv',
     'dataset': ROOT / 'results/split-inference/data/PAPER_DATASET.json',
 }
@@ -96,6 +99,57 @@ def quality_pass(row):
     return loss <= .05, loss
 
 
+def add_workflow_compute(catalogue, graph_rows, node_audit, normalization, model):
+    """Use the GUI's retained counter, not the newer extended operation proxy.
+
+    The workflow retains positions 1..N-2. Position 0 is recovered from its
+    audited first Conv, whose MACs plus bias additions match metrics.py. No
+    conversion between FLOPs and MACs is applied to either source.
+    """
+    require(node_audit is not None and normalization is not None, 'Missing audited compute inputs')
+    audits = [r for r in node_audit['graphs'] if r['model'] == model]
+    orders = [r for r in normalization['graphs'] if r['model'] == model]
+    require(len(audits) == len(orders) == 1, 'Missing/duplicate audited compute model')
+    audit, order_record = audits[0], orders[0]
+    identity = next(iter(catalogue.values()))
+    require(audit['model_sha256'] == order_record['model_sha256'] == identity['model_sha256'],
+            'Compute model hash mismatch')
+    require(order_record['topological_order_sha256'] == identity['topological_order_sha256'],
+            'Compute topology hash mismatch')
+    order = order_record['order']
+    require(len(order) == len(set(order)) == order_record['node_count'], 'Invalid compute node order')
+    require({r['boundary'] for r in catalogue.values()} == set(range(len(order) - 1)),
+            'Incomplete graph positions for compute profile')
+    by_case, totals = {}, []
+    for row in graph_rows:
+        if row['model'] != model:
+            continue
+        left = number(row.get('flops_left_workflow'), 'workflow prefix compute')
+        right = number(row.get('flops_right_workflow'), 'workflow suffix compute')
+        by_case[row['case_id']] = (left, right)
+        totals.append(left + right)
+    require(totals and all(same_number(totals[0], total) for total in totals),
+            'Inconsistent workflow compute total')
+    missing = [r for case, r in catalogue.items() if case not in by_case]
+    require(len(missing) == 1 and missing[0]['boundary'] == 0,
+            'Only boundary zero may be absent from the retained workflow compute')
+    first = [r for r in audit['node_costs'] if r['node_index'] == order[0]]
+    require(len(first) == 1 and first[0]['operator'] == 'Conv' and first[0]['complete'],
+            'Boundary zero needs an audited first Conv')
+    detail = first[0]['detail']
+    left = number(detail.get('macs'), 'first Conv MACs') + number(detail.get('bias_additions'), 'first Conv bias')
+    right = totals[0] - left
+    require(right >= 0, 'Invalid reconstructed boundary-zero compute')
+    by_case[missing[0]['case_id']] = (left, right)
+    for case, row in catalogue.items():
+        row['compute_left_workflow'], row['compute_right_workflow'] = by_case[case]
+    ordered = sorted(catalogue.values(), key=lambda r: r['boundary'])
+    require(all(a['compute_left_workflow'] <= b['compute_left_workflow'] and
+                a['compute_right_workflow'] >= b['compute_right_workflow']
+                for a, b in zip(ordered, ordered[1:])), 'Nonmonotonic cumulative compute')
+    return totals[0]
+
+
 def bind(row, catalogue, model, csv_candidate=False):
     case = row.get('case_id')
     require(case in catalogue, f'Measurement has no graph boundary: {case}')
@@ -112,13 +166,15 @@ def bind(row, catalogue, model, csv_candidate=False):
 
 
 def build_payload(graph_rows, feature_rows, candidate_rows, dataset_rows,
-                  model='yolov7_paper', setup='H8', highlight_case=None):
+                  model='yolov7_paper', setup='H8', highlight_case=None,
+                  *, node_audit=None, normalization=None):
     workflow = graph_catalogue(graph_rows, model)
     catalogue = graph_catalogue(feature_rows, model, full_features=True)
     for case, row in workflow.items():
         require(case in catalogue, f'Workflow boundary absent from complete graph: {case}')
         for key in ('boundary', 'boundary_id', 'model_sha256', 'cut_bytes'):
             require(row[key] == catalogue[case][key], f'Workflow/full graph mismatch: {case}/{key}')
+    compute_total = add_workflow_compute(catalogue, graph_rows, node_audit, normalization, model)
     selected = [r for r in candidate_rows if r['model'] == model and r['accelerator'] == setup]
     deployment = [r for r in dataset_rows if r['model_id'] == model and r['setup_id'] == setup]
     require(selected, f'No Generic candidates for {model}/{setup}')
@@ -195,8 +251,9 @@ def build_payload(graph_rows, feature_rows, candidate_rows, dataset_rows,
         require(highlight_case in native and native[highlight_case]['quality_eligible'],
                 f'Highlight must be a quality-admissible measured Native cut: {highlight_case}')
     return {
-        'schema': 'boundary-performance-v1', 'model': model, 'setup': setup, 'physical_host': host,
+        'schema': 'boundary-performance-v2', 'model': model, 'setup': setup, 'physical_host': host,
         'model_sha256': graph_hash, 'quality_loss_limit': .05,
+        'compute_total_workflow': compute_total,
         'graph_boundaries': graph_points, 'measurements': measurements,
         'full_reference': baseline, 'full_alternatives': fulls, 'highlight_case': highlight_case,
         'counts': {'graph_boundaries': len(catalogue), 'workflow_boundaries': len(workflow),
@@ -208,6 +265,8 @@ def build_payload(graph_rows, feature_rows, candidate_rows, dataset_rows,
             'boundary_binding': 'Exact boundary_id for candidates; case_id plus matching model SHA256 for deployment rows without boundary_id. Positions always come from the graph catalogue.',
             'graph_scope': 'All graph boundaries, including workflow-ineligible positions; bars do not imply compiler or runner support.',
             'bytes_unit': 'MB = cut_bytes / 1000000, matching the graph-analysis GUI.',
+            'compute': 'MAC-based graph estimate used by the GUI: retained flops_left_workflow and flops_right_workflow, divided by 1e9 for display. Prefix includes the boundary node; suffix is total minus prefix. The omitted boundary zero is reconstructed from the audited first Conv MACs plus bias additions.',
+            'compute_units': 'The historical field names contain flops and the GUI labels GMACs, but this counter combines one count per multiply-accumulate with scalar-operation proxies. No FLOP/MAC conversion is applied. Extended F_left/F_right feature counts are not used.',
             'generic_line': 'Thin line through admitted measured points is only a visual guide; no unmeasured FPS are estimated.',
             'native_points': 'Measured points only; no connection or interpolation.',
             'quality': 'Candidate analysis_eligible; deployment numeric relative loss against CPU-ONNX, at most 5%.',
@@ -231,12 +290,16 @@ def load_payload(paths, model, setup, highlight_case):
     metadata = json.loads(Path(paths['feature_metadata']).read_text())
     require(hashes['graph_features'] == metadata['published_graph_features']['sha256'],
             'Complete graph-feature file does not match the current study metadata hash')
+    require(hashes['normalization'] == metadata['published_normalization']['sha256'],
+            'Frozen graph order does not match the current study metadata hash')
     tables = {}
     for key in ('graph_universe', 'graph_features', 'candidates'):
         with Path(paths[key]).open(newline='') as handle:
             tables[key] = list(csv.DictReader(handle))
     payload = build_payload(tables['graph_universe'], tables['graph_features'], tables['candidates'],
-                            json.loads(Path(paths['dataset']).read_text()), model, setup, highlight_case)
+                            json.loads(Path(paths['dataset']).read_text()), model, setup, highlight_case,
+                            node_audit=json.loads(Path(paths['node_audit']).read_text()),
+                            normalization=json.loads(Path(paths['normalization']).read_text()))
     payload['sources'] = {key: {'path': source_name(path), 'sha256': hashes[key]} for key, path in paths.items()}
     return payload
 
@@ -249,20 +312,22 @@ def stem_for(payload):
 def caption(payload, language):
     model = MODEL_LABELS.get(payload['model'], payload['model'])
     if language == 'de':
-        return (f'Gemessener Durchsatz und Grenztensorgröße für {model} auf {payload["setup"]}. '
+        return (f'Gemessener Durchsatz, Grenztensorgröße und Rechenaufteilung für {model} auf {payload["setup"]}. '
                 'Oben: Generic- und Native-Messwerte an den untersuchten Schnittpositionen. '
                 'Die dünne Verbindung der zugelassenen Generic-Messpunkte dient nur der Orientierung. '
                 'Das orange Kreuz kennzeichnet einen gemessenen Schnitt, der die Qualitätsgrenze nicht erfüllt. '
                 'Die gestrichelte horizontale Linie zeigt die schnellste qualitätszugelassene Full-Ausführung auf demselben System. '
-                'Unten: logische Grenztensorgröße an allen Graphgrenzen, unabhängig von ihrer technischen Umsetzbarkeit. '
-                'Beide Teilgrafiken verwenden dieselben Schnittpositionen. MB bezeichnet $10^6$ Byte.')
-    return (f'Measured throughput and boundary size for {model} on {payload["setup"]}. '
+                'Mitte: logische Grenztensorgröße an allen Graphgrenzen, unabhängig von ihrer technischen Umsetzbarkeit. '
+                'Unten: Rechenaufwand für Beschleunigerpräfix und GPU-Suffix als MAC-basierte Schätzung des Tools. '
+                'Alle Teilgrafiken verwenden dieselben Schnittpositionen. MB bezeichnet $10^6$ Byte.')
+    return (f'Measured throughput, boundary size, and compute allocation for {model} on {payload["setup"]}. '
             'Top: Generic and Native measurements at the tested boundary positions. '
             'The thin line connecting admissible Generic measurements is only a visual guide. '
             'The orange cross marks a measured cut that fails the quality threshold. '
             'The dashed horizontal line is the fastest quality-admissible Full deployment on the same system. '
-            'Bottom: logical tensor size at every graph boundary, irrespective of technical support. '
-            'Both panels use the same boundary positions. MB denotes $10^6$ bytes.')
+            'Middle: logical tensor size at every graph boundary, irrespective of technical support. '
+            'Bottom: accelerator-prefix and GPU-suffix compute as a MAC-based graph estimate from the tool. '
+            'All panels use the same boundary positions. MB denotes $10^6$ bytes.')
 
 
 def export_numeric(payload, output):
@@ -275,7 +340,7 @@ def export_numeric(payload, output):
     for name, rows in (('measurements', payload['measurements']), ('graph_boundaries', payload['graph_boundaries'])):
         fields = sorted({key for row in rows for key in row})
         with (data / f'{stem}_{name}.csv').open('w', newline='') as handle:
-            writer = csv.DictWriter(handle, fieldnames=fields)
+            writer = csv.DictWriter(handle, fieldnames=fields, lineterminator='\n')
             writer.writeheader()
             writer.writerows({k: json.dumps(v) if isinstance(v, list) else v for k, v in row.items()} for row in rows)
     return path
@@ -290,9 +355,11 @@ def render(payload, output, language):
     require(language in ('en', 'de'), f'Unsupported language: {language}')
     labels = {
         'en': {'fps': 'Throughput (FPS)', 'bytes': 'Boundary size (MB)', 'x': 'Boundary index',
-               'fail': 'Quality threshold failed', 'full': 'Full (TensorRT)'},
+               'fail': 'Quality threshold failed', 'full': 'Full (TensorRT)',
+               'compute': 'Graph compute ($10^9$)', 'prefix': 'Accelerator prefix', 'suffix': 'GPU suffix'},
         'de': {'fps': 'Durchsatz (FPS)', 'bytes': 'Grenztensorgröße (MB)', 'x': 'Schnittposition',
-               'fail': 'Qualitätsgrenze verfehlt', 'full': 'Full (TensorRT)'},
+               'fail': 'Qualitätsgrenze verfehlt', 'full': 'Full (TensorRT)',
+               'compute': 'Rechenaufwand ($10^9$)', 'prefix': 'Beschleunigerpräfix', 'suffix': 'GPU-Suffix'},
     }[language]
     backend = payload['full_reference']['backend']
     if 'tensorrt' not in backend.lower():
@@ -301,9 +368,9 @@ def render(payload, output, language):
     destination.mkdir(parents=True, exist_ok=True)
     stem = stem_for(payload)
     with plt.rc_context(DISSERTATION_STYLE):
-        fig, (top, bottom) = plt.subplots(2, 1, sharex=True, figsize=(4.9, 3.9),
-                                         gridspec_kw={'height_ratios': [1.35, 1], 'hspace': .13})
-        fig.subplots_adjust(left=.135, right=.985, top=.85, bottom=.12)
+        fig, (top, middle, bottom) = plt.subplots(3, 1, sharex=True, figsize=(4.9, 5.2),
+                                                 gridspec_kw={'height_ratios': [1.35, 1, 1], 'hspace': .16})
+        fig.subplots_adjust(left=.135, right=.985, top=.89, bottom=.09)
         for runner, color, marker in [('generic', 'blue', 'o'), ('native', 'green', '^')]:
             rows = [r for r in payload['measurements'] if r['runner'] == runner and r['quality_eligible']]
             if rows:
@@ -319,12 +386,18 @@ def render(payload, output, language):
                         color=PAPER_PALETTE['orange'], marker='x', s=28, linewidths=1.1,
                         label=labels['fail'], zorder=5)
         graph = payload['graph_boundaries']
-        bottom.bar([r['boundary'] for r in graph], [r['cut_bytes'] / 1e6 for r in graph],
+        middle.bar([r['boundary'] for r in graph], [r['cut_bytes'] / 1e6 for r in graph],
                    width=.85, color=PAPER_PALETTE['blue'], linewidth=0)
+        for field, label, color in [('compute_left_workflow', 'prefix', 'blue'),
+                                    ('compute_right_workflow', 'suffix', 'orange')]:
+            bottom.plot([r['boundary'] for r in graph], [r[field] / 1e9 for r in graph],
+                        color=PAPER_PALETTE[color], linewidth=1, label=labels[label])
+        bottom.legend(loc='upper center', bbox_to_anchor=(.5, 1.03), frameon=False,
+                      ncol=2, handlelength=1.6, columnspacing=1.0, handletextpad=.5)
         if payload['highlight_case']:
             point = next(r for r in payload['measurements']
                          if r['runner'] == 'native' and r['case_id'] == payload['highlight_case'])
-            for axis in (top, bottom):
+            for axis in (top, middle, bottom):
                 axis.axvline(point['boundary'], linestyle=':', color=PAPER_PALETTE['dark_gray'], linewidth=.85, zorder=1)
             value = f'{point["fps"]:.2f}'
             if language == 'de':
@@ -342,12 +415,14 @@ def render(payload, output, language):
                                          'lw': .6, 'shrinkA': 2, 'shrinkB': 5})
         top.set_ylim(0, max(r['fps'] for r in payload['measurements'] + [payload['full_reference']]) * 1.18)
         top.set_ylabel(labels['fps'])
-        bottom.set_ylabel(labels['bytes'])
+        middle.set_ylabel(labels['bytes'])
+        middle.set_ylim(bottom=0)
+        bottom.set_ylabel(labels['compute'])
         bottom.set_xlabel(labels['x'])
         bottom.set_xlim(min(r['boundary'] for r in graph) - 3, max(r['boundary'] for r in graph) + 3)
-        bottom.set_ylim(bottom=0)
+        bottom.set_ylim(0, payload['compute_total_workflow'] / 1e9 * 1.24)
         bottom.xaxis.set_major_locator(MaxNLocator(nbins=7, integer=True))
-        for axis in (top, bottom):
+        for axis in (top, middle, bottom):
             axis.grid(axis='y', color='#DDDDDD', linewidth=.45)
         handles, legend_labels = top.get_legend_handles_labels()
         fig.legend(handles, legend_labels, loc='upper center', bbox_to_anchor=(.55, .99), ncol=2,
@@ -359,6 +434,9 @@ def render(payload, output, language):
             elif extension == 'svg':
                 kwargs['metadata'] = {'Date': None}
             fig.savefig(destination / f'{stem}.{extension}', **kwargs)
+            if extension == 'svg':
+                svg = destination / f'{stem}.svg'
+                svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines()) + '\n')
         plt.close(fig)
     (destination / f'{stem}_caption.tex').write_text(caption(payload, language) + '\n')
 
@@ -382,9 +460,18 @@ def export_readme_manifest(payload, output, languages, rendered):
         f'[measurement CSV](data/{stem}_measurements.csv), and '
         f'[graph boundary CSV](data/{stem}_graph_boundaries.csv).', '',
         '## Interpretation', '',
-        f'- The lower panel contains all {counts["graph_boundaries"]} graph positions. '
+        f'- The middle panel contains all {counts["graph_boundaries"]} graph positions. '
         f'{counts["workflow_boundaries"]} occur in the current workflow candidate universe. '
         'Bars give logical boundary tensor size in decimal MB, not measured PCIe traffic or technical eligibility.',
+        '- The lower panel shows the GUI workflow counter for the accelerator prefix and GPU suffix. '
+        'The prefix includes all nodes up to and including the boundary node; the suffix is the remaining graph.',
+        f'- The conserved graph-compute total is {payload["compute_total_workflow"]:.0f}, displayed after division by 10^9. '
+        'This MAC-based estimate combines one count per multiply-accumulate with scalar-operation proxies. '
+        'The historical `flops_*_workflow` fields and GUI label GMACs do not imply a strict FLOP count. '
+        'No factor-of-two conversion is used. The newer extended `F_left`/`F_right` feature counter is intentionally not substituted.',
+        '- Compute values at workflow positions are read directly from `graph_universe.csv`. '
+        'The workflow omits position zero; its prefix is reconstructed from MACs plus bias additions of the first audited Conv. '
+        'The frozen node order, model hashes, constant total, and cumulative monotonicity are checked.',
         f'- The upper panel contains {counts["generic_measured"]} unique Generic observations '
         f'({counts["generic_admissible"]} quality-admissible) and {counts["native_measured"]} Native observations. '
         'Generic observations from the broader study and the paired set are merged only when identities and FPS agree.',

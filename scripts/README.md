@@ -22,7 +22,9 @@ Use a fresh output directory. The command reconstructs the current RQ2 and RQ3 a
 
 The English and German outputs use identical numerical inputs. Models, datasets and accelerator hardware are not required for this offline reproduction. Detailed configuration-level methods are documented with the [runner-selection inputs](../results/supplementary-studies/rq2-native-scope-20261027/README.md) and [graph-selection inputs](../results/supplementary-studies/rq3-generic420-detector-corrected-20261027/README.md).
 
-The build also writes `boundary-performance/artifacts/{en,de}/`: aligned YOLOv7/Hailo-8 plots of measured throughput and logical boundary tensor size. The lower panel covers all graph boundaries; the upper panel shows only measured cuts. The [standalone generator](split-inference/boundary_performance.py) can regenerate this figure without rebuilding the other artifacts. Its [published output](../results/supplementary-studies/boundary-performance/README.md) includes the numerical plot data and source hashes.
+The build also writes `boundary-performance/artifacts/{en,de}/`: aligned YOLOv7/Hailo-8 plots of measured throughput, logical boundary tensor size, and graph-estimated prefix/suffix compute. The two lower panels cover all graph boundaries; the upper panel shows only measured cuts. The [standalone generator](split-inference/boundary_performance.py) can regenerate this figure without rebuilding the other artifacts. Its [published output](../results/supplementary-studies/boundary-performance/README.md) includes the numerical plot data and source hashes.
+
+`dissertation-intro-panels/artifacts/{en,de}/` contains separate hardware, execution-path, and runner-interface figures from the editable MLSys overview. [Regenerate these panels](dissertation/intro_panels.py) without rebuilding numerical results: `python3 scripts/dissertation/intro_panels.py --output local-output/intro-panels --languages en de`. The author SVG and original board photo are retained under `publications/dissertation/intro-panels/source/`.
 
 ## Other analyses
 

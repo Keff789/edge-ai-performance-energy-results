@@ -9,7 +9,10 @@ Both languages use the same [numeric payload](data/yolov7_h8_boundary_performanc
 
 ## Interpretation
 
-- The lower panel contains all 308 graph positions. 307 occur in the current workflow candidate universe. Bars give logical boundary tensor size in decimal MB, not measured PCIe traffic or technical eligibility.
+- The middle panel contains all 308 graph positions. 307 occur in the current workflow candidate universe. Bars give logical boundary tensor size in decimal MB, not measured PCIe traffic or technical eligibility.
+- The lower panel shows the GUI workflow counter for the accelerator prefix and GPU suffix. The prefix includes all nodes up to and including the boundary node; the suffix is the remaining graph.
+- The conserved graph-compute total is 53147844400, displayed after division by 10^9. This MAC-based estimate combines one count per multiply-accumulate with scalar-operation proxies. The historical `flops_*_workflow` fields and GUI label GMACs do not imply a strict FLOP count. No factor-of-two conversion is used. The newer extended `F_left`/`F_right` feature counter is intentionally not substituted.
+- Compute values at workflow positions are read directly from `graph_universe.csv`. The workflow omits position zero; its prefix is reconstructed from MACs plus bias additions of the first audited Conv. The frozen node order, model hashes, constant total, and cumulative monotonicity are checked.
 - The upper panel contains 22 unique Generic observations (21 quality-admissible) and 3 Native observations. Generic observations from the broader study and the paired set are merged only when identities and FPS agree.
 - The thin Generic line is only a visual guide between measured, admitted points. Native observations are points only. Orange crosses show measured quality failures.
 - The dashed Full reference is the fastest quality-admissible Full deployment on this physical host: 53.05532535 FPS (`native_full_tensorrt`).

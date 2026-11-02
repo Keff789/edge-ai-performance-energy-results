@@ -16,6 +16,12 @@ class BoundaryPerformanceTests(unittest.TestCase):
             with DEFAULTS[key].open(newline='') as handle:
                 cls.inputs.append(list(csv.DictReader(handle)))
         cls.inputs.append(json.loads(DEFAULTS['dataset'].read_text()))
+        cls.node_audit = json.loads(DEFAULTS['node_audit'].read_text())
+        cls.normalization = json.loads(DEFAULTS['normalization'].read_text())
+
+    def build(self, *inputs, **kwargs):
+        return build_payload(*inputs, node_audit=kwargs.get('node_audit', self.node_audit),
+                             normalization=self.normalization)
 
     def inputs_copy(self):
         return copy.deepcopy(self.inputs)
@@ -48,50 +54,50 @@ class BoundaryPerformanceTests(unittest.TestCase):
         inputs = self.inputs_copy()
         self.target(inputs[3], 'generic')['fps'] += .5
         with self.assertRaisesRegex(ValueError, 'Conflicting duplicate.*FPS'):
-            build_payload(*inputs)
+            self.build(*inputs)
 
     def test_wrong_candidate_boundary_id_rejected(self):
         inputs = self.inputs_copy()
         self.target(inputs[2])['boundary_id'] = self.target(inputs[2], case='b017')['boundary_id']
         with self.assertRaisesRegex(ValueError, 'boundary_id mismatch'):
-            build_payload(*inputs)
+            self.build(*inputs)
 
     def test_missing_candidate_boundary_id_rejected(self):
         inputs = self.inputs_copy()
         self.target(inputs[2])['boundary_id'] = ''
         with self.assertRaisesRegex(ValueError, 'boundary_id mismatch'):
-            build_payload(*inputs)
+            self.build(*inputs)
 
     def test_deployment_model_hash_mismatch_rejected(self):
         inputs = self.inputs_copy()
         self.target(inputs[3], 'native')['model_sha256'] = '0' * 64
         with self.assertRaisesRegex(ValueError, 'model hash mismatch'):
-            build_payload(*inputs)
+            self.build(*inputs)
 
     def test_profile_difference_rejected(self):
         inputs = self.inputs_copy()
         row = next(r for r in inputs[0] if r['model'] == 'yolov7_paper' and r['case_id'] == 'b066')
         row['cut_bytes'] = str(float(row['cut_bytes']) + 1)
         with self.assertRaisesRegex(ValueError, 'Workflow/full graph mismatch'):
-            build_payload(*inputs)
+            self.build(*inputs)
 
     def test_duplicate_graph_identity_rejected(self):
         inputs = self.inputs_copy()
         inputs[0].append(copy.deepcopy(next(r for r in inputs[0] if r['model'] == 'yolov7_paper')))
         with self.assertRaisesRegex(ValueError, 'Duplicate graph boundary'):
-            build_payload(*inputs)
+            self.build(*inputs)
 
     def test_different_physical_host_rejected(self):
         inputs = self.inputs_copy()
         self.target(inputs[3], 'native')['physical_host'] = 'different_jetson'
         with self.assertRaisesRegex(ValueError, 'Physical host mismatch'):
-            build_payload(*inputs)
+            self.build(*inputs)
 
     def test_technical_exclusion_never_creates_zero_fps_point(self):
         inputs = self.inputs_copy()
         row = self.target(inputs[2], case='b017')
         row.update(fps_measured='False', fps='', technical_exclusion='True', technical_reason='Compiler rejection')
-        payload = build_payload(*inputs)
+        payload = self.build(*inputs)
         self.assertFalse(any(r['case_id'] == 'b017' for r in payload['measurements']))
         self.assertEqual(payload['omitted'][0]['reason'], 'Compiler rejection')
         self.assertTrue(all(r['fps'] > 0 for r in payload['measurements']))
@@ -102,6 +108,32 @@ class BoundaryPerformanceTests(unittest.TestCase):
         expected = int(rows[0]['boundary'])
         rows[0]['case_id'] = 'named_boundary'
         self.assertEqual(graph_catalogue(rows, 'yolov7_paper')['named_boundary']['boundary'], expected)
+
+    def test_compute_reproduces_gui_values_without_flop_conversion(self):
+        payload = self.build(*self.inputs)
+        self.assertEqual(payload['compute_total_workflow'], 53147844400)
+        expected = {'b000': (367001600, 52780842800),
+                    'b044': (15920332800, 37227511600),
+                    'b066': (21816934400, 31330910000),
+                    'b307': (53147844400, 0)}
+        rows = {r['case_id']: r for r in payload['graph_boundaries']}
+        for case, values in expected.items():
+            self.assertEqual((rows[case]['compute_left_workflow'], rows[case]['compute_right_workflow']), values)
+        for row in rows.values():
+            self.assertEqual(row['compute_left_workflow'] + row['compute_right_workflow'], 53147844400)
+
+    def test_inconsistent_workflow_compute_rejected(self):
+        inputs = self.inputs_copy()
+        row = next(r for r in inputs[0] if r['model'] == 'yolov7_paper' and r['case_id'] == 'b066')
+        row['flops_left_workflow'] = str(float(row['flops_left_workflow']) * 2)
+        with self.assertRaisesRegex(ValueError, 'Inconsistent workflow compute total'):
+            self.build(*inputs)
+
+    def test_wrong_first_boundary_compute_identity_rejected(self):
+        audit = copy.deepcopy(self.node_audit)
+        next(r for r in audit['graphs'] if r['model'] == 'yolov7_paper')['model_sha256'] = '0' * 64
+        with self.assertRaisesRegex(ValueError, 'Compute model hash mismatch'):
+            self.build(*self.inputs, node_audit=audit)
 
 
 if __name__ == '__main__':
