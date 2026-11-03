@@ -12,7 +12,7 @@ import math
 import re
 from pathlib import Path
 
-from publication_mlsys_figures import DISSERTATION_STYLE, MODEL_LABELS, PAPER_PALETTE
+from publication_mlsys_figures import DISSERTATION_STYLE, MODEL_LABELS, DISSERTATION_PALETTE
 
 ROOT = Path(__file__).resolve().parents[2]
 STUDY = ROOT / 'results/supplementary-studies/rq3-generic420-detector-corrected-20261027'
@@ -375,30 +375,30 @@ def render(payload, output, language):
             rows = [r for r in payload['measurements'] if r['runner'] == runner and r['quality_eligible']]
             if rows:
                 top.plot([r['boundary'] for r in rows], [r['fps'] for r in rows],
-                         color=PAPER_PALETTE[color], marker=marker, markersize=3.7 if runner == 'generic' else 5,
+                         color=DISSERTATION_PALETTE[color], marker=marker, markersize=3.7 if runner == 'generic' else 5,
                          linewidth=.75, linestyle='-' if runner == 'generic' else 'None',
                          label=runner.capitalize(), zorder=4 if runner == 'native' else 3)
-        top.axhline(payload['full_reference']['fps'], color=PAPER_PALETTE['dark_gray'],
+        top.axhline(payload['full_reference']['fps'], color=DISSERTATION_PALETTE['dark_gray'],
                     linestyle='--', linewidth=.9, label=labels['full'], zorder=2)
         failed = [r for r in payload['measurements'] if not r['quality_eligible']]
         if failed:
             top.scatter([r['boundary'] for r in failed], [r['fps'] for r in failed],
-                        color=PAPER_PALETTE['orange'], marker='x', s=28, linewidths=1.1,
+                        color=DISSERTATION_PALETTE['orange'], marker='x', s=28, linewidths=1.1,
                         label=labels['fail'], zorder=5)
         graph = payload['graph_boundaries']
         middle.bar([r['boundary'] for r in graph], [r['cut_bytes'] / 1e6 for r in graph],
-                   width=.85, color=PAPER_PALETTE['blue'], linewidth=0)
+                   width=.85, color=DISSERTATION_PALETTE['blue'], linewidth=0)
         for field, label, color in [('compute_left_workflow', 'prefix', 'blue'),
                                     ('compute_right_workflow', 'suffix', 'orange')]:
             bottom.plot([r['boundary'] for r in graph], [r[field] / 1e9 for r in graph],
-                        color=PAPER_PALETTE[color], linewidth=1, label=labels[label])
+                        color=DISSERTATION_PALETTE[color], linewidth=1, label=labels[label])
         bottom.legend(loc='upper center', bbox_to_anchor=(.5, 1.03), frameon=False,
                       ncol=2, handlelength=1.6, columnspacing=1.0, handletextpad=.5)
         if payload['highlight_case']:
             point = next(r for r in payload['measurements']
                          if r['runner'] == 'native' and r['case_id'] == payload['highlight_case'])
             for axis in (top, middle, bottom):
-                axis.axvline(point['boundary'], linestyle=':', color=PAPER_PALETTE['dark_gray'], linewidth=.85, zorder=1)
+                axis.axvline(point['boundary'], linestyle=':', color=DISSERTATION_PALETTE['dark_gray'], linewidth=.85, zorder=1)
             value = f'{point["fps"]:.2f}'
             if language == 'de':
                 value = value.replace('.', ',')
@@ -411,7 +411,7 @@ def render(payload, output, language):
                 top.annotate('b044', (comparison['boundary'], comparison['fps']),
                              xytext=(-19, 25), textcoords='offset points', fontsize=9,
                              ha='center', va='bottom',
-                             arrowprops={'arrowstyle': '-', 'color': PAPER_PALETTE['dark_gray'],
+                             arrowprops={'arrowstyle': '-', 'color': DISSERTATION_PALETTE['dark_gray'],
                                          'lw': .6, 'shrinkA': 2, 'shrinkB': 5})
         top.set_ylim(0, max(r['fps'] for r in payload['measurements'] + [payload['full_reference']]) * 1.18)
         top.set_ylabel(labels['fps'])
@@ -493,6 +493,9 @@ def export_readme_manifest(payload, output, languages, rendered):
     manifest = {
         'schema': 'boundary-performance-artifacts-v1',
         'generator': {'path': source_name(__file__), 'sha256': sha256(__file__)},
+        'style_profile': 'dissertation-author-20261103',
+        'style_source': {'path': source_name(Path(__file__).with_name('publication_mlsys_figures.py')),
+                         'sha256': sha256(Path(__file__).with_name('publication_mlsys_figures.py'))},
         'sources': payload['sources'],
         'outputs': [{'path': str(path.relative_to(output)), 'sha256': sha256(path)} for path in files],
     }

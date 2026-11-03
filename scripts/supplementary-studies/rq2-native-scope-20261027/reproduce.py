@@ -396,7 +396,8 @@ def family_results(pairs, eligible, selected, quality_selected, comparison, bind
 def plot_selection_loss(points, language='en', figure_profile='paper'):
     """Show every model/device group; place large losses outside the scale."""
     sys.path.insert(0, str(REPO / 'scripts/split-inference'))
-    from publication_mlsys_figures import PAPER_STYLE, PAPER_PALETTE, DISSERTATION_STYLE
+    from publication_mlsys_figures import PAPER_STYLE, DISSERTATION_STYLE, palette_for_profile
+    palette = palette_for_profile(figure_profile)
     import matplotlib.pyplot as plt
     from matplotlib.lines import Line2D
     models = ['mobilenet_v3_large', 'regnet_x_1_6gf', 'resnet50',
@@ -410,7 +411,7 @@ def plot_selection_loss(points, language='en', figure_profile='paper'):
         handles = []
         for setup, marker, color, offset in [('H8', 'o', 'blue', -.14),
                 ('H10', 's', 'orange', 0.), ('DeepX', '^', 'green', .14)]:
-            color = PAPER_PALETTE[color]
+            color = palette[color]
             handles.append(Line2D([], [], marker=marker, linestyle='none', color=color,
                                   markersize=4.2, label=setup))
             for row in points:
@@ -528,7 +529,8 @@ def render(output, numeric_only, figure_profile='paper'):
     if numeric_only:
         return
     sys.path.insert(0, str(REPO / 'scripts/split-inference'))
-    from publication_mlsys_figures import PAPER_STYLE, PAPER_PALETTE, DISSERTATION_STYLE
+    from publication_mlsys_figures import PAPER_STYLE, DISSERTATION_STYLE, palette_for_profile
+    palette = palette_for_profile(figure_profile)
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
@@ -544,7 +546,7 @@ def render(output, numeric_only, figure_profile='paper'):
             fig, ax = plt.subplots(figsize=(4.65, 2.95) if figure_profile == 'dissertation' else (3.6, 2.95))
             for method, color in zip(METHODS, colors):
                 selected = [r for r in points if r['method'] == method and r[key] is not None]
-                ax.plot([r['k'] for r in selected], [100*r[key] if name == 'rq2_native_success' else r[key] for r in selected], label=labels[method], color=PAPER_PALETTE[color], lw=1.2)
+                ax.plot([r['k'] for r in selected], [100*r[key] if name == 'rq2_native_success' else r[key] for r in selected], label=labels[method], color=palette[color], lw=1.2)
             ax.set(xlim=(.8, 20.2), xlabel='Maximum Native tests per combination', ylabel=ylabel, xticks=[1, 3, 5, 10, 15, 20])
             ax.legend(frameon=False, fontsize=8.5 if figure_profile == 'dissertation' else 6); fig.tight_layout()
             legacy.save_figure(fig, output / 'figures' / name); plt.close(fig)

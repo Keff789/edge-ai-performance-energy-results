@@ -167,6 +167,8 @@ def export(args, labels=None):
     if (len(data),len(energy),validation['paired_cuts'])!=(451,450,187):raise AssertionError(validation)
     (out/'VALIDATION.json').write_text(json.dumps(validation,indent=2)+'\n')
     paths=[p for p in out.rglob('*') if p.is_file() and 'render_work' not in p.parts and p.name!='MANIFEST.json']
+    empty_artifacts=[str(p.relative_to(out)) for p in paths if p.suffix in ('.pdf','.svg','.png') and p.stat().st_size == 0]
+    if empty_artifacts:raise AssertionError('Empty figure export: '+repr(empty_artifacts))
     manifest={'schema':'dissertation-selection-assets-v2','language':args.language,'repository_commit':subprocess.check_output(['git','-C',str(REPO),'rev-parse','HEAD'],text=True).strip(),'published_data_baseline':'aed301819663b5fa27bd5731fb74fef3e46ee927','figure_profile':args.figure_profile,'inputs':inputs,'generator_sha256':sha(Path(__file__)),'note':'Source commit identifies the published numeric data. Local generator changes affect presentation only. Historical confirmation assets are deliberately excluded.','files':{str(p.relative_to(out)):sha(p) for p in paths}}
     (out/'MANIFEST.json').write_text(json.dumps(manifest,indent=2)+'\n')
     print(json.dumps({'status':'PASS','output':str(out),'figures':len(list(figs.glob('*.pdf'))),'tables':len(list(tabs.glob('*.tex'))),'validation':{k:v for k,v in validation.items() if k!='unchanged_payloads'}},indent=2))

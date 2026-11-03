@@ -14,6 +14,7 @@ import hashlib
 import json
 from pathlib import Path
 import subprocess
+import sys
 
 import matplotlib
 matplotlib.use('Agg')
@@ -24,6 +25,8 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / 'scripts/split-inference'))
+from publication_mlsys_figures import DISSERTATION_STYLE, DISSERTATION_PALETTE
 TABLES = ROOT / 'results/energy-measurement/tables/tim'
 FROZEN = ROOT / 'publications/dissertation/thesis-v56/en'
 CURVES = ROOT / 'results/energy-measurement/data/spectra/pico_vs_tek_psd/data/curves'
@@ -36,13 +39,13 @@ HAILO_IDS = ['gemm','yolo','random_pattern_yolo']
 HAILO_LABELS = ['GEMM','YOLO','YOLO variabel']
 SPECTRAL_IDS = ['gemmfp32','gemmint8','yolofp32','yoloint8','gemma3-4b','resnet50']
 SPECTRAL_LABELS = ['GEMM-FP32','GEMM-INT8','YOLO-FP32','YOLO-INT8','Gemma3-4B','ResNet-50 FP32']
-STYLE = {'font.family':'DejaVu Sans','font.size':11.5,'axes.labelsize':11.5,
+STYLE = {**DISSERTATION_STYLE,'font.size':11.5,'axes.labelsize':11.5,
     'axes.titlesize':11.5,'xtick.labelsize':11.5,'ytick.labelsize':11.5,
     'legend.fontsize':11.5,'axes.linewidth':.7,'axes.spines.top':False,
     'axes.spines.right':False,'axes.axisbelow':True,'pdf.fonttype':42,
     'svg.fonttype':'none','svg.hashsalt':'thesis-v56-energy-de-20261029',
     'figure.facecolor':'white','savefig.facecolor':'white',
-    'axes.prop_cycle':matplotlib.cycler(color=['#2475a7','#d77a2d','#4c8d53','#b74d53','#8c6bb0','#8d6554','#b55aa2'])}
+    'axes.prop_cycle':matplotlib.cycler(color=[DISSERTATION_PALETTE[k] for k in ['blue','orange','green']] + ['#b74d53','#8c6bb0','#8d6554','#b55aa2'])}
 
 
 def sha(path): return hashlib.sha256(Path(path).read_bytes()).hexdigest()
@@ -223,7 +226,7 @@ def render(output:Path)->dict:
         axs[0].axhline(1,color='#89939a',ls='--',lw=.8);axs[0].text(1.65,.88,'1 %',color='#626d77',ha='center')
         axs[0].set(xlim=(-.45,2.45),ylim=(0,1.12),yticks=[0,.2,.4,.6,.8,1],ylabel='Q95-Energiefehler (%)',title='(a) Energie über 104 s')
         above=100-cov.median_pct.to_numpy();lo=100-cov.q95_pct.to_numpy();hi=100-cov.q05_pct.to_numpy()
-        axs[1].errorbar(range(3),above,yerr=[above-lo,hi-above],fmt='o',ms=4.6,capsize=2,color='#d77a2d')
+        axs[1].errorbar(range(3),above,yerr=[above-lo,hi-above],fmt='o',ms=4.6,capsize=2,color='#D18432')
         axs[1].set(xlim=(-.45,2.45),yscale='log',ylim=(.4,130),ylabel='Varianz > Nyquist (%)',title='(b) Erfasste Schwankungen')
         for ax,ticks in zip(axs,[['50 S/s','85 S/s','2 kS/s'],['2 kS/s','125 kS/s','160 kS/s']]):
             clean(ax);ax.set_xticks(range(3),ticks);ax.set_xlabel('Abtastrate')
@@ -271,7 +274,7 @@ def render(output:Path)->dict:
         hs=b.read('hailo_spectra');assert hs.signal.eq('power').all() and hs.window.eq('matched_prefix').all()
         fig=b.figure('hailo_spectral_tail');ax=fig.subplots();fig.subplots_adjust(left=.17,right=.98,bottom=.25,top=.78)
         payload=[]
-        for basis,label,marker,offset,col in [('active','Last','s',-.08,'#2475a7'),('excess','Pos. Überschuss','o',.08,'#d77a2d')]:
+        for basis,label,marker,offset,col in [('active','Last','s',-.08,'#2E73B6'),('excess','Pos. Überschuss','o',.08,'#D18432')]:
             v=hs[hs.basis.eq(basis)].set_index('workload_id').loc[['gemm','yolo']]
             mid=v.f99_median_hz.to_numpy()/1000;low=v.f99_q05_hz.to_numpy()/1000;high=v.f99_q95_hz.to_numpy()/1000
             ax.errorbar(mid,np.arange(2)+offset,xerr=[mid-low,high-mid],fmt=marker,ms=5,capsize=2,label=label,color=col)
@@ -285,7 +288,7 @@ def render(output:Path)->dict:
         jet=paired[paired.platform.eq('Jetson')]
         fig=b.figure('jetson_deployed_meters');ax=fig.subplots();fig.subplots_adjust(left=.285,right=.98,bottom=.2,top=.83)
         series=[]
-        for sensor,label,marker,offset,col in [('firmware','u.RECS','o',0,'#2475a7'),('jetson','INA3221','s',0,'#d77a2d'),('shelly','Skalierte AC','^',0,'#4c8d53')]:
+        for sensor,label,marker,offset,col in [('firmware','u.RECS','o',0,'#2E73B6'),('jetson','INA3221','s',0,'#D18432'),('shelly','Skalierte AC','^',0,'#25896F')]:
             v=jet[jet.sensor.eq(sensor)].set_index('slug').loc[JET_IDS]
             ax.plot(v.P_median_pct,np.arange(7)+offset,ls='none',marker=marker,ms=5,label=label,color=col)
             series.append({'sensor':sensor,'slugs':JET_IDS,'P_median_pct':v.P_median_pct.tolist()})
@@ -297,7 +300,7 @@ def render(output:Path)->dict:
         hailo=paired[paired.platform.eq('Hailo')]
         fig=b.figure('hailo_meters');axs=fig.subplots(1,2,sharey=True,gridspec_kw={'width_ratios':[1.22,1]});fig.subplots_adjust(left=.225,right=.985,bottom=.35,top=.84,wspace=.15)
         series=[]
-        for sensor,label,marker,offset,col,panel in [('firmware','u.RECS','o',0,'#2475a7',0),('hailo_rt','HailoRT','s',0,'#d77a2d',0),('shelly','Skalierte AC','^',0,'#4c8d53',1)]:
+        for sensor,label,marker,offset,col,panel in [('firmware','u.RECS','o',0,'#2E73B6',0),('hailo_rt','HailoRT','s',0,'#D18432',0),('shelly','Skalierte AC','^',0,'#25896F',1)]:
             v=hailo[hailo.sensor.eq(sensor)].set_index('slug').loc[HAILO_IDS]
             axs[panel].plot(v.P_median_pct,np.arange(3)+offset,ls='none',marker=marker,ms=5,label=label,color=col)
             series.append({'sensor':sensor,'slugs':HAILO_IDS,'P_median_pct':v.P_median_pct.tolist()})
@@ -342,7 +345,7 @@ def render(output:Path)->dict:
         series=[]
         for ax,field,ylabel in zip(axs,['trt_s','gpu_before_5s_median_C'],['Laufzeit für 100 Anfragen (s)','GPU-Temperatur (°C)']):
             ax.plot(pause['index'],pause[field],color='#c5cbd0',lw=1,zorder=1)
-            for length,label,marker,col in [(20,'20-s-Pause','o','#d77a2d'),(120,'120-s-Pause','s','#2475a7')]:
+            for length,label,marker,col in [(20,'20-s-Pause','o','#D18432'),(120,'120-s-Pause','s','#2E73B6')]:
                 v=pause[pause.pause_s.eq(length)];ax.plot(v['index'],v[field],ls='none',marker=marker,ms=5,label=label,color=col,zorder=2)
             clean(ax);ax.set(xlim=(.75,6.25),xlabel='Reihenfolge',ylabel=ylabel);ax.set_xticks(range(1,7))
             series.append({'field':field,'index':pause['index'].tolist(),'values':pause[field].tolist()})
@@ -352,6 +355,9 @@ def render(output:Path)->dict:
     result={'schema':'thesis-energy-de-regeneration-v1','status':'PASS','language':'de',
         'base_commit':subprocess.check_output(['git','-C',str(ROOT),'rev-parse','HEAD'],text=True).strip(),
         'generator':'scripts/dissertation/render_thesis_energy_de.py','generator_sha256':sha(__file__),
+        'style_profile':'dissertation-author-20261103',
+        'style_source':'scripts/split-inference/publication_mlsys_figures.py',
+        'style_sha256':sha(ROOT/'scripts/split-inference/publication_mlsys_figures.py'),
         'figures':b.records,'input_hashes':b.sources,'measurement_or_statistical_analysis_performed':False}
     (b.output/'ENERGY_DE_REGENERATION.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     return result

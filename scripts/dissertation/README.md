@@ -144,6 +144,22 @@ Copy only the PDFs and required TeX files into the LaTeX project. The temporary
 remains unchanged; the modified publication renderer was checked against the
 previous renderer with 41 byte-identical paper outputs.
 
+### Author figure style (November 2026)
+
+The dissertation profile uses Nimbus Sans and the current Draw.io palette:
+blue `#2E73B6`, orange `#D18432`, green `#25896F`, dark text `#18354A`,
+and secondary text `#64798A`. Nimbus Sans is supplied by the URW Base 35 fonts
+(for example, the `fonts-urw-base35` system package). Install it to reproduce
+the intended typography; DejaVu Sans is the declared fallback.
+
+This profile applies to both languages in `export_thesis_selection.py`, the
+boundary-performance renderer, and the nine German energy rerenders.
+Scientific coordinates, candidate identities, values and canvas dimensions
+are retained. The continuous quality scale in the seven galleries remains
+Viridis so it continues to represent a numeric quantity. The paper profile
+and its palette remain unchanged. Only final PDF exports belong in LaTeX;
+SVG/PNG previews and data sidecars remain with the generated artifacts.
+
 ### German final-thesis profile
 
 ```sh
@@ -164,9 +180,9 @@ Weighted remain method names. Unknown labels fail the export.
 
 `TRANSLATION_AUDIT.json`, `VALIDATION.json` and `MANIFEST.json` record coverage,
 exactly unchanged scientific payloads, source hashes and output hashes. The
-German staged workflow wraps longer labels inside its original canvas. The
-English profile retains its existing outputs; all 15 PDF checksums were verified
-against the previously published English thesis selection after these changes.
+German staged workflow wraps longer labels inside its original canvas. Both languages now use the same author-style dissertation profile. The
+scientific payload checks continue to compare against the published inputs;
+new font and color choices intentionally change the exported PDF checksums.
 
 The frozen export accepts `--language de` and verifies the existing German
 counterparts against their source manifest. PyMuPDF is needed for its checks of

@@ -1,0 +1,2394 @@
+{
+  "schema": "yolov7-diagram-topology-v1",
+  "model": "yolov7_paper",
+  "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+  "upstream_architecture_url": "https://github.com/WongKinYiu/yolov7/blob/main/cfg/training/yolov7.yaml",
+  "upstream_paper_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Wang_YOLOv7_Trainable_Bag-of-Freebies_Sets_New_State-of-the-Art_for_Real-Time_Object_Detectors_CVPR_2023_paper.html",
+  "sources": [
+    {
+      "path": "results/supplementary-studies/dissertation-author-style-20261103/sources/upstream_yolov7_training.yaml",
+      "sha256": "ffb3ce1387fda617fa1e92053aae2bd5d951249bb312d7bf83c2d37481956878"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-weighted-20261020/features/node_operation_audit.json",
+      "sha256": "ae649c429d4d6316671d343891feb74d37a903bbad4ca7e5f1e7465bb9c289d2"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-weighted-20261020/features/normalization_universes.json",
+      "sha256": "a00131150b5578f31ac7ecb184f5b2bf71a24f2a435cde725020cf864a8619d0"
+    },
+    {
+      "path": "results/supplementary-studies/rq2-weighted-20261020/features/graph_boundary_features.csv",
+      "sha256": "05856138ad5eb5de1f05f8b57d234d4bd14bd2acc0713a4b3cc984955d24da2e"
+    }
+  ],
+  "validation": {
+    "onnx_operator_sequence_matches_all_106_yaml_modules": true,
+    "matched_onnx_nodes": 309,
+    "convolution_input_channels_match_yaml_edges": true,
+    "convolution_pool_resize_output_shapes_match": true,
+    "cut_prefixes_and_tensor_counts_verified": true,
+    "actual_onnx_binary_present": false,
+    "status": "High-confidence diagram-level mapping from frozen metadata and matching official architecture; not a re-export or graph-binary round-trip"
+  },
+  "conventions": {
+    "shape": "NCHW",
+    "input_shape": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "boundary_number": "Position in saved topological boundary order; for the three selected cuts it also equals the last ONNX node index, not the YAML layer number",
+    "bytes": "Logical FP32 tensor bytes, not a claim about all runtime transfer representations"
+  },
+  "cuts": [
+    {
+      "case": "b009",
+      "boundary_position": 9,
+      "onnx_node_index": 9,
+      "onnx_node_name": "node_Conv_1151",
+      "onnx_operator": "Conv",
+      "yaml_layer": 3,
+      "crossing_tensor": "getitem_9",
+      "shape_nchw": [
+        1,
+        128,
+        160,
+        160
+      ],
+      "logical_fp32_bytes": 13107200,
+      "suffix_input_count": 1,
+      "location": "After Conv, before SiLU in the early stride-two convolution",
+      "topology_position_distinct_from_onnx_index_in_general": true
+    },
+    {
+      "case": "b044",
+      "boundary_position": 44,
+      "onnx_node_index": 44,
+      "onnx_node_name": "node_cat_1",
+      "onnx_operator": "Concat",
+      "yaml_layer": 16,
+      "crossing_tensor": "cat_1",
+      "shape_nchw": [
+        1,
+        256,
+        80,
+        80
+      ],
+      "logical_fp32_bytes": 6553600,
+      "suffix_input_count": 1,
+      "location": "After concatenation of the two downsampling branches, before the second ELAN block",
+      "topology_position_distinct_from_onnx_index_in_general": true
+    },
+    {
+      "case": "b066",
+      "boundary_position": 66,
+      "onnx_node_index": 66,
+      "onnx_node_name": "node_mul_20",
+      "onnx_operator": "Mul",
+      "yaml_layer": 24,
+      "crossing_tensor": "mul_20",
+      "shape_nchw": [
+        1,
+        512,
+        80,
+        80
+      ],
+      "logical_fp32_bytes": 13107200,
+      "suffix_input_count": 1,
+      "location": "After the second ELAN block including its final 1x1 Conv and SiLU; backbone P3/8 output",
+      "topology_position_distinct_from_onnx_index_in_general": true
+    }
+  ],
+  "layers": [
+    {
+      "yaml_layer": 0,
+      "module": "Conv",
+      "source_yaml_layers": [
+        -1
+      ],
+      "onnx_nodes": [
+        0,
+        2
+      ],
+      "output_shape_nchw": [
+        1,
+        32,
+        640,
+        640
+      ]
+    },
+    {
+      "yaml_layer": 1,
+      "module": "Conv",
+      "source_yaml_layers": [
+        0
+      ],
+      "onnx_nodes": [
+        3,
+        5
+      ],
+      "output_shape_nchw": [
+        1,
+        64,
+        320,
+        320
+      ]
+    },
+    {
+      "yaml_layer": 2,
+      "module": "Conv",
+      "source_yaml_layers": [
+        1
+      ],
+      "onnx_nodes": [
+        6,
+        8
+      ],
+      "output_shape_nchw": [
+        1,
+        64,
+        320,
+        320
+      ]
+    },
+    {
+      "yaml_layer": 3,
+      "module": "Conv",
+      "source_yaml_layers": [
+        2
+      ],
+      "onnx_nodes": [
+        9,
+        11
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        160,
+        160
+      ]
+    },
+    {
+      "yaml_layer": 4,
+      "module": "Conv",
+      "source_yaml_layers": [
+        3
+      ],
+      "onnx_nodes": [
+        12,
+        14
+      ],
+      "output_shape_nchw": [
+        1,
+        64,
+        160,
+        160
+      ]
+    },
+    {
+      "yaml_layer": 5,
+      "module": "Conv",
+      "source_yaml_layers": [
+        3
+      ],
+      "onnx_nodes": [
+        15,
+        17
+      ],
+      "output_shape_nchw": [
+        1,
+        64,
+        160,
+        160
+      ]
+    },
+    {
+      "yaml_layer": 6,
+      "module": "Conv",
+      "source_yaml_layers": [
+        5
+      ],
+      "onnx_nodes": [
+        18,
+        20
+      ],
+      "output_shape_nchw": [
+        1,
+        64,
+        160,
+        160
+      ]
+    },
+    {
+      "yaml_layer": 7,
+      "module": "Conv",
+      "source_yaml_layers": [
+        6
+      ],
+      "onnx_nodes": [
+        21,
+        23
+      ],
+      "output_shape_nchw": [
+        1,
+        64,
+        160,
+        160
+      ]
+    },
+    {
+      "yaml_layer": 8,
+      "module": "Conv",
+      "source_yaml_layers": [
+        7
+      ],
+      "onnx_nodes": [
+        24,
+        26
+      ],
+      "output_shape_nchw": [
+        1,
+        64,
+        160,
+        160
+      ]
+    },
+    {
+      "yaml_layer": 9,
+      "module": "Conv",
+      "source_yaml_layers": [
+        8
+      ],
+      "onnx_nodes": [
+        27,
+        29
+      ],
+      "output_shape_nchw": [
+        1,
+        64,
+        160,
+        160
+      ]
+    },
+    {
+      "yaml_layer": 10,
+      "module": "Concat",
+      "source_yaml_layers": [
+        9,
+        7,
+        5,
+        4
+      ],
+      "onnx_nodes": [
+        30,
+        30
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        160,
+        160
+      ]
+    },
+    {
+      "yaml_layer": 11,
+      "module": "Conv",
+      "source_yaml_layers": [
+        10
+      ],
+      "onnx_nodes": [
+        31,
+        33
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        160,
+        160
+      ]
+    },
+    {
+      "yaml_layer": 12,
+      "module": "MP",
+      "source_yaml_layers": [
+        11
+      ],
+      "onnx_nodes": [
+        34,
+        34
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 13,
+      "module": "Conv",
+      "source_yaml_layers": [
+        12
+      ],
+      "onnx_nodes": [
+        35,
+        37
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 14,
+      "module": "Conv",
+      "source_yaml_layers": [
+        11
+      ],
+      "onnx_nodes": [
+        38,
+        40
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        160,
+        160
+      ]
+    },
+    {
+      "yaml_layer": 15,
+      "module": "Conv",
+      "source_yaml_layers": [
+        14
+      ],
+      "onnx_nodes": [
+        41,
+        43
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 16,
+      "module": "Concat",
+      "source_yaml_layers": [
+        15,
+        13
+      ],
+      "onnx_nodes": [
+        44,
+        44
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 17,
+      "module": "Conv",
+      "source_yaml_layers": [
+        16
+      ],
+      "onnx_nodes": [
+        45,
+        47
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 18,
+      "module": "Conv",
+      "source_yaml_layers": [
+        16
+      ],
+      "onnx_nodes": [
+        48,
+        50
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 19,
+      "module": "Conv",
+      "source_yaml_layers": [
+        18
+      ],
+      "onnx_nodes": [
+        51,
+        53
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 20,
+      "module": "Conv",
+      "source_yaml_layers": [
+        19
+      ],
+      "onnx_nodes": [
+        54,
+        56
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 21,
+      "module": "Conv",
+      "source_yaml_layers": [
+        20
+      ],
+      "onnx_nodes": [
+        57,
+        59
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 22,
+      "module": "Conv",
+      "source_yaml_layers": [
+        21
+      ],
+      "onnx_nodes": [
+        60,
+        62
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 23,
+      "module": "Concat",
+      "source_yaml_layers": [
+        22,
+        20,
+        18,
+        17
+      ],
+      "onnx_nodes": [
+        63,
+        63
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 24,
+      "module": "Conv",
+      "source_yaml_layers": [
+        23
+      ],
+      "onnx_nodes": [
+        64,
+        66
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 25,
+      "module": "MP",
+      "source_yaml_layers": [
+        24
+      ],
+      "onnx_nodes": [
+        67,
+        67
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 26,
+      "module": "Conv",
+      "source_yaml_layers": [
+        25
+      ],
+      "onnx_nodes": [
+        68,
+        70
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 27,
+      "module": "Conv",
+      "source_yaml_layers": [
+        24
+      ],
+      "onnx_nodes": [
+        71,
+        73
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 28,
+      "module": "Conv",
+      "source_yaml_layers": [
+        27
+      ],
+      "onnx_nodes": [
+        74,
+        76
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 29,
+      "module": "Concat",
+      "source_yaml_layers": [
+        28,
+        26
+      ],
+      "onnx_nodes": [
+        77,
+        77
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 30,
+      "module": "Conv",
+      "source_yaml_layers": [
+        29
+      ],
+      "onnx_nodes": [
+        78,
+        80
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 31,
+      "module": "Conv",
+      "source_yaml_layers": [
+        29
+      ],
+      "onnx_nodes": [
+        81,
+        83
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 32,
+      "module": "Conv",
+      "source_yaml_layers": [
+        31
+      ],
+      "onnx_nodes": [
+        84,
+        86
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 33,
+      "module": "Conv",
+      "source_yaml_layers": [
+        32
+      ],
+      "onnx_nodes": [
+        87,
+        89
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 34,
+      "module": "Conv",
+      "source_yaml_layers": [
+        33
+      ],
+      "onnx_nodes": [
+        90,
+        92
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 35,
+      "module": "Conv",
+      "source_yaml_layers": [
+        34
+      ],
+      "onnx_nodes": [
+        93,
+        95
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 36,
+      "module": "Concat",
+      "source_yaml_layers": [
+        35,
+        33,
+        31,
+        30
+      ],
+      "onnx_nodes": [
+        96,
+        96
+      ],
+      "output_shape_nchw": [
+        1,
+        1024,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 37,
+      "module": "Conv",
+      "source_yaml_layers": [
+        36
+      ],
+      "onnx_nodes": [
+        97,
+        99
+      ],
+      "output_shape_nchw": [
+        1,
+        1024,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 38,
+      "module": "MP",
+      "source_yaml_layers": [
+        37
+      ],
+      "onnx_nodes": [
+        100,
+        100
+      ],
+      "output_shape_nchw": [
+        1,
+        1024,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 39,
+      "module": "Conv",
+      "source_yaml_layers": [
+        38
+      ],
+      "onnx_nodes": [
+        101,
+        103
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 40,
+      "module": "Conv",
+      "source_yaml_layers": [
+        37
+      ],
+      "onnx_nodes": [
+        104,
+        106
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 41,
+      "module": "Conv",
+      "source_yaml_layers": [
+        40
+      ],
+      "onnx_nodes": [
+        107,
+        109
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 42,
+      "module": "Concat",
+      "source_yaml_layers": [
+        41,
+        39
+      ],
+      "onnx_nodes": [
+        110,
+        110
+      ],
+      "output_shape_nchw": [
+        1,
+        1024,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 43,
+      "module": "Conv",
+      "source_yaml_layers": [
+        42
+      ],
+      "onnx_nodes": [
+        111,
+        113
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 44,
+      "module": "Conv",
+      "source_yaml_layers": [
+        42
+      ],
+      "onnx_nodes": [
+        114,
+        116
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 45,
+      "module": "Conv",
+      "source_yaml_layers": [
+        44
+      ],
+      "onnx_nodes": [
+        117,
+        119
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 46,
+      "module": "Conv",
+      "source_yaml_layers": [
+        45
+      ],
+      "onnx_nodes": [
+        120,
+        122
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 47,
+      "module": "Conv",
+      "source_yaml_layers": [
+        46
+      ],
+      "onnx_nodes": [
+        123,
+        125
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 48,
+      "module": "Conv",
+      "source_yaml_layers": [
+        47
+      ],
+      "onnx_nodes": [
+        126,
+        128
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 49,
+      "module": "Concat",
+      "source_yaml_layers": [
+        48,
+        46,
+        44,
+        43
+      ],
+      "onnx_nodes": [
+        129,
+        129
+      ],
+      "output_shape_nchw": [
+        1,
+        1024,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 50,
+      "module": "Conv",
+      "source_yaml_layers": [
+        49
+      ],
+      "onnx_nodes": [
+        130,
+        132
+      ],
+      "output_shape_nchw": [
+        1,
+        1024,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 51,
+      "module": "SPPCSPC",
+      "source_yaml_layers": [
+        50
+      ],
+      "onnx_nodes": [
+        133,
+        158
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 52,
+      "module": "Conv",
+      "source_yaml_layers": [
+        51
+      ],
+      "onnx_nodes": [
+        159,
+        161
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 53,
+      "module": "nn.Upsample",
+      "source_yaml_layers": [
+        52
+      ],
+      "onnx_nodes": [
+        162,
+        162
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 54,
+      "module": "Conv",
+      "source_yaml_layers": [
+        37
+      ],
+      "onnx_nodes": [
+        163,
+        165
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 55,
+      "module": "Concat",
+      "source_yaml_layers": [
+        54,
+        53
+      ],
+      "onnx_nodes": [
+        166,
+        166
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 56,
+      "module": "Conv",
+      "source_yaml_layers": [
+        55
+      ],
+      "onnx_nodes": [
+        167,
+        169
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 57,
+      "module": "Conv",
+      "source_yaml_layers": [
+        55
+      ],
+      "onnx_nodes": [
+        170,
+        172
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 58,
+      "module": "Conv",
+      "source_yaml_layers": [
+        57
+      ],
+      "onnx_nodes": [
+        173,
+        175
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 59,
+      "module": "Conv",
+      "source_yaml_layers": [
+        58
+      ],
+      "onnx_nodes": [
+        176,
+        178
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 60,
+      "module": "Conv",
+      "source_yaml_layers": [
+        59
+      ],
+      "onnx_nodes": [
+        179,
+        181
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 61,
+      "module": "Conv",
+      "source_yaml_layers": [
+        60
+      ],
+      "onnx_nodes": [
+        182,
+        184
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 62,
+      "module": "Concat",
+      "source_yaml_layers": [
+        61,
+        60,
+        59,
+        58,
+        57,
+        56
+      ],
+      "onnx_nodes": [
+        185,
+        185
+      ],
+      "output_shape_nchw": [
+        1,
+        1024,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 63,
+      "module": "Conv",
+      "source_yaml_layers": [
+        62
+      ],
+      "onnx_nodes": [
+        186,
+        188
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 64,
+      "module": "Conv",
+      "source_yaml_layers": [
+        63
+      ],
+      "onnx_nodes": [
+        189,
+        191
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 65,
+      "module": "nn.Upsample",
+      "source_yaml_layers": [
+        64
+      ],
+      "onnx_nodes": [
+        192,
+        192
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 66,
+      "module": "Conv",
+      "source_yaml_layers": [
+        24
+      ],
+      "onnx_nodes": [
+        193,
+        195
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 67,
+      "module": "Concat",
+      "source_yaml_layers": [
+        66,
+        65
+      ],
+      "onnx_nodes": [
+        196,
+        196
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 68,
+      "module": "Conv",
+      "source_yaml_layers": [
+        67
+      ],
+      "onnx_nodes": [
+        197,
+        199
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 69,
+      "module": "Conv",
+      "source_yaml_layers": [
+        67
+      ],
+      "onnx_nodes": [
+        200,
+        202
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 70,
+      "module": "Conv",
+      "source_yaml_layers": [
+        69
+      ],
+      "onnx_nodes": [
+        203,
+        205
+      ],
+      "output_shape_nchw": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 71,
+      "module": "Conv",
+      "source_yaml_layers": [
+        70
+      ],
+      "onnx_nodes": [
+        206,
+        208
+      ],
+      "output_shape_nchw": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 72,
+      "module": "Conv",
+      "source_yaml_layers": [
+        71
+      ],
+      "onnx_nodes": [
+        209,
+        211
+      ],
+      "output_shape_nchw": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 73,
+      "module": "Conv",
+      "source_yaml_layers": [
+        72
+      ],
+      "onnx_nodes": [
+        212,
+        214
+      ],
+      "output_shape_nchw": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 74,
+      "module": "Concat",
+      "source_yaml_layers": [
+        73,
+        72,
+        71,
+        70,
+        69,
+        68
+      ],
+      "onnx_nodes": [
+        215,
+        215
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 75,
+      "module": "Conv",
+      "source_yaml_layers": [
+        74
+      ],
+      "onnx_nodes": [
+        216,
+        218
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 76,
+      "module": "MP",
+      "source_yaml_layers": [
+        75
+      ],
+      "onnx_nodes": [
+        219,
+        219
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 77,
+      "module": "Conv",
+      "source_yaml_layers": [
+        76
+      ],
+      "onnx_nodes": [
+        220,
+        222
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 78,
+      "module": "Conv",
+      "source_yaml_layers": [
+        75
+      ],
+      "onnx_nodes": [
+        223,
+        225
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 79,
+      "module": "Conv",
+      "source_yaml_layers": [
+        78
+      ],
+      "onnx_nodes": [
+        226,
+        228
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 80,
+      "module": "Concat",
+      "source_yaml_layers": [
+        79,
+        77,
+        63
+      ],
+      "onnx_nodes": [
+        229,
+        229
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 81,
+      "module": "Conv",
+      "source_yaml_layers": [
+        80
+      ],
+      "onnx_nodes": [
+        230,
+        232
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 82,
+      "module": "Conv",
+      "source_yaml_layers": [
+        80
+      ],
+      "onnx_nodes": [
+        233,
+        235
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 83,
+      "module": "Conv",
+      "source_yaml_layers": [
+        82
+      ],
+      "onnx_nodes": [
+        236,
+        238
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 84,
+      "module": "Conv",
+      "source_yaml_layers": [
+        83
+      ],
+      "onnx_nodes": [
+        239,
+        241
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 85,
+      "module": "Conv",
+      "source_yaml_layers": [
+        84
+      ],
+      "onnx_nodes": [
+        242,
+        244
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 86,
+      "module": "Conv",
+      "source_yaml_layers": [
+        85
+      ],
+      "onnx_nodes": [
+        245,
+        247
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 87,
+      "module": "Concat",
+      "source_yaml_layers": [
+        86,
+        85,
+        84,
+        83,
+        82,
+        81
+      ],
+      "onnx_nodes": [
+        248,
+        248
+      ],
+      "output_shape_nchw": [
+        1,
+        1024,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 88,
+      "module": "Conv",
+      "source_yaml_layers": [
+        87
+      ],
+      "onnx_nodes": [
+        249,
+        251
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 89,
+      "module": "MP",
+      "source_yaml_layers": [
+        88
+      ],
+      "onnx_nodes": [
+        252,
+        252
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 90,
+      "module": "Conv",
+      "source_yaml_layers": [
+        89
+      ],
+      "onnx_nodes": [
+        253,
+        255
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 91,
+      "module": "Conv",
+      "source_yaml_layers": [
+        88
+      ],
+      "onnx_nodes": [
+        256,
+        258
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 92,
+      "module": "Conv",
+      "source_yaml_layers": [
+        91
+      ],
+      "onnx_nodes": [
+        259,
+        261
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 93,
+      "module": "Concat",
+      "source_yaml_layers": [
+        92,
+        90,
+        51
+      ],
+      "onnx_nodes": [
+        262,
+        262
+      ],
+      "output_shape_nchw": [
+        1,
+        1024,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 94,
+      "module": "Conv",
+      "source_yaml_layers": [
+        93
+      ],
+      "onnx_nodes": [
+        263,
+        265
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 95,
+      "module": "Conv",
+      "source_yaml_layers": [
+        93
+      ],
+      "onnx_nodes": [
+        266,
+        268
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 96,
+      "module": "Conv",
+      "source_yaml_layers": [
+        95
+      ],
+      "onnx_nodes": [
+        269,
+        271
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 97,
+      "module": "Conv",
+      "source_yaml_layers": [
+        96
+      ],
+      "onnx_nodes": [
+        272,
+        274
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 98,
+      "module": "Conv",
+      "source_yaml_layers": [
+        97
+      ],
+      "onnx_nodes": [
+        275,
+        277
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 99,
+      "module": "Conv",
+      "source_yaml_layers": [
+        98
+      ],
+      "onnx_nodes": [
+        278,
+        280
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 100,
+      "module": "Concat",
+      "source_yaml_layers": [
+        99,
+        98,
+        97,
+        96,
+        95,
+        94
+      ],
+      "onnx_nodes": [
+        281,
+        281
+      ],
+      "output_shape_nchw": [
+        1,
+        2048,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 101,
+      "module": "Conv",
+      "source_yaml_layers": [
+        100
+      ],
+      "onnx_nodes": [
+        282,
+        284
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 102,
+      "module": "RepConv",
+      "source_yaml_layers": [
+        75
+      ],
+      "onnx_nodes": [
+        285,
+        289
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        80,
+        80
+      ]
+    },
+    {
+      "yaml_layer": 103,
+      "module": "RepConv",
+      "source_yaml_layers": [
+        88
+      ],
+      "onnx_nodes": [
+        290,
+        294
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        40,
+        40
+      ]
+    },
+    {
+      "yaml_layer": 104,
+      "module": "RepConv",
+      "source_yaml_layers": [
+        101
+      ],
+      "onnx_nodes": [
+        295,
+        299
+      ],
+      "output_shape_nchw": [
+        1,
+        1024,
+        20,
+        20
+      ]
+    },
+    {
+      "yaml_layer": 105,
+      "module": "IDetect",
+      "source_yaml_layers": [
+        102,
+        103,
+        104
+      ],
+      "onnx_nodes": [
+        300,
+        308
+      ],
+      "output_shape_nchw": null
+    }
+  ],
+  "diagram_groups": [
+    {
+      "id": "stem",
+      "label": "Conv stem",
+      "yaml_layers": [
+        0,
+        2
+      ],
+      "onnx_nodes": [
+        0,
+        8
+      ],
+      "output_shape_nchw": [
+        1,
+        64,
+        320,
+        320
+      ]
+    },
+    {
+      "id": "conv_p2",
+      "label": "Stride-two Conv, including b009 before SiLU",
+      "yaml_layers": [
+        3,
+        3
+      ],
+      "onnx_nodes": [
+        9,
+        11
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        160,
+        160
+      ]
+    },
+    {
+      "id": "elan_p2",
+      "label": "ELAN P2",
+      "yaml_layers": [
+        4,
+        11
+      ],
+      "onnx_nodes": [
+        12,
+        33
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        160,
+        160
+      ]
+    },
+    {
+      "id": "down_p3",
+      "label": "Two-branch downsampling, ending at b044",
+      "yaml_layers": [
+        12,
+        16
+      ],
+      "onnx_nodes": [
+        34,
+        44
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        80,
+        80
+      ]
+    },
+    {
+      "id": "elan_p3",
+      "label": "ELAN P3, ending at b066",
+      "yaml_layers": [
+        17,
+        24
+      ],
+      "onnx_nodes": [
+        45,
+        66
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        80,
+        80
+      ]
+    },
+    {
+      "id": "down_p4",
+      "label": "Two-branch downsampling",
+      "yaml_layers": [
+        25,
+        29
+      ],
+      "onnx_nodes": [
+        67,
+        77
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        40,
+        40
+      ]
+    },
+    {
+      "id": "elan_p4",
+      "label": "ELAN P4",
+      "yaml_layers": [
+        30,
+        37
+      ],
+      "onnx_nodes": [
+        78,
+        99
+      ],
+      "output_shape_nchw": [
+        1,
+        1024,
+        40,
+        40
+      ]
+    },
+    {
+      "id": "down_p5",
+      "label": "Two-branch downsampling",
+      "yaml_layers": [
+        38,
+        42
+      ],
+      "onnx_nodes": [
+        100,
+        110
+      ],
+      "output_shape_nchw": [
+        1,
+        1024,
+        20,
+        20
+      ]
+    },
+    {
+      "id": "elan_p5",
+      "label": "ELAN P5",
+      "yaml_layers": [
+        43,
+        50
+      ],
+      "onnx_nodes": [
+        111,
+        132
+      ],
+      "output_shape_nchw": [
+        1,
+        1024,
+        20,
+        20
+      ]
+    },
+    {
+      "id": "spp",
+      "label": "SPPCSPC",
+      "yaml_layers": [
+        51,
+        51
+      ],
+      "onnx_nodes": [
+        133,
+        158
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        20,
+        20
+      ]
+    },
+    {
+      "id": "topdown_p4",
+      "label": "Top-down fusion P4",
+      "yaml_layers": [
+        52,
+        63
+      ],
+      "onnx_nodes": [
+        159,
+        188
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "id": "topdown_p3",
+      "label": "Top-down fusion P3",
+      "yaml_layers": [
+        64,
+        75
+      ],
+      "onnx_nodes": [
+        189,
+        218
+      ],
+      "output_shape_nchw": [
+        1,
+        128,
+        80,
+        80
+      ]
+    },
+    {
+      "id": "bottomup_p4",
+      "label": "Bottom-up fusion P4",
+      "yaml_layers": [
+        76,
+        88
+      ],
+      "onnx_nodes": [
+        219,
+        251
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        40,
+        40
+      ]
+    },
+    {
+      "id": "bottomup_p5",
+      "label": "Bottom-up fusion P5",
+      "yaml_layers": [
+        89,
+        101
+      ],
+      "onnx_nodes": [
+        252,
+        284
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        20,
+        20
+      ]
+    },
+    {
+      "id": "rep_p3",
+      "label": "RepConv P3",
+      "yaml_layers": [
+        102,
+        102
+      ],
+      "onnx_nodes": [
+        285,
+        289
+      ],
+      "output_shape_nchw": [
+        1,
+        256,
+        80,
+        80
+      ]
+    },
+    {
+      "id": "rep_p4",
+      "label": "RepConv P4",
+      "yaml_layers": [
+        103,
+        103
+      ],
+      "onnx_nodes": [
+        290,
+        294
+      ],
+      "output_shape_nchw": [
+        1,
+        512,
+        40,
+        40
+      ]
+    },
+    {
+      "id": "rep_p5",
+      "label": "RepConv P5",
+      "yaml_layers": [
+        104,
+        104
+      ],
+      "onnx_nodes": [
+        295,
+        299
+      ],
+      "output_shape_nchw": [
+        1,
+        1024,
+        20,
+        20
+      ]
+    },
+    {
+      "id": "detect",
+      "label": "Three detection heads",
+      "yaml_layers": [
+        105,
+        105
+      ],
+      "onnx_nodes": [
+        300,
+        308
+      ],
+      "output_shape_nchw": null
+    }
+  ],
+  "diagram_edges": [
+    {
+      "source": "bottomup_p4",
+      "target": "bottomup_p5"
+    },
+    {
+      "source": "bottomup_p4",
+      "target": "rep_p4"
+    },
+    {
+      "source": "bottomup_p5",
+      "target": "rep_p5"
+    },
+    {
+      "source": "conv_p2",
+      "target": "elan_p2"
+    },
+    {
+      "source": "down_p3",
+      "target": "elan_p3"
+    },
+    {
+      "source": "down_p4",
+      "target": "elan_p4"
+    },
+    {
+      "source": "down_p5",
+      "target": "elan_p5"
+    },
+    {
+      "source": "elan_p2",
+      "target": "down_p3"
+    },
+    {
+      "source": "elan_p3",
+      "target": "down_p4"
+    },
+    {
+      "source": "elan_p3",
+      "target": "topdown_p3"
+    },
+    {
+      "source": "elan_p4",
+      "target": "down_p5"
+    },
+    {
+      "source": "elan_p4",
+      "target": "topdown_p4"
+    },
+    {
+      "source": "elan_p5",
+      "target": "spp"
+    },
+    {
+      "source": "rep_p3",
+      "target": "detect"
+    },
+    {
+      "source": "rep_p4",
+      "target": "detect"
+    },
+    {
+      "source": "rep_p5",
+      "target": "detect"
+    },
+    {
+      "source": "spp",
+      "target": "bottomup_p5"
+    },
+    {
+      "source": "spp",
+      "target": "topdown_p4"
+    },
+    {
+      "source": "stem",
+      "target": "conv_p2"
+    },
+    {
+      "source": "topdown_p3",
+      "target": "bottomup_p4"
+    },
+    {
+      "source": "topdown_p3",
+      "target": "rep_p3"
+    },
+    {
+      "source": "topdown_p4",
+      "target": "bottomup_p4"
+    },
+    {
+      "source": "topdown_p4",
+      "target": "topdown_p3"
+    }
+  ],
+  "detector_outputs": {
+    "pre_reshape_conv_shapes": [
+      [
+        1,
+        255,
+        80,
+        80
+      ],
+      [
+        1,
+        255,
+        40,
+        40
+      ],
+      [
+        1,
+        255,
+        20,
+        20
+      ]
+    ],
+    "classes": 80,
+    "anchors_per_scale": 3,
+    "values_per_anchor": 85,
+    "final_transpose_shapes": "Not explicitly present in frozen operation audit; label pre-reshape convolution shapes or spatial scales in the diagram"
+  },
+  "interpretation": [
+    "b066 produces a single P3 tensor that fans out within the suffix to deeper backbone and the lateral neck route.",
+    "A single cut tensor can have more than one downstream consumer.",
+    "The three cut IDs are not indices of the YAML modules.",
+    "b044 has fewer logical boundary bytes than b066, so the higher measured b066 throughput cannot be attributed to minimum boundary size alone.",
+    "Architectural placement and compute allocation explain differences descriptively; they do not isolate the causal contributions of runtime overlap, copies, and accelerator/GPU execution."
+  ]
+}

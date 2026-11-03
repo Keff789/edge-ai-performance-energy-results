@@ -342,7 +342,7 @@ def export_figure(output, summaries, language, figure_profile='paper'):
         series = [row for row in rows if row['native_budget'] == budget]
         label = (f'{budget} Native tests' if budget == 2 else '1 Native test') if language == 'en' else (f'{budget} Native-Tests' if budget == 2 else '1 Native-Test')
         ax.plot([row['k'] for row in series], [row['mean_retained_native_pct'] for row in series],
-                color=style.PAPER_PALETTE[color], linewidth=1.35, linestyle=linestyle,
+                color=style.palette_for_profile(figure_profile)[color], linewidth=1.35, linestyle=linestyle,
                 marker=marker, markersize=2.3, label=label, zorder=4 if budget == 2 else 3)
     ax.legend(loc='lower center', bbox_to_anchor=(.5, 1.01), ncol=2, frameon=False,
               fontsize=8.5 if figure_profile == 'dissertation' else 7.2, handlelength=1.7, columnspacing=1.1, handletextpad=.45, borderpad=0)
@@ -367,7 +367,7 @@ def export_figure(output, summaries, language, figure_profile='paper'):
         xtext = 9.8 if k == 5 else 14.2
         ytext = lower + (101.5 - lower) * (.31 if k == 5 else .51)
         label = f"{k} {connector}\n{number(row['mean_retained_native_pct'], language)}%"
-        ax.scatter([k], [row['mean_retained_native_pct']], s=18, color=style.PAPER_PALETTE['blue'], zorder=4)
+        ax.scatter([k], [row['mean_retained_native_pct']], s=18, color=style.palette_for_profile(figure_profile)['blue'], zorder=4)
         ax.annotate(label, xy=(k, row['mean_retained_native_pct']), xytext=(xtext, ytext),
                     ha='center', va='center', fontsize=9 if figure_profile == 'dissertation' else 8,
                     arrowprops=dict(arrowstyle='-', color='#777777', linewidth=.6),
@@ -460,7 +460,7 @@ def export_flow(output, spec_data, language, figure_profile='paper'):
     counts = spec_data['stage_counts']
     grid_bottom, step = (1.12 if figure_profile == 'dissertation' else .95), .038
     for i, (center, n, color_name, lines) in enumerate(zip(centers, counts, palette, labels)):
-        color = style.PAPER_PALETTE[color_name]
+        color = style.palette_for_profile(figure_profile)[color_name]
         columns = 25 if i == 0 else n
         rows = math.ceil(n / columns)
         xs = [center + ((j % columns) - (columns - 1) / 2) * step for j in range(n)]
@@ -473,10 +473,12 @@ def export_flow(output, spec_data, language, figure_profile='paper'):
             ax.text(center, label_y + .22,
                     'Example budget' if language == 'en' else 'Beispielbudget',
                     ha='center', va='bottom', fontsize=8.3,
-                    color=style.PAPER_PALETTE['dark_gray'])
+                    color=style.palette_for_profile(figure_profile)['dark_gray'])
         if i == 0:
             ax.text(center, label_y + .22, model, ha='center', va='bottom', fontsize=9 if figure_profile == 'dissertation' else 9)
         pale = tuple(.94 + .06 * component for component in to_rgb(color))
+        if figure_profile == 'dissertation':
+            pale = style.DISSERTATION_PALETTE['pale_green' if color_name == 'green' else 'pale_blue']
         width, height, y = (1.52, .68, .10) if figure_profile == 'dissertation' else (1.43, .48, .14)
         ax.add_patch(FancyBboxPatch((center - width / 2, y), width, height,
                                    boxstyle='round,pad=0.025,rounding_size=0.045',
@@ -494,7 +496,7 @@ def export_flow(output, spec_data, language, figure_profile='paper'):
     for left, right in zip(centers[:-1], centers[1:]):
         ax.add_patch(FancyArrowPatch((left + .77, .38), (right - .77, .38), arrowstyle='-|>',
                                     mutation_scale=9, linewidth=.8,
-                                    color=style.PAPER_PALETTE['dark_gray']))
+                                    color=style.palette_for_profile(figure_profile)['dark_gray']))
     folder = output / 'artifacts' / language / 'figures'
     folder.mkdir(parents=True, exist_ok=True)
     for suffix in ('pdf', 'svg', 'png'):
@@ -573,7 +575,7 @@ def export_review_flow(output, spec_data, language, figure_profile='paper', pair
     ax.set_xlim(0, 10)
     ax.set_ylim(0, 4.5)
     ax.axis('off')
-    palette = style.PAPER_PALETTE
+    palette = style.palette_for_profile(figure_profile)
 
     def draw_row(items, centers, y, widths, colors):
         for (title, subtitle), center, width, color_name in zip(items, centers, widths, colors):

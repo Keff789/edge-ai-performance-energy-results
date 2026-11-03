@@ -36,9 +36,26 @@ PAPER_STYLE = {
     'svg.hashsalt': 'mlsys-r22-publication-20261018', 'savefig.facecolor': 'white',
     'figure.facecolor': 'white', 'text.usetex': False,
 }
+# Author Draw.io palette; kept separate so paper exports remain unchanged.
+DISSERTATION_PALETTE = dict(PAPER_PALETTE, **{
+    'blue': '#2E73B6', 'orange': '#D18432', 'green': '#25896F',
+    'dark_gray': '#64798A', 'ink': '#18354A',
+    'pale_blue': '#F4F8FC', 'pale_green': '#EAF6F1',
+})
+
+def palette_for_profile(figure_profile='paper'):
+    return DISSERTATION_PALETTE if figure_profile == 'dissertation' else PAPER_PALETTE
+
+
 # The dissertation uses 9-point labels near the caption size. Rendered page
 # dimensions are chosen to avoid enlarging labels through LaTeX scaling.
 DISSERTATION_STYLE = dict(PAPER_STYLE, **{
+    'font.family': 'sans-serif', 'font.sans-serif': ['Nimbus Sans', 'DejaVu Sans'],
+    'mathtext.fontset': 'custom', 'mathtext.rm': 'Nimbus Sans',
+    'mathtext.it': 'Nimbus Sans:italic', 'mathtext.bf': 'Nimbus Sans:bold',
+    'mathtext.cal': 'Nimbus Sans', 'mathtext.sf': 'Nimbus Sans', 'mathtext.tt': 'Nimbus Sans',
+    'text.color': '#18354A', 'axes.labelcolor': '#18354A',
+    'axes.edgecolor': '#64798A', 'xtick.color': '#18354A', 'ytick.color': '#18354A',
     'font.size': 9, 'axes.titlesize': 9, 'axes.labelsize': 9,
     'xtick.labelsize': 8.5, 'ytick.labelsize': 8.5, 'legend.fontsize': 8.5,
 })
@@ -357,6 +374,8 @@ def render(profile_output, context, uniform_typography=False, uniform_palette=Fa
         index = None  # fixed-payload rendering does not rewrite the published index
     output = Path(profile_output) / 'figures'
     output.mkdir(parents=True, exist_ok=True)
+    palette = palette_for_profile(figure_profile)
+    colors_by_setup = {'H8': palette['blue'], 'H10': palette['orange'], 'DeepX': palette['green']}
     styles = DISSERTATION_STYLE if figure_profile == 'dissertation' else PAPER_STYLE
     dimensions = {name: (width, height) for name, _, _, width, height in FIGURES}
     if figure_profile == 'dissertation':
@@ -380,7 +399,7 @@ def render(profile_output, context, uniform_typography=False, uniform_palette=Fa
         fig = ax.figure
         fig.canvas.draw()
         renderer = fig.canvas.get_renderer()
-        font = FontProperties(family='STIXGeneral', size=fontsize)
+        font = FontProperties(family='Nimbus Sans' if figure_profile == 'dissertation' else 'STIXGeneral', size=fontsize)
         scale = fig.dpi / 72
         axes = ax.get_window_extent(renderer)
         inside = (axes.x0 + 2, axes.y0 + 2, axes.x1 - 2, axes.y1 - 2)
@@ -423,7 +442,7 @@ def render(profile_output, context, uniform_typography=False, uniform_palette=Fa
                 ax.set(xlim=(0, spec['canvas'][0]), ylim=(0, spec['canvas'][1]))
                 ax.axis('off')
                 ink = '#292929'
-                blue, orange, cut_color = ([PAPER_PALETTE[key] for key in ['blue', 'orange', 'green']]
+                blue, orange, cut_color = ([palette[key] for key in ['blue', 'orange', 'green']]
                                           if uniform_palette else ['#236fa4', '#ba6400', '#466258'])
                 cut_x = spec['cut_x']
                 ax.text(120, 180, spec['heading'], ha='center', va='center', fontsize=7.5, color=ink)
@@ -465,9 +484,9 @@ def render(profile_output, context, uniform_typography=False, uniform_palette=Fa
             if point['global_plotted'] and point['host_plotted']:
                 ax.plot([xg, xh], [y, y], color='#8c8c8c', lw=.8, zorder=1)
             if point['global_plotted']:
-                ax.scatter(xg, y, s=22, color=PAPER_PALETTE['blue'], zorder=3)
+                ax.scatter(xg, y, s=22, color=palette['blue'], zorder=3)
             if point['host_plotted']:
-                ax.plot(xh, y, ls='none', marker='|', ms=10, mew=1.5, color=PAPER_PALETTE['orange'], zorder=4)
+                ax.plot(xh, y, ls='none', marker='|', ms=10, mew=1.5, color=palette['orange'], zorder=4)
             if point['global_plotted'] and point['host_plotted']:
                 if xg == xh:
                     ax.annotate(f'{xg:.2f}', (xg, y), xytext=(7, 0), textcoords='offset points', va='center', fontsize=7.5)
@@ -487,8 +506,8 @@ def render(profile_output, context, uniform_typography=False, uniform_palette=Fa
                ylim=(-.6, len(data['points']) - .5), xlabel='Split throughput / Full throughput')
         ax.xaxis.set_major_locator(MaxNLocator(5, integer=True))
         ax.xaxis.set_major_formatter(FuncFormatter(lambda x, _: f'{x:g}×'))
-        ax.legend(handles=[Line2D([], [], ls='none', marker='o', color=PAPER_PALETTE['blue'], ms=4.5, label='Global Full'),
-                           Line2D([], [], ls='none', marker='|', color=PAPER_PALETTE['orange'], ms=8, mew=1.5, label='Same-host Full')],
+        ax.legend(handles=[Line2D([], [], ls='none', marker='o', color=palette['blue'], ms=4.5, label='Global Full'),
+                           Line2D([], [], ls='none', marker='|', color=palette['orange'], ms=8, mew=1.5, label='Same-host Full')],
                   loc='lower left', bbox_to_anchor=(-.02, 1.01), ncol=2, frameon=False,
                   columnspacing=.8, handletextpad=.35, borderaxespad=0)
         ax.grid(axis='x', alpha=.13)
@@ -498,7 +517,7 @@ def render(profile_output, context, uniform_typography=False, uniform_palette=Fa
         name = 'fastest_deployment_tradeoff'
         points = payload[name]['points']
         fig, ax = plt.subplots(figsize=dimensions[name])
-        ax.scatter([p['x'] for p in points], [p['y'] for p in points], s=24, color=PAPER_PALETTE['blue'], zorder=3)
+        ax.scatter([p['x'] for p in points], [p['y'] for p in points], s=24, color=palette['blue'], zorder=3)
         ax.axvline(1, ls='--', lw=.65, color='#777777')
         ax.axhline(1, ls='--', lw=.65, color='#777777')
         xs, ys = [p['x'] for p in points], [p['y'] for p in points]
@@ -516,7 +535,7 @@ def render(profile_output, context, uniform_typography=False, uniform_palette=Fa
         data = payload[name]
         points = data['points']
         fig, ax = plt.subplots(figsize=dimensions[name])
-        resnet_colors = ([PAPER_PALETTE[key] for key in ['green', 'gray', 'blue']]
+        resnet_colors = ([palette[key] for key in ['green', 'gray', 'blue']]
                          if uniform_palette else ['#4477AA', '#e69f00', '#d55e00'])
         for predicate, label, marker, color, size in [
                 (lambda p: p['kind'] == 'split', 'Native splits', 'o', resnet_colors[0], 16),
@@ -542,7 +561,7 @@ def render(profile_output, context, uniform_typography=False, uniform_palette=Fa
         points = data['points']
         fig, axes = plt.subplots(1, 3, figsize=dimensions[name])
         fig.subplots_adjust(left=.055, right=.99, bottom=.22, top=.78, wspace=.32)
-        colors = [PAPER_PALETTE[key] for key in ['gray', 'blue', 'green']]
+        colors = [palette[key] for key in ['gray', 'blue', 'green']]
         labels = [p['configuration'].replace(' Full', '\nFull').replace('Split ', 'Split\n') for p in points]
         if figure_profile == 'dissertation':
             labels = [label.replace('Hailo8', 'H8').replace('TensorRT', 'TRT') for label in labels]
@@ -583,7 +602,7 @@ def render(profile_output, context, uniform_typography=False, uniform_palette=Fa
             for setup in SETUPS:
                 points = [p for p in data['points'] if p['setup'] == setup]
                 ax.scatter([p['x'] for p in points], [p['y'] for p in points], label=setup,
-                           marker=MARKERS[setup], s=18, zorder=3, color=COLORS[setup])
+                           marker=MARKERS[setup], s=18, zorder=3, color=colors_by_setup[setup])
             models = data['model_order']
             ax.set_yticks(list(range(len(models) - 1, -1, -1)), [MODEL_LABELS.get(m, m) for m in models])
             maximum = max([70] + [p['x'] for p in data['points'] if finite(p['x'])])
@@ -626,7 +645,7 @@ def render(profile_output, context, uniform_typography=False, uniform_palette=Fa
                                                   for model, setup in groups])
                 ax.tick_params(axis='y', length=0, pad=5, labelsize=7.5)
                 for tick, (_, setup) in zip(ax.get_yticklabels(), groups):
-                    tick.set_color(COLORS[setup])
+                    tick.set_color(colors_by_setup[setup])
                 for model in dict.fromkeys(model for model, _ in groups):
                     positions = [i for i, (m, _) in enumerate(groups) if m == model]
                     ax.text(-.175, 1 - (sum(positions) / len(positions) + .5) / len(groups), MODEL_LABELS.get(model, model),
