@@ -1,0 +1,12 @@
+% Native-Durchsatzverlust für 187 qualitätszugelassene Cuts in 21 Modell-Gerät-Gruppen. Jede Gruppe wird gleich gewichtet. Bei einem Testbudget k testen wir die ersten min(k,n) Cuts der Rangfolge. Ihr höchster Native-Durchsatz wird mit dem besten gemessenen Native-Cut derselben Gruppe verglichen.
+\begin{tabular}{lrrr}
+\toprule
+Methode & $k=1$ & $k=3$ & $k=5$ \\
+\midrule
+Bytes & 17.23 & 9.32 & 3.80 \\
+Generic & 1.35 & 0.26 & 0.00 \\
+Weighted (Standard) & 15.73 & 10.01 & 7.37 \\
+Weighted (gemeinsam, unverändert) & 16.67 & 5.08 & 2.96 \\
+Weighted (Modell-Holdout, unverändert) & 18.77 & 11.34 & 4.90 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="OpenAI" version="32.6.4" type="device">
+  <diagram id="bilder-01" name="10 · Messgrenzen und Datenerfassung">
+    <mxGraphModel dx="1320" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1320" pageHeight="730" math="0" shadow="0" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="text-3" value="Messgrenzen und Datenerfassung" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=34.480;fontStyle=1;align=left;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="1">
+          <mxGeometry x="36.000" y="29.206" width="565.369" height="39.652" as="geometry" />
+        </mxCell>
+        <mxCell id="node-4" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#FAFBFC;strokeColor=#D2D9E0;strokeWidth=1;fontColor=#18354A;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=24;fontStyle=1;align=left;verticalAlign=top;spacing=20;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="36" y="132" width="1248" height="252" as="geometry" />
+        </mxCell>
+        <mxCell id="text-5" value="Versorgungspfad" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=1;align=left;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="node-4">
+          <mxGeometry x="24.000" y="9.763" width="259.415" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="shelly" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#EDF0F3;strokeColor=#99A8B5;strokeWidth=1.3;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="node-4">
+          <mxGeometry x="26" y="82" width="210" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="text-8" value="Shelly" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="shelly">
+          <mxGeometry x="57.556" y="29.813" width="94.887" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="text-9" value="AC-Messgerät" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=29.036;fontStyle=0;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="shelly">
+          <mxGeometry x="10.230" y="68.092" width="189.540" height="33.391" as="geometry" />
+        </mxCell>
+        <mxCell id="supply" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#F6ECE1;strokeColor=#C4A281;strokeWidth=1.3;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="node-4">
+          <mxGeometry x="284" y="82" width="230" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="text-12" value="Labor-" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="supply">
+          <mxGeometry x="65.011" y="29.813" width="99.977" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="text-13" value="DC-Versorgung" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=29.036;fontStyle=0;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="supply">
+          <mxGeometry x="12.158" y="68.092" width="205.684" height="33.391" as="geometry" />
+        </mxCell>
+        <mxCell id="measured" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#EAF1EC;strokeColor=#90AA98;strokeWidth=1.3;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="node-4">
+          <mxGeometry x="562" y="82" width="260" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="text-16" value="Gemessener" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="measured">
+          <mxGeometry x="35.401" y="29.813" width="189.199" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="text-17" value="DC-Eingang" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=29.036;fontStyle=0;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="measured">
+          <mxGeometry x="48.935" y="68.092" width="162.130" height="33.391" as="geometry" />
+        </mxCell>
+        <mxCell id="device" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#E8EFF6;strokeColor=#8AA6BD;strokeWidth=1.3;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="node-4">
+          <mxGeometry x="870" y="70" width="348" height="156" as="geometry" />
+        </mxCell>
+        <mxCell id="text-20" value="Jetson-Modul" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="device">
+          <mxGeometry x="71.734" y="41.813" width="204.531" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="text-21" value="oder Hailo-Karte" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=29.036;fontStyle=0;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="device">
+          <mxGeometry x="66.309" y="80.092" width="215.382" height="33.391" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-22" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=block;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#AA8058;strokeWidth=2.8;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;arcSize=10;" edge="1" parent="node-4" source="shelly" target="supply">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="236" y="148" as="sourcePoint" />
+            <mxPoint x="284" y="148" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-23" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=block;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#AA8058;strokeWidth=2.8;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;arcSize=10;" edge="1" parent="node-4" source="supply" target="measured">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="514" y="148" as="sourcePoint" />
+            <mxPoint x="562" y="148" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-24" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=block;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#AA8058;strokeWidth=2.8;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;arcSize=10;" edge="1" parent="node-4" source="measured" target="device">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="822" y="148" as="sourcePoint" />
+            <mxPoint x="870" y="148" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="node-25" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#FAFBFC;strokeColor=#D2D9E0;strokeWidth=1;fontColor=#18354A;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=24;fontStyle=1;align=left;verticalAlign=top;spacing=20;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="36" y="432" width="822" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="text-26" value="Messdaten" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=1;align=left;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="node-25">
+          <mxGeometry x="24.000" y="9.763" width="163.438" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="scope" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#EAF1EC;strokeColor=#90AA98;strokeWidth=1.3;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="node-25">
+          <mxGeometry x="26" y="74" width="376" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="text-29" value="PicoScope / INA225" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="scope">
+          <mxGeometry x="41.972" y="22.813" width="292.056" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="text-30" value="Externe Datenerfassung" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=29.036;fontStyle=0;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="scope">
+          <mxGeometry x="29.452" y="61.092" width="317.095" height="33.391" as="geometry" />
+        </mxCell>
+        <mxCell id="adc" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#EAF1EC;strokeColor=#90AA98;strokeWidth=1.3;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="node-25">
+          <mxGeometry x="446" y="74" width="346" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="text-33" value="u.RECS ADC" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="adc">
+          <mxGeometry x="76.735" y="22.813" width="192.530" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="text-34" value="2 kS/s" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=29.036;fontStyle=0;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="adc">
+          <mxGeometry x="130.654" y="61.092" width="84.691" height="33.391" as="geometry" />
+        </mxCell>
+        <mxCell id="node-35" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#FAFBFC;strokeColor=#D2D9E0;strokeWidth=1;fontColor=#18354A;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=24;fontStyle=1;align=left;verticalAlign=top;spacing=20;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="890" y="432" width="394" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="text-36" value="Modulinterne Sicht" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=1;align=left;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="node-35">
+          <mxGeometry x="24.000" y="9.763" width="281.690" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="telemetry" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#EFEBF3;strokeColor=#A798B6;strokeWidth=1.3;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="node-35">
+          <mxGeometry x="24" y="74" width="346" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="text-39" value="Herstellertelemetrie" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="telemetry">
+          <mxGeometry x="26.972" y="22.813" width="292.056" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="text-40" value="Eigene Messgrenze" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=29.036;fontStyle=0;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="telemetry">
+          <mxGeometry x="42.704" y="61.092" width="260.591" height="33.391" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-41" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=block;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#5F8570;strokeWidth=2.2;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;dashed=1;dashPattern=5 4;exitX=0.5;exitY=1;entryX=0.78;entryY=0;arcSize=10;" edge="1" parent="1" source="measured" target="scope">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="728" y="346" as="sourcePoint" />
+            <mxPoint x="355.28" y="506" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="728" y="408" />
+              <mxPoint x="355.28" y="408" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-42" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=block;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#5F8570;strokeWidth=2.2;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;dashed=1;dashPattern=5 4;exitX=0.5;exitY=1;entryX=0.67;entryY=0;arcSize=10;" edge="1" parent="1" source="measured" target="adc">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="728" y="346" as="sourcePoint" />
+            <mxPoint x="713.82" y="506" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="728" y="408" />
+              <mxPoint x="713.82" y="408" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-43" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=block;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#8C779F;strokeWidth=2.2;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;dashed=1;dashPattern=5 4;exitX=0.7;exitY=1;entryX=0.77;entryY=0;arcSize=10;" edge="1" parent="1" source="device" target="telemetry">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1149.6" y="358" as="sourcePoint" />
+            <mxPoint x="1180.42" y="506" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1149.6" y="408" />
+              <mxPoint x="1180.42" y="408" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-44" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=none;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#AA8058;strokeWidth=2.3;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;arcSize=10;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60" y="697" as="sourcePoint" />
+            <mxPoint x="100" y="697" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="text-45" value="Versorgung" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=0;align=left;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="1">
+          <mxGeometry x="112.000" y="673.063" width="163.469" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-46" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=none;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#5F8570;strokeWidth=2.3;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;dashed=1;dashPattern=5 4;arcSize=10;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="697" as="sourcePoint" />
+            <mxPoint x="370" y="697" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="text-47" value="Messdaten" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=0;align=left;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="1">
+          <mxGeometry x="382.000" y="673.063" width="154.892" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-48" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=none;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#8C779F;strokeWidth=2.3;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;dashed=1;dashPattern=5 4;arcSize=10;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="697" as="sourcePoint" />
+            <mxPoint x="630" y="697" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="text-49" value="Telemetrie" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=0;align=left;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="1">
+          <mxGeometry x="642.000" y="673.063" width="149.709" height="35.479" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,19 @@
+% Generated from freshly evaluated ANALYSIS.json; display rounding only.
+\begin{table}[htbp]
+ \centering\small
+ \caption{Independent prediction and observed pipeline throughput: medians over three blocks. Error summaries use blockwise ratios, not ratios of the displayed column medians.}
+ \label{tab:evaluation:stage_cost_oracle_20261014}
+ \setlength{\tabcolsep}{3.5pt}
+ \renewcommand{\arraystretch}{1.12}
+ \begin{tabularx}{\linewidth}{@{}X S[table-format=4.0] S[table-format=4.0] S[table-format=1.2] S[table-format=1.2]@{}}
+ \toprule
+ Recipe & {Predicted} & {Measured} & \multicolumn{2}{c}{Absolute error [\%]} \\
+ & {FPS} & {FPS} & {Median} & {Maximum} \\
+ \midrule
+DeepX / ResNet50 / \texttt{b045} & 230 & 225 & 2.24 & 4.38 \\
+DeepX / ResNet50 / \texttt{b002} & 473 & 444 & 5.50 & 8.80 \\
+Hailo-10H / RegNetX-1.6GF / \texttt{b059} & 500 & 477 & 4.77 & 4.88 \\
+Hailo-10H / RegNetX-1.6GF / \texttt{b123} & 1577 & 1518 & 3.85 & 5.90 \\
+ \bottomrule
+ \end{tabularx}
+\end{table}

@@ -1,0 +1,22 @@
+Held-out model,Model class,Accelerator,$w_C$,$w_I$,$w_T$,Training groups,Training loss (%)
+MobileNetV3-L,All models,DeepX,0.7575,0.0775,0.1650,6,14.61
+MobileNetV3-L,All models,H10,0.2675,0.0875,0.6450,6,8.22
+MobileNetV3-L,All models,H8,0.0400,0.1525,0.8075,6,3.46
+RegNet-X,All models,DeepX,0.8625,0.1225,0.0150,6,10.84
+RegNet-X,All models,H10,0.0050,0.1525,0.8425,6,4.90
+RegNet-X,All models,H8,0.0000,0.0000,1.0000,6,3.00
+ResNet-50,All models,DeepX,0.7575,0.0775,0.1650,6,13.85
+ResNet-50,All models,H10,0.2675,0.0075,0.7250,6,2.50
+ResNet-50,All models,H8,0.0100,0.1500,0.8400,6,3.66
+YOLO11l,All models,DeepX,0.2025,0.0050,0.7925,6,12.08
+YOLO11l,All models,H10,0.2675,0.0875,0.6450,6,8.22
+YOLO11l,All models,H8,0.0000,0.0000,1.0000,6,5.78
+YOLO26m,All models,DeepX,0.7525,0.0750,0.1725,6,12.74
+YOLO26m,All models,H10,0.2675,0.0875,0.6450,6,8.22
+YOLO26m,All models,H8,0.0000,0.0000,1.0000,6,5.53
+YOLO26s,All models,DeepX,0.7575,0.0775,0.1650,6,12.70
+YOLO26s,All models,H10,0.2675,0.0875,0.6450,6,8.22
+YOLO26s,All models,H8,0.0000,0.0000,1.0000,6,5.61
+YOLOv7,All models,DeepX,0.8425,0.0050,0.1525,6,8.41
+YOLOv7,All models,H10,0.7150,0.1625,0.1225,6,5.71
+YOLOv7,All models,H8,0.0000,0.0000,1.0000,6,6.30

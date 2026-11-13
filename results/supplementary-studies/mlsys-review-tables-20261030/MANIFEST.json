@@ -1,0 +1,26 @@
+{
+  "schema": "mlsys-review-tables-v1",
+  "source": "results/split-inference/publications/mlsys-r30/tables/r14_winner_quality.json",
+  "source_sha256": "2fda9fb23b34356083a518013c92cbaaa6a7dc3f14eafb9bef704b854170b49a",
+  "generator": "scripts/split-inference/render_review_tables.py",
+  "rows": 7,
+  "languages": [
+    "en",
+    "de"
+  ],
+  "selection": "source-selected global throughput winners; no reselection",
+  "quality_delta": "100*(split q - Full q), in percentage points",
+  "full_reference": "single-backend Full",
+  "hardware_measurements": false,
+  "existing_exports_modified": false,
+  "outputs": {
+    "artifacts/en/tables/best_cases_quality_table.csv": "66800c1d56c53f98e157f7c7361fd58dfc4ec8c578f1571568f6b26ef53eb8d4",
+    "artifacts/en/tables/best_cases_quality_table.json": "706b726fa76d964584aba4991d3f64e7e744f630c29229d81740851e76c682ef",
+    "artifacts/en/tables/best_cases_quality_table.md": "015a743cde8559d9a27a52eb8f38651fef9bf0dd69ed0bfe4777ba1aa7be313d",
+    "artifacts/en/tables/best_cases_quality_table.tex": "747db83eb2281bc3917d7a9f9719ffe06434b5acaa58d484b7bb14be2442b043",
+    "artifacts/de/tables/best_cases_quality_table.csv": "66800c1d56c53f98e157f7c7361fd58dfc4ec8c578f1571568f6b26ef53eb8d4",
+    "artifacts/de/tables/best_cases_quality_table.json": "706b726fa76d964584aba4991d3f64e7e744f630c29229d81740851e76c682ef",
+    "artifacts/de/tables/best_cases_quality_table.md": "1b36b4b32f15215d7c81db6e42ff3fce0ecadccf862b7805f7cd7026a6b49edd",
+    "artifacts/de/tables/best_cases_quality_table.tex": "55b546e0eba4064e7b6b2818dcfa25aa2053bbf1ed7c2d32e4377c01cdc9c429"
+  }
+}

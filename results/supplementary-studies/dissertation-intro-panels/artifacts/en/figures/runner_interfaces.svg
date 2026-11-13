@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="352.800000pt" height="90.704101pt" viewBox="358 232 634 163" role="img" aria-label="Boundary interfaces supported by Generic and Native. Generic connects subgraphs with one or several boundary tensors. The current Native implementation accepts exactly one GPU-suffix input. These examples show different possible cuts; the paired comparison uses the same compatible cut in both runners."><rect x="358" y="232" width="634" height="163" fill="white" /><text x="365" y="252.8" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="700" fill="#253746">Generic</text>
+<rect x="395" y="300" width="90" height="60" rx="5" fill="#edf5fa" fill-opacity="1" stroke="none" stroke-width="0" />
+<rect x="485" y="300" width="90" height="60" rx="5" fill="#fff3e6" fill-opacity="1" stroke="none" stroke-width="0" />
+<text x="440.0" y="284.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#2678ad">Accelerator</text>
+<text x="530.0" y="284.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#c77822">GPU</text>
+<path d="M388.0 330.0 L404.0 330.0" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="404.0,330.0 398.0,327.48 398.0,332.52" fill="#687b89" />
+<path d="M419.25376889510807 326.6261540022753 L446.83950999300345 313.79557674744024" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="446.83950999300345,313.79557674744024 440.33642183238914,314.0410240437747 442.4619448109557,318.6108984476928" fill="#687b89" />
+<path d="M419.25376889510807 333.3738459977247 L446.83950999300345 346.20442325255976" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="446.83950999300345,346.20442325255976 442.4619448109557,341.3891015523072 440.33642183238914,345.9589759562253" fill="#687b89" />
+<path d="M462.5894663844041 312.5298221281347 L506.4618503175454 327.1539501058485" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="506.4618503175454,327.1539501058485 501.5666444996047,322.8659015986601 499.97285655887987,327.64726542083474" fill="#687b89" />
+<path d="M462.5894663844041 347.4701778718653 L506.4618503175454 332.8460498941515" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="506.4618503175454,332.8460498941515 499.97285655887987,332.35273457916526 501.5666444996047,337.1340984013399" fill="#687b89" />
+<path d="M523.0 330.0 L554.0 330.0" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="554.0,330.0 548.0,327.48 548.0,332.52" fill="#687b89" />
+<path d="M571 330 L580 330" fill="none" stroke="#687b89" stroke-width="1.6" />
+<polygon points="580,330 574.0,327.48 574.0,332.52" fill="#687b89" />
+<path d="M485 298 L485 362" fill="none" stroke="#566c69" stroke-width="1.5" stroke-dasharray="5 4" />
+<rect x="481" y="316.5" width="8" height="7" rx="0" fill="#ffffff" fill-opacity="1" stroke="#566c69" stroke-width="1.4" />
+<rect x="481" y="336.5" width="8" height="7" rx="0" fill="#ffffff" fill-opacity="1" stroke="#566c69" stroke-width="1.4" />
+<circle cx="382" cy="330" r="5.5" fill="#ffffff" stroke="#7b8790" stroke-width="1.9" />
+<circle cx="412" cy="330" r="7" fill="#ffffff" stroke="#2678ad" stroke-width="1.9" />
+<circle cx="455" cy="310" r="7" fill="#ffffff" stroke="#2678ad" stroke-width="1.9" />
+<circle cx="455" cy="350" r="7" fill="#ffffff" stroke="#2678ad" stroke-width="1.9" />
+<circle cx="515" cy="330" r="7" fill="#ffffff" stroke="#c77822" stroke-width="1.9" />
+<circle cx="563" cy="330" r="7" fill="#ffffff" stroke="#c77822" stroke-width="1.9" />
+<text x="382" y="357.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#526676">Input</text>
+<rect x="580" y="308" width="85" height="44" rx="5" fill="#f2f4f6" fill-opacity="1" stroke="#7b8790" stroke-width="1.4" />
+<text x="622.5" y="325.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#253746">Task</text>
+<text x="622.5" y="345.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#253746">completion</text>
+<text x="485" y="385.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#566c69">2 tensors</text>
+<path d="M672.5 235 L672.5 388" fill="none" stroke="#d9e1e7" stroke-width="1.1" />
+<text x="680" y="252.8" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="700" fill="#253746">Native</text>
+<rect x="710" y="300" width="143" height="60" rx="5" fill="#edf5fa" fill-opacity="1" stroke="none" stroke-width="0" />
+<rect x="853" y="300" width="37" height="60" rx="5" fill="#fff3e6" fill-opacity="1" stroke="none" stroke-width="0" />
+<text x="781.5" y="284.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#2678ad">Accelerator</text>
+<text x="871.5" y="284.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#c77822">GPU</text>
+<path d="M703.0 330.0 L719.0 330.0" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="719.0,330.0 713.0,327.48 713.0,332.52" fill="#687b89" />
+<path d="M734.253768895108 326.6261540022753 L761.8395099930034 313.79557674744024" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="761.8395099930034,313.79557674744024 755.3364218323891,314.0410240437747 757.4619448109556,318.6108984476928" fill="#687b89" />
+<path d="M734.253768895108 333.3738459977247 L761.8395099930034 346.20442325255976" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="761.8395099930034,346.20442325255976 757.4619448109556,341.3891015523072 755.3364218323891,345.9589759562253" fill="#687b89" />
+<path d="M777.5894663844041 312.5298221281347 L821.4618503175453 327.1539501058485" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="821.4618503175453,327.1539501058485 816.5666444996048,322.8659015986601 814.9728565588798,327.64726542083474" fill="#687b89" />
+<path d="M777.5894663844041 347.4701778718653 L821.4618503175453 332.8460498941515" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="821.4618503175453,332.8460498941515 814.9728565588798,332.35273457916526 816.5666444996048,337.1340984013399" fill="#687b89" />
+<path d="M838.0 330.0 L869.0 330.0" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="869.0,330.0 863.0,327.48 863.0,332.52" fill="#687b89" />
+<path d="M886 330 L895 330" fill="none" stroke="#687b89" stroke-width="1.6" />
+<polygon points="895,330 889.0,327.48 889.0,332.52" fill="#687b89" />
+<path d="M853 298 L853 362" fill="none" stroke="#566c69" stroke-width="1.5" stroke-dasharray="5 4" />
+<rect x="849" y="326.5" width="8" height="7" rx="0" fill="#ffffff" fill-opacity="1" stroke="#566c69" stroke-width="1.4" />
+<circle cx="697" cy="330" r="5.5" fill="#ffffff" stroke="#7b8790" stroke-width="1.9" />
+<circle cx="727" cy="330" r="7" fill="#ffffff" stroke="#2678ad" stroke-width="1.9" />
+<circle cx="770" cy="310" r="7" fill="#ffffff" stroke="#2678ad" stroke-width="1.9" />
+<circle cx="770" cy="350" r="7" fill="#ffffff" stroke="#2678ad" stroke-width="1.9" />
+<circle cx="830" cy="330" r="7" fill="#ffffff" stroke="#2678ad" stroke-width="1.9" />
+<circle cx="878" cy="330" r="7" fill="#ffffff" stroke="#c77822" stroke-width="1.9" />
+<text x="697" y="357.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#526676">Input</text>
+<rect x="895" y="308" width="85" height="44" rx="5" fill="#f2f4f6" fill-opacity="1" stroke="#7b8790" stroke-width="1.4" />
+<text x="937.5" y="325.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#253746">Task</text>
+<text x="937.5" y="345.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#253746">completion</text>
+<text x="853" y="385.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#566c69">1 tensor</text>
+</svg>

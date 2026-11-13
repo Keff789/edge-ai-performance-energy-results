@@ -1,0 +1,69 @@
+{
+  "additional_platforms": [
+    "Hailo-10"
+  ],
+  "analysis_schema": 1,
+  "claim_scope": "descriptive spectral comparison, not independently calibrated bandwidth or absolute accuracy",
+  "config": {
+    "energy_check_tolerance_pct": 0.5,
+    "fine_structure": true,
+    "idle_guard_s": 0.1,
+    "matched_duration_s": 10,
+    "multi_workload_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_multi_workload_auto.yaml",
+    "multi_workload_output_root": "external-analysis/edge_ai_multi_workload_v1",
+    "npy_sources": [
+      {
+        "contract": "legacy_results_energy_checked",
+        "enabled": true,
+        "id": "hailo10",
+        "measurement_boundary": "unspecified",
+        "platform_label": "Hailo-10",
+        "precision": "unspecified",
+        "root": "external-measurements/hailo_sweep",
+        "setup_evidence": "user_reported_same_setup",
+        "setup_id": "pico_ina225",
+        "signal": "power",
+        "unit": "W",
+        "workload_metadata": {}
+      }
+    ],
+    "output_root": "external-analysis/edge_ai_multi_workload_v1/journal_artifacts",
+    "plot_max_points": 6000,
+    "psd": {
+      "minimum_welch_segments": 2,
+      "native_rate_sps": 5000000,
+      "nominal_bandwidth_hz": 77000,
+      "nperseg": 1048576
+    }
+  },
+  "config_path": "external-workspace/common_reference_psd_tool_v0.9.0/config_journal.yaml",
+  "created_utc": "2026-09-10T10:01:45.013731+00:00",
+  "figure_count": 63,
+  "jetson_workloads": [
+    "gemma3-4b",
+    "gemmfp32",
+    "gemmint8",
+    "resnet50",
+    "yolofp32",
+    "yoloint8"
+  ],
+  "legacy_numerical_commands_called": false,
+  "legacy_result_trees_written": false,
+  "metric_basis": "Full native bins for metrics; sampled curves only for display/review",
+  "package_versions": {
+    "matplotlib": "3.8.4",
+    "numpy": "1.26.4",
+    "pyarrow": "17.0.0",
+    "python": "3.10.12",
+    "pyyaml": "6.0.2",
+    "scipy": "1.13.1",
+    "soxr": "1.1.0"
+  },
+  "review_contains_full_resolution_npz": false,
+  "review_contains_raw_data": false,
+  "series_count": 84,
+  "signature": "16d5258766cc9a0c2adf9272a562e8b1565c812751a01ab201f21244a2cb89fd",
+  "skipped_inputs": [],
+  "status": "completed",
+  "tool_version": "0.9.0"
+}

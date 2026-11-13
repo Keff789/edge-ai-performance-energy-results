@@ -1,0 +1,1487 @@
+from __future__ import annotations
+
+"""Fail-fast single-writer ownership for EvaluationRun directories."""
+
+from pathlib import Path
+from typing import Any, Callable, Mapping
+import base64
+import hashlib
+import json
+import os
+import socket
+import stat
+import threading
+import time
+
+
+_THREAD_GUARD = threading.Lock()
+_THREAD_OWNERS: dict[str, dict[str, Any]] = {}
+
+
+def platform_workflow_interlock_path() -> Path:
+    """Return the global workflow/platform-power interlock path.
+
+    Evaluation runs hold a shared POSIX lock for their complete lifetime.  A
+    platform-power operation must acquire the same inode exclusively before it
+    can change a rail.  Keeping this gate independent of an EvaluationRun's
+    output directory closes the cross-run and cross-process gap left by the
+    per-run ownership locks below.
+    """
+
+    return Path(
+        os.path.expanduser(
+            "~/.onnx_splitpoint_tool/locks/workflow_platform_interlock.lock"
+        )
+    )
+
+
+def _now_iso() -> str:
+    from datetime import datetime, timezone
+
+    return datetime.now(timezone.utc).isoformat()
+
+
+def _canonical_sha256(value: Any) -> str:
+    payload = json.dumps(
+        value,
+        sort_keys=True,
+        separators=(",", ":"),
+        ensure_ascii=False,
+        default=str,
+    ).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
+
+
+class WorkflowRunControlError(ValueError):
+    status = "blocked"
+    error_code = "workflow_run_blocked"
+
+    def __init__(self, message: str, *, owner: Mapping[str, Any] | None = None):
+        super().__init__(message)
+        self.owner = dict(owner or {})
+
+
+class WorkflowRunLockedError(WorkflowRunControlError):
+    error_code = "run_already_active"
+
+
+class WorkflowRunCancelledError(WorkflowRunControlError):
+    status = "cancelled"
+    error_code = "workflow_cancelled_before_start"
+
+
+class WorkflowRunTargetError(WorkflowRunControlError):
+    def __init__(self, message: str, *, error_code: str):
+        super().__init__(message)
+        self.error_code = str(error_code)
+
+
+class WorkflowResumeContractError(WorkflowRunControlError):
+    error_code = "resume_contract_mismatch"
+
+
+class WorkflowRunCleanupQuarantineError(WorkflowRunControlError):
+    """The previous writer could not prove that all owned work stopped.
+
+    This is deliberately distinct from a normal cooperative cancellation.  A
+    caller may safely retry a clean cancellation, while a quarantined run must
+    remain closed until its exact ownership evidence has been inspected.
+    """
+
+    status = "failed"
+    error_code = "run_cleanup_quarantined"
+
+
+
+def recoverable_cleanup_evidence(run_dir: Path) -> dict[str, Any]:
+    """Read only the existing, run-bound local-cleanup proof.
+
+    A vanished controller PID or released flock never proves that detached
+    descendants stopped. Only the existing remote-recovery quarantine records
+    local quiescence before a failed remote recovery. Other quarantines remain
+    closed, including collector/source fences.
+    """
+
+    path = Path(run_dir) / "jobs" / "p01_unresolved_cleanup_quarantine.json"
+    try:
+        if path.is_symlink() or not path.is_file():
+            return {}
+        value = json.loads(path.read_text(encoding="utf-8"))
+        if (
+            not isinstance(value, dict)
+            or value.get("schema") != "onnx-splitpoint/p01-cleanup-quarantine"
+            or value.get("run_id") != Path(run_dir).name
+            or not str(value.get("session_id") or "").strip()
+            or value.get("phase") != "resume_prior_remote_recovery"
+            or value.get("local_process_quiescence_proven") is not True
+            or (value.get("details") or {}).get("reason")
+            != "prior_remote_lease_cleanup_unresolved"
+        ):
+            return {}
+        return value
+    except (OSError, ValueError, TypeError, AttributeError):
+        return {}
+
+
+def stable_resume_options(options: Any) -> dict[str, Any]:
+    if isinstance(options, Mapping):
+        payload = dict(options)
+    elif hasattr(options, "to_dict"):
+        payload = dict(options.to_dict())
+    else:
+        payload = dict(vars(options))
+    # These fields choose/control an invocation but do not alter the frozen
+    # scientific execution plan.  In particular force_stage and
+    # rerun_generated_only must remain available for a valid resume.
+    for key in (
+        "profile",
+        "out",
+        "profile_start_snapshot",
+        "resume",
+        "run_id",
+        "force_stage",
+        "stop_after",
+        "rerun_generated_only",
+        "resume_missing_full_quality_only",
+        "resume_missing",
+        "remote_reuse_bundle",
+        "remote_no_reuse_bundle",
+        "remote_resume",
+        "remote_no_resume",
+        "required_run_mode",
+        "require_fresh_run",
+        "force_build_confirmed_backends",
+        "force_build_confirmation_source",
+    ):
+        payload.pop(key, None)
+    return payload
+
+
+def build_resume_contract(
+    *,
+    profile_payload: Mapping[str, Any],
+    effective_execution_plan: Mapping[str, Any],
+    options: Any,
+) -> dict[str, Any]:
+    profile_sha256 = _canonical_sha256(dict(profile_payload or {}))
+    effective_plan_sha256 = _canonical_sha256(
+        dict(effective_execution_plan or {})
+    )
+    stable_options = stable_resume_options(options)
+    stable_options_sha256 = _canonical_sha256(stable_options)
+    plan_sha256 = _canonical_sha256(
+        {
+            "effective_execution_plan_sha256": effective_plan_sha256,
+            "stable_options_sha256": stable_options_sha256,
+        }
+    )
+    contract_sha256 = _canonical_sha256(
+        {
+            "profile_sha256": profile_sha256,
+            "plan_sha256": plan_sha256,
+        }
+    )
+    return {
+        "schema": "onnx-splitpoint/evaluation-resume-contract",
+        "schema_version": 1,
+        "profile_sha256": profile_sha256,
+        "effective_execution_plan_sha256": effective_plan_sha256,
+        "stable_options_sha256": stable_options_sha256,
+        "plan_sha256": plan_sha256,
+        "resume_contract_sha256": contract_sha256,
+    }
+
+
+class EvaluationRunLock:
+    """Kernel-backed, nonblocking lease keyed by the resolved run directory."""
+
+    @classmethod
+    def for_resource(cls, resource: str, *, owner: Mapping[str, Any]):
+        """Use the existing owner/quarantine protocol for a physical resource."""
+        root = platform_workflow_interlock_path().parent
+        key = hashlib.sha256(str(resource).encode("utf-8")).hexdigest()
+        return cls(out_root=root, run_dir=root / ("resource-" + key),
+                   owner={**dict(owner), "physical_resource": str(resource)})
+
+    def __init__(
+        self,
+        *,
+        out_root: Path,
+        run_dir: Path,
+        owner: Mapping[str, Any],
+    ) -> None:
+        self.out_root = Path(out_root).expanduser().resolve()
+        self.run_dir = Path(run_dir).expanduser().resolve()
+        key_hash = hashlib.sha256(str(self.run_dir).encode("utf-8")).hexdigest()
+        self.lock_path = (
+            self.out_root
+            / ".onnx_splitpoint_run_locks"
+            / f"{self.run_dir.name}.{key_hash[:16]}.lock"
+        )
+        self.owner = dict(owner or {})
+        self.owner.setdefault("schema", "onnx-splitpoint/evaluation-run-lock")
+        self.owner.setdefault("schema_version", 1)
+        self.owner.setdefault("run_id", self.run_dir.name)
+        self.owner.setdefault("run_dir", str(self.run_dir))
+        self.owner.setdefault("pid", os.getpid())
+        self.owner.setdefault("ppid", os.getppid())
+        self.owner.setdefault("hostname", socket.gethostname())
+        self.owner.setdefault("acquired_at", _now_iso())
+        self.owner["state"] = "running"
+        try:
+            self.owner.setdefault("pgid", os.getpgrp())
+        except Exception:
+            pass
+        self._fh: Any = None
+        self._recovery_owner_bytes: bytes | None = None
+        self.previous_owner: dict[str, Any] = {}
+        self._platform_interlock_fh: Any = None
+        self._thread_key = str(self.lock_path)
+        self._thread_acquired = False
+        self._quarantined = False
+        self.quarantine_path = self.lock_path.with_name(
+            self.lock_path.name + ".quarantine.json"
+        )
+
+    def _read_owner(self) -> dict[str, Any]:
+        try:
+            assert self._fh is not None
+            self._fh.seek(0)
+            raw = self._fh.read().decode("utf-8", errors="replace").strip("\x00\n ")
+            parsed = json.loads(raw) if raw else {}
+            return dict(parsed) if isinstance(parsed, Mapping) else {}
+        except Exception:
+            return {}
+
+    @staticmethod
+    def _owner_summary(owner: Mapping[str, Any]) -> str:
+        parts = []
+        for key in ("session_id", "pid", "hostname", "acquired_at"):
+            if owner.get(key) not in (None, ""):
+                parts.append(f"{key}={owner.get(key)}")
+        return ", ".join(parts) or "owner metadata unavailable"
+
+    def acquire(
+        self,
+        *,
+        recover_quarantine: Callable[[Mapping[str, Any]], bool] | None = None,
+    ) -> "EvaluationRunLock":
+        return self._acquire(recover_quarantine=recover_quarantine)
+
+    def acquire_for_recovery(self) -> "EvaluationRunLock":
+        """Hold an existing inode without admitting work or changing its fence.
+
+        The explicit physical-resource recovery operator uses this to inspect
+        the complete resource group before changing any member. Ordinary
+        acquire(), including workflow Resume, keeps its existing behaviour.
+        """
+        return self._acquire(inspect_only=True)
+
+    def _acquire(
+        self,
+        *,
+        recover_quarantine: Callable[[Mapping[str, Any]], bool] | None = None,
+        inspect_only: bool = False,
+    ) -> "EvaluationRunLock":
+        self.lock_path.parent.mkdir(parents=True, exist_ok=True)
+        with _THREAD_GUARD:
+            local_owner = _THREAD_OWNERS.get(self._thread_key)
+            if local_owner is not None:
+                raise WorkflowRunLockedError(
+                    "Evaluation run is already active in this process: "
+                    + self._owner_summary(local_owner),
+                    owner=local_owner,
+                )
+            # Reserve the key before opening the cross-process lock so two GUI
+            # worker threads cannot race through flock in one interpreter.
+            _THREAD_OWNERS[self._thread_key] = dict(self.owner)
+            self._thread_acquired = True
+
+        try:
+            if os.name == "posix":
+                import fcntl
+
+                interlock_path = platform_workflow_interlock_path()
+                interlock_path.parent.mkdir(parents=True, exist_ok=True)
+                interlock_fh = interlock_path.open("a+b")
+                try:
+                    fcntl.flock(
+                        interlock_fh.fileno(), fcntl.LOCK_SH | fcntl.LOCK_NB
+                    )
+                except (BlockingIOError, OSError) as exc:
+                    interlock_fh.close()
+                    raise WorkflowRunLockedError(
+                        "A platform-power operation is active; starting an "
+                        "EvaluationRun is blocked"
+                    ) from exc
+                self._platform_interlock_fh = interlock_fh
+
+            if inspect_only:
+                import stat
+                descriptor = os.open(
+                    self.lock_path, os.O_RDWR | getattr(os, "O_NOFOLLOW", 0)
+                )
+                self._fh = os.fdopen(descriptor, "r+b")
+                if not stat.S_ISREG(os.fstat(self._fh.fileno()).st_mode):
+                    raise WorkflowRunCleanupQuarantineError(
+                        "Recovery requires an existing regular resource lock"
+                    )
+            else:
+                self._fh = self.lock_path.open("a+b")
+            try:
+                if os.name == "nt":  # pragma: no cover - Windows installation
+                    import msvcrt
+
+                    self._fh.seek(0, os.SEEK_END)
+                    if self._fh.tell() == 0:
+                        self._fh.write(b"\x00")
+                        self._fh.flush()
+                    self._fh.seek(0)
+                    msvcrt.locking(self._fh.fileno(), msvcrt.LK_NBLCK, 1)
+                else:
+                    import fcntl
+
+                    fcntl.flock(
+                        self._fh.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB
+                    )
+            except (BlockingIOError, OSError) as exc:
+                owner = self._read_owner()
+                raise WorkflowRunLockedError(
+                    f"Evaluation run {self.run_dir.name!r} is already active; "
+                    + self._owner_summary(owner),
+                    owner=owner,
+                ) from exc
+
+            # A durable P0.1 cleanup fence survives kernel-lock release.  It is
+            # checked only after exclusive flock acquisition, before this
+            # writer can replace owner metadata or touch the EvaluationRun.
+            self.previous_owner = self._read_owner()
+            if inspect_only:
+                # Even an accidental default release must not rewrite the
+                # predecessor while the group is still being inspected.
+                self._fh.seek(0)
+                self._recovery_owner_bytes = self._fh.read()
+                self._quarantined = True
+                return self
+            _guard_generic_orphan_recovery_receipt(self, self.previous_owner)
+            _guard_generic_predispatch_run_only_recovery_receipt(
+                self, self.previous_owner)
+            quarantined_owner: dict[str, Any] | None = None
+            if os.path.lexists(self.quarantine_path):
+                try:
+                    raw = self.quarantine_path.read_text(encoding="utf-8")
+                    value = json.loads(raw)
+                    quarantined_owner = (
+                        dict(value) if isinstance(value, Mapping) else {}
+                    )
+                except Exception:
+                    quarantined_owner = {
+                        "quarantine_path": str(self.quarantine_path),
+                        "state": "quarantined_unreadable",
+                    }
+            if quarantined_owner is None:
+                previous_owner = self._read_owner()
+                if str(previous_owner.get("state") or "") == "quarantined":
+                    quarantined_owner = previous_owner
+                elif str(previous_owner.get("state") or "") == "running":
+                    # flock disappearing after SIGKILL/crash proves only that
+                    # the writer exited; it cannot prove that separately
+                    # sessioned local descendants stopped.  Convert the stale
+                    # running owner into a durable fence before any new writer
+                    # can replace its metadata or mutate the EvaluationRun.
+                    try:
+                        self.commit_quarantine_fence({
+                            "reason": "previous_writer_terminated_uncleanly",
+                            "previous_owner": previous_owner,
+                        })
+                    except BaseException as exc:
+                        raise WorkflowRunCleanupQuarantineError(
+                            "Evaluation run has an unclean previous writer and "
+                            "a durable quarantine fence could not be committed; "
+                            "do not reuse this run id",
+                            owner=previous_owner,
+                        ) from exc
+                    quarantined_owner = previous_owner
+            if (
+                quarantined_owner is not None
+                and recover_quarantine is not None
+                and recover_quarantine(quarantined_owner) is True
+            ):
+                # The callback runs with exclusive flock and must prove the
+                # archived local and exact remote ownership before clearing the
+                # existing workflow quarantine. Never touch source/collector locks.
+                self.quarantine_path.unlink(missing_ok=True)
+                self._quarantined = False
+                quarantined_owner = None
+            if quarantined_owner is not None:
+                raise WorkflowRunCleanupQuarantineError(
+                    "Evaluation run is fenced by an unresolved P0.1 cleanup "
+                    f"quarantine: {self.quarantine_path}",
+                    owner=quarantined_owner,
+                )
+
+            encoded = (
+                json.dumps(self.owner, indent=2, ensure_ascii=False, sort_keys=True)
+                + "\n"
+            ).encode("utf-8")
+            self._fh.seek(0)
+            self._fh.truncate(0)
+            self._fh.write(encoded)
+            self._fh.flush()
+            try:
+                os.fsync(self._fh.fileno())
+            except OSError:
+                pass
+            return self
+        except BaseException:
+            self.release(write_released_state=False)
+            raise
+
+    def write_recovery_owner(self, owner: Mapping[str, Any]) -> None:
+        """Strict durable owner write while an explicit recovery holds flock.
+
+        Unlike diagnostic release(), failures propagate before any group lock
+        is dropped. A surviving running owner fences an interrupted recovery.
+        """
+        if self._fh is None or not self._thread_acquired:
+            raise RuntimeError("resource recovery requires exclusive ownership")
+        encoded = (json.dumps(dict(owner), indent=2, ensure_ascii=False,
+                              sort_keys=True) + "\n").encode("utf-8")
+        self._fh.seek(0)
+        self._fh.truncate(0)
+        self._fh.write(encoded)
+        self._fh.flush()
+        os.fsync(self._fh.fileno())
+
+    def resolve_quarantine(
+        self, *, expected_owner: Mapping[str, Any], expected_quarantine: bytes,
+        recovery: Mapping[str, Any], commit_evidence: Callable[[], None],
+    ) -> None:
+        """Commit a validated resource recovery while holding its existing lock.
+
+        The product recovery validator supplies the exact predecessor and its
+        durable evidence receipt. Keep the fence until the released owner is
+        fsynced; restore the original fence if any part of the transition fails.
+        This method does not establish that an SDK or source is safe to release.
+        """
+        if (self._fh is None or not self._thread_acquired
+                or self._read_owner() != dict(expected_owner)
+                or self.quarantine_path.is_symlink()
+                or self.quarantine_path.read_bytes() != expected_quarantine
+                or recovery.get("status") not in {"verified_pre_inference", "verified_native_numerical"}
+                or recovery.get("resource") != expected_owner.get("physical_resource")
+                or not recovery.get("evidence_path")):
+            raise WorkflowRunCleanupQuarantineError("resource recovery binding changed under lock")
+        released = {**self.owner, "state": "released", "released_at": _now_iso(),
+                    "resource_recovery": dict(recovery)}
+        try:
+            self.write_recovery_owner(released)
+            commit_evidence()
+            self.quarantine_path.unlink()
+            if os.name == "posix":
+                descriptor = os.open(self.lock_path.parent, os.O_RDONLY)
+                try:
+                    os.fsync(descriptor)
+                finally:
+                    os.close(descriptor)
+        except BaseException:
+            # A failed release remains fenced, even after an unlink or a short
+            # owner write. Preserve the exact historical bytes when possible.
+            original = json.loads(expected_quarantine)
+            self.commit_quarantine_fence(original["owner"])
+            temporary = self.quarantine_path.with_name(
+                f".{self.quarantine_path.name}.{os.getpid()}.{time.time_ns()}.recovery.tmp")
+            try:
+                with temporary.open("xb") as handle:
+                    handle.write(expected_quarantine)
+                    handle.flush()
+                    os.fsync(handle.fileno())
+                os.replace(temporary, self.quarantine_path)
+                if os.name == "posix":
+                    descriptor = os.open(self.lock_path.parent, os.O_RDONLY)
+                    try:
+                        os.fsync(descriptor)
+                    finally:
+                        os.close(descriptor)
+                self.write_recovery_owner(expected_owner)
+            finally:
+                temporary.unlink(missing_ok=True)
+            raise
+        self.owner = released
+        self._quarantined = False
+
+    def commit_quarantine_fence(
+        self, payload: Mapping[str, Any]
+    ) -> Path:
+        """Durably fence future writers before releasing an unclean lock.
+
+        The sidecar is the primary cross-session gate.  If creating it fails
+        (for example a full directory), the already-open lock inode is
+        overwritten with a smaller quarantined owner record and fsynced; the
+        next acquirer checks both locations before writing its own metadata.
+        """
+
+        if self._fh is None:
+            raise RuntimeError("cannot quarantine an unowned EvaluationRun lock")
+        # Even when both persistence attempts encounter an I/O failure, release
+        # must not overwrite a surviving running/quarantine record with the
+        # misleading diagnostic state ``released``.
+        self._quarantined = True
+        record = {
+            "schema": "onnx-splitpoint/evaluation-run-lock-quarantine",
+            "schema_version": 1,
+            "state": "quarantined",
+            "run_id": self.run_dir.name,
+            "run_dir": str(self.run_dir),
+            "quarantined_at": _now_iso(),
+            "owner": dict(payload or {}),
+        }
+        encoded = (
+            json.dumps(record, indent=2, ensure_ascii=False, sort_keys=True)
+            + "\n"
+        ).encode("utf-8")
+        temporary = self.quarantine_path.with_name(
+            f".{self.quarantine_path.name}.{os.getpid()}.{time.time_ns()}.tmp"
+        )
+        sidecar_error: BaseException | None = None
+        try:
+            descriptor = os.open(
+                str(temporary),
+                os.O_WRONLY | os.O_CREAT | os.O_EXCL,
+                0o600,
+            )
+            try:
+                with os.fdopen(descriptor, "wb") as handle:
+                    descriptor = -1
+                    handle.write(encoded)
+                    handle.flush()
+                    os.fsync(handle.fileno())
+            finally:
+                if descriptor >= 0:
+                    os.close(descriptor)
+            os.replace(temporary, self.quarantine_path)
+            if os.name == "posix":
+                directory_fd = os.open(str(self.quarantine_path.parent), os.O_RDONLY)
+                try:
+                    os.fsync(directory_fd)
+                finally:
+                    os.close(directory_fd)
+            return self.quarantine_path
+        except BaseException as exc:
+            sidecar_error = exc
+        finally:
+            try:
+                temporary.unlink(missing_ok=True)
+            except Exception:
+                pass
+
+        # The lock inode was already created and written successfully by
+        # acquire().  Reusing its allocated blocks is the durable fallback for
+        # a directory-create or disk-full failure.
+        try:
+            self._fh.seek(0)
+            self._fh.truncate(0)
+            self._fh.write(encoded)
+            self._fh.flush()
+            os.fsync(self._fh.fileno())
+            return self.lock_path
+        except BaseException as fallback_exc:
+            raise RuntimeError(
+                "could not durably commit cleanup quarantine in sidecar or "
+                f"lock inode: sidecar={type(sidecar_error).__name__}: "
+                f"{sidecar_error}; lock={type(fallback_exc).__name__}: "
+                f"{fallback_exc}"
+            ) from fallback_exc
+
+    def release(self, *, write_released_state: bool = True) -> None:
+        fh = self._fh
+        self._fh = None
+        try:
+            if fh is not None:
+                # Release metadata is diagnostic only.  A write failure must
+                # never prevent kernel unlock or leak the in-process guard.
+                if write_released_state and not self._quarantined:
+                    try:
+                        released = dict(self.owner)
+                        released.update(
+                            {"state": "released", "released_at": _now_iso()}
+                        )
+                        fh.seek(0)
+                        fh.truncate(0)
+                        fh.write(
+                            (
+                                json.dumps(
+                                    released,
+                                    indent=2,
+                                    ensure_ascii=False,
+                                    sort_keys=True,
+                                )
+                                + "\n"
+                            ).encode("utf-8")
+                        )
+                        fh.flush()
+                    except Exception:
+                        pass
+                try:
+                    if os.name == "nt":  # pragma: no cover
+                        import msvcrt
+
+                        fh.seek(0)
+                        msvcrt.locking(fh.fileno(), msvcrt.LK_UNLCK, 1)
+                    else:
+                        import fcntl
+
+                        fcntl.flock(fh.fileno(), fcntl.LOCK_UN)
+                except Exception:
+                    # Closing the descriptor below releases a POSIX flock and
+                    # is the final Windows handle cleanup as well.
+                    pass
+                finally:
+                    try:
+                        fh.close()
+                    except Exception:
+                        pass
+        finally:
+            if self._thread_acquired:
+                with _THREAD_GUARD:
+                    _THREAD_OWNERS.pop(self._thread_key, None)
+                self._thread_acquired = False
+            interlock_fh = self._platform_interlock_fh
+            self._platform_interlock_fh = None
+            if interlock_fh is not None:
+                try:
+                    if os.name == "posix":
+                        import fcntl
+
+                        fcntl.flock(interlock_fh.fileno(), fcntl.LOCK_UN)
+                except Exception:
+                    pass
+                finally:
+                    try:
+                        interlock_fh.close()
+                    except Exception:
+                        pass
+
+    def __enter__(self) -> "EvaluationRunLock":
+        return self.acquire()
+
+    def __exit__(self, _exc_type: Any, _exc: Any, _tb: Any) -> None:
+        self.release()
+
+
+_GENERIC_ORPHAN_SCHEMA = "onnx-splitpoint/generic-orphan-recovery"
+_GENERIC_ORPHAN_MARKER = "generic_orphan_recovery"
+_GENERIC_PREDISPATCH_SCHEMA = "onnx-splitpoint/generic-predispatch-run-only-recovery"
+_GENERIC_PREDISPATCH_MARKER = "generic_predispatch_run_only_recovery"
+_GENERIC_PREDISPATCH_PHYSICAL_PURPOSES = {"generic", "generic_completed_task_192"}
+
+
+def _generic_orphan_bytes(value: Mapping[str, Any]) -> bytes:
+    return (json.dumps(dict(value), indent=2, ensure_ascii=False, sort_keys=True)
+            + "\n").encode("utf-8")
+
+
+def _generic_orphan_path(path: Path, *, existing: bool = False) -> Path:
+    path = Path(path).expanduser()
+    if (not path.is_absolute() or path.is_symlink()
+            or any(parent.is_symlink() for parent in path.parents)
+            or not path.parent.is_dir()
+            or (existing and not path.is_file())):
+        raise WorkflowRunCleanupQuarantineError(
+            "generic_orphan_recovery: unsafe evidence path: " + str(path))
+    if path.exists() and not stat.S_ISREG(path.lstat().st_mode):
+        raise WorkflowRunCleanupQuarantineError(
+            "generic_orphan_recovery: evidence is not a regular file: " + str(path))
+    return path
+
+
+def _generic_orphan_sync_directory(path: Path) -> None:
+    if os.name == "posix":
+        descriptor = os.open(path, os.O_RDONLY)
+        try:
+            os.fsync(descriptor)
+        finally:
+            os.close(descriptor)
+
+
+def _generic_orphan_atomic_write(path: Path, data: bytes) -> None:
+    """Durable metadata replacement; never replace a kernel-lock inode."""
+    _generic_orphan_path(path)
+    temporary = path.with_name(
+        f".{path.name}.{os.getpid()}.{time.time_ns()}.generic-recovery.tmp")
+    try:
+        with temporary.open("xb") as handle:
+            handle.write(data)
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(temporary, path)
+        _generic_orphan_sync_directory(path.parent)
+    finally:
+        temporary.unlink(missing_ok=True)
+
+
+def _generic_orphan_lock_bytes(lock: EvaluationRunLock) -> bytes:
+    if lock._fh is None or not lock._thread_acquired or not lock._quarantined:
+        raise WorkflowRunCleanupQuarantineError(
+            "generic_orphan_recovery: every existing lock must be held for recovery")
+    _generic_orphan_path(lock.lock_path, existing=True)
+    opened, current = os.fstat(lock._fh.fileno()), lock.lock_path.stat()
+    if (opened.st_dev, opened.st_ino) != (current.st_dev, current.st_ino):
+        raise WorkflowRunCleanupQuarantineError(
+            "generic_orphan_recovery: lock inode changed under recovery")
+    lock._fh.seek(0)
+    return lock._fh.read()
+
+
+def _guard_generic_orphan_recovery_receipt(
+    lock: EvaluationRunLock, owner: Mapping[str, Any],
+) -> dict[str, Any] | None:
+    """A removed sidecar cannot admit a partially committed recovery group."""
+    lock._fh.seek(0)
+    raw_owner = lock._fh.read()
+    if _GENERIC_ORPHAN_MARKER not in owner:
+        if b'"generic_orphan_recovery"' not in raw_owner:
+            return
+        raise WorkflowRunCleanupQuarantineError(
+            "generic_orphan_recovery: malformed recovery owner", owner=owner)
+    try:
+        marker = owner[_GENERIC_ORPHAN_MARKER]
+        if not isinstance(marker, Mapping):
+            raise ValueError("invalid owner marker")
+        receipt_path = _generic_orphan_path(Path(marker["receipt_path"]), existing=True)
+        raw = receipt_path.read_bytes()
+        receipt = json.loads(raw)
+        if (not isinstance(receipt, dict)
+                or receipt.get("schema") != _GENERIC_ORPHAN_SCHEMA
+                or receipt.get("schema_version") != 1
+                or receipt.get("state") != "committed"
+                or hashlib.sha256(raw).hexdigest() != marker.get("receipt_sha256")
+                or owner.get("state") != "released"
+                or receipt.get("run_id") != owner.get("run_id")
+                or ("session_id" in owner
+                    and receipt.get("session_id") != owner.get("session_id"))
+                or marker.get("lock_path") != str(lock.lock_path)
+                or any(marker.get(key) != receipt.get(key) for key in (
+                    "recovery_id", "run_id", "session_id", "run_dir"))):
+            raise ValueError("receipt is incomplete, changed or foreign")
+        group = receipt.get("group")
+        if not isinstance(group, list):
+            raise ValueError("receipt group missing")
+        members = [row for row in group if isinstance(row, dict)
+                   and row.get("lock_path") == str(lock.lock_path)]
+        plain_owner = {key: value for key, value in owner.items()
+                       if key != _GENERIC_ORPHAN_MARKER}
+        if (len(members) != 1
+                or members[0].get("lock_run_dir") != str(lock.run_dir)
+                or members[0].get("physical_resource") != owner.get("physical_resource")
+                or marker.get("physical_resource") != owner.get("physical_resource")
+                or members[0].get("released_owner") != plain_owner
+                or (not owner.get("physical_resource")
+                    and (receipt.get("run_dir") != str(lock.run_dir)
+                         or receipt.get("run_id") != owner.get("run_id")
+                         or receipt.get("session_id") != owner.get("session_id")))):
+            raise ValueError("receipt does not bind this released owner")
+        return receipt
+    except (OSError, ValueError, TypeError, KeyError, AttributeError) as exc:
+        raise WorkflowRunCleanupQuarantineError(
+            "generic_orphan_recovery: unresolved receipt blocks admission: "
+            + str(exc), owner=owner) from exc
+
+
+def validate_generic_orphan_recovery_owner(
+    lock: EvaluationRunLock,
+) -> dict[str, Any]:
+    """Read a committed owner receipt under an existing recovery-held flock."""
+    _generic_orphan_lock_bytes(lock)
+    receipt = _guard_generic_orphan_recovery_receipt(lock, lock._read_owner())
+    if receipt is None:
+        raise WorkflowRunCleanupQuarantineError(
+            "generic_orphan_recovery: released owner receipt is missing")
+    return receipt
+
+
+def commit_generic_orphan_recovery_group(
+    *, run_lock: EvaluationRunLock,
+    physical_locks: Mapping[str, EvaluationRunLock],
+    receipt_path: Path, receipt_data: Mapping[str, Any],
+    manifest_path: Path, manifest_before: bytes,
+    manifest_after: bytes | Mapping[str, Any],
+) -> dict[str, Any]:
+    """Commit one validated Generic orphan closure under all existing flocks.
+
+    The caller proves original ownership, complete local/remote quiescence and
+    frozen source/registry bindings. This helper supplies the durable group
+    transition, not an alternative ownership or source-readiness validator.
+    Released owners retain the original fields, including absent session IDs.
+    Their marker binds the final receipt; the receipt stores marker-free owners
+    so there is no hash cycle. Ordinary admission checks that marker even when
+    its sidecar was already removed before a crash.
+    """
+    def require(condition: bool, message: str) -> None:
+        if not condition:
+            raise WorkflowRunCleanupQuarantineError(
+                "generic_orphan_recovery: " + message)
+
+    data = dict(receipt_data)
+    require(data.get("schema") == _GENERIC_ORPHAN_SCHEMA
+            and data.get("schema_version") == 1, "invalid receipt schema")
+    require(all(isinstance(data.get(key), str) and data[key].strip()
+                for key in ("recovery_id", "run_id", "session_id", "run_dir")),
+            "receipt identity is incomplete")
+    require(data["run_id"] == run_lock.run_dir.name
+            and data["run_dir"] == str(run_lock.run_dir), "receipt run differs")
+    require(isinstance(physical_locks, Mapping) and bool(physical_locks),
+            "the complete physical DUT group is required")
+    locks = [run_lock]
+    for resource, lock in sorted(physical_locks.items()):
+        require(isinstance(resource, str) and resource.startswith("dut:")
+                and lock is not run_lock, "only bound physical DUT locks are admitted")
+        expected = EvaluationRunLock.for_resource(resource, owner={})
+        require(lock.lock_path == expected.lock_path, "physical resource lock differs")
+        locks.append(lock)
+    require(len({str(lock.lock_path) for lock in locks}) == len(locks),
+            "duplicate group locks")
+    receipt_path = Path(receipt_path).expanduser()
+    require(receipt_path.is_absolute() and not receipt_path.is_symlink()
+            and not any(parent.is_symlink() for parent in receipt_path.parents),
+            "unsafe receipt path")
+    receipt_path.parent.mkdir(parents=True, exist_ok=True)
+    receipt_path = _generic_orphan_path(receipt_path)
+    manifest_path = _generic_orphan_path(Path(manifest_path), existing=True)
+    require(manifest_path == run_lock.run_dir / "run_manifest.json",
+            "manifest is outside the bound original run")
+    require(receipt_path not in {manifest_path, *(lock.lock_path for lock in locks),
+                                *(lock.quarantine_path for lock in locks)},
+            "receipt collides with a group file")
+    require(isinstance(manifest_before, bytes), "original manifest bytes are required")
+    after_bytes = (manifest_after if isinstance(manifest_after, bytes)
+                   else _generic_orphan_bytes(manifest_after))
+    before, after = json.loads(manifest_before), json.loads(after_bytes)
+    require(isinstance(before, dict) and isinstance(after, dict), "invalid manifest")
+    reference = {"recovery_id": data["recovery_id"], "session_id": data["session_id"],
+                 "receipt_path": str(receipt_path)}
+    existing_reference = after.get(_GENERIC_ORPHAN_MARKER, {})
+    require(isinstance(existing_reference, dict)
+            and all(existing_reference.get(key, value) == value
+                    for key, value in reference.items()), "foreign lifecycle recovery reference")
+    after[_GENERIC_ORPHAN_MARKER] = {**existing_reference, **reference}
+    after_bytes = _generic_orphan_bytes(after)
+    require(before.get("schema") == "onnx-splitpoint/evaluation-run-manifest"
+            and before.get("status") == "running"
+            and before.get("run_id") == data["run_id"]
+            and before.get("current_session_id") == data["session_id"]
+            and after.get("run_id") == data["run_id"]
+            and after.get("current_session_id") == data["session_id"]
+            and after.get("status") == "cancelled"
+            and after.get("technical_status") == "cancelled",
+            "manifest closure is not bound to the interrupted original session")
+    lifecycle_fields = {"status", "technical_status", "updated_at", "execution_sessions",
+                        _GENERIC_ORPHAN_MARKER}
+    require({key: value for key, value in before.items() if key not in lifecycle_fields}
+            == {key: value for key, value in after.items() if key not in lifecycle_fields},
+            "recovery cannot alter stages or scientific results")
+    original_sessions = before.get("execution_sessions")
+    closed_sessions = after.get("execution_sessions")
+    require(isinstance(original_sessions, list) and isinstance(closed_sessions, list)
+            and len(original_sessions) == len(closed_sessions), "session journal differs")
+    found = 0
+    session_fields = {"status", "finished_at", "interrupted_at", "last_updated_at",
+                      _GENERIC_ORPHAN_MARKER}
+    for old, closed in zip(original_sessions, closed_sessions):
+        require(isinstance(old, dict) and isinstance(closed, dict), "invalid session journal")
+        if old.get("session_id") == data["session_id"]:
+            found += 1
+            require(old.get("status") == "running" and closed.get("status") == "cancelled"
+                    and {key: value for key, value in old.items() if key not in session_fields}
+                    == {key: value for key, value in closed.items() if key not in session_fields},
+                    "only the interrupted session lifecycle may change")
+        else:
+            require(old == closed, "a foreign session changed")
+    require(found == 1, "original session is not unique")
+    group_keys = [{"lock_path": str(lock.lock_path),
+                   "physical_resource": None if lock is run_lock else next(
+                       key for key, value in physical_locks.items() if value is lock)}
+                  for lock in locks]
+    input_sha256 = _canonical_sha256({"receipt_data": data,
+        "manifest_path": str(manifest_path),
+        "manifest_before_sha256": hashlib.sha256(manifest_before).hexdigest(),
+        "manifest_after_sha256": hashlib.sha256(after_bytes).hexdigest(),
+        "group": group_keys})
+    if receipt_path.exists():
+        existing = json.loads(receipt_path.read_bytes())
+        require(isinstance(existing, dict) and existing.get("state") == "committed"
+                and existing.get("input_sha256") == input_sha256,
+                "existing receipt is incomplete, changed or foreign")
+        require(manifest_path.read_bytes() == after_bytes, "committed lifecycle changed")
+        for lock in locks:
+            verified = validate_generic_orphan_recovery_owner(lock)
+            require(verified == existing, "group member refers to a foreign receipt")
+        return existing
+
+    snapshots: list[dict[str, Any]] = []
+    for lock, key in zip(locks, group_keys):
+        owner_bytes = _generic_orphan_lock_bytes(lock)
+        owner = json.loads(owner_bytes)
+        require(isinstance(owner, dict) and owner == lock.previous_owner
+                and owner.get("state") in {"running", "quarantined"},
+                "original owner changed or is not interrupted")
+        require(_GENERIC_ORPHAN_MARKER not in owner,
+                "a previous recovery marker remains unresolved")
+        if lock is run_lock:
+            require(owner.get("run_id") == data["run_id"]
+                    and owner.get("session_id") == data["session_id"],
+                    "original run owner identity differs")
+        else:
+            require(owner.get("physical_resource") == key["physical_resource"]
+                    and owner.get("run_id") == data["run_id"]
+                    and owner.get("purpose") == "generic",
+                    "physical owner is outside this original run")
+        _generic_orphan_path(lock.quarantine_path)
+        fence_bytes = (lock.quarantine_path.read_bytes()
+                       if lock.quarantine_path.exists() else None)
+        if fence_bytes is not None:
+            fence = json.loads(fence_bytes)
+            payload = fence.get("owner") if isinstance(fence, dict) else None
+            require(isinstance(payload, dict)
+                    and fence.get("schema") == "onnx-splitpoint/evaluation-run-lock-quarantine"
+                    and fence.get("state") == "quarantined"
+                    and fence.get("run_id") == lock.run_dir.name
+                    and fence.get("run_dir") == str(lock.run_dir)
+                    and payload.get("reason") in {
+                        "previous_writer_terminated_uncleanly",
+                        "generic_remote_cleanup_requires_reconciliation"},
+                    "foreign or unsupported resource fence")
+            if "previous_owner" in payload:
+                require(payload["previous_owner"] == owner,
+                        "fence predecessor differs from the original owner")
+        snapshots.append({"lock": lock, "owner": owner, "owner_bytes": owner_bytes,
+                          "fence_bytes": fence_bytes})
+    require(manifest_path.read_bytes() == manifest_before,
+            "original manifest changed under recovery")
+    prepared_at = _now_iso()
+    group = []
+    for key, snapshot in zip(group_keys, snapshots):
+        released = {**snapshot["owner"], "state": "released", "released_at": prepared_at}
+        group.append({**key, "lock_run_dir": str(snapshot["lock"].run_dir),
+            "quarantine_path": str(snapshot["lock"].quarantine_path),
+            "original_owner_sha256": hashlib.sha256(snapshot["owner_bytes"]).hexdigest(),
+            "original_owner_base64": base64.b64encode(snapshot["owner_bytes"]).decode("ascii"),
+            "original_fence_sha256": (hashlib.sha256(snapshot["fence_bytes"]).hexdigest()
+                                      if snapshot["fence_bytes"] is not None else None),
+            "original_fence_base64": (base64.b64encode(snapshot["fence_bytes"]).decode("ascii")
+                                      if snapshot["fence_bytes"] is not None else None),
+            "released_owner": released})
+    committed = {**data, "state": "committed", "input_sha256": input_sha256,
+        "commit_prepared_at": prepared_at, "manifest_path": str(manifest_path),
+        "manifest_before_sha256": hashlib.sha256(manifest_before).hexdigest(),
+        "manifest_before_base64": base64.b64encode(manifest_before).decode("ascii"),
+        "manifest_after_sha256": hashlib.sha256(after_bytes).hexdigest(), "group": group}
+    committed_bytes = _generic_orphan_bytes(committed)
+    receipt_sha256 = hashlib.sha256(committed_bytes).hexdigest()
+    marker = {"receipt_path": str(receipt_path), "receipt_sha256": receipt_sha256,
+              **{key: data[key] for key in ("recovery_id", "run_id", "session_id", "run_dir")}}
+    changed = False
+    try:
+        # Until committed is published every marker intentionally points at a
+        # different receipt hash/state, keeping even a missing sidecar closed.
+        changed = True
+        _generic_orphan_atomic_write(receipt_path, _generic_orphan_bytes(
+            {**committed, "state": "committing"}))
+        for snapshot in snapshots:
+            snapshot["lock"].commit_quarantine_fence({
+                "reason": "generic_orphan_recovery_committing",
+                "previous_owner": snapshot["owner"],
+                _GENERIC_ORPHAN_MARKER: marker})
+        for snapshot, member in zip(snapshots, group):
+            lock = snapshot["lock"]
+            lock.write_recovery_owner({**member["released_owner"],
+                _GENERIC_ORPHAN_MARKER: {**marker, "lock_path": str(lock.lock_path),
+                                        "physical_resource": member["physical_resource"]}})
+        _generic_orphan_atomic_write(manifest_path, after_bytes)
+        for snapshot in snapshots:
+            lock = snapshot["lock"]
+            lock.quarantine_path.unlink()
+            _generic_orphan_sync_directory(lock.quarantine_path.parent)
+        _generic_orphan_atomic_write(receipt_path, committed_bytes)
+    except BaseException as exc:
+        rollback_errors = []
+        if changed:
+            # Restore the entire fence group before restoring any old owner or
+            # lifecycle. If a restoration fails, the remaining receipt marker
+            # and the original running/quarantined owner still fail closed.
+            restored_sidecars: set[Path] = set()
+            for snapshot in snapshots:
+                lock = snapshot["lock"]
+                try:
+                    if snapshot["fence_bytes"] is not None:
+                        _generic_orphan_atomic_write(lock.quarantine_path, snapshot["fence_bytes"])
+                    else:
+                        # Do not use the inode fallback here: if that write
+                        # were interrupted it could erase the only remaining
+                        # receipt marker while its sidecar is still absent.
+                        _generic_orphan_atomic_write(lock.quarantine_path,
+                            _generic_orphan_bytes({
+                                "schema": "onnx-splitpoint/evaluation-run-lock-quarantine",
+                                "schema_version": 1, "state": "quarantined",
+                                "run_id": lock.run_dir.name, "run_dir": str(lock.run_dir),
+                                "quarantined_at": _now_iso(), "owner": {
+                                    "reason": "generic_orphan_recovery_blocked",
+                                    "previous_owner": snapshot["owner"],
+                                    _GENERIC_ORPHAN_MARKER: marker}}))
+                    restored_sidecars.add(lock.lock_path)
+                except BaseException as rollback_exc:
+                    rollback_errors.append(f"fence {lock.lock_path}: {rollback_exc}")
+            for snapshot in snapshots:
+                lock = snapshot["lock"]
+                if lock.lock_path not in restored_sidecars:
+                    rollback_errors.append(
+                        f"owner {lock.lock_path}: kept receipt marker without a durable sidecar")
+                    continue
+                try:
+                    lock._fh.seek(0)
+                    lock._fh.truncate(0)
+                    lock._fh.write(snapshot["owner_bytes"])
+                    lock._fh.flush()
+                    os.fsync(lock._fh.fileno())
+                except BaseException as rollback_exc:
+                    rollback_errors.append(f"owner {lock.lock_path}: {rollback_exc}")
+            try:
+                _generic_orphan_atomic_write(manifest_path, manifest_before)
+            except BaseException as rollback_exc:
+                rollback_errors.append(f"manifest: {rollback_exc}")
+            try:
+                _generic_orphan_atomic_write(receipt_path, _generic_orphan_bytes({
+                    **committed, "state": "blocked", "error": f"{type(exc).__name__}: {exc}",
+                    "rollback_errors": rollback_errors, "blocked_at": _now_iso()}))
+            except BaseException as rollback_exc:
+                rollback_errors.append(f"receipt: {rollback_exc}")
+        if rollback_errors:
+            raise WorkflowRunCleanupQuarantineError(
+                "generic_orphan_recovery: group commit failed: "
+                f"{type(exc).__name__}: {exc}; rollback_errors={rollback_errors}") from exc
+        raise
+    for snapshot, member in zip(snapshots, group):
+        lock = snapshot["lock"]
+        lock.owner = {**member["released_owner"], _GENERIC_ORPHAN_MARKER: {
+            **marker, "lock_path": str(lock.lock_path),
+            "physical_resource": member["physical_resource"]}}
+        # Suppress diagnostic release() rewrites of receipt-bound owner bytes.
+        # The next ordinary acquirer starts with its own unquarantined instance.
+        lock._quarantined = True
+    return committed
+
+
+def _generic_predispatch_object(raw: bytes) -> dict[str, Any]:
+    def unique(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
+        value: dict[str, Any] = {}
+        for key, item in pairs:
+            if key in value:
+                raise ValueError("duplicate recovery metadata key")
+            value[key] = item
+        return value
+
+    value = json.loads(raw, object_pairs_hook=unique)
+    if not isinstance(value, dict):
+        raise ValueError("recovery metadata must be an object")
+    return value
+
+
+def _guard_generic_predispatch_run_only_recovery_receipt(
+    lock: EvaluationRunLock, owner: Mapping[str, Any],
+) -> dict[str, Any] | None:
+    """Keep an unfinished Run-only transition closed even without its sidecar.
+
+    Physical inspections in this receipt are historical evidence. A later
+    normal owner of the physical resource does not invalidate a committed Run
+    closure and is never inspected or rewritten by ordinary Run admission.
+    """
+    lock._fh.seek(0)
+    raw_owner = lock._fh.read()
+    if os.path.lexists(lock.quarantine_path):
+        try:
+            raw_fence = lock.quarantine_path.read_bytes()
+        except OSError:
+            # Keep the existing unreadable-sidecar handling for old fences.
+            raw_fence = b""
+        if b'"generic_predispatch_run_only_recovery"' in raw_fence:
+            raise WorkflowRunCleanupQuarantineError(
+                "generic_predispatch_run_only_recovery: unresolved Run-only fence "
+                "cannot be cleared by a generic recovery callback", owner=owner)
+    if _GENERIC_PREDISPATCH_MARKER not in owner:
+        if b'"generic_predispatch_run_only_recovery"' not in raw_owner:
+            return None
+        raise WorkflowRunCleanupQuarantineError(
+            "generic_predispatch_run_only_recovery: malformed recovery owner",
+            owner=owner)
+    try:
+        if _generic_predispatch_object(raw_owner) != owner:
+            raise ValueError("recovery owner changed")
+        marker = owner[_GENERIC_PREDISPATCH_MARKER]
+        if not isinstance(marker, Mapping):
+            raise ValueError("invalid owner marker")
+        receipt_path = _generic_orphan_path(Path(marker["receipt_path"]), existing=True)
+        raw = receipt_path.read_bytes()
+        receipt = _generic_predispatch_object(raw)
+        if (receipt.get("schema") != _GENERIC_PREDISPATCH_SCHEMA
+                or type(receipt.get("schema_version")) is not int
+                or receipt["schema_version"] != 1
+                or receipt.get("recovery_scope") != "predispatch_run_only"
+                or receipt.get("state") != "committed"
+                or hashlib.sha256(raw).hexdigest() != marker.get("receipt_sha256")
+                or owner.get("state") != "released"
+                or owner.get("physical_resource") is not None
+                or _GENERIC_ORPHAN_MARKER in owner
+                or owner.get("run_id") != lock.run_dir.name
+                or owner.get("run_dir") != str(lock.run_dir)
+                or receipt.get("run_id") != owner.get("run_id")
+                or receipt.get("session_id") != owner.get("session_id")
+                or receipt.get("run_dir") != str(lock.run_dir)
+                or marker.get("lock_path") != str(lock.lock_path)
+                or marker.get("physical_resource") is not None
+                or any(marker.get(key) != receipt.get(key) for key in (
+                    "recovery_id", "run_id", "session_id", "run_dir"))):
+            raise ValueError("receipt is incomplete, changed or foreign")
+        group = receipt.get("group")
+        plain_owner = {key: value for key, value in owner.items()
+                       if key != _GENERIC_PREDISPATCH_MARKER}
+        if (not isinstance(group, list) or len(group) != 1
+                or not isinstance(group[0], dict)
+                or group[0].get("lock_path") != str(lock.lock_path)
+                or group[0].get("lock_run_dir") != str(lock.run_dir)
+                or group[0].get("physical_resource") is not None
+                or group[0].get("released_owner") != plain_owner):
+            raise ValueError("receipt does not bind this released Run owner")
+        inspections = receipt.get("inspected_resources")
+        if not isinstance(inspections, list) or not inspections:
+            raise ValueError("read-only physical inspection evidence is missing")
+        resources: set[str] = set()
+        for row in inspections:
+            if not isinstance(row, dict):
+                raise ValueError("invalid physical inspection evidence")
+            resource = row.get("physical_resource")
+            if (not isinstance(resource, str) or not resource.startswith("dut:")
+                    or resource in resources):
+                raise ValueError("physical inspection group is invalid")
+            resources.add(resource)
+            expected = EvaluationRunLock.for_resource(resource, owner={})
+            owner_bytes = base64.b64decode(row["owner_base64"], validate=True)
+            historical_owner = _generic_predispatch_object(owner_bytes)
+            if (row.get("lock_path") != str(expected.lock_path)
+                    or row.get("lock_run_dir") != str(expected.run_dir)
+                    or row.get("owner_sha256") != hashlib.sha256(owner_bytes).hexdigest()
+                    or historical_owner.get("state") != "released"
+                    or historical_owner.get("physical_resource") != resource
+                    or historical_owner.get("purpose") not in _GENERIC_PREDISPATCH_PHYSICAL_PURPOSES):
+                raise ValueError("physical inspection does not bind its historical owner")
+        manifest_path = _generic_orphan_path(
+            Path(receipt["manifest_path"]), existing=True)
+        if (manifest_path != lock.run_dir / "run_manifest.json"
+                or hashlib.sha256(manifest_path.read_bytes()).hexdigest()
+                != receipt.get("manifest_after_sha256")):
+            raise ValueError("committed Run lifecycle changed")
+        return receipt
+    except (OSError, ValueError, TypeError, KeyError, AttributeError) as exc:
+        raise WorkflowRunCleanupQuarantineError(
+            "generic_predispatch_run_only_recovery: unresolved receipt blocks admission: "
+            + str(exc), owner=owner) from exc
+
+
+def validate_generic_predispatch_run_only_recovery_owner(
+    lock: EvaluationRunLock,
+) -> dict[str, Any]:
+    """Validate a committed Run-only receipt under the existing Run flock."""
+    _generic_orphan_lock_bytes(lock)
+    receipt = _guard_generic_predispatch_run_only_recovery_receipt(
+        lock, lock._read_owner())
+    if receipt is None:
+        raise WorkflowRunCleanupQuarantineError(
+            "generic_predispatch_run_only_recovery: released Run receipt is missing")
+    return receipt
+
+
+def commit_generic_predispatch_run_only_recovery(
+    *, run_lock: EvaluationRunLock,
+    physical_locks: Mapping[str, EvaluationRunLock],
+    receipt_path: Path, receipt_data: Mapping[str, Any],
+    manifest_path: Path, manifest_before: bytes,
+    manifest_after: bytes | Mapping[str, Any],
+) -> dict[str, Any]:
+    """Durably cancel one validated pre-dispatch Run without releasing a DUT.
+
+    The public validator proves the original session, its complete process
+    quiescence, absence of dispatch and genuine earlier normal resource release.
+    This explicit transition changes only the interrupted Run owner, its
+    lifecycle manifest, its Run fence and this receipt. Every physical lock
+    remains held for inspection; its owner bytes and fence remain untouched.
+    This is deliberately separate from the strict physical-group recovery.
+    """
+    def require(condition: bool, message: str) -> None:
+        if not condition:
+            raise WorkflowRunCleanupQuarantineError(
+                "generic_predispatch_run_only_recovery: " + message)
+
+    data = dict(receipt_data)
+    require(data.get("schema") == _GENERIC_PREDISPATCH_SCHEMA
+            and type(data.get("schema_version")) is int and data["schema_version"] == 1
+            and data.get("recovery_scope") == "predispatch_run_only",
+            "explicit Run-only receipt schema and scope are required")
+    require(all(isinstance(data.get(key), str) and data[key].strip()
+                for key in ("recovery_id", "run_id", "session_id", "run_dir")),
+            "receipt identity is incomplete")
+    require(data["run_id"] == run_lock.run_dir.name
+            and data["run_dir"] == str(run_lock.run_dir), "receipt Run differs")
+    require(isinstance(physical_locks, Mapping) and bool(physical_locks),
+            "the complete physical DUT inspection group is required")
+    physical_snapshots: list[dict[str, Any]] = []
+    for resource, lock in sorted(physical_locks.items()):
+        require(isinstance(resource, str) and resource.startswith("dut:")
+                and lock is not run_lock, "only bound physical DUT inspection locks are admitted")
+        expected = EvaluationRunLock.for_resource(resource, owner={})
+        require(lock.lock_path == expected.lock_path, "physical resource lock differs")
+        raw = _generic_orphan_lock_bytes(lock)
+        try:
+            owner = _generic_predispatch_object(raw)
+        except (ValueError, TypeError, UnicodeError) as exc:
+            raise WorkflowRunCleanupQuarantineError(
+                "generic_predispatch_run_only_recovery: invalid physical owner") from exc
+        require(raw == lock._recovery_owner_bytes and owner == lock.previous_owner
+                and owner.get("schema") == "onnx-splitpoint/evaluation-run-lock"
+                and type(owner.get("schema_version")) is int and owner["schema_version"] == 1
+                and owner.get("physical_resource") == resource
+                and owner.get("purpose") in _GENERIC_PREDISPATCH_PHYSICAL_PURPOSES
+                and owner.get("state") == "released"
+                and owner.get("run_dir") == str(lock.run_dir)
+                and isinstance(owner.get("run_id"), str) and bool(owner["run_id"].strip())
+                and isinstance(owner.get("hostname"), str) and bool(owner["hostname"].strip())
+                and type(owner.get("pid")) is int and owner["pid"] > 0
+                and all(isinstance(owner.get(key), str) and bool(owner[key].strip())
+                        for key in ("acquired_at", "released_at")),
+                "physical inspection requires an unchanged normal released Generic owner")
+        require(not any(key.endswith("_recovery") for key in owner)
+                and not os.path.lexists(lock.quarantine_path),
+                "physical recovery markers and quarantines remain fenced")
+        from datetime import datetime, timezone
+        try:
+            acquired, released = (datetime.fromisoformat(owner[key].replace("Z", "+00:00"))
+                                  for key in ("acquired_at", "released_at"))
+            require(acquired.tzinfo is not None and released.tzinfo is not None
+                    and acquired <= released <= datetime.now(timezone.utc),
+                    "physical normal release timestamps are not concrete")
+        except (ValueError, TypeError) as exc:
+            raise WorkflowRunCleanupQuarantineError(
+                "generic_predispatch_run_only_recovery: invalid physical release timestamps") from exc
+        physical_snapshots.append({"lock": lock, "owner_bytes": raw,
+            "descriptor": {"physical_resource": resource, "lock_path": str(lock.lock_path),
+                "lock_run_dir": str(lock.run_dir), "owner_sha256": hashlib.sha256(raw).hexdigest(),
+                "owner_base64": base64.b64encode(raw).decode("ascii")}})
+    require(len({str(lock.lock_path) for lock in [run_lock, *physical_locks.values()]})
+            == len(physical_locks) + 1, "duplicate inspection locks")
+
+    def unchanged_physical() -> None:
+        for snapshot in physical_snapshots:
+            lock = snapshot["lock"]
+            require(_generic_orphan_lock_bytes(lock) == snapshot["owner_bytes"]
+                    and not os.path.lexists(lock.quarantine_path),
+                    "physical inspection owner or quarantine changed under recovery")
+
+    receipt_path = Path(receipt_path).expanduser()
+    require(receipt_path.is_absolute() and not receipt_path.is_symlink()
+            and not any(parent.is_symlink() for parent in receipt_path.parents), "unsafe receipt path")
+    receipt_path.parent.mkdir(parents=True, exist_ok=True)
+    receipt_path = _generic_orphan_path(receipt_path)
+    manifest_path = _generic_orphan_path(Path(manifest_path), existing=True)
+    require(manifest_path == run_lock.run_dir / "run_manifest.json",
+            "manifest is outside the bound original Run")
+    all_locks = [run_lock, *physical_locks.values()]
+    require(receipt_path not in {manifest_path, *(lock.lock_path for lock in all_locks),
+                                *(lock.quarantine_path for lock in all_locks)},
+            "receipt collides with a Run or physical inspection file")
+    require(isinstance(manifest_before, bytes), "original manifest bytes are required")
+    after_bytes = (manifest_after if isinstance(manifest_after, bytes)
+                   else _generic_orphan_bytes(manifest_after))
+    try:
+        before, after = (_generic_predispatch_object(raw)
+                         for raw in (manifest_before, after_bytes))
+    except (ValueError, TypeError, UnicodeError) as exc:
+        raise WorkflowRunCleanupQuarantineError(
+            "generic_predispatch_run_only_recovery: invalid manifest") from exc
+    reference = {"recovery_id": data["recovery_id"], "session_id": data["session_id"],
+                 "receipt_path": str(receipt_path)}
+    existing_reference = after.get(_GENERIC_PREDISPATCH_MARKER, {})
+    require(isinstance(existing_reference, dict)
+            and all(existing_reference.get(key, value) == value
+                    for key, value in reference.items()), "foreign lifecycle recovery reference")
+    after[_GENERIC_PREDISPATCH_MARKER] = {**existing_reference, **reference}
+    after_bytes = _generic_orphan_bytes(after)
+    require(before.get("schema") == "onnx-splitpoint/evaluation-run-manifest"
+            and before.get("status") == "running"
+            and before.get("run_id") == data["run_id"]
+            and before.get("current_session_id") == data["session_id"]
+            and after.get("run_id") == data["run_id"]
+            and after.get("current_session_id") == data["session_id"]
+            and after.get("status") == "cancelled" and after.get("technical_status") == "cancelled",
+            "manifest closure is not bound to the interrupted original session")
+    lifecycle_fields = {"status", "technical_status", "updated_at", "execution_sessions",
+                        _GENERIC_PREDISPATCH_MARKER}
+    require({key: value for key, value in before.items() if key not in lifecycle_fields}
+            == {key: value for key, value in after.items() if key not in lifecycle_fields},
+            "Run-only recovery cannot alter stages or scientific results")
+    original_sessions, closed_sessions = before.get("execution_sessions"), after.get("execution_sessions")
+    require(isinstance(original_sessions, list) and isinstance(closed_sessions, list)
+            and len(original_sessions) == len(closed_sessions), "session journal differs")
+    found = 0
+    session_fields = {"status", "finished_at", "interrupted_at", "last_updated_at",
+                      _GENERIC_PREDISPATCH_MARKER}
+    for old, closed in zip(original_sessions, closed_sessions):
+        require(isinstance(old, dict) and isinstance(closed, dict), "invalid session journal")
+        if old.get("session_id") == data["session_id"]:
+            found += 1
+            require(old.get("status") == "running" and closed.get("status") == "cancelled"
+                    and {key: value for key, value in old.items() if key not in session_fields}
+                    == {key: value for key, value in closed.items() if key not in session_fields},
+                    "only the interrupted session lifecycle may change")
+            if _GENERIC_PREDISPATCH_MARKER in closed:
+                require(isinstance(closed[_GENERIC_PREDISPATCH_MARKER], dict)
+                        and all(closed[_GENERIC_PREDISPATCH_MARKER].get(key) == value
+                                for key, value in reference.items()), "foreign session recovery reference")
+        else:
+            require(old == closed, "a foreign session changed")
+    require(found == 1, "original session is not unique")
+    inspected = [snapshot["descriptor"] for snapshot in physical_snapshots]
+    input_sha256 = _canonical_sha256({"receipt_data": data, "manifest_path": str(manifest_path),
+        "manifest_before_sha256": hashlib.sha256(manifest_before).hexdigest(),
+        "manifest_after_sha256": hashlib.sha256(after_bytes).hexdigest(),
+        "run_lock_path": str(run_lock.lock_path), "inspected_resources": inspected})
+    if receipt_path.exists():
+        try:
+            existing = _generic_predispatch_object(receipt_path.read_bytes())
+        except (ValueError, TypeError, UnicodeError) as exc:
+            raise WorkflowRunCleanupQuarantineError(
+                "generic_predispatch_run_only_recovery: existing receipt is unreadable") from exc
+        require(existing.get("state") == "committed" and existing.get("input_sha256") == input_sha256,
+                "existing receipt is incomplete, changed or foreign")
+        require(manifest_path.read_bytes() == after_bytes, "committed lifecycle changed")
+        require(validate_generic_predispatch_run_only_recovery_owner(run_lock) == existing,
+                "Run owner refers to a foreign receipt")
+        unchanged_physical()
+        return existing
+
+    owner_bytes = _generic_orphan_lock_bytes(run_lock)
+    try:
+        owner = _generic_predispatch_object(owner_bytes)
+    except (ValueError, TypeError, UnicodeError) as exc:
+        raise WorkflowRunCleanupQuarantineError(
+            "generic_predispatch_run_only_recovery: invalid original Run owner") from exc
+    require(owner_bytes == run_lock._recovery_owner_bytes and owner == run_lock.previous_owner
+            and owner.get("schema") == "onnx-splitpoint/evaluation-run-lock"
+            and type(owner.get("schema_version")) is int and owner["schema_version"] == 1
+            and owner.get("state") in {"running", "quarantined"}
+            and owner.get("run_id") == data["run_id"]
+            and owner.get("run_dir") == data["run_dir"]
+            and owner.get("session_id") == data["session_id"]
+            and owner.get("physical_resource") is None,
+            "original interrupted Run owner identity changed")
+    require(not any(key.endswith("_recovery") for key in owner),
+            "a previous Run recovery marker remains unresolved")
+    _generic_orphan_path(run_lock.quarantine_path)
+    fence_bytes = (run_lock.quarantine_path.read_bytes()
+                   if run_lock.quarantine_path.exists() else None)
+    if fence_bytes is not None:
+        try:
+            fence = _generic_predispatch_object(fence_bytes)
+        except (ValueError, TypeError, UnicodeError) as exc:
+            raise WorkflowRunCleanupQuarantineError(
+                "generic_predispatch_run_only_recovery: invalid original Run fence") from exc
+        require(fence.get("schema") == "onnx-splitpoint/evaluation-run-lock-quarantine"
+                and fence.get("state") == "quarantined"
+                and fence.get("run_id") == run_lock.run_dir.name
+                and fence.get("run_dir") == str(run_lock.run_dir)
+                and fence.get("owner") == {"reason": "previous_writer_terminated_uncleanly",
+                                          "previous_owner": owner},
+                "foreign or unsupported Run fence remains unresolved")
+    require(manifest_path.read_bytes() == manifest_before, "original manifest changed under recovery")
+    unchanged_physical()
+    prepared_at = _now_iso()
+    released_owner = {**owner, "state": "released", "released_at": prepared_at}
+    member = {"lock_path": str(run_lock.lock_path), "lock_run_dir": str(run_lock.run_dir),
+        "physical_resource": None, "quarantine_path": str(run_lock.quarantine_path),
+        "original_owner_sha256": hashlib.sha256(owner_bytes).hexdigest(),
+        "original_owner_base64": base64.b64encode(owner_bytes).decode("ascii"),
+        "original_fence_sha256": (hashlib.sha256(fence_bytes).hexdigest() if fence_bytes is not None else None),
+        "original_fence_base64": (base64.b64encode(fence_bytes).decode("ascii") if fence_bytes is not None else None),
+        "released_owner": released_owner}
+    committed = {**data, "state": "committed", "input_sha256": input_sha256,
+        "commit_prepared_at": prepared_at, "manifest_path": str(manifest_path),
+        "manifest_before_sha256": hashlib.sha256(manifest_before).hexdigest(),
+        "manifest_before_base64": base64.b64encode(manifest_before).decode("ascii"),
+        "manifest_after_sha256": hashlib.sha256(after_bytes).hexdigest(),
+        "group": [member], "inspected_resources": inspected}
+    committed_bytes = _generic_orphan_bytes(committed)
+    marker = {"receipt_path": str(receipt_path), "receipt_sha256": hashlib.sha256(committed_bytes).hexdigest(),
+        "lock_path": str(run_lock.lock_path), "physical_resource": None,
+        **{key: data[key] for key in ("recovery_id", "run_id", "session_id", "run_dir")}}
+    _generic_orphan_path(manifest_path, existing=True)
+    _generic_orphan_path(run_lock.quarantine_path)
+    require(_generic_orphan_lock_bytes(run_lock) == owner_bytes
+            and manifest_path.read_bytes() == manifest_before
+            and (run_lock.quarantine_path.read_bytes()
+                 if os.path.lexists(run_lock.quarantine_path) else None) == fence_bytes,
+            "original Run owner, manifest or quarantine changed before commit")
+    unchanged_physical()
+    try:
+        _generic_orphan_atomic_write(receipt_path, _generic_orphan_bytes({**committed, "state": "committing"}))
+        unchanged_physical()
+        run_lock.commit_quarantine_fence({"reason": "generic_predispatch_run_only_recovery_committing",
+            "previous_owner": owner, _GENERIC_PREDISPATCH_MARKER: marker})
+        run_lock.write_recovery_owner({**released_owner, _GENERIC_PREDISPATCH_MARKER: marker})
+        _generic_orphan_atomic_write(manifest_path, after_bytes)
+        unchanged_physical()
+        run_lock.quarantine_path.unlink()
+        _generic_orphan_sync_directory(run_lock.quarantine_path.parent)
+        unchanged_physical()
+        _generic_orphan_atomic_write(receipt_path, committed_bytes)
+        unchanged_physical()
+    except BaseException as exc:
+        rollback_errors: list[str] = []
+        sidecar_restored = False
+        try:
+            _generic_orphan_atomic_write(run_lock.quarantine_path,
+                fence_bytes if fence_bytes is not None else _generic_orphan_bytes({
+                    "schema": "onnx-splitpoint/evaluation-run-lock-quarantine",
+                    "schema_version": 1, "state": "quarantined",
+                    "run_id": run_lock.run_dir.name, "run_dir": str(run_lock.run_dir),
+                    "quarantined_at": _now_iso(), "owner": {
+                        "reason": "generic_predispatch_run_only_recovery_blocked",
+                        "previous_owner": owner, _GENERIC_PREDISPATCH_MARKER: marker}}))
+            sidecar_restored = True
+        except BaseException as rollback_exc:
+            rollback_errors.append(f"Run fence: {rollback_exc}")
+        if sidecar_restored:
+            try:
+                run_lock._fh.seek(0)
+                run_lock._fh.truncate(0)
+                run_lock._fh.write(owner_bytes)
+                run_lock._fh.flush()
+                os.fsync(run_lock._fh.fileno())
+            except BaseException as rollback_exc:
+                rollback_errors.append(f"Run owner: {rollback_exc}")
+        else:
+            rollback_errors.append("Run owner: kept receipt marker without a durable sidecar")
+        try:
+            _generic_orphan_atomic_write(manifest_path, manifest_before)
+        except BaseException as rollback_exc:
+            rollback_errors.append(f"manifest: {rollback_exc}")
+        try:
+            _generic_orphan_atomic_write(receipt_path, _generic_orphan_bytes({**committed, "state": "blocked",
+                "error": f"{type(exc).__name__}: {exc}", "rollback_errors": rollback_errors,
+                "blocked_at": _now_iso()}))
+        except BaseException as rollback_exc:
+            rollback_errors.append(f"receipt: {rollback_exc}")
+        if rollback_errors:
+            raise WorkflowRunCleanupQuarantineError(
+                "generic_predispatch_run_only_recovery: Run commit failed: "
+                f"{type(exc).__name__}: {exc}; rollback_errors={rollback_errors}") from exc
+        raise
+    run_lock.owner = {**released_owner, _GENERIC_PREDISPATCH_MARKER: marker}
+    run_lock._quarantined = True
+    return committed

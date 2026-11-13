@@ -1,0 +1,14 @@
+best_native_fps,candidate_count,exact_hit,generic_choice,generic_choice_uid,loss_pct,model,native_best,native_best_uid,selected_native_fps,selected_native_uid,setup
+1551.6267412219636,17,True,b135,generic|mobilenet_v3_large|DeepX|deepx_to_trt|b135,0.0,mobilenet_v3_large,b135,native|mobilenet_v3_large|DeepX|deepx_to_trt|b135,1551.6267412219636,native|mobilenet_v3_large|DeepX|deepx_to_trt|b135,DeepX
+1142.9046825798443,9,True,b074,generic|mobilenet_v3_large|H10|hailo10h_to_trt|b074,0.0,mobilenet_v3_large,b074,native|mobilenet_v3_large|H10|hailo10h_to_trt|b074,1142.9046825798443,native|mobilenet_v3_large|H10|hailo10h_to_trt|b074,H10
+993.083599,8,True,b027,generic|mobilenet_v3_large|H8|hailo8_to_trt|b027,0.0,mobilenet_v3_large,b027,native|mobilenet_v3_large|H8|hailo8_to_trt|b027,993.083599,native|mobilenet_v3_large|H8|hailo8_to_trt|b027,H8
+729.0349421337696,20,False,b102,generic|regnet_x_1_6gf|DeepX|deepx_to_trt|b102,3.186939292963442,regnet_x_1_6gf,b109,native|regnet_x_1_6gf|DeepX|deepx_to_trt|b109,705.8010411034752,native|regnet_x_1_6gf|DeepX|deepx_to_trt|b102,DeepX
+1367.1124837764846,20,False,b132,generic|regnet_x_1_6gf|H10|hailo10h_to_trt|b132,14.077145098981692,regnet_x_1_6gf,b123,native|regnet_x_1_6gf|H10|hailo10h_to_trt|b123,1174.6620757689764,native|regnet_x_1_6gf|H10|hailo10h_to_trt|b132,H10
+617.505899,20,False,b066,generic|regnet_x_1_6gf|H8|hailo8_to_trt|b066,5.476326145995247,regnet_x_1_6gf,b073,native|regnet_x_1_6gf|H8|hailo8_to_trt|b073,583.689262,native|regnet_x_1_6gf|H8|hailo8_to_trt|b066,H8
+781.5417294013049,19,False,b081,generic|resnet50|DeepX|deepx_to_trt|b081,0.6185926374273509,resnet50,b104,native|resnet50|DeepX|deepx_to_trt|b104,776.7071698048061,native|resnet50|DeepX|deepx_to_trt|b081,DeepX
+1099.5381472990744,19,True,b095,generic|resnet50|H10|hailo10h_to_trt|b095,0.0,resnet50,b095,native|resnet50|H10|hailo10h_to_trt|b095,1099.5381472990744,native|resnet50|H10|hailo10h_to_trt|b095,H10
+581.33212,19,False,b002,generic|resnet50|H8|hailo8_to_trt|b002,4.711109546123138,resnet50,b038,native|resnet50|H8|hailo8_to_trt|b038,553.944927,native|resnet50|H8|hailo8_to_trt|b002,H8
+49.75397642714195,2,True,b062,generic|yolo11l|DeepX|deepx_to_trt|b062,0.0,yolo11l,b062,native|yolo11l|DeepX|deepx_to_trt|b062,49.75397642714195,native|yolo11l|DeepX|deepx_to_trt|b062,DeepX
+98.21568777636374,3,True,b043,generic|yolo26m|DeepX|deepx_to_trt|b043,0.0,yolo26m,b043,native|yolo26m|DeepX|deepx_to_trt|b043,98.21568777636374,native|yolo26m|DeepX|deepx_to_trt|b043,DeepX
+163.35948835722328,2,True,b021,generic|yolo26s|DeepX|deepx_to_trt|b021,0.0,yolo26s,b021,native|yolo26s|DeepX|deepx_to_trt|b021,163.35948835722328,native|yolo26s|DeepX|deepx_to_trt|b021,DeepX
+51.603252154708095,1,True,b009,generic|yolov7_paper|DeepX|deepx_to_trt|b009,0.0,yolov7_paper,b009,native|yolov7_paper|DeepX|deepx_to_trt|b009,51.603252154708095,native|yolov7_paper|DeepX|deepx_to_trt|b009,DeepX

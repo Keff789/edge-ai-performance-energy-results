@@ -1,0 +1,73 @@
+{
+  "caption": "Weights fitted with one complete model held out. Each fit uses the other six models on all three devices. The communication weight fixes the scale. The tensor weight remains fixed because all measured cuts have zero tensor penalty.",
+  "rows": [
+    {
+      "held_out_model": "mobilenet_v3_large",
+      "model_label": "MobileNetV3-L",
+      "test_groups": 3,
+      "train_groups": 18,
+      "w_comm": 1.0,
+      "w_imb": 0.5693428877923351,
+      "w_tensors": 0.2
+    },
+    {
+      "held_out_model": "regnet_x_1_6gf",
+      "model_label": "RegNet-X",
+      "test_groups": 3,
+      "train_groups": 18,
+      "w_comm": 1.0,
+      "w_imb": 0.15799266978091375,
+      "w_tensors": 0.2
+    },
+    {
+      "held_out_model": "resnet50",
+      "model_label": "ResNet-50",
+      "test_groups": 3,
+      "train_groups": 18,
+      "w_comm": 1.0,
+      "w_imb": 0.025084670679042267,
+      "w_tensors": 0.2
+    },
+    {
+      "held_out_model": "yolo11l",
+      "model_label": "YOLO11l",
+      "test_groups": 3,
+      "train_groups": 18,
+      "w_comm": 1.0,
+      "w_imb": 0.15799266978091375,
+      "w_tensors": 0.2
+    },
+    {
+      "held_out_model": "yolo26m",
+      "model_label": "YOLO26m",
+      "test_groups": 3,
+      "train_groups": 18,
+      "w_comm": 1.0,
+      "w_imb": 0.15799266978091375,
+      "w_tensors": 0.2
+    },
+    {
+      "held_out_model": "yolo26s",
+      "model_label": "YOLO26s",
+      "test_groups": 3,
+      "train_groups": 18,
+      "w_comm": 1.0,
+      "w_imb": 0.15799266978091375,
+      "w_tensors": 0.2
+    },
+    {
+      "held_out_model": "yolov7_paper",
+      "model_label": "YOLOv7",
+      "test_groups": 3,
+      "train_groups": 18,
+      "w_comm": 1.0,
+      "w_imb": 0.15799266978091375,
+      "w_tensors": 0.2
+    }
+  ],
+  "source_sha256": {
+    "fold_weights.csv": "2f47163cfa7a669104be1d2f9993d9ba56506a140218a699d7ed16e4c3d9f554",
+    "key_budget_results.csv": "0a495693118564991898dddc562c5ff7e19c71484a38e2cbde81d667979d0ecd",
+    "summary.json": "15f1a2238c3346b96f46b98c90dc116c81ae0660e7efd7f59b7e5f584cad8220"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "rq2-weighted-reproduction-v1",
+  "source_baseline_commit": "d323645da002b5e24949d6106429c078e509a00b",
+  "generator": "scripts/supplementary-studies/rq2-weighted-20261020/reproduce.py",
+  "operation_proxy_version": "analytic-operation-proxy-r29-extended-v1",
+  "original_graph_input_manifest": "results/supplementary-studies/rq2-weighted-20261020/inputs/MANIFEST.json",
+  "original_archive_sha256": "c9fe64b0a67ff74c987b030d9db412dbaa5008a293d85dbf9fb05b504b1ace1a",
+  "source_sha256": {
+    "scripts/supplementary-studies/rq2-weighted-20261020/analyze_weighted.py": "dc739f891853960e3b7062f2ca33e644feead156fac97fdccaaf7fcee55e4076",
+    "scripts/supplementary-studies/rq2-weighted-20261020/augment_graph_features.py": "355b2a621942aed248a61bde70885b40fc2336d637c92f8288b0314290c3ee82",
+    "scripts/supplementary-studies/rq2-weighted-20261020/check_sensitivity.py": "e69d9a5ccf3915700706e70de20abfbe85ff7c03a54e75e34c363822b903d211",
+    "scripts/supplementary-studies/rq2-weighted-20261020/reproduce.py": "47a199cd70368c612ce1980c449a5b41f427b44f6d54912473737e3fa8d24081"
+  },
+  "measurement_inputs_sha256": {
+    "results/split-inference/publication-inputs/mlsys-r22/evidence/r15/audit_regnet/results/calibration_candidate_audit.csv": "cba79522f785c3e844910795fcb90bd2504938b5d7aef403db96702e79cac8ed",
+    "results/split-inference/publication-inputs/mlsys-r22/evidence/r15/audit_regnet/results/calibration_predictions.csv": "7b9c920580ff9bb6f2bf6a15d93c929fd3650949c81eb008b29766d0cef4534f",
+    "results/supplementary-studies/rq2-all-cuts-20261020/current/all_k_group_curves.csv": "fb00cb6117da64fe30a882b61a7147c8a019f45cddf65db48335e4282865b0b5"
+  },
+  "derived_sha256": {
+    "analysis/aggregate_curves.csv": "fbafa273eede4166fcb54dc6f9384f0b8923f27e43ebc8eeafc55b2bfa621140",
+    "analysis/candidate_features.csv": "e05d0df3111bcefabca689849ffbee936ebd33f5d8ae41dce86f9b224d26b681",
+    "analysis/complete_rankings.csv": "de5ef93d27d245aae84320baa27f4276b42f3f81a813b8994359d40d17ff31e0",
+    "analysis/fold_memberships.csv": "43da206c0d1a75185289b847c4e3e444924fea4a570a73c04107763dca840b3e",
+    "analysis/fold_weights.csv": "2f47163cfa7a669104be1d2f9993d9ba56506a140218a699d7ed16e4c3d9f554",
+    "analysis/group_curves.csv": "0c00a05cd8e4de976a6c2e95e7283d715c957d000d4431445dd8f96dfaea8b7d",
+    "analysis/key_budget_results.csv": "0a495693118564991898dddc562c5ff7e19c71484a38e2cbde81d667979d0ecd",
+    "analysis/sensitivity_fixed_weights.json": "469a1c6e2b21c8ad59f9cd968dc8cafb1ee0e867debe5aa633e03f2370bdeb1a",
+    "analysis/summary.json": "15f1a2238c3346b96f46b98c90dc116c81ae0660e7efd7f59b7e5f584cad8220",
+    "analysis/task_curves.csv": "b6e6554144fdebffffa2ca86ea28a8103e165dd9fd374385229a6aed85005fe2",
+    "features/added_operation_nodes.json": "d091417ad63760338f76338bdc6ba47aa4ca8b7906c13e5f557881afcac84ee7",
+    "features/graph_boundary_features.csv": "05856138ad5eb5de1f05f8b57d234d4bd14bd2acc0713a4b3cc984955d24da2e",
+    "features/node_operation_audit.json": "ae649c429d4d6316671d343891feb74d37a903bbad4ca7e5f1e7465bb9c289d2",
+    "features/normalization_universes.json": "a00131150b5578f31ac7ecb184f5b2bf71a24f2a435cde725020cf864a8619d0",
+    "features/provenance.json": "5fbdf2abd97d2875b06cb714b5d180778c79a5cce6e3438bc92ad7e8273e862d",
+    "features/validation.json": "17ada975107dd14a6a8f038e035d750483e90a7c3c1c9a6d2ddffabd613723a7"
+  },
+  "scope": "187 quality-eligible measured pairs in 21 equal model/device groups. Seven whole-model holdouts. The pooled optimum is explicitly in-sample. The operation extension is a new analytic proxy, not recovered historical rules.",
+  "deduplication": "Original graph inputs, bindings, license and capture provenance exist once in the compact input archive. Derived sensitivity features are temporary; their fixed-weight ranking checks are exported in analysis."
+}

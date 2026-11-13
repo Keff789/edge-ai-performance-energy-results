@@ -1,0 +1,1568 @@
+{
+  "audit_date": "2026-10-20",
+  "bounded_search": [
+    {
+      "checked": [
+        "evidence/quality_historical_source.json",
+        "evidence/quality_prediction_inventory.json",
+        "evidence/identity_runtime_manifest.json"
+      ],
+      "compressed_bytes_traversed": 165939200,
+      "finding": "Original audit records later central evaluation and missing contemporaneous evaluator hash.",
+      "full_archive_rehashed": false,
+      "method": "Exact named members; hashes checked against original payload manifest. Stream stopped after the three members.",
+      "scope": "confirmation archive"
+    },
+    {
+      "checked": [
+        "RESOLVER.json: selected result, receipt, request, handoff, code files and DX56_QUALITY_COMMANDS.json references"
+      ],
+      "finding": "13 quality_metrics.py source aliases map to one preserved 5c8333e8 source; no per-evaluation binding is supplied. DX56_QUALITY_COMMANDS.json is unresolved.",
+      "method": "Manifest lookup of exact paths and hashes; no whole-disk scan.",
+      "quality_metrics_source_alias_count": 13,
+      "scope": "canonical revision3 source resolver"
+    },
+    {
+      "checked": [
+        "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135",
+        "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135",
+        "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/prepared/dataset_fixed/DX56_QUALITY_COMMANDS.json"
+      ],
+      "finding": "Receipt records request/result/command/handoff digests but no evaluator, helper, Python or NumPy hash/version. Referenced command file absent from canonical payload.",
+      "method": "Read selected receipt, result, handoff, request and original quality row; inspect their immediate directory entries.",
+      "scope": "exact revision3 operation directories"
+    },
+    {
+      "checked": [
+        "models/mobilenet_v3_large/benchmark_results/quality_inputs/orin_nx_deepx_m1_01/results/b135/results_deepx_m1_to_tensorrt/task_quality_inputs/composed_request.json",
+        "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/task_quality_inputs/composed_request.json",
+        "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/task_quality_inputs/composed_candidate.json",
+        "quality_management/references/mobilenet_v3_large/by_source_contract/b1f2b618ba0bcc5b806f5972975ab26fa76a1cdeed365e8ed3bf537e0c02221e/canonical_cpu_reference.json"
+      ],
+      "finding": "Original runtime request and later replay request are distinct, both preserved. Predictions are present. No metric or interval recalculated.",
+      "method": "Read only the manifest-bound files; exact hash, format, record-count and paired-image-order checks.",
+      "scope": "original request and prediction pair"
+    },
+    {
+      "checked": [
+        "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/operations_evidence/operations/token_saving_batch_20261009/delta_abschluss_20261012/controller_gate_fix/source_release/onnx_splitpoint_tool/quality_metrics.py",
+        "_supplements/native_fairness_rev3_20261013/payload/_provenance/final_implementation_20261008/source_snapshot/onnx_splitpoint_tool/quality_service.py",
+        "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/operations_evidence/operations/token_saving_batch_20261009/delta_abschluss_20261012/controller_gate_fix/source_release/onnx_splitpoint_tool/quality_statistics.py"
+      ],
+      "finding": "Factory/classification implementation, dynamic import dispatch and numerical-environment helper found; none is tied by an execution receipt to the 10 October evaluation.",
+      "method": "Exact resolver-bound files; source excerpts inspected without import or execution.",
+      "scope": "preserved evaluator and adjacent dispatch/helpers"
+    }
+  ],
+  "path_normalization": {
+    "/home/kmika/": "historical_home:/",
+    "/home/kmika/Reports/native-fairness-rev3-20261007/": "revision3_report:/",
+    "/home/kmika/Reports/thesis_v49_hardware_confirmation_20261018/": "confirmation_payload:/",
+    "/home/kmika/mnt/sprite/diss_results/": "canonical_archive:/",
+    "/home/nx/": "historical_device_home:/",
+    "/homes/kmika/diss_results/": "canonical_archive:/"
+  },
+  "prediction_format_checks": {
+    "candidate_metric_keys": [
+      "label_id",
+      "top1_hit",
+      "top5_hit"
+    ],
+    "candidate_record_keys": [
+      "candidate",
+      "image_id",
+      "label_id",
+      "label_name"
+    ],
+    "candidate_records": 5000,
+    "operation": "Hash and JSON-format checks only; no metric or bootstrap recomputation.",
+    "paired_image_order_checked_records": 5000,
+    "paired_image_order_matches": true,
+    "performed_on": "2026-10-20",
+    "record_schema_sample_count_per_file": 1,
+    "reference_metric_keys": [
+      "label_id",
+      "top1_hit",
+      "top5_hit"
+    ],
+    "reference_record_keys": [
+      "image_id",
+      "label_id",
+      "label_name",
+      "reference"
+    ],
+    "reference_records": 5000,
+    "request_image_order_matches": true
+  },
+  "schema": "thesis-v53/mobile-evaluator-source-bindings/v1",
+  "scope": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135 only",
+  "source_projection_policy": "Values are exact JSON-pointer projections or inclusive source-line excerpts, except declared historical-path substitutions. Source hashes always refer to original complete file bytes.",
+  "sources": {
+    "archive_reference": {
+      "kind": "json_projection",
+      "location": {
+        "path": "results/supplementary-studies/thesis-v49-confirmation-20261019/ARCHIVE_REFERENCE.json",
+        "root": "results_repository"
+      },
+      "projection": {
+        "": {
+          "access": "Private internal Sprite storage; no public raw-data download is provided by this repository.",
+          "archive_integrity": {
+            "archive_member_manifest_sha256": "7bfa8e24cfe37f79530198f0d756fab5d0cb921c5c97cf737cf184262a0712f6",
+            "archive_repacked_or_modified": false,
+            "existing_full_member_check_reused": true,
+            "verification_utc": "2026-10-19T08:39:31.620530+00:00",
+            "verified_members": 30816
+          },
+          "archive_payload_root": "thesis_v49_hardware_confirmation_20261018",
+          "files": [
+            {
+              "bytes": 2857836513,
+              "filename": "thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz",
+              "role": "archive",
+              "sha256": "edbd618ad91ef658a866c73c61defd00389e3ca9218c33ea22d87a6ec3721915",
+              "sprite_relative_path": "deliverables/thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz"
+            },
+            {
+              "bytes": 133,
+              "filename": "thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz.sha256",
+              "role": "checksum_file",
+              "sha256": "b43eaa94bf1c0b95649027c92b3454fabca0c248467ab63793f425b7efce7797",
+              "sprite_relative_path": "deliverables/thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz.sha256"
+            },
+            {
+              "bytes": 762,
+              "filename": "thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz.receipt.json",
+              "role": "packager_receipt",
+              "sha256": "43ab8ff4d076850bf2931d16aac277649a8afb525e43af89b39a35e35f3a9d35",
+              "sprite_relative_path": "deliverables/thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz.receipt.json"
+            },
+            {
+              "bytes": 5900378,
+              "filename": "thesis_v49_hardware_confirmation_energy_supplement_20261019.bundle",
+              "role": "campaign_git_bundle",
+              "sha256": "cfc2a5a08f8b8007979d47deb90f75dfb779f5585d67aed53e93d704c27a3e6b",
+              "sprite_relative_path": "deliverables/thesis_v49_hardware_confirmation_energy_supplement_20261019.bundle"
+            },
+            {
+              "bytes": 53673,
+              "filename": "thesis_v49_hardware_confirmation_energy_supplement_20261019.archive_closeout.json",
+              "role": "archive_closeout",
+              "sha256": "0283b6a9fa9487c6a82b04869c383723e3658e557a079c32d6c30a7fab66dde9",
+              "sprite_relative_path": "deliverables/thesis_v49_hardware_confirmation_energy_supplement_20261019.archive_closeout.json"
+            }
+          ],
+          "physical_qualification": "C remains zero; backup and publication do not complete the physical calibration or uncertainty evidence.",
+          "reproduction_scope": "Compact inputs in this repository reproduce numerical tables and paired quality percentiles; raw waveform, complete prediction and environment audits require this archive and its separately identified external dependencies.",
+          "schema": "v49-confirmation-external-archive-reference-v1",
+          "source_campaign_branch": "thesis/v49-energy-supplement-20261019",
+          "source_campaign_commit": "64c1f487645d20a844d66ccdf8f65dcc80b96065",
+          "sprite_backup": {
+            "all_source_target_SHA256_equal": true,
+            "backup_manifest": {
+              "bytes": 19049,
+              "relative_path": "backup_manifest.json",
+              "sha256": "ab8d5a26fe13cab7c4498cf2dacc1de93d50d74b8b45a0a39b1efd7d80a8e9bc"
+            },
+            "completed_utc": "2026-10-19T14:43:42.191955+00:00",
+            "internal_mount_directory": "canonical_archive:/_supplements/thesis_v49_confirmation_energy_supplement_20261019",
+            "internal_remote_directory": "canonical_archive:/_supplements/thesis_v49_confirmation_energy_supplement_20261019",
+            "public_url": null,
+            "status": "verified_and_published",
+            "verification_method": "Full target readback via mounted SSHFS after close/fsync and advisory fadvise; not remote SSH execution.",
+            "verified_payload_file_count": 15
+          }
+        }
+      },
+      "source_bytes": 3743,
+      "source_sha256": "dae52fef649bac5391d1ef512864c993bec13c612c3f58b6ce5a1be012cc120e"
+    },
+    "candidate_predictions": {
+      "kind": "json_projection",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/task_quality_inputs/composed_candidate.json",
+        "root": "canonical_archive"
+      },
+      "projection": {
+        "/pairing_key": "image_id",
+        "/quality_contract_sha256": "b84de5db6a5525a3773602804acd56c810dbe3eea9bcebf61ebe1b2298ea71c9",
+        "/record_count": 5000,
+        "/records/0": {
+          "candidate": {
+            "label_id": 65,
+            "top1_hit": true,
+            "top5_hit": true
+          },
+          "image_id": "ILSVRC2012_val_00000001.JPEG",
+          "label_id": 65,
+          "label_name": "65"
+        },
+        "/schema": "onnx-splitpoint/task-quality-candidate-input",
+        "/schema_version": 1,
+        "/task": "classification"
+      },
+      "source_bytes": 761609,
+      "source_sha256": "1d6913772b0e814a52f0ae38498e93e4b84ef997f0e13a4672a961df06ca723a"
+    },
+    "central_receipt": {
+      "kind": "json_projection",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/CENTRAL_EVALUATION.json",
+        "root": "canonical_archive"
+      },
+      "projection": {
+        "": {
+          "Current_outputs_changed": false,
+          "accuracy_assessment": {
+            "absolute_loss_pp": 1.6800000000000037,
+            "accuracy_class": "reference_close",
+            "confidence_level": 0.95,
+            "policy_id": "accuracy_reporting_v1",
+            "relative_loss": 0.022795115332428815,
+            "relative_loss_ci": [
+              0.013268841900690675,
+              0.0321719456069794
+            ],
+            "technical_fail": false,
+            "uncertainty": "supported",
+            "uncertainty_reason": ""
+          },
+          "at": "2026-10-10T18:36:03.402707+00:00",
+          "bootstrap_repetitions": 1000,
+          "case": "b135",
+          "decision": "reference_close",
+          "hardware_inference": false,
+          "model": "mobilenet_v3_large",
+          "new_CPU_reference_inference": false,
+          "record_count": 5000,
+          "reference_sha256": "79b5392e1f2d0da3af2fa4269bf12ad14695865d172f17b21eb7f1c4a55a99b7",
+          "result": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/composed_central_result.json",
+          "result_sha256": "a3500ca11de946e0cacf3ffeadf6d8f52e96bb80016e3c17d873441c52fb15cb",
+          "seed": 20260710,
+          "source_commands": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/prepared/dataset_fixed/DX56_QUALITY_COMMANDS.json",
+          "source_commands_sha256": "21250c2d6295df18ad50a81c88d338bd5aa8e93eb5ff498f735f47e6daeca59d",
+          "source_handoff": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/HANDOFF.json",
+          "source_handoff_sha256": "ec55cbc0f07ae4394b5227324d2db1554dd28ba972a54f43bed6d2cb603b6406",
+          "source_request": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/task_quality_inputs/composed_request.json",
+          "source_request_sha256": "4a5702ca2dff3ec3414917370ffd59e3d23d421c5296be3187886669957b30ff",
+          "technical_status": "completed"
+        }
+      },
+      "source_bytes": 2017,
+      "source_date": "2026-10-10T18:36:03.402707+00:00",
+      "source_sha256": "a57405f5e554449b89f9455dfbb7a664fa1597ff68e96b214bee81a5e3e20643"
+    },
+    "central_result": {
+      "kind": "json_projection",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/composed_central_result.json",
+        "root": "canonical_archive"
+      },
+      "projection": {
+        "/algorithm_version": "management_paired_quality_v2:classification-accuracy-v2",
+        "/annotations_sha256": "cc5d568ce4363dadf13f09acf703e5bcb21b3a9143681de03cc29f242cb729e7",
+        "/bootstrap_workers_effective": 4,
+        "/bootstrap_workers_requested": 4,
+        "/cache_hit": false,
+        "/candidate_predictions_sha256": "e14f1f1825e4f0b2070a1a335636055220f932da872b515790b54acdd2faddce",
+        "/evaluation_fingerprint": "2723b4e07f3a96a0b2035b2ee3a9406c3d47e6f834607d49d24cd9cf22199180",
+        "/execution_device": "management_cpu",
+        "/execution_location": "management_node",
+        "/gpu_used": false,
+        "/n": 5000,
+        "/primary": {
+          "bootstrap_elapsed_s": 2.151111460989341,
+          "bootstrap_engine": "management_process_pool:onnx_splitpoint_tool.quality_metrics:classification_quality_evaluator",
+          "bootstrap_repetitions": 1000,
+          "bootstrap_repetitions_requested": 1000,
+          "bootstrap_skipped_reason": "",
+          "candidate": 0.7202,
+          "candidate_hits": 3601,
+          "ci_computed": true,
+          "ci_high": -0.0096,
+          "ci_low": -0.023804999999999996,
+          "decision_basis": "paired_bootstrap_lower_bound",
+          "delta": -0.0168,
+          "gate_bound_value": -0.023804999999999996,
+          "legacy_decision": "fail",
+          "margin": 0.01,
+          "metric": "top1_accuracy",
+          "n": 5000,
+          "point_estimate_comparison_basis": "integer_hit_counts",
+          "prediction_identity_verified": false,
+          "reference": 0.737,
+          "reference_hits": 3685,
+          "sample_count": 5000,
+          "status": "completed",
+          "uncertainty_status": "computed_bootstrap"
+        },
+        "/reference_identity": "runner_reference_artifact:79b5392e1f2d0da3af2fa4269bf12ad14695865d172f17b21eb7f1c4a55a99b7",
+        "/reference_predictions_sha256": "9f0a84a35ee7eaf14318eb5fb44aceea67cbc975240d9ce5c6cbb200fd8dd718",
+        "/request_id": "classification:composed:d50d6d5d43d2e9a58350e1e5499ed276ed7f2b6c67f79d5a07c10088f8ae8900",
+        "/schema": "onnx-splitpoint/management-paired-quality-result",
+        "/seed_schema": {
+          "image_count": 5000,
+          "repetitions": 1000,
+          "schema": "numpy-pcg64-index-plan-v1",
+          "seed": 20260710
+        },
+        "/status": "completed",
+        "/worker_model": "process_pool"
+      },
+      "source_bytes": 192703,
+      "source_sha256": "a3500ca11de946e0cacf3ffeadf6d8f52e96bb80016e3c17d873441c52fb15cb"
+    },
+    "evaluator_source": {
+      "excerpts": [
+        {
+          "first_line": 1,
+          "last_line": 137,
+          "text": "\"\"\"Prepared task metrics for management-side paired quality evaluation.\n\nFactories in this module implement the payload contract exported by the remote\nrunner.  They contain no backend or hardware code: inputs are already-decoded,\nper-image semantic predictions.  Detection matching is prepared once and each\nbootstrap repetition only applies image multiplicities to cached events.\n\"\"\"\nfrom __future__ import annotations\n\nfrom typing import Any, Mapping, Sequence\n\nimport numpy as np\n\n\ndef _gate_config(config: Mapping[str, Any]) -> dict[str, Any]:\n    raw = config.get(\"metric_gate_config\")\n    return dict(raw) if isinstance(raw, Mapping) else {}\n\n\ndef _margin(config: Mapping[str, Any], key: str, default: float = 0.01) -> float:\n    value: Any = _gate_config(config)\n    for component in key.split(\".\"):\n        if not isinstance(value, Mapping):\n            return float(default)\n        value = value.get(component)\n    try:\n        return float(value)\n    except (TypeError, ValueError):\n        return float(default)\n\n\nclass _ClassificationAccuracyEvaluator:\n    def __init__(\n        self,\n        reference_records: Sequence[Mapping[str, Any]],\n        candidate_records: Sequence[Mapping[str, Any]],\n        annotations: Any,\n        config: Mapping[str, Any],\n    ) -> None:\n        def values(records: Sequence[Mapping[str, Any]], outer: str, metric: str) -> np.ndarray:\n            out = []\n            for record in records:\n                nested = record.get(outer)\n                if not isinstance(nested, Mapping) or nested.get(metric) is None:\n                    raise ValueError(f\"classification quality record is missing {outer}.{metric}\")\n                out.append(1.0 if bool(nested.get(metric)) else 0.0)\n            return np.asarray(out, dtype=np.float64)\n\n        self.n = len(reference_records)\n        for side, records in ((\"reference\", reference_records), (\"candidate\", candidate_records)):\n            if side in config.get(\"metric_sides\", (\"reference\", \"candidate\")):\n                setattr(self, side + \"_top1\", values(records, side, \"top1_hit\"))\n                setattr(self, side + \"_top5\", values(records, side, \"top5_hit\"))\n        self.top1_margin = _margin(config, \"non_inferiority_margin\")\n        self.top5_margin = _margin(config, \"guardrails.top5_accuracy_margin\")\n\n    def evaluate_absolute(self, multiplicities, side):\n        \"\"\"One side of the same integral paired classification calculation.\"\"\"\n        weights = np.asarray(multiplicities, dtype=np.float64).reshape(-1)\n        denominator = float(np.sum(weights))\n        if len(weights) != self.n or denominator <= 0 or not np.array_equal(weights, np.rint(weights)):\n            raise ValueError(\"classification component requires integral image multiplicities\")\n        result = {}\n        for name, suffix in ((\"primary\", \"top1\"), (\"guardrails.top5_accuracy\", \"top5\")):\n            total = float(np.dot(weights, getattr(self, side + \"_\" + suffix)))\n            result[name] = {\"value\": float(total / denominator),\n                            \"hits\": int(round(total)), \"sample_count\": int(round(denominator))}\n        return result\n\n    @staticmethod\n    def _component(\n        reference: np.ndarray,\n        candidate: np.ndarray,\n        weights: np.ndarray,\n        *,\n        metric: str,\n        margin: float,\n    ) -> dict[str, float | int | str]:\n        denominator = float(np.sum(weights))\n        reference_total = float(np.dot(weights, reference))\n        candidate_total = float(np.dot(weights, candidate))\n        reference_value = float(reference_total / denominator)\n        candidate_value = float(candidate_total / denominator)\n        component: dict[str, float | int | str] = {\n            \"metric\": metric,\n            \"candidate\": candidate_value,\n            \"reference\": reference_value,\n            \"delta\": candidate_value - reference_value,\n            \"margin\": float(margin),\n        }\n        # Point estimates and paired bootstrap multiplicities are integral for\n        # classification accuracy.  Preserve those exact hit counts so the\n        # inclusive non-inferiority boundary does not depend on subtracting two\n        # independently rounded binary64 ratios (for example 398/500 - 403/500).\n        rounded_weights = np.rint(weights)\n        if np.array_equal(weights, rounded_weights):\n            component.update(\n                {\n                    \"candidate_hits\": int(round(candidate_total)),\n                    \"reference_hits\": int(round(reference_total)),\n                    \"sample_count\": int(round(denominator)),\n                }\n            )\n        return component\n\n    def evaluate(self, multiplicities: np.ndarray) -> Mapping[str, Any]:\n        weights = np.asarray(multiplicities, dtype=np.float64).reshape(-1)\n        if len(weights) != len(self.reference_top1) or float(np.sum(weights)) <= 0.0:\n            raise ValueError(\"classification evaluator received invalid image multiplicities\")\n        return {\n            \"primary\": self._component(\n                self.reference_top1,\n                self.candidate_top1,\n                weights,\n                metric=\"top1_accuracy\",\n                margin=self.top1_margin,\n            ),\n            \"guardrails\": {\n                \"top5_accuracy\": self._component(\n                    self.reference_top5,\n                    self.candidate_top5,\n                    weights,\n                    metric=\"top5_accuracy\",\n                    margin=self.top5_margin,\n                )\n            },\n        }\n\n\ndef classification_quality_evaluator(\n    reference_records: Sequence[Mapping[str, Any]],\n    candidate_records: Sequence[Mapping[str, Any]],\n    annotations: Any,\n    config: Mapping[str, Any],\n) -> _ClassificationAccuracyEvaluator:\n    return _ClassificationAccuracyEvaluator(reference_records, candidate_records, annotations, config)\n\n"
+        }
+      ],
+      "execution_binding": "inspected preserved source; not bound to the 2026-10-10 evaluation",
+      "kind": "text_excerpts",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/operations_evidence/operations/token_saving_batch_20261009/delta_abschluss_20261012/controller_gate_fix/source_release/onnx_splitpoint_tool/quality_metrics.py",
+        "root": "canonical_archive"
+      },
+      "source_bytes": 23407,
+      "source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82"
+    },
+    "historical_evaluator_audit": {
+      "kind": "json_projection",
+      "location": {
+        "path": "evidence/quality_historical_source.json",
+        "root": "confirmation_payload"
+      },
+      "projection": {
+        "/created_at": "2026-10-18T13:06:41.867929+00:00",
+        "/historical_evaluator/dependency_version_binding": "No per-session pycocotools distribution version/hash found in run_manifest environment; do not backdate currently installed 2.0.11.",
+        "/historical_evaluator/historical_sessions": [
+          {
+            "critical_code_digest_sha256": "sha256:b0e101354fd0d4699b1bab1f7459b131193d42aa9c69d1a448481c855df2e1b2",
+            "environment": {
+              "created_at": "2026-09-25T10:39:21+02:00",
+              "cwd": "historical_home:/ONNX-Splitpoint-Tool",
+              "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+              "python": "3.12.3",
+              "python_executable": "historical_home:/ONNX-Splitpoint-Tool/.venv/bin/python",
+              "tool_version": "2.91.0"
+            },
+            "json_pointer": "/execution_sessions/0/tool_build/critical_module_sha256/quality_metrics.py",
+            "matches_preserved_source": true,
+            "quality_metrics_sha256": "sha256:5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+            "session_id": "c3e8c9cbf2134566ad881b9628170048",
+            "session_index": 0,
+            "started_at": "2026-09-25T10:39:21+02:00",
+            "tool_version": "2.91.0",
+            "workflow_version": "v2.91.0"
+          },
+          {
+            "critical_code_digest_sha256": "sha256:060bf8b683c1300629a1da7b36fc06f1545783d24411421d9abfecdc8bb6a68e",
+            "environment": {
+              "created_at": "2026-09-29T17:47:40+02:00",
+              "cwd": "historical_home:/ONNX-Splitpoint-Tool",
+              "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+              "python": "3.12.3",
+              "python_executable": "historical_home:/ONNX-Splitpoint-Tool/.venv/bin/python",
+              "tool_version": "2.91.1"
+            },
+            "json_pointer": "/execution_sessions/1/tool_build/critical_module_sha256/quality_metrics.py",
+            "matches_preserved_source": true,
+            "quality_metrics_sha256": "sha256:5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+            "session_id": "6411bfbd3aff49f68b28fbdf1fe8e473",
+            "session_index": 1,
+            "started_at": "2026-09-29T17:47:40+02:00",
+            "tool_version": "2.91.1",
+            "workflow_version": "v2.91.1"
+          },
+          {
+            "critical_code_digest_sha256": "sha256:8ead74609d824aa5cf5deb455cfb3cfdc3f1d198949f186d1058d593e98190ad",
+            "environment": {
+              "created_at": "2026-09-29T22:46:01+02:00",
+              "cwd": "historical_home:/ONNX-Splitpoint-Tool",
+              "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+              "python": "3.12.3",
+              "python_executable": "historical_home:/ONNX-Splitpoint-Tool/.venv/bin/python",
+              "tool_version": "2.91.1"
+            },
+            "json_pointer": "/execution_sessions/2/tool_build/critical_module_sha256/quality_metrics.py",
+            "matches_preserved_source": true,
+            "quality_metrics_sha256": "sha256:5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+            "session_id": "36c94370381f4892a529957b51b4f0ce",
+            "session_index": 2,
+            "started_at": "2026-09-29T22:46:01+02:00",
+            "tool_version": "2.91.1",
+            "workflow_version": "v2.91.1"
+          },
+          {
+            "critical_code_digest_sha256": "sha256:d92cc6b1e2a4724e998ba65d6013961b489a475b6cac11366ab2d6ac13ff4539",
+            "environment": {
+              "created_at": "2026-09-30T21:02:16+02:00",
+              "cwd": "historical_home:/ONNX-Splitpoint-Tool",
+              "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+              "python": "3.12.3",
+              "python_executable": "historical_home:/ONNX-Splitpoint-Tool/.venv/bin/python",
+              "tool_version": "2.91.2"
+            },
+            "json_pointer": "/execution_sessions/3/tool_build/critical_module_sha256/quality_metrics.py",
+            "matches_preserved_source": true,
+            "quality_metrics_sha256": "sha256:5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+            "session_id": "8c017118d9884a57a7e850a8e05cb8ff",
+            "session_index": 3,
+            "started_at": "2026-09-30T21:02:16+02:00",
+            "tool_version": "2.91.2",
+            "workflow_version": "v2.91.2"
+          },
+          {
+            "critical_code_digest_sha256": "sha256:28a9aa1b79824f37e07a9d2847519cae80c1e17d645fff1a386465da7e7accd5",
+            "environment": {
+              "created_at": "2026-09-30T23:13:47+02:00",
+              "cwd": "historical_home:/ONNX-Splitpoint-Tool",
+              "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+              "python": "3.12.3",
+              "python_executable": "historical_home:/ONNX-Splitpoint-Tool/.venv/bin/python",
+              "tool_version": "2.91.2"
+            },
+            "json_pointer": "/execution_sessions/4/tool_build/critical_module_sha256/quality_metrics.py",
+            "matches_preserved_source": true,
+            "quality_metrics_sha256": "sha256:5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+            "session_id": "ee04fc2d98054200acd0e8ab4a32b674",
+            "session_index": 4,
+            "started_at": "2026-09-30T23:13:47+02:00",
+            "tool_version": "2.91.2",
+            "workflow_version": "v2.91.2"
+          },
+          {
+            "critical_code_digest_sha256": "sha256:3d1213993be18d112909e5f5143e15f422645fae4f1910c37dd83293d525eca4",
+            "environment": {
+              "created_at": "2026-10-01T09:27:24+02:00",
+              "cwd": "historical_home:/ONNX-Splitpoint-Tool",
+              "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+              "python": "3.12.3",
+              "python_executable": "historical_home:/ONNX-Splitpoint-Tool/.venv/bin/python",
+              "tool_version": "2.91.2"
+            },
+            "json_pointer": "/execution_sessions/5/tool_build/critical_module_sha256/quality_metrics.py",
+            "matches_preserved_source": true,
+            "quality_metrics_sha256": "sha256:5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+            "session_id": "e24ed69fbcb545ddaa25189acc6529d0",
+            "session_index": 5,
+            "started_at": "2026-10-01T09:27:24+02:00",
+            "tool_version": "2.91.2",
+            "workflow_version": "v2.91.2"
+          }
+        ],
+        "/historical_evaluator/historical_supplement_sessions": [
+          {
+            "critical_code_digest_sha256": "sha256:b4b8ff9366b966cd46520dddff8762c5f2ed1d9e57aae74e95eafa7cd1de9df1",
+            "environment": {
+              "created_at": "2026-10-03T00:44:36+02:00",
+              "cwd": "historical_home:/ONNX-Splitpoint-Tool",
+              "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+              "python": "3.12.3",
+              "python_executable": "historical_home:/ONNX-Splitpoint-Tool/.venv/bin/python",
+              "tool_version": "2.91.2"
+            },
+            "json_pointer": "/execution_sessions/0/tool_build/critical_module_sha256/quality_metrics.py",
+            "matches_preserved_source": true,
+            "quality_metrics_sha256": "sha256:5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+            "session_id": "0ae9b34cdc4449efaedf9bd108c9c387",
+            "session_index": 0,
+            "started_at": "2026-10-03T00:44:36+02:00",
+            "tool_version": "2.91.2",
+            "workflow_version": "v2.91.2"
+          },
+          {
+            "critical_code_digest_sha256": "sha256:3257e15403aade04978e9bcd6a8aef41b1eb939cf2468377dbcc7e19b3d2bfee",
+            "environment": {
+              "created_at": "2026-10-03T10:42:31+02:00",
+              "cwd": "historical_home:/ONNX-Splitpoint-Tool",
+              "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+              "python": "3.12.3",
+              "python_executable": "historical_home:/ONNX-Splitpoint-Tool/.venv/bin/python",
+              "tool_version": "2.91.2"
+            },
+            "json_pointer": "/execution_sessions/1/tool_build/critical_module_sha256/quality_metrics.py",
+            "matches_preserved_source": true,
+            "quality_metrics_sha256": "sha256:5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+            "session_id": "56d3d5e7b2c4485c81d52b8d660170b5",
+            "session_index": 1,
+            "started_at": "2026-10-03T10:42:31+02:00",
+            "tool_version": "2.91.2",
+            "workflow_version": "v2.91.2"
+          },
+          {
+            "critical_code_digest_sha256": "sha256:57bf6bf0b5c4af13fdc17e4cfcd59ffdad843153f2c9049e99f385963a53d5c0",
+            "environment": {
+              "created_at": "2026-10-03T12:12:20+02:00",
+              "cwd": "historical_home:/ONNX-Splitpoint-Tool",
+              "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+              "python": "3.12.3",
+              "python_executable": "historical_home:/ONNX-Splitpoint-Tool/.venv/bin/python",
+              "tool_version": "2.91.2"
+            },
+            "json_pointer": "/execution_sessions/2/tool_build/critical_module_sha256/quality_metrics.py",
+            "matches_preserved_source": true,
+            "quality_metrics_sha256": "sha256:5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+            "session_id": "c5347557e819421b919138c245d5506e",
+            "session_index": 2,
+            "started_at": "2026-10-03T12:12:20+02:00",
+            "tool_version": "2.91.2",
+            "workflow_version": "v2.91.2"
+          },
+          {
+            "critical_code_digest_sha256": "sha256:3d9d394736faa977a04136aee21068ddd7642c4572db669fa6dc6f8f5571cb15",
+            "environment": {
+              "created_at": "2026-10-03T14:34:37+02:00",
+              "cwd": "historical_home:/ONNX-Splitpoint-Tool",
+              "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+              "python": "3.12.3",
+              "python_executable": "historical_home:/ONNX-Splitpoint-Tool/.venv/bin/python",
+              "tool_version": "2.91.2"
+            },
+            "json_pointer": "/execution_sessions/3/tool_build/critical_module_sha256/quality_metrics.py",
+            "matches_preserved_source": true,
+            "quality_metrics_sha256": "sha256:5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+            "session_id": "121992c1acc249ab9a04efe783f4bb6e",
+            "session_index": 3,
+            "started_at": "2026-10-03T14:34:37+02:00",
+            "tool_version": "2.91.2",
+            "workflow_version": "v2.91.2"
+          },
+          {
+            "critical_code_digest_sha256": "sha256:277f3c9c135623476505ab6fb011c3abcb6cab81a93704fcbf92b088e8bb7693",
+            "environment": {
+              "created_at": "2026-10-03T16:02:00+02:00",
+              "cwd": "historical_home:/ONNX-Splitpoint-Tool",
+              "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+              "python": "3.12.3",
+              "python_executable": "historical_home:/ONNX-Splitpoint-Tool/.venv/bin/python",
+              "tool_version": "2.91.2"
+            },
+            "json_pointer": "/execution_sessions/4/tool_build/critical_module_sha256/quality_metrics.py",
+            "matches_preserved_source": true,
+            "quality_metrics_sha256": "sha256:5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+            "session_id": "786379f5bc72469eaa28ade37d522d1a",
+            "session_index": 4,
+            "started_at": "2026-10-03T16:02:00+02:00",
+            "tool_version": "2.91.2",
+            "workflow_version": "v2.91.2"
+          },
+          {
+            "critical_code_digest_sha256": "sha256:76c6304274efbc67a29057f3480ebe5e25615c84006821d9de092d3214c9ff95",
+            "environment": {
+              "created_at": "2026-10-03T18:29:15+02:00",
+              "cwd": "historical_home:/ONNX-Splitpoint-Tool",
+              "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+              "python": "3.12.3",
+              "python_executable": "historical_home:/ONNX-Splitpoint-Tool/.venv/bin/python",
+              "tool_version": "2.91.2"
+            },
+            "json_pointer": "/execution_sessions/5/tool_build/critical_module_sha256/quality_metrics.py",
+            "matches_preserved_source": true,
+            "quality_metrics_sha256": "sha256:5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+            "session_id": "0183ed18a61149aba64ca6a90d51e5df",
+            "session_index": 5,
+            "started_at": "2026-10-03T18:29:15+02:00",
+            "tool_version": "2.91.2",
+            "workflow_version": "v2.91.2"
+          },
+          {
+            "critical_code_digest_sha256": "sha256:2b7956ded89e03a789914152392c77c26bda7d914b493488bbb858a66c5427ad",
+            "environment": {
+              "created_at": "2026-10-03T19:39:17+02:00",
+              "cwd": "historical_home:/ONNX-Splitpoint-Tool",
+              "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+              "python": "3.12.3",
+              "python_executable": "historical_home:/ONNX-Splitpoint-Tool/.venv/bin/python",
+              "tool_version": "2.91.2"
+            },
+            "json_pointer": "/execution_sessions/6/tool_build/critical_module_sha256/quality_metrics.py",
+            "matches_preserved_source": true,
+            "quality_metrics_sha256": "sha256:5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+            "session_id": "21c2de961c604bd2b2a4644fea5b6ebf",
+            "session_index": 6,
+            "started_at": "2026-10-03T19:39:17+02:00",
+            "tool_version": "2.91.2",
+            "workflow_version": "v2.91.2"
+          }
+        ],
+        "/historical_evaluator/preserved_release_manifest": {
+          "path": "historical_home:/Reports/thesis20-restabschluss-20260930/source-release-2.91.2/SOURCE_MANIFEST.json",
+          "sha256": "d4c73b1f98ceaef0e4fbc56b26b72c12fd24ece4d90937e1b14a20f2fe876f31",
+          "size_bytes": 385333
+        },
+        "/historical_evaluator/preserved_source": {
+          "path": "historical_home:/Reports/thesis20-restabschluss-20260930/source-release-2.91.2/onnx_splitpoint_tool/quality_metrics.py",
+          "sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+          "size_bytes": 23407
+        },
+        "/historical_run_manifest": {
+          "path": "canonical_archive:/run_manifest.json",
+          "sha256": "32be499859dd84a8a62207f6f1298c37d512bc26e856ec3834a75a08ebf9e7b1",
+          "size_bytes": 16878801
+        },
+        "/historical_supplement_run_manifest": {
+          "path": "historical_home:/Reports/thesis20-yolo-min3-augmentation-20261002_222904/runs/yolo_min3_20261002_222904/run_manifest.json",
+          "sha256": "a930b399e253e84da0a2de9eee1f1f6924103d2e4b81b350de17e473009a3eb8",
+          "size_bytes": 2007348
+        },
+        "/limitations": [
+          "Source reconstruction is not a new acquisition or numerical reevaluation. Original quality values are preserved.",
+          "Session build receipts bind evaluator source hash; third-party pycocotools runtime version/binary/source hash is not in inspected historical environment receipts.",
+          "Base campaign session receipts do not prove the source used by later independent evaluations. The two yolo_min3 selected cases have their own seven source-bound supplement sessions. MobilenetV3 b135 was centrally reevaluated on2026-10-10; its contemporaneous evaluator hash remains unavailable.",
+          "Independent official evaluation and admission/ranking consequences are emitted separately by the parent quality analysis.",
+          "All8 detector runner files now match request-bound hashes after targeted archive/runtime-file lookup and exact byte reconstruction for YOLO26. Imported helper availability and which optional decoder dispatch branch executed historically are not established by runner bytes alone."
+        ],
+        "/rows/0": {
+          "corroborating_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+          "exact_runner_bytes_status": "not_available_after_targeted_search",
+          "factory_recorded_in_result": "management_process_pool:onnx_splitpoint_tool.quality_metrics:classification_quality_evaluator",
+          "historical_central_evaluation_receipt": {
+            "Current_outputs_changed": false,
+            "at": "2026-10-10T18:36:03.402707+00:00",
+            "file": {
+              "path": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/CENTRAL_EVALUATION.json",
+              "sha256": "a57405f5e554449b89f9455dfbb7a664fa1597ff68e96b214bee81a5e3e20643",
+              "size_bytes": 2017
+            },
+            "hardware_inference": false,
+            "new_CPU_reference_inference": false,
+            "source_request_sha256": "4a5702ca2dff3ec3414917370ffd59e3d23d421c5296be3187886669957b30ff"
+          },
+          "historical_evaluator_binding": "contemporaneous_evaluator_hash_unavailable_for_20261010_evaluation",
+          "historical_evaluator_source_sha256": null,
+          "original_metric": {
+            "generation": "pre_refresh16_selected_evidence_reused",
+            "metric": "quality",
+            "original_current_quality_source_sha256": "81611542ccd975d7daf4fbc6180fe5ca040ac8e7d58537097860119c18dfd830",
+            "original_field": "rows[identity].accuracy_gate_metrics",
+            "remeasured_in_native_a4": "False",
+            "remeasured_in_refresh16": "False",
+            "repeat_or_image_n": "5000",
+            "repeat_sources": "",
+            "runtime": "deepx_to_trt",
+            "source": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/native_join/native_producer_validation_summary.json",
+            "source_sha256": "81611542ccd975d7daf4fbc6180fe5ca040ac8e7d58537097860119c18dfd830",
+            "uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135",
+            "unit": "top1_accuracy",
+            "value": "0.7202"
+          },
+          "original_quality_input_binding": {
+            "endpoint_contract_hash": "7e81637d07062cb8ef8bad5a0db478cab1a08ede42cf1c306f0e7757a4f670e1",
+            "model_sha256": "2f5e79b1e4280251e7b6eefe1d6161c4831e2fc27858e1e9fe2fac697f44489e",
+            "quality_join_endpoint": "",
+            "quality_join_endpoint_contract_hash": "",
+            "runtime_precision_identity": "float32_layout_fp16",
+            "source_endpoint_contract_hash": "",
+            "source_request_sha256": "4a5702ca2dff3ec3414917370ffd59e3d23d421c5296be3187886669957b30ff",
+            "validation_dataset_ground_truth_sha256": "3009dea074b0a14bc205b2c988477d461244b6346bd3f7492bac3507a6d837e1",
+            "validation_dataset_image_ids_sha256": "22eeac094b79c051c6388d3e242f8440ab72b4e08039ef515a89259f28f4e270",
+            "validation_dataset_sha256": "e7b6f648d6bc5e62f4108eecb72cc482bb3d2e6993d2dce88baa1f96f08d2b44"
+          },
+          "quality_metrics": {
+            "candidate": 0.7202,
+            "delta": -0.0168,
+            "n": 5000,
+            "reference": 0.737
+          },
+          "quality_summary": {
+            "path": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/native_join/native_producer_validation_summary.json",
+            "sha256": "81611542ccd975d7daf4fbc6180fe5ca040ac8e7d58537097860119c18dfd830",
+            "size_bytes": 1406387
+          },
+          "quality_summary_hash_matches_metric_sources": true,
+          "quality_summary_hash_matches_native_current": true,
+          "quality_summary_row_index": 0,
+          "reporting_policy_recorded_in_result": {
+            "confidence_level": 0.95,
+            "dataset_policy": "preserve_images_and_denominators",
+            "energy_window_policy": "unchanged_command",
+            "interval_kind": "paired_bootstrap_two_sided_relative_loss",
+            "loss_definition": "(reference-candidate)/reference",
+            "policy_id": "accuracy_reporting_v1",
+            "preserve_historical_results": true,
+            "primary_metrics": {
+              "classification": "top1_accuracy",
+              "detection": "coco_ap_50_95"
+            },
+            "quality_affects_technical_pass": false,
+            "relative_loss_threshold": 0.05,
+            "secondary_metrics": "report_warning_only",
+            "technical_fail_only": true,
+            "uncertainty_band_high": 0.07,
+            "uncertainty_band_low": 0.03
+          },
+          "request_bound_runner_sha256": "fb3b953dccffa4aebed5399ab35ec8f4ade1d74004127769892a7d61543f1b7d",
+          "request_candidates_checked": [
+            {
+              "path": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/task_quality_inputs/composed_request.json",
+              "sha256": "4a5702ca2dff3ec3414917370ffd59e3d23d421c5296be3187886669957b30ff"
+            },
+            {
+              "path": "historical_home:/Models/EvaluationRuns/RemoteBenchmarkRuns/Results/legacy_suite/1/thesis_20splits_n5000_b1000_20260925_20260925_103745_mobilenet_v3_large_orin_nx_deepx_m1_01/results/b135/results_deepx_m1_to_tensorrt/task_quality_inputs/composed_request.json",
+              "sha256": "0671d05997148b5b9dbfff1385a38d712562088b50a6785379d075a1c4413b13"
+            },
+            {
+              "path": "historical_home:/Models/EvaluationRuns/RemoteBenchmarkRuns/Results/legacy_suite/1/thesis_20splits_n5000_b1000_20260925_20260925_103745_mobilenet_v3_large_orin_nx_deepx_m1_01/results/b135/results_ort_tensorrt/task_quality_inputs/composed_request.json",
+              "sha256": "d27b059de09c3b29d84f22a17ae28a41ed1d3c695d8b16a916340635784d3a5c"
+            },
+            {
+              "path": "canonical_archive:/models/mobilenet_v3_large/benchmark_results/quality_inputs/orin_nx_deepx_m1_01/results/b135/results_deepx_m1_to_tensorrt/task_quality_inputs/composed_request.json",
+              "sha256": "0671d05997148b5b9dbfff1385a38d712562088b50a6785379d075a1c4413b13"
+            },
+            {
+              "path": "canonical_archive:/models/mobilenet_v3_large/benchmark_results/quality_inputs/orin_nx_deepx_m1_01/results/b135/results_ort_tensorrt/task_quality_inputs/composed_request.json",
+              "sha256": "d27b059de09c3b29d84f22a17ae28a41ed1d3c695d8b16a916340635784d3a5c"
+            }
+          ],
+          "request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+          "request_exact_match_paths": [
+            "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/task_quality_inputs/composed_request.json"
+          ],
+          "request_expected_sha256": "4a5702ca2dff3ec3414917370ffd59e3d23d421c5296be3187886669957b30ff",
+          "request_metadata": {
+            "dataset": {
+              "class_identity": "label_id",
+              "ground_truth_sha256": "3009dea074b0a14bc205b2c988477d461244b6346bd3f7492bac3507a6d837e1",
+              "image_count": 5000,
+              "image_ids_sha256": "22eeac094b79c051c6388d3e242f8440ab72b4e08039ef515a89259f28f4e270",
+              "manifest_name": "manifest.json",
+              "manifest_sha256": "e7b6f648d6bc5e62f4108eecb72cc482bb3d2e6993d2dce88baa1f96f08d2b44"
+            },
+            "decoder": null,
+            "metric_gate_config": {
+              "guardrails": {
+                "top5_accuracy_margin": 0.01
+              },
+              "non_inferiority_margin": 0.01,
+              "primary_metric": "top1_accuracy",
+              "reporting_policy": {
+                "confidence_level": 0.95,
+                "dataset_policy": "preserve_images_and_denominators",
+                "energy_window_policy": "unchanged_command",
+                "interval_kind": "paired_bootstrap_two_sided_relative_loss",
+                "loss_definition": "(reference-candidate)/reference",
+                "policy_id": "accuracy_reporting_v1",
+                "preserve_historical_results": true,
+                "primary_metrics": {
+                  "classification": "top1_accuracy",
+                  "detection": "coco_ap_50_95"
+                },
+                "quality_affects_technical_pass": false,
+                "relative_loss_threshold": 0.05,
+                "secondary_metrics": "report_warning_only",
+                "technical_fail_only": true,
+                "uncertainty_band_high": 0.07,
+                "uncertainty_band_low": 0.03
+              }
+            },
+            "nms": null,
+            "path": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/task_quality_inputs/composed_request.json",
+            "quality_contract_sha256": "b84de5db6a5525a3773602804acd56c810dbe3eea9bcebf61ebe1b2298ea71c9",
+            "quality_record_endpoint": {
+              "identity": {
+                "canonical_record_endpoint": "classification_topk_hits",
+                "implementation_runner_sha256": "fb3b953dccffa4aebed5399ab35ec8f4ade1d74004127769892a7d61543f1b7d",
+                "postprocessor_contract_sha256": "3b6f7eb93db9cfda7a083a389fa79737843396717209bf965ae7e7fbaebd756a",
+                "schema": "onnx-splitpoint/classification-quality-record-endpoint-contract",
+                "schema_version": 1,
+                "vendored_endpoint_attestor_sha256": "0667f3368b684ed5df2b801b8283a725d072722115a91f9cff2c3801a3396139"
+              },
+              "sha256": "987bac314ee59bf82ebd6ff1a0e44500c6a3941cbd762c0f45887291594b1586"
+            },
+            "record_count": 5000,
+            "routed_evaluator": "_ClassificationAccuracyEvaluator",
+            "sha256": "4a5702ca2dff3ec3414917370ffd59e3d23d421c5296be3187886669957b30ff",
+            "statistics": {
+              "bootstrap_repetitions": 1000,
+              "confidence_level": 0.95,
+              "decision": "lower_one_sided_bound",
+              "method": "paired_bootstrap",
+              "seed": 20260710
+            },
+            "task": "classification"
+          },
+          "retained_adjacent_runners": [
+            {
+              "matches_request_bound_runner": false,
+              "path": "historical_home:/Models/EvaluationRuns/RemoteBenchmarkRuns/Results/legacy_suite/1/thesis_20splits_n5000_b1000_20260925_20260925_103745_mobilenet_v3_large_orin_nx_deepx_m1_01/results/benchmark_suite.py",
+              "sha256": "5640fbea9dbbc5f0ab89e30fda34cac7160e6d4a5df106a83a9be294648e63ee",
+              "size_bytes": 599889
+            }
+          ],
+          "runner_bound_sha256": null,
+          "source_binding_scope_note": "This UID was centrally reevaluated on2026-10-10 from stored predictions. Original root campaign sessions do not bind the evaluator used for this later operation. Current/preserved evaluator bytes corroborate the implementation; no contemporaneous per-evaluation evaluator hash was found.",
+          "task": "classification",
+          "uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135"
+        },
+        "/rows/0/historical_evaluator_binding": "contemporaneous_evaluator_hash_unavailable_for_20261010_evaluation",
+        "/rows/0/historical_evaluator_source_sha256": null,
+        "/rows/0/request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "/rows/0/uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135",
+        "/rows/1/historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "/rows/1/historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "/rows/1/request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "/rows/1/uid": "native|mobilenet_v3_large|DeepX|native_full_deepx|full",
+        "/rows/10/historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "/rows/10/historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "/rows/10/request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "/rows/10/uid": "native|yolo26s|H8|hailo8_to_trt|b021",
+        "/rows/11/historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "/rows/11/historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "/rows/11/request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "/rows/11/uid": "native|yolo26s|DeepX|native_full_tensorrt|full",
+        "/rows/12/historical_evaluator_binding": "supplement_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "/rows/12/historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "/rows/12/request_eval_run_id": "yolo_min3_20261002_222904",
+        "/rows/12/uid": "native|yolov7_paper|H8|hailo8_to_trt|b066",
+        "/rows/13/historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "/rows/13/historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "/rows/13/request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "/rows/13/uid": "native|yolov7_paper|DeepX|native_full_deepx|full",
+        "/rows/2/historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "/rows/2/historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "/rows/2/request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "/rows/2/uid": "native|regnet_x_1_6gf|H10|hailo10h_to_trt|b123",
+        "/rows/3/historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "/rows/3/historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "/rows/3/request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "/rows/3/uid": "native|regnet_x_1_6gf|DeepX|native_full_deepx|full",
+        "/rows/4/historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "/rows/4/historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "/rows/4/request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "/rows/4/uid": "native|resnet50|H10|hailo10h_to_trt|b095",
+        "/rows/5/historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "/rows/5/historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "/rows/5/request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "/rows/5/uid": "native|resnet50|DeepX|native_full_deepx|full",
+        "/rows/6/historical_evaluator_binding": "supplement_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "/rows/6/historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "/rows/6/request_eval_run_id": "yolo_min3_20261002_222904",
+        "/rows/6/uid": "native|yolo11l|H10|hailo10h_to_trt|b120",
+        "/rows/7/historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "/rows/7/historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "/rows/7/request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "/rows/7/uid": "native|yolo11l|DeepX|native_full_deepx|full",
+        "/rows/8/historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "/rows/8/historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "/rows/8/request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "/rows/8/uid": "native|yolo26m|H10|hailo10h_to_trt|b043",
+        "/rows/9/historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "/rows/9/historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "/rows/9/request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "/rows/9/uid": "native|yolo26m|H8|native_full_tensorrt|full",
+        "/schema": "thesis-v49/historical-quality-source-reconstruction/v1",
+        "/source_excerpts/classification_evaluator": {
+          "excerpt": {
+            "path": "confirmation_payload:/evidence/quality_source_excerpts/classification_evaluator.py.txt",
+            "sha256": "f265f7aba8eb3073ea205313c6396d5916730da1af5053c27da28b368acf7205",
+            "size_bytes": 4851
+          },
+          "source": {
+            "path": "historical_home:/Reports/thesis20-restabschluss-20260930/source-release-2.91.2/onnx_splitpoint_tool/quality_metrics.py",
+            "sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+            "size_bytes": 23407
+          },
+          "source_lines": [
+            32,
+            137
+          ]
+        },
+        "/source_excerpts/service_factory_configuration": {
+          "excerpt": {
+            "path": "confirmation_payload:/evidence/quality_source_excerpts/service_factory_configuration.py.txt",
+            "sha256": "a648a949bf661949b5cd683d5e1a1c1d55f63fab9dc77eb8c1e961a39b5a8bde",
+            "size_bytes": 1412
+          },
+          "source": {
+            "path": "historical_home:/Reports/thesis20-restabschluss-20260930/source-release-2.91.2/onnx_splitpoint_tool/quality_service.py",
+            "sha256": "2aa8fcbecb0a04cfa66c9321c930a0b6261564c49061aed69a62759c3df216fd",
+            "size_bytes": 257796
+          },
+          "source_lines": [
+            3974,
+            4000
+          ]
+        }
+      },
+      "source_bytes": 271976,
+      "source_sha256": "2f2bf549ff9a68ea241b456e6cb19df345b2697bb5f02f58424769488f1c00f2"
+    },
+    "identity_runtime": {
+      "kind": "json_projection",
+      "location": {
+        "path": "evidence/identity_runtime_manifest.json",
+        "root": "confirmation_payload"
+      },
+      "projection": {
+        "/entries/0/backend": "deepx_to_trt",
+        "/entries/0/case": "b135",
+        "/entries/0/historical_current_result_row/case_uid": "native|revision3|mobilenet_v3_large|DeepX|deepx_to_trt|b135",
+        "/entries/0/kind": "split",
+        "/entries/0/metric_sources/quality": {
+          "expected_sha256": "81611542ccd975d7daf4fbc6180fe5ca040ac8e7d58537097860119c18dfd830",
+          "frozen_path": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/native_join/native_producer_validation_summary.json",
+          "verified_local_copies": [
+            "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/native_join/native_producer_validation_summary.json"
+          ]
+        },
+        "/entries/0/model": "mobilenet_v3_large",
+        "/entries/0/setup": "DeepX",
+        "/entries/0/setup_id": "orin_nx_deepx_m1_01",
+        "/entries/0/uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135",
+        "/schema": "thesis-v49/exact-selected-artifact-identities-v1",
+        "/selected_count": 14
+      },
+      "source_bytes": 998685,
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3"
+    },
+    "original_quality_result": {
+      "kind": "json_projection",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/native_join/native_producer_validation_summary.json",
+        "root": "canonical_archive"
+      },
+      "projection": {
+        "/rows/0/backend": "deepx_to_trt",
+        "/rows/0/case": "b135",
+        "/rows/0/eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "/rows/0/model": "mobilenet_v3_large",
+        "/rows/0/native_split_quality_binding/central_quality_selection": {
+          "backend": "deepx_to_trt",
+          "case_id": "b135",
+          "central_result_sha256": "7a476ab640fb10f9d675bdaa4680c45e455183c6dd2730b8c3573c07dc1fbb8d",
+          "eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+          "model_id": "mobilenet_v3_large",
+          "precision": "float32_layout_fp16",
+          "producer_binding_sha256": "f009cb7977f129baa21905c540a8ffc3343b051d132a4132e24b5ec4952be1f8",
+          "receipt_sha256": "75dca3095aec7da56b7ef64d285b7ac2ef97ef48d933f2c004bbce03dddc4c52",
+          "runtime_precision_identity": "float32_layout_fp16",
+          "schema": "onnx-splitpoint/native-split-quality-central-selection",
+          "schema_version": 1,
+          "setup_id": "orin_nx_deepx_m1_01",
+          "source_request_sha256": "0671d05997148b5b9dbfff1385a38d712562088b50a6785379d075a1c4413b13",
+          "source_run_id": "deepx_to_trt",
+          "task": "classification",
+          "variant": "composed"
+        },
+        "/rows/0/postmeasurement_dataset_quality_join/central_result": {
+          "path": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/composed_central_result.json",
+          "sha256": "a3500ca11de946e0cacf3ffeadf6d8f52e96bb80016e3c17d873441c52fb15cb"
+        },
+        "/rows/0/setup_id": "orin_nx_deepx_m1_01",
+        "/rows/0/source_request_sha256": "0671d05997148b5b9dbfff1385a38d712562088b50a6785379d075a1c4413b13",
+        "/rows/0/source_run_id": "deepx_to_trt",
+        "/rows/0/task_quality_gate": {
+          "accuracy_assessment": {
+            "absolute_loss_pp": 1.6800000000000037,
+            "accuracy_class": "reference_close",
+            "confidence_level": 0.95,
+            "policy_id": "accuracy_reporting_v1",
+            "relative_loss": 0.022795115332428815,
+            "relative_loss_ci": [
+              0.013268841900690675,
+              0.0321719456069794
+            ],
+            "technical_fail": false,
+            "uncertainty": "supported",
+            "uncertainty_reason": ""
+          },
+          "accuracy_warnings": [],
+          "canonical_reference": "management_cpu_ort_full_onnx",
+          "decision": "reference_close",
+          "evaluation_fingerprint": "2723b4e07f3a96a0b2035b2ee3a9406c3d47e6f834607d49d24cd9cf22199180",
+          "execution_location": "central_management",
+          "guardrails": {
+            "top5_accuracy": {
+              "bootstrap_elapsed_s": 2.151111460989341,
+              "bootstrap_engine": "management_process_pool:onnx_splitpoint_tool.quality_metrics:classification_quality_evaluator",
+              "bootstrap_repetitions": 1000,
+              "bootstrap_repetitions_requested": 1000,
+              "bootstrap_skipped_reason": "",
+              "candidate": 0.9038,
+              "candidate_hits": 4519,
+              "ci_computed": true,
+              "ci_high": -0.0014,
+              "ci_low": -0.0106,
+              "decision_basis": "paired_bootstrap_lower_bound",
+              "delta": -0.006,
+              "gate_bound_value": -0.0106,
+              "legacy_decision": "inconclusive",
+              "margin": 0.01,
+              "metric": "top5_accuracy",
+              "n": 5000,
+              "point_estimate_comparison_basis": "integer_hit_counts",
+              "prediction_identity_verified": false,
+              "reference": 0.9098,
+              "reference_hits": 4549,
+              "sample_count": 5000,
+              "status": "completed",
+              "uncertainty_status": "computed_bootstrap"
+            }
+          },
+          "legacy_decision": "fail",
+          "n": 5000,
+          "policy": {
+            "bootstrap_repetitions": 1000,
+            "bootstrap_seed": 20260710,
+            "canonical_reference": "canonical_full_onnx",
+            "classification_max_top1_drop": 0.01,
+            "classification_max_top5_drop": 0.01,
+            "classification_primary_metric": "top1_accuracy",
+            "confidence_level": 0.95,
+            "contract_only_eligible_for_ranking": false,
+            "dataset_tier": "final",
+            "decision_rule": "lower_one_sided_bound",
+            "detection_max_ap50_drop": 0.01,
+            "detection_max_ap_drop": 0.01,
+            "detection_primary_metric": "coco_ap_50_95",
+            "frozen_before_final_campaign": false,
+            "legacy_point_estimate_eligible_for_ranking": false,
+            "name": "task_quality_n5000_b1000",
+            "native_self_reference_class_aware": true,
+            "native_self_reference_confidence_threshold": 0.25,
+            "native_self_reference_denominator": "reference_detections",
+            "native_self_reference_iou_threshold": 0.5,
+            "native_self_reference_min_match": 0.8,
+            "native_self_reference_min_mean_iou": 0.85,
+            "native_self_reference_policy_id": "class_aware_iou50_postnms_v2",
+            "numerical_similarity_required_for_claim": true,
+            "profile_id": "task_quality_n5000_b1000",
+            "reporting_policy": {
+              "confidence_level": 0.95,
+              "dataset_policy": "preserve_images_and_denominators",
+              "energy_window_policy": "unchanged_command",
+              "interval_kind": "paired_bootstrap_two_sided_relative_loss",
+              "loss_definition": "(reference-candidate)/reference",
+              "policy_id": "accuracy_reporting_v1",
+              "preserve_historical_results": true,
+              "primary_metrics": {
+                "classification": "top1_accuracy",
+                "detection": "coco_ap_50_95"
+              },
+              "quality_affects_technical_pass": false,
+              "relative_loss_threshold": 0.05,
+              "secondary_metrics": "report_warning_only",
+              "technical_fail_only": true,
+              "uncertainty_band_high": 0.07,
+              "uncertainty_band_low": 0.03
+            },
+            "schema": "onnx-splitpoint/task-quality-policy",
+            "schema_version": 3,
+            "screening_eligible_for_ranking": false
+          },
+          "policy_sha256": "d50d6d5d43d2e9a58350e1e5499ed276ed7f2b6c67f79d5a07c10088f8ae8900",
+          "primary": {
+            "bootstrap_elapsed_s": 2.151111460989341,
+            "bootstrap_engine": "management_process_pool:onnx_splitpoint_tool.quality_metrics:classification_quality_evaluator",
+            "bootstrap_repetitions": 1000,
+            "bootstrap_repetitions_requested": 1000,
+            "bootstrap_skipped_reason": "",
+            "candidate": 0.7202,
+            "candidate_hits": 3601,
+            "ci_computed": true,
+            "ci_high": -0.0096,
+            "ci_low": -0.023804999999999996,
+            "decision_basis": "paired_bootstrap_lower_bound",
+            "delta": -0.0168,
+            "gate_bound_value": -0.023804999999999996,
+            "legacy_decision": "fail",
+            "margin": 0.01,
+            "metric": "top1_accuracy",
+            "n": 5000,
+            "point_estimate_comparison_basis": "integer_hit_counts",
+            "prediction_identity_verified": false,
+            "reference": 0.737,
+            "reference_hits": 3685,
+            "sample_count": 5000,
+            "status": "completed",
+            "uncertainty_status": "computed_bootstrap"
+          },
+          "quality_input_request": {
+            "endpoint_contract_hash": "7e81637d07062cb8ef8bad5a0db478cab1a08ede42cf1c306f0e7757a4f670e1",
+            "model_sha256": "2f5e79b1e4280251e7b6eefe1d6161c4831e2fc27858e1e9fe2fac697f44489e",
+            "quality_join_endpoint": "",
+            "quality_join_endpoint_contract_hash": "",
+            "runtime_precision_identity": "float32_layout_fp16",
+            "source_endpoint_contract_hash": "",
+            "source_request_sha256": "4a5702ca2dff3ec3414917370ffd59e3d23d421c5296be3187886669957b30ff",
+            "validation_dataset_ground_truth_sha256": "3009dea074b0a14bc205b2c988477d461244b6346bd3f7492bac3507a6d837e1",
+            "validation_dataset_image_ids_sha256": "22eeac094b79c051c6388d3e242f8440ab72b4e08039ef515a89259f28f4e270",
+            "validation_dataset_sha256": "e7b6f648d6bc5e62f4108eecb72cc482bb3d2e6993d2dce88baa1f96f08d2b44"
+          },
+          "reference_identity": "runner_reference_artifact:79b5392e1f2d0da3af2fa4269bf12ad14695865d172f17b21eb7f1c4a55a99b7",
+          "reporting_policy": {
+            "confidence_level": 0.95,
+            "dataset_policy": "preserve_images_and_denominators",
+            "energy_window_policy": "unchanged_command",
+            "interval_kind": "paired_bootstrap_two_sided_relative_loss",
+            "loss_definition": "(reference-candidate)/reference",
+            "policy_id": "accuracy_reporting_v1",
+            "preserve_historical_results": true,
+            "primary_metrics": {
+              "classification": "top1_accuracy",
+              "detection": "coco_ap_50_95"
+            },
+            "quality_affects_technical_pass": false,
+            "relative_loss_threshold": 0.05,
+            "secondary_metrics": "report_warning_only",
+            "technical_fail_only": true,
+            "uncertainty_band_high": 0.07,
+            "uncertainty_band_low": 0.03
+          },
+          "schema": "onnx-splitpoint/task-quality-gate",
+          "schema_version": 3,
+          "secondary_accuracy_assessments": {
+            "top5_accuracy": {
+              "absolute_loss_pp": 0.6000000000000005,
+              "accuracy_class": "reference_close",
+              "confidence_level": 0.95,
+              "policy_id": "accuracy_reporting_v1",
+              "relative_loss": 0.006594856012310403,
+              "relative_loss_ci": null,
+              "technical_fail": false,
+              "uncertainty": "not_estimated",
+              "uncertainty_reason": "interval_not_computed"
+            }
+          },
+          "status": "reference_close",
+          "task": "classification",
+          "tier": "final",
+          "variant": "composed"
+        }
+      },
+      "source_bytes": 1406387,
+      "source_sha256": "81611542ccd975d7daf4fbc6180fe5ca040ac8e7d58537097860119c18dfd830"
+    },
+    "original_runtime_request": {
+      "kind": "json_projection",
+      "location": {
+        "path": "models/mobilenet_v3_large/benchmark_results/quality_inputs/orin_nx_deepx_m1_01/results/b135/results_deepx_m1_to_tensorrt/task_quality_inputs/composed_request.json",
+        "root": "canonical_archive"
+      },
+      "projection": {
+        "/backend": "deepx_to_trt",
+        "/candidate": {
+          "path": "composed_candidate.json",
+          "sha256": "f4b603b915f5de8fa169640a7737cb3b94b56153352f5d04e29809d90fdf78bf",
+          "size_bytes": 749973
+        },
+        "/case_id": "b135",
+        "/eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "/expected_image_ids_sha256": "22eeac094b79c051c6388d3e242f8440ab72b4e08039ef515a89259f28f4e270",
+        "/metric_gate_config": {
+          "guardrails": {
+            "top5_accuracy_margin": 0.01
+          },
+          "non_inferiority_margin": 0.01,
+          "primary_metric": "top1_accuracy",
+          "reporting_policy": {
+            "confidence_level": 0.95,
+            "dataset_policy": "preserve_images_and_denominators",
+            "energy_window_policy": "unchanged_command",
+            "interval_kind": "paired_bootstrap_two_sided_relative_loss",
+            "loss_definition": "(reference-candidate)/reference",
+            "policy_id": "accuracy_reporting_v1",
+            "preserve_historical_results": true,
+            "primary_metrics": {
+              "classification": "top1_accuracy",
+              "detection": "coco_ap_50_95"
+            },
+            "quality_affects_technical_pass": false,
+            "relative_loss_threshold": 0.05,
+            "secondary_metrics": "report_warning_only",
+            "technical_fail_only": true,
+            "uncertainty_band_high": 0.07,
+            "uncertainty_band_low": 0.03
+          }
+        },
+        "/model_id": "mobilenet_v3_large",
+        "/quality_contract/postprocessor": {
+          "identity": {
+            "canonical_record_endpoint": "classification_topk_hits",
+            "implementation_functions": [
+              "_classification_logits_vector",
+              "_classification_gt_metrics"
+            ],
+            "implementation_runner_sha256": "51952be0a51b51a558ece8f2f3776068738653a5bba2dbbbabddbdc310893cd5",
+            "schema": "onnx-splitpoint/classification-topk-postprocessor-contract",
+            "schema_version": 1,
+            "sort_order": "score_descending",
+            "topk": 5
+          },
+          "sha256": "81474e76d2d56354e78e535b9595e12b02316bd014fa72448c0bdda18c907654"
+        },
+        "/quality_contract_sha256": "ce37f2b8c07934d0c00d3900e3a352777faa67eb177a3bf2fd09c694d73be230",
+        "/record_count": 5000,
+        "/reference_record_count": 5000,
+        "/requested_by": "central_management",
+        "/schema": "onnx-splitpoint/central-quality-evaluation-request",
+        "/setup_id": "orin_nx_deepx_m1_01",
+        "/source_run_id": "deepx_m1_to_tensorrt",
+        "/statistics": {
+          "bootstrap_repetitions": 1000,
+          "confidence_level": 0.95,
+          "decision": "lower_one_sided_bound",
+          "method": "paired_bootstrap",
+          "seed": 20260710
+        },
+        "/task": "classification"
+      },
+      "source_bytes": 366433,
+      "source_sha256": "0671d05997148b5b9dbfff1385a38d712562088b50a6785379d075a1c4413b13"
+    },
+    "payload_manifest": {
+      "kind": "json_projection",
+      "location": {
+        "path": "_supplements/thesis_v49_confirmation_energy_supplement_20261019/campaign_readable/provenance/delivery_payload_manifest_energy_supplement_20261019.json",
+        "root": "canonical_archive"
+      },
+      "projection": {
+        "/files/1182": {
+          "bytes": 998685,
+          "path": "evidence/identity_runtime_manifest.json",
+          "sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3"
+        },
+        "/files/1234": {
+          "bytes": 271976,
+          "path": "evidence/quality_historical_source.json",
+          "sha256": "2f2bf549ff9a68ea241b456e6cb19df345b2697bb5f02f58424769488f1c00f2"
+        },
+        "/files/1326": {
+          "bytes": 270218,
+          "path": "evidence/quality_prediction_inventory.json",
+          "sha256": "9af1f96e9676f0d1fc541bf921e6a6290616551858e72ef74b78d2629e11d544"
+        }
+      },
+      "source_bytes": 7508530,
+      "source_sha256": "7bfa8e24cfe37f79530198f0d756fab5d0cb921c5c97cf737cf184262a0712f6"
+    },
+    "prediction_inventory": {
+      "kind": "json_projection",
+      "location": {
+        "path": "evidence/quality_prediction_inventory.json",
+        "root": "confirmation_payload"
+      },
+      "projection": {
+        "/rows/0/candidate": {
+          "bytes": 761609,
+          "path": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/task_quality_inputs/composed_candidate.json",
+          "sha256": "1d6913772b0e814a52f0ae38498e93e4b84ef997f0e13a4672a961df06ca723a"
+        },
+        "/rows/0/quality_source_row_identity": {
+          "backend": "deepx_to_trt",
+          "case": "b135",
+          "model": "mobilenet_v3_large",
+          "precision": "float32_layout_fp16",
+          "quality_source_run_id": null,
+          "quality_source_setup_id": null,
+          "quality_source_variant": null,
+          "setup_id": "orin_nx_deepx_m1_01",
+          "source_request_sha256": "0671d05997148b5b9dbfff1385a38d712562088b50a6785379d075a1c4413b13"
+        },
+        "/rows/0/record_count": 5000,
+        "/rows/0/reference": {
+          "bytes": 698237,
+          "path": "canonical_archive:/quality_management/references/mobilenet_v3_large/by_source_contract/b1f2b618ba0bcc5b806f5972975ab26fa76a1cdeed365e8ed3bf537e0c02221e/canonical_cpu_reference.json",
+          "sha256": "79b5392e1f2d0da3af2fa4269bf12ad14695865d172f17b21eb7f1c4a55a99b7"
+        },
+        "/rows/0/reference_binding_note": "exact reference file/hash explicitly selected in original quality request; contract difference retained independently",
+        "/rows/0/reference_identity": "runner_reference_artifact:79b5392e1f2d0da3af2fa4269bf12ad14695865d172f17b21eb7f1c4a55a99b7",
+        "/rows/0/reference_quality_contract_matches_request": false,
+        "/rows/0/reference_record_count": 5000,
+        "/rows/0/request": {
+          "bytes": 378515,
+          "path": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/task_quality_inputs/composed_request.json",
+          "sha256": "4a5702ca2dff3ec3414917370ffd59e3d23d421c5296be3187886669957b30ff"
+        },
+        "/rows/0/request_sha256_expected": "4a5702ca2dff3ec3414917370ffd59e3d23d421c5296be3187886669957b30ff",
+        "/rows/0/selected_metric": {
+          "generation": "pre_refresh16_selected_evidence_reused",
+          "metric": "quality",
+          "original_current_quality_source_sha256": "81611542ccd975d7daf4fbc6180fe5ca040ac8e7d58537097860119c18dfd830",
+          "original_field": "rows[identity].accuracy_gate_metrics",
+          "remeasured_in_native_a4": "False",
+          "remeasured_in_refresh16": "False",
+          "repeat_or_image_n": "5000",
+          "repeat_sources": "",
+          "runtime": "deepx_to_trt",
+          "source": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/native_join/native_producer_validation_summary.json",
+          "source_sha256": "81611542ccd975d7daf4fbc6180fe5ca040ac8e7d58537097860119c18dfd830",
+          "uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135",
+          "unit": "top1_accuracy",
+          "value": "0.7202"
+        },
+        "/rows/0/status": "bound_pair",
+        "/rows/0/uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135"
+      },
+      "source_bytes": 270218,
+      "source_sha256": "9af1f96e9676f0d1fc541bf921e6a6290616551858e72ef74b78d2629e11d544"
+    },
+    "reference_predictions": {
+      "kind": "json_projection",
+      "location": {
+        "path": "quality_management/references/mobilenet_v3_large/by_source_contract/b1f2b618ba0bcc5b806f5972975ab26fa76a1cdeed365e8ed3bf537e0c02221e/canonical_cpu_reference.json",
+        "root": "canonical_archive"
+      },
+      "projection": {
+        "/pairing_key": "image_id",
+        "/quality_contract_sha256": "ce37f2b8c07934d0c00d3900e3a352777faa67eb177a3bf2fd09c694d73be230",
+        "/records/0": {
+          "image_id": "ILSVRC2012_val_00000001.JPEG",
+          "label_id": 65,
+          "label_name": "65",
+          "reference": {
+            "label_id": 65,
+            "top1_hit": true,
+            "top5_hit": true
+          }
+        },
+        "/schema": "onnx-splitpoint/task-quality-reference-input",
+        "/schema_version": 1,
+        "/task": "classification"
+      },
+      "source_bytes": 698237,
+      "source_sha256": "79b5392e1f2d0da3af2fa4269bf12ad14695865d172f17b21eb7f1c4a55a99b7"
+    },
+    "replay_request": {
+      "kind": "json_projection",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/task_quality_inputs/composed_request.json",
+        "root": "canonical_archive"
+      },
+      "projection": {
+        "/backend": "deepx_m1_to_tensorrt",
+        "/candidate": {
+          "path": "composed_candidate.json",
+          "sha256": "1d6913772b0e814a52f0ae38498e93e4b84ef997f0e13a4672a961df06ca723a",
+          "size_bytes": 761609
+        },
+        "/case_id": "b135",
+        "/eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "/expected_image_ids_sha256": "22eeac094b79c051c6388d3e242f8440ab72b4e08039ef515a89259f28f4e270",
+        "/metric_gate_config": {
+          "guardrails": {
+            "top5_accuracy_margin": 0.01
+          },
+          "non_inferiority_margin": 0.01,
+          "primary_metric": "top1_accuracy",
+          "reporting_policy": {
+            "confidence_level": 0.95,
+            "dataset_policy": "preserve_images_and_denominators",
+            "energy_window_policy": "unchanged_command",
+            "interval_kind": "paired_bootstrap_two_sided_relative_loss",
+            "loss_definition": "(reference-candidate)/reference",
+            "policy_id": "accuracy_reporting_v1",
+            "preserve_historical_results": true,
+            "primary_metrics": {
+              "classification": "top1_accuracy",
+              "detection": "coco_ap_50_95"
+            },
+            "quality_affects_technical_pass": false,
+            "relative_loss_threshold": 0.05,
+            "secondary_metrics": "report_warning_only",
+            "technical_fail_only": true,
+            "uncertainty_band_high": 0.07,
+            "uncertainty_band_low": 0.03
+          }
+        },
+        "/model_id": "mobilenet_v3_large",
+        "/quality_contract/postprocessor": {
+          "identity": {
+            "canonical_record_endpoint": "classification_topk_hits",
+            "implementation_functions": [
+              "_classification_logits_vector",
+              "_classification_gt_metrics"
+            ],
+            "implementation_runner_sha256": "fb3b953dccffa4aebed5399ab35ec8f4ade1d74004127769892a7d61543f1b7d",
+            "schema": "onnx-splitpoint/classification-topk-postprocessor-contract",
+            "schema_version": 1,
+            "sort_order": "score_descending",
+            "topk": 5
+          },
+          "sha256": "3b6f7eb93db9cfda7a083a389fa79737843396717209bf965ae7e7fbaebd756a"
+        },
+        "/quality_contract_sha256": "b84de5db6a5525a3773602804acd56c810dbe3eea9bcebf61ebe1b2298ea71c9",
+        "/record_count": 5000,
+        "/reference/reference_path": "canonical_archive:/quality_management/references/mobilenet_v3_large/by_source_contract/b1f2b618ba0bcc5b806f5972975ab26fa76a1cdeed365e8ed3bf537e0c02221e/canonical_cpu_reference.json",
+        "/reference/reference_sha256": "79b5392e1f2d0da3af2fa4269bf12ad14695865d172f17b21eb7f1c4a55a99b7",
+        "/reference_record_count": 5000,
+        "/requested_by": "central_management",
+        "/schema": "onnx-splitpoint/central-quality-evaluation-request",
+        "/setup_id": "orin_nx_deepx_m1_01",
+        "/source_run_id": "deepx_m1_to_tensorrt",
+        "/statistics": {
+          "bootstrap_repetitions": 1000,
+          "confidence_level": 0.95,
+          "decision": "lower_one_sided_bound",
+          "method": "paired_bootstrap",
+          "seed": 20260710
+        },
+        "/task": "classification"
+      },
+      "source_bytes": 378515,
+      "source_sha256": "4a5702ca2dff3ec3414917370ffd59e3d23d421c5296be3187886669957b30ff"
+    },
+    "revision3_resolver": {
+      "kind": "json_projection",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/RESOLVER.json",
+        "root": "canonical_archive"
+      },
+      "projection": {
+        "/entries/101134": {
+          "canonical_path": "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/operations_evidence/operations/token_saving_batch_20261009/delta_abschluss_20261012/controller_gate_fix/source_release/onnx_splitpoint_tool/quality_metrics.py",
+          "sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+          "source": "delta_20261013/operations_evidence/operations/token_saving_batch_20261009/delta_abschluss_20261012/controller_gate_fix/source_release/onnx_splitpoint_tool/quality_metrics.py"
+        },
+        "/entries/101142": {
+          "canonical_path": "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/operations_evidence/operations/token_saving_batch_20261009/delta_abschluss_20261012/controller_gate_fix/source_release/onnx_splitpoint_tool/quality_statistics.py",
+          "sha256": "00365decad61893f942e841cc569081649944ab2c9cc1c495863d42e3c04cf95",
+          "source": "delta_20261013/operations_evidence/operations/token_saving_batch_20261009/delta_abschluss_20261012/controller_gate_fix/source_release/onnx_splitpoint_tool/quality_statistics.py"
+        },
+        "/entries/160795": {
+          "canonical_path": "models/mobilenet_v3_large/benchmark_results/quality_inputs/orin_nx_deepx_m1_01/results/b135/results_deepx_m1_to_tensorrt/task_quality_inputs/composed_request.json",
+          "example_origin": "native_producers/quality/final20261008_dx56/blocked_original_roundtrip/native_producer_validation_summary.json",
+          "sha256": "0671d05997148b5b9dbfff1385a38d712562088b50a6785379d075a1c4413b13",
+          "source": "canonical_archive:/models/mobilenet_v3_large/benchmark_results/quality_inputs/orin_nx_deepx_m1_01/results/b135/results_deepx_m1_to_tensorrt/task_quality_inputs/composed_request.json",
+          "verification": "current_target_SHA256"
+        },
+        "/entries/290": {
+          "canonical_path": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/native_join/native_producer_validation_summary.json",
+          "sha256": "81611542ccd975d7daf4fbc6180fe5ca040ac8e7d58537097860119c18dfd830",
+          "source": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/native_join/native_producer_validation_summary.json"
+        },
+        "/entries/29807": {
+          "canonical_path": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/HANDOFF.json",
+          "sha256": "ec55cbc0f07ae4394b5227324d2db1554dd28ba972a54f43bed6d2cb603b6406",
+          "source": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/HANDOFF.json"
+        },
+        "/entries/29808": {
+          "canonical_path": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/task_quality_inputs/composed_candidate.json",
+          "sha256": "1d6913772b0e814a52f0ae38498e93e4b84ef997f0e13a4672a961df06ca723a",
+          "source": "composed_candidate.json"
+        },
+        "/entries/38322": {
+          "canonical_path": "_supplements/native_fairness_rev3_20261013/payload/_provenance/final_implementation_20261008/source_snapshot/onnx_splitpoint_tool/quality_service.py",
+          "sha256": "2e507c34cb3b814b97a7567decb30d872b6a467e1677f2e18635f8c78c0faf9f",
+          "source": "revision3_report:/final_implementation_20261008/source_snapshot/onnx_splitpoint_tool/quality_service.py"
+        },
+        "/entries/8023": {
+          "canonical_path": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/composed_central_result.json",
+          "sha256": "a3500ca11de946e0cacf3ffeadf6d8f52e96bb80016e3c17d873441c52fb15cb",
+          "source": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/composed_central_result.json"
+        },
+        "/entries/8031": {
+          "canonical_path": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/CENTRAL_EVALUATION.json",
+          "sha256": "a57405f5e554449b89f9455dfbb7a664fa1597ff68e96b214bee81a5e3e20643",
+          "source": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/CENTRAL_EVALUATION.json"
+        },
+        "/entries/8032": {
+          "canonical_path": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/task_quality_inputs/composed_request.json",
+          "sha256": "4a5702ca2dff3ec3414917370ffd59e3d23d421c5296be3187886669957b30ff",
+          "source": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/task_quality_inputs/composed_request.json"
+        },
+        "/unresolved/17278": {
+          "expected_sha256": "21250c2d6295df18ad50a81c88d338bd5aa8e93eb5ff498f735f47e6daeca59d",
+          "field": "/source_commands",
+          "origin": "operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b001/CENTRAL_EVALUATION.json",
+          "reference_occurrences": 56,
+          "resolution": "unresolved",
+          "source": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/prepared/dataset_fixed/DX56_QUALITY_COMMANDS.json"
+        },
+        "/unresolved/37532": {
+          "expected_sha256": "21250c2d6295df18ad50a81c88d338bd5aa8e93eb5ff498f735f47e6daeca59d",
+          "origin": "operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/resnet50/b119/CENTRAL_EVALUATION.json",
+          "resolution": "bound_unresolved",
+          "source": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/prepared/dataset_fixed/DX56_QUALITY_COMMANDS.json"
+        }
+      },
+      "source_bytes": 119879940,
+      "source_sha256": "e1780107f5e9ce1e641e18184008d7efc6ab27cdc0c915882a973d70d33f02ce"
+    },
+    "service_source": {
+      "excerpts": [
+        {
+          "first_line": 3678,
+          "last_line": 3714,
+          "text": "            annotations.append(\n                {\n                    \"image_id\": candidate_record.get(\"image_id\"),\n                    \"label_id\": remote_label if remote_label is not None else reference_label,\n                    \"label_name\": candidate_record.get(\"label_name\") or reference_record.get(\"label_name\"),\n                }\n            )\n        evaluator_factory = \"onnx_splitpoint_tool.quality_metrics:classification_quality_evaluator\"\n        algorithm_version = f\"{QUALITY_ALGORITHM_VERSION}:classification-accuracy-v2\"\n    else:\n        for reference_record, candidate_record in zip(reference_records, candidate_records):\n            ground_truth = candidate_record.get(\"ground_truth\")\n            if ground_truth is None:\n                ground_truth = reference_record.get(\"ground_truth\")\n            if not isinstance(ground_truth, list):\n                raise QualityArtifactIntegrityError(\"detection request lacks remote ground truth\")\n            annotations.append(\n                {\"image_id\": candidate_record.get(\"image_id\"), \"ground_truth\": ground_truth}\n            )\n        evaluator_factory = \"onnx_splitpoint_tool.quality_metrics:detection_quality_evaluator\"\n        algorithm_version = DETECTION_QUALITY_ALGORITHM_VERSION\n    return QualityEvaluationRequest(\n        reference_records=reference_records,\n        candidate_records=candidate_records,\n        annotations=annotations,\n        metric_gate_config=gate,\n        repetitions=repetitions,\n        seed=seed,\n        confidence_level=confidence,\n        non_inferiority_margin=margin,\n        evaluator_factory=evaluator_factory,\n        image_id_field=\"image_id\",\n        reference_prediction_field=\"reference\",\n        candidate_prediction_field=\"candidate\",\n        algorithm_version=algorithm_version,\n        reference_identity=(\n            str(reference_payload.get(\"reference_identity\") or \"\")\n"
+        },
+        {
+          "first_line": 3765,
+          "last_line": 3775,
+          "text": "\ndef _load_evaluator_factory(path: str) -> Callable[..., Any]:\n    if path == \"paired_mean\":\n        return _PairedMeanEvaluator\n    if \":\" not in path:\n        raise ValueError(\"custom evaluator_factory must use 'module:function' syntax\")\n    module_name, attribute = path.split(\":\", 1)\n    module = importlib.import_module(module_name)\n    factory = getattr(module, attribute)\n    if not callable(factory):\n        raise TypeError(f\"quality evaluator factory is not callable: {path}\")\n"
+        },
+        {
+          "first_line": 4014,
+          "last_line": 4050,
+          "text": ") -> dict[str, Any]:\n    \"\"\"Evaluate one deterministic, contiguous slice of a paired bootstrap.\n\n    The complete PCG64 index plan is generated once by the management service\n    and split without reordering.  A worker therefore never invents its own\n    random stream, and concatenating shards in ``repetition_offset`` order is\n    bit-for-bit equivalent to a one-process run.\n    \"\"\"\n\n    started = time.perf_counter()\n    statistics = dict(payload.get(\"_statistics\") or {})\n    progress.emit(\"preparing\")\n    reference = list(payload[\"reference_records\"])\n    candidate = list(payload[\"candidate_records\"])\n    n = len(reference)\n    config = {\n        \"metric_gate_config\": dict(payload.get(\"metric_gate_config\") or {}),\n        \"value_field\": str(payload.get(\"value_field\") or \"value\"),\n        \"image_ids\": list(payload.get(\"image_ids\") or []),\n        \"statistics_engine\": statistics.get(\"engine\", \"legacy\"),\n    }\n    factory = _load_evaluator_factory(str(payload.get(\"evaluator_factory\") or \"paired_mean\"))\n    reusable = (statistics.get(\"engine\") == \"optimized_coco_v1\"\n                and statistics.get(\"reference_dir\") and _reporting(payload)\n                and str(payload.get(\"evaluator_factory\", \"\")) in {\n                    \"onnx_splitpoint_tool.quality_metrics:detection_quality_evaluator\",\n                    \"onnx_splitpoint_tool.quality_metrics.detection_quality_evaluator\"})\n    if prepared is not None:\n        reusable = False\n        evaluator = prepared[\"evaluator\"]\n    elif reusable:\n        from .quality_statistics import ReferenceReuseEvaluator\n        evaluator = ReferenceReuseEvaluator(payload, plan, repetition_offset, config)\n    else:\n        evaluator = factory(reference, candidate, payload.get(\"annotations\"), config)\n    prepared_at = time.perf_counter()\n    progress.emit(\"point\", cache_state=\"reference_hit\" if getattr(evaluator, \"hit\", False) else \"cold\")\n"
+        }
+      ],
+      "execution_binding": "inspected preserved source; not bound to the 2026-10-10 evaluation",
+      "kind": "text_excerpts",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/_provenance/final_implementation_20261008/source_snapshot/onnx_splitpoint_tool/quality_service.py",
+        "root": "canonical_archive"
+      },
+      "source_bytes": 260145,
+      "source_sha256": "2e507c34cb3b814b97a7567decb30d872b6a467e1677f2e18635f8c78c0faf9f"
+    },
+    "source_handoff": {
+      "kind": "json_projection",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/HANDOFF.json",
+        "root": "canonical_archive"
+      },
+      "projection": {
+        "": {
+          "at": "2026-10-10T18:35:56.679828+00:00",
+          "attempt": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/dx56_quality_mobilenet_v3_large_b135-20261010T203430-3cb0b9",
+          "builds_started": false,
+          "cleanup": {
+            "at": "2026-10-10T18:35:56.678991+00:00",
+            "cleanup_proven": true,
+            "errors": [],
+            "owned_local_remaining": 0,
+            "owned_remote_remaining": 0,
+            "primary_error": ""
+          },
+          "energy_started": false,
+          "inference_invocations": 1,
+          "normal_central_quality_pending": true,
+          "request": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/task_quality_inputs/composed_request.json",
+          "request_sha256": "4a5702ca2dff3ec3414917370ffd59e3d23d421c5296be3187886669957b30ff",
+          "retry_count": 0,
+          "status": "QUALITY_SOURCE_COMPLETE_DEVICE_RELEASED"
+        }
+      },
+      "source_bytes": 977,
+      "source_date": "2026-10-10T18:35:56.679828+00:00",
+      "source_sha256": "ec55cbc0f07ae4394b5227324d2db1554dd28ba972a54f43bed6d2cb603b6406"
+    },
+    "statistics_helper": {
+      "excerpts": [
+        {
+          "first_line": 1,
+          "last_line": 29,
+          "text": "\"\"\"Execution-only helpers for exact offline statistics (no inference imports).\"\"\"\nfrom __future__ import annotations\n\nimport hashlib\nimport importlib.metadata\nimport json\nimport os\nfrom pathlib import Path\nimport time\n\nimport numpy as np\n\nfrom .quality_cache import canonical_json, json_fingerprint, prediction_fingerprint\n\nENGINE = \"optimized_coco_v1\"\n\n\ndef numerical_environment():\n    import platform\n    try:\n        coco_version = importlib.metadata.version(\"pycocotools\")\n    except importlib.metadata.PackageNotFoundError:\n        coco_version = \"unavailable\"\n    return {\"python\": platform.python_version(), \"numpy\": np.__version__,\n            \"pycocotools\": coco_version,\n            \"dtype\": \"float64\", \"plan_dtype\": \"int64\", \"kernel\": ENGINE}\n\n\ndef validate_bound_order(payload):\n"
+        },
+        {
+          "first_line": 40,
+          "last_line": 56,
+          "text": "\n\ndef validate_canonical_prediction_fields(payload, *, roles=(\"reference\", \"candidate\")):\n    \"\"\"Bind the actual fields read by the two standard metric factories.\"\"\"\n    factory = str(payload.get(\"evaluator_factory\", \"\")).replace(\":\", \".\")\n    if factory not in {\n        \"onnx_splitpoint_tool.quality_metrics.detection_quality_evaluator\",\n        \"onnx_splitpoint_tool.quality_metrics.classification_quality_evaluator\",\n    }:\n        return\n    for role in roles:\n        selected = payload.get(role + \"_prediction_field\")\n        records = payload[role + \"_records\"]\n        observed = prediction_fingerprint(records,\n            image_id_field=payload.get(\"image_id_field\", \"image_id\"), payload_field=selected)\n        if observed != payload[role + \"_predictions_sha256\"]:\n            raise ValueError(role + \" payload changed after preparation\")\n"
+        }
+      ],
+      "execution_binding": "inspected preserved source; not bound to the 2026-10-10 evaluation",
+      "kind": "text_excerpts",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/operations_evidence/operations/token_saving_batch_20261009/delta_abschluss_20261012/controller_gate_fix/source_release/onnx_splitpoint_tool/quality_statistics.py",
+        "root": "canonical_archive"
+      },
+      "source_bytes": 10212,
+      "source_sha256": "00365decad61893f942e841cc569081649944ab2c9cc1c495863d42e3c04cf95"
+    }
+  }
+}

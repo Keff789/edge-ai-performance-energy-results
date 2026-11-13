@@ -1,0 +1,13 @@
+platform,slug,series,window,rates,finite_runs,max_cv_pct,max_group_displacement_pct,reference_J,reference_statistic
+Hailo,gemm,historical/hailo_sweep/gemm,envelope_0.5,27,405,0.6806439675952966,1.4832312502621292,366.43690581346596,unweighted_mean_of_rate_group_means
+Hailo,llm,historical/hailo_sweep/llm,envelope_0.5,27,402,46.05902600775932,24.299790580903014,489.9605849102631,unweighted_mean_of_rate_group_means
+Hailo,random_pattern_yolo,historical/hailo_sweep/random_pattern_yolo,reported_legacy,27,405,9.445044643072645,6.7421080720442506,174.0680987527309,unweighted_mean_of_rate_group_means
+Hailo,yolo,historical/hailo_sweep/yolo,envelope_0.5,27,405,1.0096615333507064,1.1973345492854226,364.1477355733252,unweighted_mean_of_rate_group_means
+Jetson,gemm_fp16,historical/sweep_without_filter/gemm/fp16,envelope_0.5,27,405,0.7320115442869748,2.0831048893768855,3404.432029591203,unweighted_mean_of_rate_group_means
+Jetson,gemm_fp32,historical/sweep_without_filter/gemm/fp32,envelope_0.5,27,405,0.3728609694602078,0.4035189502902714,3451.362996333887,unweighted_mean_of_rate_group_means
+Jetson,gemm_int8,historical/sweep_without_filter/gemm/int8,envelope_0.5,27,405,0.6315080071577402,1.6886095409801238,3269.7059520835724,unweighted_mean_of_rate_group_means
+Jetson,llm,historical/sweep_without_filter/llm,envelope_0.5,27,405,0.5816750160920903,1.6551133963935816,4083.377054713485,unweighted_mean_of_rate_group_means
+Jetson,random_pattern_yolo,historical/sweep_without_filter/random_pattern_yolo,envelope_0.5,27,405,0.49455953249047885,0.5639293635854914,1559.8103654944575,unweighted_mean_of_rate_group_means
+Jetson,yolo_fp16,historical/sweep_without_filter/yolo/fp16/fp16,envelope_0.5,27,405,0.4427633589716813,0.2545941022715992,2122.0929289996266,unweighted_mean_of_rate_group_means
+Jetson,yolo_fp32,historical/sweep_without_filter/yolo/fp32/fp32,envelope_0.5,26,390,0.4138464001196347,0.8912860623656149,2325.307700310862,unweighted_mean_of_rate_group_means
+Jetson,yolo_int8,historical/sweep_without_filter/yolo/int8/int8,envelope_0.5,27,405,0.7269720836694692,0.31193697481006755,1920.9795615059304,unweighted_mean_of_rate_group_means

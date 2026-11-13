@@ -1,0 +1,22 @@
+Historical six-stratum Generic development audit: supplied aggregate correlations, unchanged paired counts. No candidate-level Spearman re-estimation.
+
+| Model | Accelerator prefix | Method / proxy | Paired n | Spearman rho |
+| --- | --- | --- | --- | --- |
+| ResNet50 | DEEPX | Boundary bytes | 19 | 0.981 |
+| ResNet50 | DEEPX | 50/50 compute imbalance | 19 | -0.083 |
+| ResNet50 | DEEPX | Static Stage-2 compute | 19 | 0.875 |
+| ResNet50 | Hailo-10H | Boundary bytes | 19 | 0.968 |
+| ResNet50 | Hailo-10H | 50/50 compute imbalance | 19 | -0.047 |
+| ResNet50 | Hailo-10H | Static Stage-2 compute | 19 | 0.879 |
+| ResNet50 | Hailo-8 | Boundary bytes | 19 | 0.550 |
+| ResNet50 | Hailo-8 | 50/50 compute imbalance | 19 | 0.461 |
+| ResNet50 | Hailo-8 | Static Stage-2 compute | 19 | 0.408 |
+| YOLOv7 | DEEPX | Boundary bytes | 19 | 0.969 |
+| YOLOv7 | DEEPX | 50/50 compute imbalance | 19 | 0.110 |
+| YOLOv7 | DEEPX | Static Stage-2 compute | 19 | 0.410 |
+| YOLOv7 | Hailo-10H | Boundary bytes | 19 | 0.912 |
+| YOLOv7 | Hailo-10H | 50/50 compute imbalance | 19 | 0.124 |
+| YOLOv7 | Hailo-10H | Static Stage-2 compute | 19 | 0.406 |
+| YOLOv7 | Hailo-8 | Boundary bytes | 17 | 0.670 |
+| YOLOv7 | Hailo-8 | 50/50 compute imbalance | 17 | 0.576 |
+| YOLOv7 | Hailo-8 | Static Stage-2 compute | 17 | -0.150 |

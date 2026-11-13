@@ -1,0 +1,10 @@
+method,groups,available_groups,statuses,reasons,included_in_this_analysis
+cut_bytes_only,21,21,"[""available""]","[""candidate_cut_bytes""]",True
+cycle_time_no_handover,21,21,"[""available""]","[""candidate_bottleneck""]",True
+cycle_time_with_handover,21,0,"[""unavailable""]","[""candidate_bottleneck+native_handover_model_unconfigured""]",False
+gui_total_latency,21,0,"[""unavailable""]","[""original_system_spec_missing""]",False
+measured_generic_completion,21,21,"[""available""]","[""measured_proxy_original_identity_subset""]",True
+measured_generic_raw,21,21,"[""available""]","[""measured_proxy_original_identity_subset""]",False
+onnx_real_boundary_hardware_aware,21,21,"[""available""]","[""stored_hailo10_profile_score_exactly_reproduced""]",True
+stored_predicted_stream_fps,21,21,"[""available""]","[""stored_yolov7_streaming_v1_hailo10_direction""]",True
+weighted_score,21,21,"[""available""]","[""historic_weighted_score""]",True

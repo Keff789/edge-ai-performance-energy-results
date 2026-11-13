@@ -1,0 +1,177 @@
+{
+  "schema": "english-thesis-frozen-energy-figures-v1",
+  "kind": "fixed_publication_exports",
+  "source_archive": "doctor_thesis_v56_en_original(1).zip",
+  "source_archive_sha256": "45899e9d394c657017cb58716f882613bc7855c1de225ec6bef8733076c180a5",
+  "source_archive_description": "English v56 dissertation uploaded by the author; figures are the supplied layout_v48 English exports.",
+  "scope": "These are fixed publication PDFs, not new data-driven renders. Available repository summaries are listed as related evidence; the complete renderer for these exact v48 composite layouts is not supplied. No numerical data, labels, panels or vector paths were changed.",
+  "base_results_commit": "e0f2c439e1e5431fd0644e068b87010be1a20453",
+  "figures": [
+    {
+      "file": "figures/energy/current_verification.pdf",
+      "sha256": "dfb29398d5ab37a65f785bb237fd7fde327595e898c574a999ccd0f70629494c",
+      "source_archive_member": "doctor_thesis_v56_en_original/9_resources/layout_v48/energy/figures/current_verification.pdf",
+      "latex_project_path": "9_resources/layout_v48/energy/figures/current_verification.pdf",
+      "related_repository_evidence": [
+        "results/energy-measurement/data/tim/validation/calibration/jetson_calibration_verification_rows.csv"
+      ],
+      "include_width": "247.68bp",
+      "pdf_width_bp": 316.79998779296875,
+      "modal_font_bp": 11.0,
+      "placed_modal_font_bp": 8.6,
+      "smallest_placed_font_bp": 8.209,
+      "tex_file": "2_body/04_energy/06_error_analysis_calibration.tex"
+    },
+    {
+      "file": "figures/energy/jetson_rate_duration.pdf",
+      "sha256": "44ca8a73471a639996e1ca55e4ef5f85268f9a2a4b9e4372881b92355b124c30",
+      "source_archive_member": "doctor_thesis_v56_en_original/9_resources/layout_v48/energy/figures/jetson_rate_duration.pdf",
+      "latex_project_path": "9_resources/layout_v48/energy/figures/jetson_rate_duration.pdf",
+      "related_repository_evidence": [
+        "results/energy-measurement/tables/tim/native_reconstruction.csv"
+      ],
+      "include_width": "247.68bp",
+      "pdf_width_bp": 316.79998779296875,
+      "modal_font_bp": 11.0,
+      "placed_modal_font_bp": 8.6,
+      "smallest_placed_font_bp": 8.131,
+      "tex_file": "2_body/04_energy/10_sampling_window_evidence.tex"
+    },
+    {
+      "file": "figures/energy/fp16_objectives.pdf",
+      "sha256": "df9dd600f321d44024e7cca876d92d9f2ad8326e16f1bbb6b61ff75e52721613",
+      "source_archive_member": "doctor_thesis_v56_en_original/9_resources/layout_v48/energy/figures/fp16_objectives.pdf",
+      "latex_project_path": "9_resources/layout_v48/energy/figures/fp16_objectives.pdf",
+      "related_repository_evidence": [
+        "results/energy-measurement/tables/tim/fp16_energy.csv",
+        "results/energy-measurement/tables/tim/fp16_coverage.csv"
+      ],
+      "include_width": "346.19bp",
+      "pdf_width_bp": 442.79998779296875,
+      "modal_font_bp": 11.0,
+      "placed_modal_font_bp": 8.6,
+      "smallest_placed_font_bp": 8.209,
+      "tex_file": "2_body/04_energy/11_spectral_evidence.tex"
+    },
+    {
+      "file": "figures/energy/cross_workload_spectra.pdf",
+      "sha256": "4c102aeda661e3ff19af5d89921312e765fe15b18e3a4a70cfcfa62538668b46",
+      "source_archive_member": "doctor_thesis_v56_en_original/9_resources/layout_v48/energy/figures/cross_workload_spectra.pdf",
+      "latex_project_path": "9_resources/layout_v48/energy/figures/cross_workload_spectra.pdf",
+      "related_repository_evidence": [
+        "results/energy-measurement/figures/spectra/pico_vs_tek_psd"
+      ],
+      "include_width": "\\linewidth",
+      "pdf_width_bp": 489.6000061035156,
+      "modal_font_bp": 11.5,
+      "placed_modal_font_bp": 8.348,
+      "smallest_placed_font_bp": 7.985,
+      "tex_file": "2_body/04_energy/11_spectral_evidence.tex"
+    },
+    {
+      "file": "figures/energy/native_cdf.pdf",
+      "sha256": "d68dd43902f4da1a1106a51e2ff234b51a36c2e4f15f7fcb114148af5b287e5f",
+      "source_archive_member": "doctor_thesis_v56_en_original/9_resources/layout_v48/energy/figures/native_cdf.pdf",
+      "latex_project_path": "9_resources/layout_v48/energy/figures/native_cdf.pdf",
+      "related_repository_evidence": [
+        "results/energy-measurement/tables/tim/native_spectral_comparison.csv"
+      ],
+      "include_width": "270.20bp",
+      "pdf_width_bp": 345.6000061035156,
+      "modal_font_bp": 11.0,
+      "placed_modal_font_bp": 8.6,
+      "smallest_placed_font_bp": 8.365,
+      "tex_file": "2_body/04_energy/11_spectral_evidence.tex"
+    },
+    {
+      "file": "figures/energy/hailo_spectral_tail.pdf",
+      "sha256": "2faa8de8a27d436090a95a9611977e8e96d3ddef3e12a50fda1d052779a0caeb",
+      "source_archive_member": "doctor_thesis_v56_en_original/9_resources/layout_v48/energy/figures/hailo_spectral_tail.pdf",
+      "latex_project_path": "9_resources/layout_v48/energy/figures/hailo_spectral_tail.pdf",
+      "related_repository_evidence": [
+        "results/energy-measurement/tables/tim/hailo_spectra.csv"
+      ],
+      "include_width": "247.68bp",
+      "pdf_width_bp": 316.79998779296875,
+      "modal_font_bp": 11.0,
+      "placed_modal_font_bp": 8.6,
+      "smallest_placed_font_bp": 8.053,
+      "tex_file": "2_body/04_energy/11_spectral_evidence.tex"
+    },
+    {
+      "file": "figures/energy/jetson_deployed_meters.pdf",
+      "sha256": "4ee64bd1acc85230eece412fe42042be6bccd33701e73b9d171e0f6bd8825960",
+      "source_archive_member": "doctor_thesis_v56_en_original/9_resources/layout_v48/energy/figures/jetson_deployed_meters.pdf",
+      "latex_project_path": "9_resources/layout_v48/energy/figures/jetson_deployed_meters.pdf",
+      "related_repository_evidence": [
+        "results/energy-measurement/tables/tim/paired_300s.csv"
+      ],
+      "include_width": "270.20bp",
+      "pdf_width_bp": 345.6000061035156,
+      "modal_font_bp": 11.0,
+      "placed_modal_font_bp": 8.6,
+      "smallest_placed_font_bp": 8.365,
+      "tex_file": "2_body/04_energy/12_deployed_measurement_comparison.tex"
+    },
+    {
+      "file": "figures/energy/hailo_meters.pdf",
+      "sha256": "9b1e7309fc6f53c32545d7eb419bec79b99e2f0b293285a7333c707f23985921",
+      "source_archive_member": "doctor_thesis_v56_en_original/9_resources/layout_v48/energy/figures/hailo_meters.pdf",
+      "latex_project_path": "9_resources/layout_v48/energy/figures/hailo_meters.pdf",
+      "related_repository_evidence": [
+        "results/energy-measurement/tables/tim/paired_300s.csv"
+      ],
+      "include_width": "337.75bp",
+      "pdf_width_bp": 432.0,
+      "modal_font_bp": 11.0,
+      "placed_modal_font_bp": 8.6,
+      "smallest_placed_font_bp": 8.365,
+      "tex_file": "2_body/04_energy/12_deployed_measurement_comparison.tex"
+    },
+    {
+      "file": "figures/energy/hailo_variable_intervals.pdf",
+      "sha256": "eb163d77679583f27b9c3c076c01038ab340dac639b4d6e1269a82d34ef0c1cb",
+      "source_archive_member": "doctor_thesis_v56_en_original/9_resources/layout_v48/energy/figures/hailo_variable_intervals.pdf",
+      "latex_project_path": "9_resources/layout_v48/energy/figures/hailo_variable_intervals.pdf",
+      "related_repository_evidence": [
+        "results/energy-measurement/tables/tim/hailo_variable_interval_comparison.csv"
+      ],
+      "include_width": "247.68bp",
+      "pdf_width_bp": 316.79998779296875,
+      "modal_font_bp": 11.0,
+      "placed_modal_font_bp": 8.6,
+      "smallest_placed_font_bp": 7.975,
+      "tex_file": "2_body/04_energy/12_deployed_measurement_comparison.tex"
+    },
+    {
+      "file": "figures/energy/duration_comparison.pdf",
+      "sha256": "08570f5e78cc179bebebfdeccc8e464fb5a8fc243453f4039beb552f9ff394b6",
+      "source_archive_member": "doctor_thesis_v56_en_original/9_resources/layout_v48/energy/figures/duration_comparison.pdf",
+      "latex_project_path": "9_resources/layout_v48/energy/figures/duration_comparison.pdf",
+      "related_repository_evidence": [
+        "results/energy-measurement/tables/tim/duration.csv"
+      ],
+      "include_width": "337.75bp",
+      "pdf_width_bp": 432.0,
+      "modal_font_bp": 11.0,
+      "placed_modal_font_bp": 8.6,
+      "smallest_placed_font_bp": 7.975,
+      "tex_file": "2_body/04_energy/13_execution_protocol_evidence.tex"
+    },
+    {
+      "file": "figures/energy/pause_sequence.pdf",
+      "sha256": "7dc0cbcd257ab746ffc049ecc39d68be2aa01026331880aaac03f1b61b2473c2",
+      "source_archive_member": "doctor_thesis_v56_en_original/9_resources/layout_v48/energy/figures/pause_sequence.pdf",
+      "latex_project_path": "9_resources/layout_v48/energy/figures/pause_sequence.pdf",
+      "related_repository_evidence": [
+        "results/energy-measurement/tables/tim/pause_timing.csv"
+      ],
+      "include_width": "337.75bp",
+      "pdf_width_bp": 432.0,
+      "modal_font_bp": 11.0,
+      "placed_modal_font_bp": 8.6,
+      "smallest_placed_font_bp": 8.6,
+      "tex_file": "2_body/04_energy/13_execution_protocol_evidence.tex"
+    }
+  ]
+}

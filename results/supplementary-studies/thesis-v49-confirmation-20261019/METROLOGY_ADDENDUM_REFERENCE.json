@@ -1,0 +1,106 @@
+{
+  "schema": "v49-confirmation-metrology-addendum-reference-v1",
+  "source_campaign_commit": "869519b5ff9bbad275c09c951940e789159baede",
+  "source_campaign_branch": "thesis/v49-ch0-joris-evidence-20261019",
+  "base_campaign_commit": "64c1f487645d20a844d66ccdf8f65dcc80b96065",
+  "base_archive": {
+    "bytes": 2857836513,
+    "filename": "thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz",
+    "sha256": "edbd618ad91ef658a866c73c61defd00389e3ca9218c33ea22d87a6ec3721915"
+  },
+  "base_archive_reference": "ARCHIVE_REFERENCE.json",
+  "previous_archive_and_receipts_modified": false,
+  "archive_payload_root": "thesis_v49_ch0_joris_addendum_20261019_869519b5ff9b",
+  "origin_addendum_member_base": "thesis_v49_ch0_joris_addendum_20261019_869519b5ff9b/campaign_delta/",
+  "origin_addendum_member_semantics": "Append each origin_addendum_member from the metrology index to origin_addendum_member_base. Only changed campaign files are included; unchanged dependencies remain in the base archive.",
+  "canonical_alignment": {
+    "campaign_member": "evidence/electrical/ch0_joris_evidence_alignment_20261019.json",
+    "sha256": "db61fe26c17e5ca0279f2e312c9a8948e52e3640963af5f6a0e4773e60ce3019",
+    "bytes": 60245
+  },
+  "files": [
+    {
+      "filename": "thesis_v49_ch0_joris_addendum_20261019_869519b5ff9b.tar.gz",
+      "sprite_relative_path": "deliverables/thesis_v49_ch0_joris_addendum_20261019_869519b5ff9b.tar.gz",
+      "sha256": "a0034f7d87e2f02ef1cd3679c504d42380778237f29b50341169fad3b7b30583",
+      "bytes": 19366243
+    },
+    {
+      "filename": "thesis_v49_ch0_joris_addendum_20261019_869519b5ff9b.tar.gz.sha256",
+      "sprite_relative_path": "deliverables/thesis_v49_ch0_joris_addendum_20261019_869519b5ff9b.tar.gz.sha256",
+      "sha256": "94593e7d0aac47e00bfd1b05ed6a548b716213bfdeb3935e1dcae401e781bf2b",
+      "bytes": 125
+    },
+    {
+      "filename": "thesis_v49_ch0_joris_addendum_20261019_869519b5ff9b.bundle",
+      "sprite_relative_path": "deliverables/thesis_v49_ch0_joris_addendum_20261019_869519b5ff9b.bundle",
+      "sha256": "b6b1b764b142e7f87df9426fea9309629475a1d7832b857e43561c84e6ba7f15",
+      "bytes": 194446
+    },
+    {
+      "filename": "thesis_v49_ch0_joris_addendum_20261019_869519b5ff9b.receipt.json",
+      "sprite_relative_path": "deliverables/thesis_v49_ch0_joris_addendum_20261019_869519b5ff9b.receipt.json",
+      "sha256": "92051327a7d1e71415968c17ee2937e429d665ba58b2c5dd6ceb41de204283ec",
+      "bytes": 1682
+    },
+    {
+      "filename": "thesis_v49_ch0_joris_addendum_20261019_869519b5ff9b.delivery.json",
+      "sprite_relative_path": "provenance/thesis_v49_ch0_joris_addendum_20261019_869519b5ff9b.delivery.json",
+      "sha256": "3a8203a003dd4e58928f9b53a5a5986e0d2533d8fd85a871fbc6e50f5895d37d",
+      "bytes": 2249
+    }
+  ],
+  "archive_integrity": {
+    "verified_members": 75,
+    "full_member_verification": true,
+    "manifest": {
+      "archive_member": "thesis_v49_ch0_joris_addendum_20261019_869519b5ff9b/addendum_manifest.json",
+      "bytes": 22169,
+      "sha256": "1010f313a2c24c1af73d4cb06fbedbd8562fe8215315e3228bc8868a32625db1"
+    }
+  },
+  "sprite_backup": {
+    "status": "verified_exclusive_files_completion_manifest_written_last",
+    "completed_utc": "2026-10-19T16:17:11.104776+00:00",
+    "internal_remote_directory": "/homes/kmika/diss_results/_supplements/thesis_v49_confirmation_energy_supplement_20261019/addenda/ch0_joris_evidence_alignment_20261019_869519b5ff9bbad275c09c951940e789159baede",
+    "internal_mount_directory": "/home/kmika/mnt/sprite/diss_results/_supplements/thesis_v49_confirmation_energy_supplement_20261019/addenda/ch0_joris_evidence_alignment_20261019_869519b5ff9bbad275c09c951940e789159baede",
+    "verified_payload_file_count": 5,
+    "all_source_target_SHA256_equal": true,
+    "verification_method": "Full SHA256 target readback through the existing SSHFS mount after fsync/close and advisory DONTNEED; not direct remote SSH execution.",
+    "publication_method": "Exclusive directory and O_CREAT|O_EXCL files; all payload fsync/close/full SHA256 readback; completion manifest written last. No atomic whole-directory rename claim.",
+    "atomic_whole_directory_publication": false,
+    "manifest": {
+      "relative_path": "addendum_transfer_manifest.json",
+      "bytes": 8040,
+      "sha256": "05ecdfd4a192d6f7162a28b7d230d211e0b122ef1d9bbc54d865e785319164de"
+    },
+    "completion": {
+      "relative_path": "TRANSFER_COMPLETE.json",
+      "bytes": 3682,
+      "sha256": "4ac17e9287e4520345dfc7d4eccbb27cf75b1fdea7d27a4c29e97a11d523a103"
+    },
+    "public_url": null
+  },
+  "private_source": {
+    "author": "Joris Wachsmuth",
+    "title": "Entwicklung und Validierung eines Messsystems zur energetischen Bewertung eingebetteter KI-Beschleuniger",
+    "institution": "Universität Bielefeld",
+    "date": "July 2026",
+    "sha256": "897428afa66e9674f8e3ef9b2356bba2cf565fda471803bb9a2ed28de8001191",
+    "archive_member": "thesis_v49_ch0_joris_addendum_20261019_869519b5ff9b/task_evidence/source/Joris Masterarbeit.pdf",
+    "full_PDF_published_in_this_repository": false
+  },
+  "numerical_results_changed": false,
+  "preserved_scientific_scope": {
+    "primary_A": 70,
+    "primary_B": 68,
+    "separate_B_supplements": 2,
+    "primary_B_nulls": 2,
+    "primary_rate_pairs": 35,
+    "primary_energy_pairs": 33,
+    "supplemental_cross_session_energy_pairs": 2,
+    "fully_physically_qualified_C": 0
+  },
+  "reproduction_scope": "The follow-up corrects evidence and status descriptions. It adds no calibration or conversion and does not repeat hardware acquisitions or raw-waveform integration.",
+  "publication_mapping": "The later exact result-repository commit and its incremental Git bundle are recorded separately in this private addendum directory; the immutable transfer receipts remain unchanged."
+}

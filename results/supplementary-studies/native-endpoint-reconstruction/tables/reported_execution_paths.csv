@@ -1,0 +1,5 @@
+execution,p1_mean_ms,p2_mean_ms,post_mean_ms,post_scope,fps,evidence_level,source_table
+Published pipeline,10.53,8.70,,Included in P2,95.0,reported manuscript summary,14_endpoint_execution.tex:tab:yolov7-native-reconstruction-v279
+Original native replay,10.48,8.79,,Not separated,95.3,reported manuscript summary,14_endpoint_execution.tex:tab:yolov7-native-reconstruction-v279
+Current-artifact replay,10.30,8.73,,Not timed,97.0,reported manuscript summary,14_endpoint_execution.tex:tab:yolov7-native-reconstruction-v279
+Three-stage completed task,10.40,8.75,2.10,Separate host Post stage,95.9,reported manuscript summary,14_endpoint_execution.tex:tab:yolov7-native-reconstruction-v279

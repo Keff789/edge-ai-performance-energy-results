@@ -1,0 +1,8 @@
+{
+  "source": "Author-supplied Figure1_uRECS_Photo_Optimiert.svg from MLSys_Split_Selection_R50_Final_LaTeX.zip, version6",
+  "source_svg_sha256": "476ae9a401915e31c8b39d0ef689ff3aae6be5e27cb0e226796a4d5d763ee268",
+  "normalization": "Embedded PNG extracted byte-for-byte to urecs_board_original.png; SVG retains the same objects and references the external image.",
+  "image_sha256": "f3fa1a99baf34ae8b5b317db23279dfa1c58c3d80bd38846091ce3fc3a100f9e",
+  "svg_sha256": "e149ba1c54a1fa87006be69db78884bbef87fc38aad8f26810997e8e70eb1d88",
+  "original_caption": "Overview of heterogeneous split execution on u.RECS. (a) Unpopulated carrier and module locations. (b) Host-mediated execution with transfer, conversion, buffering, and synchronization; completion includes output materialization and required postprocessing. (c) The Generic runner supports single- and multi-tensor boundaries; the current Native interface requires one suffix input. Illustrative cuts differ. Paired measurements use identical compatible cuts and compiled subgraphs.\n"
+}

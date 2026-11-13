@@ -1,0 +1,41 @@
+\section{Dokumentation der KI-gestützten Werkzeugentwicklung}
+\label{app:ai_tool_development}
+
+\subsection{Geltungsbereich und Zuständigkeit}
+\label{app:ai_tool_development:scope}
+
+Das ONNX Splitpoint Tool wurde im Rahmen umfangreicher, promptgesteuerter Arbeiten mit ChatGPT und Codex von OpenAI \cite{openai_chatgpt,openai_codex2025} entwickelt. Diese Systeme erzeugten oder überarbeiteten einen wesentlichen Teil der Implementierungsentwürfe und wurden in späteren Phasen zur vorherrschenden Quelle für Code-Entwürfe und -Überarbeitungen. Dieser Anhang ergänzt den Entwicklungsbericht in Abschnitt~\ref{sec:automation:development_provenance}.
+
+Der Autor konzipierte das Tool, stellte die ursprünglichen Python-Skripte und -Modelle bereit und definierte die Forschungsfragen, Anforderungen sowie Akzeptanzkriterien. Er wählte die Zielplattformen und Bewertungsmethoden aus, betrieb die Versuchssysteme und bewertete die daraus resultierenden Erkenntnisse. Er wählte vorgeschlagene Änderungen aus, integrierte, testete, modifizierte oder lehnte sie ab. Die Verantwortung für die eingereichte Software, das Versuchsdesign, die Interpretation und das Manuskript liegt beim Autor.
+
+Die Unterstützung umfasste Graphen- und Kostenanalysen, den Export von Split-Modellen, Schnittstellen, Backend-Integration, Ablaufsteuerung, Validierung der Aufgabenqualität, Energieorchestrierung, Tests und Berichterstellung. Der Autor nutzte beobachtete Fehler und Zwischenergebnisse, um nachfolgende Änderungen zu steuern. Die Verifikation bezog sich auf das für jede Aussage erforderliche Verhalten. Überlappende Patches, Refactoring, Rückgängigmachungen und manuelle Integration verhindern eine aussagekräftige prozentuale Ermittlung der Netto-Code-Urheberschaft.
+
+Die Beiträge von Joris Wachsmuth und dem Autor zur Messinfrastruktur und Auswertung sind in Abschnitt~\ref{sec:energy:implementation} beschrieben.
+
+\subsection{Werkzeuge, Entwicklung und Verifikation}
+\label{app:ai_tool_development:verification}
+
+Das gespeicherte Register erfasst die Nutzung von ChatGPT ab dem 25. August 2025 und die Nutzung von Codex ab dem 14. Februar 2026. ChatGPT unterstützte den Anforderungsdialog, die Erstellung von Architektur- und Metrikvorschlägen, die Codegenerierung sowie das Debugging anhand von Protokollen und der Dokumentation. Codex unterstützte die Repository-Implementierung, Refactoring, Tests, Diffs und die Release-Paketierung. Ihre Rollen überschnitten sich, da Diskussionen zu Codeänderungen führten und Hardwareergebnisse weitere Überarbeitungen erforderten.
+
+Die Metadaten der Konversation erfassen folgende Modellkennungen:
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\texttt{gpt-5-pro} & \texttt{gpt-5-2-pro} & \texttt{gpt-5-4-pro} \\
+\texttt{gpt-5-5-pro} & \texttt{gpt-5-5-thinking} & \texttt{gpt-5-5} \\
+\texttt{gpt-5-mini} & & \\
+\end{tabular}
+\end{center}
+Einigen Codex-Arbeitsaufträgen und späteren Interaktionen fehlt eine zuverlässige Modellkennung. Diese Kennungen sind nicht verfügbar und werden nicht aus dem Gedächtnis rekonstruiert.
+
+Die Entwicklung schritt von der statischen Graphenanalyse und dem Split-Export über die Backend-Integration und Validierung der Laufzeit bis hin zur experimentellen Orchestrierung voran. Hardwareausfälle und Messergebnisse flossen in Überarbeitungen der Tensor-Schnittstellen, der Ablaufsteuerung und der Ausgabeverarbeitung ein. Der aufbewahrte Code, die Testprotokolle und die Messaufzeichnungen belegen, welche vorgeschlagenen Änderungen umgesetzt und überprüft wurden.
+
+Die Verifikation umfasste die Überprüfung der ONNX-Tensorformen, Vergleiche zwischen vollständigen und zusammengesetzten Modellen, Überprüfungen der Tensor-Schnittstelle sowie die Ausführung auf dem Zielsystem. Bei der Auswertung des Datensatzes wurden die Ergebnisse der Klassifikation und Erkennung überprüft. Kalibrierte Messverläufe, Zeitfenster und Zählungen der abgeschlossenen Arbeitsschritte dienten der Energieanalyse. Unit- und Integrationstests ergänzten diese Hardwareprüfungen. Wissenschaftliche Aussagen stützen sich auf die getestete Software und die Messprotokolle, nicht auf generierte Erklärungen.
+
+\subsection{Aufbewahrung der Entwicklungsunterlagen}
+\label{app:ai_tool_development:records}
+
+Die Unterstützung bei der Manuskripterstellung ist in der abschließenden Erklärung \emph{\nameref{sec:ai_usage}} beschrieben. Sie umfasste auch die Integration der gemeinsam verfassten Manuskripte in das Ergebnisrepositorium, die numerische Neuauswertung gespeicherter Exporte und die Bearbeitung von Gutachten.
+
+Der Revisionsverlauf und das Projektregister enthalten die Entwicklungsentscheidungen, Codeänderungen, Testberichte und Messquellen. Abgeleitete Analysen behalten ihre Ausgangspopulationen und Messdefinitionen bei. AI-Unterstützungsaufzeichnungen dokumentieren den Entwicklungsprozess getrennt von den in Anhang~\ref{app:evidence_availability} abgebildeten numerischen Belegen.
+
+Der vollständige Export der Konversation enthält zudem nicht themenbezogene und persönliche Inhalte und verbleibt in einem zugriffsgeschützten Archiv. Ein projektspezifisches Verzeichnis kann relevante Konversationen und Nachrichten identifizieren, ohne dieses Material zu veröffentlichen. Die Aufzeichnungen enthalten weder jede Modellkennung noch eine vollständige Historie der Urheberschaft für jede einzelne Bearbeitung. Anhang~\ref{app:evidence_availability} ordnet wissenschaftliche Ergebnisse ihren Quellen zu. Entwicklungsgespräche dokumentieren die Unterstützung getrennt von den Messdaten.

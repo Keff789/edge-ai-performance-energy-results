@@ -1,0 +1,3 @@
+task,method,k,policy,groups,candidates,native_budget,generic_tests,native_tests,mean_loss_pct,mean_retained_native_pct,median_loss_pct,max_loss_pct,exact_winners,exact_winner_pct,within_1pct,within_5pct,shortlist_best_preserved
+all,bytes,5,cascade_native2,21,187,2,81,42,3.798185625435318,96.20181437456468,0.0,54.46678185867402,17,80.95238095238095,17,18,21
+all,bytes,12,cascade_native2,21,187,2,137,42,0.353070018388509,99.64692998161149,0.0,5.476326145995247,19,90.47619047619048,19,20,20

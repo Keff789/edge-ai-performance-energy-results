@@ -1,0 +1,47 @@
+{
+  "scope": "Read-only evidence audit; no raw-data recalculation, measurements, fit or change of frozen outputs.",
+  "frozen_multi_workload_manifest": {
+    "package_path": "data/validation/multi_workload/multi_workload_manifest.json",
+    "sha256": "a43f833e05f2c810846bda4dc3d2810d62413501b152a73aa1b2405552c07b7f",
+    "fresh_collector_source_id": "ca8617d545012307d9c0",
+    "whole_file_hash_match": true,
+    "scope_outputs_json_locator": "$.scope_outputs[2]",
+    "scope_outputs_record": {
+      "family": "YOLO",
+      "label": "YOLO-FP32",
+      "precision": "FP32",
+      "scope_config": "external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_yolofp32.yaml",
+      "scope_manifest": "external-analysis/tek_scope_comparison_yolofp32_v1/scope_comparison_manifest.json",
+      "scope_manifest_sha256": "489b8588e55030ff0b5376c136a8c540485bf322c9dbeacc600b63dbfc78615f",
+      "scope_output_root": "external-analysis/tek_scope_comparison_yolofp32_v1",
+      "workload_id": "yolofp32"
+    },
+    "workload_inventory_json_locator": "$.workload_inventory[2]",
+    "reported_zero_offset_status": "stable_offset_detected_and_corrected"
+  },
+  "semantic_configuration_check": {
+    "frozen_source_path": "data/validation/native_spectra/spectral_sources.json",
+    "frozen_source_sha256": "b2e810488a6221a621635c7af6ec58ca9a84551024848b027ebf0661f9fad392",
+    "snapshot_json_locator": "$[24].metadata.scope_config_snapshot",
+    "collected_configuration_source_id": "b4bdb81e6dd260524653",
+    "collected_configuration_sha256": "e4fc61d9d35cb87ede980bd84488471878854a694744e812dc2a63210690b638",
+    "all_configuration_fields_equal_after_safe_yaml_parse": true,
+    "does_not_verify_historical_execution": true
+  },
+  "historic_report": {
+    "source_file_name": "SCOPE_COMPARISON_SUMMARY.md",
+    "source_library_file_id": "libfile_da9428be545c8191a87819ebc3a67738",
+    "source_file_id": "file_000000001bcc81f4ad5e9c235b790102",
+    "source_created_date_reported_by_root": "2026-08-25",
+    "bytes": 5819,
+    "sha256": "1b16c27e20c3843cc6d7c8b176c45c8208bd1a1741ba51ae6c6c01803431591f",
+    "reported_applied_offset_ma": 111.917,
+    "reported_estimated_uncertainty_ma": 4.092,
+    "exact_historical_model_hash_binding_verified": false
+  },
+  "unverified_recorded_references": {
+    "historical_scope_manifest_sha256": "489b8588e55030ff0b5376c136a8c540485bf322c9dbeacc600b63dbfc78615f",
+    "cache_zero_model_hash": "f98ac74afe87d971d2040d5c6eb1777ff43f41596d1ccd4bd6bc02f4617092fc",
+    "cache_zero_model_hash_is_not_asserted_equal_to_file_byte_sha256": true
+  }
+}

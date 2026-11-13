@@ -1,0 +1,42 @@
+[
+  {
+    "source": "onnx_splitpoint_tool/workflow/cross_runner_reporting.py",
+    "function": "_rank",
+    "function_sha256": "1e2392abfc98658b47a7b9c50a300a89826f031c7ba01f246dd0a3dc74cf1032"
+  },
+  {
+    "source": "onnx_splitpoint_tool/workflow/cross_runner_reporting.py",
+    "function": "_pearson",
+    "function_sha256": "78d33317831cf6eee5865afa90acf2793f45e3c434e5abf68ba1f1182435a84a"
+  },
+  {
+    "source": "onnx_splitpoint_tool/workflow/cross_runner_reporting.py",
+    "function": "_spearman",
+    "function_sha256": "b34e47122fc135134c5886f1219b97cc602a0b5f4a32d056a8474df437a95ed2"
+  },
+  {
+    "source": "onnx_splitpoint_tool/workflow/cross_runner_reporting.py",
+    "function": "_kendall_tau_b",
+    "function_sha256": "fcd9090a8b4991275c67d4f1a341e40a0760994984e92497c7320c560999f114"
+  },
+  {
+    "source": "onnx_splitpoint_tool/workflow/cross_runner_reporting.py",
+    "function": "_pairwise_counts",
+    "function_sha256": "480b52361a498f7910f86fb0f6adfa3c408a5ae8fef23375e9d7cd98f071956a"
+  },
+  {
+    "source": "onnx_splitpoint_tool/generic_completion_reporting.py",
+    "function": "completion_groups",
+    "function_sha256": "65b5bd5cde3084817fa0c88fb2cdd21765daac6a044882588ec009c2d2345896"
+  },
+  {
+    "source": "onnx_splitpoint_tool/yolo_augmentation_reporting.py",
+    "function": "_stratum",
+    "function_sha256": "0d840f435ba36176576c1fd9b1e0fb7ce13933e8699a5411f686aa4610c5395d"
+  },
+  {
+    "source": "onnx_splitpoint_tool/yolo_augmentation_reporting.py",
+    "function": "_groups",
+    "function_sha256": "0230ad090c0a711d0892024608fb3673590f80aee446a1379d5292adc2bd30b7"
+  }
+]

@@ -1,0 +1,155 @@
+\begin{table}[tbp]
+\centering
+\small
+\caption{Current excess-PSD band integrals normalised by each setup's full-band total. Not energy shares. Part 1/4.}
+\label{tab:journal-table-tek-vs-pico-frequency-bands-1}
+\begingroup
+\setbox0=\hbox{%
+\begin{tabular}{llll}
+\toprule
+Workload & Setup & Frequency band & Variance share (\%) \\
+\midrule
+GEMM-FP32 & tek & 0--100 Hz & 6.558 \\
+GEMM-FP32 & tek & 100 Hz--1 kHz & 45.460 \\
+GEMM-FP32 & tek & 1--10 kHz & 17.866 \\
+GEMM-FP32 & tek & 10--77 kHz & 14.881 \\
+GEMM-FP32 & tek & 77--500 kHz & 14.363 \\
+GEMM-FP32 & tek & 500 kHz--2.5 MHz & 0.873 \\
+GEMM-FP32 & pico & 0--100 Hz & 7.502 \\
+GEMM-FP32 & pico & 100 Hz--1 kHz & 52.636 \\
+GEMM-FP32 & pico & 1--10 kHz & 20.516 \\
+GEMM-FP32 & pico & 10--77 kHz & 16.176 \\
+GEMM-FP32 & pico & 77--500 kHz & 3.165 \\
+GEMM-FP32 & pico & 500 kHz--2.5 MHz & 0.005 \\
+GEMM-INT8 & tek & 0--100 Hz & 11.660 \\
+GEMM-INT8 & tek & 100 Hz--1 kHz & 1.514 \\
+GEMM-INT8 & tek & 1--10 kHz & 0.602 \\
+GEMM-INT8 & tek & 10--77 kHz & 39.783 \\
+GEMM-INT8 & tek & 77--500 kHz & 43.259 \\
+GEMM-INT8 & tek & 500 kHz--2.5 MHz & 3.183 \\
+GEMM-INT8 & pico & 0--100 Hz & 19.452 \\
+GEMM-INT8 & pico & 100 Hz--1 kHz & 2.535 \\
+GEMM-INT8 & pico & 1--10 kHz & 1.015 \\
+GEMM-INT8 & pico & 10--77 kHz & 59.965 \\
+\bottomrule
+\end{tabular}}
+\ifdim\wd0>\linewidth
+\resizebox{\linewidth}{!}{\box0}
+\else
+\box0
+\fi
+\endgroup
+\end{table}
+
+\begin{table}[tbp]
+\centering
+\small
+\caption{Current excess-PSD band integrals normalised by each setup's full-band total. Not energy shares. Part 2/4.}
+\label{tab:journal-table-tek-vs-pico-frequency-bands-2}
+\begingroup
+\setbox0=\hbox{%
+\begin{tabular}{llll}
+\toprule
+Workload & Setup & Frequency band & Variance share (\%) \\
+\midrule
+GEMM-INT8 & pico & 77--500 kHz & 17.001 \\
+GEMM-INT8 & pico & 500 kHz--2.5 MHz & 0.031 \\
+YOLO-FP32 & tek & 0--100 Hz & 0.000 \\
+YOLO-FP32 & tek & 100 Hz--1 kHz & 8.773 \\
+YOLO-FP32 & tek & 1--10 kHz & 19.421 \\
+YOLO-FP32 & tek & 10--77 kHz & 33.821 \\
+YOLO-FP32 & tek & 77--500 kHz & 36.763 \\
+YOLO-FP32 & tek & 500 kHz--2.5 MHz & 1.222 \\
+YOLO-FP32 & pico & 0--100 Hz & 0.000 \\
+YOLO-FP32 & pico & 100 Hz--1 kHz & 12.415 \\
+YOLO-FP32 & pico & 1--10 kHz & 27.322 \\
+YOLO-FP32 & pico & 10--77 kHz & 43.840 \\
+YOLO-FP32 & pico & 77--500 kHz & 16.409 \\
+YOLO-FP32 & pico & 500 kHz--2.5 MHz & 0.014 \\
+YOLO-INT8 & tek & 0--100 Hz & 0.000 \\
+YOLO-INT8 & tek & 100 Hz--1 kHz & 24.515 \\
+YOLO-INT8 & tek & 1--10 kHz & 12.281 \\
+YOLO-INT8 & tek & 10--77 kHz & 24.514 \\
+YOLO-INT8 & tek & 77--500 kHz & 37.774 \\
+YOLO-INT8 & tek & 500 kHz--2.5 MHz & 0.916 \\
+YOLO-INT8 & pico & 0--100 Hz & 0.000 \\
+YOLO-INT8 & pico & 100 Hz--1 kHz & 33.718 \\
+\bottomrule
+\end{tabular}}
+\ifdim\wd0>\linewidth
+\resizebox{\linewidth}{!}{\box0}
+\else
+\box0
+\fi
+\endgroup
+\end{table}
+
+\begin{table}[tbp]
+\centering
+\small
+\caption{Current excess-PSD band integrals normalised by each setup's full-band total. Not energy shares. Part 3/4.}
+\label{tab:journal-table-tek-vs-pico-frequency-bands-3}
+\begingroup
+\setbox0=\hbox{%
+\begin{tabular}{llll}
+\toprule
+Workload & Setup & Frequency band & Variance share (\%) \\
+\midrule
+YOLO-INT8 & pico & 1--10 kHz & 16.817 \\
+YOLO-INT8 & pico & 10--77 kHz & 30.614 \\
+YOLO-INT8 & pico & 77--500 kHz & 18.838 \\
+YOLO-INT8 & pico & 500 kHz--2.5 MHz & 0.012 \\
+Gemma3-4B & tek & 0--100 Hz & 24.702 \\
+Gemma3-4B & tek & 100 Hz--1 kHz & 33.303 \\
+Gemma3-4B & tek & 1--10 kHz & 14.229 \\
+Gemma3-4B & tek & 10--77 kHz & 8.810 \\
+Gemma3-4B & tek & 77--500 kHz & 17.884 \\
+Gemma3-4B & tek & 500 kHz--2.5 MHz & 1.071 \\
+Gemma3-4B & pico & 0--100 Hz & 29.466 \\
+Gemma3-4B & pico & 100 Hz--1 kHz & 40.131 \\
+Gemma3-4B & pico & 1--10 kHz & 17.294 \\
+Gemma3-4B & pico & 10--77 kHz & 10.219 \\
+Gemma3-4B & pico & 77--500 kHz & 2.883 \\
+Gemma3-4B & pico & 500 kHz--2.5 MHz & 0.007 \\
+ResNet-50 FP32 & tek & 0--100 Hz & 0.000 \\
+ResNet-50 FP32 & tek & 100 Hz--1 kHz & 3.796 \\
+ResNet-50 FP32 & tek & 1--10 kHz & 27.723 \\
+ResNet-50 FP32 & tek & 10--77 kHz & 39.646 \\
+ResNet-50 FP32 & tek & 77--500 kHz & 27.772 \\
+ResNet-50 FP32 & tek & 500 kHz--2.5 MHz & 1.063 \\
+\bottomrule
+\end{tabular}}
+\ifdim\wd0>\linewidth
+\resizebox{\linewidth}{!}{\box0}
+\else
+\box0
+\fi
+\endgroup
+\end{table}
+
+\begin{table}[tbp]
+\centering
+\small
+\caption{Current excess-PSD band integrals normalised by each setup's full-band total. Not energy shares. Part 4/4.}
+\label{tab:journal-table-tek-vs-pico-frequency-bands-4}
+\begingroup
+\setbox0=\hbox{%
+\begin{tabular}{llll}
+\toprule
+Workload & Setup & Frequency band & Variance share (\%) \\
+\midrule
+ResNet-50 FP32 & pico & 0--100 Hz & 0.000 \\
+ResNet-50 FP32 & pico & 100 Hz--1 kHz & 4.991 \\
+ResNet-50 FP32 & pico & 1--10 kHz & 36.259 \\
+ResNet-50 FP32 & pico & 10--77 kHz & 49.020 \\
+ResNet-50 FP32 & pico & 77--500 kHz & 9.720 \\
+ResNet-50 FP32 & pico & 500 kHz--2.5 MHz & 0.010 \\
+\bottomrule
+\end{tabular}}
+\ifdim\wd0>\linewidth
+\resizebox{\linewidth}{!}{\box0}
+\else
+\box0
+\fi
+\endgroup
+\end{table}

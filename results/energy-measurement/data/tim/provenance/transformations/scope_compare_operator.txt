@@ -1,0 +1,122 @@
+COLLECTED SOURCE EXCERPT, INERT DATA
+source_id: a246e01221f962c9f44c
+source_path: external-analysis/common_reference_psd_tool_v0.8.2/commonref/scope_compare.py
+collector_recorded_whole_file_sha256: 659a76aed55b31a46ee54d75bf5fca939cd19f4dbc714d570ab659a7ee2daf3e
+This file is a curated excerpt, not the whole source and not historical execution proof.
+
+
+--- original lines 766-779 ---
+766: def _calibrate(values: np.ndarray, source: SourceCalibration) -> np.ndarray:
+767:     calibrated = (np.asarray(values, dtype=np.float64) + source.offset_raw) * source.gain_a_per_raw
+768:     if not np.all(np.isfinite(calibrated)):
+769:         raise ValueError(f"Non-finite calibrated current values for {source.display_name}")
+770:     return calibrated
+771: 
+772: 
+773: def _power_from_current(current_a: np.ndarray, cfg: ScopeComparisonConfig) -> tuple[np.ndarray, np.ndarray]:
+774:     voltage = np.asarray(cfg.voltage_model.voltage(current_a), dtype=np.float64)
+775:     power = voltage * current_a
+776:     return voltage, power
+777: 
+778: 
+779: def _configured_shared_trigger_time(
+
+--- original lines 1600-1627 ---
+1600:         "eligibility_reason",
+1601:     ]
+1602: 
+1603:     def finish(model: dict[str, Any]) -> dict[str, Any]:
+1604:         model = dict(model)
+1605:         model["model_hash"] = stable_hash(model)
+1606:         write_csv(pair_path, pair_rows, fieldnames=pair_fieldnames)
+1607:         write_csv(rate_path, rate_rows, fieldnames=rate_fieldnames)
+1608:         write_json(model_path, model)
+1609:         return model
+1610: 
+1611:     base_model: dict[str, Any] = {
+1612:         "model_schema_version": 1,
+1613:         "enabled": bool(config.enabled),
+1614:         "target_source": config.target_source,
+1615:         "reference_source": config.detection_source,
+1616:         "application_scope": config.application_scope,
+1617:         "raw_values_preserved": bool(config.preserve_raw_metrics),
+1618:         "independent_reference": False,
+1619:         "validation_independence": (
+1620:             "post_hoc_paired_idle_salvage_not_independent"
+1621:         ),
+1622:         "correction_formula": (
+1623:             "I_Tek_corrected = I_Tek_raw + offset_applied_a"
+1624:         ),
+1625:     }
+1626:     if not config.enabled:
+1627:         return finish(
+
+--- original lines 1862-1892 ---
+1862: def _zero_offset_for_rate(
+1863:     model: dict[str, Any] | None,
+1864:     rate: int,
+1865: ) -> float:
+1866:     del rate  # the current contract applies one stable session offset to all rates
+1867:     if not model or not bool(model.get("correction_applied", False)):
+1868:         return 0.0
+1869:     if model.get("target_source") != "tek":
+1870:         return 0.0
+1871:     try:
+1872:         value = float(model.get("offset_applied_a", 0.0))
+1873:     except (TypeError, ValueError):
+1874:         return 0.0
+1875:     return value if np.isfinite(value) else 0.0
+1876: 
+1877: 
+1878: def _zero_offset_for_external_idle(
+1879:     model: dict[str, Any] | None,
+1880:     rate: int,
+1881: ) -> float:
+1882:     """Return an offset only when the model explicitly covers idle files.
+1883: 
+1884:     Session-shift salvage models are workload-only by construction: applying
+1885:     the old workload-session probe-zero correction to a newly acquired idle
+1886:     campaign would manufacture a false baseline mismatch.
+1887:     """
+1888: 
+1889:     if not model or not bool(model.get("apply_to_external_idle", True)):
+1890:         return 0.0
+1891:     return _zero_offset_for_rate(model, rate)
+1892: 
+
+--- original lines 3496-3530 ---
+3496:     tek_current_native_raw = _calibrate(tek_raw, cfg.tek)
+3497:     pico_current_native_raw = _calibrate(pico_raw, cfg.pico)
+3498: 
+3499:     tek_nominal_duration = tek_current_native_raw.size / tek_rate
+3500:     pico_nominal_duration = pico_current_native_raw.size / pico_rate
+3501:     common_nominal_duration = min(tek_nominal_duration, pico_nominal_duration)
+3502:     tek_count = min(
+3503:         tek_current_native_raw.size,
+3504:         int(round(common_nominal_duration * tek_rate)),
+3505:     )
+3506:     pico_count = min(
+3507:         pico_current_native_raw.size,
+3508:         int(round(common_nominal_duration * pico_rate)),
+3509:     )
+3510:     tek_current_native_raw = tek_current_native_raw[:tek_count]
+3511:     pico_current_native_raw = pico_current_native_raw[:pico_count]
+3512:     zero_offset_a = _zero_offset_for_rate(zero_correction_model, rate)
+3513:     tek_current_native = tek_current_native_raw + zero_offset_a
+3514:     pico_current_native = pico_current_native_raw
+3515: 
+3516:     raw_tek_voltage_native, raw_tek_power_native = _power_from_current(
+3517:         tek_current_native_raw, cfg
+3518:     )
+3519:     raw_pico_voltage_native, raw_pico_power_native = _power_from_current(
+3520:         pico_current_native_raw, cfg
+3521:     )
+3522:     tek_voltage_native, tek_power_native = _power_from_current(
+3523:         tek_current_native, cfg
+3524:     )
+3525:     pico_voltage_native, pico_power_native = _power_from_current(
+3526:         pico_current_native, cfg
+3527:     )
+3528: 
+3529:     # Preserve raw native-grid integrals before applying the documented additive
+3530:     # zero correction.  The corrected values remain the primary selected metrics

@@ -1,0 +1,59 @@
+{
+  "scope": {
+    "all_source_pairs": 204,
+    "all_source_quality_eligible_pairs": 187,
+    "evaluated_quality_pairs": 187,
+    "classifier_pairs": 151,
+    "detector_pairs": 36,
+    "model_device_groups": 21,
+    "models": [
+      "mobilenet_v3_large",
+      "regnet_x_1_6gf",
+      "resnet50",
+      "yolo11l",
+      "yolo26m",
+      "yolo26s",
+      "yolov7_paper"
+    ],
+    "missing_models_due_incomplete_features": []
+  },
+  "weights": {
+    "w_comm": 1.0,
+    "w_imb": 0.15799266978091375,
+    "w_tensors": 0.2
+  },
+  "model_holdout_folds": 7,
+  "validation": {
+    "baseline_max_error_pp": 4.618527782440651e-14,
+    "all_group_counts_fixed": 21,
+    "fold_model_disjoint": true,
+    "curve_monotonic": true,
+    "full_graph_ranges_checked": true,
+    "exact_graph_boundary_identity_join": true,
+    "missing_features_imputed": false,
+    "paper_or_repo_modified": false
+  },
+  "published_comparison": {
+    "result": "PASS",
+    "files_checked": 16,
+    "files": [
+      "analysis/aggregate_curves.csv",
+      "analysis/candidate_features.csv",
+      "analysis/complete_rankings.csv",
+      "analysis/fold_memberships.csv",
+      "analysis/fold_weights.csv",
+      "analysis/group_curves.csv",
+      "analysis/key_budget_results.csv",
+      "analysis/sensitivity_fixed_weights.json",
+      "analysis/summary.json",
+      "analysis/task_curves.csv",
+      "features/added_operation_nodes.json",
+      "features/graph_boundary_features.csv",
+      "features/node_operation_audit.json",
+      "features/normalization_universes.json",
+      "features/provenance.json",
+      "features/validation.json"
+    ],
+    "mode": "Exact scientific CSV/JSON and derived-feature comparison"
+  }
+}

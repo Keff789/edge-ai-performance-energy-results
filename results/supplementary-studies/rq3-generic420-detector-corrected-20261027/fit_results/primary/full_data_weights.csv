@@ -1,0 +1,13 @@
+method,task,accelerator,w_comm,w_imb,w_ten,train_loss_pct,train_groups,train_models,training_optima_count,training_rank_margin,evaluation_role
+global,all,all,0.215,0.035,0.75,11.350912408248066,21,mobilenet_v3_large;regnet_x_1_6gf;resnet50;yolo11l;yolo26m;yolo26s;yolov7_paper,7,0.00046149373989194984,fit_on_all_available_data_not_holdout
+task,classification,all,0.855,0.135,0.01,15.183128391080459,9,mobilenet_v3_large;regnet_x_1_6gf;resnet50,1527,0.006456139413102896,fit_on_all_available_data_not_holdout
+task,detection,all,0.0,0.09,0.91,7.166636914676734,12,yolo11l;yolo26m;yolo26s;yolov7_paper,959,0.0088461340084584,fit_on_all_available_data_not_holdout
+device,all,DeepX,0.7575,0.0775,0.165,12.523837767123656,7,mobilenet_v3_large;regnet_x_1_6gf;resnet50;yolo11l;yolo26m;yolo26s;yolov7_paper,11,0.0010528374976881312,fit_on_all_available_data_not_holdout
+device,all,H10,0.2675,0.0875,0.645,7.042859755836595,7,mobilenet_v3_large;regnet_x_1_6gf;resnet50;yolo11l;yolo26m;yolo26s;yolov7_paper,2185,0.004978231660355044,fit_on_all_available_data_not_holdout
+device,all,H8,0.0,0.0,1.0,5.396239940964112,7,mobilenet_v3_large;regnet_x_1_6gf;resnet50;yolo11l;yolo26m;yolo26s;yolov7_paper,1,0.0,fit_on_all_available_data_not_holdout
+task_device,classification,DeepX,0.975,0.025,0.0,8.161550143410718,3,mobilenet_v3_large;regnet_x_1_6gf;resnet50,7726,0.030029633262876495,fit_on_all_available_data_not_holdout
+task_device,classification,H10,0.64,0.3325,0.0275,11.424676570681541,3,mobilenet_v3_large;regnet_x_1_6gf;resnet50,15622,0.03114775210568704,fit_on_all_available_data_not_holdout
+task_device,classification,H8,0.0,0.0,1.0,8.668277567593002,3,mobilenet_v3_large;regnet_x_1_6gf;resnet50,1,0.0,fit_on_all_available_data_not_holdout
+task_device,detection,DeepX,0.86,0.1325,0.0075,15.119561305331935,4,yolo11l;yolo26m;yolo26s;yolov7_paper,30,0.0013697735740984542,fit_on_all_available_data_not_holdout
+task_device,detection,H10,0.0,0.085,0.915,2.5088859728257806,4,yolo11l;yolo26m;yolo26s;yolov7_paper,959,0.01859117347008135,fit_on_all_available_data_not_holdout
+task_device,detection,H8,0.0,0.085,0.915,0.0,4,yolo11l;yolo26m;yolo26s;yolov7_paper,959,0.01859117347008135,fit_on_all_available_data_not_holdout

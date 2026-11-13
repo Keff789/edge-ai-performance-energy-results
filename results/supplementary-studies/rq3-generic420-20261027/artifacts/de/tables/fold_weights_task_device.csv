@@ -1,0 +1,22 @@
+Testmodell,Modellklasse,Beschleuniger,$w_C$,$w_I$,$w_T$,Trainingsgruppen,Trainingsverlust (%)
+MobileNetV3-L,Klassifikatoren,DeepX,0.9400,0.0425,0.0175,2,12.24
+MobileNetV3-L,Klassifikatoren,H10,0.6400,0.3325,0.0275,2,17.14
+MobileNetV3-L,Klassifikatoren,H8,0.0000,0.0000,1.0000,2,9.90
+RegNet-X,Klassifikatoren,DeepX,0.9750,0.0250,0.0000,2,2.29
+RegNet-X,Klassifikatoren,H10,0.4200,0.5325,0.0475,2,9.15
+RegNet-X,Klassifikatoren,H8,0.0000,0.0000,1.0000,2,3.10
+ResNet-50,Klassifikatoren,DeepX,0.9750,0.0250,0.0000,2,9.96
+ResNet-50,Klassifikatoren,H10,0.9400,0.0425,0.0175,2,0.00
+ResNet-50,Klassifikatoren,H8,0.0500,0.6850,0.2650,2,10.97
+YOLO11l,Detektoren,DeepX,0.1500,0.3600,0.4900,3,11.29
+YOLO11l,Detektoren,H10,0.8700,0.0150,0.1150,3,8.49
+YOLO11l,Detektoren,H8,0.6775,0.3000,0.0225,3,0.96
+YOLO26m,Detektoren,DeepX,0.7300,0.2675,0.0025,3,15.60
+YOLO26m,Detektoren,H10,0.8700,0.0150,0.1150,3,9.11
+YOLO26m,Detektoren,H8,0.6775,0.3000,0.0225,3,1.06
+YOLO26s,Detektoren,DeepX,0.7325,0.2675,0.0000,3,15.46
+YOLO26s,Detektoren,H10,0.8700,0.0150,0.1150,3,8.63
+YOLO26s,Detektoren,H8,0.6775,0.3000,0.0225,3,0.97
+YOLOv7,Detektoren,DeepX,0.6275,0.1150,0.2575,3,8.01
+YOLOv7,Detektoren,H10,0.9200,0.0250,0.0550,3,4.18
+YOLOv7,Detektoren,H8,0.0000,1.0000,0.0000,3,0.61

@@ -1,0 +1,605 @@
+{
+  "schema": "thesis-energy-de-regeneration-v1",
+  "status": "PASS",
+  "language": "de",
+  "base_commit": "78c21fc5f8b9ff2a768cff1801633dfc0172717a",
+  "generator": "scripts/dissertation/render_thesis_energy_de.py",
+  "generator_sha256": "e636ee97305e876c152d0b77c76bd7a0fce1148ebf5a88cfcc323a2809d7d942",
+  "style_profile": "dissertation-author-20261103",
+  "style_source": "scripts/split-inference/publication_mlsys_figures.py",
+  "style_sha256": "0f520d73e4ca6d654dbdac3069e7aa7b70f85e0f1c233ed434461a78a71cd96b",
+  "figures": {
+    "fp16_objectives": {
+      "file": "figures/energy/fp16_objectives.pdf",
+      "source_kind": "published_summary_data_rerender",
+      "language": "de",
+      "sha256": "665eaa04e76822a63976c08bddffeadbaab22877ef33ddd1c5f334207725058b",
+      "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/fp16_objectives.pdf",
+      "english_reference_sha256": "df9dd600f321d44024e7cca876d92d9f2ad8326e16f1bbb6b61ff75e52721613",
+      "source_inputs": {
+        "results/energy-measurement/tables/tim/fp16_energy.csv": "921542c6840c2d678cef63617602608e03c9db8f4e804c903c1476d59f10c6cc",
+        "results/energy-measurement/tables/tim/fp16_coverage.csv": "92449385ff956fc5a3e5c72ffe9a5428382976a277903dd7ecdb9a62822b64d5"
+      },
+      "data_payload": "fp16_objectives.json",
+      "data_payload_sha256": "b9c92808a6037834de2b1ceca59140fd45fa9730cc2cb6d1c4975609de30947f",
+      "exact_source_rows_retained": true,
+      "statistics_recomputed": false,
+      "english_numeric_geometry_check": {
+        "status": "PASS",
+        "tolerance_bp": 0.002,
+        "reference_use": "validation only; no PDF data used in rendering",
+        "checks": [
+          {
+            "series": "Q95",
+            "checked_values": 3,
+            "maximum_error_bp": 9.209513564201188e-06
+          },
+          {
+            "series": "above Nyquist (complement of coverage)",
+            "checked_values": 3,
+            "maximum_error_bp": 5.382144806276301e-06
+          }
+        ],
+        "checked_values": 6
+      },
+      "same_canvas_as_english": true,
+      "pdf_width_bp": 442.79998779296875,
+      "include_width_bp": 346.19,
+      "font_sizes_bp": {
+        "11.5": 26
+      },
+      "smallest_placed_font_bp": 8.990932948854109,
+      "placed_modal_font_bp": 8.990932948854109,
+      "clipped_text": []
+    },
+    "cross_workload_spectra": {
+      "file": "figures/energy/cross_workload_spectra.pdf",
+      "source_kind": "published_summary_data_rerender",
+      "language": "de",
+      "sha256": "3154832e30ce9d754f13ac1feb29ce9bda5042458ad94100472890cdbddb8586",
+      "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/cross_workload_spectra.pdf",
+      "english_reference_sha256": "4c102aeda661e3ff19af5d89921312e765fe15b18e3a4a70cfcfa62538668b46",
+      "source_inputs": {
+        "results/energy-measurement/data/spectra/pico_vs_tek_psd/data/curves/Jetson_Orin_NX__gemmfp32__tek__power__excess__existing_full_record.csv": "5de86c02d9ee7060d2a7861496276eb443818a4a3d072824b37ba233b390033c",
+        "results/energy-measurement/data/spectra/pico_vs_tek_psd/data/curves/Jetson_Orin_NX__gemmint8__tek__power__excess__existing_full_record.csv": "81373862066a5dab400260995373f67148f2c874f387130327eab9815ce2302f",
+        "results/energy-measurement/data/spectra/pico_vs_tek_psd/data/curves/Jetson_Orin_NX__yolofp32__tek__power__excess__existing_full_record.csv": "468bcf4da2ed0a28fdaba0b758c76043c94aba15ca448c6c1cc5b147ac3cbe46",
+        "results/energy-measurement/data/spectra/pico_vs_tek_psd/data/curves/Jetson_Orin_NX__yoloint8__tek__power__excess__existing_full_record.csv": "6e73256a7b26195e91c08dc92fd08f7596a447cfcc951b2ca4b852a615d4764a",
+        "results/energy-measurement/data/spectra/pico_vs_tek_psd/data/curves/Jetson_Orin_NX__gemma3-4b__tek__power__excess__existing_full_record.csv": "92dd4e52ee7bc215724d74d23c2f921b30c5aa086f0b863cf6e3241c2078f037",
+        "results/energy-measurement/data/spectra/pico_vs_tek_psd/data/curves/Jetson_Orin_NX__resnet50__tek__power__excess__existing_full_record.csv": "84874206ba4acf6d899722264b08b43fe88c416d84be5ccc8f73475fd644f0b9"
+      },
+      "data_payload": "cross_workload_spectra.json",
+      "data_payload_sha256": "ef5ef5b34efbb8e2dba6d6e79a87ab331914b92209e70527802c0791729558bc",
+      "exact_source_rows_retained": true,
+      "statistics_recomputed": false,
+      "english_numeric_geometry_check": {
+        "status": "PASS",
+        "tolerance_bp": 0.002,
+        "reference_use": "validation only; no PDF data used in rendering",
+        "checks": [
+          {
+            "series": "gemmfp32/PSD",
+            "checked_values": 2964,
+            "maximum_error_bp": 8.907310530048562e-06
+          },
+          {
+            "series": "gemmfp32/CDF",
+            "checked_values": 224,
+            "maximum_error_bp": 1.5435793557116995e-05
+          },
+          {
+            "series": "gemmint8/PSD",
+            "checked_values": 3208,
+            "maximum_error_bp": 8.057488003032631e-06
+          },
+          {
+            "series": "gemmint8/CDF",
+            "checked_values": 226,
+            "maximum_error_bp": 1.5220452041830868e-05
+          },
+          {
+            "series": "yolofp32/PSD",
+            "checked_values": 3086,
+            "maximum_error_bp": 7.989498826077579e-06
+          },
+          {
+            "series": "yolofp32/CDF",
+            "checked_values": 464,
+            "maximum_error_bp": 1.52982543681901e-05
+          },
+          {
+            "series": "yoloint8/PSD",
+            "checked_values": 2886,
+            "maximum_error_bp": 8.102639384333088e-06
+          },
+          {
+            "series": "yoloint8/CDF",
+            "checked_values": 378,
+            "maximum_error_bp": 1.5565183446142328e-05
+          },
+          {
+            "series": "gemma3-4b/PSD",
+            "checked_values": 3360,
+            "maximum_error_bp": 8.105663255264517e-06
+          },
+          {
+            "series": "gemma3-4b/CDF",
+            "checked_values": 352,
+            "maximum_error_bp": 1.5532878137491934e-05
+          },
+          {
+            "series": "resnet50/PSD",
+            "checked_values": 3004,
+            "maximum_error_bp": 8.037466884047717e-06
+          },
+          {
+            "series": "resnet50/CDF",
+            "checked_values": 412,
+            "maximum_error_bp": 1.5532878137491934e-05
+          }
+        ],
+        "checked_values": 20564
+      },
+      "same_canvas_as_english": true,
+      "pdf_width_bp": 489.6000061035156,
+      "include_width_bp": 355.42147945,
+      "font_sizes_bp": {
+        "12.0": 30
+      },
+      "smallest_placed_font_bp": 8.711310662235253,
+      "placed_modal_font_bp": 8.711310662235253,
+      "clipped_text": []
+    },
+    "native_cdf": {
+      "file": "figures/energy/native_cdf.pdf",
+      "source_kind": "published_summary_data_rerender",
+      "language": "de",
+      "sha256": "7b61a04fc4c88fd0834c0898eba37652d90f8abe9064f9b3eaa7b99c65479dab",
+      "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/native_cdf.pdf",
+      "english_reference_sha256": "d68dd43902f4da1a1106a51e2ff234b51a36c2e4f15f7fcb114148af5b287e5f",
+      "source_inputs": {
+        "results/energy-measurement/tables/tim/native_spectral_comparison.csv": "71396de22b56a4c14b9f1f4ac8dbf16db5ea7ba15bd78c8c2e8d374114331a38"
+      },
+      "data_payload": "native_cdf.json",
+      "data_payload_sha256": "b6881a7845cfd211c8c17e6165e42ce6a480c7b1a92733f23551a386450c788e",
+      "exact_source_rows_retained": true,
+      "statistics_recomputed": false,
+      "english_numeric_geometry_check": {
+        "status": "PASS",
+        "tolerance_bp": 0.002,
+        "reference_use": "validation only; no PDF data used in rendering",
+        "checks": [
+          {
+            "series": "max_abs_cdf_difference_pp",
+            "checked_values": 6,
+            "maximum_error_bp": 4.225663275292391e-06
+          },
+          {
+            "series": "conditional_0_77khz_max_abs_cdf_difference_pp",
+            "checked_values": 6,
+            "maximum_error_bp": 5.4676144767284995e-06
+          }
+        ],
+        "checked_values": 12
+      },
+      "same_canvas_as_english": true,
+      "pdf_width_bp": 345.6000061035156,
+      "include_width_bp": 270.2,
+      "font_sizes_bp": {
+        "11.5": 17
+      },
+      "smallest_placed_font_bp": 8.99102993380529,
+      "placed_modal_font_bp": 8.99102993380529,
+      "clipped_text": []
+    },
+    "hailo_spectral_tail": {
+      "file": "figures/energy/hailo_spectral_tail.pdf",
+      "source_kind": "published_summary_data_rerender",
+      "language": "de",
+      "sha256": "e92974a96e32eafce3085f17403b264818bdadf15e1b32cfc023e8d8ff6187a1",
+      "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/hailo_spectral_tail.pdf",
+      "english_reference_sha256": "2faa8de8a27d436090a95a9611977e8e96d3ddef3e12a50fda1d052779a0caeb",
+      "source_inputs": {
+        "results/energy-measurement/tables/tim/hailo_spectra.csv": "16991e60335c93ec72df79b71673085545b07c3cd9dbe25eef49401748ac3795"
+      },
+      "data_payload": "hailo_spectral_tail.json",
+      "data_payload_sha256": "5871c38453a54aab7c6b79d1d361f9b40a35361555d3d9c22ac045e668765009",
+      "exact_source_rows_retained": true,
+      "statistics_recomputed": false,
+      "english_numeric_geometry_check": {
+        "status": "PASS",
+        "tolerance_bp": 0.002,
+        "reference_use": "validation only; no PDF data used in rendering",
+        "checks": [
+          {
+            "series": "active",
+            "checked_values": 2,
+            "maximum_error_bp": 5.284318604026339e-06
+          },
+          {
+            "series": "excess",
+            "checked_values": 2,
+            "maximum_error_bp": 6.88064289988688e-06
+          }
+        ],
+        "checked_values": 4
+      },
+      "same_canvas_as_english": true,
+      "pdf_width_bp": 316.79998779296875,
+      "include_width_bp": 247.68,
+      "font_sizes_bp": {
+        "11.5": 13
+      },
+      "smallest_placed_font_bp": 8.990909437349472,
+      "placed_modal_font_bp": 8.990909437349472,
+      "clipped_text": []
+    },
+    "jetson_deployed_meters": {
+      "file": "figures/energy/jetson_deployed_meters.pdf",
+      "source_kind": "published_summary_data_rerender",
+      "language": "de",
+      "sha256": "9779bba2726d9ff9b5b1ea5e1aee53a0511248e6f1ca35a6860d8bc8125b09ef",
+      "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/jetson_deployed_meters.pdf",
+      "english_reference_sha256": "4ee64bd1acc85230eece412fe42042be6bccd33701e73b9d171e0f6bd8825960",
+      "source_inputs": {
+        "results/energy-measurement/tables/tim/paired_300s.csv": "c11dc88e47f11fbf33d3683f355062c442444ecaddd1fb4b37f61df1e30e4381"
+      },
+      "data_payload": "jetson_deployed_meters.json",
+      "data_payload_sha256": "c8f687f0f352d5ca8a338c597bc7d3862bed9bfb31474da336573182fdb9ce7d",
+      "exact_source_rows_retained": true,
+      "statistics_recomputed": false,
+      "english_numeric_geometry_check": {
+        "status": "PASS",
+        "tolerance_bp": 0.002,
+        "reference_use": "validation only; no PDF data used in rendering",
+        "checks": [
+          {
+            "series": "firmware",
+            "checked_values": 7,
+            "maximum_error_bp": 1.3451776084139055e-05
+          },
+          {
+            "series": "jetson",
+            "checked_values": 7,
+            "maximum_error_bp": 8.299040501924537e-06
+          },
+          {
+            "series": "shelly",
+            "checked_values": 7,
+            "maximum_error_bp": 8.333549544659036e-06
+          }
+        ],
+        "checked_values": 21
+      },
+      "same_canvas_as_english": true,
+      "pdf_width_bp": 345.6000061035156,
+      "include_width_bp": 270.2,
+      "font_sizes_bp": {
+        "11.5": 17
+      },
+      "smallest_placed_font_bp": 8.99102993380529,
+      "placed_modal_font_bp": 8.99102993380529,
+      "clipped_text": []
+    },
+    "hailo_meters": {
+      "file": "figures/energy/hailo_meters.pdf",
+      "source_kind": "published_summary_data_rerender",
+      "language": "de",
+      "sha256": "2a393b2ea234e697f1a79b716bcf97366a302593a0f2e7bf34cf3fc5e6a38709",
+      "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/hailo_meters.pdf",
+      "english_reference_sha256": "9b1e7309fc6f53c32545d7eb419bec79b99e2f0b293285a7333c707f23985921",
+      "source_inputs": {
+        "results/energy-measurement/tables/tim/paired_300s.csv": "c11dc88e47f11fbf33d3683f355062c442444ecaddd1fb4b37f61df1e30e4381"
+      },
+      "data_payload": "hailo_meters.json",
+      "data_payload_sha256": "c5a735f135a33e89bb919b480622f85181ad8b5b4a9dd46aa7ba6db90284dd4c",
+      "exact_source_rows_retained": true,
+      "statistics_recomputed": false,
+      "english_numeric_geometry_check": {
+        "status": "PASS",
+        "tolerance_bp": 0.002,
+        "reference_use": "validation only; no PDF data used in rendering",
+        "checks": [
+          {
+            "series": "firmware",
+            "checked_values": 3,
+            "maximum_error_bp": 1.2617009446103111e-05
+          },
+          {
+            "series": "hailo_rt",
+            "checked_values": 3,
+            "maximum_error_bp": 1.3262255492918484e-05
+          },
+          {
+            "series": "shelly",
+            "checked_values": 3,
+            "maximum_error_bp": 1.6508999522102386e-05
+          }
+        ],
+        "checked_values": 9
+      },
+      "same_canvas_as_english": true,
+      "pdf_width_bp": 432.0,
+      "include_width_bp": 337.75,
+      "font_sizes_bp": {
+        "11.5": 15
+      },
+      "smallest_placed_font_bp": 8.991030092592593,
+      "placed_modal_font_bp": 8.991030092592593,
+      "clipped_text": []
+    },
+    "hailo_variable_intervals": {
+      "file": "figures/energy/hailo_variable_intervals.pdf",
+      "source_kind": "published_summary_data_rerender",
+      "language": "de",
+      "sha256": "ea63d988f442d7ac4c3ed71fa76980ceac75178b1b63013768bef5acd3a0d632",
+      "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/hailo_variable_intervals.pdf",
+      "english_reference_sha256": "eb163d77679583f27b9c3c076c01038ab340dac639b4d6e1269a82d34ef0c1cb",
+      "source_inputs": {
+        "results/energy-measurement/tables/tim/hailo_variable_interval_comparison.csv": "c3711378383ba2bcdf0afdcfde28c4e712aa8da0cdd4f5d24fb9f0e0504c8497"
+      },
+      "data_payload": "hailo_variable_intervals.json",
+      "data_payload_sha256": "ed2edb961633770a95c5373d4561a8fa597f96bde438688bcd3a3872e44e1c80",
+      "exact_source_rows_retained": true,
+      "statistics_recomputed": false,
+      "english_numeric_geometry_check": {
+        "status": "PASS",
+        "tolerance_bp": 0.002,
+        "reference_use": "validation only; no PDF data used in rendering",
+        "checks": [
+          {
+            "series": "P_median_pct",
+            "checked_values": 10,
+            "maximum_error_bp": 1.035288416773028e-05
+          },
+          {
+            "series": "E_median_pct",
+            "checked_values": 10,
+            "maximum_error_bp": 4.700778276855999e-06
+          },
+          {
+            "series": "T_median_pct",
+            "checked_values": 10,
+            "maximum_error_bp": 5.634877595639409e-06
+          }
+        ],
+        "checked_values": 30
+      },
+      "same_canvas_as_english": true,
+      "pdf_width_bp": 316.79998779296875,
+      "include_width_bp": 247.68,
+      "font_sizes_bp": {
+        "11.5": 13
+      },
+      "smallest_placed_font_bp": 8.990909437349472,
+      "placed_modal_font_bp": 8.990909437349472,
+      "clipped_text": []
+    },
+    "duration_comparison": {
+      "file": "figures/energy/duration_comparison.pdf",
+      "source_kind": "published_summary_data_rerender",
+      "language": "de",
+      "sha256": "9c41fcae7cac51bdf8712c5166ee6193d0435be62e1ca4dc113c82d94a826565",
+      "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/duration_comparison.pdf",
+      "english_reference_sha256": "08570f5e78cc179bebebfdeccc8e464fb5a8fc243453f4039beb552f9ff394b6",
+      "source_inputs": {
+        "results/energy-measurement/tables/tim/duration.csv": "c9d9a4e55b95cde7ad053aca50851fb5fb1a7a1b9d80c383a8eef3ac9a318909"
+      },
+      "data_payload": "duration_comparison.json",
+      "data_payload_sha256": "f5bd80b0a77106d85dbf09c840784b97ec3d07fd6338fc9ed2fc5a25cb1d9436",
+      "exact_source_rows_retained": true,
+      "statistics_recomputed": false,
+      "english_numeric_geometry_check": {
+        "status": "PASS",
+        "tolerance_bp": 0.002,
+        "reference_use": "validation only; no PDF data used in rendering",
+        "checks": [
+          {
+            "series": "Jetson/gemm_fp32",
+            "checked_values": 10,
+            "maximum_error_bp": 1.4912992043036866e-05
+          },
+          {
+            "series": "Jetson/gemm_fp16",
+            "checked_values": 10,
+            "maximum_error_bp": 1.0171698278327312e-05
+          },
+          {
+            "series": "Jetson/gemm_int8",
+            "checked_values": 10,
+            "maximum_error_bp": 6.691993689855735e-06
+          },
+          {
+            "series": "Jetson/yolo_fp32",
+            "checked_values": 10,
+            "maximum_error_bp": 2.6116968712130983e-06
+          },
+          {
+            "series": "Jetson/yolo_fp16",
+            "checked_values": 10,
+            "maximum_error_bp": 9.808059729721208e-06
+          },
+          {
+            "series": "Jetson/yolo_int8",
+            "checked_values": 10,
+            "maximum_error_bp": 8.470261249726718e-06
+          },
+          {
+            "series": "Jetson/random_pattern_yolo",
+            "checked_values": 10,
+            "maximum_error_bp": 5.4436519505429715e-06
+          },
+          {
+            "series": "Hailo/gemm",
+            "checked_values": 10,
+            "maximum_error_bp": 1.0791074146254687e-05
+          },
+          {
+            "series": "Hailo/yolo",
+            "checked_values": 10,
+            "maximum_error_bp": 1.2095689442048752e-05
+          },
+          {
+            "series": "Hailo/random_pattern_yolo",
+            "checked_values": 10,
+            "maximum_error_bp": 3.112792967385758e-05
+          }
+        ],
+        "checked_values": 100
+      },
+      "same_canvas_as_english": true,
+      "pdf_width_bp": 432.0,
+      "include_width_bp": 337.75,
+      "font_sizes_bp": {
+        "11.5": 22
+      },
+      "smallest_placed_font_bp": 8.991030092592593,
+      "placed_modal_font_bp": 8.991030092592593,
+      "clipped_text": []
+    },
+    "pause_sequence": {
+      "file": "figures/energy/pause_sequence.pdf",
+      "source_kind": "published_summary_data_rerender",
+      "language": "de",
+      "sha256": "e242a433f1984373601734cebdda1843469cd12b977554cc0470d0b7d91b7277",
+      "english_reference": "publications/dissertation/thesis-v56/en/figures/energy/pause_sequence.pdf",
+      "english_reference_sha256": "7dc0cbcd257ab746ffc049ecc39d68be2aa01026331880aaac03f1b61b2473c2",
+      "source_inputs": {
+        "results/energy-measurement/tables/tim/pause_timing.csv": "e13ff842b017b752d2c9bfec67ebd5de0bfeaaa772721c5e5b1d33f236c1103a"
+      },
+      "data_payload": "pause_sequence.json",
+      "data_payload_sha256": "f43c73107eecdd64f710c10f817f400e319ace5cb2d3adfd4e4ff65757988a7d",
+      "exact_source_rows_retained": true,
+      "statistics_recomputed": false,
+      "english_numeric_geometry_check": {
+        "status": "PASS",
+        "tolerance_bp": 0.002,
+        "reference_use": "validation only; no PDF data used in rendering",
+        "checks": [
+          {
+            "series": "trt_s/20",
+            "checked_values": 3,
+            "maximum_error_bp": 7.446349840734001e-06
+          },
+          {
+            "series": "trt_s/120",
+            "checked_values": 3,
+            "maximum_error_bp": 3.0990312609446846e-06
+          },
+          {
+            "series": "gpu_before_5s_median_C/20",
+            "checked_values": 3,
+            "maximum_error_bp": 8.076474642848552e-06
+          },
+          {
+            "series": "gpu_before_5s_median_C/120",
+            "checked_values": 3,
+            "maximum_error_bp": 1.3647420416873501e-05
+          }
+        ],
+        "checked_values": 12
+      },
+      "same_canvas_as_english": true,
+      "pdf_width_bp": 432.0,
+      "include_width_bp": 337.75,
+      "font_sizes_bp": {
+        "11.5": 26
+      },
+      "smallest_placed_font_bp": 8.991030092592593,
+      "placed_modal_font_bp": 8.991030092592593,
+      "clipped_text": []
+    },
+    "duration_results": {
+      "file": "figures/energy/duration_results.pdf",
+      "source_kind": "normalized_individual_execution_results",
+      "language": "de",
+      "sha256": "6726c2ebc1c4ebb9ad0c03ed7520b558582ffd741933d1831be888a69a541f49",
+      "data_payload": "duration_results.json",
+      "data_payload_sha256": "61db4a37e43dd39c612e7ee8706aa743a60fdf05153887592d29445ea283b4a5",
+      "include_width": "\\linewidth",
+      "generator": "scripts/dissertation/render_energy_result_fields.py",
+      "generator_sha256": "ab26ac9004f5117796f608ede88e4ee81aad46f727f6a848a7e9815ba12ec761",
+      "source_inputs": {
+        "results/energy-measurement/tables/tim/paired_all_durations.csv": "00317c8db52aed163c05b93a674a907f7d25c318e9add2918d2dc7d365e5bfa2",
+        "results/energy-measurement/tables/tim/duration.csv": "c9d9a4e55b95cde7ad053aca50851fb5fb1a7a1b9d80c383a8eef3ac9a318909"
+      },
+      "n_runs": 1472,
+      "n_groups": 100,
+      "normalization": "Mean power relative to the variant-specific 600-s group median.",
+      "color_scale": {
+        "kind": "linear",
+        "vmin": -10.0,
+        "vmax": 10.0,
+        "linear_center": null
+      },
+      "all_valid_results_shown_once": true,
+      "statistics_recomputed": true,
+      "statistical_operations": "Published references and group statistics recomputed only for verification; individual relative deviations displayed.",
+      "title_and_subtitle": false,
+      "pdf_width_bp": 432.0,
+      "pdf_height_bp": 306.0,
+      "clipped_text": []
+    },
+    "rate_results": {
+      "file": "figures/energy/rate_results.pdf",
+      "source_kind": "normalized_individual_execution_results",
+      "language": "de",
+      "sha256": "57598a8951128841e8562413f15d47fcaa6e600649d57b8e0a905b0a03efb1a1",
+      "data_payload": "rate_results.json",
+      "data_payload_sha256": "f16062b4f01b09d3ecba489e3faf8a9960ec45eb8004329a4414fcd80e9b113e",
+      "include_width": "\\linewidth",
+      "generator": "scripts/dissertation/render_energy_result_fields.py",
+      "generator_sha256": "ab26ac9004f5117796f608ede88e4ee81aad46f727f6a848a7e9815ba12ec761",
+      "source_inputs": {
+        "results/energy-measurement/data/tim/final_direct/plotted_candidates.csv": "46dfc7a59ec5e2073044842376a0ec63dfbcffe7911351b57651b2355957ea7a",
+        "results/energy-measurement/data/tim/final_direct/groups_all_candidates.csv": "81e544394a803daa635011e11828cf1baffc489b7db79c386e90e3b7a3c82b6f",
+        "results/energy-measurement/tables/tim/direct_rates.csv": "ce4f54939a727eb7f42cf54e6ee608998c083bf269dbe31d2d3cb6fd3ca8fab9"
+      },
+      "n_runs": 4842,
+      "n_groups": 323,
+      "normalization": "Energy relative to the equally weighted mean of rate-group mean energies per variant.",
+      "color_scale": {
+        "kind": "SymLogNorm",
+        "vmin": -100.0,
+        "vmax": 100.0,
+        "linear_center": [
+          -0.5,
+          0.5
+        ]
+      },
+      "all_valid_results_shown_once": true,
+      "statistics_recomputed": true,
+      "statistical_operations": "Published references and group statistics recomputed only for verification; individual relative deviations displayed.",
+      "title_and_subtitle": false,
+      "pdf_width_bp": 432.0,
+      "pdf_height_bp": 351.36,
+      "clipped_text": []
+    }
+  },
+  "input_hashes": {
+    "results/energy-measurement/tables/tim/fp16_energy.csv": "921542c6840c2d678cef63617602608e03c9db8f4e804c903c1476d59f10c6cc",
+    "results/energy-measurement/tables/tim/fp16_coverage.csv": "92449385ff956fc5a3e5c72ffe9a5428382976a277903dd7ecdb9a62822b64d5",
+    "results/energy-measurement/data/spectra/pico_vs_tek_psd/data/curves/Jetson_Orin_NX__gemmfp32__tek__power__excess__existing_full_record.csv": "5de86c02d9ee7060d2a7861496276eb443818a4a3d072824b37ba233b390033c",
+    "results/energy-measurement/data/spectra/pico_vs_tek_psd/data/curves/Jetson_Orin_NX__gemmint8__tek__power__excess__existing_full_record.csv": "81373862066a5dab400260995373f67148f2c874f387130327eab9815ce2302f",
+    "results/energy-measurement/data/spectra/pico_vs_tek_psd/data/curves/Jetson_Orin_NX__yolofp32__tek__power__excess__existing_full_record.csv": "468bcf4da2ed0a28fdaba0b758c76043c94aba15ca448c6c1cc5b147ac3cbe46",
+    "results/energy-measurement/data/spectra/pico_vs_tek_psd/data/curves/Jetson_Orin_NX__yoloint8__tek__power__excess__existing_full_record.csv": "6e73256a7b26195e91c08dc92fd08f7596a447cfcc951b2ca4b852a615d4764a",
+    "results/energy-measurement/data/spectra/pico_vs_tek_psd/data/curves/Jetson_Orin_NX__gemma3-4b__tek__power__excess__existing_full_record.csv": "92dd4e52ee7bc215724d74d23c2f921b30c5aa086f0b863cf6e3241c2078f037",
+    "results/energy-measurement/data/spectra/pico_vs_tek_psd/data/curves/Jetson_Orin_NX__resnet50__tek__power__excess__existing_full_record.csv": "84874206ba4acf6d899722264b08b43fe88c416d84be5ccc8f73475fd644f0b9",
+    "results/energy-measurement/tables/tim/native_spectral_comparison.csv": "71396de22b56a4c14b9f1f4ac8dbf16db5ea7ba15bd78c8c2e8d374114331a38",
+    "results/energy-measurement/tables/tim/hailo_spectra.csv": "16991e60335c93ec72df79b71673085545b07c3cd9dbe25eef49401748ac3795",
+    "results/energy-measurement/tables/tim/paired_300s.csv": "c11dc88e47f11fbf33d3683f355062c442444ecaddd1fb4b37f61df1e30e4381",
+    "results/energy-measurement/tables/tim/hailo_variable_interval_comparison.csv": "c3711378383ba2bcdf0afdcfde28c4e712aa8da0cdd4f5d24fb9f0e0504c8497",
+    "results/energy-measurement/tables/tim/duration.csv": "c9d9a4e55b95cde7ad053aca50851fb5fb1a7a1b9d80c383a8eef3ac9a318909",
+    "results/energy-measurement/tables/tim/pause_timing.csv": "e13ff842b017b752d2c9bfec67ebd5de0bfeaaa772721c5e5b1d33f236c1103a",
+    "results/energy-measurement/tables/tim/paired_all_durations.csv": "00317c8db52aed163c05b93a674a907f7d25c318e9add2918d2dc7d365e5bfa2",
+    "results/energy-measurement/data/tim/final_direct/plotted_candidates.csv": "46dfc7a59ec5e2073044842376a0ec63dfbcffe7911351b57651b2355957ea7a",
+    "results/energy-measurement/data/tim/final_direct/groups_all_candidates.csv": "81e544394a803daa635011e11828cf1baffc489b7db79c386e90e3b7a3c82b6f",
+    "results/energy-measurement/tables/tim/direct_rates.csv": "ce4f54939a727eb7f42cf54e6ee608998c083bf269dbe31d2d3cb6fd3ca8fab9"
+  },
+  "measurement_or_statistical_analysis_performed": true,
+  "measurement_acquisition_performed": false,
+  "raw_signal_processing_performed": false,
+  "statistical_operations": "Verify published reference and group statistics, and normalize individual execution exports for the two result fields.",
+  "individual_execution_normalization_performed": true,
+  "individual_result_generator": "scripts/dissertation/render_energy_result_fields.py",
+  "individual_result_generator_sha256": "ab26ac9004f5117796f608ede88e4ee81aad46f727f6a848a7e9815ba12ec761"
+}

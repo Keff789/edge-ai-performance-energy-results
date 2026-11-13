@@ -1,0 +1,29 @@
+{
+  "configurations": 450,
+  "counts": {
+    "confirmed_joint_inclusion": 407,
+    "confirmed_performance_inclusion": 407,
+    "endpoint_verified": 450,
+    "energy_binding_verified": 450,
+    "energy_source_hash_matches": 450,
+    "passes_5pct": 407,
+    "performance_binding_verified": 450,
+    "performance_source_hash_matches": 450,
+    "quality_cached_loss_disagrees_recomputed": 53,
+    "quality_runtime_binding_verified": 450,
+    "quality_source_hash_matches": 450,
+    "screening_energy_restriction": 75
+  },
+  "rule": {
+    "distinct_input_association": "Not established from repeated identical timing image; exact artifact scope requires separate endpoint review.",
+    "global_full_guard": "Never reselect weaker Full solely because a stronger observed Full is unconfirmed. Global comparison remains incomplete.",
+    "joint": "performance rule AND same runtime energy chain AND final protocol; inherited screening label resolved only with all per-row source predicates",
+    "performance": "numeric loss<=.05 AND selected quality file hash verified AND direct artifact roles equal or exact non-stale producer join AND performance source/runtime bound AND required task endpoint measured; no explicit artifact difference"
+  },
+  "scope": "historical R14; no new measurements, no recoding original flags, no source modification",
+  "status_counts": {
+    "confirmed_joint": 407,
+    "numeric_quality_excluded": 43
+  },
+  "winner_configurations": 14
+}

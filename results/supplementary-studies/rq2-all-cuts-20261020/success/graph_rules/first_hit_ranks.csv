@@ -1,0 +1,379 @@
+experiment,family,model,setup,n,method,method_label,criterion,max_loss_pct,acceptable_cut_count,acceptable_cases,first_hit_k,first_hit_case,first_hit_native_fps,native_best_fps,first_hit_loss_pct
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H8,17,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b027""]",11,b027,1107.880652,1107.880652,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H8,17,weighted_score,Weighted score,exact_optimum,0,1,"[""b027""]",9,b027,1107.880652,1107.880652,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H8,17,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b027""]",8,b027,1107.880652,1107.880652,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H8,17,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b027""]",9,b027,1107.880652,1107.880652,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H8,17,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b027""]",9,b027,1107.880652,1107.880652,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H8,17,measured_generic_completion,Generic,exact_optimum,0,1,"[""b027""]",1,b027,1107.880652,1107.880652,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H8,17,cut_bytes_only,Boundary bytes,within_1pct,1,1,"[""b027""]",11,b027,1107.880652,1107.880652,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H8,17,weighted_score,Weighted score,within_1pct,1,1,"[""b027""]",9,b027,1107.880652,1107.880652,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H8,17,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,1,"[""b027""]",8,b027,1107.880652,1107.880652,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H8,17,cycle_time_no_handover,Cycle without handover,within_1pct,1,1,"[""b027""]",9,b027,1107.880652,1107.880652,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H8,17,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,1,"[""b027""]",9,b027,1107.880652,1107.880652,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H8,17,measured_generic_completion,Generic,within_1pct,1,1,"[""b027""]",1,b027,1107.880652,1107.880652,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H8,17,cut_bytes_only,Boundary bytes,within_5pct,5,1,"[""b027""]",11,b027,1107.880652,1107.880652,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H8,17,weighted_score,Weighted score,within_5pct,5,1,"[""b027""]",9,b027,1107.880652,1107.880652,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H8,17,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,1,"[""b027""]",8,b027,1107.880652,1107.880652,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H8,17,cycle_time_no_handover,Cycle without handover,within_5pct,5,1,"[""b027""]",9,b027,1107.880652,1107.880652,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H8,17,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,1,"[""b027""]",9,b027,1107.880652,1107.880652,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H8,17,measured_generic_completion,Generic,within_5pct,5,1,"[""b027""]",1,b027,1107.880652,1107.880652,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H10,17,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b085""]",9,b085,1287.3958678101521,1287.3958678101521,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H10,17,weighted_score,Weighted score,exact_optimum,0,1,"[""b085""]",5,b085,1287.3958678101521,1287.3958678101521,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H10,17,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b085""]",7,b085,1287.3958678101521,1287.3958678101521,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H10,17,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b085""]",5,b085,1287.3958678101521,1287.3958678101521,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H10,17,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b085""]",5,b085,1287.3958678101521,1287.3958678101521,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H10,17,measured_generic_completion,Generic,exact_optimum,0,1,"[""b085""]",13,b085,1287.3958678101521,1287.3958678101521,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H10,17,cut_bytes_only,Boundary bytes,within_1pct,1,1,"[""b085""]",9,b085,1287.3958678101521,1287.3958678101521,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H10,17,weighted_score,Weighted score,within_1pct,1,1,"[""b085""]",5,b085,1287.3958678101521,1287.3958678101521,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H10,17,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,1,"[""b085""]",7,b085,1287.3958678101521,1287.3958678101521,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H10,17,cycle_time_no_handover,Cycle without handover,within_1pct,1,1,"[""b085""]",5,b085,1287.3958678101521,1287.3958678101521,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H10,17,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,1,"[""b085""]",5,b085,1287.3958678101521,1287.3958678101521,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H10,17,measured_generic_completion,Generic,within_1pct,1,1,"[""b085""]",13,b085,1287.3958678101521,1287.3958678101521,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H10,17,cut_bytes_only,Boundary bytes,within_5pct,5,1,"[""b085""]",9,b085,1287.3958678101521,1287.3958678101521,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H10,17,weighted_score,Weighted score,within_5pct,5,1,"[""b085""]",5,b085,1287.3958678101521,1287.3958678101521,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H10,17,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,1,"[""b085""]",7,b085,1287.3958678101521,1287.3958678101521,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H10,17,cycle_time_no_handover,Cycle without handover,within_5pct,5,1,"[""b085""]",5,b085,1287.3958678101521,1287.3958678101521,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H10,17,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,1,"[""b085""]",5,b085,1287.3958678101521,1287.3958678101521,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,H10,17,measured_generic_completion,Generic,within_5pct,5,1,"[""b085""]",13,b085,1287.3958678101521,1287.3958678101521,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,DeepX,17,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b056""]",5,b056,768.3243686608675,768.3243686608675,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,DeepX,17,weighted_score,Weighted score,exact_optimum,0,1,"[""b056""]",6,b056,768.3243686608675,768.3243686608675,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,DeepX,17,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b056""]",2,b056,768.3243686608675,768.3243686608675,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,DeepX,17,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b056""]",6,b056,768.3243686608675,768.3243686608675,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,DeepX,17,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b056""]",6,b056,768.3243686608675,768.3243686608675,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,DeepX,17,measured_generic_completion,Generic,exact_optimum,0,1,"[""b056""]",2,b056,768.3243686608675,768.3243686608675,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,DeepX,17,cut_bytes_only,Boundary bytes,within_1pct,1,2,"[""b027"",""b056""]",5,b056,768.3243686608675,768.3243686608675,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,DeepX,17,weighted_score,Weighted score,within_1pct,1,2,"[""b027"",""b056""]",6,b056,768.3243686608675,768.3243686608675,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,DeepX,17,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,2,"[""b027"",""b056""]",2,b056,768.3243686608675,768.3243686608675,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,DeepX,17,cycle_time_no_handover,Cycle without handover,within_1pct,1,2,"[""b027"",""b056""]",6,b056,768.3243686608675,768.3243686608675,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,DeepX,17,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,2,"[""b027"",""b056""]",6,b056,768.3243686608675,768.3243686608675,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,DeepX,17,measured_generic_completion,Generic,within_1pct,1,2,"[""b027"",""b056""]",2,b056,768.3243686608675,768.3243686608675,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,DeepX,17,cut_bytes_only,Boundary bytes,within_5pct,5,6,"[""b027"",""b039"",""b056"",""b062"",""b068"",""b074""]",5,b056,768.3243686608675,768.3243686608675,0.0
+Graph rules on a shared measured set,classification,mobilenet_v3_large,DeepX,17,weighted_score,Weighted score,within_5pct,5,6,"[""b027"",""b039"",""b056"",""b062"",""b068"",""b074""]",1,b074,746.47956738541,768.3243686608675,2.8431743371008067
+Graph rules on a shared measured set,classification,mobilenet_v3_large,DeepX,17,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,6,"[""b027"",""b039"",""b056"",""b062"",""b068"",""b074""]",1,b062,758.8277607336756,768.3243686608675,1.2360154531794731
+Graph rules on a shared measured set,classification,mobilenet_v3_large,DeepX,17,cycle_time_no_handover,Cycle without handover,within_5pct,5,6,"[""b027"",""b039"",""b056"",""b062"",""b068"",""b074""]",1,b074,746.47956738541,768.3243686608675,2.8431743371008067
+Graph rules on a shared measured set,classification,mobilenet_v3_large,DeepX,17,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,6,"[""b027"",""b039"",""b056"",""b062"",""b068"",""b074""]",1,b074,746.47956738541,768.3243686608675,2.8431743371008067
+Graph rules on a shared measured set,classification,mobilenet_v3_large,DeepX,17,measured_generic_completion,Generic,within_5pct,5,6,"[""b027"",""b039"",""b056"",""b062"",""b068"",""b074""]",1,b062,758.8277607336756,768.3243686608675,1.2360154531794731
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H8,20,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b073""]",6,b073,637.267742,637.267742,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H8,20,weighted_score,Weighted score,exact_optimum,0,1,"[""b073""]",2,b073,637.267742,637.267742,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H8,20,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b073""]",5,b073,637.267742,637.267742,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H8,20,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b073""]",2,b073,637.267742,637.267742,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H8,20,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b073""]",2,b073,637.267742,637.267742,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H8,20,measured_generic_completion,Generic,exact_optimum,0,1,"[""b073""]",2,b073,637.267742,637.267742,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H8,20,cut_bytes_only,Boundary bytes,within_1pct,1,1,"[""b073""]",6,b073,637.267742,637.267742,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H8,20,weighted_score,Weighted score,within_1pct,1,1,"[""b073""]",2,b073,637.267742,637.267742,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H8,20,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,1,"[""b073""]",5,b073,637.267742,637.267742,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H8,20,cycle_time_no_handover,Cycle without handover,within_1pct,1,1,"[""b073""]",2,b073,637.267742,637.267742,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H8,20,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,1,"[""b073""]",2,b073,637.267742,637.267742,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H8,20,measured_generic_completion,Generic,within_1pct,1,1,"[""b073""]",2,b073,637.267742,637.267742,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H8,20,cut_bytes_only,Boundary bytes,within_5pct,5,1,"[""b073""]",6,b073,637.267742,637.267742,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H8,20,weighted_score,Weighted score,within_5pct,5,1,"[""b073""]",2,b073,637.267742,637.267742,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H8,20,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,1,"[""b073""]",5,b073,637.267742,637.267742,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H8,20,cycle_time_no_handover,Cycle without handover,within_5pct,5,1,"[""b073""]",2,b073,637.267742,637.267742,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H8,20,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,1,"[""b073""]",2,b073,637.267742,637.267742,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H8,20,measured_generic_completion,Generic,within_5pct,5,1,"[""b073""]",2,b073,637.267742,637.267742,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H10,20,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b123""]",2,b123,1520.612539117104,1520.612539117104,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H10,20,weighted_score,Weighted score,exact_optimum,0,1,"[""b123""]",18,b123,1520.612539117104,1520.612539117104,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H10,20,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b123""]",19,b123,1520.612539117104,1520.612539117104,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H10,20,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b123""]",18,b123,1520.612539117104,1520.612539117104,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H10,20,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b123""]",18,b123,1520.612539117104,1520.612539117104,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H10,20,measured_generic_completion,Generic,exact_optimum,0,1,"[""b123""]",18,b123,1520.612539117104,1520.612539117104,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H10,20,cut_bytes_only,Boundary bytes,within_1pct,1,1,"[""b123""]",2,b123,1520.612539117104,1520.612539117104,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H10,20,weighted_score,Weighted score,within_1pct,1,1,"[""b123""]",18,b123,1520.612539117104,1520.612539117104,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H10,20,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,1,"[""b123""]",19,b123,1520.612539117104,1520.612539117104,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H10,20,cycle_time_no_handover,Cycle without handover,within_1pct,1,1,"[""b123""]",18,b123,1520.612539117104,1520.612539117104,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H10,20,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,1,"[""b123""]",18,b123,1520.612539117104,1520.612539117104,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H10,20,measured_generic_completion,Generic,within_1pct,1,1,"[""b123""]",18,b123,1520.612539117104,1520.612539117104,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H10,20,cut_bytes_only,Boundary bytes,within_5pct,5,1,"[""b123""]",2,b123,1520.612539117104,1520.612539117104,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H10,20,weighted_score,Weighted score,within_5pct,5,1,"[""b123""]",18,b123,1520.612539117104,1520.612539117104,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H10,20,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,1,"[""b123""]",19,b123,1520.612539117104,1520.612539117104,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H10,20,cycle_time_no_handover,Cycle without handover,within_5pct,5,1,"[""b123""]",18,b123,1520.612539117104,1520.612539117104,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H10,20,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,1,"[""b123""]",18,b123,1520.612539117104,1520.612539117104,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,H10,20,measured_generic_completion,Generic,within_5pct,5,1,"[""b123""]",18,b123,1520.612539117104,1520.612539117104,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,DeepX,20,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b052""]",3,b052,405.21925166444856,405.21925166444856,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,DeepX,20,weighted_score,Weighted score,exact_optimum,0,1,"[""b052""]",5,b052,405.21925166444856,405.21925166444856,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,DeepX,20,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b052""]",2,b052,405.21925166444856,405.21925166444856,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,DeepX,20,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b052""]",5,b052,405.21925166444856,405.21925166444856,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,DeepX,20,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b052""]",5,b052,405.21925166444856,405.21925166444856,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,DeepX,20,measured_generic_completion,Generic,exact_optimum,0,1,"[""b052""]",1,b052,405.21925166444856,405.21925166444856,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,DeepX,20,cut_bytes_only,Boundary bytes,within_1pct,1,1,"[""b052""]",3,b052,405.21925166444856,405.21925166444856,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,DeepX,20,weighted_score,Weighted score,within_1pct,1,1,"[""b052""]",5,b052,405.21925166444856,405.21925166444856,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,DeepX,20,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,1,"[""b052""]",2,b052,405.21925166444856,405.21925166444856,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,DeepX,20,cycle_time_no_handover,Cycle without handover,within_1pct,1,1,"[""b052""]",5,b052,405.21925166444856,405.21925166444856,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,DeepX,20,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,1,"[""b052""]",5,b052,405.21925166444856,405.21925166444856,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,DeepX,20,measured_generic_completion,Generic,within_1pct,1,1,"[""b052""]",1,b052,405.21925166444856,405.21925166444856,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,DeepX,20,cut_bytes_only,Boundary bytes,within_5pct,5,1,"[""b052""]",3,b052,405.21925166444856,405.21925166444856,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,DeepX,20,weighted_score,Weighted score,within_5pct,5,1,"[""b052""]",5,b052,405.21925166444856,405.21925166444856,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,DeepX,20,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,1,"[""b052""]",2,b052,405.21925166444856,405.21925166444856,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,DeepX,20,cycle_time_no_handover,Cycle without handover,within_5pct,5,1,"[""b052""]",5,b052,405.21925166444856,405.21925166444856,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,DeepX,20,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,1,"[""b052""]",5,b052,405.21925166444856,405.21925166444856,0.0
+Graph rules on a shared measured set,classification,regnet_x_1_6gf,DeepX,20,measured_generic_completion,Generic,within_5pct,5,1,"[""b052""]",1,b052,405.21925166444856,405.21925166444856,0.0
+Graph rules on a shared measured set,classification,resnet50,H8,19,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b031""]",13,b031,643.925207,643.925207,0.0
+Graph rules on a shared measured set,classification,resnet50,H8,19,weighted_score,Weighted score,exact_optimum,0,1,"[""b031""]",9,b031,643.925207,643.925207,0.0
+Graph rules on a shared measured set,classification,resnet50,H8,19,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b031""]",5,b031,643.925207,643.925207,0.0
+Graph rules on a shared measured set,classification,resnet50,H8,19,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b031""]",9,b031,643.925207,643.925207,0.0
+Graph rules on a shared measured set,classification,resnet50,H8,19,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b031""]",8,b031,643.925207,643.925207,0.0
+Graph rules on a shared measured set,classification,resnet50,H8,19,measured_generic_completion,Generic,exact_optimum,0,1,"[""b031""]",3,b031,643.925207,643.925207,0.0
+Graph rules on a shared measured set,classification,resnet50,H8,19,cut_bytes_only,Boundary bytes,within_1pct,1,2,"[""b031"",""b038""]",13,b031,643.925207,643.925207,0.0
+Graph rules on a shared measured set,classification,resnet50,H8,19,weighted_score,Weighted score,within_1pct,1,2,"[""b031"",""b038""]",7,b038,638.782578,643.925207,0.7986376281119978
+Graph rules on a shared measured set,classification,resnet50,H8,19,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,2,"[""b031"",""b038""]",3,b038,638.782578,643.925207,0.7986376281119978
+Graph rules on a shared measured set,classification,resnet50,H8,19,cycle_time_no_handover,Cycle without handover,within_1pct,1,2,"[""b031"",""b038""]",7,b038,638.782578,643.925207,0.7986376281119978
+Graph rules on a shared measured set,classification,resnet50,H8,19,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,2,"[""b031"",""b038""]",6,b038,638.782578,643.925207,0.7986376281119978
+Graph rules on a shared measured set,classification,resnet50,H8,19,measured_generic_completion,Generic,within_1pct,1,2,"[""b031"",""b038""]",3,b031,643.925207,643.925207,0.0
+Graph rules on a shared measured set,classification,resnet50,H8,19,cut_bytes_only,Boundary bytes,within_5pct,5,3,"[""b031"",""b038"",""b060""]",6,b060,631.684348,643.925207,1.9009752789503676
+Graph rules on a shared measured set,classification,resnet50,H8,19,weighted_score,Weighted score,within_5pct,5,3,"[""b031"",""b038"",""b060""]",1,b060,631.684348,643.925207,1.9009752789503676
+Graph rules on a shared measured set,classification,resnet50,H8,19,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,3,"[""b031"",""b038"",""b060""]",3,b038,638.782578,643.925207,0.7986376281119978
+Graph rules on a shared measured set,classification,resnet50,H8,19,cycle_time_no_handover,Cycle without handover,within_5pct,5,3,"[""b031"",""b038"",""b060""]",1,b060,631.684348,643.925207,1.9009752789503676
+Graph rules on a shared measured set,classification,resnet50,H8,19,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,3,"[""b031"",""b038"",""b060""]",1,b060,631.684348,643.925207,1.9009752789503676
+Graph rules on a shared measured set,classification,resnet50,H8,19,measured_generic_completion,Generic,within_5pct,5,3,"[""b031"",""b038"",""b060""]",2,b060,631.684348,643.925207,1.9009752789503676
+Graph rules on a shared measured set,classification,resnet50,H10,19,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b095""]",12,b095,1060.074581101867,1060.074581101867,0.0
+Graph rules on a shared measured set,classification,resnet50,H10,19,weighted_score,Weighted score,exact_optimum,0,1,"[""b095""]",11,b095,1060.074581101867,1060.074581101867,0.0
+Graph rules on a shared measured set,classification,resnet50,H10,19,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b095""]",15,b095,1060.074581101867,1060.074581101867,0.0
+Graph rules on a shared measured set,classification,resnet50,H10,19,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b095""]",11,b095,1060.074581101867,1060.074581101867,0.0
+Graph rules on a shared measured set,classification,resnet50,H10,19,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b095""]",11,b095,1060.074581101867,1060.074581101867,0.0
+Graph rules on a shared measured set,classification,resnet50,H10,19,measured_generic_completion,Generic,exact_optimum,0,1,"[""b095""]",15,b095,1060.074581101867,1060.074581101867,0.0
+Graph rules on a shared measured set,classification,resnet50,H10,19,cut_bytes_only,Boundary bytes,within_1pct,1,2,"[""b088"",""b095""]",11,b088,1057.4989494548167,1060.074581101867,0.24296702260071523
+Graph rules on a shared measured set,classification,resnet50,H10,19,weighted_score,Weighted score,within_1pct,1,2,"[""b088"",""b095""]",10,b088,1057.4989494548167,1060.074581101867,0.24296702260071523
+Graph rules on a shared measured set,classification,resnet50,H10,19,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,2,"[""b088"",""b095""]",14,b088,1057.4989494548167,1060.074581101867,0.24296702260071523
+Graph rules on a shared measured set,classification,resnet50,H10,19,cycle_time_no_handover,Cycle without handover,within_1pct,1,2,"[""b088"",""b095""]",10,b088,1057.4989494548167,1060.074581101867,0.24296702260071523
+Graph rules on a shared measured set,classification,resnet50,H10,19,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,2,"[""b088"",""b095""]",10,b088,1057.4989494548167,1060.074581101867,0.24296702260071523
+Graph rules on a shared measured set,classification,resnet50,H10,19,measured_generic_completion,Generic,within_1pct,1,2,"[""b088"",""b095""]",13,b088,1057.4989494548167,1060.074581101867,0.24296702260071523
+Graph rules on a shared measured set,classification,resnet50,H10,19,cut_bytes_only,Boundary bytes,within_5pct,5,2,"[""b088"",""b095""]",11,b088,1057.4989494548167,1060.074581101867,0.24296702260071523
+Graph rules on a shared measured set,classification,resnet50,H10,19,weighted_score,Weighted score,within_5pct,5,2,"[""b088"",""b095""]",10,b088,1057.4989494548167,1060.074581101867,0.24296702260071523
+Graph rules on a shared measured set,classification,resnet50,H10,19,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,2,"[""b088"",""b095""]",14,b088,1057.4989494548167,1060.074581101867,0.24296702260071523
+Graph rules on a shared measured set,classification,resnet50,H10,19,cycle_time_no_handover,Cycle without handover,within_5pct,5,2,"[""b088"",""b095""]",10,b088,1057.4989494548167,1060.074581101867,0.24296702260071523
+Graph rules on a shared measured set,classification,resnet50,H10,19,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,2,"[""b088"",""b095""]",10,b088,1057.4989494548167,1060.074581101867,0.24296702260071523
+Graph rules on a shared measured set,classification,resnet50,H10,19,measured_generic_completion,Generic,within_5pct,5,2,"[""b088"",""b095""]",13,b088,1057.4989494548167,1060.074581101867,0.24296702260071523
+Graph rules on a shared measured set,classification,resnet50,DeepX,19,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b002""]",5,b002,435.1729717487413,435.1729717487413,0.0
+Graph rules on a shared measured set,classification,resnet50,DeepX,19,weighted_score,Weighted score,exact_optimum,0,1,"[""b002""]",19,b002,435.1729717487413,435.1729717487413,0.0
+Graph rules on a shared measured set,classification,resnet50,DeepX,19,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b002""]",12,b002,435.1729717487413,435.1729717487413,0.0
+Graph rules on a shared measured set,classification,resnet50,DeepX,19,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b002""]",18,b002,435.1729717487413,435.1729717487413,0.0
+Graph rules on a shared measured set,classification,resnet50,DeepX,19,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b002""]",18,b002,435.1729717487413,435.1729717487413,0.0
+Graph rules on a shared measured set,classification,resnet50,DeepX,19,measured_generic_completion,Generic,exact_optimum,0,1,"[""b002""]",1,b002,435.1729717487413,435.1729717487413,0.0
+Graph rules on a shared measured set,classification,resnet50,DeepX,19,cut_bytes_only,Boundary bytes,within_1pct,1,1,"[""b002""]",5,b002,435.1729717487413,435.1729717487413,0.0
+Graph rules on a shared measured set,classification,resnet50,DeepX,19,weighted_score,Weighted score,within_1pct,1,1,"[""b002""]",19,b002,435.1729717487413,435.1729717487413,0.0
+Graph rules on a shared measured set,classification,resnet50,DeepX,19,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,1,"[""b002""]",12,b002,435.1729717487413,435.1729717487413,0.0
+Graph rules on a shared measured set,classification,resnet50,DeepX,19,cycle_time_no_handover,Cycle without handover,within_1pct,1,1,"[""b002""]",18,b002,435.1729717487413,435.1729717487413,0.0
+Graph rules on a shared measured set,classification,resnet50,DeepX,19,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,1,"[""b002""]",18,b002,435.1729717487413,435.1729717487413,0.0
+Graph rules on a shared measured set,classification,resnet50,DeepX,19,measured_generic_completion,Generic,within_1pct,1,1,"[""b002""]",1,b002,435.1729717487413,435.1729717487413,0.0
+Graph rules on a shared measured set,classification,resnet50,DeepX,19,cut_bytes_only,Boundary bytes,within_5pct,5,1,"[""b002""]",5,b002,435.1729717487413,435.1729717487413,0.0
+Graph rules on a shared measured set,classification,resnet50,DeepX,19,weighted_score,Weighted score,within_5pct,5,1,"[""b002""]",19,b002,435.1729717487413,435.1729717487413,0.0
+Graph rules on a shared measured set,classification,resnet50,DeepX,19,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,1,"[""b002""]",12,b002,435.1729717487413,435.1729717487413,0.0
+Graph rules on a shared measured set,classification,resnet50,DeepX,19,cycle_time_no_handover,Cycle without handover,within_5pct,5,1,"[""b002""]",18,b002,435.1729717487413,435.1729717487413,0.0
+Graph rules on a shared measured set,classification,resnet50,DeepX,19,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,1,"[""b002""]",18,b002,435.1729717487413,435.1729717487413,0.0
+Graph rules on a shared measured set,classification,resnet50,DeepX,19,measured_generic_completion,Generic,within_5pct,5,1,"[""b002""]",1,b002,435.1729717487413,435.1729717487413,0.0
+Graph rules on a shared measured set,detection,yolo11l,H8,3,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b120""]",3,b120,43.7662981538428,43.7662981538428,0.0
+Graph rules on a shared measured set,detection,yolo11l,H8,3,weighted_score,Weighted score,exact_optimum,0,1,"[""b120""]",1,b120,43.7662981538428,43.7662981538428,0.0
+Graph rules on a shared measured set,detection,yolo11l,H8,3,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b120""]",2,b120,43.7662981538428,43.7662981538428,0.0
+Graph rules on a shared measured set,detection,yolo11l,H8,3,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b120""]",1,b120,43.7662981538428,43.7662981538428,0.0
+Graph rules on a shared measured set,detection,yolo11l,H8,3,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b120""]",1,b120,43.7662981538428,43.7662981538428,0.0
+Graph rules on a shared measured set,detection,yolo11l,H8,3,measured_generic_completion,Generic,exact_optimum,0,1,"[""b120""]",1,b120,43.7662981538428,43.7662981538428,0.0
+Graph rules on a shared measured set,detection,yolo11l,H8,3,cut_bytes_only,Boundary bytes,within_1pct,1,2,"[""b062"",""b120""]",1,b062,43.42974183800039,43.7662981538428,0.7689851096370548
+Graph rules on a shared measured set,detection,yolo11l,H8,3,weighted_score,Weighted score,within_1pct,1,2,"[""b062"",""b120""]",1,b120,43.7662981538428,43.7662981538428,0.0
+Graph rules on a shared measured set,detection,yolo11l,H8,3,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,2,"[""b062"",""b120""]",1,b062,43.42974183800039,43.7662981538428,0.7689851096370548
+Graph rules on a shared measured set,detection,yolo11l,H8,3,cycle_time_no_handover,Cycle without handover,within_1pct,1,2,"[""b062"",""b120""]",1,b120,43.7662981538428,43.7662981538428,0.0
+Graph rules on a shared measured set,detection,yolo11l,H8,3,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,2,"[""b062"",""b120""]",1,b120,43.7662981538428,43.7662981538428,0.0
+Graph rules on a shared measured set,detection,yolo11l,H8,3,measured_generic_completion,Generic,within_1pct,1,2,"[""b062"",""b120""]",1,b120,43.7662981538428,43.7662981538428,0.0
+Graph rules on a shared measured set,detection,yolo11l,H8,3,cut_bytes_only,Boundary bytes,within_5pct,5,2,"[""b062"",""b120""]",1,b062,43.42974183800039,43.7662981538428,0.7689851096370548
+Graph rules on a shared measured set,detection,yolo11l,H8,3,weighted_score,Weighted score,within_5pct,5,2,"[""b062"",""b120""]",1,b120,43.7662981538428,43.7662981538428,0.0
+Graph rules on a shared measured set,detection,yolo11l,H8,3,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,2,"[""b062"",""b120""]",1,b062,43.42974183800039,43.7662981538428,0.7689851096370548
+Graph rules on a shared measured set,detection,yolo11l,H8,3,cycle_time_no_handover,Cycle without handover,within_5pct,5,2,"[""b062"",""b120""]",1,b120,43.7662981538428,43.7662981538428,0.0
+Graph rules on a shared measured set,detection,yolo11l,H8,3,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,2,"[""b062"",""b120""]",1,b120,43.7662981538428,43.7662981538428,0.0
+Graph rules on a shared measured set,detection,yolo11l,H8,3,measured_generic_completion,Generic,within_5pct,5,2,"[""b062"",""b120""]",1,b120,43.7662981538428,43.7662981538428,0.0
+Graph rules on a shared measured set,detection,yolo11l,H10,3,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b120""]",3,b120,42.211277766824026,42.211277766824026,0.0
+Graph rules on a shared measured set,detection,yolo11l,H10,3,weighted_score,Weighted score,exact_optimum,0,1,"[""b120""]",1,b120,42.211277766824026,42.211277766824026,0.0
+Graph rules on a shared measured set,detection,yolo11l,H10,3,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b120""]",2,b120,42.211277766824026,42.211277766824026,0.0
+Graph rules on a shared measured set,detection,yolo11l,H10,3,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b120""]",1,b120,42.211277766824026,42.211277766824026,0.0
+Graph rules on a shared measured set,detection,yolo11l,H10,3,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b120""]",1,b120,42.211277766824026,42.211277766824026,0.0
+Graph rules on a shared measured set,detection,yolo11l,H10,3,measured_generic_completion,Generic,exact_optimum,0,1,"[""b120""]",2,b120,42.211277766824026,42.211277766824026,0.0
+Graph rules on a shared measured set,detection,yolo11l,H10,3,cut_bytes_only,Boundary bytes,within_1pct,1,1,"[""b120""]",3,b120,42.211277766824026,42.211277766824026,0.0
+Graph rules on a shared measured set,detection,yolo11l,H10,3,weighted_score,Weighted score,within_1pct,1,1,"[""b120""]",1,b120,42.211277766824026,42.211277766824026,0.0
+Graph rules on a shared measured set,detection,yolo11l,H10,3,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,1,"[""b120""]",2,b120,42.211277766824026,42.211277766824026,0.0
+Graph rules on a shared measured set,detection,yolo11l,H10,3,cycle_time_no_handover,Cycle without handover,within_1pct,1,1,"[""b120""]",1,b120,42.211277766824026,42.211277766824026,0.0
+Graph rules on a shared measured set,detection,yolo11l,H10,3,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,1,"[""b120""]",1,b120,42.211277766824026,42.211277766824026,0.0
+Graph rules on a shared measured set,detection,yolo11l,H10,3,measured_generic_completion,Generic,within_1pct,1,1,"[""b120""]",2,b120,42.211277766824026,42.211277766824026,0.0
+Graph rules on a shared measured set,detection,yolo11l,H10,3,cut_bytes_only,Boundary bytes,within_5pct,5,2,"[""b062"",""b120""]",1,b062,40.619863139123545,42.211277766824026,3.77011716274378
+Graph rules on a shared measured set,detection,yolo11l,H10,3,weighted_score,Weighted score,within_5pct,5,2,"[""b062"",""b120""]",1,b120,42.211277766824026,42.211277766824026,0.0
+Graph rules on a shared measured set,detection,yolo11l,H10,3,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,2,"[""b062"",""b120""]",1,b062,40.619863139123545,42.211277766824026,3.77011716274378
+Graph rules on a shared measured set,detection,yolo11l,H10,3,cycle_time_no_handover,Cycle without handover,within_5pct,5,2,"[""b062"",""b120""]",1,b120,42.211277766824026,42.211277766824026,0.0
+Graph rules on a shared measured set,detection,yolo11l,H10,3,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,2,"[""b062"",""b120""]",1,b120,42.211277766824026,42.211277766824026,0.0
+Graph rules on a shared measured set,detection,yolo11l,H10,3,measured_generic_completion,Generic,within_5pct,5,2,"[""b062"",""b120""]",2,b120,42.211277766824026,42.211277766824026,0.0
+Graph rules on a shared measured set,detection,yolo11l,DeepX,3,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b062""]",1,b062,38.882972222781135,38.882972222781135,0.0
+Graph rules on a shared measured set,detection,yolo11l,DeepX,3,weighted_score,Weighted score,exact_optimum,0,1,"[""b062""]",2,b062,38.882972222781135,38.882972222781135,0.0
+Graph rules on a shared measured set,detection,yolo11l,DeepX,3,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b062""]",1,b062,38.882972222781135,38.882972222781135,0.0
+Graph rules on a shared measured set,detection,yolo11l,DeepX,3,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b062""]",2,b062,38.882972222781135,38.882972222781135,0.0
+Graph rules on a shared measured set,detection,yolo11l,DeepX,3,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b062""]",2,b062,38.882972222781135,38.882972222781135,0.0
+Graph rules on a shared measured set,detection,yolo11l,DeepX,3,measured_generic_completion,Generic,exact_optimum,0,1,"[""b062""]",1,b062,38.882972222781135,38.882972222781135,0.0
+Graph rules on a shared measured set,detection,yolo11l,DeepX,3,cut_bytes_only,Boundary bytes,within_1pct,1,1,"[""b062""]",1,b062,38.882972222781135,38.882972222781135,0.0
+Graph rules on a shared measured set,detection,yolo11l,DeepX,3,weighted_score,Weighted score,within_1pct,1,1,"[""b062""]",2,b062,38.882972222781135,38.882972222781135,0.0
+Graph rules on a shared measured set,detection,yolo11l,DeepX,3,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,1,"[""b062""]",1,b062,38.882972222781135,38.882972222781135,0.0
+Graph rules on a shared measured set,detection,yolo11l,DeepX,3,cycle_time_no_handover,Cycle without handover,within_1pct,1,1,"[""b062""]",2,b062,38.882972222781135,38.882972222781135,0.0
+Graph rules on a shared measured set,detection,yolo11l,DeepX,3,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,1,"[""b062""]",2,b062,38.882972222781135,38.882972222781135,0.0
+Graph rules on a shared measured set,detection,yolo11l,DeepX,3,measured_generic_completion,Generic,within_1pct,1,1,"[""b062""]",1,b062,38.882972222781135,38.882972222781135,0.0
+Graph rules on a shared measured set,detection,yolo11l,DeepX,3,cut_bytes_only,Boundary bytes,within_5pct,5,1,"[""b062""]",1,b062,38.882972222781135,38.882972222781135,0.0
+Graph rules on a shared measured set,detection,yolo11l,DeepX,3,weighted_score,Weighted score,within_5pct,5,1,"[""b062""]",2,b062,38.882972222781135,38.882972222781135,0.0
+Graph rules on a shared measured set,detection,yolo11l,DeepX,3,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,1,"[""b062""]",1,b062,38.882972222781135,38.882972222781135,0.0
+Graph rules on a shared measured set,detection,yolo11l,DeepX,3,cycle_time_no_handover,Cycle without handover,within_5pct,5,1,"[""b062""]",2,b062,38.882972222781135,38.882972222781135,0.0
+Graph rules on a shared measured set,detection,yolo11l,DeepX,3,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,1,"[""b062""]",2,b062,38.882972222781135,38.882972222781135,0.0
+Graph rules on a shared measured set,detection,yolo11l,DeepX,3,measured_generic_completion,Generic,within_5pct,5,1,"[""b062""]",1,b062,38.882972222781135,38.882972222781135,0.0
+Graph rules on a shared measured set,detection,yolo26m,H8,3,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b043""]",2,b043,79.72096637057592,79.72096637057592,0.0
+Graph rules on a shared measured set,detection,yolo26m,H8,3,weighted_score,Weighted score,exact_optimum,0,1,"[""b043""]",1,b043,79.72096637057592,79.72096637057592,0.0
+Graph rules on a shared measured set,detection,yolo26m,H8,3,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b043""]",1,b043,79.72096637057592,79.72096637057592,0.0
+Graph rules on a shared measured set,detection,yolo26m,H8,3,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b043""]",1,b043,79.72096637057592,79.72096637057592,0.0
+Graph rules on a shared measured set,detection,yolo26m,H8,3,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b043""]",1,b043,79.72096637057592,79.72096637057592,0.0
+Graph rules on a shared measured set,detection,yolo26m,H8,3,measured_generic_completion,Generic,exact_optimum,0,1,"[""b043""]",1,b043,79.72096637057592,79.72096637057592,0.0
+Graph rules on a shared measured set,detection,yolo26m,H8,3,cut_bytes_only,Boundary bytes,within_1pct,1,2,"[""b038"",""b043""]",1,b038,79.19260074025436,79.72096637057592,0.6627687224280421
+Graph rules on a shared measured set,detection,yolo26m,H8,3,weighted_score,Weighted score,within_1pct,1,2,"[""b038"",""b043""]",1,b043,79.72096637057592,79.72096637057592,0.0
+Graph rules on a shared measured set,detection,yolo26m,H8,3,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,2,"[""b038"",""b043""]",1,b043,79.72096637057592,79.72096637057592,0.0
+Graph rules on a shared measured set,detection,yolo26m,H8,3,cycle_time_no_handover,Cycle without handover,within_1pct,1,2,"[""b038"",""b043""]",1,b043,79.72096637057592,79.72096637057592,0.0
+Graph rules on a shared measured set,detection,yolo26m,H8,3,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,2,"[""b038"",""b043""]",1,b043,79.72096637057592,79.72096637057592,0.0
+Graph rules on a shared measured set,detection,yolo26m,H8,3,measured_generic_completion,Generic,within_1pct,1,2,"[""b038"",""b043""]",1,b043,79.72096637057592,79.72096637057592,0.0
+Graph rules on a shared measured set,detection,yolo26m,H8,3,cut_bytes_only,Boundary bytes,within_5pct,5,2,"[""b038"",""b043""]",1,b038,79.19260074025436,79.72096637057592,0.6627687224280421
+Graph rules on a shared measured set,detection,yolo26m,H8,3,weighted_score,Weighted score,within_5pct,5,2,"[""b038"",""b043""]",1,b043,79.72096637057592,79.72096637057592,0.0
+Graph rules on a shared measured set,detection,yolo26m,H8,3,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,2,"[""b038"",""b043""]",1,b043,79.72096637057592,79.72096637057592,0.0
+Graph rules on a shared measured set,detection,yolo26m,H8,3,cycle_time_no_handover,Cycle without handover,within_5pct,5,2,"[""b038"",""b043""]",1,b043,79.72096637057592,79.72096637057592,0.0
+Graph rules on a shared measured set,detection,yolo26m,H8,3,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,2,"[""b038"",""b043""]",1,b043,79.72096637057592,79.72096637057592,0.0
+Graph rules on a shared measured set,detection,yolo26m,H8,3,measured_generic_completion,Generic,within_5pct,5,2,"[""b038"",""b043""]",1,b043,79.72096637057592,79.72096637057592,0.0
+Graph rules on a shared measured set,detection,yolo26m,H10,3,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b043""]",2,b043,104.0411774754457,104.0411774754457,0.0
+Graph rules on a shared measured set,detection,yolo26m,H10,3,weighted_score,Weighted score,exact_optimum,0,1,"[""b043""]",1,b043,104.0411774754457,104.0411774754457,0.0
+Graph rules on a shared measured set,detection,yolo26m,H10,3,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b043""]",1,b043,104.0411774754457,104.0411774754457,0.0
+Graph rules on a shared measured set,detection,yolo26m,H10,3,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b043""]",1,b043,104.0411774754457,104.0411774754457,0.0
+Graph rules on a shared measured set,detection,yolo26m,H10,3,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b043""]",1,b043,104.0411774754457,104.0411774754457,0.0
+Graph rules on a shared measured set,detection,yolo26m,H10,3,measured_generic_completion,Generic,exact_optimum,0,1,"[""b043""]",2,b043,104.0411774754457,104.0411774754457,0.0
+Graph rules on a shared measured set,detection,yolo26m,H10,3,cut_bytes_only,Boundary bytes,within_1pct,1,1,"[""b043""]",2,b043,104.0411774754457,104.0411774754457,0.0
+Graph rules on a shared measured set,detection,yolo26m,H10,3,weighted_score,Weighted score,within_1pct,1,1,"[""b043""]",1,b043,104.0411774754457,104.0411774754457,0.0
+Graph rules on a shared measured set,detection,yolo26m,H10,3,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,1,"[""b043""]",1,b043,104.0411774754457,104.0411774754457,0.0
+Graph rules on a shared measured set,detection,yolo26m,H10,3,cycle_time_no_handover,Cycle without handover,within_1pct,1,1,"[""b043""]",1,b043,104.0411774754457,104.0411774754457,0.0
+Graph rules on a shared measured set,detection,yolo26m,H10,3,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,1,"[""b043""]",1,b043,104.0411774754457,104.0411774754457,0.0
+Graph rules on a shared measured set,detection,yolo26m,H10,3,measured_generic_completion,Generic,within_1pct,1,1,"[""b043""]",2,b043,104.0411774754457,104.0411774754457,0.0
+Graph rules on a shared measured set,detection,yolo26m,H10,3,cut_bytes_only,Boundary bytes,within_5pct,5,2,"[""b038"",""b043""]",1,b038,102.33779691480083,104.0411774754457,1.637217688205117
+Graph rules on a shared measured set,detection,yolo26m,H10,3,weighted_score,Weighted score,within_5pct,5,2,"[""b038"",""b043""]",1,b043,104.0411774754457,104.0411774754457,0.0
+Graph rules on a shared measured set,detection,yolo26m,H10,3,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,2,"[""b038"",""b043""]",1,b043,104.0411774754457,104.0411774754457,0.0
+Graph rules on a shared measured set,detection,yolo26m,H10,3,cycle_time_no_handover,Cycle without handover,within_5pct,5,2,"[""b038"",""b043""]",1,b043,104.0411774754457,104.0411774754457,0.0
+Graph rules on a shared measured set,detection,yolo26m,H10,3,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,2,"[""b038"",""b043""]",1,b043,104.0411774754457,104.0411774754457,0.0
+Graph rules on a shared measured set,detection,yolo26m,H10,3,measured_generic_completion,Generic,within_5pct,5,2,"[""b038"",""b043""]",1,b038,102.33779691480083,104.0411774754457,1.637217688205117
+Graph rules on a shared measured set,detection,yolo26m,DeepX,3,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b043""]",2,b043,59.29505488468182,59.29505488468182,0.0
+Graph rules on a shared measured set,detection,yolo26m,DeepX,3,weighted_score,Weighted score,exact_optimum,0,1,"[""b043""]",1,b043,59.29505488468182,59.29505488468182,0.0
+Graph rules on a shared measured set,detection,yolo26m,DeepX,3,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b043""]",1,b043,59.29505488468182,59.29505488468182,0.0
+Graph rules on a shared measured set,detection,yolo26m,DeepX,3,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b043""]",1,b043,59.29505488468182,59.29505488468182,0.0
+Graph rules on a shared measured set,detection,yolo26m,DeepX,3,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b043""]",1,b043,59.29505488468182,59.29505488468182,0.0
+Graph rules on a shared measured set,detection,yolo26m,DeepX,3,measured_generic_completion,Generic,exact_optimum,0,1,"[""b043""]",1,b043,59.29505488468182,59.29505488468182,0.0
+Graph rules on a shared measured set,detection,yolo26m,DeepX,3,cut_bytes_only,Boundary bytes,within_1pct,1,2,"[""b038"",""b043""]",1,b038,58.90471227122835,59.29505488468182,0.6583055099832813
+Graph rules on a shared measured set,detection,yolo26m,DeepX,3,weighted_score,Weighted score,within_1pct,1,2,"[""b038"",""b043""]",1,b043,59.29505488468182,59.29505488468182,0.0
+Graph rules on a shared measured set,detection,yolo26m,DeepX,3,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,2,"[""b038"",""b043""]",1,b043,59.29505488468182,59.29505488468182,0.0
+Graph rules on a shared measured set,detection,yolo26m,DeepX,3,cycle_time_no_handover,Cycle without handover,within_1pct,1,2,"[""b038"",""b043""]",1,b043,59.29505488468182,59.29505488468182,0.0
+Graph rules on a shared measured set,detection,yolo26m,DeepX,3,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,2,"[""b038"",""b043""]",1,b043,59.29505488468182,59.29505488468182,0.0
+Graph rules on a shared measured set,detection,yolo26m,DeepX,3,measured_generic_completion,Generic,within_1pct,1,2,"[""b038"",""b043""]",1,b043,59.29505488468182,59.29505488468182,0.0
+Graph rules on a shared measured set,detection,yolo26m,DeepX,3,cut_bytes_only,Boundary bytes,within_5pct,5,2,"[""b038"",""b043""]",1,b038,58.90471227122835,59.29505488468182,0.6583055099832813
+Graph rules on a shared measured set,detection,yolo26m,DeepX,3,weighted_score,Weighted score,within_5pct,5,2,"[""b038"",""b043""]",1,b043,59.29505488468182,59.29505488468182,0.0
+Graph rules on a shared measured set,detection,yolo26m,DeepX,3,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,2,"[""b038"",""b043""]",1,b043,59.29505488468182,59.29505488468182,0.0
+Graph rules on a shared measured set,detection,yolo26m,DeepX,3,cycle_time_no_handover,Cycle without handover,within_5pct,5,2,"[""b038"",""b043""]",1,b043,59.29505488468182,59.29505488468182,0.0
+Graph rules on a shared measured set,detection,yolo26m,DeepX,3,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,2,"[""b038"",""b043""]",1,b043,59.29505488468182,59.29505488468182,0.0
+Graph rules on a shared measured set,detection,yolo26m,DeepX,3,measured_generic_completion,Generic,within_5pct,5,2,"[""b038"",""b043""]",1,b043,59.29505488468182,59.29505488468182,0.0
+Graph rules on a shared measured set,detection,yolo26s,H8,3,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b021""]",1,b021,189.15796594469003,189.15796594469003,0.0
+Graph rules on a shared measured set,detection,yolo26s,H8,3,weighted_score,Weighted score,exact_optimum,0,1,"[""b021""]",2,b021,189.15796594469003,189.15796594469003,0.0
+Graph rules on a shared measured set,detection,yolo26s,H8,3,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b021""]",2,b021,189.15796594469003,189.15796594469003,0.0
+Graph rules on a shared measured set,detection,yolo26s,H8,3,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b021""]",2,b021,189.15796594469003,189.15796594469003,0.0
+Graph rules on a shared measured set,detection,yolo26s,H8,3,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b021""]",2,b021,189.15796594469003,189.15796594469003,0.0
+Graph rules on a shared measured set,detection,yolo26s,H8,3,measured_generic_completion,Generic,exact_optimum,0,1,"[""b021""]",1,b021,189.15796594469003,189.15796594469003,0.0
+Graph rules on a shared measured set,detection,yolo26s,H8,3,cut_bytes_only,Boundary bytes,within_1pct,1,1,"[""b021""]",1,b021,189.15796594469003,189.15796594469003,0.0
+Graph rules on a shared measured set,detection,yolo26s,H8,3,weighted_score,Weighted score,within_1pct,1,1,"[""b021""]",2,b021,189.15796594469003,189.15796594469003,0.0
+Graph rules on a shared measured set,detection,yolo26s,H8,3,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,1,"[""b021""]",2,b021,189.15796594469003,189.15796594469003,0.0
+Graph rules on a shared measured set,detection,yolo26s,H8,3,cycle_time_no_handover,Cycle without handover,within_1pct,1,1,"[""b021""]",2,b021,189.15796594469003,189.15796594469003,0.0
+Graph rules on a shared measured set,detection,yolo26s,H8,3,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,1,"[""b021""]",2,b021,189.15796594469003,189.15796594469003,0.0
+Graph rules on a shared measured set,detection,yolo26s,H8,3,measured_generic_completion,Generic,within_1pct,1,1,"[""b021""]",1,b021,189.15796594469003,189.15796594469003,0.0
+Graph rules on a shared measured set,detection,yolo26s,H8,3,cut_bytes_only,Boundary bytes,within_5pct,5,1,"[""b021""]",1,b021,189.15796594469003,189.15796594469003,0.0
+Graph rules on a shared measured set,detection,yolo26s,H8,3,weighted_score,Weighted score,within_5pct,5,1,"[""b021""]",2,b021,189.15796594469003,189.15796594469003,0.0
+Graph rules on a shared measured set,detection,yolo26s,H8,3,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,1,"[""b021""]",2,b021,189.15796594469003,189.15796594469003,0.0
+Graph rules on a shared measured set,detection,yolo26s,H8,3,cycle_time_no_handover,Cycle without handover,within_5pct,5,1,"[""b021""]",2,b021,189.15796594469003,189.15796594469003,0.0
+Graph rules on a shared measured set,detection,yolo26s,H8,3,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,1,"[""b021""]",2,b021,189.15796594469003,189.15796594469003,0.0
+Graph rules on a shared measured set,detection,yolo26s,H8,3,measured_generic_completion,Generic,within_5pct,5,1,"[""b021""]",1,b021,189.15796594469003,189.15796594469003,0.0
+Graph rules on a shared measured set,detection,yolo26s,H10,3,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b021""]",1,b021,167.28408291588886,167.28408291588886,0.0
+Graph rules on a shared measured set,detection,yolo26s,H10,3,weighted_score,Weighted score,exact_optimum,0,1,"[""b021""]",2,b021,167.28408291588886,167.28408291588886,0.0
+Graph rules on a shared measured set,detection,yolo26s,H10,3,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b021""]",2,b021,167.28408291588886,167.28408291588886,0.0
+Graph rules on a shared measured set,detection,yolo26s,H10,3,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b021""]",2,b021,167.28408291588886,167.28408291588886,0.0
+Graph rules on a shared measured set,detection,yolo26s,H10,3,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b021""]",2,b021,167.28408291588886,167.28408291588886,0.0
+Graph rules on a shared measured set,detection,yolo26s,H10,3,measured_generic_completion,Generic,exact_optimum,0,1,"[""b021""]",1,b021,167.28408291588886,167.28408291588886,0.0
+Graph rules on a shared measured set,detection,yolo26s,H10,3,cut_bytes_only,Boundary bytes,within_1pct,1,1,"[""b021""]",1,b021,167.28408291588886,167.28408291588886,0.0
+Graph rules on a shared measured set,detection,yolo26s,H10,3,weighted_score,Weighted score,within_1pct,1,1,"[""b021""]",2,b021,167.28408291588886,167.28408291588886,0.0
+Graph rules on a shared measured set,detection,yolo26s,H10,3,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,1,"[""b021""]",2,b021,167.28408291588886,167.28408291588886,0.0
+Graph rules on a shared measured set,detection,yolo26s,H10,3,cycle_time_no_handover,Cycle without handover,within_1pct,1,1,"[""b021""]",2,b021,167.28408291588886,167.28408291588886,0.0
+Graph rules on a shared measured set,detection,yolo26s,H10,3,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,1,"[""b021""]",2,b021,167.28408291588886,167.28408291588886,0.0
+Graph rules on a shared measured set,detection,yolo26s,H10,3,measured_generic_completion,Generic,within_1pct,1,1,"[""b021""]",1,b021,167.28408291588886,167.28408291588886,0.0
+Graph rules on a shared measured set,detection,yolo26s,H10,3,cut_bytes_only,Boundary bytes,within_5pct,5,1,"[""b021""]",1,b021,167.28408291588886,167.28408291588886,0.0
+Graph rules on a shared measured set,detection,yolo26s,H10,3,weighted_score,Weighted score,within_5pct,5,1,"[""b021""]",2,b021,167.28408291588886,167.28408291588886,0.0
+Graph rules on a shared measured set,detection,yolo26s,H10,3,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,1,"[""b021""]",2,b021,167.28408291588886,167.28408291588886,0.0
+Graph rules on a shared measured set,detection,yolo26s,H10,3,cycle_time_no_handover,Cycle without handover,within_5pct,5,1,"[""b021""]",2,b021,167.28408291588886,167.28408291588886,0.0
+Graph rules on a shared measured set,detection,yolo26s,H10,3,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,1,"[""b021""]",2,b021,167.28408291588886,167.28408291588886,0.0
+Graph rules on a shared measured set,detection,yolo26s,H10,3,measured_generic_completion,Generic,within_5pct,5,1,"[""b021""]",1,b021,167.28408291588886,167.28408291588886,0.0
+Graph rules on a shared measured set,detection,yolo26s,DeepX,3,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b021""]",1,b021,109.39028423768562,109.39028423768562,0.0
+Graph rules on a shared measured set,detection,yolo26s,DeepX,3,weighted_score,Weighted score,exact_optimum,0,1,"[""b021""]",2,b021,109.39028423768562,109.39028423768562,0.0
+Graph rules on a shared measured set,detection,yolo26s,DeepX,3,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b021""]",2,b021,109.39028423768562,109.39028423768562,0.0
+Graph rules on a shared measured set,detection,yolo26s,DeepX,3,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b021""]",2,b021,109.39028423768562,109.39028423768562,0.0
+Graph rules on a shared measured set,detection,yolo26s,DeepX,3,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b021""]",2,b021,109.39028423768562,109.39028423768562,0.0
+Graph rules on a shared measured set,detection,yolo26s,DeepX,3,measured_generic_completion,Generic,exact_optimum,0,1,"[""b021""]",1,b021,109.39028423768562,109.39028423768562,0.0
+Graph rules on a shared measured set,detection,yolo26s,DeepX,3,cut_bytes_only,Boundary bytes,within_1pct,1,1,"[""b021""]",1,b021,109.39028423768562,109.39028423768562,0.0
+Graph rules on a shared measured set,detection,yolo26s,DeepX,3,weighted_score,Weighted score,within_1pct,1,1,"[""b021""]",2,b021,109.39028423768562,109.39028423768562,0.0
+Graph rules on a shared measured set,detection,yolo26s,DeepX,3,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,1,"[""b021""]",2,b021,109.39028423768562,109.39028423768562,0.0
+Graph rules on a shared measured set,detection,yolo26s,DeepX,3,cycle_time_no_handover,Cycle without handover,within_1pct,1,1,"[""b021""]",2,b021,109.39028423768562,109.39028423768562,0.0
+Graph rules on a shared measured set,detection,yolo26s,DeepX,3,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,1,"[""b021""]",2,b021,109.39028423768562,109.39028423768562,0.0
+Graph rules on a shared measured set,detection,yolo26s,DeepX,3,measured_generic_completion,Generic,within_1pct,1,1,"[""b021""]",1,b021,109.39028423768562,109.39028423768562,0.0
+Graph rules on a shared measured set,detection,yolo26s,DeepX,3,cut_bytes_only,Boundary bytes,within_5pct,5,1,"[""b021""]",1,b021,109.39028423768562,109.39028423768562,0.0
+Graph rules on a shared measured set,detection,yolo26s,DeepX,3,weighted_score,Weighted score,within_5pct,5,1,"[""b021""]",2,b021,109.39028423768562,109.39028423768562,0.0
+Graph rules on a shared measured set,detection,yolo26s,DeepX,3,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,1,"[""b021""]",2,b021,109.39028423768562,109.39028423768562,0.0
+Graph rules on a shared measured set,detection,yolo26s,DeepX,3,cycle_time_no_handover,Cycle without handover,within_5pct,5,1,"[""b021""]",2,b021,109.39028423768562,109.39028423768562,0.0
+Graph rules on a shared measured set,detection,yolo26s,DeepX,3,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,1,"[""b021""]",2,b021,109.39028423768562,109.39028423768562,0.0
+Graph rules on a shared measured set,detection,yolo26s,DeepX,3,measured_generic_completion,Generic,within_5pct,5,1,"[""b021""]",1,b021,109.39028423768562,109.39028423768562,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H8,3,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b066""]",3,b066,112.492794,112.492794,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H8,3,weighted_score,Weighted score,exact_optimum,0,1,"[""b066""]",1,b066,112.492794,112.492794,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H8,3,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b066""]",2,b066,112.492794,112.492794,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H8,3,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b066""]",1,b066,112.492794,112.492794,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H8,3,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b066""]",2,b066,112.492794,112.492794,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H8,3,measured_generic_completion,Generic,exact_optimum,0,1,"[""b066""]",2,b066,112.492794,112.492794,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H8,3,cut_bytes_only,Boundary bytes,within_1pct,1,1,"[""b066""]",3,b066,112.492794,112.492794,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H8,3,weighted_score,Weighted score,within_1pct,1,1,"[""b066""]",1,b066,112.492794,112.492794,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H8,3,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,1,"[""b066""]",2,b066,112.492794,112.492794,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H8,3,cycle_time_no_handover,Cycle without handover,within_1pct,1,1,"[""b066""]",1,b066,112.492794,112.492794,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H8,3,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,1,"[""b066""]",2,b066,112.492794,112.492794,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H8,3,measured_generic_completion,Generic,within_1pct,1,1,"[""b066""]",2,b066,112.492794,112.492794,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H8,3,cut_bytes_only,Boundary bytes,within_5pct,5,1,"[""b066""]",3,b066,112.492794,112.492794,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H8,3,weighted_score,Weighted score,within_5pct,5,1,"[""b066""]",1,b066,112.492794,112.492794,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H8,3,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,1,"[""b066""]",2,b066,112.492794,112.492794,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H8,3,cycle_time_no_handover,Cycle without handover,within_5pct,5,1,"[""b066""]",1,b066,112.492794,112.492794,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H8,3,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,1,"[""b066""]",2,b066,112.492794,112.492794,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H8,3,measured_generic_completion,Generic,within_5pct,5,1,"[""b066""]",2,b066,112.492794,112.492794,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H10,3,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b044""]",1,b044,64.500526,64.500526,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H10,3,weighted_score,Weighted score,exact_optimum,0,1,"[""b044""]",2,b044,64.500526,64.500526,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H10,3,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b044""]",1,b044,64.500526,64.500526,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H10,3,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b044""]",2,b044,64.500526,64.500526,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H10,3,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b044""]",1,b044,64.500526,64.500526,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H10,3,measured_generic_completion,Generic,exact_optimum,0,1,"[""b044""]",2,b044,64.500526,64.500526,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H10,3,cut_bytes_only,Boundary bytes,within_1pct,1,1,"[""b044""]",1,b044,64.500526,64.500526,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H10,3,weighted_score,Weighted score,within_1pct,1,1,"[""b044""]",2,b044,64.500526,64.500526,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H10,3,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,1,"[""b044""]",1,b044,64.500526,64.500526,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H10,3,cycle_time_no_handover,Cycle without handover,within_1pct,1,1,"[""b044""]",2,b044,64.500526,64.500526,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H10,3,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,1,"[""b044""]",1,b044,64.500526,64.500526,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H10,3,measured_generic_completion,Generic,within_1pct,1,1,"[""b044""]",2,b044,64.500526,64.500526,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H10,3,cut_bytes_only,Boundary bytes,within_5pct,5,1,"[""b044""]",1,b044,64.500526,64.500526,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H10,3,weighted_score,Weighted score,within_5pct,5,1,"[""b044""]",2,b044,64.500526,64.500526,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H10,3,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,1,"[""b044""]",1,b044,64.500526,64.500526,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H10,3,cycle_time_no_handover,Cycle without handover,within_5pct,5,1,"[""b044""]",2,b044,64.500526,64.500526,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H10,3,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,1,"[""b044""]",1,b044,64.500526,64.500526,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,H10,3,measured_generic_completion,Generic,within_5pct,5,1,"[""b044""]",2,b044,64.500526,64.500526,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,DeepX,3,cut_bytes_only,Boundary bytes,exact_optimum,0,1,"[""b044""]",1,b044,48.790077,48.790077,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,DeepX,3,weighted_score,Weighted score,exact_optimum,0,1,"[""b044""]",2,b044,48.790077,48.790077,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,DeepX,3,onnx_real_boundary_hardware_aware,H10 fit,exact_optimum,0,1,"[""b044""]",1,b044,48.790077,48.790077,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,DeepX,3,cycle_time_no_handover,Cycle without handover,exact_optimum,0,1,"[""b044""]",2,b044,48.790077,48.790077,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,DeepX,3,stored_predicted_stream_fps,Stored stream rate,exact_optimum,0,1,"[""b044""]",1,b044,48.790077,48.790077,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,DeepX,3,measured_generic_completion,Generic,exact_optimum,0,1,"[""b044""]",1,b044,48.790077,48.790077,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,DeepX,3,cut_bytes_only,Boundary bytes,within_1pct,1,1,"[""b044""]",1,b044,48.790077,48.790077,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,DeepX,3,weighted_score,Weighted score,within_1pct,1,1,"[""b044""]",2,b044,48.790077,48.790077,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,DeepX,3,onnx_real_boundary_hardware_aware,H10 fit,within_1pct,1,1,"[""b044""]",1,b044,48.790077,48.790077,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,DeepX,3,cycle_time_no_handover,Cycle without handover,within_1pct,1,1,"[""b044""]",2,b044,48.790077,48.790077,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,DeepX,3,stored_predicted_stream_fps,Stored stream rate,within_1pct,1,1,"[""b044""]",1,b044,48.790077,48.790077,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,DeepX,3,measured_generic_completion,Generic,within_1pct,1,1,"[""b044""]",1,b044,48.790077,48.790077,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,DeepX,3,cut_bytes_only,Boundary bytes,within_5pct,5,1,"[""b044""]",1,b044,48.790077,48.790077,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,DeepX,3,weighted_score,Weighted score,within_5pct,5,1,"[""b044""]",2,b044,48.790077,48.790077,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,DeepX,3,onnx_real_boundary_hardware_aware,H10 fit,within_5pct,5,1,"[""b044""]",1,b044,48.790077,48.790077,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,DeepX,3,cycle_time_no_handover,Cycle without handover,within_5pct,5,1,"[""b044""]",2,b044,48.790077,48.790077,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,DeepX,3,stored_predicted_stream_fps,Stored stream rate,within_5pct,5,1,"[""b044""]",1,b044,48.790077,48.790077,0.0
+Graph rules on a shared measured set,detection,yolov7_paper,DeepX,3,measured_generic_completion,Generic,within_5pct,5,1,"[""b044""]",1,b044,48.790077,48.790077,0.0

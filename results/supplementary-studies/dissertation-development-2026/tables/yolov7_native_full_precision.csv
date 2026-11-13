@@ -1,0 +1,10 @@
+source_label,fps,ci_low,ci_high,mean_iou,decision
+"DEEPX$\rightarrow$TensorRT, \texttt{b044}",12.4123,11.7055,12.4160,0.996060,pass
+DEEPX Full,9.7293,9.7072,9.9488,0.994360,pass
+TensorRT Full on DEEPX setup,12.5780,12.5627,12.6550,0.999027,pass
+"Hailo-10H$\rightarrow$TensorRT, \texttt{b044}",16.9209,16.8182,16.9749,0.990733,pass
+Hailo-10H Full,9.0406,9.0109,9.0454,0.887870,fail
+TensorRT Full on Hailo-10H setup,18.6900,18.5869,18.7757,0.999028,pass
+"Hailo-8$\rightarrow$TensorRT, \texttt{b044}",15.8537,15.7361,15.8548,0.986013,pass
+Hailo-8 Full,16.1797,16.1721,16.1888,0.875778,fail
+TensorRT Full on Hailo-8 setup,18.8423,18.8100,18.8678,0.999062,pass

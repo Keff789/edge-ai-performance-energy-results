@@ -1,0 +1,53 @@
+{
+  "protocol_version": 1,
+  "frozen_at_utc": "2026-10-17T13:26:57.089678+00:00",
+  "status": "frozen_before_fitting_or_test_fold_evaluation",
+  "task": "Phase C fixed calibrated Generic reference",
+  "model": "log(native_hat) = log(generic) + beta0 + beta1*z(prefix_compute_fraction) + beta2*z(log1p(boundary_bytes))",
+  "target": "log(native_fps/generic_fps)",
+  "objective": "mean((y-X beta)^2) + 1*(beta1^2+beta2^2)",
+  "lambda": 1.0,
+  "intercept_penalized": false,
+  "fit": "solve (X.T X + n*diag(0,1,1)) beta = X.T y",
+  "standardization": {
+    "fit_on": "training rows only per device and held-out architecture",
+    "scale": "population standard deviation ddof=0",
+    "zero_variance": "scale=1, standardized feature=0"
+  },
+  "architectures": [
+    "mobilenet",
+    "regnet",
+    "resnet50"
+  ],
+  "folds": "per device leave one entire classifier architecture out, train on other two",
+  "candidate_rule": "paired native/generic positive finite FPS, numeric task quality pass, exact config/artifact binding, feature graph identity proved; same eligible candidate set for every method within cohort/group",
+  "quality_rule": "numeric relative degradation (baseline_quality-native_quality)/baseline_quality <= 0.05; require finite positive baseline; cached policy flags are not numeric filter",
+  "feature_identity": "use existing consistent graph operation prefix/total and logical boundary bytes definition only where mapping to measured exact graph is demonstrated; matching model/cut labels alone insufficient; unavailable otherwise",
+  "cohorts": [
+    "confirmed",
+    "R14_reproduction_provisional_separate"
+  ],
+  "methods": [
+    "Generic descending FPS",
+    "fixed calibrated Generic descending predicted FPS",
+    "uniform random without replacement exact finite-set expectation",
+    "static rules only if feature formula and exact current graph identity are proved"
+  ],
+  "budgets": [
+    1,
+    3,
+    5
+  ],
+  "budget_policy": "report unavailable when k exceeds group n (no clamping, no detector k=5)",
+  "tie_policy": "deterministic config_id ascending to break predicted score ties; all exactly maximal native values count as winners",
+  "metrics": {
+    "native_regret": "100*(1-best measured native FPS among selected/native maximum)",
+    "winner_coverage": "selected set contains at least one exact native winner",
+    "uniform_random": "analytic finite combinatorial distribution of sample maximum; coverage=1-C(n-w,k)/C(n,k)"
+  },
+  "aggregation": "equal weight complete model/setup groups separately for each cohort, task, method and k; report denominators/exclusions",
+  "inference": "retrospective grouped validation; three architectures not generalization evidence; no cut-level significance tests",
+  "hyperparameter_search": false,
+  "allowed_variants": 1,
+  "cost_accounting": "k counts held-out native attempts only; measured Generic acquisition, native training, compilation and quality checks separately, no unmeasured total-cost savings claim"
+}

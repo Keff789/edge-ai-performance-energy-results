@@ -1,0 +1,87 @@
+{
+  "schema": "boundary-performance-artifacts-v1",
+  "generator": {
+    "path": "scripts/split-inference/boundary_performance.py",
+    "sha256": "e26c885fab6b5cb37ad218babf0756f225eeefc9a95bd3eb148e2f9e17981347"
+  },
+  "sources": {
+    "graph_universe": {
+      "path": "results/supplementary-studies/rq3-generic420-detector-corrected-20261027/inputs/graph_universe.csv",
+      "sha256": "360452de54c9c32376fe6df9df45b65798b7729b81357c380215041668ec4241"
+    },
+    "graph_features": {
+      "path": "results/supplementary-studies/rq2-weighted-20261020/features/graph_boundary_features.csv",
+      "sha256": "05856138ad5eb5de1f05f8b57d234d4bd14bd2acc0713a4b3cc984955d24da2e"
+    },
+    "feature_metadata": {
+      "path": "results/supplementary-studies/rq3-generic420-detector-corrected-20261027/inputs/feature_metadata.json",
+      "sha256": "af4acf61eb65dbf3d75b2fd77011a22867fb339ab3f9b9643663832de6af36a8"
+    },
+    "node_audit": {
+      "path": "results/supplementary-studies/rq2-weighted-20261020/features/node_operation_audit.json",
+      "sha256": "ae649c429d4d6316671d343891feb74d37a903bbad4ca7e5f1e7465bb9c289d2"
+    },
+    "normalization": {
+      "path": "results/supplementary-studies/rq2-weighted-20261020/features/normalization_universes.json",
+      "sha256": "a00131150b5578f31ac7ecb184f5b2bf71a24f2a435cde725020cf864a8619d0"
+    },
+    "candidates": {
+      "path": "results/supplementary-studies/rq3-generic420-detector-corrected-20261027/inputs/candidates.csv",
+      "sha256": "2ae7f582bdede39030a6420dff7a214654c37ede531b1b83047f4d269ae018e2"
+    },
+    "dataset": {
+      "path": "results/split-inference/data/PAPER_DATASET.json",
+      "sha256": "1ec1e759a4e0a4855bee9dd5b2686499b9dc462a85935d62821f87c94f663ee8"
+    }
+  },
+  "outputs": [
+    {
+      "path": "README.md",
+      "sha256": "185c3520da18cad14fdfbe705f6bf752d486fc442297a7aa6f718e62c74de941"
+    },
+    {
+      "path": "artifacts/de/figures/yolov7_h8_boundary_performance.pdf",
+      "sha256": "dad254886c6a1be1edfec108ebe6a0f97f9b5bd23f7b17b9d487f85dda2e4bac"
+    },
+    {
+      "path": "artifacts/de/figures/yolov7_h8_boundary_performance.png",
+      "sha256": "44d8c1376d2661d6fbe0b0b5085b53703a6682cb3b884314fa5317d01ae158e7"
+    },
+    {
+      "path": "artifacts/de/figures/yolov7_h8_boundary_performance.svg",
+      "sha256": "7a9413d5a7a5f18cc701af35c875f7f67ad0361543aff739373939e2ac6bda40"
+    },
+    {
+      "path": "artifacts/de/figures/yolov7_h8_boundary_performance_caption.tex",
+      "sha256": "42665a50f9e380b7d732ce5b53a37c22647f565a026358a6273c10a789a746cf"
+    },
+    {
+      "path": "artifacts/en/figures/yolov7_h8_boundary_performance.pdf",
+      "sha256": "e57490dd11f419517a1e5bd39bd9424da62af6f0823016bd53e60b8104fa7b51"
+    },
+    {
+      "path": "artifacts/en/figures/yolov7_h8_boundary_performance.png",
+      "sha256": "a804044bf2f9fbd9a54bf5beabe6871aa9a3fb4cf9b2ef87f7adab2fd3b4f7ed"
+    },
+    {
+      "path": "artifacts/en/figures/yolov7_h8_boundary_performance.svg",
+      "sha256": "c46d5ead1fcaa9161e23056b161079e3c1f83e387816d6b28b688397ce828c65"
+    },
+    {
+      "path": "artifacts/en/figures/yolov7_h8_boundary_performance_caption.tex",
+      "sha256": "f95cc50890c40daa3d66aa42c6851e7914edfee950d771541e499783fc91293b"
+    },
+    {
+      "path": "data/yolov7_h8_boundary_performance.json",
+      "sha256": "697a59fe528dd7ebff25a806c9781e85894e5d36668b0564dc3022942ce3d74d"
+    },
+    {
+      "path": "data/yolov7_h8_boundary_performance_graph_boundaries.csv",
+      "sha256": "895d50e2ce18f0b145f2179b632edbd0a09c52bcd143d139fad777b07edcaa51"
+    },
+    {
+      "path": "data/yolov7_h8_boundary_performance_measurements.csv",
+      "sha256": "eb445a0fabcbd197f4a79029e56d4d080fb26361087cbd0cef333badd4b2b6d0"
+    }
+  ]
+}

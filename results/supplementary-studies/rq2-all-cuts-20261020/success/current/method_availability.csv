@@ -1,0 +1,169 @@
+view,task,model,setup,n,native_best_fps,method,available,unavailability_reason
+all_measured,classification,mobilenet_v3_large,DeepX,17,1551.62674122196,boundary_bytes,True,
+all_measured,classification,mobilenet_v3_large,DeepX,17,1551.62674122196,generic,True,
+all_measured,classification,mobilenet_v3_large,DeepX,17,1551.62674122196,calibrated_generic,True,
+all_measured,classification,mobilenet_v3_large,DeepX,17,1551.62674122196,uniform_random,True,
+all_measured,classification,mobilenet_v3_large,H10,17,1171.78108561774,boundary_bytes,True,
+all_measured,classification,mobilenet_v3_large,H10,17,1171.78108561774,generic,True,
+all_measured,classification,mobilenet_v3_large,H10,17,1171.78108561774,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+all_measured,classification,mobilenet_v3_large,H10,17,1171.78108561774,uniform_random,True,
+all_measured,classification,mobilenet_v3_large,H8,17,993.083599,boundary_bytes,True,
+all_measured,classification,mobilenet_v3_large,H8,17,993.083599,generic,True,
+all_measured,classification,mobilenet_v3_large,H8,17,993.083599,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+all_measured,classification,mobilenet_v3_large,H8,17,993.083599,uniform_random,True,
+all_measured,classification,regnet_x_1_6gf,DeepX,20,729.03494213377,boundary_bytes,True,
+all_measured,classification,regnet_x_1_6gf,DeepX,20,729.03494213377,generic,True,
+all_measured,classification,regnet_x_1_6gf,DeepX,20,729.03494213377,calibrated_generic,True,
+all_measured,classification,regnet_x_1_6gf,DeepX,20,729.03494213377,uniform_random,True,
+all_measured,classification,regnet_x_1_6gf,H10,20,1367.11248377648,boundary_bytes,True,
+all_measured,classification,regnet_x_1_6gf,H10,20,1367.11248377648,generic,True,
+all_measured,classification,regnet_x_1_6gf,H10,20,1367.11248377648,calibrated_generic,True,
+all_measured,classification,regnet_x_1_6gf,H10,20,1367.11248377648,uniform_random,True,
+all_measured,classification,regnet_x_1_6gf,H8,20,617.505899,boundary_bytes,True,
+all_measured,classification,regnet_x_1_6gf,H8,20,617.505899,generic,True,
+all_measured,classification,regnet_x_1_6gf,H8,20,617.505899,calibrated_generic,True,
+all_measured,classification,regnet_x_1_6gf,H8,20,617.505899,uniform_random,True,
+all_measured,classification,resnet50,DeepX,19,781.541729401305,boundary_bytes,True,
+all_measured,classification,resnet50,DeepX,19,781.541729401305,generic,True,
+all_measured,classification,resnet50,DeepX,19,781.541729401305,calibrated_generic,True,
+all_measured,classification,resnet50,DeepX,19,781.541729401305,uniform_random,True,
+all_measured,classification,resnet50,H10,19,1099.53814729907,boundary_bytes,True,
+all_measured,classification,resnet50,H10,19,1099.53814729907,generic,True,
+all_measured,classification,resnet50,H10,19,1099.53814729907,calibrated_generic,True,
+all_measured,classification,resnet50,H10,19,1099.53814729907,uniform_random,True,
+all_measured,classification,resnet50,H8,19,581.33212,boundary_bytes,True,
+all_measured,classification,resnet50,H8,19,581.33212,generic,True,
+all_measured,classification,resnet50,H8,19,581.33212,calibrated_generic,True,
+all_measured,classification,resnet50,H8,19,581.33212,uniform_random,True,
+all_measured,detection,yolo11l,DeepX,3,49.753976427142,boundary_bytes,False,No artifact-bound byte features for every group member.
+all_measured,detection,yolo11l,DeepX,3,49.753976427142,generic,True,
+all_measured,detection,yolo11l,DeepX,3,49.753976427142,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+all_measured,detection,yolo11l,DeepX,3,49.753976427142,uniform_random,True,
+all_measured,detection,yolo11l,H10,3,53.2837092317369,boundary_bytes,False,No artifact-bound byte features for every group member.
+all_measured,detection,yolo11l,H10,3,53.2837092317369,generic,True,
+all_measured,detection,yolo11l,H10,3,53.2837092317369,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+all_measured,detection,yolo11l,H10,3,53.2837092317369,uniform_random,True,
+all_measured,detection,yolo11l,H8,3,43.7765982015976,boundary_bytes,False,No artifact-bound byte features for every group member.
+all_measured,detection,yolo11l,H8,3,43.7765982015976,generic,True,
+all_measured,detection,yolo11l,H8,3,43.7765982015976,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+all_measured,detection,yolo11l,H8,3,43.7765982015976,uniform_random,True,
+all_measured,detection,yolo26m,DeepX,3,98.2156877763637,boundary_bytes,False,No artifact-bound byte features for every group member.
+all_measured,detection,yolo26m,DeepX,3,98.2156877763637,generic,True,
+all_measured,detection,yolo26m,DeepX,3,98.2156877763637,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+all_measured,detection,yolo26m,DeepX,3,98.2156877763637,uniform_random,True,
+all_measured,detection,yolo26m,H10,3,110.292412066109,boundary_bytes,False,No artifact-bound byte features for every group member.
+all_measured,detection,yolo26m,H10,3,110.292412066109,generic,True,
+all_measured,detection,yolo26m,H10,3,110.292412066109,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+all_measured,detection,yolo26m,H10,3,110.292412066109,uniform_random,True,
+all_measured,detection,yolo26m,H8,3,78.7858247407675,boundary_bytes,False,No artifact-bound byte features for every group member.
+all_measured,detection,yolo26m,H8,3,78.7858247407675,generic,True,
+all_measured,detection,yolo26m,H8,3,78.7858247407675,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+all_measured,detection,yolo26m,H8,3,78.7858247407675,uniform_random,True,
+all_measured,detection,yolo26s,DeepX,3,163.359488357223,boundary_bytes,False,No artifact-bound byte features for every group member.
+all_measured,detection,yolo26s,DeepX,3,163.359488357223,generic,True,
+all_measured,detection,yolo26s,DeepX,3,163.359488357223,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+all_measured,detection,yolo26s,DeepX,3,163.359488357223,uniform_random,True,
+all_measured,detection,yolo26s,H10,3,181.931185137995,boundary_bytes,False,No artifact-bound byte features for every group member.
+all_measured,detection,yolo26s,H10,3,181.931185137995,generic,True,
+all_measured,detection,yolo26s,H10,3,181.931185137995,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+all_measured,detection,yolo26s,H10,3,181.931185137995,uniform_random,True,
+all_measured,detection,yolo26s,H8,3,187.00493851383,boundary_bytes,False,No artifact-bound byte features for every group member.
+all_measured,detection,yolo26s,H8,3,187.00493851383,generic,True,
+all_measured,detection,yolo26s,H8,3,187.00493851383,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+all_measured,detection,yolo26s,H8,3,187.00493851383,uniform_random,True,
+all_measured,detection,yolov7_paper,DeepX,3,64.0454177976234,boundary_bytes,False,No artifact-bound byte features for every group member.
+all_measured,detection,yolov7_paper,DeepX,3,64.0454177976234,generic,True,
+all_measured,detection,yolov7_paper,DeepX,3,64.0454177976234,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+all_measured,detection,yolov7_paper,DeepX,3,64.0454177976234,uniform_random,True,
+all_measured,detection,yolov7_paper,H10,3,69.619008524253,boundary_bytes,False,No artifact-bound byte features for every group member.
+all_measured,detection,yolov7_paper,H10,3,69.619008524253,generic,True,
+all_measured,detection,yolov7_paper,H10,3,69.619008524253,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+all_measured,detection,yolov7_paper,H10,3,69.619008524253,uniform_random,True,
+all_measured,detection,yolov7_paper,H8,3,112.867784213556,boundary_bytes,False,No artifact-bound byte features for every group member.
+all_measured,detection,yolov7_paper,H8,3,112.867784213556,generic,True,
+all_measured,detection,yolov7_paper,H8,3,112.867784213556,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+all_measured,detection,yolov7_paper,H8,3,112.867784213556,uniform_random,True,
+quality_5pct,classification,mobilenet_v3_large,DeepX,17,1551.62674122196,boundary_bytes,True,
+quality_5pct,classification,mobilenet_v3_large,DeepX,17,1551.62674122196,generic,True,
+quality_5pct,classification,mobilenet_v3_large,DeepX,17,1551.62674122196,calibrated_generic,True,
+quality_5pct,classification,mobilenet_v3_large,DeepX,17,1551.62674122196,uniform_random,True,
+quality_5pct,classification,mobilenet_v3_large,H10,9,1142.90468257984,boundary_bytes,True,
+quality_5pct,classification,mobilenet_v3_large,H10,9,1142.90468257984,generic,True,
+quality_5pct,classification,mobilenet_v3_large,H10,9,1142.90468257984,calibrated_generic,True,
+quality_5pct,classification,mobilenet_v3_large,H10,9,1142.90468257984,uniform_random,True,
+quality_5pct,classification,mobilenet_v3_large,H8,8,993.083599,boundary_bytes,True,
+quality_5pct,classification,mobilenet_v3_large,H8,8,993.083599,generic,True,
+quality_5pct,classification,mobilenet_v3_large,H8,8,993.083599,calibrated_generic,True,
+quality_5pct,classification,mobilenet_v3_large,H8,8,993.083599,uniform_random,True,
+quality_5pct,classification,regnet_x_1_6gf,DeepX,20,729.03494213377,boundary_bytes,True,
+quality_5pct,classification,regnet_x_1_6gf,DeepX,20,729.03494213377,generic,True,
+quality_5pct,classification,regnet_x_1_6gf,DeepX,20,729.03494213377,calibrated_generic,True,
+quality_5pct,classification,regnet_x_1_6gf,DeepX,20,729.03494213377,uniform_random,True,
+quality_5pct,classification,regnet_x_1_6gf,H10,20,1367.11248377648,boundary_bytes,True,
+quality_5pct,classification,regnet_x_1_6gf,H10,20,1367.11248377648,generic,True,
+quality_5pct,classification,regnet_x_1_6gf,H10,20,1367.11248377648,calibrated_generic,True,
+quality_5pct,classification,regnet_x_1_6gf,H10,20,1367.11248377648,uniform_random,True,
+quality_5pct,classification,regnet_x_1_6gf,H8,20,617.505899,boundary_bytes,True,
+quality_5pct,classification,regnet_x_1_6gf,H8,20,617.505899,generic,True,
+quality_5pct,classification,regnet_x_1_6gf,H8,20,617.505899,calibrated_generic,True,
+quality_5pct,classification,regnet_x_1_6gf,H8,20,617.505899,uniform_random,True,
+quality_5pct,classification,resnet50,DeepX,19,781.541729401305,boundary_bytes,True,
+quality_5pct,classification,resnet50,DeepX,19,781.541729401305,generic,True,
+quality_5pct,classification,resnet50,DeepX,19,781.541729401305,calibrated_generic,True,
+quality_5pct,classification,resnet50,DeepX,19,781.541729401305,uniform_random,True,
+quality_5pct,classification,resnet50,H10,19,1099.53814729907,boundary_bytes,True,
+quality_5pct,classification,resnet50,H10,19,1099.53814729907,generic,True,
+quality_5pct,classification,resnet50,H10,19,1099.53814729907,calibrated_generic,True,
+quality_5pct,classification,resnet50,H10,19,1099.53814729907,uniform_random,True,
+quality_5pct,classification,resnet50,H8,19,581.33212,boundary_bytes,True,
+quality_5pct,classification,resnet50,H8,19,581.33212,generic,True,
+quality_5pct,classification,resnet50,H8,19,581.33212,calibrated_generic,True,
+quality_5pct,classification,resnet50,H8,19,581.33212,uniform_random,True,
+quality_5pct,detection,yolo11l,DeepX,3,49.753976427142,boundary_bytes,False,No artifact-bound byte features for every group member.
+quality_5pct,detection,yolo11l,DeepX,3,49.753976427142,generic,True,
+quality_5pct,detection,yolo11l,DeepX,3,49.753976427142,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+quality_5pct,detection,yolo11l,DeepX,3,49.753976427142,uniform_random,True,
+quality_5pct,detection,yolo11l,H10,3,53.2837092317369,boundary_bytes,False,No artifact-bound byte features for every group member.
+quality_5pct,detection,yolo11l,H10,3,53.2837092317369,generic,True,
+quality_5pct,detection,yolo11l,H10,3,53.2837092317369,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+quality_5pct,detection,yolo11l,H10,3,53.2837092317369,uniform_random,True,
+quality_5pct,detection,yolo11l,H8,3,43.7765982015976,boundary_bytes,False,No artifact-bound byte features for every group member.
+quality_5pct,detection,yolo11l,H8,3,43.7765982015976,generic,True,
+quality_5pct,detection,yolo11l,H8,3,43.7765982015976,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+quality_5pct,detection,yolo11l,H8,3,43.7765982015976,uniform_random,True,
+quality_5pct,detection,yolo26m,DeepX,3,98.2156877763637,boundary_bytes,False,No artifact-bound byte features for every group member.
+quality_5pct,detection,yolo26m,DeepX,3,98.2156877763637,generic,True,
+quality_5pct,detection,yolo26m,DeepX,3,98.2156877763637,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+quality_5pct,detection,yolo26m,DeepX,3,98.2156877763637,uniform_random,True,
+quality_5pct,detection,yolo26m,H10,3,110.292412066109,boundary_bytes,False,No artifact-bound byte features for every group member.
+quality_5pct,detection,yolo26m,H10,3,110.292412066109,generic,True,
+quality_5pct,detection,yolo26m,H10,3,110.292412066109,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+quality_5pct,detection,yolo26m,H10,3,110.292412066109,uniform_random,True,
+quality_5pct,detection,yolo26m,H8,3,78.7858247407675,boundary_bytes,False,No artifact-bound byte features for every group member.
+quality_5pct,detection,yolo26m,H8,3,78.7858247407675,generic,True,
+quality_5pct,detection,yolo26m,H8,3,78.7858247407675,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+quality_5pct,detection,yolo26m,H8,3,78.7858247407675,uniform_random,True,
+quality_5pct,detection,yolo26s,DeepX,3,163.359488357223,boundary_bytes,False,No artifact-bound byte features for every group member.
+quality_5pct,detection,yolo26s,DeepX,3,163.359488357223,generic,True,
+quality_5pct,detection,yolo26s,DeepX,3,163.359488357223,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+quality_5pct,detection,yolo26s,DeepX,3,163.359488357223,uniform_random,True,
+quality_5pct,detection,yolo26s,H10,3,181.931185137995,boundary_bytes,False,No artifact-bound byte features for every group member.
+quality_5pct,detection,yolo26s,H10,3,181.931185137995,generic,True,
+quality_5pct,detection,yolo26s,H10,3,181.931185137995,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+quality_5pct,detection,yolo26s,H10,3,181.931185137995,uniform_random,True,
+quality_5pct,detection,yolo26s,H8,3,187.00493851383,boundary_bytes,False,No artifact-bound byte features for every group member.
+quality_5pct,detection,yolo26s,H8,3,187.00493851383,generic,True,
+quality_5pct,detection,yolo26s,H8,3,187.00493851383,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+quality_5pct,detection,yolo26s,H8,3,187.00493851383,uniform_random,True,
+quality_5pct,detection,yolov7_paper,DeepX,3,64.0454177976234,boundary_bytes,False,No artifact-bound byte features for every group member.
+quality_5pct,detection,yolov7_paper,DeepX,3,64.0454177976234,generic,True,
+quality_5pct,detection,yolov7_paper,DeepX,3,64.0454177976234,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+quality_5pct,detection,yolov7_paper,DeepX,3,64.0454177976234,uniform_random,True,
+quality_5pct,detection,yolov7_paper,H10,3,69.619008524253,boundary_bytes,False,No artifact-bound byte features for every group member.
+quality_5pct,detection,yolov7_paper,H10,3,69.619008524253,generic,True,
+quality_5pct,detection,yolov7_paper,H10,3,69.619008524253,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+quality_5pct,detection,yolov7_paper,H10,3,69.619008524253,uniform_random,True,
+quality_5pct,detection,yolov7_paper,H8,3,112.867784213556,boundary_bytes,False,No artifact-bound byte features for every group member.
+quality_5pct,detection,yolov7_paper,H8,3,112.867784213556,generic,True,
+quality_5pct,detection,yolov7_paper,H8,3,112.867784213556,calibrated_generic,False,Frozen eligible-classifier predictions do not cover the complete group.
+quality_5pct,detection,yolov7_paper,H8,3,112.867784213556,uniform_random,True,

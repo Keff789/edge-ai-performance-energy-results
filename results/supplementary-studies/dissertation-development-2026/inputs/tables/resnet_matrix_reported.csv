@@ -1,0 +1,8 @@
+execution_path,top1_min,top1_max,top1_status,top5_min,top5_max,top5_status,latency_ms_min,latency_ms_max,throughput_fps_min,throughput_fps_max,status
+TensorRT full,0.82,0.82,reported,0.96,0.96,reported,7.5,7.8,129,134,valid canonical full baseline.
+DEEPX DX-M1 full,0.84,0.84,reported,0.94,0.94,reported,3.2,3.2,310.9,310.9,valid full-backend repeated-feed path.
+DEEPX DX-M1→TensorRT,0.76,0.78,reported,0.94,0.94,reported,20.3,23.5,62.5,72.9,Generic Runner development row.
+Hailo-8 full/composed,0.82,0.84,reported,0.96,0.96,reported,12,13,,,valid with quantised-interface warning.
+Hailo-8→TensorRT,0.82,0.82,reported,0.96,0.96,reported,9,10,,,valid with interface warning.
+TensorRT→Hailo-8,0.82,0.82,reported,0.96,0.96,reported,8,9,,,valid activation-proxy-calibrated Stage 2.
+TensorRT→DEEPX DX-M1,,,split-dependent,,,split-dependent,,,,,buildable and accepted only after a multi-sample contract probe.

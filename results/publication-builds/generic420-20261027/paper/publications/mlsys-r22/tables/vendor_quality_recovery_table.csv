@@ -1,0 +1,4 @@
+setup,full_uid,split_uid,full_quality,split_quality,quality_difference_pp,reference_quality,quality_metric,quality_n
+H8,native|mobilenet_v3_large|H8|native_full_hailo8|full,native|mobilenet_v3_large|H8|hailo8_to_trt|b027,60.62,71.58,10.960000000000003,73.7,top1_accuracy,5000
+H10,native|mobilenet_v3_large|H10|native_full_hailo10h|full,native|mobilenet_v3_large|H10|hailo10h_to_trt|b027,59.419999999999995,72.22,12.8,73.7,top1_accuracy,5000
+DeepX,native|mobilenet_v3_large|DeepX|native_full_deepx|full,native|mobilenet_v3_large|DeepX|deepx_to_trt|b027,71.72,72.18,0.46000000000000485,73.7,top1_accuracy,5000

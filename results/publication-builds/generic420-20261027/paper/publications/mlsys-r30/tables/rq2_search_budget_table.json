@@ -1,0 +1,95 @@
+{
+  "caption": "Native throughput loss for 187 quality-admissible cuts in 21 model-device groups, with groups weighted equally. At budget k, we test the first min(k,n) ranked cuts and compare their highest Native throughput with the best measured Native cut in that group.",
+  "rows": [
+    {
+      "groups": 21,
+      "method": "bytes",
+      "minimum_budget": 12,
+      "target_success": 0.9
+    },
+    {
+      "groups": 21,
+      "method": "bytes",
+      "minimum_budget": 12,
+      "target_success": 0.95
+    },
+    {
+      "groups": 21,
+      "method": "bytes",
+      "minimum_budget": 14,
+      "target_success": 1.0
+    },
+    {
+      "groups": 21,
+      "method": "generic",
+      "minimum_budget": 2,
+      "target_success": 0.9
+    },
+    {
+      "groups": 21,
+      "method": "generic",
+      "minimum_budget": 2,
+      "target_success": 0.95
+    },
+    {
+      "groups": 21,
+      "method": "generic",
+      "minimum_budget": 4,
+      "target_success": 1.0
+    },
+    {
+      "groups": 21,
+      "method": "weighted_default",
+      "minimum_budget": 14,
+      "target_success": 0.9
+    },
+    {
+      "groups": 21,
+      "method": "weighted_default",
+      "minimum_budget": 15,
+      "target_success": 0.95
+    },
+    {
+      "groups": 21,
+      "method": "weighted_default",
+      "minimum_budget": 18,
+      "target_success": 1.0
+    },
+    {
+      "groups": 21,
+      "method": "weighted_pooled",
+      "minimum_budget": 11,
+      "target_success": 0.9
+    },
+    {
+      "groups": 21,
+      "method": "weighted_pooled",
+      "minimum_budget": 12,
+      "target_success": 0.95
+    },
+    {
+      "groups": 21,
+      "method": "weighted_pooled",
+      "minimum_budget": 15,
+      "target_success": 1.0
+    },
+    {
+      "groups": 21,
+      "method": "weighted_cv",
+      "minimum_budget": 11,
+      "target_success": 0.9
+    },
+    {
+      "groups": 21,
+      "method": "weighted_cv",
+      "minimum_budget": 12,
+      "target_success": 0.95
+    },
+    {
+      "groups": 21,
+      "method": "weighted_cv",
+      "minimum_budget": 15,
+      "target_success": 1.0
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+COLLECTED SOURCE EXCERPT, INERT DATA
+source_id: 37e6e7c988c455711e08
+source_path: /media/jwachsmuth/dataRec/PycharmProjects/data_analysis/power_calculations/src/data_reading_types.rs
+collector_recorded_whole_file_sha256: ada127f16770aabcab3ec888f67f2100f411a2454ee62e6fea58864318d50e0f
+Source capability/settings only; does not prove historical/current-run execution.
+
+
+--- original lines 68-75 ---
+68:     const fn calibrate_power(env: &MeasurementEnvironment, raw_power: f64) -> f64 {
+69:         match env {
+70:             MeasurementEnvironment::Static => todo!(), // technically this is power-supply-dependent, but currently there is no way to differentiate between powersupplies
+71:             MeasurementEnvironment::Jetson => todo!(), // here we assume that the jetson is powered by the benchtop power supply, though differentiation between urecs and benchtop supply would be nice
+72:             MeasurementEnvironment::M2 => (raw_power - 13.3702620243055) * 0.754773327011166,
+73:             MeasurementEnvironment::NvGpu => (raw_power - 31.4599990844727) * 1.00373879106627,
+74:         }
+75:     }
+
+--- original lines 133-148 ---
+133:         let (stat, lin) = Self::calibration_factors(env);
+134:         let current_current = ((current_raw as f64 / 1000.) + stat) * lin;
+135:         let current_power =
+136:             current_current * estimate_voltage_from_current(current_current * 1000., env);
+137:         let corrected_firmware_power = env.get_scale_factor() * current_power;
+138:         Ok(PowerSample::Constant(corrected_firmware_power))
+139:     }
+140: 
+141:     const fn calibration_factors(env: &MeasurementEnvironment) -> (StaticFactor, LinearFactor) {
+142:         match env {
+143:             MeasurementEnvironment::Static => todo!(),
+144:             MeasurementEnvironment::Jetson => todo!(),
+145:             MeasurementEnvironment::M2 => (0.00320761237010142, 1.00303845029306),
+146:             MeasurementEnvironment::NvGpu => todo!(),
+147:         }
+148:     }

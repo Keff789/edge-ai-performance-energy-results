@@ -1,0 +1,27 @@
+{
+  "kind": "polynomial19v",
+  "model_id": "thesis-v49-historical19v-conditional-orin_nx_hailo8_01",
+  "source": "archive:evidence/electrical/new_acquisition_models/sources/orin_nx_hailo8_01_binding.json",
+  "source_sha256": "d850a7b1856a9f4ccb3d41a57bfde785306c4918fb2c736eabecc9e2d29a4942",
+  "g": 0.997224237630222,
+  "o": 0.004704622,
+  "a": 19.062607082705,
+  "b": -0.07444582,
+  "c": 0.9705324920014426,
+  "s": 0.9136343897390969,
+  "setup_id": "orin_nx_hailo8_01",
+  "conditional_estimate_only": true,
+  "valid_for_final_absolute_energy": false,
+  "new_independent_calibration": false,
+  "model_current_domain_a": [
+    0.0,
+    3.5
+  ],
+  "extrapolation_policy": "unclipped_with_flag",
+  "physical_scope": "FS upstream nominal19V",
+  "reference_uncertainty": null,
+  "complete_uncertainty_available": false,
+  "calibration_evidence": "private-path-id:55ffd9ebd3a41f193d929ace6658d3bea787b095c0898203eca3a143aed6f9ae",
+  "calibration_sha256": "90a559f5467c0fef13409d472f14b797f4cf44b1038f0e491f62c5436ea2b5f6",
+  "current_config_sha256": "ac10b296a47a975d0c2f15214fdf6c90893a2002532973e7194081aa8f00eb02"
+}

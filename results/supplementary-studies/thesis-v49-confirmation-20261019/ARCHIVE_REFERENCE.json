@@ -1,0 +1,68 @@
+{
+  "schema": "v49-confirmation-external-archive-reference-v1",
+  "source_campaign_commit": "64c1f487645d20a844d66ccdf8f65dcc80b96065",
+  "source_campaign_branch": "thesis/v49-energy-supplement-20261019",
+  "archive_payload_root": "thesis_v49_hardware_confirmation_20261018",
+  "access": "Private internal Sprite storage; no public raw-data download is provided by this repository.",
+  "files": [
+    {
+      "role": "archive",
+      "filename": "thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz",
+      "bytes": 2857836513,
+      "sha256": "edbd618ad91ef658a866c73c61defd00389e3ca9218c33ea22d87a6ec3721915",
+      "sprite_relative_path": "deliverables/thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz"
+    },
+    {
+      "role": "checksum_file",
+      "filename": "thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz.sha256",
+      "bytes": 133,
+      "sha256": "b43eaa94bf1c0b95649027c92b3454fabca0c248467ab63793f425b7efce7797",
+      "sprite_relative_path": "deliverables/thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz.sha256"
+    },
+    {
+      "role": "packager_receipt",
+      "filename": "thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz.receipt.json",
+      "bytes": 762,
+      "sha256": "43ab8ff4d076850bf2931d16aac277649a8afb525e43af89b39a35e35f3a9d35",
+      "sprite_relative_path": "deliverables/thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz.receipt.json"
+    },
+    {
+      "role": "campaign_git_bundle",
+      "filename": "thesis_v49_hardware_confirmation_energy_supplement_20261019.bundle",
+      "bytes": 5900378,
+      "sha256": "cfc2a5a08f8b8007979d47deb90f75dfb779f5585d67aed53e93d704c27a3e6b",
+      "sprite_relative_path": "deliverables/thesis_v49_hardware_confirmation_energy_supplement_20261019.bundle"
+    },
+    {
+      "role": "archive_closeout",
+      "filename": "thesis_v49_hardware_confirmation_energy_supplement_20261019.archive_closeout.json",
+      "bytes": 53673,
+      "sha256": "0283b6a9fa9487c6a82b04869c383723e3658e557a079c32d6c30a7fab66dde9",
+      "sprite_relative_path": "deliverables/thesis_v49_hardware_confirmation_energy_supplement_20261019.archive_closeout.json"
+    }
+  ],
+  "sprite_backup": {
+    "status": "verified_and_published",
+    "completed_utc": "2026-10-19T14:43:42.191955+00:00",
+    "internal_remote_directory": "/homes/kmika/diss_results/_supplements/thesis_v49_confirmation_energy_supplement_20261019",
+    "internal_mount_directory": "/home/kmika/mnt/sprite/diss_results/_supplements/thesis_v49_confirmation_energy_supplement_20261019",
+    "verified_payload_file_count": 15,
+    "all_source_target_SHA256_equal": true,
+    "verification_method": "Full target readback via mounted SSHFS after close/fsync and advisory fadvise; not remote SSH execution.",
+    "backup_manifest": {
+      "relative_path": "backup_manifest.json",
+      "sha256": "ab8d5a26fe13cab7c4498cf2dacc1de93d50d74b8b45a0a39b1efd7d80a8e9bc",
+      "bytes": 19049
+    },
+    "public_url": null
+  },
+  "archive_integrity": {
+    "verified_members": 30816,
+    "verification_utc": "2026-10-19T08:39:31.620530+00:00",
+    "archive_member_manifest_sha256": "7bfa8e24cfe37f79530198f0d756fab5d0cb921c5c97cf737cf184262a0712f6",
+    "existing_full_member_check_reused": true,
+    "archive_repacked_or_modified": false
+  },
+  "reproduction_scope": "Compact inputs in this repository reproduce numerical tables and paired quality percentiles; raw waveform, complete prediction and environment audits require this archive and its separately identified external dependencies.",
+  "physical_qualification": "C remains zero; backup and publication do not complete the physical calibration or uncertainty evidence."
+}

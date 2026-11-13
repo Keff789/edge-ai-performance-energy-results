@@ -1,0 +1,136 @@
+dataset_root: external-measurements/tek_scope_comparison/resnet50
+output_root: external-analysis/tek_scope_comparison_resnet50_v1
+rate_directories: auto
+representative_run: 0
+dataset:
+  id: resnet50
+  workload_label: ResNet-50 FP32
+  analysis_role: paired_scope_validation
+  signal_label: estimated power derived from calibrated current
+external_idle:
+  enabled: true
+  dataset_root: external-measurements/tek_scope_comparison/idle
+  matching_policy: exact_directory_rate
+  minimum_pairs: 5
+  use_for_psd_when_same_run_unavailable: true
+  use_for_baseline_diagnostics: true
+  use_for_incremental_energy: true
+  maximum_idle_current_difference_ma: 50.0
+zero_offset_correction:
+  enabled: true
+  target_source: tek
+  detection_source: workload_minus_external_idle_rate_medians
+  application_scope: workload_only
+  apply_when_detected: true
+  minimum_reference_rates: 2
+  minimum_reference_pairs_total: 10
+  minimum_abs_offset_ma: 50.0
+  maximum_abs_correction_ma: 500.0
+  maximum_rate_median_deviation_ma: 10.0
+  maximum_rate_q95_span_ma: 15.0
+  minimum_sign_consistency_fraction: 1.0
+  preserve_raw_metrics: true
+source_rates:
+  directory_rate_source: tek
+  tek_policy: directory_rate
+  pico_policy: capped_directory_rate
+  pico_max_rate_sps: 5000000
+  duration_tolerance_s: 2.0e-06
+  duration_tolerance_relative: 1.0e-05
+input_policy:
+  ignore_empty_rate_directories: true
+  ignore_unpaired_runs: true
+  ignore_invalid_pairs: true
+  fail_if_no_valid_rates: true
+  minimum_rows_per_file: 2
+  require_equal_sample_counts: false
+  expected_duration_s: auto
+  duration_tolerance_samples: 2
+sources:
+  tek:
+    file_pattern: tek_hsi_{run}.parquet
+    column: current
+    display_name: Tektronix current probe
+    raw_unit: A
+    calibration:
+      offset_raw: 0.0
+      gain_a_per_raw: 1.0
+  pico:
+    file_pattern: usb_osc_data_{run}.parquet
+    column: current
+    display_name: PicoScope + INA225
+    raw_unit: V_at_INA225_output
+    calibration:
+      offset_raw: 0.0004272598504
+      gain_a_per_raw: 1.99000512058047
+voltage_model:
+  type: linear_current
+  calibration_id: jetson_module_voltage_fit_thesis_2026
+  intercept_v: 19.062607082705
+  slope_v_per_a: -0.07444582
+  valid_current_range_a:
+  - 0.0
+  - 3.5
+alignment:
+  enabled: true
+  max_lag_ms: 10.0
+  analysis_rate_sps: 20000
+  lowpass_hz: 500.0
+  drift_window_s: 2.0
+  apply_to_waveform_metrics: true
+analysis_windows:
+  shared_anchor_mode: fixed_time
+  trigger_time_s: 0.0
+  trigger_fraction: auto
+  trigger_time_by_rate_s: {}
+  mode: full
+  detection_smoothing_ms: 20.0
+  threshold_fraction: 0.3
+  guard_after_trigger_s: 0.0
+  idle_gap_s: 0.0
+  idle_duration_s: 0.0
+  stop_margin_s: 0.0
+  minimum_active_duration_s: 0.05
+  step_detector_diagnostics: false
+averaging_windows_ms:
+- 10.0
+- 50.0
+- 100.0
+spectral:
+  enabled: true
+  max_analysis_rate_sps: 250000000
+  segment_duration_s: 0.5
+  max_nperseg: 1048576
+  overlap_fraction: 0.5
+  cumulative_percentiles:
+  - 0.95
+  - 0.99
+  variance_capture_rates_sps:
+  - 2000
+  - 100000
+  - 125000
+  - 160000
+  - 1000000
+  - 5000000
+  - 25000000
+  - 125000000
+  - 250000000
+  coherence_threshold: 0.8
+  psd_ratio_tolerance_db: 3.0
+  minimum_frequency_hz: 1.0
+  plot_max_points: 60000
+  primary_reference_source: tek
+  minimum_welch_segments: 8
+  minimum_idle_welch_segments: 2
+  primary_reference_min_pairs: 5
+  primary_reference_min_active_duration_s: 2.0
+  primary_reference_min_idle_duration_s: 0.5
+  paired_validation_preferred_rate_sps: 5000000
+validation:
+  minimum_pairs: 5
+  q95_abs_charge_error_pct: 1.0
+  q95_abs_energy_error_pct: 1.0
+  q95_abs_alignment_ms: 1.0
+  median_correlation_100ms: 0.99
+  minimum_correlation_windows: 8
+  low_current_threshold_a: 0.75

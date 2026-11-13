@@ -1,0 +1,62 @@
+[
+  {
+    "groups_k1": 9,
+    "groups_k3": 9,
+    "groups_k5": 9,
+    "method": "generic",
+    "regret_k1": 32.80433865060003,
+    "regret_k3": 23.76820601698179,
+    "regret_k5": 20.44773304888889,
+    "task": "classification"
+  },
+  {
+    "groups_k1": 9,
+    "groups_k3": 9,
+    "groups_k5": 9,
+    "method": "calibrated_generic",
+    "regret_k1": 28.318821332161065,
+    "regret_k3": 23.145584227627083,
+    "regret_k5": 15.43139349311902,
+    "task": "classification"
+  },
+  {
+    "groups_k1": 9,
+    "groups_k3": 9,
+    "groups_k5": 9,
+    "method": "uniform_random",
+    "regret_k1": 32.29032492701127,
+    "regret_k3": 15.406460367574729,
+    "regret_k5": 9.104218094596359,
+    "task": "classification"
+  },
+  {
+    "groups_k1": 9,
+    "groups_k3": 9,
+    "groups_k5": 9,
+    "method": "boundary_bytes_only_recomputed",
+    "regret_k1": 32.965758724451845,
+    "regret_k3": 21.74749603833739,
+    "regret_k5": 8.862433126015741,
+    "task": "classification"
+  },
+  {
+    "groups_k1": 12,
+    "groups_k3": 12,
+    "groups_k5": 0,
+    "method": "generic",
+    "regret_k1": 1.7817217153686513,
+    "regret_k3": 0.0,
+    "regret_k5": null,
+    "task": "detection"
+  },
+  {
+    "groups_k1": 12,
+    "groups_k3": 12,
+    "groups_k5": 0,
+    "method": "uniform_random",
+    "regret_k1": 14.090546987445432,
+    "regret_k3": 0.0,
+    "regret_k5": null,
+    "task": "detection"
+  }
+]

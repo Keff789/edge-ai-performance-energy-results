@@ -1,0 +1,68 @@
+{
+  "completed_at": "2026-10-27T12:13:57.775627+00:00",
+  "final_owner_receipts": {
+    "H10": {
+      "observed_fields": {
+        "finished_at": "2026-10-27T11:48:35.100255+00:00",
+        "schema": "rq2-extra-normal-repaired-H10-N5000-action-v1"
+      },
+      "source": {
+        "filename": "ACTION_v7.result.json",
+        "report_relative_path": "rq2_detector_followup_20261027/h10_quality_fixed_queue_v4/extra_RQ2_yolo26s_b038/ACTION_v7.result.json",
+        "sha256": "8f46108c8dad6ecdc2a1fff434628ba6f90fb9d142465dc392623de13cf9def6",
+        "size_bytes": 5208
+      }
+    },
+    "H8": {
+      "observed_fields": {
+        "recorded_at": "2026-10-27T09:38:12.026949+00:00",
+        "schema": "rq2-h8-complete-actual-quality-and-b009-fps-handoff-v1"
+      },
+      "source": {
+        "filename": "H8_COMPLETE_ACTUAL_RESULTS_HANDOFF_v1.json",
+        "report_relative_path": "rq2_detector_followup_20261027/h8_diagnostic/H8_COMPLETE_ACTUAL_RESULTS_HANDOFF_v1.json",
+        "sha256": "9c3e8609fac76fccd9d252f07bc5f1c6e0fa12cc938ed4f298c41b7c356dd53f",
+        "size_bytes": 58660
+      }
+    },
+    "central_quality": {
+      "observed_fields": {
+        "admission_closed": true,
+        "dispatcher_alive": false,
+        "finished": true,
+        "group_keys_count": 0,
+        "inflight_keys_count": 0,
+        "manager_alive": false,
+        "queue_size": 0,
+        "worker_count": 4,
+        "worker_exitcodes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "workers_alive": 0
+      },
+      "source": {
+        "filename": "NEW_CPU_SERVICE_SHUTDOWN.json",
+        "report_relative_path": "rq2_detector_followup_20261027/quality_audit/central_stats_6ac_v1/executions/extra_RQ2_h10_yolo26s_b038_Source42042_cap2_v2/NEW_CPU_SERVICE_SHUTDOWN.json",
+        "sha256": "fd87ac2d7fb3730e3bfbc7247c1c18593f23d8b3e09b97439a5a784f1605fe5f",
+        "size_bytes": 527
+      }
+    }
+  },
+  "final_queue_status": {
+    "observed_fields": {
+      "schema": "rq2-last-extra-normal-quality-import-receipt-v1"
+    },
+    "source": {
+      "filename": "LAST_EXTRA_H10_B038_ACTUAL_RQ2_IMPORT_RECEIPT.json",
+      "report_relative_path": "rq2_detector_followup_20261027/quality_audit/LAST_EXTRA_H10_B038_ACTUAL_RQ2_IMPORT_RECEIPT.json",
+      "sha256": "fc6db76dc37ef6c6e33de28c397b76b2373da77da5bdc882f3cb47154591196b",
+      "size_bytes": 1014
+    }
+  },
+  "old_shutdown_receipts_not_used_as_current_final_status": true,
+  "schema": "generic420-current-owner-and-queue-closure-evidence-v2",
+  "status_scope": "Pinned current actual queue/import and owner terminal receipts. No live or remote process scan was performed."
+}

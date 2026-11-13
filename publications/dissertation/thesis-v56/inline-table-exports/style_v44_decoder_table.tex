@@ -1,0 +1,14 @@
+\begin{table}[htbp]
+\centering\small\TableSetup
+\caption{Offizieller COCO-Decoder-Vergleich anhand derselben 500 Inferenzausgaben. Die ersten beiden Zeilen weisen identische Produktionsschwellenwerte auf. Die Plausibilitätsrichtlinie verwendet unterschiedliche Schwellenwerte für den diagnostischen Vergleich. Die Werte sind Brüche.}
+\label{tab:evaluation:yolov7_decoder_ab}
+\begin{tabularx}{\linewidth}{@{}Y S[table-format=1.3] S[table-format=1.3] S[table-format=1.3]@{}}
+\toprule
+\textbf{Decoder} & {\textbf{AP}} & {\textbf{AP50}} & {\textbf{AP75}} \\
+\midrule
+Kleine Anker, Produktionsrichtlinien & 0.195 & 0.573 & 0.009 \\
+Standardanker, Produktionsrichtlinien & 0.464 & 0.615 & 0.502 \\
+Standardanker, Plausibilitätsrichtlinie & 0.506 & 0.685 & 0.546 \\
+\bottomrule
+\end{tabularx}
+\end{table}

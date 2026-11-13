@@ -1,0 +1,420 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-11",
+  "title": "Ergänzende Methoden und Prüfprotokolle",
+  "source_project": {
+    "filename": "Dissertation_Lean_Kapitel5(1)(1).zip",
+    "sha256": "4485a47b646fa6b4f35028a8ddac1a563b617ed75128f1720b9d48c7bb35f8a5",
+    "file_count": 149
+  },
+  "results_repository": {
+    "url": "https://github.com/Keff789/edge-ai-performance-energy-results",
+    "base_commit": "fc0899711c544596e67efd96b294692ea9ee05e6",
+    "remote_publication": false,
+    "existing_numeric_results_changed": false
+  },
+  "original_pdf": {
+    "document_pages": 263,
+    "appendix_pdf_pages": [
+      229,
+      261
+    ],
+    "appendix_page_count": 33,
+    "sha256": "3a4a375022e5935a6e37b5c912ebaf07b8fc08f8525c4e971b16e3d60a1dd221",
+    "printed_appendix_pages": [
+      217,
+      249
+    ]
+  },
+  "revised_pdf": {
+    "document_pages": 239,
+    "appendix_pdf_pages": [
+      227,
+      238
+    ],
+    "appendix_page_count": 12,
+    "sha256": "ab787b732ab227b043d2c2655db46db22ae3599a0cc19d65693a2b9af4617198"
+  },
+  "retained_model_views": [
+    "MobileNetV3 Large",
+    "YOLO26m",
+    "YOLOv7"
+  ],
+  "archived_model_views": [
+    "MobileNetV3 Large",
+    "RegNet-X 1.6GF",
+    "ResNet-50",
+    "YOLO11l",
+    "YOLO26m",
+    "YOLO26s",
+    "YOLOv7"
+  ],
+  "notes": [
+    "The supplement PDF preserves original appendix numbering and includes the original bibliography.",
+    "Original source fragments and figure PDFs were copied unchanged.",
+    "All changes are editorial. No numeric result was recomputed.",
+    "The full source diff is changes.patch. It applies to the supplied source project before unused build assets are removed from the lean ZIP."
+  ],
+  "source_changes": [
+    {
+      "path": "2_body/04_energy/02_measurement_studies.tex",
+      "before_sha256": "4aa05dc2b3ebadf98fe9c1067a6a2de92a3ba1e7f349f6116e4fec7e9f9f8a74",
+      "after_sha256": "315b6dbb01605b22c2e60f6181c38307be632e7a8a4f2399ab200e3572d82c45"
+    },
+    {
+      "path": "2_body/04_energy/04_inference_measurement.tex",
+      "before_sha256": "b8eb07f7039febb61bae3eeeaa30281960d9d7da0b49883fc3f24719987bdd9e",
+      "after_sha256": "e37527b52f236ece6264ad9feec6263b7dc37e631c4066893e8782ab87657a8b"
+    },
+    {
+      "path": "2_body/07_tool_implementation/02_graph_analysis_candidate_selection.tex",
+      "before_sha256": "63c7af47c3912eb7eb766b330a1ff1572f08db96164f7ff951f3588283768763",
+      "after_sha256": "b1390f4f8c4bf432a595178c18a58843ffc952dc1122fc4993ffb5b34aac446b"
+    },
+    {
+      "path": "2_body/07_tool_implementation/04_generic_native_execution.tex",
+      "before_sha256": "3dd6b9fe81e779c7a758efa3a5f1cbacd45fd9e6518ae6d69b32e81f7ad385e7",
+      "after_sha256": "d9abc677120be9e8c875cd0e444e8ad1168c2959f13e1dcf9ce8b5c404f076b5"
+    },
+    {
+      "path": "2_body/07_tool_implementation/05_measurement_campaign.tex",
+      "before_sha256": "6c295c889cd28348f7ba188fcdfbadb3d80f93eedaf3d6fea2a104ccab0be353",
+      "after_sha256": "43fdfa1232216cd304c5eee1339c84f46944dd8dccc721db299caf9acf80a218"
+    },
+    {
+      "path": "2_body/08_evaluation/01_experimental_design_baselines.tex",
+      "before_sha256": "314862ab0ba9594dfeed9142ca5cc07627c239a565fb7a9bc2e63c11f255bb6d",
+      "after_sha256": "17b19360da1ae65452bc1e507c6b887db5c57f0b5946c7f411fb9851b85ee4db"
+    },
+    {
+      "path": "2_body/08_evaluation/02_deployment_comparison.tex",
+      "before_sha256": "3a287a35bf8a68f222b6fcb1a3b6d9ab952d5627cffc62253ae926eaa0f1be7b",
+      "after_sha256": "93ac5c2e278c152a909ba201127e84f7db64f269a17d86fe6730249a73960874"
+    },
+    {
+      "path": "2_body/08_evaluation/03_resnet50_energy_throughput_case_study.tex",
+      "before_sha256": "41afd51104b9e8260b74e4b4b112d822fdc5a91a5605ade5325789c3a4363830",
+      "after_sha256": "9a1d22bd0839363af83ddf7d5b73151036e0829d75d36550ebd32ff4c860b6f0"
+    },
+    {
+      "path": "3_back_matter/acronyms.tex",
+      "before_sha256": "3f0ca3cef9272bb662cbe32bf6fca734e03751c4a0f924854938b7ef915ad5d7",
+      "after_sha256": "00e3deef10551c239271856b1e709e6d57097f88fc3b0ec839dd81b2902f89e4"
+    },
+    {
+      "path": "3_back_matter/library.bib",
+      "before_sha256": "0379295d03fc52bf4372dba0c0b8e9ea9071f3fe2b619d86de1568acc5c9c0d9",
+      "after_sha256": "707b964e06384da50a738bfcadf923ca7436d24dc2f34985b432b4526bfdc06a"
+    },
+    {
+      "path": "4_appendix/A_ai_tool_development.tex",
+      "before_sha256": "71e4ef100d184ea21d741a1244fbba627bf5575c243a6dd0dde8f64aaaf372eb",
+      "after_sha256": "bf8a308ce8fa01dfb3159af727e294f432c02f79e9e985fc47a1f2967992bed2"
+    },
+    {
+      "path": "4_appendix/B_evidence_archive.tex",
+      "before_sha256": "f4a643074f69d2d53af1af94bc0745213be321feeff28100a54455e039f1a2c1",
+      "after_sha256": "9f586fcc34604e94152b911aaf258be2d66a59ed48986e3da377761cd71cdf20"
+    },
+    {
+      "path": "4_appendix/C_split_reproduction.tex",
+      "before_sha256": "0f4e1ad85452d94f157c1469e7299365b22dfb8e00670b993d4202d239e4ab85",
+      "after_sha256": "d637956273ea66ea171b1953817ddba35f14d7b13b04b3ecfb76f61854956e65"
+    },
+    {
+      "path": "4_appendix/D_model_tradeoffs.tex",
+      "before_sha256": "30445bbf7d4304862addca4347b03903299a5a9306ae79f6250a63b9716bc5ea",
+      "after_sha256": "025854c5d19085f42c376f024b8ab296e2bff6c719aa48bd18a207e5713dac55"
+    },
+    {
+      "path": "9_resources/10_anhang/operator_catalogue.tex",
+      "before_sha256": "7b3686b94f41811d0932d120bcd6718964abd670d5d5f8d3e07401bf8606c3d6",
+      "after_sha256": "6358cbaa286623f2c6e3b1717b142d38caf05624fa8cf65d0da396c8085b44d9"
+    }
+  ],
+  "lean_build_files": [
+    ".latexmkrc",
+    "0_latex/document_setup.tex",
+    "0_latex/packages.tex",
+    "1_front_matter/01_titlepage.tex",
+    "1_front_matter/02_flyleaf.tex",
+    "1_front_matter/03_copyright.tex",
+    "1_front_matter/04_acknowledgements.tex",
+    "1_front_matter/05_abstract.tex",
+    "2_body/01_introduction/00_main.tex",
+    "2_body/01_introduction/01_motivation_problem_statement.tex",
+    "2_body/01_introduction/02_research_questions.tex",
+    "2_body/01_introduction/03_rq_evidence_mapping.tex",
+    "2_body/01_introduction/04_contributions.tex",
+    "2_body/01_introduction/05_thesis_outline.tex",
+    "2_body/02_related_work/00_main.tex",
+    "2_body/02_related_work/01_technical_foundations.tex",
+    "2_body/02_related_work/02_edge_constraints_accelerator_diversity.tex",
+    "2_body/02_related_work/03_benchmarking_methodologies.tex",
+    "2_body/02_related_work/04_energy_measurement_methodology.tex",
+    "2_body/02_related_work/05_toolchains_hardware_aware_optimisation.tex",
+    "2_body/02_related_work/06_positioning_and_experimental_design.tex",
+    "2_body/03_recs/00_main.tex",
+    "2_body/03_recs/01_recs_overview.tex",
+    "2_body/03_recs/02_system_architecture.tex",
+    "2_body/03_recs/03_power_energy_management.tex",
+    "2_body/03_recs/04_hardware_implementation.tex",
+    "2_body/03_recs/05_inference_experiments.tex",
+    "2_body/04_energy/00_main.tex",
+    "2_body/04_energy/01_measurement_foundations.tex",
+    "2_body/04_energy/02_measurement_studies.tex",
+    "2_body/04_energy/03_urecs_measurement.tex",
+    "2_body/04_energy/04_inference_measurement.tex",
+    "2_body/05_benchmarking/00_main.tex",
+    "2_body/05_benchmarking/01_edge_inference_pipeline.tex",
+    "2_body/05_benchmarking/02_accelerator_landscape.tex",
+    "2_body/05_benchmarking/03_benchmark_methodology_metrics.tex",
+    "2_body/06_cost_models/00_main.tex",
+    "2_body/06_cost_models/01_graph_model.tex",
+    "2_body/06_cost_models/02_cost_models.tex",
+    "2_body/06_cost_models/03_executable_candidates.tex",
+    "2_body/06_cost_models/04_selection_and_quality.tex",
+    "2_body/06_cost_models/05_stage_validation.tex",
+    "2_body/07_tool_implementation/00_main.tex",
+    "2_body/07_tool_implementation/01_tool_overview.tex",
+    "2_body/07_tool_implementation/02_graph_analysis_candidate_selection.tex",
+    "2_body/07_tool_implementation/03_compilation_calibration.tex",
+    "2_body/07_tool_implementation/04_generic_native_execution.tex",
+    "2_body/07_tool_implementation/05_measurement_campaign.tex",
+    "2_body/07_tool_implementation/06_development_validation.tex",
+    "2_body/08_evaluation/00_main.tex",
+    "2_body/08_evaluation/01_experimental_design_baselines.tex",
+    "2_body/08_evaluation/02_deployment_comparison.tex",
+    "2_body/08_evaluation/03_resnet50_energy_throughput_case_study.tex",
+    "2_body/08_evaluation/04_selection_transfer.tex",
+    "2_body/08_evaluation/05_graph_selection.tex",
+    "2_body/08_evaluation/06_runtime_cost_diagnostics.tex",
+    "2_body/08_evaluation/07_guidelines_implications.tex",
+    "2_body/09_conclusion/00_main.tex",
+    "2_body/09_conclusion/01_summary_and_rq_answers.tex",
+    "2_body/09_conclusion/02_limitations.tex",
+    "2_body/09_conclusion/03_future_work.tex",
+    "2_body/09_conclusion/04_closing_remark.tex",
+    "3_back_matter/01_lists.tex",
+    "3_back_matter/02_bibliography.tex",
+    "3_back_matter/03_appendix.tex",
+    "3_back_matter/04_ai_usage.tex",
+    "3_back_matter/acronyms.tex",
+    "3_back_matter/glossary.tex",
+    "3_back_matter/library.bib",
+    "4_appendix/A_ai_tool_development.tex",
+    "4_appendix/B_evidence_archive.tex",
+    "4_appendix/C_split_reproduction.tex",
+    "4_appendix/D_model_tradeoffs.tex",
+    "9_resources/01_einleitung/accelerator_gpu_execution.pdf",
+    "9_resources/01_einleitung/urecs_modular_hardware.pdf",
+    "9_resources/02_stand_der_technik/graph_cuts_comparison.pdf",
+    "9_resources/02_stand_der_technik/related_work_settings.pdf",
+    "9_resources/03_recs/com_brick_varianten.pdf",
+    "9_resources/03_recs/management_overview.pdf",
+    "9_resources/03_recs/recs_plattformvergleich.pdf",
+    "9_resources/03_recs/toolchain_bridge.pdf",
+    "9_resources/03_recs/urecs_detailarchitektur.pdf",
+    "9_resources/03_recs/urecs_messaufbau_1.jpg",
+    "9_resources/03_recs/urecs_messaufbau_2.jpg",
+    "9_resources/03_recs/urecs_messaufbau_3.jpg",
+    "9_resources/03_recs/urecs_platine_oberseite.pdf",
+    "9_resources/03_recs/urecs_platine_unterseite.pdf",
+    "9_resources/03_recs/urecs_power.pdf",
+    "9_resources/03_recs/urecs_zwei_beschleuniger.jpg",
+    "9_resources/04_energiemessung/calibration_effects.pdf",
+    "9_resources/04_energiemessung/controlled_rate_table.tex",
+    "9_resources/04_energiemessung/cross_workload_spectra.pdf",
+    "9_resources/04_energiemessung/current_verification.pdf",
+    "9_resources/04_energiemessung/duration_results.pdf",
+    "9_resources/04_energiemessung/energy_numbers.tex",
+    "9_resources/04_energiemessung/fixed_window.tex",
+    "9_resources/04_energiemessung/fp16_objectives.pdf",
+    "9_resources/04_energiemessung/hailo_meters.pdf",
+    "9_resources/04_energiemessung/hailo_spectral_tail.pdf",
+    "9_resources/04_energiemessung/hailo_variable_intervals.pdf",
+    "9_resources/04_energiemessung/jetson_deployed_meters.pdf",
+    "9_resources/04_energiemessung/jetson_rate_duration.pdf",
+    "9_resources/04_energiemessung/measurement_boundaries.pdf",
+    "9_resources/04_energiemessung/measurement_window_energy.pdf",
+    "9_resources/04_energiemessung/native_cdf.pdf",
+    "9_resources/04_energiemessung/pause_sequence.pdf",
+    "9_resources/04_energiemessung/rate_duration.tex",
+    "9_resources/04_energiemessung/rate_results.pdf",
+    "9_resources/04_energiemessung/sampling_reconstruction.pdf",
+    "9_resources/04_energiemessung/spectral_paths.tex",
+    "9_resources/05_benchmarking/architecture_deepx_dxm1.pdf",
+    "9_resources/05_benchmarking/architecture_hailo10h.pdf",
+    "9_resources/05_benchmarking/architecture_hailo8.pdf",
+    "9_resources/05_benchmarking/architecture_orin_nx.pdf",
+    "9_resources/05_benchmarking/edge_pipeline.pdf",
+    "9_resources/05_benchmarking/throughput_taxonomy.pdf",
+    "9_resources/06_kostenmodelle/cost_decomposition.pdf",
+    "9_resources/06_kostenmodelle/multicontext.pdf",
+    "9_resources/06_kostenmodelle/stage_costs.pdf",
+    "9_resources/07_werkzeug/runner_tensor_boundaries.pdf",
+    "9_resources/07_werkzeug/split_workflow.pdf",
+    "9_resources/07_werkzeug/splitpoint_analyser_gui.png",
+    "9_resources/07_werkzeug/yolov7_architecture_splits.pdf",
+    "9_resources/08_auswertung/fastest_deployment_tradeoff.pdf",
+    "9_resources/08_auswertung/fastest_split_baseline_comparison.pdf",
+    "9_resources/08_auswertung/full_overview.tex",
+    "9_resources/08_auswertung/generic_fit_scopes.tex",
+    "9_resources/08_auswertung/global_winners.tex",
+    "9_resources/08_auswertung/quality.tex",
+    "9_resources/08_auswertung/quality_tolerance.tex",
+    "9_resources/08_auswertung/repeat_ranges.tex",
+    "9_resources/08_auswertung/resnet_energy.pdf",
+    "9_resources/08_auswertung/rq2_generic_selection_loss.pdf",
+    "9_resources/08_auswertung/rq2_weighted_all_models.pdf",
+    "9_resources/08_auswertung/staged_budget.tex",
+    "9_resources/08_auswertung/staged_selection_budget.pdf",
+    "9_resources/08_auswertung/staged_selection_flow.pdf",
+    "9_resources/08_auswertung/yolov7_h8_boundary_performance.pdf",
+    "9_resources/08_auswertung/yolov7_h8_case.pdf",
+    "9_resources/10_anhang/04_tradeoff_mobilenet_v3_large.pdf",
+    "9_resources/10_anhang/04_tradeoff_yolo26m.pdf",
+    "9_resources/10_anhang/04_tradeoff_yolov7_paper.pdf",
+    "9_resources/10_anhang/operator_catalogue.tex",
+    "thesis.tex"
+  ],
+  "omitted_unused_build_files": [
+    "9_resources/04_energiemessung/direct_rates.tex",
+    "9_resources/10_anhang/04_tradeoff_regnet_x_1_6gf.pdf",
+    "9_resources/10_anhang/04_tradeoff_resnet50.pdf",
+    "9_resources/10_anhang/04_tradeoff_yolo11l.pdf",
+    "9_resources/10_anhang/04_tradeoff_yolo26s.pdf"
+  ],
+  "files": [
+    {
+      "path": "Ergaenzende_Methoden_und_Pruefprotokolle.pdf",
+      "size_bytes": 523428,
+      "sha256": "27094154874dfbcf8eeeeb1a9bc677b765c24947bff9937b694a7ad24e7d2245"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 9322,
+      "sha256": "9535428a9e42836821017a13ce7ec3b1398ce6b3f85941e1dcd1bc9df018c44e"
+    },
+    {
+      "path": "changes.patch",
+      "size_bytes": 124017,
+      "sha256": "04a011497433fc38e58cbb271bc1bab108f4eb03d9ee8d5651dccb314df42278"
+    },
+    {
+      "path": "figures/04_tradeoff_mobilenet_v3_large.pdf",
+      "size_bytes": 37741,
+      "sha256": "364286cccdd63e082e4c5680093abb26a4c52cef8f16d2e4f87ee0362a0e05e8"
+    },
+    {
+      "path": "figures/04_tradeoff_regnet_x_1_6gf.pdf",
+      "size_bytes": 39608,
+      "sha256": "353cbc1d6f337d8bd488115e754b8630f24d8d4018b20420e35f3b1e5b026c0b"
+    },
+    {
+      "path": "figures/04_tradeoff_resnet50.pdf",
+      "size_bytes": 39249,
+      "sha256": "070d22ecd5cedd5a0eda57df6582a3e7ec8e77b6ac5c594787b3174b96842dcc"
+    },
+    {
+      "path": "figures/04_tradeoff_yolo11l.pdf",
+      "size_bytes": 28248,
+      "sha256": "ed01e605de06115be77710602e37482753dfdba19f29246b169371b73e388b51"
+    },
+    {
+      "path": "figures/04_tradeoff_yolo26m.pdf",
+      "size_bytes": 28696,
+      "sha256": "c971bc7e3ce7ba86d5dd19395f0b8093f78302392d84c1b3ef559d03e3a0caa6"
+    },
+    {
+      "path": "figures/04_tradeoff_yolo26s.pdf",
+      "size_bytes": 28186,
+      "sha256": "c8478a290533f83f9258f36d2f2dfb70ad1e948794a9ac4e3777651853dba37d"
+    },
+    {
+      "path": "figures/04_tradeoff_yolov7_paper.pdf",
+      "size_bytes": 27972,
+      "sha256": "41f59761200b3786e1e087ebd0c3d19e9a5593051eee8dfa909d220060531217"
+    },
+    {
+      "path": "source/3_back_matter/library.bib",
+      "size_bytes": 114516,
+      "sha256": "0379295d03fc52bf4372dba0c0b8e9ea9071f3fe2b619d86de1568acc5c9c0d9"
+    },
+    {
+      "path": "source/4_appendix/A_ai_tool_development.tex",
+      "size_bytes": 5589,
+      "sha256": "71e4ef100d184ea21d741a1244fbba627bf5575c243a6dd0dde8f64aaaf372eb"
+    },
+    {
+      "path": "source/4_appendix/B_evidence_archive.tex",
+      "size_bytes": 29376,
+      "sha256": "f4a643074f69d2d53af1af94bc0745213be321feeff28100a54455e039f1a2c1"
+    },
+    {
+      "path": "source/4_appendix/C_split_reproduction.tex",
+      "size_bytes": 22165,
+      "sha256": "0f4e1ad85452d94f157c1469e7299365b22dfb8e00670b993d4202d239e4ab85"
+    },
+    {
+      "path": "source/4_appendix/D_model_tradeoffs.tex",
+      "size_bytes": 7091,
+      "sha256": "30445bbf7d4304862addca4347b03903299a5a9306ae79f6250a63b9716bc5ea"
+    },
+    {
+      "path": "source/9_resources/04_energiemessung/current_verification.pdf",
+      "size_bytes": 11460,
+      "sha256": "2a474a82bb92164756ffb49099aa0afbb12ec647bc6e197531cac15e6c01774b"
+    },
+    {
+      "path": "source/9_resources/04_energiemessung/direct_rates.tex",
+      "size_bytes": 788,
+      "sha256": "6c8ba8776fb067e55707de6af0332f71d1e724f8f07a6ee0ebf979b996137d6b"
+    },
+    {
+      "path": "source/9_resources/04_energiemessung/energy_numbers.tex",
+      "size_bytes": 477,
+      "sha256": "d22eebc0cdce04044df690dfa39134cdac25e3bde57e6b1dd95c7974a3f92778"
+    },
+    {
+      "path": "source/9_resources/10_anhang/04_tradeoff_mobilenet_v3_large.pdf",
+      "size_bytes": 37741,
+      "sha256": "364286cccdd63e082e4c5680093abb26a4c52cef8f16d2e4f87ee0362a0e05e8"
+    },
+    {
+      "path": "source/9_resources/10_anhang/04_tradeoff_regnet_x_1_6gf.pdf",
+      "size_bytes": 39608,
+      "sha256": "353cbc1d6f337d8bd488115e754b8630f24d8d4018b20420e35f3b1e5b026c0b"
+    },
+    {
+      "path": "source/9_resources/10_anhang/04_tradeoff_resnet50.pdf",
+      "size_bytes": 39249,
+      "sha256": "070d22ecd5cedd5a0eda57df6582a3e7ec8e77b6ac5c594787b3174b96842dcc"
+    },
+    {
+      "path": "source/9_resources/10_anhang/04_tradeoff_yolo11l.pdf",
+      "size_bytes": 28248,
+      "sha256": "ed01e605de06115be77710602e37482753dfdba19f29246b169371b73e388b51"
+    },
+    {
+      "path": "source/9_resources/10_anhang/04_tradeoff_yolo26m.pdf",
+      "size_bytes": 28696,
+      "sha256": "c971bc7e3ce7ba86d5dd19395f0b8093f78302392d84c1b3ef559d03e3a0caa6"
+    },
+    {
+      "path": "source/9_resources/10_anhang/04_tradeoff_yolo26s.pdf",
+      "size_bytes": 28186,
+      "sha256": "c8478a290533f83f9258f36d2f2dfb70ad1e948794a9ac4e3777651853dba37d"
+    },
+    {
+      "path": "source/9_resources/10_anhang/04_tradeoff_yolov7_paper.pdf",
+      "size_bytes": 27972,
+      "sha256": "41f59761200b3786e1e087ebd0c3d19e9a5593051eee8dfa909d220060531217"
+    },
+    {
+      "path": "source/9_resources/10_anhang/operator_catalogue.tex",
+      "size_bytes": 1899,
+      "sha256": "7b3686b94f41811d0932d120bcd6718964abd670d5d5f8d3e07401bf8606c3d6"
+    }
+  ]
+}

@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="OpenAI" version="32.6.4" type="device">
+  <diagram id="bilder-01" name="01 · Orin NX – Architektur">
+    <mxGraphModel dx="964" dy="1099" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="964" pageHeight="1099" math="0" shadow="0" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="orin-21" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=0;fillColor=#F5F7F9;rounded=1;absoluteArcSize=1;arcSize=104;" vertex="1" parent="1">
+          <mxGeometry x="8" y="8" width="947" height="1081" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-23" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=94;" vertex="1" parent="1">
+          <mxGeometry x="16" y="41" width="434" height="278" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-24" value="A78AE-CPU · 8 Kerne" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=1;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-23">
+          <mxGeometry x="26.793" y="17.814" width="379.053" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-25" value="" style="html=0;shadow=0;strokeColor=#D9E3EA;strokeWidth=2;fillColor=#F5F7F9;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=28;" vertex="1" parent="orin-23">
+          <mxGeometry x="46" y="82" width="79" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-26" value="" style="html=0;shadow=0;strokeColor=#D9E3EA;strokeWidth=2;fillColor=#F5F7F9;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=28;" vertex="1" parent="orin-23">
+          <mxGeometry x="134" y="82" width="79" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-27" value="" style="html=0;shadow=0;strokeColor=#D9E3EA;strokeWidth=2;fillColor=#F5F7F9;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=28;" vertex="1" parent="orin-23">
+          <mxGeometry x="221" y="82" width="79" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-28" value="" style="html=0;shadow=0;strokeColor=#D9E3EA;strokeWidth=2;fillColor=#F5F7F9;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=28;" vertex="1" parent="orin-23">
+          <mxGeometry x="309" y="82" width="79" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-29" value="" style="html=0;shadow=0;strokeColor=#D9E3EA;strokeWidth=2;fillColor=#F5F7F9;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=28;" vertex="1" parent="orin-23">
+          <mxGeometry x="46" y="169" width="79" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-30" value="" style="html=0;shadow=0;strokeColor=#D9E3EA;strokeWidth=2;fillColor=#F5F7F9;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=28;" vertex="1" parent="orin-23">
+          <mxGeometry x="134" y="169" width="79" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-31" value="" style="html=0;shadow=0;strokeColor=#D9E3EA;strokeWidth=2;fillColor=#F5F7F9;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=28;" vertex="1" parent="orin-23">
+          <mxGeometry x="221" y="169" width="79" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-32" value="" style="html=0;shadow=0;strokeColor=#D9E3EA;strokeWidth=2;fillColor=#F5F7F9;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=28;" vertex="1" parent="orin-23">
+          <mxGeometry x="309" y="169" width="79" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-34" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=80;" vertex="1" parent="1">
+          <mxGeometry x="16" y="354" width="434" height="365" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-35" value="Ampere-GPU · 1024 Kerne" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=33.411;fontColor=#18354A;fontStyle=1;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-34">
+          <mxGeometry x="8.394" y="23.140" width="418.063" height="38.423" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-36" value="32 Tensorkerne" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-34">
+          <mxGeometry x="85.705" y="60.664" width="262.285" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-38" value="" style="html=0;shadow=0;strokeColor=#18354A;strokeWidth=7;fillColor=none;shape=stencil(lZLBEoIgEIafhruwzTSdzR6hO+mWlAGDpPX2gavj6FTmBfff/9tFYBmkdSktMpFoeUcGeybEEXNvXEgV6KWqQibELXl8k5AuB81Jy9qGMko20il5qpCc2jtzw1YVvq9RukSnfHQhY5CejcOLMw9dkK6UxlzaUBrXroTcrh0ThxG7GqVDrvt8Ba2MO8fobpp41CexQNyL1PZD+5HlfAInv2FYRQ9X2tN8JQ4LvNhN+eHF/jvpEr7uZ6a0mLcOwfhYNDczez4rIUUDDNkb);" vertex="1" parent="orin-34">
+          <mxGeometry x="150" y="172" width="140" height="141" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-39" value="" style="html=0;shadow=0;strokeColor=#18354A;strokeWidth=7;fillColor=none;shape=stencil(lVHNDoIwDH6aXY1savSM+AjeK1SZwraMCfr2dhQlIWLiZev312adUGlTgkMhlwZqFGovpDxiHqwnqsAAuiKG6o61hFE5oN2GMTSOQky24DWcKmSlCd7esNNFGDLalOh1iKrKhErP1uPF27spGFfaYA6OovHsI6z27YQ8jLar1Ya4/po1OoiTY1XbNj70wd7lYs3O54C/DJh3J6uJ/XfzZCv/a/9e7MdPxfgSXupEni6SKP5blb0A);" vertex="1" parent="orin-34">
+          <mxGeometry x="163.5" y="144" width="1" height="196" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-40" value="" style="html=0;shadow=0;strokeColor=#18354A;strokeWidth=7;fillColor=none;shape=stencil(lVHNDoIwDH6aXY1savSM+AjeK1SZwraMCfr2dhRDJBLjZev312adUGlTgkMhlwZqFGovpDxiHqwnqsAAuiKG6o61ZLdhXA6YETSOQky14DWcKmSlCd7esNNFGBLalOh1iKrKhErP1uPF27spGFfaYA6OovHsI6z27YQ8jLar1Ya4/po1OoiTY1XbNj70wd4l+54DWqy/DBjdyeqH/bN5spX/tX+vddZPxfgSXupEni6SKP5blb0A);" vertex="1" parent="orin-34">
+          <mxGeometry x="122" y="185.5" width="196" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-41" value="" style="html=0;shadow=0;strokeColor=#18354A;strokeWidth=7;fillColor=none;shape=stencil(lVHNDoIwDH6aXY1savSM+AjeK1SZwraMCfr2dhQlIWLiZev312adUGlTgkMhlwZqFGovpDxiHqwnqsAAuiKG6o61hFE5oN2GMTSOQky24DWcKmSlCd7esNNFGDLalOh1iKrKhErP1uPF27spGFfaYA6OovHsI6z27YQ8jLar1Ya4/po1OoiTY1XbNj70wd7lYs3O54C/DJh3J6uJ/XfzZCv/a/9e7MdPxfgSXupEni6SKP5blb0A);" vertex="1" parent="orin-34">
+          <mxGeometry x="177.5" y="144" width="1" height="196" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-42" value="" style="html=0;shadow=0;strokeColor=#18354A;strokeWidth=7;fillColor=none;shape=stencil(lVHNDoIwDH6aXY1savSM+AjeK1SZwraMCfr2dhRDJBLjZev312adUGlTgkMhlwZqFGovpDxiHqwnqsAAuiKG6o61ZLdhXA6YETSOQky14DWcKmSlCd7esNNFGBLalOh1iKrKhErP1uPF27spGFfaYA6OovHsI6z27YQ8jLar1Ya4/po1OoiTY1XbNj70wd4l+54DWqy/DBjdyeqH/bN5spX/tX+vddZPxfgSXupEni6SKP5blb0A);" vertex="1" parent="orin-34">
+          <mxGeometry x="122" y="199.5" width="196" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-43" value="" style="html=0;shadow=0;strokeColor=#18354A;strokeWidth=7;fillColor=none;shape=stencil(lVHNDoIwDH6aXY1savSM+AjeK1SZwraMCfr2dhQlIWLiZev312adUGlTgkMhlwZqFGovpDxiHqwnqsAAuiKG6o61hFE5oN2GMTSOQky24DWcKmSlCd7esNNFGDLalOh1iKrKhErP1uPF27spGFfaYA6OovHsI6z27YQ8jLar1Ya4/po1OoiTY1XbNj70wd7lYs3O54C/DJh3J6uJ/XfzZCv/a/9e7MdPxfgSXupEni6SKP5blb0A);" vertex="1" parent="orin-34">
+          <mxGeometry x="191.5" y="144" width="1" height="196" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-44" value="" style="html=0;shadow=0;strokeColor=#18354A;strokeWidth=7;fillColor=none;shape=stencil(lVHNDoIwDH6aXY1savSM+AjeK1SZwraMCfr2dhRDJBLjZev312adUGlTgkMhlwZqFGovpDxiHqwnqsAAuiKG6o61ZLdhXA6YETSOQky14DWcKmSlCd7esNNFGBLalOh1iKrKhErP1uPF27spGFfaYA6OovHsI6z27YQ8jLar1Ya4/po1OoiTY1XbNj70wd4l+54DWqy/DBjdyeqH/bN5spX/tX+vddZPxfgSXupEni6SKP5blb0A);" vertex="1" parent="orin-34">
+          <mxGeometry x="122" y="213.5" width="196" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-45" value="" style="html=0;shadow=0;strokeColor=#18354A;strokeWidth=7;fillColor=none;shape=stencil(lVHNDoIwDH6aXY1savSM+AjeK1SZwraMCfr2dhQlIWLiZev312adUGlTgkMhlwZqFGovpDxiHqwnqsAAuiKG6o61hFE5oN2GMTSOQky24DWcKmSlCd7esNNFGDLalOh1iKrKhErP1uPF27spGFfaYA6OovHsI6z27YQ8jLar1Ya4/po1OoiTY1XbNj70wd7lYs3O54C/DJh3J6uJ/XfzZCv/a/9e7MdPxfgSXupEni6SKP5blb0A);" vertex="1" parent="orin-34">
+          <mxGeometry x="205.5" y="144" width="1" height="196" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-46" value="" style="html=0;shadow=0;strokeColor=#18354A;strokeWidth=7;fillColor=none;shape=stencil(lVHNDoIwDH6aXY1savSM+AjeK1SZwraMCfr2dhRDJBLjZev312adUGlTgkMhlwZqFGovpDxiHqwnqsAAuiKG6o61ZLdhXA6YETSOQky14DWcKmSlCd7esNNFGBLalOh1iKrKhErP1uPF27spGFfaYA6OovHsI6z27YQ8jLar1Ya4/po1OoiTY1XbNj70wd4l+54DWqy/DBjdyeqH/bN5spX/tX+vddZPxfgSXupEni6SKP5blb0A);" vertex="1" parent="orin-34">
+          <mxGeometry x="122" y="227.5" width="196" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-47" value="" style="html=0;shadow=0;strokeColor=#18354A;strokeWidth=7;fillColor=none;shape=stencil(lVHNDoIwDH6aXY1savSM+AjeK1SZwraMCfr2dhQlIWLiZev312adUGlTgkMhlwZqFGovpDxiHqwnqsAAuiKG6o61hFE5oN2GMTSOQky24DWcKmSlCd7esNNFGDLalOh1iKrKhErP1uPF27spGFfaYA6OovHsI6z27YQ8jLar1Ya4/po1OoiTY1XbNj70wd7lYs3O54C/DJh3J6uJ/XfzZCv/a/9e7MdPxfgSXupEni6SKP5blb0A);" vertex="1" parent="orin-34">
+          <mxGeometry x="219.5" y="144" width="1" height="196" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-48" value="" style="html=0;shadow=0;strokeColor=#18354A;strokeWidth=7;fillColor=none;shape=stencil(lVHNDoIwDH6aXY1savSM+AjeK1SZwraMCfr2dhRDJBLjZev312adUGlTgkMhlwZqFGovpDxiHqwnqsAAuiKG6o61ZLdhXA6YETSOQky14DWcKmSlCd7esNNFGBLalOh1iKrKhErP1uPF27spGFfaYA6OovHsI6z27YQ8jLar1Ya4/po1OoiTY1XbNj70wd4l+54DWqy/DBjdyeqH/bN5spX/tX+vddZPxfgSXupEni6SKP5blb0A);" vertex="1" parent="orin-34">
+          <mxGeometry x="122" y="241.5" width="196" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-49" value="" style="html=0;shadow=0;strokeColor=#18354A;strokeWidth=7;fillColor=none;shape=stencil(lVHNDoIwDH6aXY1savSM+AjeK1SZwraMCfr2dhQlIWLiZev312adUGlTgkMhlwZqFGovpDxiHqwnqsAAuiKG6o61hFE5oN2GMTSOQky24DWcKmSlCd7esNNFGDLalOh1iKrKhErP1uPF27spGFfaYA6OovHsI6z27YQ8jLar1Ya4/po1OoiTY1XbNj70wd7lYs3O54C/DJh3J6uJ/XfzZCv/a/9e7MdPxfgSXupEni6SKP5blb0A);" vertex="1" parent="orin-34">
+          <mxGeometry x="233.5" y="144" width="1" height="196" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-50" value="" style="html=0;shadow=0;strokeColor=#18354A;strokeWidth=7;fillColor=none;shape=stencil(lVHNDoIwDH6aXY1savSM+AjeK1SZwraMCfr2dhRDJBLjZev312adUGlTgkMhlwZqFGovpDxiHqwnqsAAuiKG6o61ZLdhXA6YETSOQky14DWcKmSlCd7esNNFGBLalOh1iKrKhErP1uPF27spGFfaYA6OovHsI6z27YQ8jLar1Ya4/po1OoiTY1XbNj70wd4l+54DWqy/DBjdyeqH/bN5spX/tX+vddZPxfgSXupEni6SKP5blb0A);" vertex="1" parent="orin-34">
+          <mxGeometry x="122" y="255.5" width="196" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-51" value="" style="html=0;shadow=0;strokeColor=#18354A;strokeWidth=7;fillColor=none;shape=stencil(lVHNDoIwDH6aXY1savSM+AjeK1SZwraMCfr2dhQlIWLiZev312adUGlTgkMhlwZqFGovpDxiHqwnqsAAuiKG6o61hFE5oN2GMTSOQky24DWcKmSlCd7esNNFGDLalOh1iKrKhErP1uPF27spGFfaYA6OovHsI6z27YQ8jLar1Ya4/po1OoiTY1XbNj70wd7lYs3O54C/DJh3J6uJ/XfzZCv/a/9e7MdPxfgSXupEni6SKP5blb0A);" vertex="1" parent="orin-34">
+          <mxGeometry x="247.5" y="144" width="1" height="196" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-52" value="" style="html=0;shadow=0;strokeColor=#18354A;strokeWidth=7;fillColor=none;shape=stencil(lVHNDoIwDH6aXY1savSM+AjeK1SZwraMCfr2dhRDJBLjZev312adUGlTgkMhlwZqFGovpDxiHqwnqsAAuiKG6o61ZLdhXA6YETSOQky14DWcKmSlCd7esNNFGBLalOh1iKrKhErP1uPF27spGFfaYA6OovHsI6z27YQ8jLar1Ya4/po1OoiTY1XbNj70wd4l+54DWqy/DBjdyeqH/bN5spX/tX+vddZPxfgSXupEni6SKP5blb0A);" vertex="1" parent="orin-34">
+          <mxGeometry x="122" y="269.5" width="196" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-53" value="" style="html=0;shadow=0;strokeColor=#18354A;strokeWidth=7;fillColor=none;shape=stencil(lVHNDoIwDH6aXY1savSM+AjeK1SZwraMCfr2dhQlIWLiZev312adUGlTgkMhlwZqFGovpDxiHqwnqsAAuiKG6o61hFE5oN2GMTSOQky24DWcKmSlCd7esNNFGDLalOh1iKrKhErP1uPF27spGFfaYA6OovHsI6z27YQ8jLar1Ya4/po1OoiTY1XbNj70wd7lYs3O54C/DJh3J6uJ/XfzZCv/a/9e7MdPxfgSXupEni6SKP5blb0A);" vertex="1" parent="orin-34">
+          <mxGeometry x="261.5" y="144" width="1" height="196" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-54" value="" style="html=0;shadow=0;strokeColor=#18354A;strokeWidth=7;fillColor=none;shape=stencil(lVHNDoIwDH6aXY1savSM+AjeK1SZwraMCfr2dhRDJBLjZev312adUGlTgkMhlwZqFGovpDxiHqwnqsAAuiKG6o61ZLdhXA6YETSOQky14DWcKmSlCd7esNNFGBLalOh1iKrKhErP1uPF27spGFfaYA6OovHsI6z27YQ8jLar1Ya4/po1OoiTY1XbNj70wd4l+54DWqy/DBjdyeqH/bN5spX/tX+vddZPxfgSXupEni6SKP5blb0A);" vertex="1" parent="orin-34">
+          <mxGeometry x="122" y="283.5" width="196" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-55" value="" style="html=0;shadow=0;strokeColor=#18354A;strokeWidth=7;fillColor=none;shape=stencil(lVHNDoIwDH6aXY1savSM+AjeK1SZwraMCfr2dhQlIWLiZev312adUGlTgkMhlwZqFGovpDxiHqwnqsAAuiKG6o61hFE5oN2GMTSOQky24DWcKmSlCd7esNNFGDLalOh1iKrKhErP1uPF27spGFfaYA6OovHsI6z27YQ8jLar1Ya4/po1OoiTY1XbNj70wd7lYs3O54C/DJh3J6uJ/XfzZCv/a/9e7MdPxfgSXupEni6SKP5blb0A);" vertex="1" parent="orin-34">
+          <mxGeometry x="275.5" y="144" width="1" height="196" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-56" value="" style="html=0;shadow=0;strokeColor=#18354A;strokeWidth=7;fillColor=none;shape=stencil(lVHNDoIwDH6aXY1savSM+AjeK1SZwraMCfr2dhRDJBLjZev312adUGlTgkMhlwZqFGovpDxiHqwnqsAAuiKG6o61ZLdhXA6YETSOQky14DWcKmSlCd7esNNFGBLalOh1iKrKhErP1uPF27spGFfaYA6OovHsI6z27YQ8jLar1Ya4/po1OoiTY1XbNj70wd4l+54DWqy/DBjdyeqH/bN5spX/tX+vddZPxfgSXupEni6SKP5blb0A);" vertex="1" parent="orin-34">
+          <mxGeometry x="122" y="297.5" width="196" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-57" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="188.5" y="210.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-58" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="202.5" y="210.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-59" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="216.5" y="210.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-60" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="230.5" y="210.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-61" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="244.5" y="210.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-62" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="188.5" y="224.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-63" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="202.5" y="224.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-64" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="216.5" y="224.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-65" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="230.5" y="224.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-66" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="244.5" y="224.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-67" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="188.5" y="238.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-68" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="202.5" y="238.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-69" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="216.5" y="238.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-70" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="230.5" y="238.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-71" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="244.5" y="238.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-72" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="188.5" y="252.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-73" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="202.5" y="252.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-74" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="216.5" y="252.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-75" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="230.5" y="252.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-76" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="244.5" y="252.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-77" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="188.5" y="266.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-78" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="202.5" y="266.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-79" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="216.5" y="266.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-80" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="230.5" y="266.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-81" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#18354A;shape=ellipse;" vertex="1" parent="orin-34">
+          <mxGeometry x="244.5" y="266.5" width="7" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-83" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=22;" vertex="1" parent="1">
+          <mxGeometry x="20" y="755" width="430" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-84" value="2x NVDLA v2" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-83">
+          <mxGeometry x="102.130" y="9.677" width="225.366" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-85" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=22;" vertex="1" parent="1">
+          <mxGeometry x="20" y="845" width="430" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-86" value="PVA v2" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-85">
+          <mxGeometry x="152.281" y="10.677" width="127.001" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-88" value="" style="html=0;shadow=0;strokeColor=#D18432;strokeWidth=2;fillColor=#FFF3E5;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=38;" vertex="1" parent="1">
+          <mxGeometry x="550" y="41" width="107" height="872" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-89" value="Speichercontroller-Verbund" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=270;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-88">
+          <mxGeometry x="-170.550" y="412.200" width="452.891" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-91" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=56;" vertex="1" parent="1">
+          <mxGeometry x="687" y="41" width="258" height="245" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-92" value="Multimedia-" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-91">
+          <mxGeometry x="32.633" y="14.868" width="194.569" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-93" value="Komplex" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-91">
+          <mxGeometry x="55.622" y="54.979" width="147.471" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-94" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=18;" vertex="1" parent="orin-91">
+          <mxGeometry x="12" y="107" width="129" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-95" value="NV" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=28.638;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-94">
+          <mxGeometry x="43.205" y="-5.271" width="43.778" height="32.934" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-96" value="Kodierer" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=28.638;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-94">
+          <mxGeometry x="9.246" y="21.282" width="112.223" height="32.934" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-97" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=32;" vertex="1" parent="orin-91">
+          <mxGeometry x="12" y="177" width="129" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-98" value="NV" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=28.638;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-97">
+          <mxGeometry x="43.205" y="-5.271" width="43.778" height="32.934" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-99" value="Dekodierer" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=28.638;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-97">
+          <mxGeometry x="-6.673" y="21.282" width="144.040" height="32.934" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-100" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=34;" vertex="1" parent="orin-91">
+          <mxGeometry x="150" y="104" width="98" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-101" value="NV" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=28.638;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-100">
+          <mxGeometry x="27.705" y="31.229" width="43.778" height="32.934" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-102" value="JPEG" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=28.638;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-100">
+          <mxGeometry x="9.027" y="58.350" width="78.802" height="32.934" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-105" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=0;fillColor=#EFF4F7;rounded=1;absoluteArcSize=1;arcSize=32;" vertex="1" parent="1">
+          <mxGeometry x="687" y="308" width="257" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-106" value="DP / HDMI /" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-105">
+          <mxGeometry x="29.751" y="0.017" width="200.729" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-107" value="eDP" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-105">
+          <mxGeometry x="90.462" y="43.068" width="75.735" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-109" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=0;fillColor=#EFF4F7;rounded=1;absoluteArcSize=1;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="687" y="418" width="257" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-110" value="PCIe x1" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-109">
+          <mxGeometry x="58.899" y="0.364" width="135.189" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-112" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=0;fillColor=#EFF4F7;rounded=1;absoluteArcSize=1;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="687" y="487" width="257" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-113" value="PCIe x2" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-112">
+          <mxGeometry x="61.687" y="0.364" width="135.189" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-115" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=0;fillColor=#EFF4F7;rounded=1;absoluteArcSize=1;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="687" y="556" width="257" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-116" value="PCIe x4" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-115">
+          <mxGeometry x="61.840" y="0.364" width="135.189" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-118" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=0;fillColor=#EFF4F7;rounded=1;absoluteArcSize=1;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="687" y="625" width="257" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-119" value="3x USB 3.2" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-118">
+          <mxGeometry x="33.004" y="0.364" width="190.549" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-121" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=0;fillColor=#EFF4F7;rounded=1;absoluteArcSize=1;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="687" y="695" width="257" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-122" value="GbE" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-121">
+          <mxGeometry x="89.430" y="0.864" width="77.801" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-124" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=0;fillColor=#EFF4F7;rounded=1;absoluteArcSize=1;arcSize=18;" vertex="1" parent="1">
+          <mxGeometry x="687" y="764" width="257" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-125" value="4x CSI" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-124">
+          <mxGeometry x="70.207" y="0.364" width="114.683" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-127" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=0;fillColor=#EFF4F7;rounded=1;absoluteArcSize=1;arcSize=42;" vertex="1" parent="1">
+          <mxGeometry x="686" y="832" width="258" height="123" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-128" value="I2C / UART /" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-127">
+          <mxGeometry x="24.278" y="-4.636" width="213.047" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-129" value="QSPI / I2S /" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-127">
+          <mxGeometry x="30.361" y="38.976" width="198.774" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-130" value="CAN / GPIO" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-127">
+          <mxGeometry x="26.774" y="81.364" width="204.859" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-132" value="" style="html=0;shadow=0;strokeColor=#D9E3EA;strokeWidth=2;fillColor=#F5F7F9;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=36;" vertex="1" parent="1">
+          <mxGeometry x="507" y="980" width="192" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-133" value="16 GB" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-132">
+          <mxGeometry x="42.706" y="7.364" width="108.560" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-134" value="DRAM" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-132">
+          <mxGeometry x="39.999" y="50.177" width="112.581" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-136" value="" style="shape=flexArrow;edgeStyle=none;curved=0;rounded=0;html=0;startArrow=block;endArrow=block;startFill=1;endFill=1;startSize=4.1;endSize=4.1;width=13.3;startWidth=13.3;endWidth=13.3;fillColor=#2E73B6;strokeColor=#18354A;strokeWidth=2.7;entryPerimeter=0;exitPerimeter=0;shadow=0;exitX=1;exitY=0.276978;entryX=0;entryY=0.088303;" edge="1" parent="1" source="orin-23" target="orin-88">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="118" as="sourcePoint" />
+            <mxPoint x="550" y="118" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orin-137" value="" style="shape=flexArrow;edgeStyle=none;curved=0;rounded=0;html=0;startArrow=block;endArrow=block;startFill=1;endFill=1;startSize=4.1;endSize=4.1;width=13.3;startWidth=13.3;endWidth=13.3;fillColor=#2E73B6;strokeColor=#18354A;strokeWidth=2.7;entryPerimeter=0;exitPerimeter=0;shadow=0;exitX=1;exitY=0.744604;entryX=0;entryY=0.237385;" edge="1" parent="1" source="orin-23" target="orin-88">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="248" as="sourcePoint" />
+            <mxPoint x="550" y="248" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orin-138" value="" style="shape=flexArrow;edgeStyle=none;curved=0;rounded=0;html=0;startArrow=block;endArrow=block;startFill=1;endFill=1;startSize=4.1;endSize=4.1;width=13.3;startWidth=13.3;endWidth=13.3;fillColor=#2E73B6;strokeColor=#18354A;strokeWidth=2.7;entryPerimeter=0;exitPerimeter=0;shadow=0;exitX=1;exitY=0.142466;entryX=0;entryY=0.418578;" edge="1" parent="1" source="orin-34" target="orin-88">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="406" as="sourcePoint" />
+            <mxPoint x="550" y="406" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orin-139" value="" style="shape=flexArrow;edgeStyle=none;curved=0;rounded=0;html=0;startArrow=block;endArrow=block;startFill=1;endFill=1;startSize=4.1;endSize=4.1;width=13.3;startWidth=13.3;endWidth=13.3;fillColor=#2E73B6;strokeColor=#18354A;strokeWidth=2.7;entryPerimeter=0;exitPerimeter=0;shadow=0;exitX=1;exitY=0.536986;entryX=0;entryY=0.583716;" edge="1" parent="1" source="orin-34" target="orin-88">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="550" as="sourcePoint" />
+            <mxPoint x="550" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orin-140" value="" style="shape=flexArrow;edgeStyle=none;curved=0;rounded=0;html=0;startArrow=block;endArrow=block;startFill=1;endFill=1;startSize=4.1;endSize=4.1;width=13.3;startWidth=13.3;endWidth=13.3;fillColor=#2E73B6;strokeColor=#18354A;strokeWidth=2.7;entryPerimeter=0;exitPerimeter=0;shadow=0;exitX=1;exitY=0.484848;entryX=0;entryY=0.855505;" edge="1" parent="1" source="orin-83" target="orin-88">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="787" as="sourcePoint" />
+            <mxPoint x="550" y="787" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orin-141" value="" style="shape=flexArrow;edgeStyle=none;curved=0;rounded=0;html=0;startArrow=block;endArrow=block;startFill=1;endFill=1;startSize=4.1;endSize=4.1;width=13.3;startWidth=13.3;endWidth=13.3;fillColor=#2E73B6;strokeColor=#18354A;strokeWidth=2.7;entryPerimeter=0;exitPerimeter=0;shadow=0;exitX=1;exitY=0.5;entryX=0;entryY=0.961009;" edge="1" parent="1" source="orin-85" target="orin-88">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="879" as="sourcePoint" />
+            <mxPoint x="550" y="879" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orin-142" value="" style="shape=flexArrow;edgeStyle=none;curved=0;rounded=0;html=0;startArrow=block;endArrow=block;startFill=1;endFill=1;startSize=1.466667;endSize=1.466667;width=6.5;startWidth=8.5;endWidth=8.5;fillColor=#2E73B6;strokeColor=#18354A;strokeWidth=2.5;entryPerimeter=0;exitPerimeter=0;shadow=0;exitX=1;exitY=0.151376;entryX=0;entryY=0.538776;" edge="1" parent="1" source="orin-88" target="orin-91">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="657" y="173" as="sourcePoint" />
+            <mxPoint x="687" y="173" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orin-143" value="" style="shape=flexArrow;edgeStyle=none;curved=0;rounded=0;html=0;startArrow=block;endArrow=block;startFill=1;endFill=1;startSize=1.466667;endSize=1.466667;width=6.5;startWidth=8.5;endWidth=8.5;fillColor=#2E73B6;strokeColor=#18354A;strokeWidth=2.5;entryPerimeter=0;exitPerimeter=0;shadow=0;exitX=1;exitY=0.358945;entryX=0;entryY=0.516854;" edge="1" parent="1" source="orin-88" target="orin-105">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="657" y="354" as="sourcePoint" />
+            <mxPoint x="687" y="354" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orin-144" value="" style="shape=flexArrow;edgeStyle=none;curved=0;rounded=0;html=0;startArrow=block;endArrow=block;startFill=1;endFill=1;startSize=1.466667;endSize=1.466667;width=6.5;startWidth=8.5;endWidth=8.5;fillColor=#2E73B6;strokeColor=#18354A;strokeWidth=2.5;entryPerimeter=0;exitPerimeter=0;shadow=0;exitX=1;exitY=0.459862;entryX=0;entryY=0.510638;" edge="1" parent="1" source="orin-88" target="orin-109">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="657" y="442" as="sourcePoint" />
+            <mxPoint x="687" y="442" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orin-145" value="" style="shape=flexArrow;edgeStyle=none;curved=0;rounded=0;html=0;startArrow=block;endArrow=block;startFill=1;endFill=1;startSize=1.466667;endSize=1.466667;width=6.5;startWidth=8.5;endWidth=8.5;fillColor=#2E73B6;strokeColor=#18354A;strokeWidth=2.5;entryPerimeter=0;exitPerimeter=0;shadow=0;exitX=1;exitY=0.537844;entryX=0;entryY=0.489362;" edge="1" parent="1" source="orin-88" target="orin-112">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="657" y="510" as="sourcePoint" />
+            <mxPoint x="687" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orin-146" value="" style="shape=flexArrow;edgeStyle=none;curved=0;rounded=0;html=0;startArrow=block;endArrow=block;startFill=1;endFill=1;startSize=1.466667;endSize=1.466667;width=6.5;startWidth=8.5;endWidth=8.5;fillColor=#2E73B6;strokeColor=#18354A;strokeWidth=2.5;entryPerimeter=0;exitPerimeter=0;shadow=0;exitX=1;exitY=0.616972;entryX=0;entryY=0.489362;" edge="1" parent="1" source="orin-88" target="orin-115">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="657" y="579" as="sourcePoint" />
+            <mxPoint x="687" y="579" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orin-147" value="" style="shape=flexArrow;edgeStyle=none;curved=0;rounded=0;html=0;startArrow=block;endArrow=block;startFill=1;endFill=1;startSize=1.466667;endSize=1.466667;width=6.5;startWidth=8.5;endWidth=8.5;fillColor=#2E73B6;strokeColor=#18354A;strokeWidth=2.5;entryPerimeter=0;exitPerimeter=0;shadow=0;exitX=1;exitY=0.697248;entryX=0;entryY=0.510638;" edge="1" parent="1" source="orin-88" target="orin-118">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="657" y="649" as="sourcePoint" />
+            <mxPoint x="687" y="649" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orin-148" value="" style="shape=flexArrow;edgeStyle=none;curved=0;rounded=0;html=0;startArrow=block;endArrow=block;startFill=1;endFill=1;startSize=1.466667;endSize=1.466667;width=6.5;startWidth=8.5;endWidth=8.5;fillColor=#2E73B6;strokeColor=#18354A;strokeWidth=2.5;entryPerimeter=0;exitPerimeter=0;shadow=0;exitX=1;exitY=0.777523;entryX=0;entryY=0.5;" edge="1" parent="1" source="orin-88" target="orin-121">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="657" y="719" as="sourcePoint" />
+            <mxPoint x="687" y="719" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orin-149" value="" style="shape=flexArrow;edgeStyle=none;curved=0;rounded=0;html=0;startArrow=block;endArrow=block;startFill=1;endFill=1;startSize=1.466667;endSize=1.466667;width=6.5;startWidth=8.5;endWidth=8.5;fillColor=#2E73B6;strokeColor=#18354A;strokeWidth=2.5;entryPerimeter=0;exitPerimeter=0;shadow=0;exitX=1;exitY=0.857798;entryX=0;entryY=0.531915;" edge="1" parent="1" source="orin-88" target="orin-124">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="657" y="789" as="sourcePoint" />
+            <mxPoint x="687" y="789" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orin-150" value="" style="shape=flexArrow;edgeStyle=none;curved=0;rounded=0;html=0;startArrow=block;endArrow=block;startFill=1;endFill=1;startSize=1.39;endSize=1.39;width=6.5;startWidth=8.5;endWidth=8.5;fillColor=#2E73B6;strokeColor=#18354A;strokeWidth=2.5;entryPerimeter=0;exitPerimeter=0;shadow=0;exitX=1;exitY=0.961009;entryX=0;entryY=0.382114;" edge="1" parent="1" source="orin-88" target="orin-127">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="657" y="879" as="sourcePoint" />
+            <mxPoint x="686" y="879" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orin-151" value="" style="shape=flexArrow;edgeStyle=none;curved=0;rounded=0;html=0;startArrow=block;endArrow=block;startFill=1;endFill=1;startSize=4.1;endSize=4.1;width=12.3;startWidth=13.3;endWidth=13.3;fillColor=#2E73B6;strokeColor=#18354A;strokeWidth=2.7;entryPerimeter=0;exitPerimeter=0;shadow=0;exitX=0.5;exitY=1;entryX=0.502604;entryY=0;" edge="1" parent="1" source="orin-88" target="orin-132">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="603.5" y="913" as="sourcePoint" />
+            <mxPoint x="603.5" y="980" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orin-153" value="" style="html=0;shadow=0;strokeColor=#D9E3EA;strokeWidth=2;fillColor=#F5F7F9;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=16;" vertex="1" parent="1">
+          <mxGeometry x="478" y="41" width="42" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-154" value="L1/L2/L3" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=270;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-153">
+          <mxGeometry x="-53.488" y="57.274" width="147.545" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-155" value="" style="html=0;shadow=0;strokeColor=#D9E3EA;strokeWidth=2;fillColor=#F5F7F9;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=16;" vertex="1" parent="1">
+          <mxGeometry x="478" y="210" width="42" height="236" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-156" value="Systemcache" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=270;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-155">
+          <mxGeometry x="-88.963" y="92.224" width="225.366" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-157" value="" style="html=0;shadow=0;strokeColor=#D9E3EA;strokeWidth=2;fillColor=#F5F7F9;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=16;" vertex="1" parent="1">
+          <mxGeometry x="478" y="457" width="42" height="181" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-158" value="L2" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=270;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="orin-157">
+          <mxGeometry x="-2.613" y="67.689" width="45.013" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="orin-160" value="ORIN NX" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=41.221;fontColor=#18354A;fontStyle=1;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="1">
+          <mxGeometry x="41.856" y="1015.049" width="175.768" height="47.404" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

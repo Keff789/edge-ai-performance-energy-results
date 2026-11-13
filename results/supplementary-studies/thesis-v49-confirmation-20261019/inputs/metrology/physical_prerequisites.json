@@ -1,0 +1,17 @@
+{
+  "status": "nicht verfügbar until real external reference evidence is supplied/acquired",
+  "independent_reference": [
+    "Reference current and voltage must observe the same upstreamFS point; record instrument model/serial, selected ranges, resolution, certificate or applicable specification, date and environment.",
+    "Before and after workload exposure, record independent idle and relevant activity/load points on each of the3 physical setups. Cover observed current up to3.661513A if that operating range is used.",
+    "Separate held-out verification observations from the points used to fit gain. Own-channel idle drift is not an absolute offset reference."
+  ],
+  "channel_identity": [
+    "Record physical board revision and exact schematic/shunt/ADCchannel; component ID, shunt value, gain selection, reference voltage, actual sampling/firmware identity and attached consumers.",
+    "Separate downstream5V module path from upstream nominal19V system input."
+  ],
+  "77khz": [
+    "Supply actual filter schematic/component values or a complete-path transfer-function characterization with source/instrument settings and uncertainty. INA225 component specification alone is insufficient."
+  ],
+  "performed_here": false,
+  "calibration_changed": false
+}

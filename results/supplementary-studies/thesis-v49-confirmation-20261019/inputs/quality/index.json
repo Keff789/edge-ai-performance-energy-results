@@ -1,0 +1,214 @@
+{
+  "schema": "v49-confirmation-quality-inputs-v1",
+  "models": [
+    {
+      "model": "mobilenet_v3_large",
+      "result": {
+        "path": "quality/mobilenet_v3_large/result.json",
+        "sha256": "1d79ae568ce87acf0b52ac25257244e4119196975498ff9b83666e73f58b9c34",
+        "bytes": 1835,
+        "origin_sha256": "771b8788e532193771eff97d22968c256eb69c9ba39ba42046f2ee57538e186f",
+        "origin_archive_member": "evidence/history_quality/mobilenet_v3_large/result.json",
+        "origin_bytes": 2101,
+        "transformation": "scientific fields retained; private provenance locators projected"
+      },
+      "plan": {
+        "path": "quality/mobilenet_v3_large/frozen_plan.json",
+        "sha256": "4c73db5dd2340ca8fd949679bc3a08a578f73994b3e76e8cc661d0453c74a1fb",
+        "bytes": 181383,
+        "origin_sha256": "0ad5c06195c210e3b5d7b6236fa9720d611e03c29cc813f2f66d832cf52e8596",
+        "origin_archive_member": "evidence/history_quality/mobilenet_v3_large/frozen_plan.json",
+        "origin_bytes": 181595,
+        "transformation": "scientific fields retained; private provenance locators projected"
+      },
+      "bootstrap": {
+        "path": "quality/mobilenet_v3_large/absolute_full_split_bootstrap_values.npz",
+        "sha256": "9d361b241075b21248b53b197c6b2e71a48a1deed37990747d33365c3b9fea1f",
+        "bytes": 6326,
+        "origin_sha256": "9d361b241075b21248b53b197c6b2e71a48a1deed37990747d33365c3b9fea1f",
+        "origin_archive_member": "evidence/history_quality/mobilenet_v3_large/absolute_full_split_bootstrap_values.npz",
+        "transformation": "unchanged original NPZ bytes"
+      }
+    },
+    {
+      "model": "regnet_x_1_6gf",
+      "result": {
+        "path": "quality/regnet_x_1_6gf/result.json",
+        "sha256": "ba326d4dd25bbad8b43fc4e0ec74b654708192dec3a22373c9affd144e18eb99",
+        "bytes": 1809,
+        "origin_sha256": "ac67b3e3076f2c4fabd52c7d60dc252b282aff9ba6104b3483aa6ff6cf035128",
+        "origin_archive_member": "evidence/history_quality/regnet_x_1_6gf/result.json",
+        "origin_bytes": 2123,
+        "transformation": "scientific fields retained; private provenance locators projected"
+      },
+      "plan": {
+        "path": "quality/regnet_x_1_6gf/frozen_plan.json",
+        "sha256": "e1e70fe9a53c23ddc695afbd624ce6a3f6ec79c441bc9d0cbabf0d8e9fba876f",
+        "bytes": 181364,
+        "origin_sha256": "b6944a451ade72ceca73abb7b62ab206561a58c25ba706fe545c088a0f05a0b7",
+        "origin_archive_member": "evidence/history_quality/regnet_x_1_6gf/frozen_plan.json",
+        "origin_bytes": 181624,
+        "transformation": "scientific fields retained; private provenance locators projected"
+      },
+      "bootstrap": {
+        "path": "quality/regnet_x_1_6gf/absolute_full_split_bootstrap_values.npz",
+        "sha256": "26a3537eaa73702b9ff7acf480c24fda7d67c0f8497b89accd280f5389252b6b",
+        "bytes": 6507,
+        "origin_sha256": "26a3537eaa73702b9ff7acf480c24fda7d67c0f8497b89accd280f5389252b6b",
+        "origin_archive_member": "evidence/history_quality/regnet_x_1_6gf/absolute_full_split_bootstrap_values.npz",
+        "transformation": "unchanged original NPZ bytes"
+      }
+    },
+    {
+      "model": "resnet50",
+      "result": {
+        "path": "quality/resnet50/result.json",
+        "sha256": "f844b2a25419bb5fa6b1ed9354f3a0192b0f1bb5c06837a44fa9e53919f30eba",
+        "bytes": 1776,
+        "origin_sha256": "14c3ce5e2777b36dc17e932611218692234b84385c5f9568d618dcc3ed1fb184",
+        "origin_archive_member": "evidence/history_quality/resnet50/result.json",
+        "origin_bytes": 2078,
+        "transformation": "scientific fields retained; private provenance locators projected"
+      },
+      "plan": {
+        "path": "quality/resnet50/frozen_plan.json",
+        "sha256": "4852a27c190b4880fe54dc9de657e0ad490b8cfbd062556c9c69d346af5b8c6d",
+        "bytes": 181334,
+        "origin_sha256": "0ab507d0911670c4f3817cb2af7721bae5e68f77437fb66e61affbddb9b07acd",
+        "origin_archive_member": "evidence/history_quality/resnet50/frozen_plan.json",
+        "origin_bytes": 181582,
+        "transformation": "scientific fields retained; private provenance locators projected"
+      },
+      "bootstrap": {
+        "path": "quality/resnet50/absolute_full_split_bootstrap_values.npz",
+        "sha256": "82a1c607bccd728fa60227a96fe11366b3ed8aec0f27ff68b457abb46ed6269f",
+        "bytes": 6420,
+        "origin_sha256": "82a1c607bccd728fa60227a96fe11366b3ed8aec0f27ff68b457abb46ed6269f",
+        "origin_archive_member": "evidence/history_quality/resnet50/absolute_full_split_bootstrap_values.npz",
+        "transformation": "unchanged original NPZ bytes"
+      }
+    },
+    {
+      "model": "yolo11l",
+      "result": {
+        "path": "quality/yolo11l/result.json",
+        "sha256": "96020ab8f41ec8fb854088aab439a8e076646597eb32f2917b6ba6af9a21c448",
+        "bytes": 5492,
+        "origin_sha256": "e67d9516c619b7cc513f179376dd5238476722b52809c8d88a6b2ac40da6e97f",
+        "origin_archive_member": "evidence/history_quality/yolo11l/result.json",
+        "origin_bytes": 5897,
+        "transformation": "scientific fields retained; private provenance locators projected"
+      },
+      "plan": {
+        "path": "quality/yolo11l/frozen_plan.json",
+        "sha256": "8b584eaa79c65f45551066ee8b9a19779316574be0025f2ce086438f5562acd3",
+        "bytes": 121330,
+        "origin_sha256": "9854f23a6612d80a2b03785d3a926ea9bf19c14a6ed8ce2af19e81accac95291",
+        "origin_archive_member": "evidence/history_quality/yolo11l/frozen_plan.json",
+        "origin_bytes": 121627,
+        "transformation": "scientific fields retained; private provenance locators projected"
+      },
+      "bootstrap": {
+        "path": "quality/yolo11l/absolute_full_split_bootstrap_values.npz",
+        "sha256": "bb6cfa593a5d392720bba79434dd3a46e2e421ed0c421741d0557f6341775294",
+        "bytes": 65980,
+        "origin_sha256": "bb6cfa593a5d392720bba79434dd3a46e2e421ed0c421741d0557f6341775294",
+        "origin_archive_member": "evidence/history_quality/yolo11l/absolute_full_split_bootstrap_values.npz",
+        "transformation": "unchanged original NPZ bytes"
+      }
+    },
+    {
+      "model": "yolo26m",
+      "result": {
+        "path": "quality/yolo26m/result.json",
+        "sha256": "0d5e56fd1d4572925731ac8830c2399acbd9caaaf5428abd4af509d33d91a615",
+        "bytes": 5197,
+        "origin_sha256": "ad3232745a04030249c539009e74c3c648219285231fc0725866239213852168",
+        "origin_archive_member": "evidence/history_quality/yolo26m/result.json",
+        "origin_bytes": 5652,
+        "transformation": "scientific fields retained; private provenance locators projected"
+      },
+      "plan": {
+        "path": "quality/yolo26m/frozen_plan.json",
+        "sha256": "c20e7dee51d5321620bb2a6d16888ce398d6fa33aa50ccbd5af2974edd9414ae",
+        "bytes": 121329,
+        "origin_sha256": "a725dc06accba294ca25ffb0a9218e7890c241a88ab0ec3b1283c1f7229ebc04",
+        "origin_archive_member": "evidence/history_quality/yolo26m/frozen_plan.json",
+        "origin_bytes": 121730,
+        "transformation": "scientific fields retained; private provenance locators projected"
+      },
+      "bootstrap": {
+        "path": "quality/yolo26m/absolute_full_split_bootstrap_values.npz",
+        "sha256": "46acfa750fd926c3153acc63d7db1a76fb9ae46a9de764e2c78853a5c6bb991f",
+        "bytes": 65754,
+        "origin_sha256": "46acfa750fd926c3153acc63d7db1a76fb9ae46a9de764e2c78853a5c6bb991f",
+        "origin_archive_member": "evidence/history_quality/yolo26m/absolute_full_split_bootstrap_values.npz",
+        "transformation": "unchanged original NPZ bytes"
+      }
+    },
+    {
+      "model": "yolo26s",
+      "result": {
+        "path": "quality/yolo26s/result.json",
+        "sha256": "deb0152f11f5819de8411315661f3ab57181dec8a761f5687ce30abea7c2da10",
+        "bytes": 5196,
+        "origin_sha256": "be660948df20ae08841fd0404d2a6d97f8e005d6b605806b82c71ff324b1a87c",
+        "origin_archive_member": "evidence/history_quality/yolo26s/result.json",
+        "origin_bytes": 5646,
+        "transformation": "scientific fields retained; private provenance locators projected"
+      },
+      "plan": {
+        "path": "quality/yolo26s/frozen_plan.json",
+        "sha256": "722195da7d1c75d9bb9a72edbca29b4606ac38ae35e9a88c4a0fa5a64bf06764",
+        "bytes": 121329,
+        "origin_sha256": "592316db4c7c1ad1a3a9fc65fda3ff025e66b036cc8b8954b0bc1f8f8d00180a",
+        "origin_archive_member": "evidence/history_quality/yolo26s/frozen_plan.json",
+        "origin_bytes": 121725,
+        "transformation": "scientific fields retained; private provenance locators projected"
+      },
+      "bootstrap": {
+        "path": "quality/yolo26s/absolute_full_split_bootstrap_values.npz",
+        "sha256": "3287cbe76f4b160de24bed78862ec9e145d33303e9c70d5cb8ade6d4ffb0095d",
+        "bytes": 65732,
+        "origin_sha256": "3287cbe76f4b160de24bed78862ec9e145d33303e9c70d5cb8ade6d4ffb0095d",
+        "origin_archive_member": "evidence/history_quality/yolo26s/absolute_full_split_bootstrap_values.npz",
+        "transformation": "unchanged original NPZ bytes"
+      }
+    },
+    {
+      "model": "yolov7_paper",
+      "result": {
+        "path": "quality/yolov7_paper/result.json",
+        "sha256": "28c2cfade170b7b5ac5a0a7dfd80f9d1e4ff4367ed6ac6b57f3876bd0e37012d",
+        "bytes": 5240,
+        "origin_sha256": "be3804a1da07c720e9f0291275cd479885ce1d527966aac2f9568e4062ed898a",
+        "origin_archive_member": "evidence/history_quality/yolov7_paper/result.json",
+        "origin_bytes": 5594,
+        "transformation": "scientific fields retained; private provenance locators projected"
+      },
+      "plan": {
+        "path": "quality/yolov7_paper/frozen_plan.json",
+        "sha256": "5866e0baa52757f220369547d785bf9bdc51a5b0119ca953bb68ff53e022f0ef",
+        "bytes": 121348,
+        "origin_sha256": "4545ebb11566609538553c7906b9764b447bfc4a43666ce260d8f091ce99dce5",
+        "origin_archive_member": "evidence/history_quality/yolov7_paper/frozen_plan.json",
+        "origin_bytes": 121648,
+        "transformation": "scientific fields retained; private provenance locators projected"
+      },
+      "bootstrap": {
+        "path": "quality/yolov7_paper/absolute_full_split_bootstrap_values.npz",
+        "sha256": "d74896a1cb7f008bda48a1295cf348ad681314088c0dfab55d4caa1060c9e850",
+        "bytes": 65188,
+        "origin_sha256": "d74896a1cb7f008bda48a1295cf348ad681314088c0dfab55d4caa1060c9e850",
+        "origin_archive_member": "evidence/history_quality/yolov7_paper/absolute_full_split_bootstrap_values.npz",
+        "transformation": "unchanged original NPZ bytes"
+      }
+    }
+  ],
+  "scope": "Table/percentile reproduction from an existing direct paired offline analysis of saved predictions; no new inference or prediction evaluation.",
+  "provenance_paths_are_dependencies": false,
+  "origin_archive_member_base": "preserved campaign root inside the external delivery archive",
+  "interval": "paired split-minus-full ordinary percentile 2.5/97.5; NumPy linear interpolation",
+  "selection_scope": "previously selected winner pair; no simultaneous selection correction",
+  "full_prediction_bootstrap_recomputation": "Requires the unchanged archived prediction inputs and original evaluator; not performed by the small table reproducer."
+}

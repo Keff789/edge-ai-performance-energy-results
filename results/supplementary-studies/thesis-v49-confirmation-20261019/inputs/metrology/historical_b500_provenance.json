@@ -1,0 +1,194 @@
+{
+  "source_archive": {
+    "path": "archive:evidence/history/ONNX-Splitpoint-Tool_v2.75.49_source.zip",
+    "sha256": "442249320421a10b0635a627be9bc40a51f1499dfa3cdde567538661aa84477f",
+    "original_path": "external-sha256:442249320421a10b0635a627be9bc40a51f1499dfa3cdde567538661aa84477f"
+  },
+  "table_source": {
+    "path": "external-sha256:11da9332155045c6ec5cb36e24cd3979c6ed3f2643a45d8ee6102448450835d1",
+    "sha256": "11da9332155045c6ec5cb36e24cd3979c6ed3f2643a45d8ee6102448450835d1"
+  },
+  "rows": [
+    {
+      "source_label": "DEEPX$\\rightarrow$TensorRT, \\texttt{b044}",
+      "fps": "12.4123",
+      "ci_low": "11.7055",
+      "ci_high": "12.4160",
+      "mean_iou": "0.996060",
+      "decision": "pass",
+      "endpoint_label": "stored_bounds",
+      "original_replicates_verified": false,
+      "ordinary_percentile_algorithm_in_release": true,
+      "exact_historical_generator_binding_verified": false,
+      "status": "nicht verfügbar",
+      "reason": "Release v2.75.49 contains ordinary percentile median bootstrap functions, but exact generating entry point/seed and original three observations for this table row are not bound by the inspected exports. Endpoints must not be relabelled as observed minima/maxima."
+    },
+    {
+      "source_label": "DEEPX Full",
+      "fps": "9.7293",
+      "ci_low": "9.7072",
+      "ci_high": "9.9488",
+      "mean_iou": "0.994360",
+      "decision": "pass",
+      "endpoint_label": "stored_bounds",
+      "original_replicates_verified": false,
+      "ordinary_percentile_algorithm_in_release": true,
+      "exact_historical_generator_binding_verified": false,
+      "status": "nicht verfügbar",
+      "reason": "Release v2.75.49 contains ordinary percentile median bootstrap functions, but exact generating entry point/seed and original three observations for this table row are not bound by the inspected exports. Endpoints must not be relabelled as observed minima/maxima."
+    },
+    {
+      "source_label": "TensorRT Full on DEEPX setup",
+      "fps": "12.5780",
+      "ci_low": "12.5627",
+      "ci_high": "12.6550",
+      "mean_iou": "0.999027",
+      "decision": "pass",
+      "endpoint_label": "stored_bounds",
+      "original_replicates_verified": false,
+      "ordinary_percentile_algorithm_in_release": true,
+      "exact_historical_generator_binding_verified": false,
+      "status": "nicht verfügbar",
+      "reason": "Release v2.75.49 contains ordinary percentile median bootstrap functions, but exact generating entry point/seed and original three observations for this table row are not bound by the inspected exports. Endpoints must not be relabelled as observed minima/maxima."
+    },
+    {
+      "source_label": "Hailo-10H$\\rightarrow$TensorRT, \\texttt{b044}",
+      "fps": "16.9209",
+      "ci_low": "16.8182",
+      "ci_high": "16.9749",
+      "mean_iou": "0.990733",
+      "decision": "pass",
+      "endpoint_label": "stored_bounds",
+      "original_replicates_verified": false,
+      "ordinary_percentile_algorithm_in_release": true,
+      "exact_historical_generator_binding_verified": false,
+      "status": "nicht verfügbar",
+      "reason": "Release v2.75.49 contains ordinary percentile median bootstrap functions, but exact generating entry point/seed and original three observations for this table row are not bound by the inspected exports. Endpoints must not be relabelled as observed minima/maxima."
+    },
+    {
+      "source_label": "Hailo-10H Full",
+      "fps": "9.0406",
+      "ci_low": "9.0109",
+      "ci_high": "9.0454",
+      "mean_iou": "0.887870",
+      "decision": "fail",
+      "endpoint_label": "stored_bounds",
+      "original_replicates_verified": false,
+      "ordinary_percentile_algorithm_in_release": true,
+      "exact_historical_generator_binding_verified": false,
+      "status": "nicht verfügbar",
+      "reason": "Release v2.75.49 contains ordinary percentile median bootstrap functions, but exact generating entry point/seed and original three observations for this table row are not bound by the inspected exports. Endpoints must not be relabelled as observed minima/maxima."
+    },
+    {
+      "source_label": "TensorRT Full on Hailo-10H setup",
+      "fps": "18.6900",
+      "ci_low": "18.5869",
+      "ci_high": "18.7757",
+      "mean_iou": "0.999028",
+      "decision": "pass",
+      "endpoint_label": "stored_bounds",
+      "original_replicates_verified": false,
+      "ordinary_percentile_algorithm_in_release": true,
+      "exact_historical_generator_binding_verified": false,
+      "status": "nicht verfügbar",
+      "reason": "Release v2.75.49 contains ordinary percentile median bootstrap functions, but exact generating entry point/seed and original three observations for this table row are not bound by the inspected exports. Endpoints must not be relabelled as observed minima/maxima."
+    },
+    {
+      "source_label": "Hailo-8$\\rightarrow$TensorRT, \\texttt{b044}",
+      "fps": "15.8537",
+      "ci_low": "15.7361",
+      "ci_high": "15.8548",
+      "mean_iou": "0.986013",
+      "decision": "pass",
+      "endpoint_label": "stored_bounds",
+      "original_replicates_verified": false,
+      "ordinary_percentile_algorithm_in_release": true,
+      "exact_historical_generator_binding_verified": false,
+      "status": "nicht verfügbar",
+      "reason": "Release v2.75.49 contains ordinary percentile median bootstrap functions, but exact generating entry point/seed and original three observations for this table row are not bound by the inspected exports. Endpoints must not be relabelled as observed minima/maxima."
+    },
+    {
+      "source_label": "Hailo-8 Full",
+      "fps": "16.1797",
+      "ci_low": "16.1721",
+      "ci_high": "16.1888",
+      "mean_iou": "0.875778",
+      "decision": "fail",
+      "endpoint_label": "stored_bounds",
+      "original_replicates_verified": false,
+      "ordinary_percentile_algorithm_in_release": true,
+      "exact_historical_generator_binding_verified": false,
+      "status": "nicht verfügbar",
+      "reason": "Release v2.75.49 contains ordinary percentile median bootstrap functions, but exact generating entry point/seed and original three observations for this table row are not bound by the inspected exports. Endpoints must not be relabelled as observed minima/maxima."
+    },
+    {
+      "source_label": "TensorRT Full on Hailo-8 setup",
+      "fps": "18.8423",
+      "ci_low": "18.8100",
+      "ci_high": "18.8678",
+      "mean_iou": "0.999062",
+      "decision": "pass",
+      "endpoint_label": "stored_bounds",
+      "original_replicates_verified": false,
+      "ordinary_percentile_algorithm_in_release": true,
+      "exact_historical_generator_binding_verified": false,
+      "status": "nicht verfügbar",
+      "reason": "Release v2.75.49 contains ordinary percentile median bootstrap functions, but exact generating entry point/seed and original three observations for this table row are not bound by the inspected exports. Endpoints must not be relabelled as observed minima/maxima."
+    }
+  ],
+  "physical_acquisitions_added": 0,
+  "release_functions": [
+    {
+      "archive_member": "ONNX-Splitpoint-Tool_v2.75.49/scripts/native_full_baseline_eval_runner.py",
+      "member_sha256": "54b323c1dd608f511856748c2171450f7384893072385ffd7b7c259d1013026f",
+      "functions": [
+        {
+          "name": "_percentile",
+          "line_start": 7667,
+          "line_end": 7678,
+          "sha256": "ef4d839b6716b067ac773e457595f1b5568a3d8aefa4ce2e1081c4defe19db62"
+        },
+        {
+          "name": "_bootstrap_median_ci",
+          "line_start": 7681,
+          "line_end": 7700,
+          "sha256": "7492c8ba1394b7f7701715b7832c66af1efd41cf2c7bca87d97e0d24eec0fb58"
+        },
+        {
+          "name": "_aggregate_full_repetitions",
+          "line_start": 7703,
+          "line_end": 7995,
+          "sha256": "404a06d5cf3df91ef29d746b4624cc069f0429661988aee3118b0fe4a2bc6adc"
+        }
+      ]
+    },
+    {
+      "archive_member": "ONNX-Splitpoint-Tool_v2.75.49/scripts/native_producer_final_report.py",
+      "member_sha256": "6f6ff85ed611cd88d985ca438f0ba70666e56f6f2259f70b6e8bd99dda9235a4",
+      "functions": [
+        {
+          "name": "_percentile",
+          "line_start": 281,
+          "line_end": 292,
+          "sha256": "ef4d839b6716b067ac773e457595f1b5568a3d8aefa4ce2e1081c4defe19db62"
+        },
+        {
+          "name": "_bootstrap_median_ci",
+          "line_start": 295,
+          "line_end": 305,
+          "sha256": "c42fbe5d6720f3f72a716bbaaea6776e1f835bad1a63e07b9717cb0173dc6797"
+        }
+      ]
+    },
+    {
+      "archive_member": "ONNX-Splitpoint-Tool_v2.75.49/scripts/native_hailo10_trt_e2e_from_benchmarkset.py",
+      "member_sha256": "f14339e34fe837e26801fdb36bb17d3512f63b3b8afd891469fec71206e854c0",
+      "functions": []
+    },
+    {
+      "archive_member": "ONNX-Splitpoint-Tool_v2.75.49/scripts/native_hailo_trt_fifo_from_benchmarkset.py",
+      "member_sha256": "f7e4db29a1311a4b6b5ccd166e2ff83b979f912d0b0cffd61b7e8e17eb040d48",
+      "functions": []
+    }
+  ]
+}

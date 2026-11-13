@@ -1,0 +1,99 @@
+{
+  "artifacts": {
+    "engine_sha256": "e924e103568a5d1797d3739daf2f1e16717e5cb2d3d76c624672d033704e83bf",
+    "hef_sha256": "f75ce43e696cbb1fb679eb50b6c5406752ff07bb84e60368511276c84352fdc2"
+  },
+  "cleanup": {
+    "active_owned_remote_operations": 0,
+    "foreign_processes_stopped": false,
+    "registry_cancelled": false,
+    "remote_staging_preserved": "retained_source::splitpoint_runs/rq2_detector_followup_20261027/orin_nx_hailo8_01_66af62116b7e"
+  },
+  "diagnostic_only": true,
+  "evidence_scope": "Four original frozen dataset images; original existing HEF+TensorRT engine; exact retained Generic preprocessing/runtime classes, corrected normal-generated B4 helper and preserved Native-binding helper. First image independently compared to original Native FIFO binary artifacts.",
+  "hardware_executed": true,
+  "historical_native_quality_completion_difference": "Image000724 contains four normal completed-task records but three original Native quality records: the fourth overlaps another class11 stop-sign box. Existing product class-aware NMS .45 reproduces all original quality records. No-second-NMS normal completion is preserved; original Native quality evidence remains unchanged. This compatibility difference is separate from the proven memory-order defect.",
+  "images": [
+    {
+      "before_fix_detection_count": 0,
+      "corrected_detection_count": 17,
+      "corrected_vs_preserved_native_completed_records_exact": true,
+      "corrected_vs_preserved_native_feed_byte_identical": true,
+      "corrected_vs_preserved_native_output_byte_identical": true,
+      "image_id": "000000000139.jpg",
+      "independent_saved_native_checks": {
+        "corrected_boundary_byte_identical": true,
+        "corrected_completed_records_exact": true,
+        "corrected_trt_output_byte_identical": true,
+        "native_boundary_sha256": "010c79016a59913557d4e715519f12302b87574a0917c19b64b772ec395871d2",
+        "native_output_sha256": "cf643bf6b80a5d0ebaa92d0dfd6c26d78bcce3b21fd4b4bd972e3fe78bb28890",
+        "new_corrected_boundary_sha256": "010c79016a59913557d4e715519f12302b87574a0917c19b64b772ec395871d2",
+        "new_corrected_output_sha256": "cf643bf6b80a5d0ebaa92d0dfd6c26d78bcce3b21fd4b4bd972e3fe78bb28890",
+        "old_vs_native_boundary_byte_equality_fraction": 0.0375994873046875,
+        "prepared_input_byte_identical": true
+      },
+      "new_corrected_records_vs_original_native_quality_records_exact": true,
+      "original_native_quality_count": 17,
+      "original_native_quality_records_match_after_existing_product_classaware_nms_045": true,
+      "prepared_input_sha256": "0bd0f530dd401d77b085e0cd847c03cef94346395ff6e852a68f6e615c58b8cb",
+      "preserved_native_binding_detection_count": 17,
+      "raw_before_fix_max_score": 0.045684814453125,
+      "raw_corrected_max_score": 0.92578125
+    },
+    {
+      "before_fix_detection_count": 0,
+      "corrected_detection_count": 1,
+      "corrected_vs_preserved_native_completed_records_exact": true,
+      "corrected_vs_preserved_native_feed_byte_identical": true,
+      "corrected_vs_preserved_native_output_byte_identical": true,
+      "image_id": "000000000285.jpg",
+      "new_corrected_records_vs_original_native_quality_records_exact": true,
+      "original_native_quality_count": 1,
+      "original_native_quality_records_match_after_existing_product_classaware_nms_045": true,
+      "prepared_input_sha256": "4228cd3150eec00571bde9b8d4f20065ea7e96e3e7cef0d48b30cf1cd9b48949",
+      "preserved_native_binding_detection_count": 1,
+      "raw_before_fix_max_score": 0.01238250732421875,
+      "raw_corrected_max_score": 0.97265625
+    },
+    {
+      "before_fix_detection_count": 0,
+      "corrected_detection_count": 5,
+      "corrected_vs_preserved_native_completed_records_exact": true,
+      "corrected_vs_preserved_native_feed_byte_identical": true,
+      "corrected_vs_preserved_native_output_byte_identical": true,
+      "image_id": "000000000632.jpg",
+      "new_corrected_records_vs_original_native_quality_records_exact": true,
+      "original_native_quality_count": 5,
+      "original_native_quality_records_match_after_existing_product_classaware_nms_045": true,
+      "prepared_input_sha256": "df599577640019eafdfad855df15b2059fd26f2f05c034b2726d318873708d9b",
+      "preserved_native_binding_detection_count": 5,
+      "raw_before_fix_max_score": 0.00838470458984375,
+      "raw_corrected_max_score": 0.93701171875
+    },
+    {
+      "before_fix_detection_count": 0,
+      "corrected_detection_count": 4,
+      "corrected_vs_preserved_native_completed_records_exact": true,
+      "corrected_vs_preserved_native_feed_byte_identical": true,
+      "corrected_vs_preserved_native_output_byte_identical": true,
+      "image_id": "000000000724.jpg",
+      "new_corrected_records_vs_original_native_quality_records_exact": false,
+      "original_native_quality_count": 3,
+      "original_native_quality_records_match_after_existing_product_classaware_nms_045": true,
+      "prepared_input_sha256": "0b47a96a762b385d128ef659a4ed4f6041e14692ebe099e0b411f41bb8bb063e",
+      "preserved_native_binding_detection_count": 4,
+      "raw_before_fix_max_score": 0.01238250732421875,
+      "raw_corrected_max_score": 0.72021484375
+    }
+  ],
+  "new_energy_executed": false,
+  "new_fps_executed": false,
+  "normal_corrected_runner_sha256": "1242bcd9698a0df33a116465e993514906e5cf9404b70c5d9171f284bd852954",
+  "old_runner_sha256": "307009fd3960867914919e074923464bcda87ac89916d718277a6ccc5da42514",
+  "plan_path": "followup_source::h8_diagnostic/hardware_capture_v2/CAPTURE_PLAN.json",
+  "plan_sha256": "c613baf2df2bcf18f74c924a251bd8cd9c3bfea4744bb945423c165daf9129d3",
+  "quality_N5000_executed": false,
+  "record_comparison_policy": "Exact class_id/score/xyxy records sorted canonically; presentation-only class_name labels omitted according to existing completion record contract. Separate analytic comparison uses existing product class-aware NMS .45 without changing captured records.",
+  "schema": "rq2-h8-b043-real-bounded-capture-independent-native-verification-v1",
+  "scientific_limitation": "Small bounded diagnostic demonstrates implementation repair. It does not establish normal N5000 quality admission or replace historical Native/FPS evidence."
+}

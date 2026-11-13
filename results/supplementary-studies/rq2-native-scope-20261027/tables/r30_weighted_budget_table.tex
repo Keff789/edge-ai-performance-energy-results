@@ -1,0 +1,12 @@
+% Native throughput loss for 187 quality-admissible cuts in 21 model-device groups, with groups weighted equally. At budget k, we test the first min(k,n) ranked cuts and compare their highest Native throughput with the best measured Native cut in that group.
+\begin{tabular}{lrrr}
+\toprule
+Method & $k=1$ & $k=3$ & $k=5$ \\
+\midrule
+Bytes & 17.23 & 9.32 & 3.80 \\
+Generic & 1.35 & 0.26 & 0.00 \\
+Weighted (default) & 15.73 & 10.01 & 7.37 \\
+Weighted (frozen shared) & 16.67 & 5.08 & 2.96 \\
+Weighted (frozen model held-out) & 18.77 & 11.34 & 4.90 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,295 @@
+{
+  "schema": "stage-cost-input-reference-check/v1",
+  "cases": {
+    "deepx_resnet50_b045": {
+      "case_id": "deepx_resnet50_b045",
+      "status": "pass",
+      "reference_origin": "B_independent_serial_P_then_C",
+      "reference_manifest_path": "external-archive/inputs/reference/deepx_resnet50_b045/reference_manifest.json",
+      "reference_manifest_sha256": "55cd3e33a0c0993f5ea427dd231ccafadbc17398781348a414fcade17659621b",
+      "reference_binding": {
+        "schema": "stage-cost-reference-binding/v1",
+        "case_id": "deepx_resnet50_b045",
+        "manifest": {
+          "path": "external-archive/inputs/reference/deepx_resnet50_b045/reference_manifest.json",
+          "sha256": "55cd3e33a0c0993f5ea427dd231ccafadbc17398781348a414fcade17659621b"
+        },
+        "local_manifest_path": "external-archive/inputs/reference/deepx_resnet50_b045/reference_manifest.json",
+        "tensors": [
+          {
+            "name": "add_5",
+            "path": "external-archive/inputs/reference/deepx_resnet50_b045/input_0_boundary.npy",
+            "sha256": "85046f5c26a7776876a6f7ce8f0a2cd82cf2d15a7061794c6952a80538cdb4fb",
+            "shape": [
+              1,
+              512,
+              28,
+              28
+            ],
+            "dtype": "float32",
+            "format": "npy",
+            "local_path": "external-archive/inputs/reference/deepx_resnet50_b045/input_0_boundary.npy"
+          },
+          {
+            "name": "logits",
+            "path": "external-archive/inputs/reference/deepx_resnet50_b045/input_0_output_0.npy",
+            "sha256": "1d640bc931fca9b9c9eedb0a2030084fda04f48838c8df5db9ea86626e10facd",
+            "shape": [
+              1,
+              1000
+            ],
+            "dtype": "float32",
+            "format": "npy",
+            "local_path": "external-archive/inputs/reference/deepx_resnet50_b045/input_0_output_0.npy"
+          }
+        ],
+        "source_report_sha256": "5626f9660dd007c2d273a2ee8c363f9c718cef7b57b19e5730514331a59fad68",
+        "source_report_path": "external-archive/hardware_logs/raw_reports/deepx_resnet50_b045_reference_attempt1.json",
+        "input_sha256": [
+          "9dd6149f74cf2f9c99bdc7457eec2975292cedc38f01bf1999f85d0df7474bb8"
+        ]
+      },
+      "config_sha256": "1ce8b92563c15a76d197f9f7f95021bdb0ebf6839048e12b5b63e925922998ff",
+      "runner_sha256": "57ad36b083d953f3067f1ca8972709ac1cf4402a1ad42216d0ad1b9b85ad4f59",
+      "smoke_reports": [
+        "external-archive/preparation/deepx_resnet50_b045_smoke1_P/report.json",
+        "external-archive/preparation/deepx_resnet50_b045_smoke1_C/report.json",
+        "external-archive/preparation/deepx_resnet50_b045_smoke1_PC/report.json"
+      ],
+      "checked_scope": "fixed saved effective input sequence; repeated-input parity, IDs and drain; no dataset accuracy or arbitrary input assignment claim",
+      "historical_join_status": {
+        "status": "historical_quality_PASS_preserved_semantic_dump_unavailable",
+        "historical_quality_status": "PASS",
+        "historical_quality_claim_reused_as_new_parity": false,
+        "semantic_dump_availability": "missing_at_20261013_exact_probe",
+        "new_pipeline_parity_status": "not_run"
+      },
+      "input_binding": {
+        "effective_input_sha256": [
+          "9dd6149f74cf2f9c99bdc7457eec2975292cedc38f01bf1999f85d0df7474bb8"
+        ],
+        "handoff_sha256": [
+          "85046f5c26a7776876a6f7ce8f0a2cd82cf2d15a7061794c6952a80538cdb4fb"
+        ],
+        "artifact_binding_id": "3b0695879597177bf93092f1569782b3f5fdf43561e77836497e08ee3ece1a8d"
+      }
+    },
+    "h10_regnet_b059": {
+      "case_id": "h10_regnet_b059",
+      "status": "pass",
+      "reference_origin": "B_independent_serial_P_then_C",
+      "reference_manifest_path": "external-archive/inputs/reference/h10_regnet_b059/reference_manifest.json",
+      "reference_manifest_sha256": "74777af2142126f382b49d24b06fca725acf3f7e226b725544bf2a65176c5bcc",
+      "reference_binding": {
+        "schema": "stage-cost-reference-binding/v1",
+        "case_id": "h10_regnet_b059",
+        "manifest": {
+          "path": "external-archive/inputs/reference/h10_regnet_b059/reference_manifest.json",
+          "sha256": "74777af2142126f382b49d24b06fca725acf3f7e226b725544bf2a65176c5bcc"
+        },
+        "local_manifest_path": "external-archive/inputs/reference/h10_regnet_b059/reference_manifest.json",
+        "tensors": [
+          {
+            "name": "add_7",
+            "path": "external-archive/inputs/reference/h10_regnet_b059/input_0_boundary.npy",
+            "sha256": "96ac098bd77b00e2a39e4bf3b1fb32d8951e432a7da8a5c3dab795249b48be34",
+            "shape": [
+              14,
+              14,
+              408
+            ],
+            "dtype": "uint8",
+            "format": "npy",
+            "local_path": "external-archive/inputs/reference/h10_regnet_b059/input_0_boundary.npy"
+          },
+          {
+            "name": "logits",
+            "path": "external-archive/inputs/reference/h10_regnet_b059/input_0_output_0.npy",
+            "sha256": "5e87bb4028843318bbee9df7fb16c6ae0eeb26e3cb6c229d83070465c69ab41b",
+            "shape": [
+              1,
+              1000
+            ],
+            "dtype": "float32",
+            "format": "npy",
+            "local_path": "external-archive/inputs/reference/h10_regnet_b059/input_0_output_0.npy"
+          }
+        ],
+        "source_report_sha256": "ba3c6408f78e132eeab4571f1fe51ac52adbb1e377cc43cfd3f56d1ee0882c4e",
+        "source_report_path": "external-archive/hardware_logs/raw_reports/h10_regnet_b059_reference_attempt1.json",
+        "input_sha256": [
+          "e9b5cc457c40e8ef9a70da487009f1941273c74d19b64cbc8e18e76fc30589b5"
+        ]
+      },
+      "config_sha256": "25c7a7adac856eb39e25bd624dcd33a504a698613cdb56fbeff6c970cdedda7c",
+      "runner_sha256": "57ad36b083d953f3067f1ca8972709ac1cf4402a1ad42216d0ad1b9b85ad4f59",
+      "smoke_reports": [
+        "external-archive/preparation/h10_regnet_b059_smoke1_P/report.json",
+        "external-archive/preparation/h10_regnet_b059_smoke1_C/report.json",
+        "external-archive/preparation/h10_regnet_b059_smoke1_PC/report.json"
+      ],
+      "checked_scope": "fixed saved effective input sequence; repeated-input parity, IDs and drain; no dataset accuracy or arbitrary input assignment claim",
+      "historical_join_status": {
+        "status": "historical_quality_PASS_preserved_semantic_dump_unavailable",
+        "historical_quality_status": "PASS",
+        "historical_quality_claim_reused_as_new_parity": false,
+        "semantic_dump_availability": "missing_at_20261013_exact_probe",
+        "new_pipeline_parity_status": "not_run"
+      },
+      "input_binding": {
+        "effective_input_sha256": [
+          "e9b5cc457c40e8ef9a70da487009f1941273c74d19b64cbc8e18e76fc30589b5"
+        ],
+        "handoff_sha256": [
+          "96ac098bd77b00e2a39e4bf3b1fb32d8951e432a7da8a5c3dab795249b48be34"
+        ],
+        "artifact_binding_id": "ee62fad6cb1c812b5d1e651117d53f059636ed18aeec8319cb99355aa96f4213"
+      }
+    },
+    "deepx_resnet50_b002": {
+      "case_id": "deepx_resnet50_b002",
+      "status": "pass",
+      "reference_origin": "B_independent_serial_P_then_C",
+      "reference_manifest_path": "external-archive/inputs/reference/deepx_resnet50_b002/reference_manifest.json",
+      "reference_manifest_sha256": "b38b5a8d0988ad1196d0d3b1cefca2efd4097b168e1a8f05491e5e57047de6b6",
+      "reference_binding": {
+        "schema": "stage-cost-reference-binding/v1",
+        "case_id": "deepx_resnet50_b002",
+        "manifest": {
+          "path": "external-archive/inputs/reference/deepx_resnet50_b002/reference_manifest.json",
+          "sha256": "b38b5a8d0988ad1196d0d3b1cefca2efd4097b168e1a8f05491e5e57047de6b6"
+        },
+        "local_manifest_path": "external-archive/inputs/reference/deepx_resnet50_b002/reference_manifest.json",
+        "tensors": [
+          {
+            "name": "max_pool2d",
+            "path": "external-archive/inputs/reference/deepx_resnet50_b002/input_0_boundary.npy",
+            "sha256": "78c0bb3e2b55698d71cb6bb50acc6dad0a33aa97f0254092ef14db1922f36c9a",
+            "shape": [
+              1,
+              64,
+              56,
+              56
+            ],
+            "dtype": "float32",
+            "format": "npy",
+            "local_path": "external-archive/inputs/reference/deepx_resnet50_b002/input_0_boundary.npy"
+          },
+          {
+            "name": "logits",
+            "path": "external-archive/inputs/reference/deepx_resnet50_b002/input_0_output_0.npy",
+            "sha256": "3aa8c85cacfe9f2f858941bac22026987dd0dd3303091a010a0216ccd41b0e72",
+            "shape": [
+              1,
+              1000
+            ],
+            "dtype": "float32",
+            "format": "npy",
+            "local_path": "external-archive/inputs/reference/deepx_resnet50_b002/input_0_output_0.npy"
+          }
+        ],
+        "source_report_sha256": "393f4839d7cd95e03032fa2971497b23b3345102b2dc8f0156dd58f2825b19c2",
+        "source_report_path": "external-archive/hardware_logs/raw_reports/deepx_resnet50_b002_reference_attempt1.json",
+        "input_sha256": [
+          "9dd6149f74cf2f9c99bdc7457eec2975292cedc38f01bf1999f85d0df7474bb8"
+        ]
+      },
+      "config_sha256": "d4b378c1f049b31e158301238ad6e2b7911bc6f87f6f623883cd8c55cc1ff202",
+      "runner_sha256": "57ad36b083d953f3067f1ca8972709ac1cf4402a1ad42216d0ad1b9b85ad4f59",
+      "smoke_reports": [
+        "external-archive/preparation/deepx_resnet50_b002_smoke1_P/report.json",
+        "external-archive/preparation/deepx_resnet50_b002_smoke1_C/report.json",
+        "external-archive/preparation/deepx_resnet50_b002_smoke1_PC/report.json"
+      ],
+      "checked_scope": "fixed saved effective input sequence; repeated-input parity, IDs and drain; no dataset accuracy or arbitrary input assignment claim",
+      "historical_join_status": {
+        "status": "historical_quality_PASS_preserved_semantic_dump_unavailable",
+        "historical_quality_status": "PASS",
+        "historical_quality_claim_reused_as_new_parity": false,
+        "semantic_dump_availability": "missing_at_20261013_exact_probe",
+        "new_pipeline_parity_status": "not_run"
+      },
+      "input_binding": {
+        "effective_input_sha256": [
+          "9dd6149f74cf2f9c99bdc7457eec2975292cedc38f01bf1999f85d0df7474bb8"
+        ],
+        "handoff_sha256": [
+          "78c0bb3e2b55698d71cb6bb50acc6dad0a33aa97f0254092ef14db1922f36c9a"
+        ],
+        "artifact_binding_id": "bb442150e931ccc5b79b5cd0ea81055a768ec67617fa9913e56bd8a13e6f9f20"
+      }
+    },
+    "h10_regnet_b123": {
+      "case_id": "h10_regnet_b123",
+      "status": "pass",
+      "reference_origin": "B_independent_serial_P_then_C",
+      "reference_manifest_path": "external-archive/inputs/reference/h10_regnet_b123/reference_manifest.json",
+      "reference_manifest_sha256": "301cdf181406493c9cceae479b62e72fc83e4aefe8fb25300d0e9901e3501faf",
+      "reference_binding": {
+        "schema": "stage-cost-reference-binding/v1",
+        "case_id": "h10_regnet_b123",
+        "manifest": {
+          "path": "external-archive/inputs/reference/h10_regnet_b123/reference_manifest.json",
+          "sha256": "301cdf181406493c9cceae479b62e72fc83e4aefe8fb25300d0e9901e3501faf"
+        },
+        "local_manifest_path": "external-archive/inputs/reference/h10_regnet_b123/reference_manifest.json",
+        "tensors": [
+          {
+            "name": "add_16",
+            "path": "external-archive/inputs/reference/h10_regnet_b123/input_0_boundary.npy",
+            "sha256": "efc2ae7ebac448d83d2c49f7d929e02f9f0dedf25d2a4a453ba01160a5d734fa",
+            "shape": [
+              7,
+              7,
+              912
+            ],
+            "dtype": "uint8",
+            "format": "npy",
+            "local_path": "external-archive/inputs/reference/h10_regnet_b123/input_0_boundary.npy"
+          },
+          {
+            "name": "logits",
+            "path": "external-archive/inputs/reference/h10_regnet_b123/input_0_output_0.npy",
+            "sha256": "bb6b7b3f887ce69514698b8aff990db2c3cf8885ade267f6de6ad624b19cb43e",
+            "shape": [
+              1,
+              1000
+            ],
+            "dtype": "float32",
+            "format": "npy",
+            "local_path": "external-archive/inputs/reference/h10_regnet_b123/input_0_output_0.npy"
+          }
+        ],
+        "source_report_sha256": "e00c970b3d18482305ee887dec34386de1a0f6761ecdd62f499e235a6f1bb8ef",
+        "source_report_path": "external-archive/hardware_logs/raw_reports/h10_regnet_b123_reference_attempt1.json",
+        "input_sha256": [
+          "e9b5cc457c40e8ef9a70da487009f1941273c74d19b64cbc8e18e76fc30589b5"
+        ]
+      },
+      "config_sha256": "2e67b168241c7b4838d393c52b160800a1039c592e47345a3cf6f17d80ba56e2",
+      "runner_sha256": "57ad36b083d953f3067f1ca8972709ac1cf4402a1ad42216d0ad1b9b85ad4f59",
+      "smoke_reports": [
+        "external-archive/preparation/h10_regnet_b123_smoke1_P/report.json",
+        "external-archive/preparation/h10_regnet_b123_smoke1_C/report.json",
+        "external-archive/preparation/h10_regnet_b123_smoke1_PC/report.json"
+      ],
+      "checked_scope": "fixed saved effective input sequence; repeated-input parity, IDs and drain; no dataset accuracy or arbitrary input assignment claim",
+      "historical_join_status": {
+        "status": "historical_quality_PASS_preserved_semantic_dump_unavailable",
+        "historical_quality_status": "PASS",
+        "historical_quality_claim_reused_as_new_parity": false,
+        "semantic_dump_availability": "missing_at_20261013_exact_probe",
+        "new_pipeline_parity_status": "not_run"
+      },
+      "input_binding": {
+        "effective_input_sha256": [
+          "e9b5cc457c40e8ef9a70da487009f1941273c74d19b64cbc8e18e76fc30589b5"
+        ],
+        "handoff_sha256": [
+          "efc2ae7ebac448d83d2c49f7d929e02f9f0dedf25d2a4a453ba01160a5d734fa"
+        ],
+        "artifact_binding_id": "bdf258c44d020bebba57c09e1d714435a50389bf99e8c91dccb1644c91d37b77"
+      }
+    }
+  }
+}

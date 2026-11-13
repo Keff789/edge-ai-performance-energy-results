@@ -1,0 +1,59 @@
+{
+  "schema": "staged-selection-review-flow-v1",
+  "language": "de",
+  "kind": "prospective_and_retrospective_workflows",
+  "prospective_path_measured": false,
+  "prospective_stages": [
+    {
+      "title": "Graphgrenzen",
+      "description": "Kandidatenmenge bilden"
+    },
+    {
+      "title": "Graph-Vorauswahl",
+      "description": "Nach Bytes ordnen"
+    },
+    {
+      "title": "Kompilierung\n+ Qualität",
+      "description": "Kandidaten validieren"
+    },
+    {
+      "title": "Generic",
+      "description": "Durchsatz messen"
+    },
+    {
+      "title": "Native + Auswahl",
+      "description": "Top zwei testen;\nschnelleren wählen"
+    }
+  ],
+  "retrospective_stages": [
+    {
+      "title": "Gemessene zulässige\nKandidatenmenge",
+      "description": "187 Schnittpaare / 21 Kombinationen"
+    },
+    {
+      "title": "Graph-Vorauswahl",
+      "description": "Bytes: bis zu k Schnitte"
+    },
+    {
+      "title": "Generic-Replay",
+      "description": "Gemessenen Durchsatz ordnen"
+    },
+    {
+      "title": "Native-Replay + Auswahl",
+      "description": "Top zwei prüfen;\nschnelleren wählen"
+    }
+  ],
+  "paired_cuts": 187,
+  "model_accelerator_combinations": 21,
+  "retrospective_input_scope": "Previously measured, quality-admissible paired cuts.",
+  "prospective_rejections": "Compilation and quality failures consume search effort; not included in replay budgets.",
+  "graph_example_source": {
+    "path": "results/supplementary-studies/rq3-generic420-detector-corrected-20261027/inputs/feature_metadata.json",
+    "sha256": "af4acf61eb65dbf3d75b2fd77011a22867fb339ab3f9b9643663832de6af36a8"
+  },
+  "notes": [
+    "Konzeptioneller Ablauf. Kompilierungsfehler und Qualitätsausschlüsse verursachen zusätzlichen Suchaufwand.",
+    "Das Replay beginnt nach Kompilierung und Qualitätsprüfung; deren Aufwand ist in den Testbudgets nicht enthalten."
+  ],
+  "caption": "Prospektive Auswahl einer Implementierung und retrospektive Auswertung dieser Studie. Die prospektive Suche bildet eine Kandidatenmenge, nimmt eine Graph-Vorauswahl vor und kompiliert und validiert die Kandidaten vor den Durchsatztests. Das retrospektive Replay beginnt mit bereits gemessenen, qualitätszulässigen Schnittpaaren und wertet die Folge Bytes--Generic--Native anhand der gespeicherten Durchsatzwerte aus. Der prospektive Pfad ist konzeptionell; eine Suche über alle Graphgrenzen wurde nicht ausgewertet. Die gepaarten Detektorkombinationen umfassen jeweils nur drei Schnitte."
+}

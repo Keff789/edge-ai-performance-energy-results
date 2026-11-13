@@ -1,0 +1,46 @@
+{
+  "results_commit": "1aaa2fdb8a919e5d8d5668d4030c061138b0d3fd",
+  "generator": "scripts/split-inference/render_figures.py (via scripts/reproduce_current.py --languages en de)",
+  "artifacts": [
+    {
+      "file": "04_tradeoff_mobilenet_v3_large.pdf",
+      "source": "generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_mobilenet_v3_large.pdf",
+      "sha256": "7d759ef9f1f472b8a6fe35f04ced7fd98322d02f48686e9fc8dc81bf0e6b7d53"
+    },
+    {
+      "file": "04_tradeoff_regnet_x_1_6gf.pdf",
+      "source": "generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_regnet_x_1_6gf.pdf",
+      "sha256": "8a9305e5690347476e3994faa6844ae874d848186e97da841a086b3e4323f60f"
+    },
+    {
+      "file": "04_tradeoff_resnet50.pdf",
+      "source": "generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_resnet50.pdf",
+      "sha256": "6bcfdddffe5f4becf38059f2d643d871cbd9e3172f57736dd7408ab0d75d2f78"
+    },
+    {
+      "file": "04_tradeoff_yolo11l.pdf",
+      "source": "generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_yolo11l.pdf",
+      "sha256": "2c68014ff6342f3a5d26d8d9def31751b39a39d61d1b6759bb4aa721dc96eb76"
+    },
+    {
+      "file": "04_tradeoff_yolo26m.pdf",
+      "source": "generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_yolo26m.pdf",
+      "sha256": "afeb1935da9309b0e232f225bd4b403fec321c619d22b29d997a4040dc13c5b2"
+    },
+    {
+      "file": "04_tradeoff_yolo26s.pdf",
+      "source": "generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_yolo26s.pdf",
+      "sha256": "40450ebef9f2d394a23b71fad05737c6165c3e62dfec1502e22efeaf4a407dbc"
+    },
+    {
+      "file": "04_tradeoff_yolov7_paper.pdf",
+      "source": "generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_yolov7_paper.pdf",
+      "sha256": "c39cf7a2b3b8ccdb70a1ecd2b38f5cb3a65852d9bb8014436b0f7dc566787858"
+    }
+  ],
+  "dataset_configurations": 451,
+  "plotted_configurations": 450,
+  "omitted_configuration": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
+  "omission_reason": "missing_energy_mj_per_image",
+  "omission_source": "results/split-inference/tables/PARETO_POINTS.json"
+}

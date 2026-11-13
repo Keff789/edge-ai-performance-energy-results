@@ -1,0 +1,3 @@
+model,setup,generic_budget,native_budget,selected_cut,selected_native_fps,best_native_cut,best_native_cuts,best_native_fps,retained_native_pct,best_native_bytes_rank,best_native_in_graph_shortlist,best_native_tested,preserves_shortlist_best,failure_stage
+regnet_x_1_6gf,H8,12,2,b066,583.689262,b073,b073,617.505899,94.52367385400476,6,True,False,False,generic_ranking
+resnet50,H8,12,2,b060,570.065065,b038,b038,581.33212,98.06185575983656,14,False,False,True,graph_preselection

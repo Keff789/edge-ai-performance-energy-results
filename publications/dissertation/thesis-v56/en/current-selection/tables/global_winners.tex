@@ -1,0 +1,19 @@
+\begin{table}[!htb]
+\centering\small\setlength{\tabcolsep}{3pt}
+\caption{Fastest measured Full and split across all tested systems under the 5\% relative quality-loss rule. Superscript G identifies the Generic YOLO11l split; the other six use Native. Energy belongs to these exact throughput-selected configurations. Ratios use unrounded values.}
+\label{tab:evaluation:global_winners}
+
+\begin{tabular}{@{}llrlrrrr@{}}
+\toprule
+Model & Full & FPS & Split & FPS & $R_g$ & \shortstack{Full\\mJ/image} & \shortstack{Split\\mJ/image} \\
+\midrule
+MobileNetV3-L & DX & 1469 & DX/b135 & 1552 & 1.06 & 12.01 & 12.59 \\
+RegNet-X & DX & 538 & H10/b123 & 1367 & 2.54 & 31.54 & 15.83 \\
+ResNet-50 & DX & 656 & H10/b095 & 1100 & 1.68 & 27.65 & 29.46 \\
+YOLO11l & DX & 63 & DX/b511$^{G}$ & 69 & 1.10 & 315.23 & 326.19 \\
+YOLO26m & TRT (H8) & 85 & H10/b043 & 110 & 1.30 & 400.03 & 319.65 \\
+YOLO26s & TRT (DX) & 152 & H8/b021 & 187 & 1.23 & 187.80 & 157.65 \\
+YOLOv7 & DX & 83 & H8/b066 & 113 & 1.35 & 269.44 & 330.14 \\
+\bottomrule
+\end{tabular}
+\end{table}

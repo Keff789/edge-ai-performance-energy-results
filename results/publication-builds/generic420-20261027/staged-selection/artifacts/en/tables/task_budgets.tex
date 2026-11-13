@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering\small
+\caption{Staged selection by task. All rows use Bytes and at most two Native tests per group. Test counts are totals over the reported groups.}
+\label{tab:staged-task-budgets}
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Task & $k$ & Groups & Generic tests & Native tests & Exact & Mean retained (\%) & Max. loss (\%) \\
+\midrule
+All & 5 & 21 & 81 & 42 & 17 & 96.20 & 54.47 \\
+All & 12 & 21 & 137 & 42 & 19 & 99.65 & 5.48 \\
+Classifiers & 5 & 9 & 45 & 18 & 5 & 91.14 & 54.47 \\
+Classifiers & 12 & 9 & 101 & 18 & 7 & 99.18 & 5.48 \\
+Detectors & 5 & 12 & 36 & 24 & 12 & 100.00 & 0.00 \\
+Detectors & 12 & 12 & 36 & 24 & 12 & 100.00 & 0.00 \\
+\bottomrule
+\end{tabular}
+\end{table*}

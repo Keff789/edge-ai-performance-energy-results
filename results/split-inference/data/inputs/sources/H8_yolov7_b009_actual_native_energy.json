@@ -1,0 +1,215 @@
+{
+  "acquisition": {
+    "new_physical_captures": 2,
+    "reused_valid_repeats": 1,
+    "valid_logical_repeats": 3
+  },
+  "aggregate": {
+    "avg_energy_per_work_unit_j": 0.5994322504059489,
+    "energy_efficiency_claim_eligible": true,
+    "energy_per_work_unit_j_ci_high": 0.6005610812294104,
+    "energy_per_work_unit_j_ci_low": 0.5983034195824875,
+    "energy_physical_scope": "FS",
+    "final_energy_gate_status": "pass",
+    "repeat_contract_complete": true
+  },
+  "cleanup": {
+    "active_owned_remote_operations": 0,
+    "cleanup_proven": true,
+    "errors": [],
+    "finished_at": "2026-10-27T18:46:59.632954+00:00",
+    "foreign_processes_stopped": false,
+    "owned_local_active": 0,
+    "registry_cancelled": false,
+    "session_id": "six_pack_native_energy_97921a66c5c04245805eb57c087572b9"
+  },
+  "normal": {
+    "complete": true,
+    "failed_physical_collector_attempt_count": 2,
+    "ok": true,
+    "physical_collector_attempt_count": 5,
+    "state": "completed",
+    "status": "completed",
+    "valid_logical_repeat_count": 3
+  },
+  "normal_row": {
+    "campaign_comparison_released": false,
+    "energy_quality_qualified": true,
+    "energy_quality_status": "quality_qualified",
+    "local_accuracy_gate_pass": true
+  },
+  "normal_run": {
+    "energy_aggregate_complete": true,
+    "energy_aggregate_valid_repeat_count": 3,
+    "energy_aggregate_verified": true,
+    "energy_quality_qualified": true,
+    "rc": 0
+  },
+  "performance_authority": {
+    "actual_energy_native_dataset_quality_FPS_source": {
+      "case": "b009",
+      "model": "yolov7_paper",
+      "native_command_contract_sha256": "6f6316a869b022cf1698fd0c5683971a522e478ccf082ffd01d43644e87eea92",
+      "repetition_count_valid": 3,
+      "repetition_records": [
+        {
+          "fps_makespan": 44.69742402353799,
+          "runtime_instance_id": "fresh_runtime:0e68b1d72ed4087e2e9548593d21b9edbe0ed0d7f64cb65052286e4e03e02847"
+        },
+        {
+          "fps_makespan": 44.76443847494783,
+          "runtime_instance_id": "fresh_runtime:b3e2b0caf289dadfad032c7a3376940e06e75139a37a70116f911752800fa69a"
+        },
+        {
+          "fps_makespan": 44.830634878290454,
+          "runtime_instance_id": "fresh_runtime:08d1011792793763eb31dee98efa690749d860ee331a37c90122179dcfa594fc"
+        }
+      ],
+      "setup_id": "orin_nx_hailo8_01",
+      "source_reports": [
+        "followup_source::six_pack_20261027/h8/native_b009_fps_v3/collected/rep01/native_fifo_results.json",
+        "followup_source::six_pack_20261027/h8/native_b009_fps_v3/collected/rep02/native_fifo_results.json",
+        "followup_source::six_pack_20261027/h8/native_b009_fps_v3/collected/rep03/native_fifo_results.json"
+      ]
+    },
+    "actual_raw_fps": [
+      {
+        "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/collected/rep01/native_fifo_results.json",
+        "sha256": "d91bfb09c7c5acf88e3e4f7f26c46880e0456bdfc630ebb17565715ea4142939",
+        "size_bytes": 791378
+      },
+      {
+        "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/collected/rep02/native_fifo_results.json",
+        "sha256": "0b928b878067d61cca733ff857ecf6b9c9a1e13b1622a39136b092e74da4c883",
+        "size_bytes": 791390
+      },
+      {
+        "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/collected/rep03/native_fifo_results.json",
+        "sha256": "0d5ca624a9360791dbeca62325d410857487b373e3b6193e162a4ca241f22e98",
+        "size_bytes": 791375
+      }
+    ],
+    "normal_summary": {
+      "path": "followup_source::six_pack_20261027/h8/native_b009_fps_v3/normal_import/reports/native_producer_combined_summary.json",
+      "sha256": "76df7a60e31bf4b5a500bd0949b0dc5f77df64ea11bb6b3a78506f0a2c3d97a4",
+      "size_bytes": 2937681
+    }
+  },
+  "repetitions": [
+    {
+      "environment_observation": {
+        "evidence_path": "followup_source::six_pack_20261027/h8/native_b009_energy_v2/recovery_attempts/c1813c5bf3704a96ab9fb1b67a0691b0/energy_view/reports/native_energy_measurements/measurements/hailo8_to_trt__yolov7_paper__b009__orin_nx_hailo8_01__6f6316a869b0/plan_2b7d4ae9b5a54a7bbb6f87688cc4d36b/attempt_3cf9e77caf3d427a8b7a8a0892cde0b0/run_000/environment_observation.json",
+        "evidence_sha256": "23a9d6c7b17cddb15bc4b1d1312c80c80a5c09c45bb9ee51fea7d2cdfb11310b",
+        "ok": true
+      },
+      "source": {
+        "path": "followup_source::six_pack_20261027/h8/native_b009_energy_v2/recovery_attempts/c1813c5bf3704a96ab9fb1b67a0691b0/energy_view/reports/native_energy_measurements/measurements/hailo8_to_trt__yolov7_paper__b009__orin_nx_hailo8_01__6f6316a869b0/plan_2b7d4ae9b5a54a7bbb6f87688cc4d36b/attempt_3cf9e77caf3d427a8b7a8a0892cde0b0/run_000/energy_summary.json",
+        "sha256": "d99738682ae1b604db0e6c1fb83c07eed37f8446636a514d3a3784c1bff83c47",
+        "size_bytes": 113500
+      },
+      "values": {
+        "campaign_reused_repeat": {
+          "budget_file": "followup_source::six_pack_20261027/h8/native_b009_energy_v2/energy_task_budget.json",
+          "campaign_row": "[\"hailo8_to_trt\",\"yolov7_paper\",\"b009\",\"orin_nx_hailo8_01\"]",
+          "logical_repeat": "repeat:0",
+          "run_directory": "followup_source::six_pack_20261027/h8/native_b009_energy_v2/recovery_attempts/c1813c5bf3704a96ab9fb1b67a0691b0/energy_view/reports/native_energy_measurements/measurements/hailo8_to_trt__yolov7_paper__b009__orin_nx_hailo8_01__6f6316a869b0/plan_2b7d4ae9b5a54a7bbb6f87688cc4d36b/attempt_3cf9e77caf3d427a8b7a8a0892cde0b0/run_000"
+        },
+        "energy_configured_workload_duration_s": 60.0,
+        "energy_measured_workload_duration_s": 61.879002838,
+        "energy_per_work_unit_j": 0.5993582198276892,
+        "energy_physical_scope": "FS",
+        "energy_work_units_used": 2699,
+        "final_energy_gate_status": "pass",
+        "full_system_current_scale_factor_applied": 0.9136343897390969,
+        "full_system_current_scale_verified": true,
+        "scientific_primary_active_duration_s": 61.9195,
+        "scientific_primary_energy_j": 1617.6678353149332
+      }
+    },
+    {
+      "environment_observation": {
+        "evidence_path": "followup_source::six_pack_20261027/h8/native_b009_energy_v2/recovery_attempts/bf6b9bf79d374f60b95d7367651f8790/energy_view/reports/native_energy_measurements/measurements/hailo8_to_trt__yolov7_paper__b009__orin_nx_hailo8_01__6f6316a869b0/plan_ec0e78482aa94d489af70cd0bb86489d/attempt_897e99205a5e4d3aaaeb0c8d62f840cb/run_001/environment_observation.json",
+        "evidence_sha256": "40aa6eaeed7bab8d06474fc01a1a45a3d0a1b20f370b4c0aa3f36d2ad76bf479",
+        "ok": true
+      },
+      "source": {
+        "path": "followup_source::six_pack_20261027/h8/native_b009_energy_v2/recovery_attempts/bf6b9bf79d374f60b95d7367651f8790/energy_view/reports/native_energy_measurements/measurements/hailo8_to_trt__yolov7_paper__b009__orin_nx_hailo8_01__6f6316a869b0/plan_ec0e78482aa94d489af70cd0bb86489d/attempt_897e99205a5e4d3aaaeb0c8d62f840cb/run_001/energy_summary.json",
+        "sha256": "eab5090d17620d2ff944cb621c037638d3f0d1aa1007a84a3cfaf8dc1f99213f",
+        "size_bytes": 114217
+      },
+      "values": {
+        "campaign_reused_repeat": null,
+        "energy_configured_workload_duration_s": 60.0,
+        "energy_measured_workload_duration_s": 61.851429976,
+        "energy_per_work_unit_j": 0.5990193955981523,
+        "energy_physical_scope": "FS",
+        "energy_work_units_used": 2690,
+        "final_energy_gate_status": "pass",
+        "full_system_current_scale_factor_applied": 0.9136343897390969,
+        "full_system_current_scale_verified": true,
+        "scientific_primary_active_duration_s": 61.8875,
+        "scientific_primary_energy_j": 1611.3621741590298
+      }
+    },
+    {
+      "environment_observation": {
+        "evidence_path": "followup_source::six_pack_20261027/h8/native_b009_energy_v2/recovery_attempts/bf6b9bf79d374f60b95d7367651f8790/energy_view/reports/native_energy_measurements/measurements/hailo8_to_trt__yolov7_paper__b009__orin_nx_hailo8_01__6f6316a869b0/plan_ec0e78482aa94d489af70cd0bb86489d/attempt_897e99205a5e4d3aaaeb0c8d62f840cb/run_002/environment_observation.json",
+        "evidence_sha256": "0a3c881e475d8af916c7b3bc1487a3c13b37bea16ff39001c92503e10c54ad17",
+        "ok": true
+      },
+      "source": {
+        "path": "followup_source::six_pack_20261027/h8/native_b009_energy_v2/recovery_attempts/bf6b9bf79d374f60b95d7367651f8790/energy_view/reports/native_energy_measurements/measurements/hailo8_to_trt__yolov7_paper__b009__orin_nx_hailo8_01__6f6316a869b0/plan_ec0e78482aa94d489af70cd0bb86489d/attempt_897e99205a5e4d3aaaeb0c8d62f840cb/run_002/energy_summary.json",
+        "sha256": "f7e787eaf3fcf5e84924139b801636611ec6dacbc907100ec5ace4951f5d21c1",
+        "size_bytes": 113489
+      },
+      "values": {
+        "campaign_reused_repeat": null,
+        "energy_configured_workload_duration_s": 60.0,
+        "energy_measured_workload_duration_s": 61.886096686,
+        "energy_per_work_unit_j": 0.5999191357920052,
+        "energy_physical_scope": "FS",
+        "energy_work_units_used": 2697,
+        "final_energy_gate_status": "pass",
+        "full_system_current_scale_factor_applied": 0.9136343897390969,
+        "full_system_current_scale_verified": true,
+        "scientific_primary_active_duration_s": 61.9195,
+        "scientific_primary_energy_j": 1617.981909231038
+      }
+    }
+  ],
+  "source_scope": {
+    "claim_comparable": false,
+    "energy_scope": "FS",
+    "full_baseline_comparison_released": false,
+    "native_energy_planner_admission": {
+      "effective_part2_input_count": 1,
+      "energy_command_preflight_ok": true,
+      "energy_command_preflight_scope": "planner_time_verified_contract_ssh_runtime_and_preflight_command_constructibility",
+      "full_baseline": false,
+      "predicate": "runtime_success AND energy_command_preflight_ok AND (full_baseline OR split_has_valid_part2_input)",
+      "runtime_success": true,
+      "schema": "onnx-splitpoint/native-energy-planner-admission",
+      "schema_version": 1,
+      "selected": true,
+      "split_has_valid_part2_input": true,
+      "split_part2_input_status": "verified_single_static_part2_input_technical_proof"
+    }
+  },
+  "upstream": {
+    "aggregate": {
+      "path": "followup_source::six_pack_20261027/h8/native_b009_energy_v2/recovery_attempts/bf6b9bf79d374f60b95d7367651f8790/energy_view/reports/native_energy_measurements/measurements/hailo8_to_trt__yolov7_paper__b009__orin_nx_hailo8_01__6f6316a869b0/plan_ec0e78482aa94d489af70cd0bb86489d/attempt_897e99205a5e4d3aaaeb0c8d62f840cb/energy_aggregate.json",
+      "sha256": "bf6eb6ad7d4d716e330a6ef6b60e763542857a4da0b45187f80b74b139cac88f",
+      "size_bytes": 442051
+    },
+    "cleanup": {
+      "path": "followup_source::six_pack_20261027/h8/native_b009_energy_v2/recovery_attempts/bf6b9bf79d374f60b95d7367651f8790/CLEANUP_STATUS.json",
+      "sha256": "cc9872aedcb842b81da3582447b8ed805023acd0e93bdfea8b4bd2814e86a622",
+      "size_bytes": 308
+    },
+    "normal_result": {
+      "path": "followup_source::six_pack_20261027/h8/native_b009_energy_v2/recovery_attempts/bf6b9bf79d374f60b95d7367651f8790/energy_view/reports/native_energy_measurements/native_producer_energy_results.json",
+      "sha256": "aac122c84d1f654f7539ef8e9965f275620dc6e5a45224dca5bca70c7357641a",
+      "size_bytes": 1415212
+    }
+  }
+}

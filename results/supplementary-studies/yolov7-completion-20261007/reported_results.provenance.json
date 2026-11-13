@@ -1,0 +1,339 @@
+{
+  "schema": "report_only_yolov7_performance_transcription_v1",
+  "source": {
+    "path": "SOURCE_REPORT.txt",
+    "sha256": "2ae5446d5114ea647a21ed2804ebb6ec28caab829952c58d4e045a5f49de23e5",
+    "bytes": 21507
+  },
+  "output": {
+    "path": "reported_results.csv",
+    "sha256": "a389de372e2b9f6b6400271e7e0ea8db3df66cc0357bb46889f7616e9b5fc454",
+    "records": 15
+  },
+  "extraction_script": {
+    "path": "extract_reported_results.py",
+    "sha256": "8106b2761df0dee239606e8ac3ac5e2d7fb3e26fcc357b530bae90292d941282"
+  },
+  "evidence_scope": "Only the supplied Markdown report was parsed. Its newly referenced review ZIP, raw reports, code and telemetry were not available for this extraction and were not independently verified.",
+  "raw_data_verified": false,
+  "quality_labels_verified": false,
+  "reported_precision": "FPS and ratios transcribed at six decimals exactly as printed. Recomputed ratios use only displayed values and do not recover full-precision source data.",
+  "measurement_date_note": "No absolute measurement date appears in the supplied report. Directory/upload date is not substituted for a measurement date.",
+  "source_tables": {
+    "split_header_line": 34,
+    "full_header_line": 50,
+    "historical_header_line": 63,
+    "split_quality_statement_line": 46
+  },
+  "reported_cohorts": {
+    "new_split_configurations": 9,
+    "new_split_repeats": 27,
+    "reused_full_configurations": 6,
+    "reused_full_repeats": 18,
+    "separate_current_trt_controls": 3,
+    "controls_included_in_repetition_triples": false
+  },
+  "energy": {
+    "all_15_current_variants": "not_measured",
+    "csv_missing_value": "NA",
+    "historical_energy_not_joined": true
+  },
+  "arithmetic_checks": {
+    "median_checks": [
+      {
+        "record_id": "H8__native_full_hailo8__full",
+        "pass": true
+      },
+      {
+        "record_id": "H8__native_full_tensorrt__full",
+        "pass": true
+      },
+      {
+        "record_id": "H10__native_full_hailo10h__full",
+        "pass": true
+      },
+      {
+        "record_id": "H10__native_full_tensorrt__full",
+        "pass": true
+      },
+      {
+        "record_id": "DeepX__native_full_deepx__full",
+        "pass": true
+      },
+      {
+        "record_id": "DeepX__native_full_tensorrt__full",
+        "pass": true
+      },
+      {
+        "record_id": "H8__hailo8_to_trt__b009",
+        "pass": true
+      },
+      {
+        "record_id": "H8__hailo8_to_trt__b044",
+        "pass": true
+      },
+      {
+        "record_id": "H8__hailo8_to_trt__b066",
+        "pass": true
+      },
+      {
+        "record_id": "H10__hailo10h_to_trt__b009",
+        "pass": true
+      },
+      {
+        "record_id": "H10__hailo10h_to_trt__b044",
+        "pass": true
+      },
+      {
+        "record_id": "H10__hailo10h_to_trt__b066",
+        "pass": true
+      },
+      {
+        "record_id": "DeepX__deepx_to_trt__b009",
+        "pass": true
+      },
+      {
+        "record_id": "DeepX__deepx_to_trt__b044",
+        "pass": true
+      },
+      {
+        "record_id": "DeepX__deepx_to_trt__b066",
+        "pass": true
+      }
+    ],
+    "split_ratio_checks": [
+      {
+        "record_id": "H8__hailo8_to_trt__b009",
+        "reference": "fastest_full",
+        "recomputed_from_displayed_values": "0.82754822636938123453526649639487",
+        "reported": "0.827548",
+        "absolute_difference": "2.2636938123453526649639487E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "record_id": "H8__hailo8_to_trt__b009",
+        "reference": "accelerator_full",
+        "recomputed_from_displayed_values": "1.3613541250989722138855184673105",
+        "reported": "1.361354",
+        "absolute_difference": "1.250989722138855184673105E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "record_id": "H8__hailo8_to_trt__b044",
+        "reference": "fastest_full",
+        "recomputed_from_displayed_values": "0.92311302297271038323590540765446",
+        "reported": "0.923113",
+        "absolute_difference": "2.297271038323590540765446E-8",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "record_id": "H8__hailo8_to_trt__b044",
+        "reference": "accelerator_full",
+        "recomputed_from_displayed_values": "1.5185625220536127197057660879030",
+        "reported": "1.518563",
+        "absolute_difference": "4.779463872802942339120970E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "record_id": "H8__hailo8_to_trt__b066",
+        "reference": "fastest_full",
+        "recomputed_from_displayed_values": "2.1724503445495213872221533216306",
+        "reported": "2.172450",
+        "absolute_difference": "3.445495213872221533216306E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "record_id": "H8__hailo8_to_trt__b066",
+        "reference": "accelerator_full",
+        "recomputed_from_displayed_values": "3.5737787163174797661131275397494",
+        "reported": "3.573779",
+        "absolute_difference": "2.836825202338868724602506E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "record_id": "H10__hailo10h_to_trt__b009",
+        "reference": "fastest_full",
+        "recomputed_from_displayed_values": "0.99761665545564671676204531971531",
+        "reported": "0.997617",
+        "absolute_difference": "3.4454435328323795468028469E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "record_id": "H10__hailo10h_to_trt__b009",
+        "reference": "accelerator_full",
+        "recomputed_from_displayed_values": "4.1705907092234807681704009298459",
+        "reported": "4.170591",
+        "absolute_difference": "2.907765192318295990701541E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "record_id": "H10__hailo10h_to_trt__b044",
+        "reference": "fastest_full",
+        "recomputed_from_displayed_values": "1.2529094408132057986817829637834",
+        "reported": "1.252909",
+        "absolute_difference": "4.408132057986817829637834E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "record_id": "H10__hailo10h_to_trt__b044",
+        "reference": "accelerator_full",
+        "recomputed_from_displayed_values": "5.2378560890879781301396043737447",
+        "reported": "5.237856",
+        "absolute_difference": "8.90879781301396043737447E-8",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "record_id": "H10__hailo10h_to_trt__b066",
+        "reference": "fastest_full",
+        "recomputed_from_displayed_values": "1.0363214707863624813830344663641",
+        "reported": "1.036321",
+        "absolute_difference": "4.707863624813830344663641E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "record_id": "H10__hailo10h_to_trt__b066",
+        "reference": "accelerator_full",
+        "recomputed_from_displayed_values": "4.3323982956723724184381100377699",
+        "reported": "4.332398",
+        "absolute_difference": "2.956723724184381100377699E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "record_id": "DeepX__deepx_to_trt__b009",
+        "reference": "fastest_full",
+        "recomputed_from_displayed_values": "0.71568930355754048818922864144124",
+        "reported": "0.715689",
+        "absolute_difference": "3.0355754048818922864144124E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "record_id": "DeepX__deepx_to_trt__b009",
+        "reference": "accelerator_full",
+        "recomputed_from_displayed_values": "1.4759205934654009634630244904845",
+        "reported": "1.475921",
+        "absolute_difference": "4.065345990365369755095155E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "record_id": "DeepX__deepx_to_trt__b044",
+        "reference": "fastest_full",
+        "recomputed_from_displayed_values": "1.0310753881657753588037363458805",
+        "reported": "1.031075",
+        "absolute_difference": "3.881657753588037363458805E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "record_id": "DeepX__deepx_to_trt__b044",
+        "reference": "accelerator_full",
+        "recomputed_from_displayed_values": "2.1263212838933399878644293856528",
+        "reported": "2.126321",
+        "absolute_difference": "2.838933399878644293856528E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "record_id": "DeepX__deepx_to_trt__b066",
+        "reference": "fastest_full",
+        "recomputed_from_displayed_values": "0.64654434329350445508818945687667",
+        "reported": "0.646544",
+        "absolute_difference": "3.4329350445508818945687667E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "record_id": "DeepX__deepx_to_trt__b066",
+        "reference": "accelerator_full",
+        "recomputed_from_displayed_values": "1.3333273336796862201480368777355",
+        "reported": "1.333327",
+        "absolute_difference": "3.336796862201480368777355E-7",
+        "compatible_with_printed_precision": true
+      }
+    ],
+    "historical_ratio_checks": [
+      {
+        "setup": "H8",
+        "case": "b009",
+        "source_line": 65,
+        "recomputed_from_displayed_values": "0.90597489114147097050923101890264",
+        "reported": "0.905975",
+        "absolute_difference": "1.0885852902949076898109736E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "setup": "H8",
+        "case": "b044",
+        "source_line": 66,
+        "recomputed_from_displayed_values": "0.89411661210614211946234338037471",
+        "reported": "0.894117",
+        "absolute_difference": "3.8789385788053765661962529E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "setup": "H8",
+        "case": "b066",
+        "source_line": 67,
+        "recomputed_from_displayed_values": "0.98978431403016489208820966780130",
+        "reported": "0.989784",
+        "absolute_difference": "3.1403016489208820966780130E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "setup": "H10",
+        "case": "b009",
+        "source_line": 68,
+        "recomputed_from_displayed_values": "4.0800744961803746274773900533474",
+        "reported": "4.080075",
+        "absolute_difference": "5.038196253725226099466526E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "setup": "H10",
+        "case": "b044",
+        "source_line": 69,
+        "recomputed_from_displayed_values": "4.6887594850286586273634062825666",
+        "reported": "4.688759",
+        "absolute_difference": "4.850286586273634062825666E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "setup": "H10",
+        "case": "b066",
+        "source_line": 70,
+        "recomputed_from_displayed_values": "4.1483796456310464458326863289139",
+        "reported": "4.148380",
+        "absolute_difference": "3.543689535541673136710861E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "setup": "DeepX",
+        "case": "b009",
+        "source_line": 71,
+        "recomputed_from_displayed_values": "2.4042168687956295192032394398493",
+        "reported": "2.404217",
+        "absolute_difference": "1.312043704807967605601507E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "setup": "DeepX",
+        "case": "b044",
+        "source_line": 72,
+        "recomputed_from_displayed_values": "3.4386747612242705919134676023644",
+        "reported": "3.438675",
+        "absolute_difference": "2.387757294080865323976356E-7",
+        "compatible_with_printed_precision": true
+      },
+      {
+        "setup": "DeepX",
+        "case": "b066",
+        "source_line": 73,
+        "recomputed_from_displayed_values": "2.0468752728428098254923313649958",
+        "reported": "2.046875",
+        "absolute_difference": "2.728428098254923313649958E-7",
+        "compatible_with_printed_precision": true
+      }
+    ]
+  },
+  "descriptive_counts_from_displayed_medians": {
+    "splits_above_fastest_full": 4,
+    "split_configurations": 9,
+    "statistical_superiority_claimed": false
+  }
+}

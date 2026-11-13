@@ -1,0 +1,67 @@
+% Ersatzbloecke fuer die geaenderten Renderer-Grafiken.
+% Jeweils die zugehoerige figure-Umgebung ersetzen.
+% Die neue Ratengrafik am Anfang der Kontrollversuche in Abschnitt 4.2.3 einfuegen.
+% Die Bildunterschrift zur Pausensequenz war bereits korrekt und bleibt unveraendert.
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=346.19bp]{9_resources/04_energiemessung/fp16_objectives.pdf}
+ \caption[Unterschiedliche Abtastraten für Energieintegration und spektrale Abdeckung.]{Energieintegration über 104~s (a) und spektrale Abdeckung (b) für 15 FP16-Aufzeichnungen. Links ist das 95. Perzentil der Energiefehler über alle Aufzeichnungs- und Rasterverschiebungsfälle dargestellt. Rechts zeigen die Punkte den Median des Anteils der positiven Überschussvarianz unterhalb der jeweiligen Nyquist-Grenze. Die Balken reichen vom empirischen 5. bis zum 95. Perzentil über die 15 Aufzeichnungen. Die Linien markieren die Abdeckungsziele von 95\% und 99\%. Ein Ziel gilt als erreicht, wenn bereits das 5. Perzentil den Zielwert erreicht. Die Abdeckungsentscheidungen bei 125 und 160~kS/s beziehen sich auf die getesteten Raten. Ein kontinuierliches Minimum wird daraus nicht abgeleitet. Adaptiert aus der archivierten Analyse aller Aufzeichnungen \cite{energyEvidence2026,edgeAIResults2026}.}
+ \label{fig:energy:fp16_objectives}
+\end{figure}
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=270.20bp]{9_resources/04_energiemessung/native_cdf.pdf}
+ \caption[Erfassungsabhängige kumulierte Varianzanteile.]{Maximale Unterschiede der kumulierten Varianzanteile zwischen den beiden gleichzeitig aufgezeichneten Messpfaden, angegeben in Prozentpunkten. Verglichen werden das gesamte Frequenzband und die separat normalisierten Spektren im Bereich von 0--77~kHz. Die eingeschränkte Normalisierung vergleicht die Formen im Tieffrequenzbereich unabhängig von der Gesamtvarianz. Adaptiert aus \cite{mika2026timEnergy}.}
+ \label{fig:energy:scope_spectra}
+\end{figure}
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=247.68bp]{9_resources/04_energiemessung/hailo_spectral_tail.pdf}
+ \caption[Hailo-Frequenzen bei 99\% kumulierter Varianz.]{Frequenzen, unterhalb derer 99\% der Leistungsvarianz im aktiven Zustand beziehungsweise der positiven Überschussvarianz liegen. Die Markierungen zeigen die Mediane über die 15 Aufzeichnungen pro Arbeitslast. Die Balken reichen vom empirischen 5. bis zum 95. Perzentil. Die Markierung für das Analogband ist nominal und stellt keine feste Grenze dar. Diese spektralen Metriken bestimmen nicht die erforderliche Abtastrate für die Hailo-Energiemessung. Adaptiert aus \cite{mika2026timEnergy}.}
+ \label{fig:energy:hailo_spectra}
+\end{figure}
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=\linewidth]{9_resources/04_energiemessung/duration_results.pdf}
+ \caption[Einfluss der Messdauer auf die mittlere Leistungsaufnahme.]{Abweichung der mittleren Leistungsaufnahme von der jeweiligen 600-Sekunden-Referenz. Die Farbstreifen zeigen \num{1472} einzelne Ausführungen, innerhalb jeder Kombination aufsteigend nach Messwert sortiert. Graue Bereiche kennzeichnen fehlende oder nicht auswertbare Ergebnisse \cite{mika2026timEnergy,edgeAIResults2026}.}
+ \label{fig:energy:benchmark_duration}
+\end{figure}
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=\linewidth]{9_resources/04_energiemessung/rate_results.pdf}
+ \caption[Energieverbrauch bei unterschiedlichen Erfassungsraten.]{Energieabweichungen bei unterschiedlichen Erfassungsraten. Bezugswert ist je Berechnungsvariante der gleichgewichtete Mittelwert der mittleren Energien aller Ratengruppen. Die \num{4842} Einzelwerte sind innerhalb jeder Kombination aufsteigend sortiert. Die Farbskala ist symmetrisch logarithmisch mit einem linearen Bereich zwischen $-\num{0.5}$\,\% und $+\num{0.5}$\,\% \cite{mika2026timEnergy,edgeAIResults2026}.}
+ \label{fig:energy:rate_individual_results}
+\end{figure}
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=337.75bp]{9_resources/04_energiemessung/pause_sequence.pdf}
+ \caption[Ausführungszeit und Starttemperatur in der Pausendiagnose.]{Sechs GEMM-FP32-Ausführungen mit 100 Inferenzen bei einer festen Rate von 2~kS/s, nach einem ausgeschlossenen Konditionierungslauf. Die Temperatur ist der Medianwert der letzten fünf Sekunden vor Prozessbeginn. Linien bewahren die Ausführungsreihenfolge. Die Sequenz weist einen Zusammenhang mit der Pausenrichtlinie \cite{edgeAIResults2026} auf.}
+ \label{fig:energy:pause_sequence}
+\end{figure}
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=270.20bp]{9_resources/04_energiemessung/jetson_deployed_meters.pdf}
+ \caption[Vergleich der auf dem Jetson bereitgestellten Messwerte nach 300 Sekunden.]{Abweichungen der mittleren Leistungsaufnahme von der PicoScope-Messung bei Jetson: sieben Arbeitslasten, drei Vergleichsmesspfade und 15 gepaarte Ausführungen pro Arbeitslast. Markierungen zeigen die Mediane der paarweisen Abweichungen an, nicht den Quotienten der Gruppenmediane. Die Shelly-Werte sind mit dem dokumentierten Faktor skaliert. Sensorspezifische Start- und Endzeitpunkte sowie elektrische Messgrenzen bleiben erhalten. Adaptiert aus \cite{mika2026timEnergy}.}
+ \label{fig:energy:jetson_meters}
+\end{figure}
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=337.75bp]{9_resources/04_energiemessung/hailo_meters.pdf}
+ \caption[Übereinstimmung des Hailo-Messpfads bei 300 Sekunden.]{Mediane der paarweisen Abweichungen der mittleren Leistungsaufnahme von der PicoScope-Messung bei Hailo, mit 15 Ausführungen pro Arbeitslast und einer angeforderten Dauer von 300~s. Separate horizontale Skalen zeigen den Vergleich von \textit{u.RECS} und HailoRT mit PicoScope sowie die größeren Abweichungen der skalierten Shelly-Werte. Die Vergleiche umfassen unterschiedliche elektrische Messgrenzen. Adaptiert aus \cite{mika2026timEnergy}.}
+ \label{fig:energy:hailo_meters}
+\end{figure}
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=247.68bp]{9_resources/04_energiemessung/hailo_variable_intervals.pdf}
+ \caption[Variable Hailo-Aktivität: Leistungsaufnahme, Energie und ausgewertete Zeitspanne.]{Mediane der paarweisen Abweichungen von HailoRT gegenüber PicoScope für variables YOLO über alle zehn angeforderten Zeiträume hinweg mit jeweils 15 Paaren pro angeforderter Dauer. Verglichen werden die mittlere Leistungsaufnahme, die Energie und die ausgewertete Zeitspanne. Bei kurzer angeforderter Dauer stimmen die Leistungswerte besser überein als die Energie oder die ausgewertete Zeitspanne. Das PicoScope-Intervall enthält zusätzliche Randbereiche, sodass sich der Start- und Endzeitpunkt unterscheiden. Adaptiert aus \cite{mika2026timEnergy}.}
+ \label{fig:energy:interval_comparison}
+\end{figure}

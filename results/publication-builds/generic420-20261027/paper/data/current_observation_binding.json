@@ -1,0 +1,53 @@
+{
+  "accepted_packages": [
+    "generic_DeepX_yolo11l_b511_energy",
+    "native_H10_yolo26m_b043_quality",
+    "native_H8_yolo26m_b043_quality",
+    "native_H8_yolov7_b009_FPS",
+    "native_H8_yolov7_b009_energy",
+    "native_H8_yolov7_b009_quality"
+  ],
+  "expected_packages": [
+    "native_H8_yolov7_b009_FPS",
+    "native_H8_yolov7_b009_quality",
+    "native_H8_yolov7_b009_energy",
+    "native_H8_yolo26m_b043_quality",
+    "native_H10_yolo26m_b043_quality",
+    "generic_DeepX_yolo11l_b511_energy"
+  ],
+  "hardware_measurements_performed_by_generator": false,
+  "observations_sha256": "98511b7078f394877885bac08da2aa71ec58e7a0f682ac4a9e9457585a9657f4",
+  "pending_packages": [],
+  "prior_rows_preserved": true,
+  "schema": "current-deployment-input-binding-v1",
+  "sources": {
+    "DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q": {
+      "path": "sources/DeepX_yolo11l_b511_actual_energy_and_existing_FP_Q.json",
+      "sha256": "8174b7e6ed70f3105e7179ed772c1d8b3f4cc199570d34f1268262517bca2050"
+    },
+    "H10_yolo26m_b043_actual_N5000": {
+      "path": "sources/H10_yolo26m_b043_actual_N5000.json",
+      "sha256": "c738b00416e9be93e6f3280fba7ac32eec026d5d8b974b447430de3e1aff9af7"
+    },
+    "H8_yolo26m_b043_actual_N5000": {
+      "path": "sources/H8_yolo26m_b043_actual_N5000.json",
+      "sha256": "df3f2573318cf0048ef2f2a5d4728a31681c099078f6a567f33f98a190f4d9bb"
+    },
+    "H8_yolov7_b009_actual_N5000": {
+      "path": "sources/H8_yolov7_b009_actual_N5000.json",
+      "sha256": "3f7cb9badd004d059f2f7708a9bdfc85106490ba22b690253d0f25daf4b7983c"
+    },
+    "H8_yolov7_b009_actual_native_energy": {
+      "path": "sources/H8_yolov7_b009_actual_native_energy.json",
+      "sha256": "e32df52639f49adabcd52b18b3c403bcf47af6ee03a2667281dc02a3f8dea48d"
+    },
+    "b009_current_generic": {
+      "path": "sources/b009_existing_accepted_Generic_FPS_and_own_Q.json",
+      "sha256": "a79e3496ade5f4ccd3b03b90378d70024529ccc5f53f17d820a788cf316d3917"
+    },
+    "h8_b009_native_fps_v3": {
+      "path": "sources/h8_b009_native_fps_v3_portable_v2.json",
+      "sha256": "45edf85eb8c2e0482ff85984b32eb5c2f144d4e55fe39d40fc6af0aa4a1b582d"
+    }
+  }
+}

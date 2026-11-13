@@ -1,0 +1,829 @@
+[
+  {
+    "generic_uid": "generic|yolo11l|H10|hailo10h_to_trt|b003",
+    "history": [
+      {
+        "historical_only": true,
+        "invalidated_for_current_runtime": true,
+        "invalidation_evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+        "quality_binding": {
+          "algorithm_version": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+          "candidate_predictions_sha256": "18c85d2f05b16c9a65226382e2e88f2e8b0307bd2cf3ee2ae65165082b397628",
+          "dataset_reference_evaluator_bound": true,
+          "evaluation_fingerprint": "01906c2f5c39ea95b40a8891f7a6a252c441232ba7773b21502289361767e77c",
+          "evidence_sha256": "ebb773d2cf834ddcaee4aba1d41674c8e2029babc47c886d3a2d2b1c94d88066",
+          "ledger_row_sha256": "52c133d8b820e9848e943a58458f97b67180906151734b2fb932a12e2fa2af4e",
+          "ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+          "metric": "coco_ap_50_95",
+          "normal_admission": false,
+          "policy_sha256": "d50d6d5d43d2e9a58350e1e5499ed276ed7f2b6c67f79d5a07c10088f8ae8900",
+          "product_identity": {
+            "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+            "part1_sha256": "8459e9f25de3713e8deede4949b8fffeb5309e46272e7e307a538dff740b0367",
+            "part2_engine_sha256": "1f2318ffba5f461830558789808f0d97497b3fef4afafcd7455b602034bd6840",
+            "setup_id": "orin_nx_hailo10_01"
+          },
+          "product_identity_verified": true,
+          "proof_type": "normal_current_ledger",
+          "reference": 0.46682674160507026,
+          "reference_predictions_sha256": "45306cc9e77393a202c260d5a4a80c581e2ef321d68749ac580f8b414ea6452f",
+          "reference_runtime": "cpu_onnx",
+          "runtime_artifact_set_sha256": "026d60daf802f67630db0a542d16022bc726239a029fe13f8ac1eb7a08c35c5b",
+          "runtime_artifacts_and_inputs_bound": true,
+          "value": 0.0,
+          "verified": true
+        },
+        "quality_reference_value": 0.46682674160507026,
+        "quality_status": "accuracy_loss",
+        "quality_value": 0.0,
+        "reason": "demonstrated_generic_quality_physical_layout_assignment_error"
+      },
+      {
+        "quality_binding": {
+          "evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+          "normal_admission": false,
+          "normal_exclusion_reasons": [
+            "corrected_normal_N5000_quality_pending",
+            "demonstrated_generic_quality_physical_layout_assignment_error"
+          ],
+          "proof_type": "corrected_normal_quality_pending",
+          "verified": false
+        },
+        "superseded": true
+      }
+    ]
+  },
+  {
+    "generic_uid": "generic|yolo11l|H10|hailo10h_to_trt|b062",
+    "history": [
+      {
+        "historical_only": true,
+        "invalidated_for_current_runtime": true,
+        "invalidation_evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+        "quality_binding": {
+          "algorithm_version": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+          "candidate_predictions_sha256": "18c85d2f05b16c9a65226382e2e88f2e8b0307bd2cf3ee2ae65165082b397628",
+          "dataset_reference_evaluator_bound": true,
+          "evaluation_fingerprint": "27a962ce1d4b2067233ab2ea84fd8192f3458f0a1da837aa9081c3d9de2d8051",
+          "evidence_sha256": "a750175ee8c02ea7df052860940d82cbd0436d06f7de98da5fc5b039fc37f5cf",
+          "ledger_row_sha256": "ec896cb365e775a75e6998952df6852b40e3a2683000088afb890bb583b44ade",
+          "ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+          "metric": "coco_ap_50_95",
+          "normal_admission": false,
+          "policy_sha256": "d50d6d5d43d2e9a58350e1e5499ed276ed7f2b6c67f79d5a07c10088f8ae8900",
+          "product_identity": {
+            "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+            "part1_sha256": "c9c606e28c140a98444a97208198a3697269064deda40e1bf1af5214bd4960b0",
+            "part2_engine_sha256": "fbc5f980fdfce6bbaa17b493f60f16360f0e9e084e131cda15f35a3c14536e84",
+            "setup_id": "orin_nx_hailo10_01"
+          },
+          "product_identity_verified": true,
+          "proof_type": "normal_current_ledger",
+          "reference": 0.46682674160507026,
+          "reference_predictions_sha256": "45306cc9e77393a202c260d5a4a80c581e2ef321d68749ac580f8b414ea6452f",
+          "reference_runtime": "cpu_onnx",
+          "runtime_artifact_set_sha256": "2915d2a7958f574d20c5b9f35b0cf99478439062a2d3e5ef8c812b42a7319d33",
+          "runtime_artifacts_and_inputs_bound": true,
+          "value": 0.0,
+          "verified": true
+        },
+        "quality_reference_value": 0.46682674160507026,
+        "quality_status": "accuracy_loss",
+        "quality_value": 0.0,
+        "reason": "demonstrated_generic_quality_physical_layout_assignment_error"
+      },
+      {
+        "quality_binding": {
+          "evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+          "normal_admission": false,
+          "normal_exclusion_reasons": [
+            "corrected_normal_N5000_quality_pending",
+            "demonstrated_generic_quality_physical_layout_assignment_error"
+          ],
+          "proof_type": "corrected_normal_quality_pending",
+          "verified": false
+        },
+        "superseded": true
+      }
+    ]
+  },
+  {
+    "generic_uid": "generic|yolo11l|H8|hailo8_to_trt|b003",
+    "history": [
+      {
+        "historical_only": true,
+        "invalidated_for_current_runtime": true,
+        "invalidation_evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+        "quality_binding": {
+          "dataset_reference_evaluator_bound": true,
+          "evaluation_fingerprint": "1a004e0079654b013d4b0001f5df233bf5d15e803bdaf558a2960fd72b5c576a",
+          "evidence_sha256": "2e861a7d596838a105b2ea9970329ff21230381338f989c5862f167f6d1a5dc4",
+          "ledger_row_sha256": "1fbb790de30d53d2cd928dac5ec54528c20a2c15651677fe52f29cbdfbfd86cd",
+          "ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+          "metric": "coco_ap_50_95",
+          "normal_admission": false,
+          "product_identity": {
+            "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+            "part1_sha256": "e6fadad2fe2d46a8425b5a463c31948cf7878569b3abcd3442b0ff3ecd66453a",
+            "part2_engine_sha256": "dbd9ec863864c2150e75125bdb1d3472a1b596ead552fbd4175862dacc2d47b2",
+            "setup_id": "orin_nx_hailo8_01"
+          },
+          "product_identity_verified": true,
+          "proof_type": "normal_current_ledger",
+          "reference": 0.46682674160507026,
+          "reference_runtime": "cpu_onnx",
+          "runtime_artifacts_and_inputs_bound": true,
+          "value": 0.0,
+          "verified": true
+        },
+        "quality_reference_value": 0.46682674160507026,
+        "quality_status": "accuracy_loss",
+        "quality_value": 0.0,
+        "reason": "demonstrated_generic_quality_physical_layout_assignment_error"
+      },
+      {
+        "quality_binding": {
+          "evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+          "normal_admission": false,
+          "normal_exclusion_reasons": [
+            "corrected_normal_N5000_quality_pending",
+            "demonstrated_generic_quality_physical_layout_assignment_error"
+          ],
+          "proof_type": "corrected_normal_quality_pending",
+          "verified": false
+        },
+        "superseded": true
+      }
+    ]
+  },
+  {
+    "generic_uid": "generic|yolo11l|H8|hailo8_to_trt|b062",
+    "history": [
+      {
+        "historical_only": true,
+        "invalidated_for_current_runtime": true,
+        "invalidation_evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+        "quality_binding": {
+          "dataset_reference_evaluator_bound": true,
+          "evaluation_fingerprint": "5a75cecf871af6fe0f62baf0fa916f5e29a7a425dab7262bfa3217a16c01ccaf",
+          "evidence_sha256": "0a5776495c38dd8952e74e6151d30c0c73e718b8822a430aa1a4ac9b7f6f550c",
+          "ledger_row_sha256": "e4e314fa9118c15bec55506a48647b7d7cf65627bb6170aff34b512ace521d8a",
+          "ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+          "metric": "coco_ap_50_95",
+          "normal_admission": false,
+          "product_identity": {
+            "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+            "part1_sha256": "af0019fcf28799a9233337fce1fb04af5d3fc0b779ca1f815ec5481d0221d9a4",
+            "part2_engine_sha256": "d6604227819d84efc217ab421439685e65523b079e246b42fdfb4215e4f96219",
+            "setup_id": "orin_nx_hailo8_01"
+          },
+          "product_identity_verified": true,
+          "proof_type": "normal_current_ledger",
+          "reference": 0.46682674160507026,
+          "reference_runtime": "cpu_onnx",
+          "runtime_artifacts_and_inputs_bound": true,
+          "value": 0.0,
+          "verified": true
+        },
+        "quality_reference_value": 0.46682674160507026,
+        "quality_status": "accuracy_loss",
+        "quality_value": 0.0,
+        "reason": "demonstrated_generic_quality_physical_layout_assignment_error"
+      },
+      {
+        "quality_binding": {
+          "evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+          "normal_admission": false,
+          "normal_exclusion_reasons": [
+            "corrected_normal_N5000_quality_pending",
+            "demonstrated_generic_quality_physical_layout_assignment_error"
+          ],
+          "proof_type": "corrected_normal_quality_pending",
+          "verified": false
+        },
+        "superseded": true
+      }
+    ]
+  },
+  {
+    "generic_uid": "generic|yolo26m|H10|hailo10h_to_trt|b003",
+    "history": [
+      {
+        "historical_only": true,
+        "invalidated_for_current_runtime": true,
+        "invalidation_evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+        "quality_binding": {
+          "algorithm_version": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+          "candidate_predictions_sha256": "530dc82540b52d9f297495d918f36386bbe16789d1892acda265b6b6f7d3c12f",
+          "dataset_reference_evaluator_bound": true,
+          "evaluation_fingerprint": "fcf230b753b07e948d9339f2ea82413ccfe4943dc2029776dfb259e2f95917b7",
+          "evidence_sha256": "8f4cc73ea1913e102d325b29c682659b5a57502c94b9bbebf7a3858348e61114",
+          "ledger_row_sha256": "5d7fadbe2375c0f1a894d9a567600e6521cd44d7b37ad4fe8947ce2a65a97c5f",
+          "ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+          "metric": "coco_ap_50_95",
+          "normal_admission": false,
+          "policy_sha256": "d50d6d5d43d2e9a58350e1e5499ed276ed7f2b6c67f79d5a07c10088f8ae8900",
+          "product_identity": {
+            "model_sha256": "d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897",
+            "part1_sha256": "4050035df4b03f4d13167cdedd892cc1225348ee2fa9beab6de5eaf39a719946",
+            "part2_engine_sha256": "4ac29f93a87fce72ae37f899d4234416e39173f775c0388b1b57c2c79bae90ab",
+            "setup_id": "orin_nx_hailo10_01"
+          },
+          "product_identity_verified": true,
+          "proof_type": "normal_current_ledger",
+          "reference": 0.4489955441567548,
+          "reference_predictions_sha256": "1fd7288e586b9297d31f33aae3ab03afb42134da84781d93d3bdfa41249e52c8",
+          "reference_runtime": "cpu_onnx",
+          "runtime_artifact_set_sha256": "71c3e243c263344927b2d01b5d74e50a58b54cea71ad4042fbcd5cab5a5e8035",
+          "runtime_artifacts_and_inputs_bound": true,
+          "value": 1.8482937323180563e-06,
+          "verified": true
+        },
+        "quality_reference_value": 0.4489955441567548,
+        "quality_status": "accuracy_loss",
+        "quality_value": 1.8482937323180563e-06,
+        "reason": "demonstrated_generic_quality_physical_layout_assignment_error"
+      },
+      {
+        "quality_binding": {
+          "evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+          "normal_admission": false,
+          "normal_exclusion_reasons": [
+            "corrected_normal_N5000_quality_pending",
+            "demonstrated_generic_quality_physical_layout_assignment_error"
+          ],
+          "proof_type": "corrected_normal_quality_pending",
+          "verified": false
+        },
+        "superseded": true
+      }
+    ]
+  },
+  {
+    "generic_uid": "generic|yolo26m|H10|hailo10h_to_trt|b038",
+    "history": [
+      {
+        "historical_only": true,
+        "invalidated_for_current_runtime": true,
+        "invalidation_evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+        "quality_binding": {
+          "algorithm_version": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+          "candidate_predictions_sha256": "18c85d2f05b16c9a65226382e2e88f2e8b0307bd2cf3ee2ae65165082b397628",
+          "dataset_reference_evaluator_bound": true,
+          "evaluation_fingerprint": "e96c17c059f35416627c873f77e2e632e36a3091fa2811084aa50d3434069071",
+          "evidence_sha256": "6697f2d749fa14d96eac77bd628c2b08d9bac3d2797927226a77a9e3b654846f",
+          "ledger_row_sha256": "66838b519d82836566ded90bc0c556e64903fb3663d8c6c0d7bea5f0bebf1ef3",
+          "ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+          "metric": "coco_ap_50_95",
+          "normal_admission": false,
+          "policy_sha256": "d50d6d5d43d2e9a58350e1e5499ed276ed7f2b6c67f79d5a07c10088f8ae8900",
+          "product_identity": {
+            "model_sha256": "d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897",
+            "part1_sha256": "ab4538a125d33618c3bb3b2d675b8e59ecc059bf2879f9489d89c5b6b636e625",
+            "part2_engine_sha256": "34c35ab7c2541df66ac8ec960d2ce23338cc5facec2293f17ffd8f69aa899de6",
+            "setup_id": "orin_nx_hailo10_01"
+          },
+          "product_identity_verified": true,
+          "proof_type": "normal_current_ledger",
+          "reference": 0.4489955441567548,
+          "reference_predictions_sha256": "1fd7288e586b9297d31f33aae3ab03afb42134da84781d93d3bdfa41249e52c8",
+          "reference_runtime": "cpu_onnx",
+          "runtime_artifact_set_sha256": "909d6059a9d02d917ec1b402062d7925213babad19eed27346a97da17a34cee8",
+          "runtime_artifacts_and_inputs_bound": true,
+          "value": 0.0,
+          "verified": true
+        },
+        "quality_reference_value": 0.4489955441567548,
+        "quality_status": "accuracy_loss",
+        "quality_value": 0.0,
+        "reason": "demonstrated_generic_quality_physical_layout_assignment_error"
+      },
+      {
+        "quality_binding": {
+          "evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+          "normal_admission": false,
+          "normal_exclusion_reasons": [
+            "corrected_normal_N5000_quality_pending",
+            "demonstrated_generic_quality_physical_layout_assignment_error"
+          ],
+          "proof_type": "corrected_normal_quality_pending",
+          "verified": false
+        },
+        "superseded": true
+      }
+    ]
+  },
+  {
+    "generic_uid": "generic|yolo26m|H10|hailo10h_to_trt|b043",
+    "history": [
+      {
+        "historical_only": true,
+        "invalidated_for_current_runtime": true,
+        "invalidation_evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+        "quality_binding": {
+          "algorithm_version": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+          "candidate_predictions_sha256": "18c85d2f05b16c9a65226382e2e88f2e8b0307bd2cf3ee2ae65165082b397628",
+          "dataset_reference_evaluator_bound": true,
+          "evaluation_fingerprint": "cc9b5c50879ca2a2d0dbbcee15e0b64b266706159530bac2786d228e51fb246a",
+          "evidence_sha256": "6adaf44a582273e88f7eff8242bd6d8725e66d8597a6e627acf0d85c5ac4d22f",
+          "ledger_row_sha256": "f6ac42ed0c2eefc24edaadadc4e348106dcb3a8dbd8ae1226e9db2aa0ba07753",
+          "ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+          "metric": "coco_ap_50_95",
+          "normal_admission": false,
+          "policy_sha256": "d50d6d5d43d2e9a58350e1e5499ed276ed7f2b6c67f79d5a07c10088f8ae8900",
+          "product_identity": {
+            "model_sha256": "d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897",
+            "part1_sha256": "13d7cb85e6d96bc5048f9aa0d65c87a8193eacb16f4f060dbeb548e31bb4d9d4",
+            "part2_engine_sha256": "2a713bdffb2cdf606d1b700fdf9549a638318ac0480ddbdf145ea8862b50511f",
+            "setup_id": "orin_nx_hailo10_01"
+          },
+          "product_identity_verified": true,
+          "proof_type": "normal_current_ledger",
+          "reference": 0.4489955441567548,
+          "reference_predictions_sha256": "1fd7288e586b9297d31f33aae3ab03afb42134da84781d93d3bdfa41249e52c8",
+          "reference_runtime": "cpu_onnx",
+          "runtime_artifact_set_sha256": "d32ea6cfe904a890e36c28cef1ec9f91b6117f430a0e43f41dcc8168dca32d19",
+          "runtime_artifacts_and_inputs_bound": true,
+          "value": 0.0,
+          "verified": true
+        },
+        "quality_reference_value": 0.4489955441567548,
+        "quality_status": "accuracy_loss",
+        "quality_value": 0.0,
+        "reason": "demonstrated_generic_quality_physical_layout_assignment_error"
+      },
+      {
+        "quality_binding": {
+          "evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+          "normal_admission": false,
+          "normal_exclusion_reasons": [
+            "corrected_normal_N5000_quality_pending",
+            "demonstrated_generic_quality_physical_layout_assignment_error"
+          ],
+          "proof_type": "corrected_normal_quality_pending",
+          "verified": false
+        },
+        "superseded": true
+      }
+    ]
+  },
+  {
+    "generic_uid": "generic|yolo26m|H8|hailo8_to_trt|b003",
+    "history": [
+      {
+        "historical_only": true,
+        "invalidated_for_current_runtime": true,
+        "invalidation_evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+        "quality_binding": {
+          "dataset_reference_evaluator_bound": true,
+          "evaluation_fingerprint": "735edab012877eb98b73db75a903faa4468993bfdc86ff67dd60d832172c7080",
+          "evidence_sha256": "4545ac896436c95e0887d83f8bf4a37956b5eb776dfa0e8bb1c6af1731ef5a80",
+          "ledger_row_sha256": "f6478ad4255f65b513a8ca3c42d5ca17efa9761a9efd5d6e87d9b0056c4eb453",
+          "ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+          "metric": "coco_ap_50_95",
+          "normal_admission": false,
+          "product_identity": {
+            "model_sha256": "d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897",
+            "part1_sha256": "39d90f2ac9c48a69fd217ecb127cd2aab51ccb1d1b3e9187fdcbc830d0b7de65",
+            "part2_engine_sha256": "2e31b2602ed810e35d36b63dc4a860e274352bb47ce3a9a8a289d4f9bca3f202",
+            "setup_id": "orin_nx_hailo8_01"
+          },
+          "product_identity_verified": true,
+          "proof_type": "normal_current_ledger",
+          "reference": 0.4489955441567548,
+          "reference_runtime": "cpu_onnx",
+          "runtime_artifacts_and_inputs_bound": true,
+          "value": 1.3656716109658527e-06,
+          "verified": true
+        },
+        "quality_reference_value": 0.4489955441567548,
+        "quality_status": "accuracy_loss",
+        "quality_value": 1.3656716109658527e-06,
+        "reason": "demonstrated_generic_quality_physical_layout_assignment_error"
+      },
+      {
+        "quality_binding": {
+          "evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+          "normal_admission": false,
+          "normal_exclusion_reasons": [
+            "corrected_normal_N5000_quality_pending",
+            "demonstrated_generic_quality_physical_layout_assignment_error"
+          ],
+          "proof_type": "corrected_normal_quality_pending",
+          "verified": false
+        },
+        "superseded": true
+      }
+    ]
+  },
+  {
+    "generic_uid": "generic|yolo26m|H8|hailo8_to_trt|b038",
+    "history": [
+      {
+        "historical_only": true,
+        "invalidated_for_current_runtime": true,
+        "invalidation_evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+        "quality_binding": {
+          "dataset_reference_evaluator_bound": true,
+          "evaluation_fingerprint": "0b93add41869e80725cfde1f646936f42cfbf0a14bb155d9bac3aadbb6d00b03",
+          "evidence_sha256": "a7ed0af2d2bcb83aecb3b03b26cdf9eccf1ba8bac7809e86881dcf4796fc7924",
+          "ledger_row_sha256": "fbe3706b033754b79cc1dacd08486c8edb868f58ab85f20d1d405e877f2e113e",
+          "ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+          "metric": "coco_ap_50_95",
+          "normal_admission": false,
+          "product_identity": {
+            "model_sha256": "d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897",
+            "part1_sha256": "fe28ea79f5a1c4a40f398bd07b82d829961a744f2601000b8d3b85f17888c74b",
+            "part2_engine_sha256": "24c266b8c14dc67475c7fe4954029d85a984197f2baca7dc5b2abe4949b5f9d6",
+            "setup_id": "orin_nx_hailo8_01"
+          },
+          "product_identity_verified": true,
+          "proof_type": "normal_current_ledger",
+          "reference": 0.4489955441567548,
+          "reference_runtime": "cpu_onnx",
+          "runtime_artifacts_and_inputs_bound": true,
+          "value": 0.0,
+          "verified": true
+        },
+        "quality_reference_value": 0.4489955441567548,
+        "quality_status": "accuracy_loss",
+        "quality_value": 0.0,
+        "reason": "demonstrated_generic_quality_physical_layout_assignment_error"
+      },
+      {
+        "quality_binding": {
+          "evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+          "normal_admission": false,
+          "normal_exclusion_reasons": [
+            "corrected_normal_N5000_quality_pending",
+            "demonstrated_generic_quality_physical_layout_assignment_error"
+          ],
+          "proof_type": "corrected_normal_quality_pending",
+          "verified": false
+        },
+        "superseded": true
+      }
+    ]
+  },
+  {
+    "generic_uid": "generic|yolo26m|H8|hailo8_to_trt|b043",
+    "history": [
+      {
+        "historical_only": true,
+        "invalidated_for_current_runtime": true,
+        "invalidation_evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+        "quality_binding": {
+          "dataset_reference_evaluator_bound": true,
+          "evaluation_fingerprint": "a5bbe4cdd5565a6dcf91fdc6c5ad77df8cb721cf18ae9e009794fb260aa4f8d4",
+          "evidence_sha256": "efdeef052ae15a2beddb3773e61a438c33de90cb44c510e2be8869c7d7accf69",
+          "ledger_row_sha256": "4321dbecbdaf98291b024448920fe88e87c99c7477d9398acb85c9b2a6eead89",
+          "ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+          "metric": "coco_ap_50_95",
+          "normal_admission": false,
+          "product_identity": {
+            "model_sha256": "d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897",
+            "part1_sha256": "f75ce43e696cbb1fb679eb50b6c5406752ff07bb84e60368511276c84352fdc2",
+            "part2_engine_sha256": "e924e103568a5d1797d3739daf2f1e16717e5cb2d3d76c624672d033704e83bf",
+            "setup_id": "orin_nx_hailo8_01"
+          },
+          "product_identity_verified": true,
+          "proof_type": "normal_current_ledger",
+          "reference": 0.4489955441567548,
+          "reference_runtime": "cpu_onnx",
+          "runtime_artifacts_and_inputs_bound": true,
+          "value": 0.0,
+          "verified": true
+        },
+        "quality_reference_value": 0.4489955441567548,
+        "quality_status": "accuracy_loss",
+        "quality_value": 0.0,
+        "reason": "demonstrated_generic_quality_physical_layout_assignment_error"
+      },
+      {
+        "quality_binding": {
+          "evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+          "normal_admission": false,
+          "normal_exclusion_reasons": [
+            "corrected_normal_N5000_quality_pending",
+            "demonstrated_generic_quality_physical_layout_assignment_error"
+          ],
+          "proof_type": "corrected_normal_quality_pending",
+          "verified": false
+        },
+        "superseded": true
+      }
+    ]
+  },
+  {
+    "generic_uid": "generic|yolo26s|H10|hailo10h_to_trt|b003",
+    "history": [
+      {
+        "historical_only": true,
+        "invalidated_for_current_runtime": true,
+        "invalidation_evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+        "quality_binding": {
+          "algorithm_version": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+          "candidate_predictions_sha256": "18c85d2f05b16c9a65226382e2e88f2e8b0307bd2cf3ee2ae65165082b397628",
+          "dataset_reference_evaluator_bound": true,
+          "evaluation_fingerprint": "1b10a41059507972382aa968c266a5d40218989b247ab02f3661472c7a0b12f6",
+          "evidence_sha256": "ca6fd4e2d9603038e0ba414c4c0b9225bbf93d7f8679a7c4a741babf24337c60",
+          "ledger_row_sha256": "9dfec8a6d8185efc16f935ee3215bfc1349e7a595db80d07ed0a8d36113ac643",
+          "ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+          "metric": "coco_ap_50_95",
+          "normal_admission": false,
+          "policy_sha256": "d50d6d5d43d2e9a58350e1e5499ed276ed7f2b6c67f79d5a07c10088f8ae8900",
+          "product_identity": {
+            "model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+            "part1_sha256": "7629523fd2626449c308b38afb9963c512e61ffbf713f12feefd5a6b5296cc27",
+            "part2_engine_sha256": "f85278eba2ac13925565b2976123f35152010e4a6aef48b2053f825cbd88a750",
+            "setup_id": "orin_nx_hailo10_01"
+          },
+          "product_identity_verified": true,
+          "proof_type": "normal_current_ledger",
+          "reference": 0.40087514853384254,
+          "reference_predictions_sha256": "1a3aa3975dfb4a92c324d9dca3368e8c6eb74417475f60864dfe3f042cebdd1e",
+          "reference_runtime": "cpu_onnx",
+          "runtime_artifact_set_sha256": "61d53f19e0604e4a6649ac4994e4a9236d68cef44fc640a5d30d35b95c5bd316",
+          "runtime_artifacts_and_inputs_bound": true,
+          "value": 0.0,
+          "verified": true
+        },
+        "quality_reference_value": 0.40087514853384254,
+        "quality_status": "accuracy_loss",
+        "quality_value": 0.0,
+        "reason": "demonstrated_generic_quality_physical_layout_assignment_error"
+      },
+      {
+        "quality_binding": {
+          "evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+          "normal_admission": false,
+          "normal_exclusion_reasons": [
+            "corrected_normal_N5000_quality_pending",
+            "demonstrated_generic_quality_physical_layout_assignment_error"
+          ],
+          "proof_type": "corrected_normal_quality_pending",
+          "verified": false
+        },
+        "superseded": true
+      }
+    ]
+  },
+  {
+    "generic_uid": "generic|yolo26s|H10|hailo10h_to_trt|b021",
+    "history": [
+      {
+        "historical_only": true,
+        "invalidated_for_current_runtime": true,
+        "invalidation_evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+        "quality_binding": {
+          "algorithm_version": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+          "candidate_predictions_sha256": "18c85d2f05b16c9a65226382e2e88f2e8b0307bd2cf3ee2ae65165082b397628",
+          "dataset_reference_evaluator_bound": true,
+          "evaluation_fingerprint": "78e79c98784c609a830f856542cfd0b992ffcab225670e623645051d1281c56d",
+          "evidence_sha256": "140d810426a6a13e7367c6c3f436e5caba3a345571ec96032133bb343b73cba8",
+          "ledger_row_sha256": "0f3fdfd5a5bf63d178cfc961a20adc986bd6459391092102061f264288302d0b",
+          "ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+          "metric": "coco_ap_50_95",
+          "normal_admission": false,
+          "policy_sha256": "d50d6d5d43d2e9a58350e1e5499ed276ed7f2b6c67f79d5a07c10088f8ae8900",
+          "product_identity": {
+            "model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+            "part1_sha256": "76cb5c5778973699c6cb65310182052f9906a3a5cecc963012b24def02001a20",
+            "part2_engine_sha256": "dfc08117cf11142803343aa9af2b868f96d9086d3f22c88d653d34c3594de408",
+            "setup_id": "orin_nx_hailo10_01"
+          },
+          "product_identity_verified": true,
+          "proof_type": "normal_current_ledger",
+          "reference": 0.40087514853384254,
+          "reference_predictions_sha256": "1a3aa3975dfb4a92c324d9dca3368e8c6eb74417475f60864dfe3f042cebdd1e",
+          "reference_runtime": "cpu_onnx",
+          "runtime_artifact_set_sha256": "cadf9d22077191d4d49ee42c0875b4be036e2ae2f3b3cdee82d861c9e13ea9f5",
+          "runtime_artifacts_and_inputs_bound": true,
+          "value": 0.0,
+          "verified": true
+        },
+        "quality_reference_value": 0.40087514853384254,
+        "quality_status": "accuracy_loss",
+        "quality_value": 0.0,
+        "reason": "demonstrated_generic_quality_physical_layout_assignment_error"
+      },
+      {
+        "quality_binding": {
+          "evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+          "normal_admission": false,
+          "normal_exclusion_reasons": [
+            "corrected_normal_N5000_quality_pending",
+            "demonstrated_generic_quality_physical_layout_assignment_error"
+          ],
+          "proof_type": "corrected_normal_quality_pending",
+          "verified": false
+        },
+        "superseded": true
+      }
+    ]
+  },
+  {
+    "generic_uid": "generic|yolo26s|H10|hailo10h_to_trt|b038",
+    "history": [
+      {
+        "quality_binding": {
+          "annotations_sha256": "fc8121b9115bcd3dcd336fa7fd109f1effa553516d64d17950359cc2f539f9a2",
+          "artifacts": {
+            "authority_kind": "actual_three_repetition_artifact_hashes_equal_original_native_bound_build",
+            "part1_sha256": "2aa321e7c3dd6755d8bc1c0ee50aa10ad41dcfba893cec1dad3c33730ced07df",
+            "part2_engine_sha256": "5b1eac3b810466968f511e50815f45561c9a6402dfbc61b800699321c79fc2b1",
+            "source_part2_onnx_sha256": "edd8485dfecd521ce0d20aefc358986ffba5e7cf5f4a52433d5fa99a9104f7b8"
+          },
+          "candidate_predictions_sha256": "dc47bae4d4f186d6e4ceef36c69470ef156c24b4e99ad26dd8433bee41e5ed88",
+          "dataset_reference_evaluator_bound": true,
+          "evaluation_fingerprint": "c2bfa9911d0c386f98a213e403d0c9db6244d337fe70b1c547663101bc36992c",
+          "evaluator_algorithm": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+          "evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+          "ledger_row_sha256": "c4623d21dd4912573439c089cdef043926cc503e26c1ca8a2db4e9b8f88b1224",
+          "model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+          "normal_admission": false,
+          "normal_exclusion_reasons": [
+            "native_output_endpoint_match"
+          ],
+          "product_identity_verified": true,
+          "proof_type": "normal_product_pair_admission_with_actual_artifact_quality_evidence",
+          "quality_evidence_sha256": "1823478fe9d0afc29dc35b645ffd780732f2a304be664b4dd7bb5652c98a4f84",
+          "quality_reference_value": 0.40087514853384254,
+          "quality_result_row_sha256": "13b64e772b521cc6211f34cc083c2da6904b6a1406d9b4cdbc8b6871e591aa8c",
+          "quality_value": 0.39027525687132514,
+          "reference": 0.40087514853384254,
+          "reference_predictions_sha256": "1a3aa3975dfb4a92c324d9dca3368e8c6eb74417475f60864dfe3f042cebdd1e",
+          "reference_runtime": "cpu_onnx",
+          "relative_loss": 0.026441877729974927,
+          "runtime_artifacts_and_inputs_bound": true,
+          "value": 0.39027525687132514,
+          "verified": false
+        },
+        "superseded": true
+      }
+    ]
+  },
+  {
+    "generic_uid": "generic|yolo26s|H8|hailo8_to_trt|b003",
+    "history": [
+      {
+        "historical_only": true,
+        "invalidated_for_current_runtime": true,
+        "invalidation_evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+        "quality_binding": {
+          "dataset_reference_evaluator_bound": true,
+          "evaluation_fingerprint": "7632b1fe0463ef9428070c07161a35b51962c4619ecd997c807649077e9fe702",
+          "evidence_sha256": "efd762ea497d0bb7faf1b872444a57418593ef10ac6c7681acc870959e236a3d",
+          "ledger_row_sha256": "d951b4382d673bc9d84b393fcf1e64c4be6c0fa1fd8ed3ae69edbfea0461d400",
+          "ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+          "metric": "coco_ap_50_95",
+          "normal_admission": false,
+          "product_identity": {
+            "model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+            "part1_sha256": "0ccdb7468b877f4c5d68a8c2b002d54506020de2e33c067146e1fbf36e0ea9e5",
+            "part2_engine_sha256": "8333a9ef0c2386fd67fe900cf55df50eed8638be06f73f0a365c2a093d287eb6",
+            "setup_id": "orin_nx_hailo8_01"
+          },
+          "product_identity_verified": true,
+          "proof_type": "normal_current_ledger",
+          "reference": 0.40087514853384254,
+          "reference_runtime": "cpu_onnx",
+          "runtime_artifacts_and_inputs_bound": true,
+          "value": 0.0,
+          "verified": true
+        },
+        "quality_reference_value": 0.40087514853384254,
+        "quality_status": "accuracy_loss",
+        "quality_value": 0.0,
+        "reason": "demonstrated_generic_quality_physical_layout_assignment_error"
+      },
+      {
+        "quality_binding": {
+          "evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+          "normal_admission": false,
+          "normal_exclusion_reasons": [
+            "corrected_normal_N5000_quality_pending",
+            "demonstrated_generic_quality_physical_layout_assignment_error"
+          ],
+          "proof_type": "corrected_normal_quality_pending",
+          "verified": false
+        },
+        "superseded": true
+      }
+    ]
+  },
+  {
+    "generic_uid": "generic|yolo26s|H8|hailo8_to_trt|b021",
+    "history": [
+      {
+        "historical_only": true,
+        "invalidated_for_current_runtime": true,
+        "invalidation_evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+        "quality_binding": {
+          "dataset_reference_evaluator_bound": true,
+          "evaluation_fingerprint": "296dde0eb69fa39544dc0c3256fecc453d077f0ab0fe9ab95d59867578537b98",
+          "evidence_sha256": "9327a3243c2a47362bbcedc5c9c7302e936745790c828b3653a1c3704b468601",
+          "ledger_row_sha256": "09d03132abd39dececb9d5793884a4f54eee18bd003df891d988b4f1e8856963",
+          "ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+          "metric": "coco_ap_50_95",
+          "normal_admission": false,
+          "product_identity": {
+            "model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+            "part1_sha256": "c2db2492ef07e383f3da6a0d9c09b631dffa67d5c36937f19b7228dc311b69bd",
+            "part2_engine_sha256": "b2e15d72496ae39a34c829712897e6f70a08ebd3187c1fbe648c0e8423597be8",
+            "setup_id": "orin_nx_hailo8_01"
+          },
+          "product_identity_verified": true,
+          "proof_type": "normal_current_ledger",
+          "reference": 0.40087514853384254,
+          "reference_runtime": "cpu_onnx",
+          "runtime_artifacts_and_inputs_bound": true,
+          "value": 0.0,
+          "verified": true
+        },
+        "quality_reference_value": 0.40087514853384254,
+        "quality_status": "accuracy_loss",
+        "quality_value": 0.0,
+        "reason": "demonstrated_generic_quality_physical_layout_assignment_error"
+      },
+      {
+        "quality_binding": {
+          "evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+          "normal_admission": false,
+          "normal_exclusion_reasons": [
+            "corrected_normal_N5000_quality_pending",
+            "demonstrated_generic_quality_physical_layout_assignment_error"
+          ],
+          "proof_type": "corrected_normal_quality_pending",
+          "verified": false
+        },
+        "superseded": true
+      }
+    ]
+  },
+  {
+    "generic_uid": "generic|yolov7_paper|H10|hailo10h_to_trt|b009",
+    "history": [
+      {
+        "historical_only": true,
+        "invalidated_for_current_runtime": true,
+        "invalidation_evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+        "quality_binding": {
+          "dataset_reference_evaluator_bound": true,
+          "evaluation_fingerprint": "21b78995aa2e42de75fa4bcb77ebc120d75f8435166926355533ce8061a19de7",
+          "evidence_sha256": "b0b0506258482a3178f5c1ed4f017083f795d50ed77a649ed3d3f5566ad5f6c6",
+          "ledger_row_sha256": "0ab5c4466a16715566427caccfc2d80df321f5b9e7897a9c35acad2d22f09d9f",
+          "ledger_sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+          "metric": "coco_ap_50_95",
+          "normal_admission": false,
+          "product_identity": {
+            "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+            "part1_sha256": "abfd7f0105dcdeb0e50a735074c500238eb2264ed162c5ed2bc2d9e257839d90",
+            "part2_engine_sha256": "451cfc1ef3f952b5a83aff8c85696863acc480dd8c77194f2444ddc722b839d9",
+            "setup_id": "orin_nx_hailo10_01"
+          },
+          "product_identity_verified": true,
+          "proof_type": "normal_current_ledger",
+          "reference": 0.460346586685622,
+          "reference_runtime": "cpu_onnx",
+          "runtime_artifacts_and_inputs_bound": true,
+          "value": 0.0,
+          "verified": true
+        },
+        "quality_reference_value": 0.460346586685622,
+        "quality_status": "accuracy_loss",
+        "quality_value": 0.0,
+        "reason": "demonstrated_generic_quality_physical_layout_assignment_error"
+      },
+      {
+        "quality_binding": {
+          "evidence_sha256": "18192c2bd454d4f820f3b3e1f2031ff28ea82750d2c541e16590eaaf849a0245",
+          "normal_admission": false,
+          "normal_exclusion_reasons": [
+            "corrected_normal_N5000_quality_pending",
+            "demonstrated_generic_quality_physical_layout_assignment_error"
+          ],
+          "proof_type": "corrected_normal_quality_pending",
+          "verified": false
+        },
+        "superseded": true
+      }
+    ]
+  },
+  {
+    "generic_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
+    "history": [
+      {
+        "quality_binding": {
+          "normal_admission": false,
+          "normal_exclusion_reasons": [
+            "fresh_performance_quality_binding_pending"
+          ],
+          "proof_type": "corrected_normal_quality_pending",
+          "verified": false
+        },
+        "superseded": true
+      }
+    ]
+  }
+]

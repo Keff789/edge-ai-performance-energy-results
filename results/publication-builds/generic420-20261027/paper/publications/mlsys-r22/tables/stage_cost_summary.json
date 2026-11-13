@@ -1,0 +1,50 @@
+[
+  {
+    "absolute_error_pct_median": 2.239873693392269,
+    "block_count": 3,
+    "case_id": "deepx_resnet50_b045",
+    "config_id": "historical_THESIS20|resnet50|DeepX|deepx_to_trt|float32_layout_fp16|deepx_python_dx_engine_fifo|classification:classification_logits:7e81637d07062cb8ef8bad5a0db478cab1a08ede42cf1c306f0e7757a4f670e1|3|UNKNOWN|UNKNOWN|UNKNOWN",
+    "consumer_fps": 669.0517467685618,
+    "cut": "b045",
+    "label": "ResNet/DX b045",
+    "pipeline_fps": 225.34801147581152,
+    "prefix_fps": 230.01277111789096,
+    "stage_generation": "stage_cost_composition_20261014"
+  },
+  {
+    "absolute_error_pct_median": 5.500638486246978,
+    "block_count": 3,
+    "case_id": "deepx_resnet50_b002",
+    "config_id": "historical_THESIS20|resnet50|DeepX|deepx_to_trt|float32_layout_fp16|deepx_python_dx_engine_fifo|classification:classification_logits:7e81637d07062cb8ef8bad5a0db478cab1a08ede42cf1c306f0e7757a4f670e1|3|UNKNOWN|UNKNOWN|UNKNOWN",
+    "consumer_fps": 519.9938481462628,
+    "cut": "b002",
+    "label": "ResNet/DX b002",
+    "pipeline_fps": 443.5307655445344,
+    "prefix_fps": 472.5413926287348,
+    "stage_generation": "stage_cost_composition_20261014"
+  },
+  {
+    "absolute_error_pct_median": 4.7671016629096785,
+    "block_count": 3,
+    "case_id": "h10_regnet_b059",
+    "config_id": "historical_THESIS20|regnet_x_1_6gf|H10|hailo10h_to_trt|uint8_dequant_fp16|hailo10_infermodel_async_fifo|classification:classification_logits:7e81637d07062cb8ef8bad5a0db478cab1a08ede42cf1c306f0e7757a4f670e1|3|8|UNKNOWN|UNKNOWN",
+    "consumer_fps": 499.9278122749398,
+    "cut": "b059",
+    "label": "RegNet/H10 b059",
+    "pipeline_fps": 477.15668111605135,
+    "prefix_fps": 1565.1357736173222,
+    "stage_generation": "stage_cost_composition_20261014"
+  },
+  {
+    "absolute_error_pct_median": 3.8452164841612735,
+    "block_count": 3,
+    "case_id": "h10_regnet_b123",
+    "config_id": "historical_THESIS20|regnet_x_1_6gf|H10|hailo10h_to_trt|uint8_dequant_fp16|hailo10_infermodel_async_fifo|classification:classification_logits:7e81637d07062cb8ef8bad5a0db478cab1a08ede42cf1c306f0e7757a4f670e1|3|8|UNKNOWN|UNKNOWN",
+    "consumer_fps": 1999.3004997104383,
+    "cut": "b123",
+    "label": "RegNet/H10 b123",
+    "pipeline_fps": 1518.4595581403626,
+    "prefix_fps": 1576.8476153752983,
+    "stage_generation": "stage_cost_composition_20261014"
+  }
+]

@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Cut-throughput ratios on H10: RegNet b123/b052 and ResNet b095/b002. Each column is a separate forty-process experiment with five randomized complete blocks. Geometric means and nominal 95\% t intervals use block log ratios.}
+\label{tab:scheduling}
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lll}
+\toprule
+Runtime/schedule & RegNet & ResNet \\
+\midrule
+Generic productive & \shortstack{{0.660}\\{[0.656, 0.665]}} & \shortstack{{0.606}\\{[0.603, 0.608]}} \\
+Native productive & \shortstack{{3.371}\\{[3.356, 3.387]}} & \shortstack{{2.060}\\{[2.028, 2.092]}} \\
+Generic single-task & \shortstack{{1.029}\\{[1.023, 1.035]}} & \shortstack{{0.836}\\{[0.828, 0.844]}} \\
+Native single-task & \shortstack{{1.028}\\{[1.016, 1.040]}} & \shortstack{{0.829}\\{[0.824, 0.834]}} \\
+\bottomrule
+\end{tabular}
+\endgroup
+\end{table}

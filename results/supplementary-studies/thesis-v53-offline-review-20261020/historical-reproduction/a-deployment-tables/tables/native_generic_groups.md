@@ -1,0 +1,27 @@
+# Native/Generic by model and setup
+
+All measured Native/Generic pairs by model and setup. Each win count retains its own denominator; both-better requires observed FPS and energy. Ratios are Native/Generic; FPS above one and host-inclusive energy below one favor Native. These are medians across operating points, not repeat intervals.
+
+| Model | Setup | Faster / FPS pairs | Lower energy / energy pairs | Both / joint pairs | Median FPS ratio | Median energy ratio |
+|---|---|---:|---:|---:|---:|---:|
+| MobileNetV3-L | DeepX | 12/17 | 14/17 | 12/17 | 1.254 | 0.830 |
+| MobileNetV3-L | H10 | 17/17 | 17/17 | 17/17 | 2.399 | 0.510 |
+| MobileNetV3-L | H8 | 17/17 | 17/17 | 17/17 | 1.614 | 0.615 |
+| RegNet-X 1.6GF | DeepX | 13/20 | 15/20 | 13/20 | 1.268 | 0.831 |
+| RegNet-X 1.6GF | H10 | 20/20 | 20/20 | 20/20 | 1.646 | 0.703 |
+| RegNet-X 1.6GF | H8 | 20/20 | 20/20 | 20/20 | 1.413 | 0.686 |
+| ResNet-50 | DeepX | 18/19 | 19/19 | 18/19 | 2.320 | 0.559 |
+| ResNet-50 | H10 | 19/19 | 19/19 | 19/19 | 2.778 | 0.501 |
+| ResNet-50 | H8 | 19/19 | 19/19 | 19/19 | 1.509 | 0.696 |
+| YOLO11l | DeepX | 3/3 | 3/3 | 3/3 | 1.060 | 0.958 |
+| YOLO11l | H10 | 3/3 | 3/3 | 3/3 | 1.898 | 0.685 |
+| YOLO11l | H8 | 3/3 | 3/3 | 3/3 | 1.014 | 0.964 |
+| YOLO26m | DeepX | 3/3 | 3/3 | 3/3 | 1.545 | 0.795 |
+| YOLO26m | H10 | 3/3 | 3/3 | 3/3 | 2.075 | 0.665 |
+| YOLO26m | H8 | 0/3 | 3/3 | 0/3 | 0.990 | 0.985 |
+| YOLO26s | DeepX | 3/3 | 3/3 | 3/3 | 1.589 | 0.764 |
+| YOLO26s | H10 | 3/3 | 3/3 | 3/3 | 2.418 | 0.569 |
+| YOLO26s | H8 | 1/3 | 3/3 | 1/3 | 0.987 | 0.992 |
+| YOLOv7 | DeepX | 3/3 | 3/3 | 3/3 | 1.377 | 0.823 |
+| YOLOv7 | H10 | 3/3 | 3/3 | 3/3 | 1.748 | 0.697 |
+| YOLOv7 | H8 | 3/3 | 3/3 | 3/3 | 1.110 | 0.894 |

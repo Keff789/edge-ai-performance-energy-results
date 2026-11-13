@@ -1,0 +1,15 @@
+\begin{table}[H]
+\centering\small\TableSetup
+\caption{Begrenzte Untersuchung der Compiler-Sensitivität mit dem internen B500-Evaluator. Anzeigerundung ändert keine dokumentierten Entscheidungen. Die volle Genauigkeit bleibt im Datenverzeichnis des Kapitels erhalten.}
+\label{tab:evaluation:yolov7_opt_sensitivity}
+\begin{tabular}{@{}l c S[table-format=1.3] S[table-format=1.3] S[table-format=1.3] l@{}}
+\toprule
+Backend & Stufe & {$Q$} & {$Q^{50}$} & {$Q^{75}$} & Entscheidung \\
+\midrule
+Hailo-8 & 1 & 0.415 & 0.598 & 0.467 & nicht bestanden \\
+Hailo-8 & 2 & 0.410 & 0.596 & 0.463 & nicht bestanden \\
+Hailo-10H & 1 & 0.420 & 0.610 & 0.472 & nicht bestanden \\
+Hailo-10H & 2 & {--} & {--} & {--} & nicht ausgewertet \\
+\bottomrule
+\end{tabular}
+\end{table}

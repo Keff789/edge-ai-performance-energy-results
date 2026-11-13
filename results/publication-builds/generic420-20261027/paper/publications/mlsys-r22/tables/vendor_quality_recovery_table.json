@@ -1,0 +1,35 @@
+[
+  {
+    "full_quality": 60.62,
+    "full_uid": "native|mobilenet_v3_large|H8|native_full_hailo8|full",
+    "quality_difference_pp": 10.960000000000003,
+    "quality_metric": "top1_accuracy",
+    "quality_n": 5000,
+    "reference_quality": 73.7,
+    "setup": "H8",
+    "split_quality": 71.58,
+    "split_uid": "native|mobilenet_v3_large|H8|hailo8_to_trt|b027"
+  },
+  {
+    "full_quality": 59.419999999999995,
+    "full_uid": "native|mobilenet_v3_large|H10|native_full_hailo10h|full",
+    "quality_difference_pp": 12.8,
+    "quality_metric": "top1_accuracy",
+    "quality_n": 5000,
+    "reference_quality": 73.7,
+    "setup": "H10",
+    "split_quality": 72.22,
+    "split_uid": "native|mobilenet_v3_large|H10|hailo10h_to_trt|b027"
+  },
+  {
+    "full_quality": 71.72,
+    "full_uid": "native|mobilenet_v3_large|DeepX|native_full_deepx|full",
+    "quality_difference_pp": 0.46000000000000485,
+    "quality_metric": "top1_accuracy",
+    "quality_n": 5000,
+    "reference_quality": 73.7,
+    "setup": "DeepX",
+    "split_quality": 72.18,
+    "split_uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b027"
+  }
+]

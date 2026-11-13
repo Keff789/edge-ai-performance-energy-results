@@ -1,0 +1,5 @@
+model,setup,generic_budget,native_budget,selected_cut,selected_native_fps,best_native_cut,best_native_cuts,best_native_fps,retained_native_pct,best_native_bytes_rank,best_native_in_graph_shortlist,best_native_tested,preserves_shortlist_best,failure_stage
+regnet_x_1_6gf,DeepX,5,2,b123,618.8946717351945,b109,b109,729.0349421337696,84.89231941665072,12,False,False,True,graph_preselection
+regnet_x_1_6gf,H8,5,2,b066,583.689262,b073,b073,617.505899,94.52367385400476,6,False,False,True,graph_preselection
+resnet50,H10,5,2,b002,500.6551031567817,b095,b095,1099.5381472990744,45.53321814132598,12,False,False,True,graph_preselection
+resnet50,H8,5,2,b002,553.944927,b038,b038,581.33212,95.28889045387686,14,False,False,True,graph_preselection

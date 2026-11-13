@@ -1,0 +1,353 @@
+{
+  "comparison": {
+    "native_vs_float32": {
+      "host_output_byte_reduction_ratio": 4.0,
+      "latency_reduction_percent": 21.08043145947851,
+      "latency_speedup_float32_over_native": 1.267112857423374,
+      "throughput_increase_percent": -0.19012524527792785,
+      "throughput_speedup_native_over_float32": 0.9980987475472207
+    }
+  },
+  "correctness": {
+    "outputs": {
+      "yolo26s_part1_b24/conv8": {
+        "allclose": true,
+        "allclose_atol": 0.09889436177909375,
+        "elements": 819200,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rmse": 0.0,
+        "status": "ok"
+      }
+    },
+    "status": "compared"
+  },
+  "environment": {
+    "executable": "hailo10-venv/bin/python",
+    "format_types": [
+      "AUTO",
+      "FLOAT32",
+      "UINT16",
+      "UINT8"
+    ],
+    "hailo_distributions": [
+      {
+        "name": "hailo-apps",
+        "version": "26.3.0"
+      },
+      {
+        "name": "hailort",
+        "version": "5.3.0"
+      }
+    ],
+    "hailo_platform_file": "hailo10-venv/lib/python3.10/site-packages/hailo_platform/__init__.py",
+    "hailo_platform_version": "5.3.0",
+    "hailortcli_version": {
+      "available": true,
+      "output": "HailoRT-CLI version 5.3.0",
+      "returncode": 0
+    },
+    "jetson_clocks": {
+      "available": true,
+      "output": "SOC family:tegra234  Machine:NVIDIA Jetson Orin NX Engineering Reference Developer Kit Super\nError: Run this script(/usr/bin/jetson_clocks) as a root user",
+      "returncode": 1
+    },
+    "numpy": "1.26.4",
+    "nvpmodel": {
+      "available": true,
+      "output": "NV Power Mode: MAXN_SUPER\n0",
+      "returncode": 0
+    },
+    "platform": "Linux-5.15.148-tegra-aarch64-with-glibc2.35",
+    "python": "3.10.12 (main, Aug 15 2025, 14:32:43) [GCC 11.4.0]"
+  },
+  "finished_at": "2026-09-03T12:22:23.423222+00:00",
+  "hef": "artifact-cache/tensorrt_managed_v27516/yolo26s-6087e30da45ded1d/native_split_quality/orin_nx_hailo10_01/yolo26s/b024/hailo10h_to_trt/ada882c4b254157fe5bd0dfde64bb7cc3e38b4a0511fc7999a1dc826843e4876/part1.hef",
+  "hef_contract": {
+    "inputs": [
+      {
+        "format_order": "NHWC",
+        "format_type": "UINT8",
+        "hw_data_bytes": null,
+        "hw_frame_size": null,
+        "hw_shape": [],
+        "name": "yolo26s_part1_b24/input_layer1",
+        "quant_infos": [
+          {
+            "limvals_max": 1.0,
+            "limvals_min": 0.0,
+            "repr": "<hailo_platform.pyhailort._pyhailort.QuantInfo object at 0xffff7b8a3bb0>",
+            "scale": 0.003921568859368563,
+            "zero_point": 0.0
+          }
+        ],
+        "shape": [
+          640,
+          640,
+          3
+        ]
+      }
+    ],
+    "low_level_outputs": [
+      {
+        "format_order": "NHCW",
+        "format_type": "UINT8",
+        "hw_data_bytes": null,
+        "hw_frame_size": null,
+        "hw_shape": [],
+        "name": "yolo26s_part1_b24/conv8",
+        "quant_infos": [
+          {
+            "limvals_max": 7.063882827758789,
+            "limvals_min": -16.953319549560547,
+            "repr": "<hailo_platform.pyhailort._pyhailort.QuantInfo object at 0xffff7b8a3bb0>",
+            "scale": 0.09418510645627975,
+            "zero_point": 180.0
+          }
+        ],
+        "shape": [
+          80,
+          80,
+          128
+        ]
+      }
+    ],
+    "network_groups": [
+      "yolo26s_part1_b24"
+    ],
+    "outputs": [
+      {
+        "device_native_format_type": "UINT8",
+        "format_order": "NHWC",
+        "format_type": "UINT8",
+        "hw_data_bytes": null,
+        "hw_frame_size": null,
+        "hw_shape": [],
+        "name": "yolo26s_part1_b24/conv8",
+        "quant_infos": [
+          {
+            "limvals_max": 7.063882827758789,
+            "limvals_min": -16.953319549560547,
+            "repr": "<hailo_platform.pyhailort._pyhailort.QuantInfo object at 0xffff7b8a3bb0>",
+            "scale": 0.09418510645627975,
+            "zero_point": 180.0
+          }
+        ],
+        "shape": [
+          80,
+          80,
+          128
+        ],
+        "underlying_stream_names": [
+          "yolo26s_part1_b24/conv8"
+        ],
+        "underlying_streams": [
+          {
+            "format_order": "NHCW",
+            "format_type": "UINT8",
+            "hw_data_bytes": null,
+            "hw_frame_size": null,
+            "hw_shape": [],
+            "name": "yolo26s_part1_b24/conv8",
+            "quant_infos": [
+              {
+                "limvals_max": 7.063882827758789,
+                "limvals_min": -16.953319549560547,
+                "repr": "<hailo_platform.pyhailort._pyhailort.QuantInfo object at 0xffff7b6203b0>",
+                "scale": 0.09418510645627975,
+                "zero_point": 180.0
+              }
+            ],
+            "shape": [
+              80,
+              80,
+              128
+            ]
+          }
+        ]
+      }
+    ],
+    "selected_network_group": "yolo26s_part1_b24"
+  },
+  "infermodel_probe": {
+    "default_output_types": {
+      "yolo26s_part1_b24/conv8": "UINT8"
+    },
+    "default_outputs": {
+      "yolo26s_part1_b24/conv8": {
+        "is_nms": false,
+        "order": "NHWC",
+        "shape": [
+          80,
+          80,
+          128
+        ],
+        "type": "UINT8"
+      }
+    },
+    "device_ids": [
+      "0004:01:00.0"
+    ],
+    "input_names": [
+      "yolo26s_part1_b24/input_layer1"
+    ],
+    "output_names": [
+      "yolo26s_part1_b24/conv8"
+    ]
+  },
+  "native_attempts": [
+    {
+      "requested_types": {
+        "yolo26s_part1_b24/conv8": "UINT8"
+      },
+      "status": "ok"
+    }
+  ],
+  "parameters": {
+    "inflight": 2,
+    "input_host_format": "FLOAT32",
+    "latency_frames": 50,
+    "power_mode_changed": false,
+    "seed": 27914,
+    "throughput_frames": 200,
+    "timeout_ms": 10000,
+    "warmup": 10
+  },
+  "schema": "hailo10_infermodel_format_ab/v1",
+  "script_version": "1.0",
+  "started_at": "2026-09-03T12:22:00.032276+00:00",
+  "status": "ok",
+  "test_scope": "runtime_microbenchmark_not_scientific_claim",
+  "variants": {
+    "float32": {
+      "finished_at": "2026-09-03T12:22:12.428418+00:00",
+      "inputs": {
+        "yolo26s_part1_b24/input_layer1": {
+          "is_nms": false,
+          "order": "NHWC",
+          "shape": [
+            640,
+            640,
+            3
+          ],
+          "type": "FLOAT32"
+        }
+      },
+      "latency": {
+        "frames": 50,
+        "max_ms": 63.329166,
+        "mean_ms": 63.0268782,
+        "median_ms": 63.1349845,
+        "min_ms": 61.893128,
+        "p95_ms": 63.3111314,
+        "stdev_ms": 0.38824259142479484
+      },
+      "outputs": {
+        "yolo26s_part1_b24/conv8": {
+          "bytes_per_frame": 3276800,
+          "dequantization": {
+            "mean_ms": 0.0,
+            "method": "already_float32"
+          },
+          "is_nms": false,
+          "numpy_dtype": "float32",
+          "order": "NHWC",
+          "quant_infos": [
+            {
+              "limvals_max": 7.063882827758789,
+              "limvals_min": -16.953319549560547,
+              "repr": "<hailo_platform.pyhailort._pyhailort.QuantInfo object at 0xffff7ad8d730>",
+              "scale": 0.09418510645627975,
+              "zero_point": 180.0
+            }
+          ],
+          "requested_type": "FLOAT32",
+          "shape": [
+            80,
+            80,
+            128
+          ],
+          "type": "FLOAT32"
+        }
+      },
+      "started_at": "2026-09-03T12:22:00.396161+00:00",
+      "status": "ok",
+      "throughput": {
+        "async_queue_size": 27,
+        "effective_inflight": 2,
+        "elapsed_s": 7.055277304,
+        "fps": 28.34757464268764,
+        "frames": 200,
+        "requested_inflight": 2
+      },
+      "total_output_bytes_per_frame": 3276800,
+      "variant": "float32"
+    },
+    "native": {
+      "finished_at": "2026-09-03T12:22:23.416162+00:00",
+      "inputs": {
+        "yolo26s_part1_b24/input_layer1": {
+          "is_nms": false,
+          "order": "NHWC",
+          "shape": [
+            640,
+            640,
+            3
+          ],
+          "type": "FLOAT32"
+        }
+      },
+      "latency": {
+        "frames": 50,
+        "max_ms": 50.002099,
+        "mean_ms": 49.740540339999995,
+        "median_ms": 49.854271,
+        "min_ms": 48.693297,
+        "p95_ms": 49.996892599999995,
+        "stdev_ms": 0.3463413060742023
+      },
+      "outputs": {
+        "yolo26s_part1_b24/conv8": {
+          "bytes_per_frame": 819200,
+          "dequantization": {
+            "mean_ms": 0.36329905,
+            "method": "HailoRTTransformUtils.dequantize_output_buffer",
+            "p95_ms": 0.39600595000000044,
+            "repetitions": 20
+          },
+          "is_nms": false,
+          "numpy_dtype": "uint8",
+          "order": "NHWC",
+          "quant_infos": [
+            {
+              "limvals_max": 7.063882827758789,
+              "limvals_min": -16.953319549560547,
+              "repr": "<hailo_platform.pyhailort._pyhailort.QuantInfo object at 0xffff7ad8d3f0>",
+              "scale": 0.09418510645627975,
+              "zero_point": 180.0
+            }
+          ],
+          "requested_type": "UINT8",
+          "shape": [
+            80,
+            80,
+            128
+          ],
+          "type": "UINT8"
+        }
+      },
+      "started_at": "2026-09-03T12:22:12.430403+00:00",
+      "status": "ok",
+      "throughput": {
+        "async_queue_size": 27,
+        "effective_inflight": 2,
+        "elapsed_s": 7.068716719,
+        "fps": 28.293678746867887,
+        "frames": 200,
+        "requested_inflight": 2
+      },
+      "total_output_bytes_per_frame": 819200,
+      "variant": "native"
+    }
+  }
+}

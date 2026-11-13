@@ -1,0 +1,1482 @@
+{
+  "scope": {
+    "all_source_pairs": 204,
+    "all_source_quality_eligible_pairs": 187,
+    "evaluated_quality_pairs": 187,
+    "classifier_pairs": 151,
+    "detector_pairs": 36,
+    "model_device_groups": 21,
+    "models": [
+      "mobilenet_v3_large",
+      "regnet_x_1_6gf",
+      "resnet50",
+      "yolo11l",
+      "yolo26m",
+      "yolo26s",
+      "yolov7_paper"
+    ],
+    "missing_models_due_incomplete_features": []
+  },
+  "normalization": [
+    {
+      "model": "mobilenet_v3_large",
+      "universe": "regular_workflow_candidates",
+      "candidate_count": 138,
+      "model_sha256": "2f5e79b1e4280251e7b6eefe1d6161c4831e2fc27858e1e9fe2fac697f44489e",
+      "log10_1p_Comm_minimum": 3.5844443071651764,
+      "log10_1p_Comm_maximum": 6.506676145893169,
+      "T_raw_minimum": 0.0,
+      "T_raw_maximum": 2.0
+    },
+    {
+      "model": "regnet_x_1_6gf",
+      "universe": "regular_workflow_candidates",
+      "candidate_count": 133,
+      "model_sha256": "fba2c5b46ff63bd4b4bc65f1cf60fd86fa84e16e7432fcaa60d5efbd2c99b8f3",
+      "log10_1p_Comm_minimum": 3.5621738633646483,
+      "log10_1p_Comm_maximum": 6.654738642279002,
+      "T_raw_minimum": 0.0,
+      "T_raw_maximum": 1.0
+    },
+    {
+      "model": "resnet50",
+      "universe": "regular_workflow_candidates",
+      "candidate_count": 120,
+      "model_sha256": "cebd9d5879ddd304a18f51e559ab74fba5cbd1f610b9359321bc5228acbe4f50",
+      "log10_1p_Comm_minimum": 3.913442954859396,
+      "log10_1p_Comm_maximum": 6.807706073936678,
+      "T_raw_minimum": 0.0,
+      "T_raw_maximum": 1.0
+    },
+    {
+      "model": "yolo11l",
+      "universe": "regular_workflow_candidates",
+      "candidate_count": 615,
+      "model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+      "log10_1p_Comm_minimum": 6.450618717325877,
+      "log10_1p_Comm_maximum": 7.719569925899153,
+      "T_raw_minimum": 0.0,
+      "T_raw_maximum": 10.0
+    },
+    {
+      "model": "yolo26m",
+      "universe": "regular_workflow_candidates",
+      "candidate_count": 416,
+      "model_sha256": "d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897",
+      "log10_1p_Comm_minimum": 3.8573928109209015,
+      "log10_1p_Comm_maximum": 7.719569925899153,
+      "T_raw_minimum": 0.0,
+      "T_raw_maximum": 10.0
+    },
+    {
+      "model": "yolo26s",
+      "universe": "regular_workflow_candidates",
+      "candidate_count": 382,
+      "model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+      "log10_1p_Comm_minimum": 3.8573928109209015,
+      "log10_1p_Comm_maximum": 7.4185399385186805,
+      "T_raw_minimum": 0.0,
+      "T_raw_maximum": 10.0
+    },
+    {
+      "model": "yolov7_paper",
+      "universe": "regular_workflow_candidates",
+      "candidate_count": 307,
+      "model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+      "log10_1p_Comm_minimum": 5.610661227535835,
+      "log10_1p_Comm_maximum": 8.020599917421379,
+      "T_raw_minimum": 0.0,
+      "T_raw_maximum": 8.0
+    }
+  ],
+  "normalization_scope": "complete regular workflow candidate universe per current graph",
+  "operation_feature_contract": "analytic-operation-proxy-r29-extended-v1",
+  "operation_feature_scope": "New analytic operation proxy extension. Original measurements, pair bindings, graph identities, topology, bytes and tensor counts are unchanged.",
+  "formula": "w_comm*minmax(log10(1+Comm)) + w_imb*Imb_raw + w_tensors*minmax(T_raw)",
+  "default_weights": {
+    "w_comm": 1.0,
+    "w_imb": 3.0,
+    "w_tensors": 0.2
+  },
+  "shared_weights": {
+    "w_comm": 1.0,
+    "w_imb": 0.15799266978091375,
+    "w_tensors": 0.2
+  },
+  "shared_weights_status": "Frozen R28 all-classifier fit. In-sample for classifier measurements; transferred unchanged to detectors.",
+  "pooled_fit_status": "Retrospective in-sample optimization on every evaluated model/device group.",
+  "cv_status": "Leave one entire model out, including all three devices. Each displayed group uses only its held-out prediction.",
+  "calibrated_generic": {
+    "available_for_combined_curve": false,
+    "confirmed_prediction_count": 151,
+    "confirmed_detector_prediction_count": 0,
+    "missing_evaluated_candidate_count": 36,
+    "missing_ids": [
+      "native|yolo11l|DeepX|deepx_to_trt|b003",
+      "native|yolo11l|DeepX|deepx_to_trt|b062",
+      "native|yolo11l|DeepX|deepx_to_trt|b120",
+      "native|yolo11l|H10|hailo10h_to_trt|b003",
+      "native|yolo11l|H10|hailo10h_to_trt|b062",
+      "native|yolo11l|H10|hailo10h_to_trt|b120",
+      "native|yolo11l|H8|hailo8_to_trt|b003",
+      "native|yolo11l|H8|hailo8_to_trt|b062",
+      "native|yolo11l|H8|hailo8_to_trt|b120",
+      "native|yolo26m|DeepX|deepx_to_trt|b003",
+      "native|yolo26m|DeepX|deepx_to_trt|b038",
+      "native|yolo26m|DeepX|deepx_to_trt|b043",
+      "native|yolo26m|H10|hailo10h_to_trt|b003",
+      "native|yolo26m|H10|hailo10h_to_trt|b038",
+      "native|yolo26m|H10|hailo10h_to_trt|b043",
+      "native|yolo26m|H8|hailo8_to_trt|b003",
+      "native|yolo26m|H8|hailo8_to_trt|b038",
+      "native|yolo26m|H8|hailo8_to_trt|b043",
+      "native|yolo26s|DeepX|deepx_to_trt|b003",
+      "native|yolo26s|DeepX|deepx_to_trt|b021",
+      "native|yolo26s|DeepX|deepx_to_trt|b038",
+      "native|yolo26s|H10|hailo10h_to_trt|b003",
+      "native|yolo26s|H10|hailo10h_to_trt|b021",
+      "native|yolo26s|H10|hailo10h_to_trt|b038",
+      "native|yolo26s|H8|hailo8_to_trt|b003",
+      "native|yolo26s|H8|hailo8_to_trt|b021",
+      "native|yolo26s|H8|hailo8_to_trt|b038",
+      "native|yolov7_paper|DeepX|deepx_to_trt|b009",
+      "native|yolov7_paper|DeepX|deepx_to_trt|b044",
+      "native|yolov7_paper|DeepX|deepx_to_trt|b066",
+      "native|yolov7_paper|H10|hailo10h_to_trt|b009",
+      "native|yolov7_paper|H10|hailo10h_to_trt|b044",
+      "native|yolov7_paper|H10|hailo10h_to_trt|b066",
+      "native|yolov7_paper|H8|hailo8_to_trt|b009",
+      "native|yolov7_paper|H8|hailo8_to_trt|b044",
+      "native|yolov7_paper|H8|hailo8_to_trt|b066"
+    ],
+    "action": "No reduced-group aggregate and no imputation; omitted from combined methods."
+  },
+  "budget_protocol": "For every k, keep all groups equally weighted and test min(k,n_group). Detector groups have n=3 and remain at zero loss for k>=3.",
+  "objective": "Mean Native throughput loss at k=1,3,5, equal group and budget weights. No alternative objective selected after testing.",
+  "tensor_weight_status": "fixed0.2; all evaluated cuts have exactly one crossing tensor and zero tensor penalty",
+  "pooled_fit": {
+    "selected": {
+      "alpha": 0.13643667520866531,
+      "lower": 0.13135193980666282,
+      "upper": 0.14152141061066784,
+      "width": 0.010169470804005015,
+      "kind": "open_interval",
+      "objective_pct": 8.23730698945756,
+      "weights": {
+        "w_comm": 1.0,
+        "w_imb": 0.15799266978091375,
+        "w_tensors": 0.2
+      }
+    },
+    "minimum_objective_pct": 8.23730698945756,
+    "intervals_evaluated": 389,
+    "dense_grid_minimum_pct": 8.23730698945756,
+    "optimal_regions": [
+      {
+        "alpha": 0.12740720913518472,
+        "lower": 0.12740720913518472,
+        "upper": 0.12740720913518472,
+        "width": 0.0,
+        "kind": "boundary",
+        "objective_pct": 8.23730698945756
+      },
+      {
+        "alpha": 0.1274375665483753,
+        "lower": 0.1274375665483753,
+        "upper": 0.1274375665483753,
+        "width": 0.0,
+        "kind": "boundary",
+        "objective_pct": 8.23730698945756
+      },
+      {
+        "alpha": 0.13135193980666282,
+        "lower": 0.13135193980666282,
+        "upper": 0.13135193980666282,
+        "width": 0.0,
+        "kind": "boundary",
+        "objective_pct": 8.23730698945756
+      },
+      {
+        "alpha": 0.14152141061066784,
+        "lower": 0.14152141061066784,
+        "upper": 0.14152141061066784,
+        "width": 0.0,
+        "kind": "boundary",
+        "objective_pct": 8.23730698945756
+      },
+      {
+        "alpha": 0.1416606391539872,
+        "lower": 0.1416606391539872,
+        "upper": 0.1416606391539872,
+        "width": 0.0,
+        "kind": "boundary",
+        "objective_pct": 8.23730698945756
+      },
+      {
+        "alpha": 0.14384896435307007,
+        "lower": 0.14384896435307007,
+        "upper": 0.14384896435307007,
+        "width": 0.0,
+        "kind": "boundary",
+        "objective_pct": 8.23730698945756
+      },
+      {
+        "alpha": 0.1449322594503657,
+        "lower": 0.1449322594503657,
+        "upper": 0.1449322594503657,
+        "width": 0.0,
+        "kind": "boundary",
+        "objective_pct": 8.23730698945756
+      },
+      {
+        "alpha": 0.14641088124911456,
+        "lower": 0.14641088124911456,
+        "upper": 0.14641088124911456,
+        "width": 0.0,
+        "kind": "boundary",
+        "objective_pct": 8.23730698945756
+      },
+      {
+        "alpha": 0.12742238784178,
+        "lower": 0.12740720913518472,
+        "upper": 0.1274375665483753,
+        "width": 3.0357413190573723e-05,
+        "kind": "open_interval",
+        "objective_pct": 8.23730698945756
+      },
+      {
+        "alpha": 0.12939475317751906,
+        "lower": 0.1274375665483753,
+        "upper": 0.13135193980666282,
+        "width": 0.003914373258287529,
+        "kind": "open_interval",
+        "objective_pct": 8.23730698945756
+      },
+      {
+        "alpha": 0.13643667520866531,
+        "lower": 0.13135193980666282,
+        "upper": 0.14152141061066784,
+        "width": 0.010169470804005015,
+        "kind": "open_interval",
+        "objective_pct": 8.23730698945756
+      },
+      {
+        "alpha": 0.1415910248823275,
+        "lower": 0.14152141061066784,
+        "upper": 0.1416606391539872,
+        "width": 0.00013922854331935297,
+        "kind": "open_interval",
+        "objective_pct": 8.23730698945756
+      },
+      {
+        "alpha": 0.14275480175352862,
+        "lower": 0.1416606391539872,
+        "upper": 0.14384896435307007,
+        "width": 0.00218832519908288,
+        "kind": "open_interval",
+        "objective_pct": 8.23730698945756
+      },
+      {
+        "alpha": 0.14439061190171787,
+        "lower": 0.14384896435307007,
+        "upper": 0.1449322594503657,
+        "width": 0.001083295097295628,
+        "kind": "open_interval",
+        "objective_pct": 8.23730698945756
+      },
+      {
+        "alpha": 0.14567157034974013,
+        "lower": 0.1449322594503657,
+        "upper": 0.14641088124911456,
+        "width": 0.0014786217987488581,
+        "kind": "open_interval",
+        "objective_pct": 8.23730698945756
+      },
+      {
+        "alpha": 0.1464209024427619,
+        "lower": 0.14641088124911456,
+        "upper": 0.14643092363640922,
+        "width": 2.0042387294666453e-05,
+        "kind": "open_interval",
+        "objective_pct": 8.23730698945756
+      }
+    ],
+    "objective": "mean percentage Native-throughput loss at k=1,3,5, equal weights over budgets and model/device groups",
+    "representative_rule": "midpoint of widest globally optimal open ranking interval; smaller alpha breaks equal-width ties; boundary used only if no equally good interval exists"
+  },
+  "fold_fits": {
+    "mobilenet_v3_large": {
+      "selected": {
+        "alpha": 0.36279062544021545,
+        "lower": 0.3607571161751502,
+        "upper": 0.3648241347052807,
+        "width": 0.004067018530130473,
+        "kind": "open_interval",
+        "objective_pct": 7.599034319710371,
+        "weights": {
+          "w_comm": 1.0,
+          "w_imb": 0.5693428877923351,
+          "w_tensors": 0.2
+        }
+      },
+      "minimum_objective_pct": 7.599034319710371,
+      "intervals_evaluated": 261,
+      "dense_grid_minimum_pct": 7.599034319710371,
+      "optimal_regions": [
+        {
+          "alpha": 0.3648241347052807,
+          "lower": 0.3648241347052807,
+          "upper": 0.3648241347052807,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 7.599034319710371
+        },
+        {
+          "alpha": 0.36494860294860765,
+          "lower": 0.36494860294860765,
+          "upper": 0.36494860294860765,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 7.599034319710371
+        },
+        {
+          "alpha": 0.3669312145890844,
+          "lower": 0.3669312145890844,
+          "upper": 0.3669312145890844,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 7.599034319710371
+        },
+        {
+          "alpha": 0.36279062544021545,
+          "lower": 0.3607571161751502,
+          "upper": 0.3648241347052807,
+          "width": 0.004067018530130473,
+          "kind": "open_interval",
+          "objective_pct": 7.599034319710371
+        },
+        {
+          "alpha": 0.36488636882694414,
+          "lower": 0.3648241347052807,
+          "upper": 0.36494860294860765,
+          "width": 0.00012446824332695838,
+          "kind": "open_interval",
+          "objective_pct": 7.599034319710371
+        },
+        {
+          "alpha": 0.365939908768846,
+          "lower": 0.36494860294860765,
+          "upper": 0.3669312145890844,
+          "width": 0.00198261164047675,
+          "kind": "open_interval",
+          "objective_pct": 7.599034319710371
+        },
+        {
+          "alpha": 0.3669524373022286,
+          "lower": 0.3669312145890844,
+          "upper": 0.3669736600153728,
+          "width": 4.244542628839554e-05,
+          "kind": "open_interval",
+          "objective_pct": 7.599034319710371
+        }
+      ],
+      "objective": "mean percentage Native-throughput loss at k=1,3,5, equal weights over budgets and model/device groups",
+      "representative_rule": "midpoint of widest globally optimal open ranking interval; smaller alpha breaks equal-width ties; boundary used only if no equally good interval exists"
+    },
+    "regnet_x_1_6gf": {
+      "selected": {
+        "alpha": 0.13643667520866531,
+        "lower": 0.13135193980666282,
+        "upper": 0.14152141061066784,
+        "width": 0.010169470804005015,
+        "kind": "open_interval",
+        "objective_pct": 6.639148513672119,
+        "weights": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        }
+      },
+      "minimum_objective_pct": 6.639148513672119,
+      "intervals_evaluated": 297,
+      "dense_grid_minimum_pct": 6.639148513672119,
+      "optimal_regions": [
+        {
+          "alpha": 0.12740720913518472,
+          "lower": 0.12740720913518472,
+          "upper": 0.12740720913518472,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 6.639148513672119
+        },
+        {
+          "alpha": 0.1274375665483753,
+          "lower": 0.1274375665483753,
+          "upper": 0.1274375665483753,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 6.639148513672119
+        },
+        {
+          "alpha": 0.13135193980666282,
+          "lower": 0.13135193980666282,
+          "upper": 0.13135193980666282,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 6.639148513672119
+        },
+        {
+          "alpha": 0.14152141061066784,
+          "lower": 0.14152141061066784,
+          "upper": 0.14152141061066784,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 6.639148513672119
+        },
+        {
+          "alpha": 0.1416606391539872,
+          "lower": 0.1416606391539872,
+          "upper": 0.1416606391539872,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 6.639148513672119
+        },
+        {
+          "alpha": 0.14384896435307007,
+          "lower": 0.14384896435307007,
+          "upper": 0.14384896435307007,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 6.639148513672119
+        },
+        {
+          "alpha": 0.14641088124911456,
+          "lower": 0.14641088124911456,
+          "upper": 0.14641088124911456,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 6.639148513672119
+        },
+        {
+          "alpha": 0.12742238784178,
+          "lower": 0.12740720913518472,
+          "upper": 0.1274375665483753,
+          "width": 3.0357413190573723e-05,
+          "kind": "open_interval",
+          "objective_pct": 6.639148513672119
+        },
+        {
+          "alpha": 0.12939475317751906,
+          "lower": 0.1274375665483753,
+          "upper": 0.13135193980666282,
+          "width": 0.003914373258287529,
+          "kind": "open_interval",
+          "objective_pct": 6.639148513672119
+        },
+        {
+          "alpha": 0.13643667520866531,
+          "lower": 0.13135193980666282,
+          "upper": 0.14152141061066784,
+          "width": 0.010169470804005015,
+          "kind": "open_interval",
+          "objective_pct": 6.639148513672119
+        },
+        {
+          "alpha": 0.1415910248823275,
+          "lower": 0.14152141061066784,
+          "upper": 0.1416606391539872,
+          "width": 0.00013922854331935297,
+          "kind": "open_interval",
+          "objective_pct": 6.639148513672119
+        },
+        {
+          "alpha": 0.14275480175352862,
+          "lower": 0.1416606391539872,
+          "upper": 0.14384896435307007,
+          "width": 0.00218832519908288,
+          "kind": "open_interval",
+          "objective_pct": 6.639148513672119
+        },
+        {
+          "alpha": 0.14512992280109233,
+          "lower": 0.14384896435307007,
+          "upper": 0.14641088124911456,
+          "width": 0.002561916896044486,
+          "kind": "open_interval",
+          "objective_pct": 6.639148513672119
+        },
+        {
+          "alpha": 0.1464209024427619,
+          "lower": 0.14641088124911456,
+          "upper": 0.14643092363640922,
+          "width": 2.0042387294666453e-05,
+          "kind": "open_interval",
+          "objective_pct": 6.639148513672119
+        }
+      ],
+      "objective": "mean percentage Native-throughput loss at k=1,3,5, equal weights over budgets and model/device groups",
+      "representative_rule": "midpoint of widest globally optimal open ranking interval; smaller alpha breaks equal-width ties; boundary used only if no equally good interval exists"
+    },
+    "resnet50": {
+      "selected": {
+        "alpha": 0.02447082801699253,
+        "lower": 0.0,
+        "upper": 0.04894165603398506,
+        "width": 0.04894165603398506,
+        "kind": "open_interval",
+        "objective_pct": 4.8408437852572135,
+        "weights": {
+          "w_comm": 1.0,
+          "w_imb": 0.025084670679042267,
+          "w_tensors": 0.2
+        }
+      },
+      "minimum_objective_pct": 4.8408437852572135,
+      "intervals_evaluated": 229,
+      "dense_grid_minimum_pct": 4.8408437852572135,
+      "optimal_regions": [
+        {
+          "alpha": 0.04894165603398506,
+          "lower": 0.04894165603398506,
+          "upper": 0.04894165603398506,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 4.8408437852572135
+        },
+        {
+          "alpha": 0.08493836889831763,
+          "lower": 0.08493836889831763,
+          "upper": 0.08493836889831763,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 4.8408437852572135
+        },
+        {
+          "alpha": 0.02447082801699253,
+          "lower": 0.0,
+          "upper": 0.04894165603398506,
+          "width": 0.04894165603398506,
+          "kind": "open_interval",
+          "objective_pct": 4.8408437852572135
+        },
+        {
+          "alpha": 0.06694001246615135,
+          "lower": 0.04894165603398506,
+          "upper": 0.08493836889831763,
+          "width": 0.03599671286433257,
+          "kind": "open_interval",
+          "objective_pct": 4.8408437852572135
+        },
+        {
+          "alpha": 0.0893687604857267,
+          "lower": 0.08493836889831763,
+          "upper": 0.09379915207313577,
+          "width": 0.008860783174818143,
+          "kind": "open_interval",
+          "objective_pct": 4.8408437852572135
+        }
+      ],
+      "objective": "mean percentage Native-throughput loss at k=1,3,5, equal weights over budgets and model/device groups",
+      "representative_rule": "midpoint of widest globally optimal open ranking interval; smaller alpha breaks equal-width ties; boundary used only if no equally good interval exists"
+    },
+    "yolo11l": {
+      "selected": {
+        "alpha": 0.13643667520866531,
+        "lower": 0.13135193980666282,
+        "upper": 0.14152141061066784,
+        "width": 0.010169470804005015,
+        "kind": "open_interval",
+        "objective_pct": 9.51932397260404,
+        "weights": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        }
+      },
+      "minimum_objective_pct": 9.51932397260404,
+      "intervals_evaluated": 387,
+      "dense_grid_minimum_pct": 9.51932397260404,
+      "optimal_regions": [
+        {
+          "alpha": 0.12740720913518472,
+          "lower": 0.12740720913518472,
+          "upper": 0.12740720913518472,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.51932397260404
+        },
+        {
+          "alpha": 0.1274375665483753,
+          "lower": 0.1274375665483753,
+          "upper": 0.1274375665483753,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.51932397260404
+        },
+        {
+          "alpha": 0.13135193980666282,
+          "lower": 0.13135193980666282,
+          "upper": 0.13135193980666282,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.51932397260404
+        },
+        {
+          "alpha": 0.14152141061066784,
+          "lower": 0.14152141061066784,
+          "upper": 0.14152141061066784,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.51932397260404
+        },
+        {
+          "alpha": 0.1416606391539872,
+          "lower": 0.1416606391539872,
+          "upper": 0.1416606391539872,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.51932397260404
+        },
+        {
+          "alpha": 0.14384896435307007,
+          "lower": 0.14384896435307007,
+          "upper": 0.14384896435307007,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.51932397260404
+        },
+        {
+          "alpha": 0.1449322594503657,
+          "lower": 0.1449322594503657,
+          "upper": 0.1449322594503657,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.51932397260404
+        },
+        {
+          "alpha": 0.14641088124911456,
+          "lower": 0.14641088124911456,
+          "upper": 0.14641088124911456,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.51932397260404
+        },
+        {
+          "alpha": 0.12742238784178,
+          "lower": 0.12740720913518472,
+          "upper": 0.1274375665483753,
+          "width": 3.0357413190573723e-05,
+          "kind": "open_interval",
+          "objective_pct": 9.51932397260404
+        },
+        {
+          "alpha": 0.12939475317751906,
+          "lower": 0.1274375665483753,
+          "upper": 0.13135193980666282,
+          "width": 0.003914373258287529,
+          "kind": "open_interval",
+          "objective_pct": 9.51932397260404
+        },
+        {
+          "alpha": 0.13643667520866531,
+          "lower": 0.13135193980666282,
+          "upper": 0.14152141061066784,
+          "width": 0.010169470804005015,
+          "kind": "open_interval",
+          "objective_pct": 9.51932397260404
+        },
+        {
+          "alpha": 0.1415910248823275,
+          "lower": 0.14152141061066784,
+          "upper": 0.1416606391539872,
+          "width": 0.00013922854331935297,
+          "kind": "open_interval",
+          "objective_pct": 9.51932397260404
+        },
+        {
+          "alpha": 0.14275480175352862,
+          "lower": 0.1416606391539872,
+          "upper": 0.14384896435307007,
+          "width": 0.00218832519908288,
+          "kind": "open_interval",
+          "objective_pct": 9.51932397260404
+        },
+        {
+          "alpha": 0.14439061190171787,
+          "lower": 0.14384896435307007,
+          "upper": 0.1449322594503657,
+          "width": 0.001083295097295628,
+          "kind": "open_interval",
+          "objective_pct": 9.51932397260404
+        },
+        {
+          "alpha": 0.14567157034974013,
+          "lower": 0.1449322594503657,
+          "upper": 0.14641088124911456,
+          "width": 0.0014786217987488581,
+          "kind": "open_interval",
+          "objective_pct": 9.51932397260404
+        },
+        {
+          "alpha": 0.1464209024427619,
+          "lower": 0.14641088124911456,
+          "upper": 0.14643092363640922,
+          "width": 2.0042387294666453e-05,
+          "kind": "open_interval",
+          "objective_pct": 9.51932397260404
+        }
+      ],
+      "objective": "mean percentage Native-throughput loss at k=1,3,5, equal weights over budgets and model/device groups",
+      "representative_rule": "midpoint of widest globally optimal open ranking interval; smaller alpha breaks equal-width ties; boundary used only if no equally good interval exists"
+    },
+    "yolo26m": {
+      "selected": {
+        "alpha": 0.13643667520866531,
+        "lower": 0.13135193980666282,
+        "upper": 0.14152141061066784,
+        "width": 0.010169470804005015,
+        "kind": "open_interval",
+        "objective_pct": 9.606271456244471,
+        "weights": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        }
+      },
+      "minimum_objective_pct": 9.606271456244471,
+      "intervals_evaluated": 389,
+      "dense_grid_minimum_pct": 9.606271456244471,
+      "optimal_regions": [
+        {
+          "alpha": 0.12740720913518472,
+          "lower": 0.12740720913518472,
+          "upper": 0.12740720913518472,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.606271456244471
+        },
+        {
+          "alpha": 0.1274375665483753,
+          "lower": 0.1274375665483753,
+          "upper": 0.1274375665483753,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.606271456244471
+        },
+        {
+          "alpha": 0.13135193980666282,
+          "lower": 0.13135193980666282,
+          "upper": 0.13135193980666282,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.606271456244471
+        },
+        {
+          "alpha": 0.14152141061066784,
+          "lower": 0.14152141061066784,
+          "upper": 0.14152141061066784,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.606271456244471
+        },
+        {
+          "alpha": 0.1416606391539872,
+          "lower": 0.1416606391539872,
+          "upper": 0.1416606391539872,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.606271456244471
+        },
+        {
+          "alpha": 0.14384896435307007,
+          "lower": 0.14384896435307007,
+          "upper": 0.14384896435307007,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.606271456244471
+        },
+        {
+          "alpha": 0.1449322594503657,
+          "lower": 0.1449322594503657,
+          "upper": 0.1449322594503657,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.606271456244471
+        },
+        {
+          "alpha": 0.14641088124911456,
+          "lower": 0.14641088124911456,
+          "upper": 0.14641088124911456,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.606271456244471
+        },
+        {
+          "alpha": 0.12742238784178,
+          "lower": 0.12740720913518472,
+          "upper": 0.1274375665483753,
+          "width": 3.0357413190573723e-05,
+          "kind": "open_interval",
+          "objective_pct": 9.606271456244471
+        },
+        {
+          "alpha": 0.12939475317751906,
+          "lower": 0.1274375665483753,
+          "upper": 0.13135193980666282,
+          "width": 0.003914373258287529,
+          "kind": "open_interval",
+          "objective_pct": 9.606271456244471
+        },
+        {
+          "alpha": 0.13643667520866531,
+          "lower": 0.13135193980666282,
+          "upper": 0.14152141061066784,
+          "width": 0.010169470804005015,
+          "kind": "open_interval",
+          "objective_pct": 9.606271456244471
+        },
+        {
+          "alpha": 0.1415910248823275,
+          "lower": 0.14152141061066784,
+          "upper": 0.1416606391539872,
+          "width": 0.00013922854331935297,
+          "kind": "open_interval",
+          "objective_pct": 9.606271456244471
+        },
+        {
+          "alpha": 0.14275480175352862,
+          "lower": 0.1416606391539872,
+          "upper": 0.14384896435307007,
+          "width": 0.00218832519908288,
+          "kind": "open_interval",
+          "objective_pct": 9.606271456244471
+        },
+        {
+          "alpha": 0.14439061190171787,
+          "lower": 0.14384896435307007,
+          "upper": 0.1449322594503657,
+          "width": 0.001083295097295628,
+          "kind": "open_interval",
+          "objective_pct": 9.606271456244471
+        },
+        {
+          "alpha": 0.14567157034974013,
+          "lower": 0.1449322594503657,
+          "upper": 0.14641088124911456,
+          "width": 0.0014786217987488581,
+          "kind": "open_interval",
+          "objective_pct": 9.606271456244471
+        },
+        {
+          "alpha": 0.1464209024427619,
+          "lower": 0.14641088124911456,
+          "upper": 0.14643092363640922,
+          "width": 2.0042387294666453e-05,
+          "kind": "open_interval",
+          "objective_pct": 9.606271456244471
+        }
+      ],
+      "objective": "mean percentage Native-throughput loss at k=1,3,5, equal weights over budgets and model/device groups",
+      "representative_rule": "midpoint of widest globally optimal open ranking interval; smaller alpha breaks equal-width ties; boundary used only if no equally good interval exists"
+    },
+    "yolo26s": {
+      "selected": {
+        "alpha": 0.13643667520866531,
+        "lower": 0.13135193980666282,
+        "upper": 0.14152141061066784,
+        "width": 0.010169470804005015,
+        "kind": "open_interval",
+        "objective_pct": 9.610191487700487,
+        "weights": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        }
+      },
+      "minimum_objective_pct": 9.610191487700487,
+      "intervals_evaluated": 387,
+      "dense_grid_minimum_pct": 9.610191487700487,
+      "optimal_regions": [
+        {
+          "alpha": 0.12740720913518472,
+          "lower": 0.12740720913518472,
+          "upper": 0.12740720913518472,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.610191487700487
+        },
+        {
+          "alpha": 0.1274375665483753,
+          "lower": 0.1274375665483753,
+          "upper": 0.1274375665483753,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.610191487700487
+        },
+        {
+          "alpha": 0.13135193980666282,
+          "lower": 0.13135193980666282,
+          "upper": 0.13135193980666282,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.610191487700487
+        },
+        {
+          "alpha": 0.14152141061066784,
+          "lower": 0.14152141061066784,
+          "upper": 0.14152141061066784,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.610191487700487
+        },
+        {
+          "alpha": 0.1416606391539872,
+          "lower": 0.1416606391539872,
+          "upper": 0.1416606391539872,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.610191487700487
+        },
+        {
+          "alpha": 0.14384896435307007,
+          "lower": 0.14384896435307007,
+          "upper": 0.14384896435307007,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.610191487700487
+        },
+        {
+          "alpha": 0.1449322594503657,
+          "lower": 0.1449322594503657,
+          "upper": 0.1449322594503657,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.610191487700487
+        },
+        {
+          "alpha": 0.14641088124911456,
+          "lower": 0.14641088124911456,
+          "upper": 0.14641088124911456,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 9.610191487700487
+        },
+        {
+          "alpha": 0.12742238784178,
+          "lower": 0.12740720913518472,
+          "upper": 0.1274375665483753,
+          "width": 3.0357413190573723e-05,
+          "kind": "open_interval",
+          "objective_pct": 9.610191487700487
+        },
+        {
+          "alpha": 0.12939475317751906,
+          "lower": 0.1274375665483753,
+          "upper": 0.13135193980666282,
+          "width": 0.003914373258287529,
+          "kind": "open_interval",
+          "objective_pct": 9.610191487700487
+        },
+        {
+          "alpha": 0.13643667520866531,
+          "lower": 0.13135193980666282,
+          "upper": 0.14152141061066784,
+          "width": 0.010169470804005015,
+          "kind": "open_interval",
+          "objective_pct": 9.610191487700487
+        },
+        {
+          "alpha": 0.1415910248823275,
+          "lower": 0.14152141061066784,
+          "upper": 0.1416606391539872,
+          "width": 0.00013922854331935297,
+          "kind": "open_interval",
+          "objective_pct": 9.610191487700487
+        },
+        {
+          "alpha": 0.14275480175352862,
+          "lower": 0.1416606391539872,
+          "upper": 0.14384896435307007,
+          "width": 0.00218832519908288,
+          "kind": "open_interval",
+          "objective_pct": 9.610191487700487
+        },
+        {
+          "alpha": 0.14439061190171787,
+          "lower": 0.14384896435307007,
+          "upper": 0.1449322594503657,
+          "width": 0.001083295097295628,
+          "kind": "open_interval",
+          "objective_pct": 9.610191487700487
+        },
+        {
+          "alpha": 0.14567157034974013,
+          "lower": 0.1449322594503657,
+          "upper": 0.14641088124911456,
+          "width": 0.0014786217987488581,
+          "kind": "open_interval",
+          "objective_pct": 9.610191487700487
+        },
+        {
+          "alpha": 0.1464209024427619,
+          "lower": 0.14641088124911456,
+          "upper": 0.14643092363640922,
+          "width": 2.0042387294666453e-05,
+          "kind": "open_interval",
+          "objective_pct": 9.610191487700487
+        }
+      ],
+      "objective": "mean percentage Native-throughput loss at k=1,3,5, equal weights over budgets and model/device groups",
+      "representative_rule": "midpoint of widest globally optimal open ranking interval; smaller alpha breaks equal-width ties; boundary used only if no equally good interval exists"
+    },
+    "yolov7_paper": {
+      "selected": {
+        "alpha": 0.13643667520866531,
+        "lower": 0.13135193980666282,
+        "upper": 0.14152141061066784,
+        "width": 0.010169470804005015,
+        "kind": "open_interval",
+        "objective_pct": 8.586074129947473,
+        "weights": {
+          "w_comm": 1.0,
+          "w_imb": 0.15799266978091375,
+          "w_tensors": 0.2
+        }
+      },
+      "minimum_objective_pct": 8.586074129947473,
+      "intervals_evaluated": 387,
+      "dense_grid_minimum_pct": 8.586074129947473,
+      "optimal_regions": [
+        {
+          "alpha": 0.12740720913518472,
+          "lower": 0.12740720913518472,
+          "upper": 0.12740720913518472,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 8.586074129947473
+        },
+        {
+          "alpha": 0.1274375665483753,
+          "lower": 0.1274375665483753,
+          "upper": 0.1274375665483753,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 8.586074129947473
+        },
+        {
+          "alpha": 0.13135193980666282,
+          "lower": 0.13135193980666282,
+          "upper": 0.13135193980666282,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 8.586074129947473
+        },
+        {
+          "alpha": 0.14152141061066784,
+          "lower": 0.14152141061066784,
+          "upper": 0.14152141061066784,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 8.586074129947473
+        },
+        {
+          "alpha": 0.1416606391539872,
+          "lower": 0.1416606391539872,
+          "upper": 0.1416606391539872,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 8.586074129947473
+        },
+        {
+          "alpha": 0.14384896435307007,
+          "lower": 0.14384896435307007,
+          "upper": 0.14384896435307007,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 8.586074129947473
+        },
+        {
+          "alpha": 0.1449322594503657,
+          "lower": 0.1449322594503657,
+          "upper": 0.1449322594503657,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 8.586074129947473
+        },
+        {
+          "alpha": 0.14641088124911456,
+          "lower": 0.14641088124911456,
+          "upper": 0.14641088124911456,
+          "width": 0.0,
+          "kind": "boundary",
+          "objective_pct": 8.586074129947473
+        },
+        {
+          "alpha": 0.12742238784178,
+          "lower": 0.12740720913518472,
+          "upper": 0.1274375665483753,
+          "width": 3.0357413190573723e-05,
+          "kind": "open_interval",
+          "objective_pct": 8.586074129947473
+        },
+        {
+          "alpha": 0.12939475317751906,
+          "lower": 0.1274375665483753,
+          "upper": 0.13135193980666282,
+          "width": 0.003914373258287529,
+          "kind": "open_interval",
+          "objective_pct": 8.586074129947473
+        },
+        {
+          "alpha": 0.13643667520866531,
+          "lower": 0.13135193980666282,
+          "upper": 0.14152141061066784,
+          "width": 0.010169470804005015,
+          "kind": "open_interval",
+          "objective_pct": 8.586074129947473
+        },
+        {
+          "alpha": 0.1415910248823275,
+          "lower": 0.14152141061066784,
+          "upper": 0.1416606391539872,
+          "width": 0.00013922854331935297,
+          "kind": "open_interval",
+          "objective_pct": 8.586074129947473
+        },
+        {
+          "alpha": 0.14275480175352862,
+          "lower": 0.1416606391539872,
+          "upper": 0.14384896435307007,
+          "width": 0.00218832519908288,
+          "kind": "open_interval",
+          "objective_pct": 8.586074129947473
+        },
+        {
+          "alpha": 0.14439061190171787,
+          "lower": 0.14384896435307007,
+          "upper": 0.1449322594503657,
+          "width": 0.001083295097295628,
+          "kind": "open_interval",
+          "objective_pct": 8.586074129947473
+        },
+        {
+          "alpha": 0.14567157034974013,
+          "lower": 0.1449322594503657,
+          "upper": 0.14641088124911456,
+          "width": 0.0014786217987488581,
+          "kind": "open_interval",
+          "objective_pct": 8.586074129947473
+        },
+        {
+          "alpha": 0.1464209024427619,
+          "lower": 0.14641088124911456,
+          "upper": 0.14643092363640922,
+          "width": 2.0042387294666453e-05,
+          "kind": "open_interval",
+          "objective_pct": 8.586074129947473
+        }
+      ],
+      "objective": "mean percentage Native-throughput loss at k=1,3,5, equal weights over budgets and model/device groups",
+      "representative_rule": "midpoint of widest globally optimal open ranking interval; smaller alpha breaks equal-width ties; boundary used only if no equally good interval exists"
+    }
+  },
+  "folds": [
+    {
+      "held_out_model": "mobilenet_v3_large",
+      "train_n": 153,
+      "test_n": 34,
+      "train_groups": 18,
+      "test_groups": 3,
+      "alpha": 0.36279062544021545,
+      "w_comm": 1.0,
+      "w_imb": 0.5693428877923351,
+      "w_tensors": 0.2,
+      "train_objective_pct": 7.599034319710371,
+      "test_objective_pct": 23.11862448246687,
+      "default_test_objective_pct": 23.11862448246687,
+      "optimal_interval_lower": 0.3607571161751502,
+      "optimal_interval_upper": 0.3648241347052807
+    },
+    {
+      "held_out_model": "regnet_x_1_6gf",
+      "train_n": 127,
+      "test_n": 60,
+      "train_groups": 18,
+      "test_groups": 3,
+      "alpha": 0.13643667520866531,
+      "w_comm": 1.0,
+      "w_imb": 0.15799266978091375,
+      "w_tensors": 0.2,
+      "train_objective_pct": 6.639148513672119,
+      "test_objective_pct": 17.82625784417021,
+      "default_test_objective_pct": 32.587410405033715,
+      "optimal_interval_lower": 0.13135193980666282,
+      "optimal_interval_upper": 0.14152141061066784
+    },
+    {
+      "held_out_model": "resnet50",
+      "train_n": 130,
+      "test_n": 57,
+      "train_groups": 18,
+      "test_groups": 3,
+      "alpha": 0.02447082801699253,
+      "w_comm": 1.0,
+      "w_imb": 0.025084670679042267,
+      "w_tensors": 0.2,
+      "train_objective_pct": 4.8408437852572135,
+      "test_objective_pct": 34.02997293425264,
+      "default_test_objective_pct": 11.446785963941558,
+      "optimal_interval_lower": 0.0,
+      "optimal_interval_upper": 0.04894165603398506
+    },
+    {
+      "held_out_model": "yolo11l",
+      "train_n": 178,
+      "test_n": 9,
+      "train_groups": 18,
+      "test_groups": 3,
+      "alpha": 0.13643667520866531,
+      "w_comm": 1.0,
+      "w_imb": 0.15799266978091375,
+      "w_tensors": 0.2,
+      "train_objective_pct": 9.51932397260404,
+      "test_objective_pct": 0.5452050905786796,
+      "default_test_objective_pct": 0.3577375668109648,
+      "optimal_interval_lower": 0.13135193980666282,
+      "optimal_interval_upper": 0.14152141061066784
+    },
+    {
+      "held_out_model": "yolo26m",
+      "train_n": 178,
+      "test_n": 9,
+      "train_groups": 18,
+      "test_groups": 3,
+      "alpha": 0.13643667520866531,
+      "w_comm": 1.0,
+      "w_imb": 0.15799266978091375,
+      "w_tensors": 0.2,
+      "train_objective_pct": 9.606271456244471,
+      "test_objective_pct": 0.023520188736092518,
+      "default_test_objective_pct": 0.023520188736092518,
+      "optimal_interval_lower": 0.13135193980666282,
+      "optimal_interval_upper": 0.14152141061066784
+    },
+    {
+      "held_out_model": "yolo26s",
+      "train_n": 178,
+      "test_n": 9,
+      "train_groups": 18,
+      "test_groups": 3,
+      "alpha": 0.13643667520866531,
+      "w_comm": 1.0,
+      "w_imb": 0.15799266978091375,
+      "w_tensors": 0.2,
+      "train_objective_pct": 9.610191487700487,
+      "test_objective_pct": 0.0,
+      "default_test_objective_pct": 6.933108568423448,
+      "optimal_interval_lower": 0.13135193980666282,
+      "optimal_interval_upper": 0.14152141061066784
+    },
+    {
+      "held_out_model": "yolov7_paper",
+      "train_n": 178,
+      "test_n": 9,
+      "train_groups": 18,
+      "test_groups": 3,
+      "alpha": 0.13643667520866531,
+      "w_comm": 1.0,
+      "w_imb": 0.15799266978091375,
+      "w_tensors": 0.2,
+      "train_objective_pct": 8.586074129947473,
+      "test_objective_pct": 6.144704146518077,
+      "default_test_objective_pct": 2.798844250501757,
+      "optimal_interval_lower": 0.13135193980666282,
+      "optimal_interval_upper": 0.14152141061066784
+    }
+  ],
+  "key_budget_results": [
+    {
+      "method": "bytes",
+      "k": 1,
+      "mean_loss_pct": 17.226542799168698,
+      "median_loss_pct": 3.230503938213447,
+      "max_loss_pct": 75.97885914808884,
+      "exact_winners": 8,
+      "groups": 21
+    },
+    {
+      "method": "bytes",
+      "k": 3,
+      "mean_loss_pct": 9.320355445001738,
+      "median_loss_pct": 0.0,
+      "max_loss_pct": 69.35221564632121,
+      "exact_winners": 15,
+      "groups": 21
+    },
+    {
+      "method": "bytes",
+      "k": 5,
+      "mean_loss_pct": 3.798185625435318,
+      "median_loss_pct": 0.0,
+      "max_loss_pct": 54.46678185867402,
+      "exact_winners": 17,
+      "groups": 21
+    },
+    {
+      "method": "generic",
+      "k": 1,
+      "mean_loss_pct": 15.077128973324953,
+      "median_loss_pct": 1.6258831903917859,
+      "max_loss_pct": 68.05463929240618,
+      "exact_winners": 9,
+      "groups": 21
+    },
+    {
+      "method": "generic",
+      "k": 3,
+      "mean_loss_pct": 10.18637400727791,
+      "median_loss_pct": 0.0,
+      "max_loss_pct": 65.20885404612667,
+      "exact_winners": 14,
+      "groups": 21
+    },
+    {
+      "method": "generic",
+      "k": 5,
+      "mean_loss_pct": 8.763314163809524,
+      "median_loss_pct": 0.0,
+      "max_loss_pct": 65.20885404612667,
+      "exact_winners": 15,
+      "groups": 21
+    },
+    {
+      "method": "weighted_cv",
+      "k": 1,
+      "mean_loss_pct": 18.767915133798745,
+      "median_loss_pct": 1.4217861895076678,
+      "max_loss_pct": 75.97885914808884,
+      "exact_winners": 9,
+      "groups": 21
+    },
+    {
+      "method": "weighted_cv",
+      "k": 3,
+      "mean_loss_pct": 11.341651572896938,
+      "median_loss_pct": 0.0,
+      "max_loss_pct": 69.35221564632121,
+      "exact_winners": 15,
+      "groups": 21
+    },
+    {
+      "method": "weighted_cv",
+      "k": 5,
+      "mean_loss_pct": 4.899698159042557,
+      "median_loss_pct": 0.0,
+      "max_loss_pct": 36.5918146444126,
+      "exact_winners": 16,
+      "groups": 21
+    },
+    {
+      "method": "weighted_default",
+      "k": 1,
+      "mean_loss_pct": 15.73266038918571,
+      "median_loss_pct": 5.476326145995247,
+      "max_loss_pct": 62.93932111870889,
+      "exact_winners": 6,
+      "groups": 21
+    },
+    {
+      "method": "weighted_default",
+      "k": 3,
+      "mean_loss_pct": 10.014221592283993,
+      "median_loss_pct": 0.0,
+      "max_loss_pct": 59.817746361500056,
+      "exact_winners": 14,
+      "groups": 21
+    },
+    {
+      "method": "weighted_default",
+      "k": 5,
+      "mean_loss_pct": 7.3671314867793285,
+      "median_loss_pct": 0.0,
+      "max_loss_pct": 57.5408153043112,
+      "exact_winners": 15,
+      "groups": 21
+    },
+    {
+      "method": "weighted_pooled",
+      "k": 1,
+      "mean_loss_pct": 16.670899967822407,
+      "median_loss_pct": 0.21168169862483266,
+      "max_loss_pct": 75.97885914808884,
+      "exact_winners": 10,
+      "groups": 21
+    },
+    {
+      "method": "weighted_pooled",
+      "k": 3,
+      "mean_loss_pct": 5.084223371258263,
+      "median_loss_pct": 0.0,
+      "max_loss_pct": 40.18333284346186,
+      "exact_winners": 15,
+      "groups": 21
+    },
+    {
+      "method": "weighted_pooled",
+      "k": 5,
+      "mean_loss_pct": 2.956797629292007,
+      "median_loss_pct": 0.0,
+      "max_loss_pct": 25.195093433825775,
+      "exact_winners": 17,
+      "groups": 21
+    },
+    {
+      "method": "weighted_shared",
+      "k": 1,
+      "mean_loss_pct": 16.670899967822407,
+      "median_loss_pct": 0.21168169862483266,
+      "max_loss_pct": 75.97885914808884,
+      "exact_winners": 10,
+      "groups": 21
+    },
+    {
+      "method": "weighted_shared",
+      "k": 3,
+      "mean_loss_pct": 5.084223371258263,
+      "median_loss_pct": 0.0,
+      "max_loss_pct": 40.18333284346186,
+      "exact_winners": 15,
+      "groups": 21
+    },
+    {
+      "method": "weighted_shared",
+      "k": 5,
+      "mean_loss_pct": 2.956797629292007,
+      "median_loss_pct": 0.0,
+      "max_loss_pct": 25.195093433825775,
+      "exact_winners": 17,
+      "groups": 21
+    }
+  ],
+  "validation": {
+    "baseline_max_error_pp": 4.618527782440651e-14,
+    "all_group_counts_fixed": 21,
+    "fold_model_disjoint": true,
+    "curve_monotonic": true,
+    "full_graph_ranges_checked": true,
+    "exact_graph_boundary_identity_join": true,
+    "missing_features_imputed": false,
+    "paper_or_repo_modified": false
+  },
+  "repo_input_sha256": {
+    "results/split-inference/publication-inputs/mlsys-r22/evidence/r15/audit_regnet/results/calibration_candidate_audit.csv": "cba79522f785c3e844910795fcb90bd2504938b5d7aef403db96702e79cac8ed",
+    "results/split-inference/publication-inputs/mlsys-r22/evidence/r15/audit_regnet/results/calibration_predictions.csv": "7b9c920580ff9bb6f2bf6a15d93c929fd3650949c81eb008b29766d0cef4534f",
+    "results/supplementary-studies/rq2-all-cuts-20261020/current/all_k_group_curves.csv": "fb00cb6117da64fe30a882b61a7147c8a019f45cddf65db48335e4282865b0b5"
+  },
+  "export_input_sha256": {
+    "current_pair_feature_bindings.csv": "1a430b568d760db6a72c4c7a23a39bfe36518b6ea623ef270b7bd3233bb979f5",
+    "graph_boundary_features.csv": "05856138ad5eb5de1f05f8b57d234d4bd14bd2acc0713a4b3cc984955d24da2e",
+    "normalization_universes.json": "a00131150b5578f31ac7ecb184f5b2bf71a24f2a435cde725020cf864a8619d0",
+    "validation.json": "17ada975107dd14a6a8f038e035d750483e90a7c3c1c9a6d2ddffabd613723a7"
+  }
+}

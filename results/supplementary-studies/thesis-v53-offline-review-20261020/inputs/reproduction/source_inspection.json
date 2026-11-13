@@ -1,0 +1,602 @@
+{
+  "campaign_bundle": {
+    "bytes": 5900378,
+    "filename": "thesis_v49_hardware_confirmation_energy_supplement_20261019.bundle",
+    "sha256": "cfc2a5a08f8b8007979d47deb90f75dfb779f5585d67aed53e93d704c27a3e6b",
+    "verification": "Root verified complete bundle bytes and imported it into the isolated bare audit repository; source inspection uses explicit commit, not HEAD."
+  },
+  "campaign_commit": "64c1f487645d20a844d66ccdf8f65dcc80b96065",
+  "payload_manifest": {
+    "bytes": 7508530,
+    "checked_members": 6,
+    "path": "confirmation_payload:/provenance/delivery_payload_manifest_energy_supplement_20261019.json",
+    "scope": "Read the bound manifest file and only six named Git blobs; no complete raw archive was downloaded or rehashed.",
+    "sha256": "7bfa8e24cfe37f79530198f0d756fab5d0cb921c5c97cf737cf184262a0712f6"
+  },
+  "schema": "thesis-v53/reproduction-BC-source-inspection-v1",
+  "sources": [
+    {
+      "bundle_and_manifest_bytes_match": true,
+      "bytes": 9926,
+      "cli_definitions": [
+        {
+          "line": 34,
+          "source": "parser.add_argument('--workers',type=int,default=4)"
+        },
+        {
+          "line": 34,
+          "source": "parser.add_argument('--models',nargs='*')"
+        }
+      ],
+      "commit": "64c1f487645d20a844d66ccdf8f65dcc80b96065",
+      "imports": [
+        {
+          "line": 7,
+          "source": "import os"
+        },
+        {
+          "line": 10,
+          "source": "import argparse"
+        },
+        {
+          "line": 11,
+          "source": "import hashlib"
+        },
+        {
+          "line": 12,
+          "source": "import importlib.metadata"
+        },
+        {
+          "line": 13,
+          "source": "import importlib.util"
+        },
+        {
+          "line": 14,
+          "source": "import json"
+        },
+        {
+          "line": 15,
+          "source": "import multiprocessing as mp"
+        },
+        {
+          "line": 16,
+          "source": "import platform"
+        },
+        {
+          "line": 17,
+          "source": "import sys"
+        },
+        {
+          "line": 18,
+          "source": "import time"
+        },
+        {
+          "line": 19,
+          "source": "from pathlib import Path"
+        },
+        {
+          "line": 20,
+          "source": "import numpy as np"
+        }
+      ],
+      "inspection": "source read and AST parsed only; not imported/executed",
+      "path": "scripts/history_paired_quality.py",
+      "payload_manifest_pointer": "/files/30676",
+      "payload_manifest_record": {
+        "bytes": 9926,
+        "path": "scripts/history_paired_quality.py",
+        "sha256": "dbf0e0357b1b3464ee66802d09a9cf0ed6fb5b59bf92641cc29b4358b8d30fa6"
+      },
+      "relevant_lines": [
+        {
+          "line": 35,
+          "source": "    inventory_path=ROOT/'evidence/quality_prediction_inventory.json'"
+        },
+        {
+          "line": 38,
+          "source": "    source=Path('HISTORICAL_HOME/ONNX-Splitpoint-Tool/onnx_splitpoint_tool/quality_metrics.py')"
+        },
+        {
+          "line": 39,
+          "source": "    source_copy=ROOT/'evidence/history/quality_metrics_for_paired_analysis.py'"
+        },
+        {
+          "line": 65,
+          "source": "        n=len(f);B=1000"
+        },
+        {
+          "line": 68,
+          "source": "        rng=np.random.Generator(np.random.PCG64(seed))"
+        },
+        {
+          "line": 69,
+          "source": "        draws=rng.integers(0,n,size=(B,n),dtype=np.int64)"
+        },
+        {
+          "line": 121,
+          "source": "        bounds=np.percentile(delta,[2.5,97.5],axis=0,method='linear')"
+        },
+        {
+          "line": 133,
+          "source": "if __name__=='__main__':main()"
+        }
+      ],
+      "sha256": "dbf0e0357b1b3464ee66802d09a9cf0ed6fb5b59bf92641cc29b4358b8d30fa6"
+    },
+    {
+      "bundle_and_manifest_bytes_match": true,
+      "bytes": 8158,
+      "cli_definitions": [],
+      "commit": "64c1f487645d20a844d66ccdf8f65dcc80b96065",
+      "imports": [
+        {
+          "line": 7,
+          "source": "from pathlib import Path"
+        },
+        {
+          "line": 8,
+          "source": "import contextlib"
+        },
+        {
+          "line": 9,
+          "source": "import csv"
+        },
+        {
+          "line": 10,
+          "source": "import hashlib"
+        },
+        {
+          "line": 11,
+          "source": "import importlib.metadata"
+        },
+        {
+          "line": 12,
+          "source": "import io"
+        },
+        {
+          "line": 13,
+          "source": "import json"
+        },
+        {
+          "line": 14,
+          "source": "import platform"
+        },
+        {
+          "line": 15,
+          "source": "import sys"
+        },
+        {
+          "line": 16,
+          "source": "import time"
+        },
+        {
+          "line": 18,
+          "source": "import numpy as np"
+        },
+        {
+          "line": 19,
+          "source": "from pycocotools.coco import COCO"
+        },
+        {
+          "line": 20,
+          "source": "from pycocotools.cocoeval import COCOeval"
+        }
+      ],
+      "inspection": "source read and AST parsed only; not imported/executed",
+      "path": "scripts/quality_offline_cocoeval.py",
+      "payload_manifest_pointer": "/files/30741",
+      "payload_manifest_record": {
+        "bytes": 8158,
+        "path": "scripts/quality_offline_cocoeval.py",
+        "sha256": "7a493b1d6eb275efe4b0561ca7504804491cf97088d5f442b40b373718d4c6cf"
+      },
+      "relevant_lines": [
+        {
+          "line": 61,
+          "source": "        evaluator.evaluate();evaluator.accumulate();evaluator.summarize()"
+        },
+        {
+          "line": 71,
+          "source": "    inventory=OUT/'evidence/quality_prediction_inventory.json'"
+        },
+        {
+          "line": 81,
+          "source": "            values={k:float(np.mean([r['candidate'][k] for r in recs])) for k in ('top1_hit','top5_hit')}"
+        },
+        {
+          "line": 110,
+          "source": "if __name__=='__main__':main()"
+        }
+      ],
+      "sha256": "7a493b1d6eb275efe4b0561ca7504804491cf97088d5f442b40b373718d4c6cf"
+    },
+    {
+      "bundle_and_manifest_bytes_match": true,
+      "bytes": 17432,
+      "cli_definitions": [
+        {
+          "line": 219,
+          "source": "p.add_argument('--storage',type=Path,required=True)"
+        },
+        {
+          "line": 219,
+          "source": "p.add_argument('--timing',type=Path,required=True)"
+        },
+        {
+          "line": 219,
+          "source": "p.add_argument('--clock-probes',type=Path,required=True)"
+        },
+        {
+          "line": 219,
+          "source": "p.add_argument('--electrical-model',type=Path)"
+        },
+        {
+          "line": 219,
+          "source": "p.add_argument('--output',type=Path,required=True)"
+        }
+      ],
+      "commit": "64c1f487645d20a844d66ccdf8f65dcc80b96065",
+      "imports": [
+        {
+          "line": 8,
+          "source": "from __future__ import annotations"
+        },
+        {
+          "line": 9,
+          "source": "import argparse,csv,hashlib,json,math,subprocess"
+        },
+        {
+          "line": 10,
+          "source": "from pathlib import Path"
+        },
+        {
+          "line": 11,
+          "source": "from clock_mapping import map_remote_boundary,read_jsonl"
+        }
+      ],
+      "inspection": "source read and AST parsed only; not imported/executed",
+      "path": "scripts/collector_interval/analyze_interval.py",
+      "payload_manifest_pointer": "/files/30577",
+      "payload_manifest_record": {
+        "bytes": 17432,
+        "path": "scripts/collector_interval/analyze_interval.py",
+        "sha256": "2c629e33ce8c9911d32a98cc91c25dba22255ce9729ac851e110592286269efc"
+      },
+      "relevant_lines": [
+        {
+          "line": 131,
+          "source": "    csv_path=storage/'fast_firmware_samples.csv'"
+        },
+        {
+          "line": 132,
+          "source": "    subprocess.run([str(HERE/'collector/target/release/trace_export'),str(storage/'fast_firmware.parquet'),str(csv_path)],check=True)"
+        },
+        {
+          "line": 223,
+          "source": "if __name__=='__main__': main()"
+        }
+      ],
+      "sha256": "2c629e33ce8c9911d32a98cc91c25dba22255ce9729ac851e110592286269efc"
+    },
+    {
+      "bundle_and_manifest_bytes_match": true,
+      "bytes": 47822,
+      "cli_definitions": [
+        {
+          "line": 647,
+          "source": "mode.add_argument('--validate-only', action='store_true')"
+        },
+        {
+          "line": 648,
+          "source": "mode.add_argument('--execute', action='store_true')"
+        },
+        {
+          "line": 649,
+          "source": "parser.add_argument('--plan', type=Path, required=True)"
+        },
+        {
+          "line": 650,
+          "source": "parser.add_argument('--plan-sha256', required=True)"
+        },
+        {
+          "line": 651,
+          "source": "parser.add_argument('--qualified-paths', type=Path, required=True)"
+        },
+        {
+          "line": 652,
+          "source": "parser.add_argument('--output', type=Path, required=True)"
+        },
+        {
+          "line": 653,
+          "source": "parser.add_argument('--registry', type=Path, default=Path.home() / '.onnx_splitpoint_tool/hardware_setups.yaml')"
+        },
+        {
+          "line": 654,
+          "source": "parser.add_argument('--collector-bridge', type=Path, default=ROOT / 'scripts/collector_interval/acquire_slot.py')"
+        },
+        {
+          "line": 655,
+          "source": "parser.add_argument('--collector-entry', type=Path)"
+        },
+        {
+          "line": 656,
+          "source": "parser.add_argument('--electrical-models', type=Path)"
+        },
+        {
+          "line": 657,
+          "source": "parser.add_argument('--allow-unavailable', action='store_true')"
+        }
+      ],
+      "commit": "64c1f487645d20a844d66ccdf8f65dcc80b96065",
+      "imports": [
+        {
+          "line": 8,
+          "source": "from __future__ import annotations"
+        },
+        {
+          "line": 10,
+          "source": "import argparse"
+        },
+        {
+          "line": 11,
+          "source": "import copy"
+        },
+        {
+          "line": 12,
+          "source": "import fcntl"
+        },
+        {
+          "line": 13,
+          "source": "import hashlib"
+        },
+        {
+          "line": 14,
+          "source": "import importlib.util"
+        },
+        {
+          "line": 15,
+          "source": "import json"
+        },
+        {
+          "line": 16,
+          "source": "import math"
+        },
+        {
+          "line": 17,
+          "source": "import os"
+        },
+        {
+          "line": 18,
+          "source": "from pathlib import Path"
+        },
+        {
+          "line": 19,
+          "source": "import shlex"
+        },
+        {
+          "line": 20,
+          "source": "import subprocess"
+        },
+        {
+          "line": 21,
+          "source": "import sys"
+        },
+        {
+          "line": 22,
+          "source": "import time"
+        },
+        {
+          "line": 23,
+          "source": "from typing import Any"
+        },
+        {
+          "line": 28,
+          "source": "from runtime_support import sha256_file, write_json"
+        },
+        {
+          "line": 527,
+          "source": "from analyze_interval import analyze"
+        },
+        {
+          "line": 571,
+          "source": "from summarize_confirmations import validate_attempt"
+        }
+      ],
+      "inspection": "source read and AST parsed only; not imported/executed",
+      "path": "scripts/run_timed_campaign.py",
+      "payload_manifest_pointer": "/files/30751",
+      "payload_manifest_record": {
+        "bytes": 47822,
+        "path": "scripts/run_timed_campaign.py",
+        "sha256": "aa75d7ebdac8ecbf1783ec17406dd5ef0fcc15efda3661fcbccd04a157ffe1ca"
+      },
+      "relevant_lines": [
+        {
+          "line": 763,
+          "source": "if __name__ == '__main__':"
+        }
+      ],
+      "sha256": "aa75d7ebdac8ecbf1783ec17406dd5ef0fcc15efda3661fcbccd04a157ffe1ca"
+    },
+    {
+      "bundle_and_manifest_bytes_match": true,
+      "bytes": 29984,
+      "cli_definitions": [
+        {
+          "line": 422,
+          "source": "modes.add_argument('--validate-only', action='store_true')"
+        },
+        {
+          "line": 422,
+          "source": "modes.add_argument('--execute', action='store_true')"
+        },
+        {
+          "line": 423,
+          "source": "parser.add_argument('--output', type=Path, required=True)"
+        },
+        {
+          "line": 425,
+          "source": "parser.add_argument('--' + key, type=Path)"
+        },
+        {
+          "line": 425,
+          "source": "parser.add_argument('--' + key + '-sha256')"
+        }
+      ],
+      "commit": "64c1f487645d20a844d66ccdf8f65dcc80b96065",
+      "imports": [
+        {
+          "line": 9,
+          "source": "from __future__ import annotations"
+        },
+        {
+          "line": 11,
+          "source": "import argparse"
+        },
+        {
+          "line": 12,
+          "source": "import copy"
+        },
+        {
+          "line": 13,
+          "source": "import fcntl"
+        },
+        {
+          "line": 14,
+          "source": "import importlib.util"
+        },
+        {
+          "line": 15,
+          "source": "import json"
+        },
+        {
+          "line": 16,
+          "source": "import os"
+        },
+        {
+          "line": 17,
+          "source": "from pathlib import Path"
+        },
+        {
+          "line": 18,
+          "source": "import re"
+        },
+        {
+          "line": 19,
+          "source": "import sys"
+        },
+        {
+          "line": 20,
+          "source": "import time"
+        },
+        {
+          "line": 25,
+          "source": "import run_timed_campaign_resume as saved"
+        },
+        {
+          "line": 26,
+          "source": "import run_timed_campaign_retry as retry"
+        }
+      ],
+      "inspection": "source read and AST parsed only; not imported/executed",
+      "path": "scripts/run_energy_supplement.py",
+      "payload_manifest_pointer": "/files/30749",
+      "payload_manifest_record": {
+        "bytes": 29984,
+        "path": "scripts/run_energy_supplement.py",
+        "sha256": "182ee6875740a88bedafc60903711a7968320e7d6a113af5e430f0122ad9d876"
+      },
+      "relevant_lines": [
+        {
+          "line": 248,
+          "source": "        saved.write_json(output / 'validation_result.json', {'status': 'validated', 'hardware_executed': False,"
+        },
+        {
+          "line": 424,
+          "source": "    for key in ('policy', 'previous-resolution', 'amendment'):"
+        },
+        {
+          "line": 436,
+          "source": "            'index': saved.binding(args.output / 'attempt_index.json'), 'planned_attempts': len(index['planned_entries'])}))"
+        },
+        {
+          "line": 439,
+          "source": "            parser.error('--execute uses only frozen index and root amendment')"
+        },
+        {
+          "line": 440,
+          "source": "        index_path = args.output / 'attempt_index.json'"
+        },
+        {
+          "line": 446,
+          "source": "if __name__ == '__main__':"
+        }
+      ],
+      "sha256": "182ee6875740a88bedafc60903711a7968320e7d6a113af5e430f0122ad9d876"
+    },
+    {
+      "bundle_and_manifest_bytes_match": true,
+      "bytes": 23681,
+      "cli_definitions": [
+        {
+          "line": 368,
+          "source": "parser.add_argument('--attempt', type=Path, required=True)"
+        },
+        {
+          "line": 369,
+          "source": "parser.add_argument('--expected', type=Path, required=True)"
+        }
+      ],
+      "commit": "64c1f487645d20a844d66ccdf8f65dcc80b96065",
+      "imports": [
+        {
+          "line": 8,
+          "source": "from __future__ import annotations"
+        },
+        {
+          "line": 10,
+          "source": "import argparse"
+        },
+        {
+          "line": 11,
+          "source": "import hashlib"
+        },
+        {
+          "line": 12,
+          "source": "import json"
+        },
+        {
+          "line": 13,
+          "source": "import math"
+        },
+        {
+          "line": 14,
+          "source": "from pathlib import Path"
+        },
+        {
+          "line": 15,
+          "source": "import re"
+        },
+        {
+          "line": 16,
+          "source": "import types"
+        }
+      ],
+      "inspection": "source read and AST parsed only; not imported/executed",
+      "path": "evidence/energy_supplement_20261019/electrical/evaluate_attempt.py",
+      "payload_manifest_pointer": "/files/909",
+      "payload_manifest_record": {
+        "bytes": 23681,
+        "path": "evidence/energy_supplement_20261019/electrical/evaluate_attempt.py",
+        "sha256": "54da578907b8711e1edf90c2458b49e36e0e13d076f17a389cd099c113814450"
+      },
+      "relevant_lines": [
+        {
+          "line": 366,
+          "source": "if __name__ == '__main__':"
+        }
+      ],
+      "sha256": "54da578907b8711e1edf90c2458b49e36e0e13d076f17a389cd099c113814450"
+    }
+  ]
+}

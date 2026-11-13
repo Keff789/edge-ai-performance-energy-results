@@ -1,0 +1,33 @@
+\begin{table}[H]
+\centering
+\footnotesize
+\TableSetup
+\caption{Die ResNet50/Imagenette-Entwicklungsmatrix wurde aus der bereitgestellten Quelle übernommen. Bei den Werten handelt es sich um Brüche und Beobachtungen der aufgeführten Ausführungspfade, nicht um einen ImageNet-Benchmark oder einen B500-Vergleich.}
+\label{tab:evaluation:resnet50_matrix_validated}
+\begin{tabularx}{\linewidth}{@{}L{3.5cm}R{0.9cm}R{0.9cm}R{1.6cm}R{1.5cm}@{}}
+\toprule
+\textbf{Ausführungspfad} & \textbf{Top-1} & \textbf{Top-5} & \textbf{Latenz [ms]} & \textbf{Durchsatz [FPS]} \\
+\midrule
+TensorRT Full & \num{0.82} & \num{0.96} & \num{7.5}--\num{7.8} & 129--134 \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} gültige kanonische Full-Basislinie.}\\
+\addlinespace[0.35em]
+DEEPX DX-M1 Full & \num{0.84} & \num{0.94} & \num{3.2} & \num{310.9} \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} – gültiger, vollständiger Backend-Pfad mit wiederholtem Feed.}\\
+\addlinespace[0.35em]
+DEEPX DX-M1$\rightarrow$TensorRT & \num{0.76}--\num{0.78} & \num{0.94} & \num{20.3}--\num{23.5} & \num{62.5}--\num{72.9} \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} Entwicklungszeile für das Generic Runner-Ausführungsmodul.}\\
+\addlinespace[0.35em]
+Hailo-8 Full/zusammengestellt & \num{0.82}--\num{0.84} & \num{0.96} & 12--13 & -- \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} gültig mit Warnung bezüglich der Quantisierung der Schnittstelle.}\\
+\addlinespace[0.35em]
+Hailo-8$\rightarrow$TensorRT & \num{0.82} & \num{0.96} & 9--10 & -- \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} gültig mit Schnittstellenwarnung.}\\
+\addlinespace[0.35em]
+TensorRT$\rightarrow$Hailo-8 & \num{0.82} & \num{0.96} & 8--9 & -- \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} – gültige, durch Aktivierungsproxy durchgeführte Kalibrierung der Stufe~2.}\\
+\addlinespace[0.35em]
+TensorRT$\rightarrow$DEEPX DX-M1 & split-dep. & split-dep. & -- & -- \\
+\multicolumn{5}{@{}L{\dimexpr\linewidth-2\tabcolsep\relax}@{}}{\emph{Status:} erst nach einer Schnittstellenprüfung mit mehreren Eingaben kompilierbar und akzeptiert.}\\
+\bottomrule
+\end{tabularx}
+\end{table}

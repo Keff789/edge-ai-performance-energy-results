@@ -1,0 +1,17 @@
+\begin{table}[!htb]
+\centering
+\caption{Native-Vorteile auf demselben Host unter jeder Qualitätsbeschränkung. In jeder Zeile wird der Verlustschwellenwert gegenüber der CPU-Referenz sowohl auf die „Native“-Splits als auch auf die „Full“-Alternativen angewendet; anschließend wird die schnellste und energieeffizienteste „Full“-Variante erneut ausgewählt. „Schneller“ und „Geringere Energie“ vergleichen die Splits mit der schnellsten „Full“-Variante. „Beides“ erfordert beide Vorteile. „Unter min. Full“ vergleicht den Energieverbrauch der Splits mit dem der zugelassenen „Full“-Variante mit dem niedrigsten Energieverbrauch. Die Vergleiche basieren auf retrospektiven Punktschätzungen.}
+\label{tab:evaluation:quality_tolerance}
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}l r r r r r r@{}}
+\toprule
+Qualitätsregel & \shortstack{Native-\\Schnitte} & Fulls & Schneller & \shortstack{Geringere\\Energie} & Beides & \shortstack{Unter min.\\Full-Energie} \\
+\midrule
+Alle gemessenen & 204 & 42 & 105 & 77 & 65 & 72 \\
+$\leq1\%$ Verlust & 114 & 28 & 58 & 40 & 32 & 37 \\
+$\leq2\%$ Verlust & 147 & 30 & 88 & 61 & 52 & 56 \\
+$\leq5\%$ Verlust & 187 & 33 & 102 & 74 & 62 & 69 \\
+\bottomrule
+\end{tabular*}
+\endgroup
+\end{table}

@@ -1,0 +1,21 @@
+{
+  "cohort": "historical primary runs 2\u201314",
+  "physical_reference_runs": 13,
+  "common_trace_cases": 16159,
+  "common_trace_summary_rows": 49,
+  "independent_acquisition_rows": 351,
+  "variance_capture_rows": 351,
+  "rate_groups": 27,
+  "spectrum_plot_bins": 38088,
+  "median_cumulative_crossings_hz": {
+    "0.95": 53827.22181016411,
+    "0.99": 71058.87639324705
+  },
+  "figure_families": 6,
+  "formats": [
+    "pdf",
+    "svg",
+    "png"
+  ],
+  "spectral_reproduction": "Previously aggregated spectral curves; no Welch or raw-signal rerun."
+}

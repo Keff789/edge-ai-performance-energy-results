@@ -1,0 +1,498 @@
+{
+  "archive_context": {
+    "archive": {
+      "bytes": 2857836513,
+      "filename": "thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz",
+      "role": "archive",
+      "sha256": "edbd618ad91ef658a866c73c61defd00389e3ca9218c33ea22d87a6ec3721915",
+      "sprite_relative_path": "deliverables/thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz"
+    },
+    "campaign_commit": "64c1f487645d20a844d66ccdf8f65dcc80b96065",
+    "full_archive_hash_rechecked_in_this_audit": false,
+    "member_verification": "The three exact evidence members were checked against the bound payload manifest; the earlier whole-archive verification is retained as source metadata.",
+    "payload_manifest_sha256": "7bfa8e24cfe37f79530198f0d756fab5d0cb921c5c97cf737cf184262a0712f6",
+    "payload_root": "thesis_v49_hardware_confirmation_20261018"
+  },
+  "archived_selected_binding_inventory": {
+    "binding_categories": {
+      "base_run_manifest_execution_sessions_tool_build_critical_module_hash": 11,
+      "contemporaneous_evaluator_hash_unavailable_for_20261010_evaluation": 1,
+      "supplement_run_manifest_execution_sessions_tool_build_critical_module_hash": 2
+    },
+    "recorded_evaluator_source_bound_count": 13,
+    "recorded_evaluator_source_unbound_count": 1,
+    "records": [
+      {
+        "historical_evaluator_binding": "contemporaneous_evaluator_hash_unavailable_for_20261010_evaluation",
+        "historical_evaluator_source_sha256": null,
+        "request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135"
+      },
+      {
+        "historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "uid": "native|mobilenet_v3_large|DeepX|native_full_deepx|full"
+      },
+      {
+        "historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "uid": "native|regnet_x_1_6gf|H10|hailo10h_to_trt|b123"
+      },
+      {
+        "historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "uid": "native|regnet_x_1_6gf|DeepX|native_full_deepx|full"
+      },
+      {
+        "historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "uid": "native|resnet50|H10|hailo10h_to_trt|b095"
+      },
+      {
+        "historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "uid": "native|resnet50|DeepX|native_full_deepx|full"
+      },
+      {
+        "historical_evaluator_binding": "supplement_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "request_eval_run_id": "yolo_min3_20261002_222904",
+        "uid": "native|yolo11l|H10|hailo10h_to_trt|b120"
+      },
+      {
+        "historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "uid": "native|yolo11l|DeepX|native_full_deepx|full"
+      },
+      {
+        "historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "uid": "native|yolo26m|H10|hailo10h_to_trt|b043"
+      },
+      {
+        "historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "uid": "native|yolo26m|H8|native_full_tensorrt|full"
+      },
+      {
+        "historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "uid": "native|yolo26s|H8|hailo8_to_trt|b021"
+      },
+      {
+        "historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "uid": "native|yolo26s|DeepX|native_full_tensorrt|full"
+      },
+      {
+        "historical_evaluator_binding": "supplement_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "request_eval_run_id": "yolo_min3_20261002_222904",
+        "uid": "native|yolov7_paper|H8|hailo8_to_trt|b066"
+      },
+      {
+        "historical_evaluator_binding": "base_run_manifest_execution_sessions_tool_build_critical_module_hash",
+        "historical_evaluator_source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82",
+        "request_eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+        "uid": "native|yolov7_paper|DeepX|native_full_deepx|full"
+      }
+    ],
+    "scope": "Counts and source/session-hash correspondence from all 14 records in the original archived audit. This audit follows the selected b135 chain in depth; it does not independently re-audit the other 13 executions, their dependencies, or all 450 deployments.",
+    "selected_configuration_count": 14,
+    "source_as_of": "2026-10-18T13:06:41.867929+00:00",
+    "source_sha256": "2f2bf549ff9a68ea241b456e6cb19df345b2697bb5f02f58424769488f1c00f2",
+    "unbound_uids": [
+      "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135"
+    ]
+  },
+  "bounded_search": [
+    {
+      "checked": [
+        "evidence/quality_historical_source.json",
+        "evidence/quality_prediction_inventory.json",
+        "evidence/identity_runtime_manifest.json"
+      ],
+      "compressed_bytes_traversed": 165939200,
+      "finding": "Original audit records later central evaluation and missing contemporaneous evaluator hash.",
+      "full_archive_rehashed": false,
+      "method": "Exact named members; hashes checked against original payload manifest. Stream stopped after the three members.",
+      "scope": "confirmation archive"
+    },
+    {
+      "checked": [
+        "RESOLVER.json: selected result, receipt, request, handoff, code files and DX56_QUALITY_COMMANDS.json references"
+      ],
+      "finding": "13 quality_metrics.py source aliases map to one preserved 5c8333e8 source; no per-evaluation binding is supplied. DX56_QUALITY_COMMANDS.json is unresolved.",
+      "method": "Manifest lookup of exact paths and hashes; no whole-disk scan.",
+      "quality_metrics_source_alias_count": 13,
+      "scope": "canonical revision3 source resolver"
+    },
+    {
+      "checked": [
+        "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135",
+        "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135",
+        "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/prepared/dataset_fixed/DX56_QUALITY_COMMANDS.json"
+      ],
+      "finding": "Receipt records request/result/command/handoff digests but no evaluator, helper, Python or NumPy hash/version. Referenced command file absent from canonical payload.",
+      "method": "Read selected receipt, result, handoff, request and original quality row; inspect their immediate directory entries.",
+      "scope": "exact revision3 operation directories"
+    },
+    {
+      "checked": [
+        "models/mobilenet_v3_large/benchmark_results/quality_inputs/orin_nx_deepx_m1_01/results/b135/results_deepx_m1_to_tensorrt/task_quality_inputs/composed_request.json",
+        "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/task_quality_inputs/composed_request.json",
+        "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/task_quality_inputs/composed_candidate.json",
+        "quality_management/references/mobilenet_v3_large/by_source_contract/b1f2b618ba0bcc5b806f5972975ab26fa76a1cdeed365e8ed3bf537e0c02221e/canonical_cpu_reference.json"
+      ],
+      "finding": "Original runtime request and later replay request are distinct, both preserved. Predictions are present. No metric or interval recalculated.",
+      "method": "Read only the manifest-bound files; exact hash, format, record-count and paired-image-order checks.",
+      "scope": "original request and prediction pair"
+    },
+    {
+      "checked": [
+        "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/operations_evidence/operations/token_saving_batch_20261009/delta_abschluss_20261012/controller_gate_fix/source_release/onnx_splitpoint_tool/quality_metrics.py",
+        "_supplements/native_fairness_rev3_20261013/payload/_provenance/final_implementation_20261008/source_snapshot/onnx_splitpoint_tool/quality_service.py",
+        "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/operations_evidence/operations/token_saving_batch_20261009/delta_abschluss_20261012/controller_gate_fix/source_release/onnx_splitpoint_tool/quality_statistics.py"
+      ],
+      "finding": "Factory/classification implementation, dynamic import dispatch and numerical-environment helper found; none is tied by an execution receipt to the 10 October evaluation.",
+      "method": "Exact resolver-bound files; source excerpts inspected without import or execution.",
+      "scope": "preserved evaluator and adjacent dispatch/helpers"
+    }
+  ],
+  "corroborating_sources": {
+    "evaluator_source": {
+      "execution_binding": "inspected preserved source; not bound to the 2026-10-10 evaluation",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/operations_evidence/operations/token_saving_batch_20261009/delta_abschluss_20261012/controller_gate_fix/source_release/onnx_splitpoint_tool/quality_metrics.py",
+        "root": "canonical_archive"
+      },
+      "source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82"
+    },
+    "service_source": {
+      "execution_binding": "inspected preserved source; not bound to the 2026-10-10 evaluation",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/_provenance/final_implementation_20261008/source_snapshot/onnx_splitpoint_tool/quality_service.py",
+        "root": "canonical_archive"
+      },
+      "source_sha256": "2e507c34cb3b814b97a7567decb30d872b6a467e1677f2e18635f8c78c0faf9f"
+    },
+    "statistics_helper": {
+      "execution_binding": "inspected preserved source; not bound to the 2026-10-10 evaluation",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/operations_evidence/operations/token_saving_batch_20261009/delta_abschluss_20261012/controller_gate_fix/source_release/onnx_splitpoint_tool/quality_statistics.py",
+        "root": "canonical_archive"
+      },
+      "source_sha256": "00365decad61893f942e841cc569081649944ab2c9cc1c495863d42e3c04cf95"
+    }
+  },
+  "dispatch_and_helpers": {
+    "classification_scope": "COCO evaluator and pycocotools version questions are not applicable to this classification UID.",
+    "historical_execution_binding": "No contemporaneous receipt binds these evaluator, service or helper bytes, their loaded dispatch, Python version or NumPy version to the 2026-10-10 request.",
+    "inspected_factory_target": "_ClassificationAccuracyEvaluator",
+    "inspected_numeric_dependency": "NumPy",
+    "inspected_service_behavior": "The classification task selects the factory; importlib loads it and forwards metric_gate_config. The statistics helper records a numerical environment for its own cache keys.",
+    "recorded_factory": "onnx_splitpoint_tool.quality_metrics:classification_quality_evaluator"
+  },
+  "evidence_limits": [
+    "The original runtime request and later central replay are distinct. Earlier campaign-session source hashes do not bind the later independent evaluation.",
+    "Preserved evaluator bytes and the recorded factory/algorithm name corroborate implementation semantics but do not prove which source bytes executed.",
+    "Matching quality values, current code or a new evaluation cannot retroactively establish the missing execution-to-source binding.",
+    "The archived request-bound producer runner hash and the later management evaluator are separate provenance questions."
+  ],
+  "historical_evaluation": {
+    "at": "2026-10-10T18:36:03.402707+00:00",
+    "central_replay_request_sha256": "4a5702ca2dff3ec3414917370ffd59e3d23d421c5296be3187886669957b30ff",
+    "eval_run_id": "thesis_20splits_n5000_b1000_20260925_20260925_103745",
+    "evaluation_fingerprint": "2723b4e07f3a96a0b2035b2ee3a9406c3d47e6f834607d49d24cd9cf22199180",
+    "execution_device": "management_cpu",
+    "execution_location": "management_node",
+    "historical_values_preserved": {
+      "candidate": 0.7202,
+      "delta": -0.0168,
+      "n": 5000,
+      "reference": 0.737
+    },
+    "original_runtime_request_sha256": "0671d05997148b5b9dbfff1385a38d712562088b50a6785379d075a1c4413b13",
+    "receipt_sha256": "a57405f5e554449b89f9455dfbb7a664fa1597ff68e96b214bee81a5e3e20643",
+    "recorded_algorithm_version": "management_paired_quality_v2:classification-accuracy-v2",
+    "recorded_factory": "management_process_pool:onnx_splitpoint_tool.quality_metrics:classification_quality_evaluator",
+    "recorded_seed_schema": {
+      "image_count": 5000,
+      "repetitions": 1000,
+      "schema": "numpy-pcg64-index-plan-v1",
+      "seed": 20260710
+    },
+    "recorded_statistics": {
+      "bootstrap_repetitions": 1000,
+      "confidence_level": 0.95,
+      "decision": "lower_one_sided_bound",
+      "method": "paired_bootstrap",
+      "seed": 20260710
+    },
+    "request_id": "classification:composed:d50d6d5d43d2e9a58350e1e5499ed276ed7f2b6c67f79d5a07c10088f8ae8900",
+    "result_sha256": "a3500ca11de946e0cacf3ffeadf6d8f52e96bb80016e3c17d873441c52fb15cb",
+    "selected_quality_source": {
+      "generation": "pre_refresh16_selected_evidence_reused",
+      "metric": "quality",
+      "original_current_quality_source_sha256": "81611542ccd975d7daf4fbc6180fe5ca040ac8e7d58537097860119c18dfd830",
+      "original_field": "rows[identity].accuracy_gate_metrics",
+      "remeasured_in_native_a4": "False",
+      "remeasured_in_refresh16": "False",
+      "repeat_or_image_n": "5000",
+      "repeat_sources": "",
+      "runtime": "deepx_to_trt",
+      "source": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/native_join/native_producer_validation_summary.json",
+      "source_sha256": "81611542ccd975d7daf4fbc6180fe5ca040ac8e7d58537097860119c18dfd830",
+      "uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135",
+      "unit": "top1_accuracy",
+      "value": "0.7202"
+    },
+    "setup_id": "orin_nx_deepx_m1_01",
+    "source_chain": [
+      "identity_runtime -> original_quality_result (full UID and source hash)",
+      "original_quality_result.task_quality_gate.quality_input_request -> replay_request",
+      "original_quality_result.postmeasurement_dataset_quality_join -> central_result",
+      "central_receipt -> replay_request, central_result, source_handoff and reference_predictions",
+      "replay_request -> candidate_predictions and reference_predictions"
+    ],
+    "source_run_id": "deepx_m1_to_tensorrt",
+    "worker_model": "process_pool"
+  },
+  "historical_evaluator_binding_closed": false,
+  "input": {
+    "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/binding/source_bindings.json",
+    "sha256": "c067047a2cfeebb1a452cc8c7cbcc5d911575deb8fd57325d52bb4425b0bb9e5"
+  },
+  "next_required_evidence": "A contemporaneous receipt or log for replay request 4a5702ca2dff3ec3414917370ffd59e3d23d421c5296be3187886669957b30ff / evaluation fingerprint 2723b4e07f3a96a0b2035b2ee3a9406c3d47e6f834607d49d24cd9cf22199180 binding the loaded evaluator, service/helper source hashes and Python/NumPy environment; the referenced DX56_QUALITY_COMMANDS.json may supply a further source path but its hash alone does not close the binding.",
+  "open_fields": {
+    "evaluation_bound_evaluator_sha256": null,
+    "evaluation_bound_helper_sha256": null,
+    "evaluation_bound_numpy_version_or_hash": null,
+    "evaluation_bound_python_version": null,
+    "evaluation_bound_service_sha256": null,
+    "producer_runner_search_status_source": {
+      "as_of": "2026-10-18T13:06:41.867929+00:00",
+      "new_runner_search_performed": false,
+      "source": "historical_evaluator_audit"
+    },
+    "referenced_command_manifest": {
+      "path": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/prepared/dataset_fixed/DX56_QUALITY_COMMANDS.json",
+      "sha256": "21250c2d6295df18ad50a81c88d338bd5aa8e93eb5ff498f735f47e6daeca59d",
+      "status": "not present in canonical payload; original resolver explicitly marks unresolved"
+    },
+    "request_bound_producer_runner_bytes_status": "not_available_after_targeted_search",
+    "request_bound_producer_runner_sha256": "fb3b953dccffa4aebed5399ab35ec8f4ade1d74004127769892a7d61543f1b7d"
+  },
+  "prediction_inputs": {
+    "candidate_metric_keys": [
+      "label_id",
+      "top1_hit",
+      "top5_hit"
+    ],
+    "candidate_record_keys": [
+      "candidate",
+      "image_id",
+      "label_id",
+      "label_name"
+    ],
+    "candidate_records": 5000,
+    "operation": "Hash and JSON-format checks only; no metric or bootstrap recomputation.",
+    "paired_image_order_checked_records": 5000,
+    "paired_image_order_matches": true,
+    "performed_on": "2026-10-20",
+    "record_schema_sample_count_per_file": 1,
+    "reference_metric_keys": [
+      "label_id",
+      "top1_hit",
+      "top5_hit"
+    ],
+    "reference_record_keys": [
+      "image_id",
+      "label_id",
+      "label_name",
+      "reference"
+    ],
+    "reference_records": 5000,
+    "request_image_order_matches": true
+  },
+  "reproduction_note": "This output rechecks the compact source chain and reproduces the audit conclusion. Original-file verification is a separate optional operation; original evaluator execution is not performed.",
+  "schema": "thesis-v53/mobile-evaluator-binding/v1",
+  "scope": "The selected MobileNetV3-Large b135 configuration; no parity claim for the 450 deployments.",
+  "source_evidence": {
+    "archive_reference": {
+      "input_pointer": "/sources/archive_reference",
+      "location": {
+        "path": "results/supplementary-studies/thesis-v49-confirmation-20261019/ARCHIVE_REFERENCE.json",
+        "root": "results_repository"
+      },
+      "source_bytes": 3743,
+      "source_sha256": "dae52fef649bac5391d1ef512864c993bec13c612c3f58b6ce5a1be012cc120e"
+    },
+    "candidate_predictions": {
+      "input_pointer": "/sources/candidate_predictions",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/task_quality_inputs/composed_candidate.json",
+        "root": "canonical_archive"
+      },
+      "source_bytes": 761609,
+      "source_sha256": "1d6913772b0e814a52f0ae38498e93e4b84ef997f0e13a4672a961df06ca723a"
+    },
+    "central_receipt": {
+      "input_pointer": "/sources/central_receipt",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/CENTRAL_EVALUATION.json",
+        "root": "canonical_archive"
+      },
+      "source_bytes": 2017,
+      "source_sha256": "a57405f5e554449b89f9455dfbb7a664fa1597ff68e96b214bee81a5e3e20643"
+    },
+    "central_result": {
+      "input_pointer": "/sources/central_result",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/composed_central_result.json",
+        "root": "canonical_archive"
+      },
+      "source_bytes": 192703,
+      "source_sha256": "a3500ca11de946e0cacf3ffeadf6d8f52e96bb80016e3c17d873441c52fb15cb"
+    },
+    "evaluator_source": {
+      "input_pointer": "/sources/evaluator_source",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/operations_evidence/operations/token_saving_batch_20261009/delta_abschluss_20261012/controller_gate_fix/source_release/onnx_splitpoint_tool/quality_metrics.py",
+        "root": "canonical_archive"
+      },
+      "source_bytes": 23407,
+      "source_sha256": "5c8333e8eb95df739c7267e282944fcd0003f14c40481508384c85f509e83a82"
+    },
+    "historical_evaluator_audit": {
+      "input_pointer": "/sources/historical_evaluator_audit",
+      "location": {
+        "path": "evidence/quality_historical_source.json",
+        "root": "confirmation_payload"
+      },
+      "source_bytes": 271976,
+      "source_sha256": "2f2bf549ff9a68ea241b456e6cb19df345b2697bb5f02f58424769488f1c00f2"
+    },
+    "identity_runtime": {
+      "input_pointer": "/sources/identity_runtime",
+      "location": {
+        "path": "evidence/identity_runtime_manifest.json",
+        "root": "confirmation_payload"
+      },
+      "source_bytes": 998685,
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3"
+    },
+    "original_quality_result": {
+      "input_pointer": "/sources/original_quality_result",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/quality_management/mobilenet_v3_large/b135/native_join/native_producer_validation_summary.json",
+        "root": "canonical_archive"
+      },
+      "source_bytes": 1406387,
+      "source_sha256": "81611542ccd975d7daf4fbc6180fe5ca040ac8e7d58537097860119c18dfd830"
+    },
+    "original_runtime_request": {
+      "input_pointer": "/sources/original_runtime_request",
+      "location": {
+        "path": "models/mobilenet_v3_large/benchmark_results/quality_inputs/orin_nx_deepx_m1_01/results/b135/results_deepx_m1_to_tensorrt/task_quality_inputs/composed_request.json",
+        "root": "canonical_archive"
+      },
+      "source_bytes": 366433,
+      "source_sha256": "0671d05997148b5b9dbfff1385a38d712562088b50a6785379d075a1c4413b13"
+    },
+    "payload_manifest": {
+      "input_pointer": "/sources/payload_manifest",
+      "location": {
+        "path": "_supplements/thesis_v49_confirmation_energy_supplement_20261019/campaign_readable/provenance/delivery_payload_manifest_energy_supplement_20261019.json",
+        "root": "canonical_archive"
+      },
+      "source_bytes": 7508530,
+      "source_sha256": "7bfa8e24cfe37f79530198f0d756fab5d0cb921c5c97cf737cf184262a0712f6"
+    },
+    "prediction_inventory": {
+      "input_pointer": "/sources/prediction_inventory",
+      "location": {
+        "path": "evidence/quality_prediction_inventory.json",
+        "root": "confirmation_payload"
+      },
+      "source_bytes": 270218,
+      "source_sha256": "9af1f96e9676f0d1fc541bf921e6a6290616551858e72ef74b78d2629e11d544"
+    },
+    "reference_predictions": {
+      "input_pointer": "/sources/reference_predictions",
+      "location": {
+        "path": "quality_management/references/mobilenet_v3_large/by_source_contract/b1f2b618ba0bcc5b806f5972975ab26fa76a1cdeed365e8ed3bf537e0c02221e/canonical_cpu_reference.json",
+        "root": "canonical_archive"
+      },
+      "source_bytes": 698237,
+      "source_sha256": "79b5392e1f2d0da3af2fa4269bf12ad14695865d172f17b21eb7f1c4a55a99b7"
+    },
+    "replay_request": {
+      "input_pointer": "/sources/replay_request",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/task_quality_inputs/composed_request.json",
+        "root": "canonical_archive"
+      },
+      "source_bytes": 378515,
+      "source_sha256": "4a5702ca2dff3ec3414917370ffd59e3d23d421c5296be3187886669957b30ff"
+    },
+    "revision3_resolver": {
+      "input_pointer": "/sources/revision3_resolver",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/RESOLVER.json",
+        "root": "canonical_archive"
+      },
+      "source_bytes": 119879940,
+      "source_sha256": "e1780107f5e9ce1e641e18184008d7efc6ab27cdc0c915882a973d70d33f02ce"
+    },
+    "service_source": {
+      "input_pointer": "/sources/service_source",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/_provenance/final_implementation_20261008/source_snapshot/onnx_splitpoint_tool/quality_service.py",
+        "root": "canonical_archive"
+      },
+      "source_bytes": 260145,
+      "source_sha256": "2e507c34cb3b814b97a7567decb30d872b6a467e1677f2e18635f8c78c0faf9f"
+    },
+    "source_handoff": {
+      "input_pointer": "/sources/source_handoff",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/operations/token_saving_batch_20261009/continuous_20261010/dx56/source_results/mobilenet_v3_large/b135/HANDOFF.json",
+        "root": "canonical_archive"
+      },
+      "source_bytes": 977,
+      "source_sha256": "ec55cbc0f07ae4394b5227324d2db1554dd28ba972a54f43bed6d2cb603b6406"
+    },
+    "statistics_helper": {
+      "input_pointer": "/sources/statistics_helper",
+      "location": {
+        "path": "_supplements/native_fairness_rev3_20261013/payload/delta_20261013/operations_evidence/operations/token_saving_batch_20261009/delta_abschluss_20261012/controller_gate_fix/source_release/onnx_splitpoint_tool/quality_statistics.py",
+        "root": "canonical_archive"
+      },
+      "source_bytes": 10212,
+      "source_sha256": "00365decad61893f942e841cc569081649944ab2c9cc1c495863d42e3c04cf95"
+    }
+  },
+  "status": "completed_with_limits",
+  "uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135",
+  "verification": {
+    "archived_evaluator_source_bound_count": 13,
+    "archived_evaluator_source_unbound_count": 1,
+    "archived_selected_configuration_count": 14,
+    "bootstrap_recalculated": false,
+    "cross_source_checks": "passed",
+    "quality_recalculated": false,
+    "source_count": 17,
+    "uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135"
+  }
+}

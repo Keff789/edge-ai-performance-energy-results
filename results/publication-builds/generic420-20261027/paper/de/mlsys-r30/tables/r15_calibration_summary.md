@@ -1,0 +1,22 @@
+# Auswahlverlust (%) für Klassifikatoren und Abdeckung der Optima nach dem numerischen 5%-Qualitätsfilter
+
+Auswahlverlust (%) für Klassifikatoren und Abdeckung der Optima nach dem numerischen 5%-Qualitätsfilter. Die 9 Gruppen werden gleich gewichtet. Die Abdeckung zählt Gruppen. Zufallswerte sind exakte Erwartungswerte. Budgets zählen nur Native-Tests der ausgeschlossenen Testgruppe. 151 verschiedene Trainingskonfigurationen über alle Folds, Generic-Messungen, Kompilierung und Qualitätsbewertung sind zusätzliche Kosten.
+
+## Auswahlverlust (%)
+
+| Methode | k=1 | k=3 | k=5 |
+| --- | --- | --- | --- |
+| Generic | 32.804 | 23.768 | 20.448 |
+| Kalibriertes Generic | 28.319 | 23.146 | 15.431 |
+| Gleichverteilte Zufallsauswahl | 32.290 | 15.406 | 9.104 |
+| Grenzdatenmenge | 32.966 | 21.747 | 8.862 |
+
+## Optimum gefunden
+
+| Methode | k=1 | k=3 | k=5 |
+| --- | --- | --- | --- |
+| Generic | 1 | 2 | 3 |
+| Kalibriertes Generic | 1 | 3 | 4 |
+| Gleichverteilte Zufallsauswahl | 0.603 | 1.808 | 3.014 |
+| Grenzdatenmenge | 1 | 3 | 5 |
+

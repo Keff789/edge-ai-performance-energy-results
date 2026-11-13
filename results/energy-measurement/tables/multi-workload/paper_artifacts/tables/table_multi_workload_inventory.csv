@@ -1,0 +1,7 @@
+Workload,Family,Precision,Status,5-MS/s pairs,PSD,Common ref.,Zero-offset status
+GEMM-FP32,GEMM,FP32,ready,10,yes,yes,disabled
+GEMM-INT8,GEMM,INT8,ready,10,yes,yes,no_material_offset_detected
+YOLO-FP32,YOLO,FP32,ready,10,yes,yes,stable_offset_detected_and_corrected
+YOLO-INT8,YOLO,INT8,ready,10,yes,yes,no_material_offset_detected
+Gemma3-4B,Gemma3-4B,unspecified,ready,10,yes,yes,no_material_offset_detected
+ResNet-50 FP32,ResNet-50,FP32,ready,9,yes,yes,no_material_offset_detected

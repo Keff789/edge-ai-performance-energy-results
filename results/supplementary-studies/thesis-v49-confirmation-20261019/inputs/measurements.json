@@ -1,0 +1,4004 @@
+{
+  "primary": [
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 39581,
+      "attempt_id": "confirmation_r3_20261018:b01_p01:a01",
+      "block": 1,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 11.197200836875595,
+      "conditional_energy_j": 1053.694827381966,
+      "execution_run_id": "b01_p01",
+      "interval_start_ns": 3780455008835073,
+      "interval_stop_ns": 3780515012762513,
+      "position": 1,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/slots/b01_p01/inner_interval_analysis.json",
+          "bytes": 10328,
+          "sha256": "f4db1d7f6617cf4f8267832f3ca53fe4c1efb08dd70842213699c0972c1f0dde"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/slots/b01_p01/attempt.json",
+          "bytes": 13276,
+          "sha256": "884bf8fd9328232de1a7f9ee755b79bcca35bbb92c61b7b6ebee6efe02a3d4d1"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/slots/b01_p01/protocol.json",
+          "bytes": 242585,
+          "sha256": "ae5bf9601d95a21ab5d10645dd29001a7047366513c6deb4c1577f16d76ae5e4"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132307Z_3e84c552/acquisition/qualify/qualification.json",
+          "bytes": 283715,
+          "sha256": "2a2ee274de585f964bec888d9dac204e19e11eefff4174932d90d18393374a23"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/slots/b01_p01/runtime_output/run_identity.json",
+          "bytes": 266500,
+          "sha256": "173bd879939f0280041740651a45fb19e0538b75056fe41daf7d8df4c1f96a9f"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/slots/b01_p01/runtime_output/timing.json",
+          "bytes": 8594024,
+          "sha256": "1aa214ce011ecb110ff47c1509d6983b0c45de82ac2fd82436486af2a8374fbf"
+        }
+      },
+      "run_id": "b01_p01",
+      "session_id": "confirmation_r3_20261018",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|resnet50|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 96082,
+      "attempt_id": "confirmation_r3_20261018:b01_p02:a01",
+      "block": 1,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 17.79311723938241,
+      "conditional_energy_j": 1179.9382448066208,
+      "execution_run_id": "b01_p02",
+      "interval_start_ns": 3780708400844064,
+      "interval_stop_ns": 3780768453232125,
+      "position": 2,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/slots/b01_p02/inner_interval_analysis.json",
+          "bytes": 10333,
+          "sha256": "360f157b3972bd38c71e9446ac515e145e59da484a236de903c38146989db3af"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/slots/b01_p02/attempt.json",
+          "bytes": 15150,
+          "sha256": "370fb8674fbbc74d02933c24e7725808de1982e59c4622b91f4790428ba7e01a"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/slots/b01_p02/protocol.json",
+          "bytes": 210895,
+          "sha256": "56b786f2bb1e21ff29d352cf9268e654767ff797da175422138458b00bbe023c"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T143628Z_81e9125b/acquisition/mobilenet_split_qualify/qualification.json",
+          "bytes": 257766,
+          "sha256": "a60f0781371632ca054b7d8eaa13082152276436070b2496aba14c2eba796b89"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/slots/b01_p02/runtime_output/run_identity.json",
+          "bytes": 240876,
+          "sha256": "997ed184a8fdc3d4a9fa554aae9978b749e7833560db5176ba87904be10382a1"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/slots/b01_p02/runtime_output/timing.json",
+          "bytes": 20639131,
+          "sha256": "3cea8116121c235b0591be8608726f4c05cb241924486e15c0595315b36df155"
+        }
+      },
+      "run_id": "b01_p02",
+      "session_id": "confirmation_r3_20261018",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 61991,
+      "attempt_id": "confirmation_r3_20261018:b01_p03:a01",
+      "block": 1,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 47.48403047045552,
+      "conditional_energy_j": 1834.556388475075,
+      "execution_run_id": "b01_p03",
+      "interval_start_ns": 3781264772836578,
+      "interval_stop_ns": 3781324780221074,
+      "position": 3,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/slots/b01_p03/inner_interval_analysis.json",
+          "bytes": 10310,
+          "sha256": "f936d25b58590ac2ae85950ac90d346e548e157a3e01175d2daaf5acee0e85b3"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/slots/b01_p03/attempt.json",
+          "bytes": 13253,
+          "sha256": "9ac34f3c5473977dca7406fa5c2ea101b6d8649974a4f0daaa9cee211332764d"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/slots/b01_p03/protocol.json",
+          "bytes": 160047,
+          "sha256": "1469ef204d1d0e63be6fe7f8faf2043e99333ff2cddd579eae2883007c88cb4a"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132942Z_3a11fdfb/acquisition/qualification/qualification.json",
+          "bytes": 192369,
+          "sha256": "b785e70affd3564e74da376f04f211f7fc2814205ed79174cad2775a4df8ac76"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/slots/b01_p03/runtime_output/run_identity.json",
+          "bytes": 175682,
+          "sha256": "2a435d060b62c7aa2aa3d1b19e45883fb2a991abb0106c798567bfb83c7c6342"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/slots/b01_p03/runtime_output/timing.json",
+          "bytes": 2476485,
+          "sha256": "7270946bb0bfc93c8444b35c89e1c9601e9e12e519c7bdfd595269e580061b9c"
+        }
+      },
+      "run_id": "b01_p03",
+      "session_id": "confirmation_r3_20261018",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|resnet50|H10|hailo10h_to_trt|b095"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 11356,
+      "attempt_id": "resume_20261018_s02:b01_p04__a03",
+      "block": 1,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 45.63716486259501,
+      "conditional_energy_j": 1738.697940352961,
+      "execution_run_id": "b01_p04__a03",
+      "interval_start_ns": 3797780497867706,
+      "interval_stop_ns": 3797840522505191,
+      "position": 4,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p04__a03/inner_interval_analysis.json",
+          "bytes": 10641,
+          "sha256": "c05c1b08a437d6217ed98de0a51aef185e72ccc1e75bdc573cba7f7973474f6d"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p04__a03/attempt.json",
+          "bytes": 13517,
+          "sha256": "57e6d0ac54d62cceeee724c4e70ebefb6ee4529586e7964dc09bede50145e4cc"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p04__a03/protocol.json",
+          "bytes": 615262,
+          "sha256": "734a1fb0dd334c768ba05d6ccc5d2871dee2cf2b41168b61cd3e4ac7955dc856"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132640Z_086b2425/acquisition/qualification/qualification.json",
+          "bytes": 690824,
+          "sha256": "59419ff3590d753746205c2695cd241221271fb7761ec3688508f1bb53c5db20"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p04__a03/runtime_output/run_identity.json",
+          "bytes": 173296,
+          "sha256": "ee19c8ed33999fa4a09d52e2d1fc6c33cf0288486e9f6aad836a8b384b9a8d77"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p04__a03/runtime_output/timing.json",
+          "bytes": 1092468,
+          "sha256": "a8597ddb81db9c8ab497b827271dc10bde663da8b4701243984066747b7be24c"
+        }
+      },
+      "run_id": "b01_p04",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo8_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26s|H8|hailo8_to_trt|b021"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 88448,
+      "attempt_id": "resume_20261018_s02:b01_p05__a01",
+      "block": 1,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 10.62618884491215,
+      "conditional_energy_j": 1021.3474210689128,
+      "execution_run_id": "b01_p05__a01",
+      "interval_start_ns": 3797421797532016,
+      "interval_stop_ns": 3797481799222870,
+      "position": 5,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p05__a01/inner_interval_analysis.json",
+          "bytes": 10663,
+          "sha256": "1cb34f1d46b276e7a08b685895305da309b69cd21ce74a9eb814af79a9f0283b"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p05__a01/attempt.json",
+          "bytes": 13623,
+          "sha256": "64a97143f6e5238925dd21acfbfebe688aff3a4e243e9a91310c053f790818e9"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p05__a01/protocol.json",
+          "bytes": 250815,
+          "sha256": "a9a3d6b47ea6d9f47bde03b20dfca532b2e4c6ad80e7c3538f475e75833273ec"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132318Z_a892542c/acquisition/qualify/qualification.json",
+          "bytes": 291989,
+          "sha256": "837391b37d7ef83172f9d06a3c92b102657b6ddd12bd1b408928810560bc3663"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p05__a01/runtime_output/run_identity.json",
+          "bytes": 274660,
+          "sha256": "9ac037cb31382188768c85214f2016487affd92278483727999965ce0689434c"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p05__a01/runtime_output/timing.json",
+          "bytes": 19047119,
+          "sha256": "014b51d6a7ef9f8b0295dffcc948a6d05cb8c52d83cc81c86ccff6a2ce8580aa"
+        }
+      },
+      "run_id": "b01_p05",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|mobilenet_v3_large|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 6629,
+      "attempt_id": "resume_20261018_s02:b01_p06__a01",
+      "block": 1,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 56.14782185602773,
+      "conditional_energy_j": 2046.8248385306244,
+      "execution_run_id": "b01_p06__a01",
+      "interval_start_ns": 3797980982790452,
+      "interval_stop_ns": 3798041087461291,
+      "position": 6,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p06__a01/inner_interval_analysis.json",
+          "bytes": 10648,
+          "sha256": "70fd283155783165eb89ca9d9f98f4371626474956960e5fb285b7e97e7e1464"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p06__a01/attempt.json",
+          "bytes": 13549,
+          "sha256": "5b2876d80a255e0c72ff1b99cd409f7d288a8a6383ee0b4f215547930644f27c"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p06__a01/protocol.json",
+          "bytes": 624414,
+          "sha256": "1490c770cb3812bd9dd9b3b3e47516538ad9308c1227662302782728533d785a"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T133039Z_9cd3e9ac/acquisition/qualification/qualification.json",
+          "bytes": 700417,
+          "sha256": "dd541b86c1b9f7c16968b2e29ee2e24717c2dd62396029b217998aa3f0851342"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p06__a01/runtime_output/run_identity.json",
+          "bytes": 174327,
+          "sha256": "f88ffb26176b5f557c979117e4dda4d67f5bfceedbf40614013721460bcee9ec"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p06__a01/runtime_output/timing.json",
+          "bytes": 925304,
+          "sha256": "288c4eac1496fb50967905c676930240908ffa68ae7f68a60d6670cfa6126dcd"
+        }
+      },
+      "run_id": "b01_p06",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26m|H10|hailo10h_to_trt|b043"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 32506,
+      "attempt_id": "resume_20261018_s02:b01_p07__a01",
+      "block": 1,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 10.382176418909172,
+      "conditional_energy_j": 981.7275786845823,
+      "execution_run_id": "b01_p07__a01",
+      "interval_start_ns": 3797930518436463,
+      "interval_stop_ns": 3797990523327735,
+      "position": 7,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p07__a01/inner_interval_analysis.json",
+          "bytes": 10660,
+          "sha256": "08ba550b297ec3213663e1b14523580231f830c110ce9e851a6e36d3b2b6f464"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p07__a01/attempt.json",
+          "bytes": 13604,
+          "sha256": "c6c30373a8a0268ca279ed210f288442f3fa485501e65fdb47205d33293e3334"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p07__a01/protocol.json",
+          "bytes": 247523,
+          "sha256": "dfacca8ac5932b25fcc8eea2d42f53d4c528a0d9f9cb7a0c63d21fda008ae8e3"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132330Z_049d1021/acquisition/qualify/qualification.json",
+          "bytes": 288646,
+          "sha256": "716773fda3dd5233b315a60fa7c559390acb203a51bd495afe89a8bc07b78a7d"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p07__a01/runtime_output/run_identity.json",
+          "bytes": 271396,
+          "sha256": "ea5e5d89da3b83e2d88ac44d51ec5fb57e18f5e6efdf5c14ca772540f64ea384"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p07__a01/runtime_output/timing.json",
+          "bytes": 7102183,
+          "sha256": "d09c8c0250bdac1c5c43f59785a906e6ed5ef51e16727c21cc9edb7d23910244"
+        }
+      },
+      "run_id": "b01_p07",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|regnet_x_1_6gf|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 6782,
+      "attempt_id": "resume_20261018_s02:b01_p08__a01",
+      "block": 1,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 50.13450507717051,
+      "conditional_energy_j": 2186.2100452412246,
+      "execution_run_id": "b01_p08__a01",
+      "interval_start_ns": 3798798248448272,
+      "interval_stop_ns": 3798858278639357,
+      "position": 8,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p08__a01/inner_interval_analysis.json",
+          "bytes": 10644,
+          "sha256": "2ab7bd9ae51a93294e10333818315c117d5b785ae91d54862ce97499fcd0dc7f"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p08__a01/attempt.json",
+          "bytes": 13540,
+          "sha256": "6fd7f1964ed5ec6ec7e2e1614cc5244681f23d6a6b44832229591f2533fa11ab"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p08__a01/protocol.json",
+          "bytes": 1070212,
+          "sha256": "cb6905eccb3cca578a909a8ce8a1afb920045d10f04e383d029c51548c33213d"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132739Z_53e320c3/acquisition/qualification/qualification.json",
+          "bytes": 1238992,
+          "sha256": "94899adf2c6bb351fdff588a07d6dcbc10a3f1cc58fe88edc3c8eb7dc913677b"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p08__a01/runtime_output/run_identity.json",
+          "bytes": 177174,
+          "sha256": "4ed64dcec314e8b6b8cf6a20ca3495e33514a6b381fa0431df768fff2482f2ea"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p08__a01/runtime_output/timing.json",
+          "bytes": 1450814,
+          "sha256": "5aa73cbd1acf9b9b2102aaec13e9e17e06806435c71d7003bb373215a45b2519"
+        }
+      },
+      "run_id": "b01_p08",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo8_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolov7_paper|H8|hailo8_to_trt|b066"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 3195,
+      "attempt_id": "resume_20261018_s02:b01_p09__a01",
+      "block": 1,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 51.45221831552991,
+      "conditional_energy_j": 1601.018589252191,
+      "execution_run_id": "b01_p09__a01",
+      "interval_start_ns": 3798743484735115,
+      "interval_stop_ns": 3798803652095933,
+      "position": 9,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p09__a01/inner_interval_analysis.json",
+          "bytes": 10647,
+          "sha256": "ec0866313fe9639b7c8129e56db934e6444d3037de711eae85b69ada532cf648"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p09__a01/attempt.json",
+          "bytes": 13544,
+          "sha256": "a886326bc9958f629d82273416db865945e1f7791e45f9c9a1b5a70b14787cf1"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p09__a01/protocol.json",
+          "bytes": 628090,
+          "sha256": "33e95c5982b9244536622dc5c092d6e5e3a2487e6e5321e5e8e7ba14767f25d9"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T133012Z_2aa4991b/acquisition/qualification/qualification.json",
+          "bytes": 703901,
+          "sha256": "27ef69de62a307f8cc130091622cfa76e81455c49ab2e24f9c2da1e644763208"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p09__a01/runtime_output/run_identity.json",
+          "bytes": 174599,
+          "sha256": "adf7c6cded18cba38d0e7624adf88f13a8c08622d19cd03425028107196ece52"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p09__a01/runtime_output/timing.json",
+          "bytes": 800413,
+          "sha256": "f13c62adf6a171977186f6cea26115ba5d115ed9c2caa3482b60f65a9c919b1b"
+        }
+      },
+      "run_id": "b01_p09",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo11l|H10|hailo10h_to_trt|b120"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 4996,
+      "attempt_id": "resume_20261018_s02:b01_p10__a01",
+      "block": 1,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 14.540569096691714,
+      "conditional_energy_j": 1294.9234032119984,
+      "execution_run_id": "b01_p10__a01",
+      "interval_start_ns": 3798693529682219,
+      "interval_stop_ns": 3798753573612320,
+      "position": 10,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p10__a01/inner_interval_analysis.json",
+          "bytes": 10654,
+          "sha256": "21d0262d975860a65cf07ff1a627227e3774655447691ca91cd7386464310782"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p10__a01/attempt.json",
+          "bytes": 13591,
+          "sha256": "f942eb9bab80b12f1358881ecdf861c0614eb2ddbb3af356488fd9bb3e89dd5a"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p10__a01/protocol.json",
+          "bytes": 707820,
+          "sha256": "009a2e69ad561185318eff7a062fa914bd1ecae619d4d226d4ded2c6bcce9e11"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132422Z_9579ac02/acquisition/qualify/qualification.json",
+          "bytes": 1201369,
+          "sha256": "0f028eb3cb8177cd3f187769a97fbd8ad7cc12d120a4631b86ab91cef8339852"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p10__a01/runtime_output/run_identity.json",
+          "bytes": 704295,
+          "sha256": "811c090193ff2fd9884712e37a8394df394f07c7f32cd4f93bfaedf97fbab84c"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p10__a01/runtime_output/timing.json",
+          "bytes": 2195282,
+          "sha256": "e0034b088228b09d98dea1fb191bbcef249bbfee0db50d13792027a245475d2f"
+        }
+      },
+      "run_id": "b01_p10",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolov7_paper|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 3801,
+      "attempt_id": "resume_20261018_s02:b01_p11__a01",
+      "block": 1,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 12.868908874401933,
+      "conditional_energy_j": 1153.3731007053755,
+      "execution_run_id": "b01_p11__a01",
+      "interval_start_ns": 3798947477220370,
+      "interval_stop_ns": 3799007534555956,
+      "position": 11,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p11__a01/inner_interval_analysis.json",
+          "bytes": 10652,
+          "sha256": "9a9b388623e7cb366be22ba6ea76ef4ff2c4cc38730ea96c8ecb44a2437fe583"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p11__a01/attempt.json",
+          "bytes": 13568,
+          "sha256": "3878d7168c0181e2d598bbe32d180fd1e2c65192b06108b1c8a2fd8d653895f7"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p11__a01/protocol.json",
+          "bytes": 425849,
+          "sha256": "575220bdc5c3908a18300928d785aad8e5c4f528c054cb6ad235a7c47a04b1b7"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132341Z_92cddf33/acquisition/qualify/qualification.json",
+          "bytes": 641573,
+          "sha256": "169df91dfaf3099d94c33559e5f1765363167bacfb651eb8730cba73fd78fb03"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p11__a01/runtime_output/run_identity.json",
+          "bytes": 441399,
+          "sha256": "48996332de599970916745bec87fd127239cceb1db0df64b07c7154b6e031a7a"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p11__a01/runtime_output/timing.json",
+          "bytes": 1404528,
+          "sha256": "c89092b5eb12b7d752b8bbf33bce037c3797c5d4e5ae23cb8006fefdbe23487f"
+        }
+      },
+      "run_id": "b01_p11",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo11l|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 8469,
+      "attempt_id": "resume_20261018_s02:b01_p12__a01",
+      "block": 1,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 23.591556996241223,
+      "conditional_energy_j": 1621.8162170714581,
+      "execution_run_id": "b01_p12__a01",
+      "interval_start_ns": 3799201731633234,
+      "interval_stop_ns": 3799261734442583,
+      "position": 12,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p12__a01/inner_interval_analysis.json",
+          "bytes": 10657,
+          "sha256": "e8095c04af5a6f60503f5d99d42eac7c0066883196aeff00064939ae36febf52"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p12__a01/attempt.json",
+          "bytes": 13586,
+          "sha256": "a6ec28720b54f88667d64406d4098ef71b8af8efce000faefd57da4fe408838b"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p12__a01/protocol.json",
+          "bytes": 558411,
+          "sha256": "d96939266084491bb2dcf84115205a0cad0deebd7c9cbc0d2cb554f717203aa8"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132401Z_edc00474/acquisition/qualify/qualification.json",
+          "bytes": 890935,
+          "sha256": "c716a7fc71f87ce70bdf1889b29819e6529eda19cdfc390242b2eef3753353ed"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p12__a01/runtime_output/run_identity.json",
+          "bytes": 567885,
+          "sha256": "62bb6d22fc890ea10c03a175bcd2d6db72c284857655495448f22ac03d031c08"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p12__a01/runtime_output/timing.json",
+          "bytes": 1184969,
+          "sha256": "0150f338e84f40a6166341554642f91417383e4bf9ed23903cdb5fb0b3bcfb59"
+        }
+      },
+      "run_id": "b01_p12",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26s|DeepX|native_full_tensorrt|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 88834,
+      "attempt_id": "resume_20261018_s02:b01_p13__a01",
+      "block": 1,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 39.751675786386976,
+      "conditional_energy_j": 1422.7096774987697,
+      "execution_run_id": "b01_p13__a01",
+      "interval_start_ns": 3799757961786423,
+      "interval_stop_ns": 3799817966742739,
+      "position": 13,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p13__a01/inner_interval_analysis.json",
+          "bytes": 10656,
+          "sha256": "fc245bd715d4ca498d1b1cc18d9ec5a644b81dbe1e95546161b984d97816e8cc"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p13__a01/attempt.json",
+          "bytes": 13586,
+          "sha256": "b749ee41be4aa0c2bd0bf628ee5169601aa525e8607989fd4c53b82c00a80db2"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p13__a01/protocol.json",
+          "bytes": 163629,
+          "sha256": "6675f0d12d20140ec85e2d7a8918fd7ac158766b95701820ac2c9c47ed897b45"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132958Z_eeaa1c61/acquisition/qualification/qualification.json",
+          "bytes": 196081,
+          "sha256": "d59c56b5fa2d00204d158112139b467a836421c5bd8cc5296bf32609f63b28e3"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p13__a01/runtime_output/run_identity.json",
+          "bytes": 179229,
+          "sha256": "7c70e51ab7c07878de1e01f85b6ad2021dafd80ec90e6a85b6a25342b9758834"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p13__a01/runtime_output/timing.json",
+          "bytes": 3476131,
+          "sha256": "77f64421e92d1b28c76857efed4402364aad7406e4b9896dc61091ebfefd6a07"
+        }
+      },
+      "run_id": "b01_p13",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|regnet_x_1_6gf|H10|hailo10h_to_trt|b123"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 4901,
+      "attempt_id": "resume_20261018_s02:b01_p14__a01",
+      "block": 1,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 46.26118564914476,
+      "conditional_energy_j": 1957.431772835689,
+      "execution_run_id": "b01_p14__a01",
+      "interval_start_ns": 3800321510427906,
+      "interval_stop_ns": 3800381513538028,
+      "position": 14,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p14__a01/inner_interval_analysis.json",
+          "bytes": 10638,
+          "sha256": "dd408247a398073aecd1fc06cbc2f2e40f04e1f5a1bd1c79a50cc25ccef3c2fd"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p14__a01/attempt.json",
+          "bytes": 13579,
+          "sha256": "0d6dc015998db67d240b36d2c695bbd7230fc0f1483f8831e7c38fd8b7b62df9"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p14__a01/protocol.json",
+          "bytes": 558400,
+          "sha256": "7db5b13094d5a73ed2d7b9bc5738e41bbdc99ede574b9273de5ad76914a35319"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132249Z_1ddbd8a0/acquisition/qualify/qualification.json",
+          "bytes": 890924,
+          "sha256": "93aaf530f18f50938e0cb48e35c335b098a233c320138779d224cb90255615a1"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p14__a01/runtime_output/run_identity.json",
+          "bytes": 567872,
+          "sha256": "0f5eb6f06eba6316c6abd3d028e7ceda944e8453e0044d39932d8faf9d13327d"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b01_p14__a01/runtime_output/timing.json",
+          "bytes": 1051506,
+          "sha256": "58dff4b21cefc64b9abf027fb7ab41c626264a30c55ae2062791bee38e573095"
+        }
+      },
+      "run_id": "b01_p14",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo8_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26m|H8|native_full_tensorrt|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 4998,
+      "attempt_id": "resume_20261018_s02:b02_p01__a01",
+      "block": 2,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 13.656605880221047,
+      "conditional_energy_j": 1294.613566114129,
+      "execution_run_id": "b02_p01__a01",
+      "interval_start_ns": 3799963652061570,
+      "interval_stop_ns": 3800023686603119,
+      "position": 1,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p01__a01/inner_interval_analysis.json",
+          "bytes": 10656,
+          "sha256": "c0c1517307f55c5ec7e9ea6b5f779be34378bd46d867fe0faa0abc775e39dae7"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p01__a01/attempt.json",
+          "bytes": 13592,
+          "sha256": "a0257aa21974b554417a73059a987180493f229aad8a3f822fcaafd26cecf1c7"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p01__a01/protocol.json",
+          "bytes": 707820,
+          "sha256": "188b91b057b4ce45e245fb12cb3b8b381fd59a737aa518658fd66cd9ad0d9d4e"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132422Z_9579ac02/acquisition/qualify/qualification.json",
+          "bytes": 1201369,
+          "sha256": "0f028eb3cb8177cd3f187769a97fbd8ad7cc12d120a4631b86ab91cef8339852"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p01__a01/runtime_output/run_identity.json",
+          "bytes": 704295,
+          "sha256": "b48467dafc53232d6e2ae2abc6c68004c105b81f41611f25078b1f1e21673f63"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p01__a01/runtime_output/timing.json",
+          "bytes": 2197652,
+          "sha256": "9cfb5c467f5fc452942656b83c7d3d35316a154f60d273b529f6cb65aeafb3a8"
+        }
+      },
+      "run_id": "b02_p01",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolov7_paper|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 3185,
+      "attempt_id": "resume_20261018_s02:b02_p02__a01",
+      "block": 2,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 53.810758384817014,
+      "conditional_energy_j": 1600.0872450867314,
+      "execution_run_id": "b02_p02__a01",
+      "interval_start_ns": 3800521809600214,
+      "interval_stop_ns": 3800581970860218,
+      "position": 2,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p02__a01/inner_interval_analysis.json",
+          "bytes": 10638,
+          "sha256": "fbf728dfb11be2481781c72ce9ececbebbf66c8768581467ad878000986acec9"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p02__a01/attempt.json",
+          "bytes": 13548,
+          "sha256": "4f6eabb15342b9a1472100fda46dcfa71b1d08321919482e478cf7a6bed71f7f"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p02__a01/protocol.json",
+          "bytes": 628090,
+          "sha256": "c672ae8e04b18f8b8f0df15e7a66a5ba521d50fd48ae1995f62c891a0a94a357"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T133012Z_2aa4991b/acquisition/qualification/qualification.json",
+          "bytes": 703901,
+          "sha256": "27ef69de62a307f8cc130091622cfa76e81455c49ab2e24f9c2da1e644763208"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p02__a01/runtime_output/run_identity.json",
+          "bytes": 174599,
+          "sha256": "469e5a1070b7798126e07934695ae511a8b9422d394895e9daa5a01c4f043efa"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p02__a01/runtime_output/timing.json",
+          "bytes": 799770,
+          "sha256": "e591419917c8ed9a2122a2abdf8cbbc140b0d3d211ff9d99970da4a78f63d277"
+        }
+      },
+      "run_id": "b02_p02",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo11l|H10|hailo10h_to_trt|b120"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 96129,
+      "attempt_id": "resume_20261018_s02:b02_p03__a01",
+      "block": 2,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 17.218504137269548,
+      "conditional_energy_j": 1180.9392340016009,
+      "execution_run_id": "b02_p03__a01",
+      "interval_start_ns": 3800471735187636,
+      "interval_stop_ns": 3800531787510078,
+      "position": 3,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p03__a01/inner_interval_analysis.json",
+          "bytes": 10657,
+          "sha256": "a41eadf1b12e62a716e5285929fca7bd0046c299293c82f5d8942b6b7dfd3f2c"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p03__a01/attempt.json",
+          "bytes": 15452,
+          "sha256": "5288ce5215d6aa5da00d6a0c8c9b292fd9886a7dd86e966eb3818c5245b5c905"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p03__a01/protocol.json",
+          "bytes": 210895,
+          "sha256": "c2817ec38a7209aef18a44b6c404cc14fa741cced9ef098008057993b49cebd7"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T143628Z_81e9125b/acquisition/mobilenet_split_qualify/qualification.json",
+          "bytes": 257766,
+          "sha256": "a60f0781371632ca054b7d8eaa13082152276436070b2496aba14c2eba796b89"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p03__a01/runtime_output/run_identity.json",
+          "bytes": 240876,
+          "sha256": "8061bce62750ffe16babb2f93dcd1620b45ce652b968e2aeb8c3d3f3a3e0fde4"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p03__a01/runtime_output/timing.json",
+          "bytes": 20641337,
+          "sha256": "79e11309ab1d153dc62b5d3610762c1a9f6aedd4946f970140c0d707d513264e"
+        }
+      },
+      "run_id": "b02_p03",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 6784,
+      "attempt_id": "resume_20261018_s02:b02_p04__a01",
+      "block": 2,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 49.96604461597441,
+      "conditional_energy_j": 2185.3718229684882,
+      "execution_run_id": "b02_p04__a01",
+      "interval_start_ns": 3801339214853675,
+      "interval_stop_ns": 3801399242995837,
+      "position": 4,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p04__a01/inner_interval_analysis.json",
+          "bytes": 10638,
+          "sha256": "91ff097eb966061adb5ff039c9dad059f1037556dfecc0be03565c646135f4d6"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p04__a01/attempt.json",
+          "bytes": 13538,
+          "sha256": "a66f5186ef6d34c57d2511716e76d0f34b84ab6a85d8aeb33297c5990560de08"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p04__a01/protocol.json",
+          "bytes": 1070212,
+          "sha256": "07480705f2a1a09bc5c82bb98546c6016070fd05c30364bbf3f91f4925ac1e89"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132739Z_53e320c3/acquisition/qualification/qualification.json",
+          "bytes": 1238992,
+          "sha256": "94899adf2c6bb351fdff588a07d6dcbc10a3f1cc58fe88edc3c8eb7dc913677b"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p04__a01/runtime_output/run_identity.json",
+          "bytes": 177174,
+          "sha256": "5607b46d3bfd0e1ea938657fe5a5a050ba93d28d8f60fd5d00143f70582067a1"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p04__a01/runtime_output/timing.json",
+          "bytes": 1450916,
+          "sha256": "20e4b0af896ca3cf5ed3a78d2f7d31eb618d8a87bf901385bb66ee299a8b6ecb"
+        }
+      },
+      "run_id": "b02_p04",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo8_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolov7_paper|H8|hailo8_to_trt|b066"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 89115,
+      "attempt_id": "resume_20261018_s02:b02_p05__a01",
+      "block": 2,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 38.728058357985525,
+      "conditional_energy_j": 1425.1851633591232,
+      "execution_run_id": "b02_p05__a01",
+      "interval_start_ns": 3801283194992997,
+      "interval_stop_ns": 3801343199686077,
+      "position": 5,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p05__a01/inner_interval_analysis.json",
+          "bytes": 10656,
+          "sha256": "748f52fc1dab70b361857a7377b3368970d60a553dcdafc1f71bd7650f1ff1a8"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p05__a01/attempt.json",
+          "bytes": 13586,
+          "sha256": "786d7212ce15bece633c1c8aca3813d492a6cbfb8210432a210356229e9097ac"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p05__a01/protocol.json",
+          "bytes": 163629,
+          "sha256": "e09ea29cab5a7ec191d929447d48869634ef9d905219cc1584f48823613aaaba"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132958Z_eeaa1c61/acquisition/qualification/qualification.json",
+          "bytes": 196081,
+          "sha256": "d59c56b5fa2d00204d158112139b467a836421c5bd8cc5296bf32609f63b28e3"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p05__a01/runtime_output/run_identity.json",
+          "bytes": 179229,
+          "sha256": "d03161a6ba535f22594e812a9c7fc115f0d3f55587c27cc22e6b019805ecbf57"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p05__a01/runtime_output/timing.json",
+          "bytes": 3493077,
+          "sha256": "ba47f1717075f0d4783c67cf12971b46da548166f1358761129548651155ca95"
+        }
+      },
+      "run_id": "b02_p05",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|regnet_x_1_6gf|H10|hailo10h_to_trt|b123"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 61600,
+      "attempt_id": "resume_20261018_s02:b02_p06__a01",
+      "block": 2,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 47.39063940917403,
+      "conditional_energy_j": 1832.5656516221231,
+      "execution_run_id": "b02_p06__a01",
+      "interval_start_ns": 3801537412234932,
+      "interval_stop_ns": 3801597419855080,
+      "position": 6,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p06__a01/inner_interval_analysis.json",
+          "bytes": 10648,
+          "sha256": "f843b1a52b8371e5a586440c9af26ce88dcd06f2691d8facee19250c0a7ae0b3"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p06__a01/attempt.json",
+          "bytes": 13558,
+          "sha256": "aa453060854fdd2ba7e1cae9ff0c3fca10838343848508263ffa340e460a7b07"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p06__a01/protocol.json",
+          "bytes": 160047,
+          "sha256": "ae7fdf51af4598e1cb4950f1a9e5542e5fc3833924f3e2f9bea1f6100138794b"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132942Z_3a11fdfb/acquisition/qualification/qualification.json",
+          "bytes": 192369,
+          "sha256": "b785e70affd3564e74da376f04f211f7fc2814205ed79174cad2775a4df8ac76"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p06__a01/runtime_output/run_identity.json",
+          "bytes": 175682,
+          "sha256": "b7178ef86bc1c9d27bbcf17679f7c3862f7e648bf257112f56052c3fafd2d76c"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p06__a01/runtime_output/timing.json",
+          "bytes": 2452434,
+          "sha256": "4a5c38a84b2a37afe5597060e8dcb556ee035431b4699674c36f23ba04163106"
+        }
+      },
+      "run_id": "b02_p06",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|resnet50|H10|hailo10h_to_trt|b095"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 3802,
+      "attempt_id": "resume_20261018_s02:b02_p07__a01",
+      "block": 2,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 13.302252412280021,
+      "conditional_energy_j": 1150.8249454369793,
+      "execution_run_id": "b02_p07__a01",
+      "interval_start_ns": 3801488839715479,
+      "interval_stop_ns": 3801548895761249,
+      "position": 7,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p07__a01/inner_interval_analysis.json",
+          "bytes": 10650,
+          "sha256": "a84bdd3d66d9c77a64eeb8a008c1082172ac05d4ca8137cfbbfa714c0a53ca01"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p07__a01/attempt.json",
+          "bytes": 13565,
+          "sha256": "dba8fd4e8559fef2bccb1516a84b49a97cdbf3d9db7afd9976a8c7d8987a5b71"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p07__a01/protocol.json",
+          "bytes": 425849,
+          "sha256": "1e26145ea092178aba5ab4b62e6cb03610da5f839e55453446cb26c00b4fef5e"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132341Z_92cddf33/acquisition/qualify/qualification.json",
+          "bytes": 641573,
+          "sha256": "169df91dfaf3099d94c33559e5f1765363167bacfb651eb8730cba73fd78fb03"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p07__a01/runtime_output/run_identity.json",
+          "bytes": 441399,
+          "sha256": "54b8f773e4593d5caaf262fb8c74870407f823416a2350499e7d62b577047ab2"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p07__a01/runtime_output/timing.json",
+          "bytes": 1404358,
+          "sha256": "608a2c718f7e236306cdb497254f938d77f5a10d10ebc3682cba4e2ee36a6de1"
+        }
+      },
+      "run_id": "b02_p07",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo11l|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 32505,
+      "attempt_id": "resume_20261018_s02:b02_p08__a01",
+      "block": 2,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 10.706574328810289,
+      "conditional_energy_j": 982.6447481224629,
+      "execution_run_id": "b02_p08__a01",
+      "interval_start_ns": 3801742530425800,
+      "interval_stop_ns": 3801802535092397,
+      "position": 8,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p08__a01/inner_interval_analysis.json",
+          "bytes": 10659,
+          "sha256": "0330ee14f8facaa8514601faec710d0594b45cef89b6b99a8cdc6eef73cf24ce"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p08__a01/attempt.json",
+          "bytes": 13604,
+          "sha256": "3b4c3fa93eecf166ad332259c33ebbe13c86e56d11652c1e6e42916395b0de5b"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p08__a01/protocol.json",
+          "bytes": 247523,
+          "sha256": "7b37186bd957c744f45c9724d12be08f5053eabfdf395c816c8110efe7d2560d"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132330Z_049d1021/acquisition/qualify/qualification.json",
+          "bytes": 288646,
+          "sha256": "716773fda3dd5233b315a60fa7c559390acb203a51bd495afe89a8bc07b78a7d"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p08__a01/runtime_output/run_identity.json",
+          "bytes": 271396,
+          "sha256": "4d7ee53a141b6e873932332562c1ea487d70d2d181dba2f0ffba03bbc84c8806"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p08__a01/runtime_output/timing.json",
+          "bytes": 7103452,
+          "sha256": "16faa9e75e6d294411173e4f9d92117b609071b847607d24f4004fc949b92702"
+        }
+      },
+      "run_id": "b02_p08",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|regnet_x_1_6gf|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 39591,
+      "attempt_id": "resume_20261018_s02:b02_p09__a01",
+      "block": 2,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 10.932646595783954,
+      "conditional_energy_j": 1053.2946315289641,
+      "execution_run_id": "b02_p09__a01",
+      "interval_start_ns": 3801996493707713,
+      "interval_stop_ns": 3802056497689135,
+      "position": 9,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p09__a01/inner_interval_analysis.json",
+          "bytes": 10654,
+          "sha256": "7658a434e7f64db4716ccacd66a4ec8e5cfb8f89673f2d2258b5da74a87bff12"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p09__a01/attempt.json",
+          "bytes": 13575,
+          "sha256": "47930330155762747215833e041a7694fbcc394a88abdd4f9d2b2fd7ba95ab28"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p09__a01/protocol.json",
+          "bytes": 242585,
+          "sha256": "8c663fd0c7c3315ba749ced0b7497e54a3f134076d69de79c772c24b3837ce26"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132307Z_3e84c552/acquisition/qualify/qualification.json",
+          "bytes": 283715,
+          "sha256": "2a2ee274de585f964bec888d9dac204e19e11eefff4174932d90d18393374a23"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p09__a01/runtime_output/run_identity.json",
+          "bytes": 266500,
+          "sha256": "160959facb2db66e383282c1b6a624c44853eb0f733071f9883edd9b15fc2ba9"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p09__a01/runtime_output/timing.json",
+          "bytes": 8595143,
+          "sha256": "ecbffd483021f892479819264318d90b4fa5df59bd441807500b095fdc5f004f"
+        }
+      },
+      "run_id": "b02_p09",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|resnet50|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 8456,
+      "attempt_id": "resume_20261018_s02:b02_p10__a01",
+      "block": 2,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 22.74115478035072,
+      "conditional_energy_j": 1618.50560657138,
+      "execution_run_id": "b02_p10__a01",
+      "interval_start_ns": 3802251658664940,
+      "interval_stop_ns": 3802311661756983,
+      "position": 10,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p10__a01/inner_interval_analysis.json",
+          "bytes": 10650,
+          "sha256": "8c63044bd9fc1f8b14a37ddc2db9ce863431757039b54f71afe0cfd1a4111d35"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p10__a01/attempt.json",
+          "bytes": 13579,
+          "sha256": "108ff96e8f0c1a6a120a9ce822864facb483d826f1b7a86a83f9de9934adc011"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p10__a01/protocol.json",
+          "bytes": 558411,
+          "sha256": "ae2c1729b8a4392c1c462dd44289e5a2a834ea2811be0fbed8cb7a44c114ff0a"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132401Z_edc00474/acquisition/qualify/qualification.json",
+          "bytes": 890935,
+          "sha256": "c716a7fc71f87ce70bdf1889b29819e6529eda19cdfc390242b2eef3753353ed"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p10__a01/runtime_output/run_identity.json",
+          "bytes": 567885,
+          "sha256": "966e95084cb9d0f61111daea7a7bd9f2150eef25ee6e3e7a9df9a55bd2187528"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p10__a01/runtime_output/timing.json",
+          "bytes": 1184263,
+          "sha256": "7992b1fd11fa1c07c950adfab531ea7b7b1349b87fef329b5f05ef72bb8cc761"
+        }
+      },
+      "run_id": "b02_p10",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26s|DeepX|native_full_tensorrt|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 4895,
+      "attempt_id": "resume_20261018_s02:b02_p11__a01",
+      "block": 2,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 45.25788703738789,
+      "conditional_energy_j": 1955.0620770513592,
+      "execution_run_id": "b02_p11__a01",
+      "interval_start_ns": 3803117191464940,
+      "interval_stop_ns": 3803177199296906,
+      "position": 11,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p11__a01/inner_interval_analysis.json",
+          "bytes": 10637,
+          "sha256": "4cfc57d9d9fce71ba68270ff901ee5048751169507bb06bbd46e5f3ec73f378b"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p11__a01/attempt.json",
+          "bytes": 13578,
+          "sha256": "92a032be252beda206a154470571ffbca6c4a19b273d52e4fa343b46b50b88cd"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p11__a01/protocol.json",
+          "bytes": 558400,
+          "sha256": "5ba03b57dd290e96e432d6bead9214a4c1085f4fd816507ca4be309d608a180e"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132249Z_1ddbd8a0/acquisition/qualify/qualification.json",
+          "bytes": 890924,
+          "sha256": "93aaf530f18f50938e0cb48e35c335b098a233c320138779d224cb90255615a1"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p11__a01/runtime_output/run_identity.json",
+          "bytes": 567872,
+          "sha256": "2c220f0b7b8a829531e10e4cc2bb3740ea9faed306631a9dbdac18490019a627"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p11__a01/runtime_output/timing.json",
+          "bytes": 1051399,
+          "sha256": "732c0eeac9648429298826c341059b21f5786b1702f76b48ea36681bb0a95d89"
+        }
+      },
+      "run_id": "b02_p11",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo8_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26m|H8|native_full_tensorrt|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 6654,
+      "attempt_id": "resume_20261018_s02:b02_p12__a01",
+      "block": 2,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 57.37828068161473,
+      "conditional_energy_j": 2051.3031343717917,
+      "execution_run_id": "b02_p12__a01",
+      "interval_start_ns": 3803063431237190,
+      "interval_stop_ns": 3803123532860525,
+      "position": 12,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p12__a01/inner_interval_analysis.json",
+          "bytes": 10644,
+          "sha256": "8447647833dc51b79365855d9a3a2678d73e1282cb3d6994579a67efb1460a4b"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p12__a01/attempt.json",
+          "bytes": 13550,
+          "sha256": "857e98fa0d1c9aeec0810457d805a4d9a10cac68de1f297f25fca1970374886c"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p12__a01/protocol.json",
+          "bytes": 624414,
+          "sha256": "84cc3756fcd17265f39dd85faddbdc68532e39eca3a54c53eb512b309ef7d418"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T133039Z_9cd3e9ac/acquisition/qualification/qualification.json",
+          "bytes": 700417,
+          "sha256": "dd541b86c1b9f7c16968b2e29ee2e24717c2dd62396029b217998aa3f0851342"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p12__a01/runtime_output/run_identity.json",
+          "bytes": 174327,
+          "sha256": "3b859a5256f29c53dbef8b66a6595709e7662b92b1c80b16fc8bdc7df726ea23"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p12__a01/runtime_output/timing.json",
+          "bytes": 926024,
+          "sha256": "00e8f1cb8cd2756aab5ee8aaa61f2444b99f9e0a4535bd79ac1e82a8510cb1e6"
+        }
+      },
+      "run_id": "b02_p12",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26m|H10|hailo10h_to_trt|b043"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 11348,
+      "attempt_id": "resume_20261018_s02:b02_p13__a01",
+      "block": 2,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 44.680768132658976,
+      "conditional_energy_j": 1738.5170129462488,
+      "execution_run_id": "b02_p13__a01",
+      "interval_start_ns": 3803625849034578,
+      "interval_stop_ns": 3803685872794781,
+      "position": 13,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p13__a01/inner_interval_analysis.json",
+          "bytes": 10637,
+          "sha256": "aa1938ebbf47d09d0d49d1c4b4ab24ae4bf6d527698f59c7be1a2a10e089adb9"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p13__a01/attempt.json",
+          "bytes": 13520,
+          "sha256": "ac0430f2d1cd7cbad0174e38f515bd38906f812df6c56112ac21a493e5870bd5"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p13__a01/protocol.json",
+          "bytes": 615262,
+          "sha256": "c760e31bce3088efe2ee6717e11b6295e5da991a8bde3f958043e4f100d68d5d"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132640Z_086b2425/acquisition/qualification/qualification.json",
+          "bytes": 690824,
+          "sha256": "59419ff3590d753746205c2695cd241221271fb7761ec3688508f1bb53c5db20"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p13__a01/runtime_output/run_identity.json",
+          "bytes": 173296,
+          "sha256": "32801e5d8c27686be8fdcf0f25756836cf77470613a3fcf4fc5ee94c7b947140"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p13__a01/runtime_output/timing.json",
+          "bytes": 1091976,
+          "sha256": "660d182c1822f524809e1d4ea0882728c36408d978dfb30af446d26e8fa41b3c"
+        }
+      },
+      "run_id": "b02_p13",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo8_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26s|H8|hailo8_to_trt|b021"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 88422,
+      "attempt_id": "resume_20261018_s02:b02_p14__a01",
+      "block": 2,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 10.551802346136334,
+      "conditional_energy_j": 1025.366070222461,
+      "execution_run_id": "b02_p14__a01",
+      "interval_start_ns": 3803267045278782,
+      "interval_stop_ns": 3803327047093563,
+      "position": 14,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p14__a01/inner_interval_analysis.json",
+          "bytes": 10665,
+          "sha256": "2b1d082beddc21bc09f334a1d244d486fb82001e5baa9d0d90845b0810d3de21"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p14__a01/attempt.json",
+          "bytes": 13627,
+          "sha256": "f8123a43f4991e33cb54b6623c474f39f2887a4593b9aa1fbef467ed2cbfa0f3"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p14__a01/protocol.json",
+          "bytes": 250815,
+          "sha256": "619c544866f046d7a170babe28f0809ffd7d2c03773dcffb971ec8b9b6582a19"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132318Z_a892542c/acquisition/qualify/qualification.json",
+          "bytes": 291989,
+          "sha256": "837391b37d7ef83172f9d06a3c92b102657b6ddd12bd1b408928810560bc3663"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p14__a01/runtime_output/run_identity.json",
+          "bytes": 274660,
+          "sha256": "358ad9fcbdee54418580c0b0c5a754338f55976935e814e68ac09d71a5052057"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b02_p14__a01/runtime_output/timing.json",
+          "bytes": 19044337,
+          "sha256": "7183db77d6aa5a065c35c983bd9f980580a945671a3258fe7e40b04d8ad74b47"
+        }
+      },
+      "run_id": "b02_p14",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|mobilenet_v3_large|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 6631,
+      "attempt_id": "resume_20261018_s02:b03_p01__a01",
+      "block": 3,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 55.33155221489671,
+      "conditional_energy_j": 2043.1630999869385,
+      "execution_run_id": "b03_p01__a01",
+      "interval_start_ns": 3803826444744672,
+      "interval_stop_ns": 3803886552413884,
+      "position": 1,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p01__a01/inner_interval_analysis.json",
+          "bytes": 10650,
+          "sha256": "ee22805f68bfbc38eff19b287ff304f4a8660b7edbf6a68e0320840408bf2c74"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p01__a01/attempt.json",
+          "bytes": 13546,
+          "sha256": "a58e3fcdecbcd2bc27c492e42de261f58fed5b6cbc23e3403eecbc8bc3bb952e"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p01__a01/protocol.json",
+          "bytes": 624414,
+          "sha256": "37d4cc07655b5606429547cf5206e19796aeb2dffef63fcb8c5460fbf9b8983b"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T133039Z_9cd3e9ac/acquisition/qualification/qualification.json",
+          "bytes": 700417,
+          "sha256": "dd541b86c1b9f7c16968b2e29ee2e24717c2dd62396029b217998aa3f0851342"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p01__a01/runtime_output/run_identity.json",
+          "bytes": 174327,
+          "sha256": "65cb29a7d933c8c760b78b9e6bcc840a5788cb5d648a7703471442f3d38ec2ea"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p01__a01/runtime_output/timing.json",
+          "bytes": 925287,
+          "sha256": "2ce6c131a6644c9b9af118f6fe991c4972868b8ebf415851040306f7a766841d"
+        }
+      },
+      "run_id": "b03_p01",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26m|H10|hailo10h_to_trt|b043"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 4972,
+      "attempt_id": "resume_20261018_s02:b03_p02__a01",
+      "block": 3,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 14.138375836826299,
+      "conditional_energy_j": 1293.1457999790728,
+      "execution_run_id": "b03_p02__a01",
+      "interval_start_ns": 3803776687352158,
+      "interval_stop_ns": 3803836724739470,
+      "position": 2,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p02__a01/inner_interval_analysis.json",
+          "bytes": 10653,
+          "sha256": "9792e167413a48df383984541682ad917a7d06ae07d8f26da38c5a37adc76199"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p02__a01/attempt.json",
+          "bytes": 13592,
+          "sha256": "82ced8c8c30baf4144894e8c00788d34f6d92444143100e1d5672751c355b14a"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p02__a01/protocol.json",
+          "bytes": 707820,
+          "sha256": "c595ba054037b003b4decaac59591d1ba801d14d9bb4ea20f101abb489e5cebb"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132422Z_9579ac02/acquisition/qualify/qualification.json",
+          "bytes": 1201369,
+          "sha256": "0f028eb3cb8177cd3f187769a97fbd8ad7cc12d120a4631b86ab91cef8339852"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p02__a01/runtime_output/run_identity.json",
+          "bytes": 704295,
+          "sha256": "1cf972bf94fd7c84c9be621a28fdf7c2aacc147a6418da0dc4ab7c77d1ee94e2"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p02__a01/runtime_output/timing.json",
+          "bytes": 2192050,
+          "sha256": "4de1400b1b74ea4165cde6360d56195a26c5adad06aa1290715bf0fe1e939d7a"
+        }
+      },
+      "run_id": "b03_p02",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolov7_paper|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 11322,
+      "attempt_id": "resume_20261018_s02:b03_p03__a01",
+      "block": 3,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 45.76700310160974,
+      "conditional_energy_j": 1736.9270056331877,
+      "execution_run_id": "b03_p03__a01",
+      "interval_start_ns": 3804642960948216,
+      "interval_stop_ns": 3804702983613183,
+      "position": 3,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p03__a01/inner_interval_analysis.json",
+          "bytes": 10640,
+          "sha256": "968eea3bbad06dac6699fdb091e99222f488640b73f76ed85206485762f78759"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p03__a01/attempt.json",
+          "bytes": 13516,
+          "sha256": "89e1c5515635ca594a53b248ee3222ca5b5d5e12a98b90d19139c1c8725df039"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p03__a01/protocol.json",
+          "bytes": 615262,
+          "sha256": "8cc3a86e5cf962f38709bf39c6ff2238e15f45b00120a44429054da3dc932bef"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132640Z_086b2425/acquisition/qualification/qualification.json",
+          "bytes": 690824,
+          "sha256": "59419ff3590d753746205c2695cd241221271fb7761ec3688508f1bb53c5db20"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p03__a01/runtime_output/run_identity.json",
+          "bytes": 173296,
+          "sha256": "2e4ba90c2492ef406afc2502370021517e57fd67668ce224dc1be19ff3377564"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p03__a01/runtime_output/timing.json",
+          "bytes": 1091506,
+          "sha256": "23433c9e9b91dbe4c66557f636bd2a43d004e34728103cf98d75fba84490b8e6"
+        }
+      },
+      "run_id": "b03_p03",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo8_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26s|H8|hailo8_to_trt|b021"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 95952,
+      "attempt_id": "resume_20261018_s02:b03_p04__a01",
+      "block": 3,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 16.99220534249366,
+      "conditional_energy_j": 1181.4745366041336,
+      "execution_run_id": "b03_p04__a01",
+      "interval_start_ns": 3804284860495098,
+      "interval_stop_ns": 3804344913049699,
+      "position": 4,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p04__a01/inner_interval_analysis.json",
+          "bytes": 10659,
+          "sha256": "663406710ec1205143fb77693a1e76c835aa684bc8fa63f0148cd59dea7dc6cd"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p04__a01/attempt.json",
+          "bytes": 15453,
+          "sha256": "2e6d663ce777f4590c9fef3b96cef167ead7c94a6334a99b9bf4f3954c2ae09b"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p04__a01/protocol.json",
+          "bytes": 210895,
+          "sha256": "0bfa6e3504e0b5ffec557aa247281682694d61ceb623c3b1b4aa3aff80b4ddc7"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T143628Z_81e9125b/acquisition/mobilenet_split_qualify/qualification.json",
+          "bytes": 257766,
+          "sha256": "a60f0781371632ca054b7d8eaa13082152276436070b2496aba14c2eba796b89"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p04__a01/runtime_output/run_identity.json",
+          "bytes": 240876,
+          "sha256": "8e89025a17b99af5bd9237d38642e9c51481c745a6bdfcf3d609e84eb5ee7acd"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p04__a01/runtime_output/timing.json",
+          "bytes": 20617044,
+          "sha256": "73a50d1a8d8e87d4a2158d5ee16e1f9baa653fe21c5be983e1c0356c21d1df01"
+        }
+      },
+      "run_id": "b03_p04",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 8472,
+      "attempt_id": "resume_20261018_s02:b03_p05__a01",
+      "block": 3,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 22.02324582909766,
+      "conditional_energy_j": 1622.109768175336,
+      "execution_run_id": "b03_p05__a01",
+      "interval_start_ns": 3804539872207901,
+      "interval_stop_ns": 3804599874482815,
+      "position": 5,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p05__a01/inner_interval_analysis.json",
+          "bytes": 10651,
+          "sha256": "3fe004246ad97188d7bc7d402a1a8ea9fc837e19d5bc23a29fafc939bc4fc607"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p05__a01/attempt.json",
+          "bytes": 13583,
+          "sha256": "5afc21cc99b3f0ed512c020b7aa222d1ed7f8c2b61d27a47af971c211b1a993a"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p05__a01/protocol.json",
+          "bytes": 558411,
+          "sha256": "3e4c2e6304cc1405e1d0cf1b8e1125acd672f5c22d818550df0c90a01ff6e5b4"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132401Z_edc00474/acquisition/qualify/qualification.json",
+          "bytes": 890935,
+          "sha256": "c716a7fc71f87ce70bdf1889b29819e6529eda19cdfc390242b2eef3753353ed"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p05__a01/runtime_output/run_identity.json",
+          "bytes": 567885,
+          "sha256": "8b2f4a121e19e4dc8dfdf9808f9499adc2c175ddad739e9a1c8b48575fa9611f"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p05__a01/runtime_output/timing.json",
+          "bytes": 1184755,
+          "sha256": "59a3fb5c2103fcbd1bc5b2d7bbfaf7ccb399eec352cfdc858b1c6d9af5f94b93"
+        }
+      },
+      "run_id": "b03_p05",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26s|DeepX|native_full_tensorrt|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 61468,
+      "attempt_id": "resume_20261018_s02:b03_p06__a01",
+      "block": 3,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 47.33226374023307,
+      "conditional_energy_j": 1826.875635071911,
+      "execution_run_id": "b03_p06__a01",
+      "interval_start_ns": 3805096329370784,
+      "interval_stop_ns": 3805156336555918,
+      "position": 6,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p06__a01/inner_interval_analysis.json",
+          "bytes": 10650,
+          "sha256": "ecbd84a14c5e151eb7595ebd4974b11155182ae0931f4d9f0dfc1f0e2f5b33d1"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p06__a01/attempt.json",
+          "bytes": 13555,
+          "sha256": "243293112e7dfafe7a41c7f7cd68c7337d51057c4845b87d4a4bf2765ab14ffe"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p06__a01/protocol.json",
+          "bytes": 160047,
+          "sha256": "56016e04cd4444000f2973326ed004ecf6395200d6cd07c1a62887867e07300b"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132942Z_3a11fdfb/acquisition/qualification/qualification.json",
+          "bytes": 192369,
+          "sha256": "b785e70affd3564e74da376f04f211f7fc2814205ed79174cad2775a4df8ac76"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p06__a01/runtime_output/run_identity.json",
+          "bytes": 175682,
+          "sha256": "6a922e10743f24447a4e3a0557d375442c6c2744e33c3ecbdd20428986d171d0"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p06__a01/runtime_output/timing.json",
+          "bytes": 2450269,
+          "sha256": "f04d2a7ac474029396adcbd67102a33205db77706714618ac4f3ba3e91298666"
+        }
+      },
+      "run_id": "b03_p06",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|resnet50|H10|hailo10h_to_trt|b095"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 4891,
+      "attempt_id": "resume_20261018_s02:b03_p07__a01",
+      "block": 3,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 44.727443632485475,
+      "conditional_energy_j": 1952.9439741329659,
+      "execution_run_id": "b03_p07__a01",
+      "interval_start_ns": 3805659717262539,
+      "interval_stop_ns": 3805719718017267,
+      "position": 7,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p07__a01/inner_interval_analysis.json",
+          "bytes": 10631,
+          "sha256": "0f710bd29dd6c6f46d0940926b01156f715ef15e76d4a398bccc4179bda2f167"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p07__a01/attempt.json",
+          "bytes": 13577,
+          "sha256": "e99f039d469041905c554ccaf05d8d0be2cbf4a16b530bdae1f1a317019aaf9f"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p07__a01/protocol.json",
+          "bytes": 558400,
+          "sha256": "630b9af1f76261dee547c04624c52410794fede4a40d7a6562ea8938a117e575"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132249Z_1ddbd8a0/acquisition/qualify/qualification.json",
+          "bytes": 890924,
+          "sha256": "93aaf530f18f50938e0cb48e35c335b098a233c320138779d224cb90255615a1"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p07__a01/runtime_output/run_identity.json",
+          "bytes": 567872,
+          "sha256": "2c0644258ec7301841126c7f4d0e0654cca8084b9237244191190ac1dafa4835"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p07__a01/runtime_output/timing.json",
+          "bytes": 1051270,
+          "sha256": "59ca41a220fbe9e81936a46c3876e50fb1c19b37264ccf7d3c03a2964a473d5a"
+        }
+      },
+      "run_id": "b03_p07",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo8_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26m|H8|native_full_tensorrt|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 88449,
+      "attempt_id": "resume_20261018_s02:b03_p08__a01",
+      "block": 3,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 10.330703276386462,
+      "conditional_energy_j": 1022.610840741042,
+      "execution_run_id": "b03_p08__a01",
+      "interval_start_ns": 3805301461828261,
+      "interval_stop_ns": 3805361463585589,
+      "position": 8,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p08__a01/inner_interval_analysis.json",
+          "bytes": 10671,
+          "sha256": "3c633edd385aad43320f159036287c3c564d64cee0166a373da8a4fd96a47c44"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p08__a01/attempt.json",
+          "bytes": 13627,
+          "sha256": "13936a441c86082130ba4f1b903a475861cdd07a5049e28a93dd262a28c25381"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p08__a01/protocol.json",
+          "bytes": 250815,
+          "sha256": "66f8a444765680ab76643bec934df7adf8dacaeadde19636b7676f5de4152897"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132318Z_a892542c/acquisition/qualify/qualification.json",
+          "bytes": 291989,
+          "sha256": "837391b37d7ef83172f9d06a3c92b102657b6ddd12bd1b408928810560bc3663"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p08__a01/runtime_output/run_identity.json",
+          "bytes": 274660,
+          "sha256": "a57e9115ea83412a4578f594a2328b3989778678c1eac28a744913725fd18b8b"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p08__a01/runtime_output/timing.json",
+          "bytes": 19046869,
+          "sha256": "edd1a12ba684e78617f027d387fecdb1774b3118c399e90790f665fe235d386c"
+        }
+      },
+      "run_id": "b03_p08",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|mobilenet_v3_large|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 3193,
+      "attempt_id": "resume_20261018_s02:b03_p09__a01",
+      "block": 3,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 51.743283271042024,
+      "conditional_energy_j": 1602.1781896491386,
+      "execution_run_id": "b03_p09__a01",
+      "interval_start_ns": 3805860857726937,
+      "interval_stop_ns": 3805921020912156,
+      "position": 9,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p09__a01/inner_interval_analysis.json",
+          "bytes": 10645,
+          "sha256": "ca42cf8fc1e7632b42b8e72e6ec981a164842d0e54762c24f73e28c90c0d3878"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p09__a01/attempt.json",
+          "bytes": 13547,
+          "sha256": "a3ebd832a452d51b433bbd9ce00ea28ce17f876675a458ea9d81d6c0d6c83985"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p09__a01/protocol.json",
+          "bytes": 628090,
+          "sha256": "74e842ae1eb652bb54cb452933b650c0f76479d07273ea11caca41a007f55d3b"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T133012Z_2aa4991b/acquisition/qualification/qualification.json",
+          "bytes": 703901,
+          "sha256": "27ef69de62a307f8cc130091622cfa76e81455c49ab2e24f9c2da1e644763208"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p09__a01/runtime_output/run_identity.json",
+          "bytes": 174599,
+          "sha256": "2cd24664bf875be131e08a07531a3d2c1ce370b5947dfb400f00c72d2471c42e"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p09__a01/runtime_output/timing.json",
+          "bytes": 799536,
+          "sha256": "d229002d32f09b8a25d40099e46a28c7c81a4edb7d3f14c7acfc1150452e12c8"
+        }
+      },
+      "run_id": "b03_p09",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo11l|H10|hailo10h_to_trt|b120"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 6784,
+      "attempt_id": "resume_20261018_s02:b03_p10__a01",
+      "block": 3,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 49.293015857613824,
+      "conditional_energy_j": 2185.4932781782236,
+      "execution_run_id": "b03_p10__a01",
+      "interval_start_ns": 3806423842363790,
+      "interval_stop_ns": 3806483863971637,
+      "position": 10,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p10__a01/inner_interval_analysis.json",
+          "bytes": 10635,
+          "sha256": "7085ba8a205db3dc5561e3ce18fb3ad24ea20d4d956f63beb33a7ececfe9b1c5"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p10__a01/attempt.json",
+          "bytes": 13540,
+          "sha256": "bd68e287358fc73ebb02d65a4313c5550cbab5a3cc387c72db6ee01ce1d4fc85"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p10__a01/protocol.json",
+          "bytes": 1070212,
+          "sha256": "ae4c705b9c590be8f8408a1f71b53c53682e25bf13073511fb4c74eab8310d7b"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132739Z_53e320c3/acquisition/qualification/qualification.json",
+          "bytes": 1238992,
+          "sha256": "94899adf2c6bb351fdff588a07d6dcbc10a3f1cc58fe88edc3c8eb7dc913677b"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p10__a01/runtime_output/run_identity.json",
+          "bytes": 177174,
+          "sha256": "19f1659775c0e40d8129f525f5ee7fc97ee5624b7a0578d54c05a4dfa3311595"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p10__a01/runtime_output/timing.json",
+          "bytes": 1451081,
+          "sha256": "fa638e3db1cb02b2dcfe22f1e90918b7ba02c78cfa94c4ee3d62eae979d010ab"
+        }
+      },
+      "run_id": "b03_p10",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo8_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolov7_paper|H8|hailo8_to_trt|b066"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 87391,
+      "attempt_id": "resume_20261018_s02:b03_p11__a01",
+      "block": 3,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 38.54836126684831,
+      "conditional_energy_j": 1416.3900449739135,
+      "execution_run_id": "b03_p11__a01",
+      "interval_start_ns": 3806367597685824,
+      "interval_stop_ns": 3806427602703895,
+      "position": 11,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p11__a01/inner_interval_analysis.json",
+          "bytes": 10658,
+          "sha256": "1f043871bcdd633afc9ed80ef6aecbf2d55d5abd9679586a6c959bf961de9d50"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p11__a01/attempt.json",
+          "bytes": 13588,
+          "sha256": "bd18c594358e4886da01fb663a4338c8aea44ab99ff30769ae9e5c3aea4b810c"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p11__a01/protocol.json",
+          "bytes": 163629,
+          "sha256": "3f6589d881f228f7b5097faf631834cb6cc0721c42e9a64304c2704046aca3b1"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132958Z_eeaa1c61/acquisition/qualification/qualification.json",
+          "bytes": 196081,
+          "sha256": "d59c56b5fa2d00204d158112139b467a836421c5bd8cc5296bf32609f63b28e3"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p11__a01/runtime_output/run_identity.json",
+          "bytes": 179229,
+          "sha256": "cb2941c9f70422fb79c276c5aaa258b95d10800532a6d7f354349a823100ef93"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p11__a01/runtime_output/timing.json",
+          "bytes": 3445419,
+          "sha256": "f463694f5dbae4ac37822a0d6c1b31cf502744c2c98bd949b8411ed91bad1cc7"
+        }
+      },
+      "run_id": "b03_p11",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|regnet_x_1_6gf|H10|hailo10h_to_trt|b123"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 39582,
+      "attempt_id": "resume_20261018_s02:b03_p12__a01",
+      "block": 3,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 11.414146903571643,
+      "conditional_energy_j": 1052.5104040378778,
+      "execution_run_id": "b03_p12__a01",
+      "interval_start_ns": 3806318701849975,
+      "interval_stop_ns": 3806378705991592,
+      "position": 12,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p12__a01/inner_interval_analysis.json",
+          "bytes": 10650,
+          "sha256": "1ef6d70b6fbca42f96fe6369a0084b0c70e30fe37386b4becdaedd0425dcc1c4"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p12__a01/attempt.json",
+          "bytes": 13573,
+          "sha256": "b963146c451696a9d0335efd459e3620d6e85fdb2096100836e981fa4a98dbd4"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p12__a01/protocol.json",
+          "bytes": 242585,
+          "sha256": "d40b9586733b369d01f11d2eeccf9b6d6637801257fd5905b0458b9cd12ed04c"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132307Z_3e84c552/acquisition/qualify/qualification.json",
+          "bytes": 283715,
+          "sha256": "2a2ee274de585f964bec888d9dac204e19e11eefff4174932d90d18393374a23"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p12__a01/runtime_output/run_identity.json",
+          "bytes": 266500,
+          "sha256": "3f33701bfcdf950dbed6f008a52cf291f12ba4b6de855ba231e3a94373e30096"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p12__a01/runtime_output/timing.json",
+          "bytes": 8593381,
+          "sha256": "b5d5fd499aaa4ecfa9b8864566bd820953dc7f42556a966f4ad2036643a7cd09"
+        }
+      },
+      "run_id": "b03_p12",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|resnet50|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 3801,
+      "attempt_id": "resume_20261018_s02:b03_p13__a01",
+      "block": 3,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 12.880421811860078,
+      "conditional_energy_j": 1151.4081552653001,
+      "execution_run_id": "b03_p13__a01",
+      "interval_start_ns": 3806573493093765,
+      "interval_stop_ns": 3806633550998507,
+      "position": 13,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p13__a01/inner_interval_analysis.json",
+          "bytes": 10652,
+          "sha256": "4f149f26a33f037762f07338b2c903a1aac615668252aee628cfd56945dfee8a"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p13__a01/attempt.json",
+          "bytes": 13569,
+          "sha256": "91667d2104c3c3da6f3b1a3e392caabf3553dc57ba9fc3d8d20929f04bb11540"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p13__a01/protocol.json",
+          "bytes": 425849,
+          "sha256": "2adffebb6e0a1c0b98367558f15511e3ca6d70619f2f04c4934f412aa6ca1079"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132341Z_92cddf33/acquisition/qualify/qualification.json",
+          "bytes": 641573,
+          "sha256": "169df91dfaf3099d94c33559e5f1765363167bacfb651eb8730cba73fd78fb03"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p13__a01/runtime_output/run_identity.json",
+          "bytes": 441399,
+          "sha256": "de7a5dd00a6f739222b4b8f8809b6b13bda7b06b08f49bd10d9a1d93f21cace2"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p13__a01/runtime_output/timing.json",
+          "bytes": 1403861,
+          "sha256": "f92a03e7e8981f54713ae793aeb213d3673b2b5db1ef8a4a2b36ffe6fdc8bd57"
+        }
+      },
+      "run_id": "b03_p13",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo11l|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 32511,
+      "attempt_id": "resume_20261018_s02:b03_p14__a01",
+      "block": 3,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 11.006819790365835,
+      "conditional_energy_j": 985.0316379722329,
+      "execution_run_id": "b03_p14__a01",
+      "interval_start_ns": 3806827158907027,
+      "interval_stop_ns": 3806887164717250,
+      "position": 14,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p14__a01/inner_interval_analysis.json",
+          "bytes": 10659,
+          "sha256": "87981e9631497629230cfa5d44398a0b60f12a092e464fadbd34b15ed5e2a499"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p14__a01/attempt.json",
+          "bytes": 13606,
+          "sha256": "7552572bac950984560e2ee11a9df683f72e94018cac1bb39e552900bc0f0fe6"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p14__a01/protocol.json",
+          "bytes": 247523,
+          "sha256": "659b7a5d7f62c484082bd10f4a3487918b6a26797f02f89aa752192af12b3119"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132330Z_049d1021/acquisition/qualify/qualification.json",
+          "bytes": 288646,
+          "sha256": "716773fda3dd5233b315a60fa7c559390acb203a51bd495afe89a8bc07b78a7d"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p14__a01/runtime_output/run_identity.json",
+          "bytes": 271396,
+          "sha256": "c82a59c50aa973a431c34864ccf30204e51d0afa061e4b8d6d6f143a2d55a697"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261018_s02/slots/b03_p14__a01/runtime_output/timing.json",
+          "bytes": 7103710,
+          "sha256": "f777ba2da7f5f8171fa3d6cb2ce6d1f071cd7e28e8839f4a752ab8351604f7d3"
+        }
+      },
+      "run_id": "b03_p14",
+      "session_id": "resume_20261018_s02",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|regnet_x_1_6gf|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 6777,
+      "attempt_id": "resume_20261019_s04_h8_retry:b04_p01__a02",
+      "block": 4,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 48.83957022375342,
+      "conditional_energy_j": 2185.3702864313764,
+      "execution_run_id": "b04_p01__a02",
+      "interval_start_ns": 3834866185499862,
+      "interval_stop_ns": 3834926215509102,
+      "position": 1,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b04_p01__a02/inner_interval_analysis.json",
+          "bytes": 10713,
+          "sha256": "bc782ef00a1378e5dc88970f178172124b2a906de2c12300a3267cf4763f9232"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b04_p01__a02/attempt.json",
+          "bytes": 13611,
+          "sha256": "96e2891d34e302be682b3392653bee5c998a5b6a7133940f46f07fc437b7040f"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b04_p01__a02/protocol.json",
+          "bytes": 1070221,
+          "sha256": "be4d19a24a51291fa939bfb89219da30e63004da7eda66761e4bf807f0c31135"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132739Z_53e320c3/acquisition/qualification/qualification.json",
+          "bytes": 1238992,
+          "sha256": "94899adf2c6bb351fdff588a07d6dcbc10a3f1cc58fe88edc3c8eb7dc913677b"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b04_p01__a02/runtime_output/run_identity.json",
+          "bytes": 177183,
+          "sha256": "40e9dec356551c29d2f178eef438034a7906a1d66162297dbc00545dd1df629a"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b04_p01__a02/runtime_output/timing.json",
+          "bytes": 1450637,
+          "sha256": "48b9ab9623633dbd01b0697f8f5fe2e076edcac9cec6e1ecb8cb3cd29d6d1f0d"
+        }
+      },
+      "run_id": "b04_p01",
+      "session_id": "resume_20261019_s04_h8_retry",
+      "setup_id": "orin_nx_hailo8_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolov7_paper|H8|hailo8_to_trt|b066"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 4905,
+      "attempt_id": "resume_20261019_s04_h8_retry:b04_p02__a01",
+      "block": 4,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 44.3978228498146,
+      "conditional_energy_j": 1958.2158442145276,
+      "execution_run_id": "b04_p02__a01",
+      "interval_start_ns": 3835128366348882,
+      "interval_stop_ns": 3835188377880701,
+      "position": 2,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b04_p02__a01/inner_interval_analysis.json",
+          "bytes": 10710,
+          "sha256": "a888509541df19710ba0b730b71bb24e20ee1956b2820f33a8c827345d313185"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b04_p02__a01/attempt.json",
+          "bytes": 13645,
+          "sha256": "8ce703ced18fc0f3a7493cc7e19116ae88e086f0ffe3705597f9cde326bb54f0"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b04_p02__a01/protocol.json",
+          "bytes": 558409,
+          "sha256": "3dedf778508f19dd752123c4703621eb047a3318cec27921674f5adc385ce4b1"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132249Z_1ddbd8a0/acquisition/qualify/qualification.json",
+          "bytes": 890924,
+          "sha256": "93aaf530f18f50938e0cb48e35c335b098a233c320138779d224cb90255615a1"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b04_p02__a01/runtime_output/run_identity.json",
+          "bytes": 567881,
+          "sha256": "3425043aee6b08caa74d15dfea9d3f47f4a6c08240ce25b749bd9b2cfe1929d2"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b04_p02__a01/runtime_output/timing.json",
+          "bytes": 1051703,
+          "sha256": "1d60de36a5aff597be749b6c7ff7591596df69278bb091e3238bc5faf9eaae4f"
+        }
+      },
+      "run_id": "b04_p02",
+      "session_id": "resume_20261019_s04_h8_retry",
+      "setup_id": "orin_nx_hailo8_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26m|H8|native_full_tensorrt|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 32510,
+      "attempt_id": "resume_20261019_s03_non_h8:b04_p03__a01",
+      "block": 4,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 10.77275097860062,
+      "conditional_energy_j": 980.815032108091,
+      "execution_run_id": "b04_p03__a01",
+      "interval_start_ns": 3808955342030737,
+      "interval_stop_ns": 3809015347130206,
+      "position": 3,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p03__a01/inner_interval_analysis.json",
+          "bytes": 10714,
+          "sha256": "4010882141bd94d8f147f15d3ae63a7be5fc0cefd6c4d87edf3b6062f7ee43aa"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p03__a01/attempt.json",
+          "bytes": 13660,
+          "sha256": "f11ca0e7f58eef6827be2c580ee2b7e6c39982342ea18eb09283d1d4fd750111"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p03__a01/protocol.json",
+          "bytes": 247530,
+          "sha256": "35f2ea4cf7a29c054cd5340c3063ed556fc0863528195265c7e35f86f8a32d1d"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132330Z_049d1021/acquisition/qualify/qualification.json",
+          "bytes": 288646,
+          "sha256": "716773fda3dd5233b315a60fa7c559390acb203a51bd495afe89a8bc07b78a7d"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p03__a01/runtime_output/run_identity.json",
+          "bytes": 271403,
+          "sha256": "e7908623cd6fd69cd6f08d7e8e90c020bd370b4d4fdff767ff32da63dc5adb3d"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p03__a01/runtime_output/timing.json",
+          "bytes": 7104305,
+          "sha256": "576035e298501e5db7ee795d2eb022bb8f2a137abb682e3f2379925b61f347a5"
+        }
+      },
+      "run_id": "b04_p03",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|regnet_x_1_6gf|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 96534,
+      "attempt_id": "resume_20261019_s03_non_h8:b04_p04__a01",
+      "block": 4,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 16.904538076214735,
+      "conditional_energy_j": 1179.867199122521,
+      "execution_run_id": "b04_p04__a01",
+      "interval_start_ns": 3809215084587977,
+      "interval_stop_ns": 3809275136958525,
+      "position": 4,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p04__a01/inner_interval_analysis.json",
+          "bytes": 10715,
+          "sha256": "1845ff141a3eb3794af822947c49a242d216f740842f564ec2d21c538ca1f980"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p04__a01/attempt.json",
+          "bytes": 15514,
+          "sha256": "6c2f4508857fedbce15cdd288ea4f632d23813a9d4e7c360937b43eccd2e2816"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p04__a01/protocol.json",
+          "bytes": 210902,
+          "sha256": "12d934424ab55735094ec5abf8e96a25afb8dfc8b5beafd47b07f3a8299b4e51"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T143628Z_81e9125b/acquisition/mobilenet_split_qualify/qualification.json",
+          "bytes": 257766,
+          "sha256": "a60f0781371632ca054b7d8eaa13082152276436070b2496aba14c2eba796b89"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p04__a01/runtime_output/run_identity.json",
+          "bytes": 240883,
+          "sha256": "5d0aa3fddb8b7597ab26075b897b7ff80b542cfb3be7605d4a2897e595b039cc"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p04__a01/runtime_output/timing.json",
+          "bytes": 20755135,
+          "sha256": "437e76c5aef2a1b0a8860dd418a5f6c95411aa983f75ee76f758d4070f143966"
+        }
+      },
+      "run_id": "b04_p04",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 61473,
+      "attempt_id": "resume_20261019_s03_non_h8:b04_p05__a01",
+      "block": 4,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 48.29078534803923,
+      "conditional_energy_j": 1827.4415483642767,
+      "execution_run_id": "b04_p05__a01",
+      "interval_start_ns": 3809777764742011,
+      "interval_stop_ns": 3809837772337606,
+      "position": 5,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p05__a01/inner_interval_analysis.json",
+          "bytes": 10708,
+          "sha256": "ebe6cbf0bee55041d1f7f5c6abe93ded14d84517d6dbe09e2b622909470d7771"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p05__a01/attempt.json",
+          "bytes": 13614,
+          "sha256": "6d6dd6319f51117b9bfbd1a54d013db8df8aac10e96e1c972bd3b75e27178cd6"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p05__a01/protocol.json",
+          "bytes": 160054,
+          "sha256": "b7e032bdc997ac4e8b4262b6ca28b08fdd3f762b90333a87a752e52a69c08a79"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132942Z_3a11fdfb/acquisition/qualification/qualification.json",
+          "bytes": 192369,
+          "sha256": "b785e70affd3564e74da376f04f211f7fc2814205ed79174cad2775a4df8ac76"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p05__a01/runtime_output/run_identity.json",
+          "bytes": 175689,
+          "sha256": "0649aaa6a071fe9080e224e64663c9f8f280fa483926bb2718cc12e0c35e1ac7"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p05__a01/runtime_output/timing.json",
+          "bytes": 2475934,
+          "sha256": "859633da759699e8ba97b695a3fc2d04085496089440d43e2a3157a032dcc6b3"
+        }
+      },
+      "run_id": "b04_p05",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|resnet50|H10|hailo10h_to_trt|b095"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 8467,
+      "attempt_id": "resume_20261019_s03_non_h8:b04_p06__a01",
+      "block": 4,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 22.285035674685886,
+      "conditional_energy_j": 1619.5907185913238,
+      "execution_run_id": "b04_p06__a01",
+      "interval_start_ns": 3809734656304697,
+      "interval_stop_ns": 3809794660029784,
+      "position": 6,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p06__a01/inner_interval_analysis.json",
+          "bytes": 10709,
+          "sha256": "38d9ecf1dff671098e7ee84ca1b02eee37752923a8701053fdbebb93432000c6"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p06__a01/attempt.json",
+          "bytes": 13640,
+          "sha256": "6266e04a07d24672af736d6a73005b1c3746907b023ad5978800862691bb347d"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p06__a01/protocol.json",
+          "bytes": 558418,
+          "sha256": "59d02545a466adb1d8a1db1d7719e6a2200e0ba03eea68b90abea8ec58d255d1"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132401Z_edc00474/acquisition/qualify/qualification.json",
+          "bytes": 890935,
+          "sha256": "c716a7fc71f87ce70bdf1889b29819e6529eda19cdfc390242b2eef3753353ed"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p06__a01/runtime_output/run_identity.json",
+          "bytes": 567892,
+          "sha256": "5ca02ceeea6b176013f2fcf52edf0a572e016369391ad92733ed60e55366bd18"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p06__a01/runtime_output/timing.json",
+          "bytes": 1184672,
+          "sha256": "13afd5096103969eacdaa32fcca5e50ca90c2b0e9a2686077a41b6c40e6f1376"
+        }
+      },
+      "run_id": "b04_p06",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26s|DeepX|native_full_tensorrt|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 39594,
+      "attempt_id": "resume_20261019_s03_non_h8:b04_p07__a01",
+      "block": 4,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 11.237271573916704,
+      "conditional_energy_j": 1053.9141764202611,
+      "execution_run_id": "b04_p07__a01",
+      "interval_start_ns": 3809993101127962,
+      "interval_stop_ns": 3810053104948622,
+      "position": 7,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p07__a01/inner_interval_analysis.json",
+          "bytes": 10708,
+          "sha256": "308bdf9f23fc724f43e3affe3a293f5fa63e80953341842acb9ed6089b660234"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p07__a01/attempt.json",
+          "bytes": 13631,
+          "sha256": "7a54cdc427002428fe6fe1927c62bfc273afb29aab24e02773492781a8253252"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p07__a01/protocol.json",
+          "bytes": 242592,
+          "sha256": "4c26a18adb930e847c6525c0837e8b2f0f3d496d6ccf46234d4adf7410788fc1"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132307Z_3e84c552/acquisition/qualify/qualification.json",
+          "bytes": 283715,
+          "sha256": "2a2ee274de585f964bec888d9dac204e19e11eefff4174932d90d18393374a23"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p07__a01/runtime_output/run_identity.json",
+          "bytes": 266507,
+          "sha256": "7e21a2add133cda07f92b430a215417eb8f77740716e4bc7a2f513bfdf04b533"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p07__a01/runtime_output/timing.json",
+          "bytes": 8595017,
+          "sha256": "41a55240a4fb911d52b9155a1870f8c5628aff58b26fb8b532677c6d8c25425e"
+        }
+      },
+      "run_id": "b04_p07",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|resnet50|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 3802,
+      "attempt_id": "resume_20261019_s03_non_h8:b04_p08__a01",
+      "block": 4,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 12.765605053285867,
+      "conditional_energy_j": 1153.908329835431,
+      "execution_run_id": "b04_p08__a01",
+      "interval_start_ns": 3810252825865059,
+      "interval_stop_ns": 3810312891927960,
+      "position": 8,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p08__a01/inner_interval_analysis.json",
+          "bytes": 10704,
+          "sha256": "a47e9b2d31184b02e8d77051da0feb82849eb7fa47c672412c22f52beb5be086"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p08__a01/attempt.json",
+          "bytes": 13620,
+          "sha256": "e645fd3168cb54ff56bd30795643f2217e926f959606217f4523099dc47049cd"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p08__a01/protocol.json",
+          "bytes": 425856,
+          "sha256": "e702566f4771046f88a632c943ad293557c2c18336af92fe0e7c9af0851f17bf"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132341Z_92cddf33/acquisition/qualify/qualification.json",
+          "bytes": 641573,
+          "sha256": "169df91dfaf3099d94c33559e5f1765363167bacfb651eb8730cba73fd78fb03"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p08__a01/runtime_output/run_identity.json",
+          "bytes": 441406,
+          "sha256": "ad4ca784690667d2f4dac2658d8c1f544cbc9672e1c8e46218cc9345342deedd"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p08__a01/runtime_output/timing.json",
+          "bytes": 1404480,
+          "sha256": "85edb278e650544b37a7336200f5c85121b4605619f4b946cf469db731d78aff"
+        }
+      },
+      "run_id": "b04_p08",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo11l|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": false,
+      "C_valid": false,
+      "N_completed": 88426,
+      "attempt_id": "resume_20261019_s03_non_h8:b04_p09__a01",
+      "block": 4,
+      "candidate_dropped_samples": 64,
+      "candidate_raw_counter_discontinuities": 1,
+      "conditional_alignment_envelope_j": null,
+      "conditional_energy_j": null,
+      "execution_run_id": "b04_p09__a01",
+      "interval_start_ns": 3810511704176212,
+      "interval_stop_ns": 3810571706149369,
+      "position": 9,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p09__a01/inner_interval_analysis.json",
+          "bytes": 10594,
+          "sha256": "8ffee1f8a3061b08ce3dccafc4f29c0745715197f06c61108f5f437ea23f2445"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p09__a01/attempt.json",
+          "bytes": 13558,
+          "sha256": "50f2352cdb6ad290a7d0d167186b63f4b120e5c0cd83132b70f3551057c71dd2"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p09__a01/protocol.json",
+          "bytes": 250822,
+          "sha256": "72d662f87dabce43241c44d845777336a760694464c36c03da146a5fc7cb03a9"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132318Z_a892542c/acquisition/qualify/qualification.json",
+          "bytes": 291989,
+          "sha256": "837391b37d7ef83172f9d06a3c92b102657b6ddd12bd1b408928810560bc3663"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p09__a01/runtime_output/run_identity.json",
+          "bytes": 274667,
+          "sha256": "c2476865fd9f667ee6b2efb877ceb79825f80bf6d33fecf29b8c905f9817e963"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p09__a01/runtime_output/timing.json",
+          "bytes": 19044624,
+          "sha256": "a55ed48adcbb48e257df98b7b8aeca3af9259b3922ce4c926914e1af2850dfc2"
+        }
+      },
+      "run_id": "b04_p09",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": false,
+      "uid": "native|mobilenet_v3_large|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 88608,
+      "attempt_id": "resume_20261019_s03_non_h8:b04_p10__a01",
+      "block": 4,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 37.92081526769057,
+      "conditional_energy_j": 1422.7454693056654,
+      "execution_run_id": "b04_p10__a01",
+      "interval_start_ns": 3811074245430841,
+      "interval_stop_ns": 3811134250790163,
+      "position": 10,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p10__a01/inner_interval_analysis.json",
+          "bytes": 10702,
+          "sha256": "2862f481c57d3f8da2ec786ba75a8c41110f3e7fb8398be48e8404b7b15d6c19"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p10__a01/attempt.json",
+          "bytes": 13640,
+          "sha256": "d8df6c4ea1e0fe75dc880f8b1a40e2b86cc00d12609ffb8bd4df316fd775eb06"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p10__a01/protocol.json",
+          "bytes": 163636,
+          "sha256": "fab050f07f594a94aa88b0aa05ee0d7abaa65067159ac718bfb01787b4720ca7"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132958Z_eeaa1c61/acquisition/qualification/qualification.json",
+          "bytes": 196081,
+          "sha256": "d59c56b5fa2d00204d158112139b467a836421c5bd8cc5296bf32609f63b28e3"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p10__a01/runtime_output/run_identity.json",
+          "bytes": 179236,
+          "sha256": "88e5676dfe78a2d5cc5c8b60cb4d9e1b0e57d3400202ae2087e8aef61857ea71"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p10__a01/runtime_output/timing.json",
+          "bytes": 3470726,
+          "sha256": "69f538934aa376b1b36cdd06615085221ee58261b912667f3e17e8f4ec7ab80c"
+        }
+      },
+      "run_id": "b04_p10",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|regnet_x_1_6gf|H10|hailo10h_to_trt|b123"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 3194,
+      "attempt_id": "resume_20261019_s03_non_h8:b04_p11__a01",
+      "block": 4,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 51.94335912030861,
+      "conditional_energy_j": 1601.0027350653497,
+      "execution_run_id": "b04_p11__a01",
+      "interval_start_ns": 3811334962633286,
+      "interval_stop_ns": 3811395117100918,
+      "position": 11,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p11__a01/inner_interval_analysis.json",
+          "bytes": 10700,
+          "sha256": "b0f72af75a01f0af52748e20b11a4b4b676822cad751cfb206e88ea06deabc22"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p11__a01/attempt.json",
+          "bytes": 13603,
+          "sha256": "cda9c8c9d03772556eebd7d8360e86648ef2752e07cdb348dba9b1cbabe9d5dc"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p11__a01/protocol.json",
+          "bytes": 628097,
+          "sha256": "17e2a60bbeef83297238bffc0ef5150d317c81358a2cb68fce0ce0f3d848cee9"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T133012Z_2aa4991b/acquisition/qualification/qualification.json",
+          "bytes": 703901,
+          "sha256": "27ef69de62a307f8cc130091622cfa76e81455c49ab2e24f9c2da1e644763208"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p11__a01/runtime_output/run_identity.json",
+          "bytes": 174606,
+          "sha256": "1398b340e766083142e387fd7d624a6bb7415fbcbbf10c6393435e6452017bf1"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p11__a01/runtime_output/timing.json",
+          "bytes": 799660,
+          "sha256": "1914b829a815b35dcd3860b131615d193f8b36722ea69bbf1fd78e3c16c27a1c"
+        }
+      },
+      "run_id": "b04_p11",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo11l|H10|hailo10h_to_trt|b120"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 6621,
+      "attempt_id": "resume_20261019_s03_non_h8:b04_p12__a01",
+      "block": 4,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 55.519744388853525,
+      "conditional_energy_j": 2047.5128555910671,
+      "execution_run_id": "b04_p12__a01",
+      "interval_start_ns": 3811594277236215,
+      "interval_stop_ns": 3811654382297669,
+      "position": 12,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p12__a01/inner_interval_analysis.json",
+          "bytes": 10698,
+          "sha256": "e9e68cb420e45d13b23b63e2dc06d276796de570649bab45b63f66ad00cdb81b"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p12__a01/attempt.json",
+          "bytes": 13605,
+          "sha256": "f3aa8504edb5a9ee7a174b75824e64d887a29aa3f549765a307401bbc016d70c"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p12__a01/protocol.json",
+          "bytes": 624421,
+          "sha256": "9ada7862f200334b2ba68ebf74313f6bf931369335f4c81a94accc0cba2e1bd0"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T133039Z_9cd3e9ac/acquisition/qualification/qualification.json",
+          "bytes": 700417,
+          "sha256": "dd541b86c1b9f7c16968b2e29ee2e24717c2dd62396029b217998aa3f0851342"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p12__a01/runtime_output/run_identity.json",
+          "bytes": 174334,
+          "sha256": "c3517a5fe0de08bd5ae4a219f23fea7c35cf5905973fcbfbca0b050bbd645b5d"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p12__a01/runtime_output/timing.json",
+          "bytes": 925018,
+          "sha256": "86b8bcd20553a38bf2c8a42ba81beab70e4e928bbc2c4f635e124e3458ddffa9"
+        }
+      },
+      "run_id": "b04_p12",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26m|H10|hailo10h_to_trt|b043"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 11310,
+      "attempt_id": "resume_20261019_s04_h8_retry:b04_p13__a01",
+      "block": 4,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 45.41113138670696,
+      "conditional_energy_j": 1737.1226959353714,
+      "execution_run_id": "b04_p13__a01",
+      "interval_start_ns": 3835392024049044,
+      "interval_stop_ns": 3835452050185615,
+      "position": 13,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b04_p13__a01/inner_interval_analysis.json",
+          "bytes": 10714,
+          "sha256": "cfe1f7f21fc33d8e65693eb8c1d8374d807eeeb60fc2617c8dd9c59b395600b8"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b04_p13__a01/attempt.json",
+          "bytes": 13591,
+          "sha256": "afd52a89f317b9ddf77f99052506cc83726ca6eb12e567e1565068a31175c9dd"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b04_p13__a01/protocol.json",
+          "bytes": 615271,
+          "sha256": "5cca06048897b8ea95ab3200c96cd4da460722e17da77c28c35e594ca05344ec"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132640Z_086b2425/acquisition/qualification/qualification.json",
+          "bytes": 690824,
+          "sha256": "59419ff3590d753746205c2695cd241221271fb7761ec3688508f1bb53c5db20"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b04_p13__a01/runtime_output/run_identity.json",
+          "bytes": 173305,
+          "sha256": "3e7970411425358aa5f5587ce17bb8a5dc255cc0ae2ca1453ccd994929d78ed8"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b04_p13__a01/runtime_output/timing.json",
+          "bytes": 1090497,
+          "sha256": "1eb87324c824f10aed85b9316f4fbbec6611ca0b278d74cf038a90c97928b861"
+        }
+      },
+      "run_id": "b04_p13",
+      "session_id": "resume_20261019_s04_h8_retry",
+      "setup_id": "orin_nx_hailo8_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26s|H8|hailo8_to_trt|b021"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 4988,
+      "attempt_id": "resume_20261019_s03_non_h8:b04_p14__a01",
+      "block": 4,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 13.582431683109748,
+      "conditional_energy_j": 1294.840129928282,
+      "execution_run_id": "b04_p14__a01",
+      "interval_start_ns": 3811549516321956,
+      "interval_stop_ns": 3811609554461204,
+      "position": 14,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p14__a01/inner_interval_analysis.json",
+          "bytes": 10715,
+          "sha256": "89daf4b1d5a2495c43ac864e379b24927fd2c532b0bf7bb62b878c27937c3736"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p14__a01/attempt.json",
+          "bytes": 13651,
+          "sha256": "f0f567a854e6ff700300f2571e67f0865e155fe885db907d112de8bd7cafc64a"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p14__a01/protocol.json",
+          "bytes": 707827,
+          "sha256": "431540056ddf405ea5ec535e82654170537c520aa11375118c8f71a56f78cdbd"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132422Z_9579ac02/acquisition/qualify/qualification.json",
+          "bytes": 1201369,
+          "sha256": "0f028eb3cb8177cd3f187769a97fbd8ad7cc12d120a4631b86ab91cef8339852"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p14__a01/runtime_output/run_identity.json",
+          "bytes": 704302,
+          "sha256": "4c19c900be62edd260412504a2ae34c25fc2f392b250ff3a44c146ccb6e02aaa"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b04_p14__a01/runtime_output/timing.json",
+          "bytes": 2194875,
+          "sha256": "08a831b15057230c25dd819e6134048b800fafad114bf7de355cb0194400715d"
+        }
+      },
+      "run_id": "b04_p14",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolov7_paper|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 6625,
+      "attempt_id": "resume_20261019_s03_non_h8:b05_p01__a01",
+      "block": 5,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 57.906650665219125,
+      "conditional_energy_j": 2048.818143805745,
+      "execution_run_id": "b05_p01__a01",
+      "interval_start_ns": 3812112897245696,
+      "interval_stop_ns": 3812173002266904,
+      "position": 1,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p01__a01/inner_interval_analysis.json",
+          "bytes": 10698,
+          "sha256": "ceb0eb316ccebe03c420c75399db73f2c35b0cbc3d65d43b09d7d42c6629fc6b"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p01__a01/attempt.json",
+          "bytes": 13603,
+          "sha256": "59d8187aaf6ee82ca945fcd1ddee51fe044474288410dbf00b1efdc905be25e0"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p01__a01/protocol.json",
+          "bytes": 624421,
+          "sha256": "75a4977491d004997d50b182f501a2941503d75cb0a8c1b2a24f3755ecb8e5fa"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T133039Z_9cd3e9ac/acquisition/qualification/qualification.json",
+          "bytes": 700417,
+          "sha256": "dd541b86c1b9f7c16968b2e29ee2e24717c2dd62396029b217998aa3f0851342"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p01__a01/runtime_output/run_identity.json",
+          "bytes": 174334,
+          "sha256": "5c6a05e2d3df3b27fc091a05252d232b02d17790d7160f374711f06f6f07ed29"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p01__a01/runtime_output/timing.json",
+          "bytes": 925216,
+          "sha256": "6c100dfeb4ae12601848213ab5825ed5822c83d3d242c7f6b82cf377f0086376"
+        }
+      },
+      "run_id": "b05_p01",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26m|H10|hailo10h_to_trt|b043"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 6792,
+      "attempt_id": "resume_20261019_s04_h8_retry:b05_p02__a01",
+      "block": 5,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 49.823860866159926,
+      "conditional_energy_j": 2187.408841314378,
+      "execution_run_id": "b05_p02__a01",
+      "interval_start_ns": 3835656062645724,
+      "interval_stop_ns": 3835716090161153,
+      "position": 2,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b05_p02__a01/inner_interval_analysis.json",
+          "bytes": 10716,
+          "sha256": "c205a0d216818f8307d9207abbc810db6bef16b340125a3af5aac4925c6aaf7c"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b05_p02__a01/attempt.json",
+          "bytes": 13612,
+          "sha256": "1b5ea3a2356de8e10f713141b20d762f4e5b70268e29e516a705514c7156d3c9"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b05_p02__a01/protocol.json",
+          "bytes": 1070221,
+          "sha256": "4aef05c19db5870f3e423e680d83987699f50008b55c243de09488d8cdc303cc"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132739Z_53e320c3/acquisition/qualification/qualification.json",
+          "bytes": 1238992,
+          "sha256": "94899adf2c6bb351fdff588a07d6dcbc10a3f1cc58fe88edc3c8eb7dc913677b"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b05_p02__a01/runtime_output/run_identity.json",
+          "bytes": 177183,
+          "sha256": "b2a309da3d35c50110ac0f8cd05e689c9490aab0d46c4e8ada06b93abb4f3ca3"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b05_p02__a01/runtime_output/timing.json",
+          "bytes": 1451056,
+          "sha256": "5fa8fbf217c2e0e10b2935fa7770ea610340f74f0eb95eb2336afe3551a663bf"
+        }
+      },
+      "run_id": "b05_p02",
+      "session_id": "resume_20261019_s04_h8_retry",
+      "setup_id": "orin_nx_hailo8_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolov7_paper|H8|hailo8_to_trt|b066"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 11334,
+      "attempt_id": "resume_20261019_s04_h8_retry:b05_p03__a01",
+      "block": 5,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 46.28380216020132,
+      "conditional_energy_j": 1737.3599677419995,
+      "execution_run_id": "b05_p03__a01",
+      "interval_start_ns": 3835918965468313,
+      "interval_stop_ns": 3835978990960827,
+      "position": 3,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b05_p03__a01/inner_interval_analysis.json",
+          "bytes": 10713,
+          "sha256": "274a17ffcfa49af7980394b170c8c263ce037840e7089e9b9d36c01c286b2c19"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b05_p03__a01/attempt.json",
+          "bytes": 13588,
+          "sha256": "06800c8879a35a5c3dd0059cf320f821598ebd3abfcb3f71318334782e52d360"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b05_p03__a01/protocol.json",
+          "bytes": 615271,
+          "sha256": "25c55fb030eddefff6d4cffa529dd6bdf0abfa7ac031790af97e7562e38ea247"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132640Z_086b2425/acquisition/qualification/qualification.json",
+          "bytes": 690824,
+          "sha256": "59419ff3590d753746205c2695cd241221271fb7761ec3688508f1bb53c5db20"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b05_p03__a01/runtime_output/run_identity.json",
+          "bytes": 173305,
+          "sha256": "b4436a3117bfd47015f68d44b2820fcbcc132838cb78b86dcc367db9759144bd"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b05_p03__a01/runtime_output/timing.json",
+          "bytes": 1091506,
+          "sha256": "24e16a4ba77686c96ef3ba601d2e18cf6a9bef0637546b97c845aceed974b6d4"
+        }
+      },
+      "run_id": "b05_p03",
+      "session_id": "resume_20261019_s04_h8_retry",
+      "setup_id": "orin_nx_hailo8_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26s|H8|hailo8_to_trt|b021"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 39589,
+      "attempt_id": "resume_20261019_s03_non_h8:b05_p04__a01",
+      "block": 5,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 11.366766938552015,
+      "conditional_energy_j": 1051.4759641372239,
+      "execution_run_id": "b05_p04__a01",
+      "interval_start_ns": 3812067781644448,
+      "interval_stop_ns": 3812127785596644,
+      "position": 4,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p04__a01/inner_interval_analysis.json",
+          "bytes": 10711,
+          "sha256": "dbd1e3fedcba9622024f5893381052f2d2af6a6d93816e3833c619a1ac543eca"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p04__a01/attempt.json",
+          "bytes": 13631,
+          "sha256": "0e9de6ee10c02216b6b42c56bf08e2416b8916c7c3add02dbac18f66df461b22"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p04__a01/protocol.json",
+          "bytes": 242592,
+          "sha256": "94a9b38af8ce8b60054c9dfa13d246dc752d3d9779e850f06da70eb2c664715c"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132307Z_3e84c552/acquisition/qualify/qualification.json",
+          "bytes": 283715,
+          "sha256": "2a2ee274de585f964bec888d9dac204e19e11eefff4174932d90d18393374a23"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p04__a01/runtime_output/run_identity.json",
+          "bytes": 266507,
+          "sha256": "bdfcb57f441b415b38bd4956e73dea5df9c83e40c66ec0ba37df5d775b327a69"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p04__a01/runtime_output/timing.json",
+          "bytes": 8594967,
+          "sha256": "f57288d39e2ab9998e122a615eacc048f8a76e459ca85424219fc8aca8ef760f"
+        }
+      },
+      "run_id": "b05_p04",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|resnet50|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 8494,
+      "attempt_id": "resume_20261019_s03_non_h8:b05_p05__a01",
+      "block": 5,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 22.958311429518417,
+      "conditional_energy_j": 1624.6258818320139,
+      "execution_run_id": "b05_p05__a01",
+      "interval_start_ns": 3812327753678511,
+      "interval_stop_ns": 3812387757597771,
+      "position": 5,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p05__a01/inner_interval_analysis.json",
+          "bytes": 10713,
+          "sha256": "781c597bc66948bee20bd0db2dfea0f8d805614714e020f508e88b9af201b7ae"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p05__a01/attempt.json",
+          "bytes": 13639,
+          "sha256": "acc2c349381ed844078937426276f2e2416dc05519aefbbe70c8f89f11c9ce00"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p05__a01/protocol.json",
+          "bytes": 558418,
+          "sha256": "4f12a067cd4b204b4bebe2abcc9968db9f0e08499c0fb4eea31c3b44d07047da"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132401Z_edc00474/acquisition/qualify/qualification.json",
+          "bytes": 890935,
+          "sha256": "c716a7fc71f87ce70bdf1889b29819e6529eda19cdfc390242b2eef3753353ed"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p05__a01/runtime_output/run_identity.json",
+          "bytes": 567892,
+          "sha256": "8f639ec9a7b639f86d72edb332838dc61e8abb99b1776e6e09ad3eb9c0364cfb"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p05__a01/runtime_output/timing.json",
+          "bytes": 1185568,
+          "sha256": "44e02314af5235ed47af6cc295560536ed009970c48cff448f0ef5260200e9dc"
+        }
+      },
+      "run_id": "b05_p05",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26s|DeepX|native_full_tensorrt|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 88940,
+      "attempt_id": "resume_20261019_s03_non_h8:b05_p06__a01",
+      "block": 5,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 38.42161361024547,
+      "conditional_energy_j": 1422.47616315603,
+      "execution_run_id": "b05_p06__a01",
+      "interval_start_ns": 3812889293753791,
+      "interval_stop_ns": 3812949298842523,
+      "position": 6,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p06__a01/inner_interval_analysis.json",
+          "bytes": 10709,
+          "sha256": "f6dcb40834fce4177af1691fd7bb32dd9286cd53677ed61d1041d246e18d208b"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p06__a01/attempt.json",
+          "bytes": 13639,
+          "sha256": "7bfedc6ee30a8f0dcec8bbc498f204c9cd39864be0f658adf5dacef39694a753"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p06__a01/protocol.json",
+          "bytes": 163636,
+          "sha256": "e13da002990790e8cff4d1f01f8e9227934fd6bb719e36d5d0e02831bd2cb377"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132958Z_eeaa1c61/acquisition/qualification/qualification.json",
+          "bytes": 196081,
+          "sha256": "d59c56b5fa2d00204d158112139b467a836421c5bd8cc5296bf32609f63b28e3"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p06__a01/runtime_output/run_identity.json",
+          "bytes": 179236,
+          "sha256": "656615b221295c1842753aed60036bfdb0d34bfffbf0e6773934cf703eb25f1e"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p06__a01/runtime_output/timing.json",
+          "bytes": 3488216,
+          "sha256": "95902d36168721034dc7100f561ea5710c196d1619de4d4650b8e33f98b78f2e"
+        }
+      },
+      "run_id": "b05_p06",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|regnet_x_1_6gf|H10|hailo10h_to_trt|b123"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 88451,
+      "attempt_id": "resume_20261019_s03_non_h8:b05_p07__a01",
+      "block": 5,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 10.545955534244175,
+      "conditional_energy_j": 1021.2088482119648,
+      "execution_run_id": "b05_p07__a01",
+      "interval_start_ns": 3812845349005162,
+      "interval_stop_ns": 3812905350565784,
+      "position": 7,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p07__a01/inner_interval_analysis.json",
+          "bytes": 10719,
+          "sha256": "161838f47a189c88b088db7249fd123523a8741e983b9a99f8b67afef312201b"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p07__a01/attempt.json",
+          "bytes": 13680,
+          "sha256": "82c57018f18c80d6c18f16261b714175c04c72a1516585de6036bc2fedf2b41f"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p07__a01/protocol.json",
+          "bytes": 250822,
+          "sha256": "c3d2b8eb00f883c149a97b7e7a3e55660ac864a6b5a420fa71fcf5ee183b885f"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132318Z_a892542c/acquisition/qualify/qualification.json",
+          "bytes": 291989,
+          "sha256": "837391b37d7ef83172f9d06a3c92b102657b6ddd12bd1b408928810560bc3663"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p07__a01/runtime_output/run_identity.json",
+          "bytes": 274667,
+          "sha256": "4f7e415e31fde0be3ff1067caaed878a261698e8b2b44c6ffb18b392910e2f5d"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p07__a01/runtime_output/timing.json",
+          "bytes": 19048415,
+          "sha256": "ab71273484b672537940e03bff4729824e3099e5f7c8afdddd6966f7c8daa566"
+        }
+      },
+      "run_id": "b05_p07",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|mobilenet_v3_large|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 32515,
+      "attempt_id": "resume_20261019_s03_non_h8:b05_p08__a01",
+      "block": 5,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 10.339424590727344,
+      "conditional_energy_j": 983.7838928172512,
+      "execution_run_id": "b05_p08__a01",
+      "interval_start_ns": 3813105348368631,
+      "interval_stop_ns": 3813165353901849,
+      "position": 8,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p08__a01/inner_interval_analysis.json",
+          "bytes": 10714,
+          "sha256": "5f55b41c5fc673b01bf3882c85e94c369b834125ff3f5987fc4e2659762d21bc"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p08__a01/attempt.json",
+          "bytes": 13659,
+          "sha256": "bfe9744c68f0b8f15acebb98d60ae173a8611fbd7a08a055b7203bd5530754ad"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p08__a01/protocol.json",
+          "bytes": 247530,
+          "sha256": "530f477b095c6e801d1dba134ae6293e4c34d64c10d2286a32220172f533e4f7"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132330Z_049d1021/acquisition/qualify/qualification.json",
+          "bytes": 288646,
+          "sha256": "716773fda3dd5233b315a60fa7c559390acb203a51bd495afe89a8bc07b78a7d"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p08__a01/runtime_output/run_identity.json",
+          "bytes": 271403,
+          "sha256": "2297d13308ad41dfaa0340721e0ac8e0c6a8f535835e59e5a84baf6c603f44b7"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p08__a01/runtime_output/timing.json",
+          "bytes": 7105888,
+          "sha256": "78cb4eb85295a3335c281ab6ce2599df382c3339eb3b665ce71b23b6ae357dfb"
+        }
+      },
+      "run_id": "b05_p08",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|regnet_x_1_6gf|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": false,
+      "C_valid": false,
+      "N_completed": 3191,
+      "attempt_id": "resume_20261019_s03_non_h8:b05_p09__a01",
+      "block": 5,
+      "candidate_dropped_samples": 23936,
+      "candidate_raw_counter_discontinuities": 3,
+      "conditional_alignment_envelope_j": null,
+      "conditional_energy_j": null,
+      "execution_run_id": "b05_p09__a01",
+      "interval_start_ns": 3813669548663282,
+      "interval_stop_ns": 3813729709712791,
+      "position": 9,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p09__a01/inner_interval_analysis.json",
+          "bytes": 10583,
+          "sha256": "6828f4e19dcb246fefd4227de22fbe9320f33ab5be38166a2993287a2e75c7d3"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p09__a01/attempt.json",
+          "bytes": 13489,
+          "sha256": "0b5dd1f4cf26371db69b7d6e3be7ab7a48662483d1a779b6705c14776e285eaf"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p09__a01/protocol.json",
+          "bytes": 628097,
+          "sha256": "ebaaa20abe52ee13afab50a24247abec83552e73277d6ef42fc0ae7eb6d1829a"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T133012Z_2aa4991b/acquisition/qualification/qualification.json",
+          "bytes": 703901,
+          "sha256": "27ef69de62a307f8cc130091622cfa76e81455c49ab2e24f9c2da1e644763208"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p09__a01/runtime_output/run_identity.json",
+          "bytes": 174606,
+          "sha256": "9f9e5183ed717d5e985257845bb1419e1f593195af38b16feeb191dcca8ae414"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p09__a01/runtime_output/timing.json",
+          "bytes": 799632,
+          "sha256": "3973dc83da5ebbc44d0e83774a94d40ad5fb35222d7d5aa4c6b0d9195859f38f"
+        }
+      },
+      "run_id": "b05_p09",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": false,
+      "uid": "native|yolo11l|H10|hailo10h_to_trt|b120"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 96512,
+      "attempt_id": "resume_20261019_s03_non_h8:b05_p10__a01",
+      "block": 5,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 17.58367109718033,
+      "conditional_energy_j": 1180.036343329083,
+      "execution_run_id": "b05_p10__a01",
+      "interval_start_ns": 3813623942217663,
+      "interval_stop_ns": 3813683994344379,
+      "position": 10,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p10__a01/inner_interval_analysis.json",
+          "bytes": 10710,
+          "sha256": "861f53a2c3610015f465fc8a9c04ac5ab8182d75fcf53c4bdf7481e62a575ae9"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p10__a01/attempt.json",
+          "bytes": 15517,
+          "sha256": "55cc9fca2a262de3d8c65a1eecd71011c3918b949b53515bedaed783f27c10da"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p10__a01/protocol.json",
+          "bytes": 210902,
+          "sha256": "d038697f096382356f828ddf721cc0e62b672c9646b5177a1905a856b2dd734c"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T143628Z_81e9125b/acquisition/mobilenet_split_qualify/qualification.json",
+          "bytes": 257766,
+          "sha256": "a60f0781371632ca054b7d8eaa13082152276436070b2496aba14c2eba796b89"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p10__a01/runtime_output/run_identity.json",
+          "bytes": 240883,
+          "sha256": "8fc40d2d1f87d06303b3614372b27c09433505ea66a448d64c7758bba5791b0f"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p10__a01/runtime_output/timing.json",
+          "bytes": 20747395,
+          "sha256": "6c689f2403c8265721b74a51b49d90201d5227d8bd36f41da708f934d9338044"
+        }
+      },
+      "run_id": "b05_p10",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 4994,
+      "attempt_id": "resume_20261019_s03_non_h8:b05_p11__a01",
+      "block": 5,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 14.1186429973757,
+      "conditional_energy_j": 1297.0804205250893,
+      "execution_run_id": "b05_p11__a01",
+      "interval_start_ns": 3813884154958868,
+      "interval_stop_ns": 3813944194821670,
+      "position": 11,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p11__a01/inner_interval_analysis.json",
+          "bytes": 10711,
+          "sha256": "32574eb4c462bdfeac85b18a232c3e3d1fb0ebaef8f2e6a6d2b954dc55acdd1d"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p11__a01/attempt.json",
+          "bytes": 13648,
+          "sha256": "2a00b9679eeb4d570e0730c7ce722c8643dce5a368c57b2a9175115ccc3fb6ae"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p11__a01/protocol.json",
+          "bytes": 707827,
+          "sha256": "6814adf0e6716df1e24dc3a42f840400dbc75761e44a08155474b60c166a6377"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132422Z_9579ac02/acquisition/qualify/qualification.json",
+          "bytes": 1201369,
+          "sha256": "0f028eb3cb8177cd3f187769a97fbd8ad7cc12d120a4631b86ab91cef8339852"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p11__a01/runtime_output/run_identity.json",
+          "bytes": 704302,
+          "sha256": "7d45dc3ae834f4e80a1e071eb204447f1e66bd19876b2ba3d18524428a377ec7"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p11__a01/runtime_output/timing.json",
+          "bytes": 2196772,
+          "sha256": "a5cc40b3a4425d868d72564b58d99188e646f1ebeb8dba58f2c19f4057c5929d"
+        }
+      },
+      "run_id": "b05_p11",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolov7_paper|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 4893,
+      "attempt_id": "resume_20261019_s04_h8_retry:b05_p12__a01",
+      "block": 5,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 44.90428692845447,
+      "conditional_energy_j": 1954.3778616940206,
+      "execution_run_id": "b05_p12__a01",
+      "interval_start_ns": 3836181586797159,
+      "interval_stop_ns": 3836241593474287,
+      "position": 12,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b05_p12__a01/inner_interval_analysis.json",
+          "bytes": 10719,
+          "sha256": "9b0143ba5d34b726e9248d22802b62229f190a28b2a27e26f82f13a57bf8c537"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b05_p12__a01/attempt.json",
+          "bytes": 13651,
+          "sha256": "0eefbf59a527e7cede20292544ac9df3702398352d516d569c5199d0b6885f02"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b05_p12__a01/protocol.json",
+          "bytes": 558409,
+          "sha256": "18b0a1d7928ce7a49172e2020b47d588e4bac66dde12c34b2d1463eaed083804"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132249Z_1ddbd8a0/acquisition/qualify/qualification.json",
+          "bytes": 890924,
+          "sha256": "93aaf530f18f50938e0cb48e35c335b098a233c320138779d224cb90255615a1"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b05_p12__a01/runtime_output/run_identity.json",
+          "bytes": 567881,
+          "sha256": "67636b7b9f80d1df87316dcb649cad8801c0892774789a428854395a892f7e02"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/slots/b05_p12__a01/runtime_output/timing.json",
+          "bytes": 1051264,
+          "sha256": "375600f06fa2fbb50a4057af21de585124d85ffac36a9d7bf0889258f62a8590"
+        }
+      },
+      "run_id": "b05_p12",
+      "session_id": "resume_20261019_s04_h8_retry",
+      "setup_id": "orin_nx_hailo8_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo26m|H8|native_full_tensorrt|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 3801,
+      "attempt_id": "resume_20261019_s03_non_h8:b05_p13__a01",
+      "block": 5,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 13.058193938238336,
+      "conditional_energy_j": 1154.4839880611155,
+      "execution_run_id": "b05_p13__a01",
+      "interval_start_ns": 3814143263700214,
+      "interval_stop_ns": 3814203323471419,
+      "position": 13,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p13__a01/inner_interval_analysis.json",
+          "bytes": 10706,
+          "sha256": "3ac63a65cdef776a9e9a8aa97e2de7e68d2be64791e8a511afdbcf03346049dc"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p13__a01/attempt.json",
+          "bytes": 13624,
+          "sha256": "c28f4b8164b16e795536143ef990552a2de45627246361cb3ea072223200a7c6"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p13__a01/protocol.json",
+          "bytes": 425856,
+          "sha256": "b7c533e4081a4f1f75cc868fbd3608269973b5162bd6d2de03ab3dd7045c5008"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132341Z_92cddf33/acquisition/qualify/qualification.json",
+          "bytes": 641573,
+          "sha256": "169df91dfaf3099d94c33559e5f1765363167bacfb651eb8730cba73fd78fb03"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p13__a01/runtime_output/run_identity.json",
+          "bytes": 441406,
+          "sha256": "0085021cdaa119a3082e45b2e94ba7a522f6ebc07f93edef3461945005c40266"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p13__a01/runtime_output/timing.json",
+          "bytes": 1404368,
+          "sha256": "6aefa6ee3d61ddbfef26ed1d07a3732cf3809ca0d6bbd2f061d3ddadb5a3e0a1"
+        }
+      },
+      "run_id": "b05_p13",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|yolo11l|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 62481,
+      "attempt_id": "resume_20261019_s03_non_h8:b05_p14__a01",
+      "block": 5,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "conditional_alignment_envelope_j": 50.11733482470686,
+      "conditional_energy_j": 1843.644820852596,
+      "execution_run_id": "b05_p14__a01",
+      "interval_start_ns": 3814704965804576,
+      "interval_stop_ns": 3814764973209137,
+      "position": 14,
+      "provenance": {
+        "analysis": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p14__a01/inner_interval_analysis.json",
+          "bytes": 10709,
+          "sha256": "83a24da9749a66c56a72769bd0a942483834bba91be34c4b09de6b66b08b16a8"
+        },
+        "attempt": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p14__a01/attempt.json",
+          "bytes": 13612,
+          "sha256": "3c17777b350205fcdf31300e8de27cf374e937cafbc017786c685e996ce6c197"
+        },
+        "protocol": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p14__a01/protocol.json",
+          "bytes": 160054,
+          "sha256": "557ce348203b973cb9a59c0743e4962dcce51a01e66913b4ad85bed506161328"
+        },
+        "qualification": {
+          "archive_member": "qualification/executions/20261018T132942Z_3a11fdfb/acquisition/qualification/qualification.json",
+          "bytes": 192369,
+          "sha256": "b785e70affd3564e74da376f04f211f7fc2814205ed79174cad2775a4df8ac76"
+        },
+        "run_identity": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p14__a01/runtime_output/run_identity.json",
+          "bytes": 175689,
+          "sha256": "6de20fd355e5b2c3de67cc5ad86ffec21a52018e2cdc4f99fff90a1f8653a57c"
+        },
+        "timing": {
+          "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s03_non_h8/slots/b05_p14__a01/runtime_output/timing.json",
+          "bytes": 2492853,
+          "sha256": "a6d3356abcf6ef17a16d3502fa4392814250ca68d4e426f95f1e133679f34f70"
+        }
+      },
+      "run_id": "b05_p14",
+      "session_id": "resume_20261019_s03_non_h8",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion_verified": true,
+      "target_sample_support_complete": true,
+      "uid": "native|resnet50|H10|hailo10h_to_trt|b095"
+    }
+  ],
+  "primary_resolution": {
+    "archive_member": "runs/confirmation_r3_20261018/resume_sessions/resume_20261019_s04_h8_retry/resolution.json",
+    "bytes": 603621,
+    "sha256": "1d1f70e68115bf530b29de8914fde7d2501f967bfc07d22ad1d63b35afa354d1"
+  },
+  "schema": "v49-confirmation-measurement-inputs-v1",
+  "scope": "70 unchanged primary A rows,68 primary conditional E,2 separate own-N/t/E supplements; C remains0.",
+  "supplement_resolution": {
+    "archive_member": "evidence/energy_supplement_20261019/sessions/energy_supplement_20261019_s01/resolution.json",
+    "bytes": 60571,
+    "sha256": "4f54aad5efd38c9c3d31612b123093ac4818890e8276ec939e2a5ee72f5c1370"
+  },
+  "supplements": [
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 88453,
+      "attempt_id": "energy_supplement_20261019_s01:energy_b04_p09__e01",
+      "attempt_number": 1,
+      "block": 4,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "collector_process_identity": [
+        1816565,
+        1792397034044560815
+      ],
+      "collector_process_started": true,
+      "conditional_alignment_envelope_j": 10.527648590770976,
+      "conditional_energy_j": 1024.8213182018612,
+      "execution_run_id": "energy_b04_p09__e01",
+      "interval_start_ns": 3843091149124014,
+      "interval_stop_ns": 3843151151139244,
+      "model_domain_observation": {
+        "calibrated_current_max_a": 1.3439637142246765,
+        "calibrated_current_min_a": 0.7735514503001896,
+        "candidate_samples_outside_model_domain": 0,
+        "electrical_model_extrapolation_observed": false,
+        "extrapolation_policy": "unclipped_with_flag",
+        "model_current_domain_a": [
+          0.0,
+          3.5
+        ],
+        "selected_samples_outside_model_domain": 0
+      },
+      "native_makespan_including_drain_s": 60.00201523,
+      "observed_gates": {
+        "candidate_dropped_samples": 0,
+        "candidate_raw_counter_discontinuities": 0,
+        "conditional_trace_covers_all_boundary_envelopes": true,
+        "integrated_sample_support_duration_s": 60.006215079,
+        "interval_duration_controller_estimate_s": 60.006215079,
+        "target_sample_support_complete": true
+      },
+      "physical_source_GO_identity_sha256": "348b90fbe7f1075e149216a1580691ec723984b0e2a88f35e1c6377e51e56fc0",
+      "physical_source_GO_observed": true,
+      "position": 9,
+      "provenance": {
+        "acquisition_manifest": {
+          "archive_member": "evidence/energy_supplement_20261019/sessions/energy_supplement_20261019_s01/slots/energy_b04_p09__e01/energy/run_000/acquisition_manifest.json",
+          "bytes": 14953,
+          "sha256": "22a322c63964668da3858da47c490884962ba18398864683b7d4fe689b955ba8"
+        },
+        "analysis": {
+          "archive_member": "evidence/energy_supplement_20261019/sessions/energy_supplement_20261019_s01/slots/energy_b04_p09__e01/inner_interval_analysis.json",
+          "bytes": 10804,
+          "sha256": "ee95a44039e9afc4ffa75d900444ae05f7e2703ad9999ba9d9b1e8ac8bdeab00"
+        },
+        "attempt": {
+          "archive_member": "evidence/energy_supplement_20261019/sessions/energy_supplement_20261019_s01/slots/energy_b04_p09__e01/attempt.json",
+          "bytes": 13786,
+          "sha256": "00583f1a02a638f563c0f7cb1306b66981bda687fdddaeaa0014199700c67c43"
+        },
+        "capture_result": {
+          "archive_member": "evidence/energy_supplement_20261019/sessions/energy_supplement_20261019_s01/slots/energy_b04_p09__e01/capture_result.json",
+          "bytes": 16726,
+          "sha256": "018b2d533615464a4e747cc863eecbe7ac7d59f39aba42e8fc460241e34a3f1b"
+        },
+        "remote_result": {
+          "archive_member": "evidence/energy_supplement_20261019/sessions/energy_supplement_20261019_s01/slots/energy_b04_p09__e01/remote_result.json",
+          "bytes": 5955,
+          "sha256": "181acbe68ffb8f5817b36c91c02e4a290ec42f8329a3f655d03f6f35ed8c10f9"
+        },
+        "run_identity": {
+          "archive_member": "evidence/energy_supplement_20261019/sessions/energy_supplement_20261019_s01/slots/energy_b04_p09__e01/runtime_output/run_identity.json",
+          "bytes": 274678,
+          "sha256": "a7350dc1c32f1f47f709704edb462292a9546b993d5a9d8c0ccfaad93f23c942"
+        },
+        "source_lifecycle": {
+          "archive_member": "evidence/energy_supplement_20261019/sessions/energy_supplement_20261019_s01/slots/energy_b04_p09__e01/energy/run_000/collector_storage/fast_firmware_source_lifecycle.json",
+          "bytes": 1465,
+          "sha256": "15fd27108f138202dd9f43f73794df2945213d3b3688f3861861dc750ebd7a8d"
+        },
+        "timing": {
+          "archive_member": "evidence/energy_supplement_20261019/sessions/energy_supplement_20261019_s01/slots/energy_b04_p09__e01/runtime_output/timing.json",
+          "bytes": 19051961,
+          "sha256": "74833160a7621d7675a5d3f8bf88eb64dc3ff9d303c093c8682bbc8a4d6ddde6"
+        }
+      },
+      "run_id": "b04_p09",
+      "runtime_process_identity": [
+        3370684,
+        1792397045719906492
+      ],
+      "runtime_process_started": true,
+      "session_id": "energy_supplement_20261019_s01",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_completion": {
+        "natural_protocol_END_verified": true,
+        "owned_tree_quiescent": true,
+        "source_completion_verified": true,
+        "source_socket_closed": true
+      },
+      "source_completion_verified": true,
+      "uid": "native|mobilenet_v3_large|DeepX|native_full_deepx|full"
+    },
+    {
+      "A_valid": true,
+      "B_valid": true,
+      "C_valid": false,
+      "N_completed": 3194,
+      "attempt_id": "energy_supplement_20261019_s01:energy_b05_p09__e01",
+      "attempt_number": 1,
+      "block": 5,
+      "candidate_dropped_samples": 0,
+      "candidate_raw_counter_discontinuities": 0,
+      "collector_process_identity": [
+        1818707,
+        1792397290046578101
+      ],
+      "collector_process_started": true,
+      "conditional_alignment_envelope_j": 51.178404545348094,
+      "conditional_energy_j": 1600.624453695526,
+      "execution_run_id": "energy_b05_p09__e01",
+      "interval_start_ns": 3843651964639721,
+      "interval_stop_ns": 3843712132245176,
+      "model_domain_observation": {
+        "calibrated_current_max_a": 3.194811899266369,
+        "calibrated_current_min_a": 0.8214182137064402,
+        "candidate_samples_outside_model_domain": 0,
+        "electrical_model_extrapolation_observed": false,
+        "extrapolation_policy": "unclipped_with_flag",
+        "model_current_domain_a": [
+          0.0,
+          3.5
+        ],
+        "selected_samples_outside_model_domain": 0
+      },
+      "native_makespan_including_drain_s": 60.167605455,
+      "observed_gates": {
+        "candidate_dropped_samples": 0,
+        "candidate_raw_counter_discontinuities": 0,
+        "conditional_trace_covers_all_boundary_envelopes": true,
+        "integrated_sample_support_duration_s": 60.170204676,
+        "interval_duration_controller_estimate_s": 60.170204676,
+        "target_sample_support_complete": true
+      },
+      "physical_source_GO_identity_sha256": "57a2b24f7162a05ce6ec466ee1463aa2f077d358ad0847ee5b6d404024c4fd14",
+      "physical_source_GO_observed": true,
+      "position": 9,
+      "provenance": {
+        "acquisition_manifest": {
+          "archive_member": "evidence/energy_supplement_20261019/sessions/energy_supplement_20261019_s01/slots/energy_b05_p09__e01/energy/run_000/acquisition_manifest.json",
+          "bytes": 14947,
+          "sha256": "53d729c78dd30f066ad5faa32f09ded6b6e40944194e8f84e23cc9d1f95c9df9"
+        },
+        "analysis": {
+          "archive_member": "evidence/energy_supplement_20261019/sessions/energy_supplement_20261019_s01/slots/energy_b05_p09__e01/inner_interval_analysis.json",
+          "bytes": 10777,
+          "sha256": "871d7826de04de795fe2cfdf638bf75638ddcdc9b52ccb2d519fb04a83fdb32d"
+        },
+        "attempt": {
+          "archive_member": "evidence/energy_supplement_20261019/sessions/energy_supplement_20261019_s01/slots/energy_b05_p09__e01/attempt.json",
+          "bytes": 13703,
+          "sha256": "1029e08a228eb2eca47d07a76cde68b4c5715bc53e50915996410cb1b94cd80d"
+        },
+        "capture_result": {
+          "archive_member": "evidence/energy_supplement_20261019/sessions/energy_supplement_20261019_s01/slots/energy_b05_p09__e01/capture_result.json",
+          "bytes": 16725,
+          "sha256": "a6f19e62ed8c49b644b56881c8df0a7cd121407cd6133f90429ab5374501dd15"
+        },
+        "remote_result": {
+          "archive_member": "evidence/energy_supplement_20261019/sessions/energy_supplement_20261019_s01/slots/energy_b05_p09__e01/remote_result.json",
+          "bytes": 5940,
+          "sha256": "0962527b2ff9273c38f9af007944e9451c7456d3e1fb8bd9d09d9382eb3c3465"
+        },
+        "run_identity": {
+          "archive_member": "evidence/energy_supplement_20261019/sessions/energy_supplement_20261019_s01/slots/energy_b05_p09__e01/runtime_output/run_identity.json",
+          "bytes": 174617,
+          "sha256": "90f5f268c381df3d0855685bc5db3a2713f241d0a3e99f0c973513d902f78fac"
+        },
+        "source_lifecycle": {
+          "archive_member": "evidence/energy_supplement_20261019/sessions/energy_supplement_20261019_s01/slots/energy_b05_p09__e01/energy/run_000/collector_storage/fast_firmware_source_lifecycle.json",
+          "bytes": 1465,
+          "sha256": "29fe1c59f40563c34530ca136553f7ab4ce7ba7605228326aa7c04cab2dfd1d5"
+        },
+        "timing": {
+          "archive_member": "evidence/energy_supplement_20261019/sessions/energy_supplement_20261019_s01/slots/energy_b05_p09__e01/runtime_output/timing.json",
+          "bytes": 800712,
+          "sha256": "cad5a187b8eb4ef4a0c29606782f08922006743875f6df8bc91d3c48756436d4"
+        }
+      },
+      "run_id": "b05_p09",
+      "runtime_process_identity": [
+        2053666,
+        1792397305555157488
+      ],
+      "runtime_process_started": true,
+      "session_id": "energy_supplement_20261019_s01",
+      "setup_id": "orin_nx_hailo10_01",
+      "source_completion": {
+        "natural_protocol_END_verified": true,
+        "owned_tree_quiescent": true,
+        "source_completion_verified": true,
+        "source_socket_closed": true
+      },
+      "source_completion_verified": true,
+      "uid": "native|yolo11l|H10|hailo10h_to_trt|b120"
+    }
+  ]
+}

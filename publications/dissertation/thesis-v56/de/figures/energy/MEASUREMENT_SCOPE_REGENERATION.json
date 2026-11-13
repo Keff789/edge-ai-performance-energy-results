@@ -1,0 +1,89 @@
+{
+  "schema": "thesis-energy-measurement-scope-regeneration-v1",
+  "status": "PASS",
+  "publication_status": "proposal",
+  "language": "de",
+  "base_commit": null,
+  "generators": {
+    "scripts/dissertation/render_thesis_energy_de.py": "8f998971c11252aa9be448b926aafdd86b19590f925a20939af090072ae69d6f",
+    "scripts/dissertation/render_measurement_scope.py": "d84e221e40c39ada3aaac2659ff9665a2d035bbc9c2d63f4a3f9962d43adcb2c",
+    "scripts/dissertation/load_measurement_scope_data.py": "7e0af9dd63d7fbac5c461542d4f280ecda60d360e93fa9e577f6dd34203a31ea"
+  },
+  "figures": {
+    "measurement_scope": {
+      "file": "figures/energy/measurement_scope.pdf",
+      "source_kind": "physical_execution_inventory",
+      "language": "de",
+      "sha256": "d53eb127326b594ff4592da73e5acbecae8f2e974b1409aec41c2a3e1e1c7639",
+      "source_inputs": {
+        "results/energy-measurement/data/tim/final_direct/groups_all_candidates.csv": "81e544394a803daa635011e11828cf1baffc489b7db79c386e90e3b7a3c82b6f",
+        "results/energy-measurement/data/tim/final_direct/paper_window_policy.csv": "5adacf6f3feecd40d0c52be72494c23fc7b2f5e41546df7ed41deefbbc9a777a",
+        "results/energy-measurement/tables/tim/direct_rates.csv": "ce4f54939a727eb7f42cf54e6ee608998c083bf269dbe31d2d3cb6fd3ca8fab9",
+        "results/energy-measurement/tables/tim/duration.csv": "c9d9a4e55b95cde7ad053aca50851fb5fb1a7a1b9d80c383a8eef3ac9a318909",
+        "results/energy-measurement/tables/tim/paired_all_durations.csv": "00317c8db52aed163c05b93a674a907f7d25c318e9add2918d2dc7d365e5bfa2",
+        "results/energy-measurement/data/tim/validation/multi_workload/workload_inventory.csv": "f1ac7130ab9df67d32a82e0dcf3e7ffc3bc7c95bebcfdf80af3381da39303cee",
+        "results/energy-measurement/data/tim/validation/controlled/complementary/data/combined_runs.csv": "0f18ba716c5ed7b32fea1d52af47a5b42cdceeebd896771c3ab5667f8a03ab9e",
+        "results/energy-measurement/data/tim/pause/pause_runs.csv": "d05db661e1df1f353442d9fa5ef843bfd25d78302385fc12b91fbb784ffbefc6"
+      },
+      "data_payload": "measurement_scope.json",
+      "data_payload_sha256": "df50b8da8b046a2b512973b9667f6b5ce083857c3b1c8a8b702e69e1f39a6ade",
+      "counts": {
+        "rate_runs": 4842,
+        "rate_groups": 323,
+        "duration_runs": 1472,
+        "duration_groups": 100,
+        "reference_runs": 59,
+        "controlled_rate_runs": 12,
+        "pause_runs": 6
+      },
+      "selection_rules": {
+        "rate_grid": "Series/window from direct_rates.csv, checked against paper_window_policy.csv; pico rows from groups_all_candidates.csv; n counts valid executions.",
+        "duration_grid": "n from duration.csv, independently checked against unique (platform, slug, series, window, requested_s, record_id) in paired_all_durations.csv.",
+        "reference": "Sum of common_rate_valid_pairs for include_in_paper and common_reference_ready rows in workload_inventory.csv; each instrument pair counts once.",
+        "rate_control": "Unique (session, index) rows in combined_runs.csv.",
+        "pause_control": "Rows in pause_runs.csv with conditioning=False."
+      },
+      "statistics_recomputed": false,
+      "count_aggregation_performed": true,
+      "english_reference_check": "not_applicable_new_figure",
+      "pdf_width_bp": 396.0,
+      "include_width_bp": 355.42147945,
+      "font_sizes_bp": {
+        "10.6": 27,
+        "10.4": 22,
+        "7.6": 1,
+        "11.4": 4,
+        "11.0": 4,
+        "9.2": 34,
+        "10.2": 3,
+        "9.4": 5,
+        "11.5": 4,
+        "9.7": 2,
+        "18.0": 3,
+        "9.0": 3
+      },
+      "smallest_placed_font_bp": 6.821220312676767,
+      "smallest_placed_label_font_bp": 8.077760896590908,
+      "reviewed_compact_cell_text": [
+        {
+          "text": "12",
+          "font_size_bp": 7.599999904632568,
+          "placed_font_size_bp": 6.821220227081732
+        }
+      ],
+      "clipped_text": []
+    }
+  },
+  "input_hashes": {
+    "results/energy-measurement/data/tim/final_direct/groups_all_candidates.csv": "81e544394a803daa635011e11828cf1baffc489b7db79c386e90e3b7a3c82b6f",
+    "results/energy-measurement/data/tim/final_direct/paper_window_policy.csv": "5adacf6f3feecd40d0c52be72494c23fc7b2f5e41546df7ed41deefbbc9a777a",
+    "results/energy-measurement/tables/tim/direct_rates.csv": "ce4f54939a727eb7f42cf54e6ee608998c083bf269dbe31d2d3cb6fd3ca8fab9",
+    "results/energy-measurement/tables/tim/duration.csv": "c9d9a4e55b95cde7ad053aca50851fb5fb1a7a1b9d80c383a8eef3ac9a318909",
+    "results/energy-measurement/tables/tim/paired_all_durations.csv": "00317c8db52aed163c05b93a674a907f7d25c318e9add2918d2dc7d365e5bfa2",
+    "results/energy-measurement/data/tim/validation/multi_workload/workload_inventory.csv": "f1ac7130ab9df67d32a82e0dcf3e7ffc3bc7c95bebcfdf80af3381da39303cee",
+    "results/energy-measurement/data/tim/validation/controlled/complementary/data/combined_runs.csv": "0f18ba716c5ed7b32fea1d52af47a5b42cdceeebd896771c3ab5667f8a03ab9e",
+    "results/energy-measurement/data/tim/pause/pause_runs.csv": "d05db661e1df1f353442d9fa5ef843bfd25d78302385fc12b91fbb784ffbefc6"
+  },
+  "measurement_or_statistical_analysis_performed": false,
+  "count_aggregation_performed": true
+}

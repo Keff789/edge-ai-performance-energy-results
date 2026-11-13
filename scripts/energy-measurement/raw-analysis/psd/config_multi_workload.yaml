@@ -1,0 +1,121 @@
+# Cross-workload Energy Paper analysis.
+# Missing or partially populated workloads are skipped read-only and remain
+# visible in the generated inventory. The fair spectral comparison always uses
+# native 5-MS/s Tektronix records; faster Tek records are coverage checks only.
+output_root: external-analysis/edge_ai_multi_workload_v1
+analysis_template_config: config_gemm_fp16.yaml
+
+workloads:
+  - id: gemmfp32
+    label: GEMM-FP32
+    family: GEMM
+    precision: FP32
+    scope_config: config_scope_comparison.yaml
+    enabled: auto
+    include_in_paper: true
+    notes: Canonical paired-scope GEMM validation campaign.
+
+  - id: yolofp32
+    label: YOLO-FP32
+    family: YOLO
+    precision: FP32
+    scope_config: config_scope_yolofp32.yaml
+    enabled: auto
+    include_in_paper: true
+    notes: GPIO at record start; adaptive workload-minus-idle Tek zero correction.
+
+  - id: gemma3-4b
+    label: Gemma3-4B
+    family: Gemma3-4B
+    precision: unspecified
+    scope_config: config_scope_gemma3_4b.yaml
+    enabled: auto
+    include_in_paper: true
+    notes: Partial high-rate coverage is accepted; 5-MS/s records are complete.
+
+  - id: resnet50
+    label: ResNet-50 FP32
+    family: ResNet-50
+    precision: FP32
+    scope_config: config_scope_resnet50.yaml
+    enabled: auto
+    include_in_paper: true
+    notes: Uses the resnet50 dataset directory and exact-rate external idle references.
+
+psd:
+  enabled: true
+  comparison_rate_sps: 5000000
+  minimum_pairs: 5
+  cumulative_percentiles: [0.50, 0.90, 0.95, 0.99]
+  dominant_peak_count: 8
+  minimum_peak_frequency_hz: 1.0
+  maximum_peak_frequency_hz: 2500000
+  spectrogram_enabled: true
+  spectrogram_run_policy: representative
+  high_rate_coverage_threshold_hz: 2500000
+  # Welch returns cyclic frequency directly in hertz and density per hertz.
+  # The DFT kernel already contains the 2*pi phase factor; no additional
+  # continuous-transform 1/(2*pi) or 1/sqrt(2*pi) normalisation is applied.
+  log_frequency_derivative_enabled: true
+  fine_structure_enabled: true
+  # Direct active/idle/excess comparison. Every external-idle record is used
+  # at its full physical duration with the same Welch segment length and overlap
+  # as the workload trace. Each physical idle run contributes one PSD to the
+  # cross-run median, so longer records improve within-run averaging without
+  # receiving extra cross-run weight.
+  idle_load_comparison_enabled: true
+  idle_record_policy: full_record_per_run_equal_weight
+  idle_peak_match_bins: 3
+  idle_load_ratio_bins_per_decade: 24
+  idle_load_amplification_threshold_db: 3.0
+  idle_load_only_threshold_db: 6.0
+  fine_structure_windows:
+    - {label: "0–1 kHz", low_hz: 0, high_hz: 1000}
+    - {label: "1–8 kHz", low_hz: 1000, high_hz: 8000}
+    - {label: "8–16 kHz", low_hz: 8000, high_hz: 16000}
+    - {label: "25–35 kHz", low_hz: 25000, high_hz: 35000}
+    - {label: "300–700 kHz", low_hz: 300000, high_hz: 700000}
+  bands:
+    - {label: "0–100 Hz", low_hz: 0, high_hz: 100}
+    - {label: "100 Hz–1 kHz", low_hz: 100, high_hz: 1000}
+    - {label: "1–10 kHz", low_hz: 1000, high_hz: 10000}
+    - {label: "10–77 kHz", low_hz: 10000, high_hz: 77000}
+    - {label: "77–500 kHz", low_hz: 77000, high_hz: 500000}
+    - {label: "500 kHz–2.5 MHz", low_hz: 500000, high_hz: 2500000}
+
+common_reference:
+  enabled: true
+  sources: [tek, pico]
+  source_rate_sps: 5000000
+  # VHQ-converted 1-MS/s representation matches the validated duration method
+  # from the existing 104-s GEMM-FP16 analysis. Full 5-MS/s energy is retained
+  # as a cache-QC reference for every physical run.
+  analysis_rate_sps: 1000000
+  target_rates_sps:
+    [50, 85, 150, 240, 400, 680, 1200, 2000, 2500, 3300,
+     5500, 9400, 16000, 25000, 45000, 80000, 100000, 125000,
+     160000]
+  window_durations_s: [0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 5, 10]
+  windows_per_duration: 16
+  edge_margin_s: 0.0
+  # Constant endpoint padding is used only as a filter/interpolation guard;
+  # reported windows remain inside the physical record.
+  guard_seconds: 0.5
+  reconstruction_modes: [anti_alias, phase_only]
+  thresholds_pct: [0.1, 0.5, 1.0, 2.0, 5.0]
+  highlighted_rate_sps: 2000
+  minimum_samples_per_window: 4
+  cache_dtype: float32
+
+direct_rate_validation:
+  enabled: true
+  maximum_rate_sps: 5000000
+  use_normalised_power: true
+
+paper_artifacts:
+  generate_pdf: true
+  generate_png: true
+  generate_tables: true
+  generate_macros: true
+  generate_bundles: true
+  plot_max_points: 50000

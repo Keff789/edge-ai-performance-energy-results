@@ -1,0 +1,128 @@
+{
+  "schema": "four-thesis-assets-author-style-v1",
+  "font": "/usr/share/fonts/opentype/urw-base35/NimbusSans-Regular.otf",
+  "palette": {
+    "blue": "#2E73B6",
+    "green": "#25896F",
+    "orange": "#D18432",
+    "text": "#18354A",
+    "secondary": "#64798A",
+    "grid": "#DCE4E9",
+    "blue_light": "#EAF2F9",
+    "green_light": "#ECF5F1",
+    "orange_light": "#FCF2E6",
+    "neutral": "#F3F6F8"
+  },
+  "measurement_recomputation": false,
+  "analysis_recomputation": false,
+  "plot_aggregation": "Existing stage-cost plot_values function retains its original median of reciprocal PC block rates; no analysis definitions or inputs changed.",
+  "layout": "Same panels, axes, series, point counts and topology; minor spacing adapts to Nimbus Sans.",
+  "source_files": [
+    {
+      "path": "results/energy-measurement/data/tim/validation/calibration/jetson_calibration_verification_rows.csv",
+      "sha256": "2f1adc1e7aeafd12ea5fcc41c0de93d52a67129ee507f1ff20c406667296d905",
+      "copy": "inputs/jetson_calibration_verification_rows.csv"
+    },
+    {
+      "path": "scripts/energy-measurement/plot_calibration.py",
+      "sha256": "0e904fb898ec9e64126cedc3bd6de21a36b8c3a377982fba21f2da9c68f92c55",
+      "copy": "inputs/plot_calibration.py"
+    },
+    {
+      "path": "results/energy-measurement/tables/tim/native_reconstruction.csv",
+      "sha256": "bb76ed6ccef0c1daabbc22bf232ff35ee7a378095cf3027b7ad361f6cffc7016",
+      "copy": "inputs/native_reconstruction.csv"
+    },
+    {
+      "path": "scripts/energy-measurement/tim/make_foundation_figures.py",
+      "sha256": "aaa005fe79456e49d9d05d68f9a1546a6ef74c65c17908e3689175561ad9c539",
+      "copy": "inputs/make_foundation_figures.py"
+    },
+    {
+      "path": "results/supplementary-studies/stage-cost-composition/results/ANALYSIS.json",
+      "sha256": "aaefd2c9c66f261768bed74312c30c8cec5907991b6f78ca98736bb226340d97",
+      "copy": "inputs/ANALYSIS.json"
+    },
+    {
+      "path": "results/supplementary-studies/stage-cost-composition/inputs/PLAN.json",
+      "sha256": "4f3a19f7a718eed7688eb161a80bef8c424f2b5787fa0c577eb916f3a12892e4",
+      "copy": "inputs/PLAN.json"
+    },
+    {
+      "path": "results/supplementary-studies/stage-cost-composition/tables/COMPOSITION_COMPARISON.csv",
+      "sha256": "14e67e6a2082747804f8b362755ba055ee3d5805b29f2f4fc3924a4b46f3ab47",
+      "copy": "inputs/COMPOSITION_COMPARISON.csv"
+    },
+    {
+      "path": "scripts/supplementary-studies/stage-cost-composition/render_stage_costs.py",
+      "sha256": "425ed3c6af85906c0692cb8d81d1f5a882ce6a0e62aa4dd5432455a0ea5afd2f",
+      "copy": "inputs/render_stage_costs.py"
+    },
+    {
+      "path": "scripts/dissertation/legacy-v56/grafiken/generate_redesigned_figures.py",
+      "sha256": "9253241e95d80a0ec16c983ea1dbe16a8999968a6603b09ac4a8d2e26532b0bc",
+      "copy": "inputs/generate_redesigned_figures.py"
+    }
+  ],
+  "figures": {
+    "current_verification": {
+      "pdf": "current_verification.pdf",
+      "data": "current_verification.data.json",
+      "reference": "publications/dissertation/thesis-v56/de/figures/energy/current_verification.pdf",
+      "reference_sha256": "5926de10b35e863071e528a7d3ffc726609fef5ae96467ed2c243bc7a21d74c5"
+    },
+    "jetson_rate_duration": {
+      "pdf": "jetson_rate_duration.pdf",
+      "data": "jetson_rate_duration.data.json",
+      "reference": "publications/dissertation/thesis-v56/de/figures/energy/jetson_rate_duration.pdf",
+      "reference_sha256": "5ee0cbbdbb350da8352a178d25dd737f1d06b67485ca1e911ea6407eb3c92de9"
+    },
+    "stage_costs": {
+      "pdf": "stage_costs.pdf",
+      "data": "stage_costs.data.json",
+      "reference": "publications/dissertation/thesis-v56/de/figures/methods/stage_costs.pdf",
+      "reference_sha256": "524e34f26840aedd38828f4087b516cb160b2a3ed74157eaf19d5f9a76bdb274"
+    },
+    "dag_cut": {
+      "pdf": "dag_cut.pdf",
+      "data": "dag_cut.data.json",
+      "reference": "publications/dissertation/thesis-v56/de/figures/methods/dag_cut.pdf",
+      "reference_sha256": "b8ecb072db36db32a16337ad5669c3570286aeddc29665c4ea7e60a05a2d86bd"
+    }
+  },
+  "validation": {
+    "current_verification": {
+      "archived_values_match_reference_vector_points": true,
+      "series": [
+        {
+          "points": 35,
+          "maximum_affine_vector_residual_bp": 9.844658507063286e-06
+        },
+        {
+          "points": 35,
+          "maximum_affine_vector_residual_bp": 1.317045985160803e-05
+        }
+      ]
+    },
+    "jetson_rate_duration": {
+      "archived_values_match_reference_vector_points": true,
+      "series": [
+        {
+          "points": 9,
+          "maximum_affine_vector_residual_bp": 1.0721842812699833e-05
+        }
+      ]
+    },
+    "stage_costs": {
+      "all_12_bar_values_match_reference_vector_geometry": true,
+      "maximum_scaled_bar_height_residual_bp": 1.086341324985085e-05,
+      "value_extraction": "Existing plot_values function; unchanged archived analysis and comparison inputs."
+    },
+    "dag_cut": {
+      "same_six_nodes": true,
+      "same_six_directed_edges": true,
+      "same_boundary_between_B_and_C1_C2": true,
+      "source": "Earlier conceptual renderer, verified against current thesis labels and vector connections."
+    }
+  }
+}

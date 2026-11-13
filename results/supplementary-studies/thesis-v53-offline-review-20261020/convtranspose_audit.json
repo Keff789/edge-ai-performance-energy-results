@@ -1,0 +1,1223 @@
+{
+  "confirmation_model_bindings": [
+    {
+      "full_graph_hash_inspected_in_this_audit": true,
+      "matches_original_quality_model_sha256": true,
+      "model_id": "mobilenet_v3_large",
+      "original_quality_model_sha256": "2f5e79b1e4280251e7b6eefe1d6161c4831e2fc27858e1e9fe2fac697f44489e",
+      "recorded_local_source_sha256": "2f5e79b1e4280251e7b6eefe1d6161c4831e2fc27858e1e9fe2fac697f44489e",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/0/current_local_source_model",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135"
+    },
+    {
+      "full_graph_hash_inspected_in_this_audit": true,
+      "matches_original_quality_model_sha256": true,
+      "model_id": "mobilenet_v3_large",
+      "original_quality_model_sha256": "2f5e79b1e4280251e7b6eefe1d6161c4831e2fc27858e1e9fe2fac697f44489e",
+      "recorded_local_source_sha256": "2f5e79b1e4280251e7b6eefe1d6161c4831e2fc27858e1e9fe2fac697f44489e",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/1/current_local_source_model",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|mobilenet_v3_large|DeepX|native_full_deepx|full"
+    },
+    {
+      "full_graph_hash_inspected_in_this_audit": true,
+      "matches_original_quality_model_sha256": true,
+      "model_id": "regnet_x_1_6gf",
+      "original_quality_model_sha256": "fba2c5b46ff63bd4b4bc65f1cf60fd86fa84e16e7432fcaa60d5efbd2c99b8f3",
+      "recorded_local_source_sha256": "fba2c5b46ff63bd4b4bc65f1cf60fd86fa84e16e7432fcaa60d5efbd2c99b8f3",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/2/current_local_source_model",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|regnet_x_1_6gf|H10|hailo10h_to_trt|b123"
+    },
+    {
+      "full_graph_hash_inspected_in_this_audit": true,
+      "matches_original_quality_model_sha256": true,
+      "model_id": "regnet_x_1_6gf",
+      "original_quality_model_sha256": "fba2c5b46ff63bd4b4bc65f1cf60fd86fa84e16e7432fcaa60d5efbd2c99b8f3",
+      "recorded_local_source_sha256": "fba2c5b46ff63bd4b4bc65f1cf60fd86fa84e16e7432fcaa60d5efbd2c99b8f3",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/3/current_local_source_model",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|regnet_x_1_6gf|DeepX|native_full_deepx|full"
+    },
+    {
+      "full_graph_hash_inspected_in_this_audit": true,
+      "matches_original_quality_model_sha256": true,
+      "model_id": "resnet50",
+      "original_quality_model_sha256": "cebd9d5879ddd304a18f51e559ab74fba5cbd1f610b9359321bc5228acbe4f50",
+      "recorded_local_source_sha256": "cebd9d5879ddd304a18f51e559ab74fba5cbd1f610b9359321bc5228acbe4f50",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/4/current_local_source_model",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|resnet50|H10|hailo10h_to_trt|b095"
+    },
+    {
+      "full_graph_hash_inspected_in_this_audit": true,
+      "matches_original_quality_model_sha256": true,
+      "model_id": "resnet50",
+      "original_quality_model_sha256": "cebd9d5879ddd304a18f51e559ab74fba5cbd1f610b9359321bc5228acbe4f50",
+      "recorded_local_source_sha256": "cebd9d5879ddd304a18f51e559ab74fba5cbd1f610b9359321bc5228acbe4f50",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/5/current_local_source_model",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|resnet50|DeepX|native_full_deepx|full"
+    },
+    {
+      "full_graph_hash_inspected_in_this_audit": true,
+      "matches_original_quality_model_sha256": true,
+      "model_id": "yolo11l",
+      "original_quality_model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+      "recorded_local_source_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/6/current_local_source_model",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolo11l|H10|hailo10h_to_trt|b120"
+    },
+    {
+      "full_graph_hash_inspected_in_this_audit": true,
+      "matches_original_quality_model_sha256": true,
+      "model_id": "yolo11l",
+      "original_quality_model_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+      "recorded_local_source_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/7/current_local_source_model",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolo11l|DeepX|native_full_deepx|full"
+    },
+    {
+      "full_graph_hash_inspected_in_this_audit": true,
+      "matches_original_quality_model_sha256": true,
+      "model_id": "yolo26m",
+      "original_quality_model_sha256": "d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897",
+      "recorded_local_source_sha256": "d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/8/current_local_source_model",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolo26m|H10|hailo10h_to_trt|b043"
+    },
+    {
+      "full_graph_hash_inspected_in_this_audit": true,
+      "matches_original_quality_model_sha256": true,
+      "model_id": "yolo26m",
+      "original_quality_model_sha256": "d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897",
+      "recorded_local_source_sha256": "d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/9/current_local_source_model",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolo26m|H8|native_full_tensorrt|full"
+    },
+    {
+      "full_graph_hash_inspected_in_this_audit": true,
+      "matches_original_quality_model_sha256": true,
+      "model_id": "yolo26s",
+      "original_quality_model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+      "recorded_local_source_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/10/current_local_source_model",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolo26s|H8|hailo8_to_trt|b021"
+    },
+    {
+      "full_graph_hash_inspected_in_this_audit": true,
+      "matches_original_quality_model_sha256": true,
+      "model_id": "yolo26s",
+      "original_quality_model_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+      "recorded_local_source_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/11/current_local_source_model",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolo26s|DeepX|native_full_tensorrt|full"
+    },
+    {
+      "full_graph_hash_inspected_in_this_audit": true,
+      "matches_original_quality_model_sha256": true,
+      "model_id": "yolov7_paper",
+      "original_quality_model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+      "recorded_local_source_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/12/current_local_source_model",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolov7_paper|H8|hailo8_to_trt|b066"
+    },
+    {
+      "full_graph_hash_inspected_in_this_audit": true,
+      "matches_original_quality_model_sha256": true,
+      "model_id": "yolov7_paper",
+      "original_quality_model_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+      "recorded_local_source_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/13/current_local_source_model",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolov7_paper|DeepX|native_full_deepx|full"
+    }
+  ],
+  "counterexample": {
+    "bias": false,
+    "device_operations": null,
+    "device_operations_reason": "No inference or backend kernel execution was performed.",
+    "dilations": [
+      1,
+      1
+    ],
+    "direct_products": 16,
+    "enumerated_products": [
+      {
+        "input": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "output": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "weight": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "input": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "output": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "weight": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "input": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "output": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "weight": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "input": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "output": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "weight": [
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "input": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "output": [
+          0,
+          0,
+          0,
+          2
+        ],
+        "weight": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "input": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "output": [
+          0,
+          0,
+          0,
+          3
+        ],
+        "weight": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "input": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "output": [
+          0,
+          0,
+          1,
+          2
+        ],
+        "weight": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "input": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "output": [
+          0,
+          0,
+          1,
+          3
+        ],
+        "weight": [
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "input": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "output": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "weight": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "input": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "output": [
+          0,
+          0,
+          2,
+          1
+        ],
+        "weight": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "input": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "output": [
+          0,
+          0,
+          3,
+          0
+        ],
+        "weight": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "input": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "output": [
+          0,
+          0,
+          3,
+          1
+        ],
+        "weight": [
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "input": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "output": [
+          0,
+          0,
+          2,
+          2
+        ],
+        "weight": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "input": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "output": [
+          0,
+          0,
+          2,
+          3
+        ],
+        "weight": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "input": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "output": [
+          0,
+          0,
+          3,
+          2
+        ],
+        "weight": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "input": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "output": [
+          0,
+          0,
+          3,
+          3
+        ],
+        "weight": [
+          0,
+          0,
+          1,
+          1
+        ]
+      }
+    ],
+    "groups": 1,
+    "historical_dense_proxy": 64,
+    "input_shape": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "output_shape": [
+      1,
+      1,
+      4,
+      4
+    ],
+    "pads": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "proxy_to_direct_ratio": 4.0,
+    "strides": [
+      2,
+      2
+    ],
+    "weight_shape": [
+      1,
+      1,
+      2,
+      2
+    ]
+  },
+  "counting_source": {
+    "convtranspose_function_sha256": "c2d39ac354c305a757fae5cb79b9b1feb6d91d8ea9e29fe552ad895d2d0dfc86",
+    "convtranspose_source_lines": [
+      440,
+      454
+    ],
+    "current_published_commit": "db729b9fcde00e4bcadf9200d43282977d7bf1cc",
+    "current_published_module_sha256": "1de2623871bfcd2d7c3d5472141ead4cbddddb4b903481a9adbc07bd578cd735",
+    "current_published_shape_helpers_sha256": "6780cbea436ba0cd10bd0d0ada0d6dd64442a00cb6e03d5e64c032edb105d2a6",
+    "dirty_checkout_used_for_execution": false,
+    "historical_definition_binding": "The preserved method_code_provenance.json binds d164aad as the methods-definition release. metrics.py is read from that exact Git object; this is not proof of process import.",
+    "historical_definition_commit": "d164aad6d7c7ef68c1b371c49a1fdea0a3b27dd7",
+    "historical_execution_binding": "not_individually_recorded_in_inspected_campaign_critical_module_lists",
+    "historical_module_sha256": "1de2623871bfcd2d7c3d5472141ead4cbddddb4b903481a9adbc07bd578cd735",
+    "local_checkout_head_observed": "78644e639b71797c8b822fd9296f3cb8d90bfd20",
+    "local_checkout_observation_scope": "Only source observation; foreign dirty files were neither edited nor imported.",
+    "local_metrics_worktree_sha256_observed": "1de2623871bfcd2d7c3d5472141ead4cbddddb4b903481a9adbc07bd578cd735",
+    "module": "onnx_splitpoint_tool/metrics.py",
+    "module_bytes_equal": true,
+    "original_source_counterexample_proxy": 64,
+    "per_node_function_sha256": "f0a308d0813ef49dcaa801ea7d7b9c0200cd891713f824dd021f20f035091582",
+    "per_node_source_lines": [
+      545,
+      627
+    ],
+    "repository": "https://github.com/Keff789/ONNX-Splitpoint-Tool",
+    "shape_helpers_module_sha256": "6780cbea436ba0cd10bd0d0ada0d6dd64442a00cb6e03d5e64c032edb105d2a6"
+  },
+  "coverage_interpretation": "All fractions count graph nodes, never device runtime or energy. Implemented means a rule exists, not exact operator arithmetic.",
+  "formula": {
+    "bias": "per_node_flops adds first-output numel when input[2] is nonempty; no bias term in flops_convtranspose itself.",
+    "groups": "Grouping is implicit in weight dimensions; group attribute is not independently inspected.",
+    "historical_dense_proxy": "N * H_out * W_out * C_in * (C_out / group) * kH * kW",
+    "shape_requirement": "4D initializer weights and first output shape; otherwise the multiplication term is zero. Missing dimensions in a present output shape are replaced by one.",
+    "stride_padding_dilation": "Not read by the product-count function; they can influence the inferred output shape, but sparse/cropped contribution counts are not enumerated.",
+    "units": "Historical mixed proxy units: one dense product accumulation unit, plus separate scalar bias/elementwise units. Not exact arithmetic instructions or measured device FLOPs.",
+    "weight_layout": "[C_in, C_out/group, kH, kW]"
+  },
+  "graph_count": 7,
+  "graphs": [
+    {
+      "convtranspose_change_effect": {
+        "basis": "No node is dispatched to ConvTranspose; changing only that branch changes no node cost, prefix, normalization input, candidate score or tie key.",
+        "prefix_suffix_fraction_delta": 0,
+        "scope": "Only the exact verified full-graph hash and a change confined to ConvTranspose.",
+        "score_rank_changes": 0,
+        "status": "unchanged_by_absence",
+        "total_proxy_delta": 0
+      },
+      "convtranspose_count": 0,
+      "convtranspose_nodes": [],
+      "graph_role": "canonical_full_onnx",
+      "graph_sha256": "2f5e79b1e4280251e7b6eefe1d6161c4831e2fc27858e1e9fe2fac697f44489e",
+      "historical_candidate_count": 138,
+      "historical_candidate_fields_match_archive": true,
+      "implemented_rule_node_fraction": 0.7214285714285714,
+      "implemented_rule_nodes": 101,
+      "later_deployment_full_graph_sha_bound_uid_count": 107,
+      "later_deployment_other_graph_uids": [],
+      "later_deployment_unbound_uids": [
+        "native|mobilenet_v3_large|H10|native_full_hailo10h|full"
+      ],
+      "missing_or_symbolic_input_nodes_after_inference": 0,
+      "missing_or_symbolic_output_nodes_after_inference": 0,
+      "missing_or_symbolic_output_nodes_before_inference": 0,
+      "model_id": "mobilenet_v3_large",
+      "node_count": 140,
+      "node_coverage_denominator": 140,
+      "operator_counts": {
+        "Add": 10,
+        "Conv": 62,
+        "Gemm": 2,
+        "HardSigmoid": 8,
+        "HardSwish": 21,
+        "Mul": 8,
+        "ReduceMean": 9,
+        "Relu": 19,
+        "Reshape": 1
+      },
+      "recomputed_proxy_total": 224025888,
+      "recomputed_total_matches_all_stored_totals": true,
+      "source_binding": {
+        "analysis_sha256": "6c30a811223cbf35f316b9e3d999c3efcfcfd61817e43a7376dd83b98ed178b2",
+        "graph": "canonical_archive:models/mobilenet_v3_large/benchmark_set/legacy_suite/models/mobilenet_v3_large.onnx",
+        "model_identity_pointer": "/models/mobilenet_v3_large",
+        "ranking_sha256": "6a51e08b3c25231a968c0d2fa4ab82b2148ceca1ec8c3ea7913df2d61f3d9b6a"
+      },
+      "stored_historical_proxy_totals": [
+        224025888.0
+      ],
+      "zero_cost_nodes": 39,
+      "zero_unimplemented_fallback_nodes": 39
+    },
+    {
+      "convtranspose_change_effect": {
+        "basis": "No node is dispatched to ConvTranspose; changing only that branch changes no node cost, prefix, normalization input, candidate score or tie key.",
+        "prefix_suffix_fraction_delta": 0,
+        "scope": "Only the exact verified full-graph hash and a change confined to ConvTranspose.",
+        "score_rank_changes": 0,
+        "status": "unchanged_by_absence",
+        "total_proxy_delta": 0
+      },
+      "convtranspose_count": 0,
+      "convtranspose_nodes": [],
+      "graph_role": "canonical_full_onnx",
+      "graph_sha256": "fba2c5b46ff63bd4b4bc65f1cf60fd86fa84e16e7432fcaa60d5efbd2c99b8f3",
+      "historical_candidate_count": 133,
+      "historical_candidate_fields_match_archive": true,
+      "implemented_rule_node_fraction": 0.9851851851851852,
+      "implemented_rule_nodes": 133,
+      "later_deployment_full_graph_sha_bound_uid_count": 125,
+      "later_deployment_other_graph_uids": [],
+      "later_deployment_unbound_uids": [
+        "native|regnet_x_1_6gf|H10|native_full_hailo10h|full"
+      ],
+      "missing_or_symbolic_input_nodes_after_inference": 0,
+      "missing_or_symbolic_output_nodes_after_inference": 0,
+      "missing_or_symbolic_output_nodes_before_inference": 0,
+      "model_id": "regnet_x_1_6gf",
+      "node_count": 135,
+      "node_coverage_denominator": 135,
+      "operator_counts": {
+        "Add": 18,
+        "Conv": 59,
+        "Gemm": 1,
+        "ReduceMean": 1,
+        "Relu": 55,
+        "Reshape": 1
+      },
+      "recomputed_proxy_total": 1620020888,
+      "recomputed_total_matches_all_stored_totals": true,
+      "source_binding": {
+        "analysis_sha256": "e677427942934762e1f5a98be633a55b97210ba3710deb0f4dfd01475ec52cc2",
+        "graph": "canonical_archive:models/regnet_x_1_6gf/benchmark_set/legacy_suite/models/regnet_x_1_6gf.onnx",
+        "model_identity_pointer": "/models/regnet_x_1_6gf",
+        "ranking_sha256": "6ebbe05bd3189ee4e3823fbc6fcc561b0cdd740fd5987662c0d12ab0d3feb7bf"
+      },
+      "stored_historical_proxy_totals": [
+        1620020888.0
+      ],
+      "zero_cost_nodes": 2,
+      "zero_unimplemented_fallback_nodes": 2
+    },
+    {
+      "convtranspose_change_effect": {
+        "basis": "No node is dispatched to ConvTranspose; changing only that branch changes no node cost, prefix, normalization input, candidate score or tie key.",
+        "prefix_suffix_fraction_delta": 0,
+        "scope": "Only the exact verified full-graph hash and a change confined to ConvTranspose.",
+        "score_rank_changes": 0,
+        "status": "unchanged_by_absence",
+        "total_proxy_delta": 0
+      },
+      "convtranspose_count": 0,
+      "convtranspose_nodes": [],
+      "graph_role": "canonical_full_onnx",
+      "graph_sha256": "cebd9d5879ddd304a18f51e559ab74fba5cbd1f610b9359321bc5228acbe4f50",
+      "historical_candidate_count": 120,
+      "historical_candidate_fields_match_archive": true,
+      "implemented_rule_node_fraction": 0.9754098360655737,
+      "implemented_rule_nodes": 119,
+      "later_deployment_full_graph_sha_bound_uid_count": 119,
+      "later_deployment_other_graph_uids": [],
+      "later_deployment_unbound_uids": [
+        "native|resnet50|H10|native_full_hailo10h|full"
+      ],
+      "missing_or_symbolic_input_nodes_after_inference": 0,
+      "missing_or_symbolic_output_nodes_after_inference": 0,
+      "missing_or_symbolic_output_nodes_before_inference": 0,
+      "model_id": "resnet50",
+      "node_count": 122,
+      "node_coverage_denominator": 122,
+      "operator_counts": {
+        "Add": 16,
+        "Conv": 53,
+        "Gemm": 1,
+        "MaxPool": 1,
+        "ReduceMean": 1,
+        "Relu": 49,
+        "Reshape": 1
+      },
+      "recomputed_proxy_total": 4115427304,
+      "recomputed_total_matches_all_stored_totals": true,
+      "source_binding": {
+        "analysis_sha256": "9af9ff33f4b08ddf00092be5b754cb23f9e2ab80912e1762a7ab891417e4829c",
+        "graph": "canonical_archive:models/resnet50/benchmark_set/legacy_suite/models/resnet50.onnx",
+        "model_identity_pointer": "/models/resnet50",
+        "ranking_sha256": "ad8300277a6ff6c273ea98d5d54d8b2cca21953e5f658e507baf89f56a098277"
+      },
+      "stored_historical_proxy_totals": [
+        4115427304.0
+      ],
+      "zero_cost_nodes": 3,
+      "zero_unimplemented_fallback_nodes": 3
+    },
+    {
+      "convtranspose_change_effect": {
+        "basis": "No node is dispatched to ConvTranspose; changing only that branch changes no node cost, prefix, normalization input, candidate score or tie key.",
+        "prefix_suffix_fraction_delta": 0,
+        "scope": "Only the exact verified full-graph hash and a change confined to ConvTranspose.",
+        "score_rank_changes": 0,
+        "status": "unchanged_by_absence",
+        "total_proxy_delta": 0
+      },
+      "convtranspose_count": 0,
+      "convtranspose_nodes": [],
+      "graph_role": "canonical_full_onnx",
+      "graph_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+      "historical_candidate_count": 615,
+      "historical_candidate_fields_match_archive": true,
+      "implemented_rule_node_fraction": 0.8833063209076175,
+      "implemented_rule_nodes": 545,
+      "later_deployment_full_graph_sha_bound_uid_count": 24,
+      "later_deployment_other_graph_uids": [],
+      "later_deployment_unbound_uids": [],
+      "missing_or_symbolic_input_nodes_after_inference": 0,
+      "missing_or_symbolic_output_nodes_after_inference": 0,
+      "missing_or_symbolic_output_nodes_before_inference": 0,
+      "model_id": "yolo11l",
+      "node_count": 617,
+      "node_coverage_denominator": 617,
+      "operator_counts": {
+        "Add": 40,
+        "Concat": 34,
+        "Conv": 174,
+        "Div": 1,
+        "MatMul": 4,
+        "MaxPool": 3,
+        "Mul": 162,
+        "Reshape": 14,
+        "Resize": 2,
+        "Sigmoid": 160,
+        "Slice": 2,
+        "Softmax": 3,
+        "Split": 11,
+        "Sub": 2,
+        "Transpose": 5
+      },
+      "recomputed_proxy_total": 43854005600,
+      "recomputed_total_matches_all_stored_totals": true,
+      "source_binding": {
+        "analysis_sha256": "7774ad041be63ee9bbd9fee5326b36518fce82fc07a90969655dec3933f6ec67",
+        "graph": "canonical_archive:models/yolo11l/benchmark_set/legacy_suite/models/yolo11l.onnx",
+        "model_identity_pointer": "/models/yolo11l",
+        "ranking_sha256": "838c7484ef42eeab5d1c3dc00d320df66f81a0720ad57c35452cfd4b7abd942e"
+      },
+      "stored_historical_proxy_totals": [
+        43854005600.0
+      ],
+      "zero_cost_nodes": 72,
+      "zero_unimplemented_fallback_nodes": 72
+    },
+    {
+      "convtranspose_change_effect": {
+        "basis": "No node is dispatched to ConvTranspose; changing only that branch changes no node cost, prefix, normalization input, candidate score or tie key.",
+        "prefix_suffix_fraction_delta": 0,
+        "scope": "Only the exact verified full-graph hash and a change confined to ConvTranspose.",
+        "score_rank_changes": 0,
+        "status": "unchanged_by_absence",
+        "total_proxy_delta": 0
+      },
+      "convtranspose_count": 0,
+      "convtranspose_nodes": [],
+      "graph_role": "canonical_full_onnx",
+      "graph_sha256": "d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897",
+      "historical_candidate_count": 416,
+      "historical_candidate_fields_match_archive": true,
+      "implemented_rule_node_fraction": 0.8157894736842105,
+      "implemented_rule_nodes": 341,
+      "later_deployment_full_graph_sha_bound_uid_count": 24,
+      "later_deployment_other_graph_uids": [],
+      "later_deployment_unbound_uids": [],
+      "missing_or_symbolic_input_nodes_after_inference": 0,
+      "missing_or_symbolic_output_nodes_after_inference": 0,
+      "missing_or_symbolic_output_nodes_before_inference": 0,
+      "model_id": "yolo26m",
+      "node_count": 418,
+      "node_coverage_denominator": 418,
+      "operator_counts": {
+        "Add": 23,
+        "Cast": 1,
+        "Concat": 26,
+        "Conv": 112,
+        "Div": 1,
+        "Flatten": 2,
+        "Gather": 1,
+        "GatherElements": 2,
+        "MatMul": 4,
+        "MaxPool": 3,
+        "Mod": 1,
+        "Mul": 100,
+        "ReduceMax": 1,
+        "Reshape": 12,
+        "Resize": 2,
+        "Sigmoid": 98,
+        "Slice": 2,
+        "Softmax": 2,
+        "Split": 12,
+        "Sub": 1,
+        "Tile": 2,
+        "TopK": 2,
+        "Transpose": 5,
+        "Unsqueeze": 3
+      },
+      "recomputed_proxy_total": 34426328300,
+      "recomputed_total_matches_all_stored_totals": true,
+      "source_binding": {
+        "analysis_sha256": "160554fcea0a4f2f26f7349c734d4a007b2a8cacf29b15e91ba0eea13d0aa868",
+        "graph": "canonical_archive:models/yolo26m/benchmark_set/legacy_suite/models/yolo26m.onnx",
+        "model_identity_pointer": "/models/yolo26m",
+        "ranking_sha256": "19070b18cbe20deb1c3a2c7f83684a229c7cfcb3fae9ac59110808dc5dcc41a6"
+      },
+      "stored_historical_proxy_totals": [
+        34426328300.0
+      ],
+      "zero_cost_nodes": 77,
+      "zero_unimplemented_fallback_nodes": 77
+    },
+    {
+      "convtranspose_change_effect": {
+        "basis": "No node is dispatched to ConvTranspose; changing only that branch changes no node cost, prefix, normalization input, candidate score or tie key.",
+        "prefix_suffix_fraction_delta": 0,
+        "scope": "Only the exact verified full-graph hash and a change confined to ConvTranspose.",
+        "score_rank_changes": 0,
+        "status": "unchanged_by_absence",
+        "total_proxy_delta": 0
+      },
+      "convtranspose_count": 0,
+      "convtranspose_nodes": [],
+      "graph_role": "canonical_full_onnx",
+      "graph_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+      "historical_candidate_count": 382,
+      "historical_candidate_fields_match_archive": true,
+      "implemented_rule_node_fraction": 0.8046875,
+      "implemented_rule_nodes": 309,
+      "later_deployment_full_graph_sha_bound_uid_count": 14,
+      "later_deployment_other_graph_uids": [],
+      "later_deployment_unbound_uids": [
+        "native|yolo26s|H10|hailo10h_to_trt|b003",
+        "native|yolo26s|H10|hailo10h_to_trt|b021",
+        "native|yolo26s|H8|hailo8_to_trt|b003",
+        "native|yolo26s|H8|hailo8_to_trt|b021",
+        "native|yolo26s|H10|native_full_hailo10h|full",
+        "native|yolo26s|H8|native_full_hailo8|full",
+        "native|yolo26s|H8|native_full_tensorrt|full",
+        "native|yolo26s|H10|native_full_tensorrt|full",
+        "native|yolo26s|H10|hailo10h_to_trt|b038",
+        "native|yolo26s|H8|hailo8_to_trt|b038"
+      ],
+      "missing_or_symbolic_input_nodes_after_inference": 0,
+      "missing_or_symbolic_output_nodes_after_inference": 0,
+      "missing_or_symbolic_output_nodes_before_inference": 0,
+      "model_id": "yolo26s",
+      "node_count": 384,
+      "node_coverage_denominator": 384,
+      "operator_counts": {
+        "Add": 21,
+        "Cast": 1,
+        "Concat": 24,
+        "Conv": 102,
+        "Div": 1,
+        "Flatten": 2,
+        "Gather": 1,
+        "GatherElements": 2,
+        "MatMul": 4,
+        "MaxPool": 3,
+        "Mod": 1,
+        "Mul": 90,
+        "ReduceMax": 1,
+        "Reshape": 12,
+        "Resize": 2,
+        "Sigmoid": 88,
+        "Slice": 2,
+        "Softmax": 2,
+        "Split": 12,
+        "Sub": 1,
+        "Tile": 2,
+        "TopK": 2,
+        "Transpose": 5,
+        "Unsqueeze": 3
+      },
+      "recomputed_proxy_total": 10571198700,
+      "recomputed_total_matches_all_stored_totals": true,
+      "source_binding": {
+        "analysis_sha256": "876255dc8167a1ab127b837f7d17e1d3ee6764e5d47641553aef765dd4b4d49c",
+        "graph": "canonical_archive:models/yolo26s/benchmark_set/legacy_suite/models/yolo26s.onnx",
+        "model_identity_pointer": "/models/yolo26s",
+        "ranking_sha256": "f2a246111455dc990f6e12543dacfd1df0fc73bdac904246775d36a0bd533271"
+      },
+      "stored_historical_proxy_totals": [
+        10571198700.0
+      ],
+      "zero_cost_nodes": 75,
+      "zero_unimplemented_fallback_nodes": 75
+    },
+    {
+      "convtranspose_change_effect": {
+        "basis": "No node is dispatched to ConvTranspose; changing only that branch changes no node cost, prefix, normalization input, candidate score or tie key.",
+        "prefix_suffix_fraction_delta": 0,
+        "scope": "Only the exact verified full-graph hash and a change confined to ConvTranspose.",
+        "score_rank_changes": 0,
+        "status": "unchanged_by_absence",
+        "total_proxy_delta": 0
+      },
+      "convtranspose_count": 0,
+      "convtranspose_nodes": [],
+      "graph_role": "canonical_full_onnx",
+      "graph_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+      "historical_candidate_count": 307,
+      "historical_candidate_fields_match_archive": true,
+      "implemented_rule_node_fraction": 0.8996763754045307,
+      "implemented_rule_nodes": 278,
+      "later_deployment_full_graph_sha_bound_uid_count": 24,
+      "later_deployment_other_graph_uids": [],
+      "later_deployment_unbound_uids": [],
+      "missing_or_symbolic_input_nodes_after_inference": 0,
+      "missing_or_symbolic_output_nodes_after_inference": 0,
+      "missing_or_symbolic_output_nodes_before_inference": 0,
+      "model_id": "yolov7_paper",
+      "node_count": 309,
+      "node_coverage_denominator": 309,
+      "operator_counts": {
+        "Add": 3,
+        "Concat": 17,
+        "Conv": 95,
+        "MaxPool": 8,
+        "Mul": 89,
+        "Reshape": 3,
+        "Resize": 2,
+        "Sigmoid": 89,
+        "Transpose": 3
+      },
+      "recomputed_proxy_total": 53147844400,
+      "recomputed_total_matches_all_stored_totals": true,
+      "source_binding": {
+        "analysis_sha256": "2ad6c1479ce79a8de40c3cc0d0ce2bdf654eca253a467d11c51f1ccf3d31bf0a",
+        "graph": "canonical_archive:models/yolov7_paper/benchmark_set/legacy_suite/models/yolov7_paper.onnx",
+        "model_identity_pointer": "/models/yolov7_paper",
+        "ranking_sha256": "474991a6094c64e48c8dc1b62bfd9849c5338417a6b95cf6186efdb89185fff6"
+      },
+      "stored_historical_proxy_totals": [
+        53147844400.0
+      ],
+      "zero_cost_nodes": 31,
+      "zero_unimplemented_fallback_nodes": 31
+    }
+  ],
+  "historical_candidates_bound": 2111,
+  "inspected_convtranspose_count": 0,
+  "inspected_full_graph_nodes": 2125,
+  "later_deployment_full_graph_bound_rows": 437,
+  "later_deployment_full_graph_unbound_rows": 13,
+  "limitations": [
+    "Historical release/definition provenance is distinct from proof of the source bytes imported by a particular historical process.",
+    "The selected historical runtime critical-module lists omit onnx_splitpoint_tool/metrics.py; no exact process-to-metrics binding was found in these inspected manifests.",
+    "13 current population rows lack model_sha256; model names do not close this identity gap.",
+    "No execution-cost or backend-fusion claim follows from this graph inventory.",
+    "The count replay uses the captured ONNX 1.21.0 static shape projection, not a historical shape-inference execution receipt."
+  ],
+  "measured_values_modified": false,
+  "schema": "thesis-v53/operator-audit-v1",
+  "shape_interpretation": {
+    "all_original_inputs_static": true,
+    "call": "onnx.shape_inference.infer_shapes(model, strict_mode=False)",
+    "interpretation": "New offline metadata projection. It is not a historical shape-inference execution receipt. Raw and inferred output shape gaps are reported separately.",
+    "onnx_version": "1.21.0",
+    "original_graphs_modified": false,
+    "weights_exported": false
+  },
+  "subgraph_references": [
+    {
+      "convtranspose_count": null,
+      "graph_role": "source_part2_onnx",
+      "graph_sha256": "789cf35875ab925fcab4f8f1d5b8f10959a2e66039cd1b868f11fd326019b7bd",
+      "inspection_status": "referenced_not_inspected",
+      "reason": "Distinct source/build part-graph hash. Its operators are not inferred from the original full graph; only this manifest reference was inspected.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/0/artifacts/source_part2_onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135"
+    },
+    {
+      "convtranspose_count": null,
+      "graph_role": "build_part2_onnx",
+      "graph_sha256": "789cf35875ab925fcab4f8f1d5b8f10959a2e66039cd1b868f11fd326019b7bd",
+      "inspection_status": "referenced_not_inspected",
+      "reason": "Distinct source/build part-graph hash. Its operators are not inferred from the original full graph; only this manifest reference was inspected.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/0/artifacts/build_part2_onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135"
+    },
+    {
+      "convtranspose_count": 0,
+      "graph_role": "source_onnx",
+      "graph_sha256": "2f5e79b1e4280251e7b6eefe1d6161c4831e2fc27858e1e9fe2fac697f44489e",
+      "inspection_status": "same_hash_as_inspected_full_graph",
+      "reason": "Exact SHA equals inspected full graph.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/1/artifacts/source_onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|mobilenet_v3_large|DeepX|native_full_deepx|full"
+    },
+    {
+      "convtranspose_count": null,
+      "graph_role": "source_part2_onnx",
+      "graph_sha256": "fe00fca1357bda5ed3ef655c54f7fcb95da98d66225551527f9e813489b48359",
+      "inspection_status": "referenced_not_inspected",
+      "reason": "Distinct source/build part-graph hash. Its operators are not inferred from the original full graph; only this manifest reference was inspected.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/2/artifacts/source_part2_onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|regnet_x_1_6gf|H10|hailo10h_to_trt|b123"
+    },
+    {
+      "convtranspose_count": null,
+      "graph_role": "build_part2_onnx",
+      "graph_sha256": "4f4f2b75c4d43fbda02cfd003b6ecaec3d3a885e71e7d2ea070a79a95faa304f",
+      "inspection_status": "referenced_not_inspected",
+      "reason": "Distinct source/build part-graph hash. Its operators are not inferred from the original full graph; only this manifest reference was inspected.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/2/artifacts/build_part2_onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|regnet_x_1_6gf|H10|hailo10h_to_trt|b123"
+    },
+    {
+      "convtranspose_count": 0,
+      "graph_role": "source_onnx",
+      "graph_sha256": "fba2c5b46ff63bd4b4bc65f1cf60fd86fa84e16e7432fcaa60d5efbd2c99b8f3",
+      "inspection_status": "same_hash_as_inspected_full_graph",
+      "reason": "Exact SHA equals inspected full graph.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/3/artifacts/source_onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|regnet_x_1_6gf|DeepX|native_full_deepx|full"
+    },
+    {
+      "convtranspose_count": null,
+      "graph_role": "source_part2_onnx",
+      "graph_sha256": "90c47f56053c56fca66e0b8b0530f5baa32f04de09ca374195cfd1bbdb3719b7",
+      "inspection_status": "referenced_not_inspected",
+      "reason": "Distinct source/build part-graph hash. Its operators are not inferred from the original full graph; only this manifest reference was inspected.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/4/artifacts/source_part2_onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|resnet50|H10|hailo10h_to_trt|b095"
+    },
+    {
+      "convtranspose_count": null,
+      "graph_role": "build_part2_onnx",
+      "graph_sha256": "4d6efadd699498eef816abdae520815981deef3303a4a70d487c6e0b1d3f80c4",
+      "inspection_status": "referenced_not_inspected",
+      "reason": "Distinct source/build part-graph hash. Its operators are not inferred from the original full graph; only this manifest reference was inspected.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/4/artifacts/build_part2_onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|resnet50|H10|hailo10h_to_trt|b095"
+    },
+    {
+      "convtranspose_count": 0,
+      "graph_role": "source_onnx",
+      "graph_sha256": "cebd9d5879ddd304a18f51e559ab74fba5cbd1f610b9359321bc5228acbe4f50",
+      "inspection_status": "same_hash_as_inspected_full_graph",
+      "reason": "Exact SHA equals inspected full graph.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/5/artifacts/source_onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|resnet50|DeepX|native_full_deepx|full"
+    },
+    {
+      "convtranspose_count": null,
+      "graph_role": "source_part2_onnx",
+      "graph_sha256": "0e574f4f3c6406b13adad60639ae5ee1a2c5ff588a3c97888307d63a49814826",
+      "inspection_status": "referenced_not_inspected",
+      "reason": "Distinct source/build part-graph hash. Its operators are not inferred from the original full graph; only this manifest reference was inspected.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/6/artifacts/source_part2_onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolo11l|H10|hailo10h_to_trt|b120"
+    },
+    {
+      "convtranspose_count": null,
+      "graph_role": "build_part2_onnx",
+      "graph_sha256": "6ce24bd73f51bc0544b2a88363540f286f7dc01ae7a3630ba421c387be20101a",
+      "inspection_status": "referenced_not_inspected",
+      "reason": "Distinct source/build part-graph hash. Its operators are not inferred from the original full graph; only this manifest reference was inspected.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/6/artifacts/build_part2_onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolo11l|H10|hailo10h_to_trt|b120"
+    },
+    {
+      "convtranspose_count": 0,
+      "graph_role": "source_onnx",
+      "graph_sha256": "f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147",
+      "inspection_status": "same_hash_as_inspected_full_graph",
+      "reason": "Exact SHA equals inspected full graph.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/7/artifacts/source_onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolo11l|DeepX|native_full_deepx|full"
+    },
+    {
+      "convtranspose_count": null,
+      "graph_role": "source_part2_onnx",
+      "graph_sha256": "cf8c2f94a059888fa76193b77611a465e61f60b90b9dbaba56b672ee4fdbf2b8",
+      "inspection_status": "referenced_not_inspected",
+      "reason": "Distinct source/build part-graph hash. Its operators are not inferred from the original full graph; only this manifest reference was inspected.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/8/artifacts/source_part2_onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolo26m|H10|hailo10h_to_trt|b043"
+    },
+    {
+      "convtranspose_count": null,
+      "graph_role": "build_part2_onnx",
+      "graph_sha256": "d657f509cd134c9b1823c991efc7e699d7aa8b3af9eabf280bbbe28dddeae424",
+      "inspection_status": "referenced_not_inspected",
+      "reason": "Distinct source/build part-graph hash. Its operators are not inferred from the original full graph; only this manifest reference was inspected.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/8/artifacts/build_part2_onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolo26m|H10|hailo10h_to_trt|b043"
+    },
+    {
+      "convtranspose_count": 0,
+      "graph_role": "source.onnx",
+      "graph_sha256": "d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897",
+      "inspection_status": "same_hash_as_inspected_full_graph",
+      "reason": "Exact SHA equals inspected full graph.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/9/artifacts/source.onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolo26m|H8|native_full_tensorrt|full"
+    },
+    {
+      "convtranspose_count": null,
+      "graph_role": "source_part2_onnx",
+      "graph_sha256": "57b73fb2eeeff899523db46f541f19e7704773a25129cb26aca495eb2296550c",
+      "inspection_status": "referenced_not_inspected",
+      "reason": "Distinct source/build part-graph hash. Its operators are not inferred from the original full graph; only this manifest reference was inspected.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/10/artifacts/source_part2_onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolo26s|H8|hailo8_to_trt|b021"
+    },
+    {
+      "convtranspose_count": null,
+      "graph_role": "build_part2_onnx",
+      "graph_sha256": "a8688ab8ba35d688a96e170524373101c52293185fb9f3466ae6712102875609",
+      "inspection_status": "referenced_not_inspected",
+      "reason": "Distinct source/build part-graph hash. Its operators are not inferred from the original full graph; only this manifest reference was inspected.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/10/artifacts/build_part2_onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolo26s|H8|hailo8_to_trt|b021"
+    },
+    {
+      "convtranspose_count": 0,
+      "graph_role": "source.onnx",
+      "graph_sha256": "4b8ff9dce56ca7058c53e1a08feca69a59f8504a8f2ef68c85c065ae837ce04a",
+      "inspection_status": "same_hash_as_inspected_full_graph",
+      "reason": "Exact SHA equals inspected full graph.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/11/artifacts/source.onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolo26s|DeepX|native_full_tensorrt|full"
+    },
+    {
+      "convtranspose_count": null,
+      "graph_role": "source_part2_onnx",
+      "graph_sha256": "f068ef8f1927c0e2426b84e462f3d9f5a2481f8f2a35aef92c7ba64f85e8ad38",
+      "inspection_status": "referenced_not_inspected",
+      "reason": "Distinct source/build part-graph hash. Its operators are not inferred from the original full graph; only this manifest reference was inspected.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/12/artifacts/source_part2_onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolov7_paper|H8|hailo8_to_trt|b066"
+    },
+    {
+      "convtranspose_count": null,
+      "graph_role": "build_part2_onnx",
+      "graph_sha256": "f2d9eb20e63e249fe56a44bccb31c533dea26e97985273f90c4b554adf9477fb",
+      "inspection_status": "referenced_not_inspected",
+      "reason": "Distinct source/build part-graph hash. Its operators are not inferred from the original full graph; only this manifest reference was inspected.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/12/artifacts/build_part2_onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolov7_paper|H8|hailo8_to_trt|b066"
+    },
+    {
+      "convtranspose_count": 0,
+      "graph_role": "source_onnx",
+      "graph_sha256": "7a13e66f91047cce0e251c05f64159646847e842af31d60441c63dcdfad7825d",
+      "inspection_status": "same_hash_as_inspected_full_graph",
+      "reason": "Exact SHA equals inspected full graph.",
+      "source": "archive:thesis_v49_hardware_confirmation_energy_supplement_20261019.tar.gz/thesis_v49_hardware_confirmation_20261018/evidence/identity_runtime_manifest.json",
+      "source_pointer": "/entries/13/artifacts/source_onnx",
+      "source_sha256": "0a41bcb7c606fd398996061f7fb0651c8b81c735541db97197b31a6d5efc58f3",
+      "uid": "native|yolov7_paper|DeepX|native_full_deepx|full"
+    }
+  ],
+  "subgraph_scope": "Referenced deployment part graphs and compiler-adjusted graphs are not inferred from the original full graph. Their uninspected status is explicit."
+}

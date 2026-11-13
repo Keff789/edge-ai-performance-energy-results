@@ -1,0 +1,216 @@
+{
+  "schema": "thesis-energy-de-render-data-v1",
+  "language": "de",
+  "figure": "hailo_meters",
+  "scientific_transformations": "Only existing plotted unit conversions (Hz to kHz, complementary percentages, and PSD dB display); no new statistics.",
+  "source_inputs": [
+    "results/energy-measurement/tables/tim/paired_300s.csv"
+  ],
+  "source_rows": {
+    "paired_300s": [
+      {
+        "platform": "Hailo",
+        "slug": "gemm",
+        "series": "historical/hailo_durations/gemm",
+        "window": "envelope_0.5",
+        "requested_s": 300.0,
+        "sensor": "firmware",
+        "n": 15,
+        "E_median_pct": 0.404538371125418,
+        "E_q05_pct": 0.3684153898674447,
+        "E_q95_pct": 0.439049575397239,
+        "P_median_pct": 0.40168864770522283,
+        "P_q05_pct": 0.36825261273732757,
+        "P_q95_pct": 0.43056975289716526,
+        "T_median_pct": 0.0,
+        "T_q05_pct": -0.03331112591604679,
+        "T_q95_pct": 0.03332222592467016
+      },
+      {
+        "platform": "Hailo",
+        "slug": "gemm",
+        "series": "historical/hailo_durations/gemm",
+        "window": "envelope_0.5",
+        "requested_s": 300.0,
+        "sensor": "hailo_rt",
+        "n": 15,
+        "E_median_pct": -2.071046612595706,
+        "E_q05_pct": -2.101563724490173,
+        "E_q95_pct": -1.6830576549118164,
+        "P_median_pct": -2.0504772171155428,
+        "P_q05_pct": -2.088048653446668,
+        "P_q95_pct": -1.6855531598556677,
+        "T_median_pct": 0.0,
+        "T_q05_pct": -0.0666289118372887,
+        "T_q95_pct": 0.06331222925691538
+      },
+      {
+        "platform": "Hailo",
+        "slug": "gemm",
+        "series": "historical/hailo_durations/gemm",
+        "window": "envelope_0.5",
+        "requested_s": 300.0,
+        "sensor": "shelly",
+        "n": 15,
+        "E_median_pct": 26.180160119939934,
+        "E_q05_pct": 25.916382319332605,
+        "E_q95_pct": 26.743401220796578,
+        "P_median_pct": 26.054147976011933,
+        "P_q05_pct": 25.74877315817544,
+        "P_q95_pct": 26.655053491254552,
+        "T_median_pct": 0.06664445184938472,
+        "T_q05_pct": 0.0,
+        "T_q95_pct": 0.17656894737064108
+      },
+      {
+        "platform": "Hailo",
+        "slug": "random_pattern_yolo",
+        "series": "historical/hailo_durations/random_pattern_yolo",
+        "window": "reported_legacy",
+        "requested_s": 300.0,
+        "sensor": "firmware",
+        "n": 15,
+        "E_median_pct": 0.19330151420742236,
+        "E_q05_pct": 0.14678099773146824,
+        "E_q95_pct": 0.2321106553824892,
+        "P_median_pct": 0.19330151420742236,
+        "P_q05_pct": 0.14678099773146824,
+        "P_q95_pct": 0.2321106553824892,
+        "T_median_pct": 0.0,
+        "T_q05_pct": 0.0,
+        "T_q95_pct": 0.0
+      },
+      {
+        "platform": "Hailo",
+        "slug": "random_pattern_yolo",
+        "series": "historical/hailo_durations/random_pattern_yolo",
+        "window": "reported_legacy",
+        "requested_s": 300.0,
+        "sensor": "hailo_rt",
+        "n": 15,
+        "E_median_pct": -0.6950053336552187,
+        "E_q05_pct": -1.0134631914514225,
+        "E_q95_pct": -0.240108212452832,
+        "P_median_pct": -0.7897343832677262,
+        "P_q05_pct": -0.8247442151064266,
+        "P_q95_pct": -0.7646512204269862,
+        "T_median_pct": 0.0972854304635895,
+        "T_q05_pct": -0.20410301324503388,
+        "T_q95_pct": 0.5625442052980167
+      },
+      {
+        "platform": "Hailo",
+        "slug": "random_pattern_yolo",
+        "series": "historical/hailo_durations/random_pattern_yolo",
+        "window": "reported_legacy",
+        "requested_s": 300.0,
+        "sensor": "shelly",
+        "n": 15,
+        "E_median_pct": 39.839807868457065,
+        "E_q05_pct": 39.46553065018928,
+        "E_q95_pct": 40.39707338117556,
+        "P_median_pct": 39.84113126565294,
+        "P_q05_pct": 39.46782541001829,
+        "P_q95_pct": 40.39896149118987,
+        "T_median_pct": -0.0020913907284869637,
+        "T_q05_pct": -0.026232019867553632,
+        "T_q95_pct": 0.002596192052990442
+      },
+      {
+        "platform": "Hailo",
+        "slug": "yolo",
+        "series": "historical/hailo_durations/yolo",
+        "window": "envelope_0.5",
+        "requested_s": 300.0,
+        "sensor": "firmware",
+        "n": 15,
+        "E_median_pct": 0.45224863372557156,
+        "E_q05_pct": 0.38236976575096504,
+        "E_q95_pct": 0.5111195809881973,
+        "P_median_pct": 0.45224863372557156,
+        "P_q05_pct": 0.3823697657509806,
+        "P_q95_pct": 0.5111195809881973,
+        "T_median_pct": 0.0,
+        "T_q05_pct": 0.0,
+        "T_q95_pct": 0.0
+      },
+      {
+        "platform": "Hailo",
+        "slug": "yolo",
+        "series": "historical/hailo_durations/yolo",
+        "window": "envelope_0.5",
+        "requested_s": 300.0,
+        "sensor": "hailo_rt",
+        "n": 15,
+        "E_median_pct": -0.14805811163572935,
+        "E_q05_pct": -0.20354091836594312,
+        "E_q95_pct": -0.09913129724157702,
+        "P_median_pct": -0.17519958662292057,
+        "P_q05_pct": -0.22681373882967426,
+        "P_q95_pct": -0.11992002593408159,
+        "T_median_pct": 0.03332222592467016,
+        "T_q05_pct": 0.0,
+        "T_q95_pct": 0.03332222592469236
+      },
+      {
+        "platform": "Hailo",
+        "slug": "yolo",
+        "series": "historical/hailo_durations/yolo",
+        "window": "envelope_0.5",
+        "requested_s": 300.0,
+        "sensor": "shelly",
+        "n": 15,
+        "E_median_pct": 23.638552606747766,
+        "E_q05_pct": 23.424549306812324,
+        "E_q95_pct": 24.0916434004887,
+        "P_median_pct": 23.465709167504368,
+        "P_q05_pct": 23.31359481705105,
+        "P_q95_pct": 23.90995400366879,
+        "T_median_pct": 0.09996667777407708,
+        "T_q05_pct": 0.06664445184938472,
+        "T_q95_pct": 0.16662779073642442
+      }
+    ]
+  },
+  "plotted_series": [
+    {
+      "sensor": "firmware",
+      "slugs": [
+        "gemm",
+        "yolo",
+        "random_pattern_yolo"
+      ],
+      "P_median_pct": [
+        0.40168864770522283,
+        0.45224863372557156,
+        0.19330151420742236
+      ]
+    },
+    {
+      "sensor": "hailo_rt",
+      "slugs": [
+        "gemm",
+        "yolo",
+        "random_pattern_yolo"
+      ],
+      "P_median_pct": [
+        -2.0504772171155428,
+        -0.17519958662292057,
+        -0.7897343832677262
+      ]
+    },
+    {
+      "sensor": "shelly",
+      "slugs": [
+        "gemm",
+        "yolo",
+        "random_pattern_yolo"
+      ],
+      "P_median_pct": [
+        26.054147976011933,
+        23.465709167504368,
+        39.84113126565294
+      ]
+    }
+  ]
+}

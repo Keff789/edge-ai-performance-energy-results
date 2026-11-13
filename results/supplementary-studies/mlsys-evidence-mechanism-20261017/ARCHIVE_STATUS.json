@@ -1,0 +1,564 @@
+{
+  "archive_layout_scope": "The manifest also binds external originals at existing canonical diss_results paths; the entrypoint is not the entire archive layout.",
+  "archive_manifest_sha256": "c35a2ad750c64c58f801344c922703f7522e9cb353e3e2be43be3f14b8bcb7fc",
+  "complete_private_source_inventory": {
+    "logical_manifest_path": "_supplements/mlsys_r15_20261017/_archive_evidence/ARCHIVE_MANIFEST.jsonl",
+    "manifest_sha256": "c35a2ad750c64c58f801344c922703f7522e9cb353e3e2be43be3f14b8bcb7fc",
+    "scope": "Complete source inventory and restoration/byte-verification bindings; raw files remain outside Git."
+  },
+  "count_scope": "Logical verified counts/bytes include historically restored required sources. Byte-verified required sources and distinct physical Sprite paths/bytes are separate. Missing/mismatch are byte gaps; historical implementation unprovenness is a separate, potentially overlapping dimension. Cross-study counts must not be added without deduplication.",
+  "gap_summary": {
+    "all_reason_and_marker_groups_represented": true,
+    "byte_gap_category_counts": {
+      "mismatch": 2370,
+      "missing": 18148
+    },
+    "byte_gap_reason_counts": {
+      "conflicting_declared_file_sizes": 1,
+      "declared_file_size_differs_from_verified_bytes": 1885,
+      "missing_file_hash": 15624,
+      "no_current_verified_exact_content_and_size": 2524,
+      "only_other_file_version_verified_for_source_path": 484
+    },
+    "current_byte_archive_verified_sources_among_gaps": 1664,
+    "example_count": 32,
+    "example_selection": "Deterministic greedy primary-reason/restoration-marker coverage, then canonical-order fill; at most 32 examples.",
+    "examples_limit": 32,
+    "examples_truncated": true,
+    "historically_unproven_sources": 64,
+    "primary_reason_counts": {
+      "conflicting_declared_file_sizes": 1,
+      "declared_file_size_differs_from_verified_bytes": 1885,
+      "historical_implementation_version_unproven": 64,
+      "missing_file_hash": 11411,
+      "no_current_verified_exact_content_and_size": 785,
+      "only_other_file_version_verified_for_source_path": 275,
+      "relative_original_reference_unresolved": 7086,
+      "required_dependency_reference_frontier_unresolved": 675
+    },
+    "primary_reasons_represented": 8,
+    "required_logical_source_gap_count": 22182,
+    "restoration_marker_counts": {
+      "historical_implementation_version_unproven": 64,
+      "relative_original_reference_unresolved": 7086,
+      "required_dependency_reference_frontier_unresolved": 675
+    },
+    "restoration_markers_represented": 3,
+    "scope": "Counts cover every required logical-source gap. The example array is not exhaustive when examples_truncated is true. Historical and byte dimensions can overlap and must not be added."
+  },
+  "logical_archive_entrypoint": "_supplements/mlsys_r15_20261017/studies/mlsys-evidence-mechanism-20261017/tree",
+  "raw_data_outside_git": true,
+  "required_restoration_gaps": [
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "conflicting_declared_file_sizes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "75d0a69dca6fd0bb7bd86ee08404915ed9ce9aa6144f86bd949bc5ff71dbb686",
+      "historical_implementation_version_unproven": false,
+      "reason": "conflicting_declared_file_sizes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt",
+        "engine_build_receipt",
+        "engine_build_receipt_path",
+        "path",
+        "performance_process_raw_or_identity",
+        "quality_primary_and_provenance"
+      ],
+      "source_filename": "engine_build_receipt.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "001a3cad4592b36b3e1537b542513d9a73a99a2041592114d28c344bf71a1f04",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "raw_energy_acquisition_and_window"
+      ],
+      "source_filename": "energy_summary.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "001b7a355e79e854cd8646d0039d96e09c5d6fc229d1860bd35739a5131ec6ea",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "raw_energy_acquisition_and_window"
+      ],
+      "source_filename": "energy_summary.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "0086499bbbc0a1bc49ef9fb364fc61aa35ae7dd05cb2d780c0e8fc20029889ec",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "raw_energy_acquisition_and_window"
+      ],
+      "source_filename": "energy_summary.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "009ef2f7ddc948415a2243d50e3bb0c6bf8b49fa314b7e048180fe7e0c2f0fd6",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "raw_energy_acquisition_and_window"
+      ],
+      "source_filename": "energy_summary.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "declared_file_size_differs_from_verified_bytes",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "013a9e91aa2c977e25cddf2e9ee45e6ef813a9a8513f61a0cb7ae3e8ce57b937",
+      "historical_implementation_version_unproven": false,
+      "reason": "declared_file_size_differs_from_verified_bytes",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt"
+      ],
+      "source_filename": "energy_current_status.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "only_other_file_version_verified_for_source_path",
+      "category": "mismatch",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "00526f0a08687ac810f18c1f198034a60728fdaa4a8eef5a9408edd507c77715",
+      "historical_implementation_version_unproven": false,
+      "reason": "only_other_file_version_verified_for_source_path",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "quality_primary_and_provenance"
+      ],
+      "source_filename": "native_split_quality_binding.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "mismatch",
+      "byte_gap_reason": "only_other_file_version_verified_for_source_path",
+      "category": "restoration",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "011cf1a88240189855db9ea26d8bad3faf2fed59dfddcb7de8ac555ebcf53d50",
+      "historical_implementation_version_unproven": false,
+      "reason": "required_dependency_reference_frontier_unresolved",
+      "restoration_gap_reasons": [
+        "required_dependency_reference_frontier_unresolved"
+      ],
+      "roles": [
+        "performance_process_raw_or_identity"
+      ],
+      "source_filename": "energy_task_budget.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "missing",
+      "byte_gap_reason": "missing_file_hash",
+      "category": "missing",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": null,
+      "historical_implementation_version_unproven": false,
+      "reason": "missing_file_hash",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "audit_source_receipt",
+        "performance_process_raw_or_identity",
+        "quality_primary_and_provenance"
+      ],
+      "source_filename": "output_contract.json"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "missing",
+      "byte_gap_reason": "missing_file_hash",
+      "category": "restoration",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": null,
+      "historical_implementation_version_unproven": false,
+      "reason": "relative_original_reference_unresolved",
+      "restoration_gap_reasons": [
+        "relative_original_reference_unresolved"
+      ],
+      "roles": [
+        "unresolved_relative_scientific_original"
+      ],
+      "source_filename": "000000000632.jpg"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "missing",
+      "byte_gap_reason": "missing_file_hash",
+      "category": "restoration",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": null,
+      "historical_implementation_version_unproven": true,
+      "reason": "historical_implementation_version_unproven",
+      "restoration_gap_reasons": [
+        "historical_implementation_version_unproven"
+      ],
+      "roles": [
+        "historical_implementation_identity"
+      ],
+      "source_filename": "__init__.py"
+    },
+    {
+      "byte_archive_verified": false,
+      "byte_gap_category": "missing",
+      "byte_gap_reason": "no_current_verified_exact_content_and_size",
+      "category": "missing",
+      "detail_scope": "Exact source paths remain in the private archive manifest.",
+      "expected_sha256": "00526f0a08687ac810f18c1f198034a60728fdaa4a8eef5a9408edd507c77715",
+      "historical_implementation_version_unproven": false,
+      "reason": "no_current_verified_exact_content_and_size",
+      "restoration_gap_reasons": [],
+      "roles": [
+        "quality_primary_and_provenance"
+      ],
+      "source_filename": "native_split_quality_binding.json"
+    }
+  ],
+  "required_restoration_gaps_scope": "Representative examples; use gap_summary for complete counts and the referenced private master for all source bindings.",
+  "schema_version": 1,
+  "status": "partial",
+  "study": "mlsys-evidence-mechanism-20261017",
+  "verification_date_utc": "2026-10-18",
+  "verified_inventory": {
+    "byte_verified_required_sources": 135160,
+    "historically_unproven_required_sources": 64,
+    "logical_required_sources": 155678,
+    "logical_verified_required_file_bytes": 134901048843,
+    "logical_verified_required_sources": 133496,
+    "mismatched_required_sources": 2370,
+    "missing_or_mismatched_required_sources": 22182,
+    "missing_required_sources": 18148,
+    "physical_unique_verified_sprite_bytes": 58861797725,
+    "physical_unique_verified_sprite_paths": 96783,
+    "unrestored_required_sources": 22182
+  }
+}

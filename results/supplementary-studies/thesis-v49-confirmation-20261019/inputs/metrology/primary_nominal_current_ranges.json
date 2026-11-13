@@ -1,0 +1,136 @@
+{
+  "schema": "thesis-v49-postcampaign-nominal-current-ranges-v1",
+  "created_at_utc": "2026-10-19T06:02:48.092718+00:00",
+  "accepted_logical_slots": 70,
+  "planned_logical_slots": 70,
+  "cohort_complete": true,
+  "excluded_logical_slots_count": 0,
+  "nominal_current_formula": "I_nominal=g*(encoded_payload/1000+o); s multiplies power, not current.",
+  "interpretation": "Conditional existing nominal mA payload convention; no proof of physical units, calibration, ADC range or absence of clipping.",
+  "domain_excursions_are_voltage_model_extrapolations_not_ADC_clipping": true,
+  "scopes": "full_capture includes pre/post/warmup; target_interval is positive sample-cell overlap with native measurement/drain mapping; conditional_boundary_hull is its declared causal uncertainty hull.",
+  "physical_absolute_qualification": false,
+  "combined_physical_uncertainty": null,
+  "per_source": [
+    {
+      "setup_id": "orin_nx_deepx_m1_01",
+      "source_addresses": [
+        "<private-source-address>"
+      ],
+      "accepted_captures": 35,
+      "model_ids": [
+        "thesis-v49-historical19v-conditional-orin_nx_deepx_m1_01"
+      ],
+      "full_capture": {
+        "captures_with_scope": 35,
+        "rows": 13300224,
+        "nominal_current_min_A": 0.7506152928346944,
+        "nominal_current_max_A": 2.949494736809334,
+        "encoded_min": 748,
+        "encoded_max": 2953,
+        "nominal_values_outside_model_domain": 0,
+        "nominal_support_outside_model_domain_s": null
+      },
+      "target_interval": {
+        "captures_with_scope": 34,
+        "rows": 4081740,
+        "nominal_current_min_A": 0.7685653291120385,
+        "nominal_current_max_A": 2.949494736809334,
+        "encoded_min": 766,
+        "encoded_max": 2953,
+        "nominal_values_outside_model_domain": 0,
+        "nominal_support_outside_model_domain_s": 0.0
+      },
+      "conditional_boundary_hull": {
+        "captures_with_scope": 34,
+        "rows": 4114228,
+        "nominal_current_min_A": 0.7685653291120385,
+        "nominal_current_max_A": 2.949494736809334,
+        "encoded_min": 766,
+        "encoded_max": 2953,
+        "nominal_values_outside_model_domain": 0,
+        "nominal_support_outside_model_domain_s": null
+      }
+    },
+    {
+      "setup_id": "orin_nx_hailo10_01",
+      "source_addresses": [
+        "<private-source-address>"
+      ],
+      "accepted_captures": 20,
+      "model_ids": [
+        "thesis-v49-historical19v-conditional-orin_nx_hailo10_01"
+      ],
+      "full_capture": {
+        "captures_with_scope": 20,
+        "rows": 7543744,
+        "nominal_current_min_A": 0.7256846868939388,
+        "nominal_current_max_A": 3.597690491268979,
+        "encoded_min": 723,
+        "encoded_max": 3603,
+        "nominal_values_outside_model_domain": 6,
+        "nominal_support_outside_model_domain_s": null
+      },
+      "target_interval": {
+        "captures_with_scope": 19,
+        "rows": 2282574,
+        "nominal_current_min_A": 0.8573182862611282,
+        "nominal_current_max_A": 3.597690491268979,
+        "encoded_min": 855,
+        "encoded_max": 3603,
+        "nominal_values_outside_model_domain": 6,
+        "nominal_support_outside_model_domain_s": 0.003
+      },
+      "conditional_boundary_hull": {
+        "captures_with_scope": 19,
+        "rows": 2319976,
+        "nominal_current_min_A": 0.8204209894688099,
+        "nominal_current_max_A": 3.597690491268979,
+        "encoded_min": 818,
+        "encoded_max": 3603,
+        "nominal_values_outside_model_domain": 6,
+        "nominal_support_outside_model_domain_s": null
+      }
+    },
+    {
+      "setup_id": "orin_nx_hailo8_01",
+      "source_addresses": [
+        "<private-source-address>"
+      ],
+      "accepted_captures": 15,
+      "model_ids": [
+        "thesis-v49-historical19v-conditional-orin_nx_hailo8_01"
+      ],
+      "full_capture": {
+        "captures_with_scope": 15,
+        "rows": 5684672,
+        "nominal_current_min_A": 0.7705597775872989,
+        "nominal_current_max_A": 3.388273401366632,
+        "encoded_min": 768,
+        "encoded_max": 3393,
+        "nominal_values_outside_model_domain": 0,
+        "nominal_support_outside_model_domain_s": null
+      },
+      "target_interval": {
+        "captures_with_scope": 15,
+        "rows": 1800547,
+        "nominal_current_min_A": 0.8303932318451122,
+        "nominal_current_max_A": 3.3493816560990535,
+        "encoded_min": 828,
+        "encoded_max": 3354,
+        "nominal_values_outside_model_domain": 0,
+        "nominal_support_outside_model_domain_s": 0.0
+      },
+      "conditional_boundary_hull": {
+        "captures_with_scope": 15,
+        "rows": 1827355,
+        "nominal_current_min_A": 0.7964876077656847,
+        "nominal_current_max_A": 3.3493816560990535,
+        "encoded_min": 794,
+        "encoded_max": 3354,
+        "nominal_values_outside_model_domain": 0,
+        "nominal_support_outside_model_domain_s": null
+      }
+    }
+  ]
+}

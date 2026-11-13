@@ -1,0 +1,19 @@
+model_id,direction,stratum,feature,feature_label,paired_candidate_count,spearman_rho
+resnet50,deepx_m1_to_tensorrt,ResNet50 / DeepX,cut_mib,Boundary bytes,19,0.9814952199279022
+resnet50,deepx_m1_to_tensorrt,ResNet50 / DeepX,imbalance,50/50 compute imbalance,19,-0.08336990710438683
+resnet50,deepx_m1_to_tensorrt,ResNet50 / DeepX,flops_right,Static Stage-2 compute,19,0.8749452356113017
+resnet50,hailo10h_to_tensorrt,ResNet50 / Hailo-10H,cut_mib,Boundary bytes,19,0.9682675215461247
+resnet50,hailo10h_to_tensorrt,ResNet50 / Hailo-10H,imbalance,50/50 compute imbalance,19,-0.047389210354072515
+resnet50,hailo10h_to_tensorrt,ResNet50 / Hailo-10H,flops_right,Static Stage-2 compute,19,0.8793331254589011
+resnet50,hailo8_to_tensorrt,ResNet50 / Hailo-8,cut_mib,Boundary bytes,19,0.5502722526819506
+resnet50,hailo8_to_tensorrt,ResNet50 / Hailo-8,imbalance,50/50 compute imbalance,19,0.4607284339979271
+resnet50,hailo8_to_tensorrt,ResNet50 / Hailo-8,flops_right,Static Stage-2 compute,19,0.4080737558267355
+yolov7_paper,deepx_m1_to_tensorrt,YOLOv7 / DeepX,cut_mib,Boundary bytes,19,0.9688194618637677
+yolov7_paper,deepx_m1_to_tensorrt,YOLOv7 / DeepX,imbalance,50/50 compute imbalance,19,0.10969724618998264
+yolov7_paper,deepx_m1_to_tensorrt,YOLOv7 / DeepX,flops_right,Static Stage-2 compute,19,0.4098289117657752
+yolov7_paper,hailo10h_to_tensorrt,YOLOv7 / Hailo-10H,cut_mib,Boundary bytes,19,0.9117267465227478
+yolov7_paper,hailo10h_to_tensorrt,YOLOv7 / Hailo-10H,imbalance,50/50 compute imbalance,19,0.12373849370230043
+yolov7_paper,hailo10h_to_tensorrt,YOLOv7 / Hailo-10H,flops_right,Static Stage-2 compute,19,0.40631859988769575
+yolov7_paper,hailo8_to_tensorrt,YOLOv7 / Hailo-8,cut_mib,Boundary bytes,17,0.669939154608308
+yolov7_paper,hailo8_to_tensorrt,YOLOv7 / Hailo-8,imbalance,50/50 compute imbalance,17,0.5759803921568628
+yolov7_paper,hailo8_to_tensorrt,YOLOv7 / Hailo-8,flops_right,Static Stage-2 compute,17,-0.14950980392156862

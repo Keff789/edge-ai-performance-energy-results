@@ -1,0 +1,5 @@
+operation,rule,count_unit
+Stable Softmax,6L - 3,per reduction vector
+ReduceMax,2(L - 1),per reduction vector
+Integer Mod,1,per output element
+TopK reference,"3 * sum(N - j - 1, j=0,...,K-1)",per vector

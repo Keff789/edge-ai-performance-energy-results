@@ -1,0 +1,42 @@
+{
+  "model": "regnet_x_1_6gf",
+  "split_uid": "native|regnet_x_1_6gf|H10|hailo10h_to_trt|b123",
+  "full_uid": "native|regnet_x_1_6gf|DeepX|native_full_deepx|full",
+  "status": "bestätigt",
+  "scope": "new offline numerical analysis on already selected historical winner pair; conditional on selection, no simultaneous coverage correction",
+  "n_images": 5000,
+  "B": 1000,
+  "seed": 8031105015106305293,
+  "components": {
+    "top1_accuracy": {
+      "full": 0.787,
+      "split": 0.7916,
+      "delta_split_minus_full": 0.0045999999999999375,
+      "percentile_95_low": -0.0010000000000000009,
+      "percentile_95_high": 0.010599999999999943,
+      "delta_percentage_points": 0.45999999999999375,
+      "low_percentage_points": -0.10000000000000009,
+      "high_percentage_points": 1.0599999999999943
+    }
+  },
+  "inputs": [
+    {
+      "uid": "native|regnet_x_1_6gf|DeepX|native_full_deepx|full",
+      "path": "external-sha256:e968b425adf58b88363071c8039b88654c36d891faf188c097471d50c0c09811",
+      "sha256": "e968b425adf58b88363071c8039b88654c36d891faf188c097471d50c0c09811"
+    },
+    {
+      "uid": "native|regnet_x_1_6gf|H10|hailo10h_to_trt|b123",
+      "path": "external-sha256:0b468c36a537e9f4b9a5aefc4f3a155ef7ade46cb526bb51da590c4e309e6ff4",
+      "sha256": "0b468c36a537e9f4b9a5aefc4f3a155ef7ade46cb526bb51da590c4e309e6ff4"
+    }
+  ],
+  "exact_image_ids_paired": true,
+  "ground_truth_equal": true,
+  "historical_point_max_abs_difference": 0.0,
+  "elapsed_s": 0.02174229989759624,
+  "plan_path": "archive:evidence/history_quality/regnet_x_1_6gf/frozen_plan.json",
+  "plan_sha256": "b6944a451ade72ceca73abb7b62ab206561a58c25ba706fe545c088a0f05a0b7",
+  "bootstrap_values_sha256": "26a3537eaa73702b9ff7acf480c24fda7d67c0f8497b89accd280f5389252b6b",
+  "cpu_relative_intervals_subtracted": false
+}

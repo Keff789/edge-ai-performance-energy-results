@@ -1,0 +1,166 @@
+{
+  "archive": {
+    "members": [
+      {
+        "member": "ONNX-Splitpoint-Tool_v2.94.0_db729b9fcde00e4bcadf9200d43282977d7bf1cc/onnx_splitpoint_tool/workflow/runner.py",
+        "role": "Fallback formula, MB/MiB field creation, positive-cut-byte pool and H10 target priority; lines30625-30738",
+        "sha256": "3960cbebcb77c162079ba63f40b2af1f8c720b54d78ec81ac2d0032660a2b5f9"
+      },
+      {
+        "member": "ONNX-Splitpoint-Tool_v2.94.0_db729b9fcde00e4bcadf9200d43282977d7bf1cc/onnx_splitpoint_tool/objective_scoring.py",
+        "role": "Byte-identical to frozen d164aad6 pure objective definitions",
+        "sha256": "eec1c00d9b92c3233ed84dc08a5219c32504280b5969342bb0a1fc260e241903"
+      },
+      {
+        "member": "ONNX-Splitpoint-Tool_v2.94.0_db729b9fcde00e4bcadf9200d43282977d7bf1cc/onnx_splitpoint_tool/ranking_methods.py",
+        "role": "Byte-identical to frozen d164aad6 ranking definitions",
+        "sha256": "4e724317d91713f50d0561fc6cc4b6d5359bf0f4587b89adaca3f33f7fca3385"
+      },
+      {
+        "member": "ONNX-Splitpoint-Tool_v2.94.0_db729b9fcde00e4bcadf9200d43282977d7bf1cc/onnx_splitpoint_tool/units.py",
+        "role": "Unit conversion definitions",
+        "sha256": "a71401a5cab39dc37d5538ae030ba5d0f29d60e05633738963dd4ba6ca804441"
+      },
+      {
+        "member": "ONNX-Splitpoint-Tool_v2.94.0_db729b9fcde00e4bcadf9200d43282977d7bf1cc/onnx_splitpoint_tool/system_model.py",
+        "role": "Physical-dimension GUI model, distinct from workflow fallback",
+        "sha256": "9c48090e9a419879f39034642773be8acf8619d9d59f396bc2ba08d001ca8677"
+      }
+    ],
+    "path": "software/ONNX-Splitpoint-Tool_v2.94.0_db729b9fcde00e4bcadf9200d43282977d7bf1cc_source.tar.gz"
+  },
+  "current_published_tool": {
+    "binding": "read-only origin/main fetch on2026-10-20 matches included archive commit",
+    "origin_main_commit": "db729b9fcde00e4bcadf9200d43282977d7bf1cc",
+    "repository": "https://github.com/Keff789/ONNX-Splitpoint-Tool",
+    "version": "2.94.0",
+    "working_tree_unchanged": true
+  },
+  "historical_source_binding": {
+    "canonical_result_input_scope": "Complete saved graph candidate features and unchanged historical static method/group exports; not current 450 deployments",
+    "execution_attribution": "The d164aad6 binding identifies copied pure method definitions used by the published posthoc scorer. Later source equivalence and current main do not independently establish historical analyzer execution.",
+    "historical_original_results_commit": "fc57876b0a6ba69e90723e3a9209b72b36cbaa51",
+    "study": "THESIS20 post-hoc frozen method comparison 2026-10-05",
+    "tool_definition_commit": "d164aad6d7c7ef68c1b371c49a1fdea0a3b27dd7",
+    "tool_definition_version": "2.92.0"
+  },
+  "local_tool_observation": {
+    "files": [
+      {
+        "observed_status": "present_untracked_at_local_HEAD; different from frozen objective module",
+        "path": "onnx_splitpoint_tool/objective_scoring.py",
+        "role": "read_only_observation; not a reproduction dependency; not historical execution proof",
+        "sha256": "4edb4183575288204f396dc9259416cf79f5c8225b3ad6c0e1f9a96a8631972e"
+      },
+      {
+        "observed_status": "absent",
+        "path": "onnx_splitpoint_tool/ranking_methods.py",
+        "role": "read_only_observation; not a reproduction dependency; not historical execution proof",
+        "sha256": null
+      },
+      {
+        "observed_status": "present_modified_from_local_HEAD",
+        "path": "onnx_splitpoint_tool/system_model.py",
+        "role": "read_only_observation; not a reproduction dependency; not historical execution proof",
+        "sha256": "9c48090e9a419879f39034642773be8acf8619d9d59f396bc2ba08d001ca8677"
+      },
+      {
+        "observed_status": "present_identical_to_frozen_method_core",
+        "path": "onnx_splitpoint_tool/units.py",
+        "role": "read_only_observation; not a reproduction dependency; not historical execution proof",
+        "sha256": "a71401a5cab39dc37d5538ae030ba5d0f29d60e05633738963dd4ba6ca804441"
+      }
+    ],
+    "local_HEAD": "78644e639b71797c8b822fd9296f3cb8d90bfd20",
+    "repository": "https://github.com/Keff789/ONNX-Splitpoint-Tool",
+    "working_tree": "pre-existing foreign modified and untracked files; read-only"
+  },
+  "reproduction_inputs": [
+    {
+      "historical_status": "frozen_public_THESIS20_posthoc_method_projection",
+      "path": "results/supplementary-studies/thesis20-ranking-20261005/inputs/method_graph_features.csv",
+      "role": "Frozen original complete graph-candidate universe; sole numerical feature input",
+      "sha256": "570bcdc9b2986c6c6df42b73c98a3234382e331a48db9fae3da54bc2d9c0260f"
+    },
+    {
+      "historical_status": "frozen_public_THESIS20_posthoc_method_projection",
+      "path": "results/supplementary-studies/thesis20-ranking-20261005/inputs/method_parameters.json",
+      "role": "Original weights, unavailable SystemSpecs, metadata hashes and graph-universe sizes",
+      "sha256": "c04c39464973ed03c491aace59933e0a34f1f765c80f7ad7414a8571a59dbff0"
+    },
+    {
+      "historical_status": "frozen_public_THESIS20_posthoc_method_projection",
+      "path": "results/supplementary-studies/thesis20-ranking-20261005/inputs/method_candidate_scores.csv",
+      "role": "Historical score regression oracle only; variant never takes these scores as its calculation input",
+      "sha256": "98c523f4f06f2ebfe8feba065806b9acf32c973b0eec4a1a8c6135db0fc8868b"
+    },
+    {
+      "historical_status": "frozen_public_THESIS20_posthoc_method_projection",
+      "path": "results/supplementary-studies/thesis20-ranking-20261005/tables/method_groups.csv",
+      "role": "Exact previously published subset memberships, group identity and historical-selection regression oracle",
+      "sha256": "ac9417b33cadb77305a4b9577517de53ff0df027f205b343931d8ff155396e50"
+    },
+    {
+      "historical_status": "frozen_public_THESIS20_posthoc_method_projection",
+      "path": "results/supplementary-studies/thesis20-ranking-20261005/inputs/method_code_provenance.json",
+      "role": "Recorded method-definition source commit and per-file hashes",
+      "sha256": "b6196f969c1ba6b6ba8c11f7644152842c8ff7b452872c54857dedd201bab452"
+    },
+    {
+      "historical_status": "frozen_public_THESIS20_posthoc_method_projection",
+      "path": "results/supplementary-studies/thesis20-ranking-20261005/README.md",
+      "role": "Study scope and historical source mapping",
+      "sha256": "aa86164f00de2ab26ed957f1878df1610739757614a3f60e671e753ff205e7dd"
+    },
+    {
+      "historical_status": "frozen_public_THESIS20_posthoc_method_projection",
+      "path": "results/supplementary-studies/thesis20-ranking-20261005/scripts/method_core/__init__.py",
+      "role": "Pure package initializer",
+      "sha256": "5af197b5267e9baae1727da5d9bca8dd9c020e9f3376719a81cde882d5172c82"
+    },
+    {
+      "historical_status": "frozen_public_THESIS20_posthoc_method_projection",
+      "path": "results/supplementary-studies/thesis20-ranking-20261005/scripts/method_core/objective_scoring.py",
+      "role": "Pure historical fit and objective formula implementation",
+      "sha256": "eec1c00d9b92c3233ed84dc08a5219c32504280b5969342bb0a1fc260e241903"
+    },
+    {
+      "historical_status": "frozen_public_THESIS20_posthoc_method_projection",
+      "path": "results/supplementary-studies/thesis20-ranking-20261005/scripts/method_core/ranking_methods.py",
+      "role": "Pure historical ranking, normalization, tie and missing-model definitions",
+      "sha256": "4e724317d91713f50d0561fc6cc4b6d5359bf0f4587b89adaca3f33f7fca3385"
+    },
+    {
+      "historical_status": "frozen_public_THESIS20_posthoc_method_projection",
+      "path": "results/supplementary-studies/thesis20-ranking-20261005/scripts/method_core/units.py",
+      "role": "Decimal/binary unit multipliers",
+      "sha256": "a71401a5cab39dc37d5538ae030ba5d0f29d60e05633738963dd4ba6ca804441"
+    },
+    {
+      "historical_status": "frozen_public_THESIS20_posthoc_method_projection",
+      "path": "results/supplementary-studies/thesis20-ranking-20261005/scripts/method_core/system_model.py",
+      "role": "Separate parameterized GUI system model",
+      "sha256": "9c48090e9a419879f39034642773be8acf8619d9d59f396bc2ba08d001ca8677"
+    },
+    {
+      "historical_status": "later_source_formula_evidence_not_execution_attribution",
+      "path": "software/ONNX-Splitpoint-Tool_v2.94.0_db729b9fcde00e4bcadf9200d43282977d7bf1cc_source.tar.gz",
+      "role": "Published current origin/main full source archive, retained unchanged",
+      "sha256": "47afcaab6c61a7a289a4c6cea395a8679668efcda2f747ed5e126bed499dddb7"
+    },
+    {
+      "historical_status": "frozen_public_THESIS20_posthoc_method_projection",
+      "path": "results/supplementary-studies/thesis20-ranking-20261005/scripts/evaluate_methods.py",
+      "role": "Historical exact group eligibility n>=3 and deterministic method-order rules",
+      "sha256": "9a90338aa1aaf894ea239fb8d1ff5b11bc1c31af49dab0ba8a7cf34b029e07c2"
+    }
+  ],
+  "schema": "thesis-v53/score-source-bindings-v1",
+  "variant": {
+    "baseline": "historical_decimal_mb_input_d164aad6",
+    "frozen": "All graph fields, exact candidate membership, historical H10-to-TensorRT profile, fitted coefficients, full-model normalization and boundary/case tie rules remain unchanged.",
+    "id": "binary_mib_input_v1",
+    "one_change": "Temporary objective input slot cut_mb_val is supplied cut_bytes/1048576 instead of cut_bytes/1000000. No historical file is modified.",
+    "scope": "Fit-score and objective handover/stream-score sensitivity plus unmodified bytes/weighted/bottleneck controls."
+  }
+}

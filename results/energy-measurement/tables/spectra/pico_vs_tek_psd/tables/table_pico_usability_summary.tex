@@ -1,0 +1,65 @@
+\begin{table}[tbp]
+\centering
+\small
+\caption{Descriptive setup agreement, not an absolute accuracy, coherence, or transfer-function test. Low band is separately normalised at the configured nominal bandwidth. Part 1/2.}
+\label{tab:journal-table-pico-usability-summary-1}
+\begingroup
+\setbox0=\hbox{%
+\begin{tabular}{llllll}
+\toprule
+Workload & Signal & Basis & Max CDF diff (pp) & Low-band CDF diff (pp) & Pico/Tek variance (dB) \\
+\midrule
+GEMM-FP32 & current & active & 12.623 & 0.866 & -0.693 \\
+GEMM-INT8 & current & active & 31.314 & 2.971 & -2.414 \\
+YOLO-FP32 & current & active & 22.248 & 2.531 & -1.616 \\
+YOLO-INT8 & current & active & 20.401 & 2.416 & -1.505 \\
+Gemma3-4B & current & active & 16.671 & 0.339 & -0.907 \\
+ResNet-50 FP32 & current & active & 19.715 & 1.771 & -1.292 \\
+GEMM-FP32 & current & excess & 12.179 & 0.869 & -0.669 \\
+GEMM-INT8 & current & excess & 30.637 & 2.993 & -2.344 \\
+YOLO-FP32 & current & excess & 21.641 & 2.540 & -1.564 \\
+YOLO-INT8 & current & excess & 19.868 & 2.424 & -1.459 \\
+Gemma3-4B & current & excess & 16.069 & 0.349 & -0.872 \\
+ResNet-50 FP32 & current & excess & 19.106 & 1.776 & -1.248 \\
+GEMM-FP32 & power & active & 12.563 & 0.870 & -0.689 \\
+GEMM-INT8 & power & active & 31.287 & 2.976 & -2.411 \\
+YOLO-FP32 & power & active & 22.218 & 2.511 & -1.613 \\
+YOLO-INT8 & power & active & 20.371 & 2.387 & -1.502 \\
+Gemma3-4B & power & active & 16.629 & 0.339 & -0.904 \\
+ResNet-50 FP32 & power & active & 19.680 & 1.758 & -1.288 \\
+GEMM-FP32 & power & excess & 12.115 & 0.872 & -0.664 \\
+GEMM-INT8 & power & excess & 30.600 & 2.998 & -2.340 \\
+YOLO-FP32 & power & excess & 21.607 & 2.520 & -1.561 \\
+YOLO-INT8 & power & excess & 19.835 & 2.395 & -1.455 \\
+\bottomrule
+\end{tabular}}
+\ifdim\wd0>\linewidth
+\resizebox{\linewidth}{!}{\box0}
+\else
+\box0
+\fi
+\endgroup
+\end{table}
+
+\begin{table}[tbp]
+\centering
+\small
+\caption{Descriptive setup agreement, not an absolute accuracy, coherence, or transfer-function test. Low band is separately normalised at the configured nominal bandwidth. Part 2/2.}
+\label{tab:journal-table-pico-usability-summary-2}
+\begingroup
+\setbox0=\hbox{%
+\begin{tabular}{llllll}
+\toprule
+Workload & Signal & Basis & Max CDF diff (pp) & Low-band CDF diff (pp) & Pico/Tek variance (dB) \\
+\midrule
+Gemma3-4B & power & excess & 16.023 & 0.349 & -0.868 \\
+ResNet-50 FP32 & power & excess & 19.066 & 1.764 & -1.243 \\
+\bottomrule
+\end{tabular}}
+\ifdim\wd0>\linewidth
+\resizebox{\linewidth}{!}{\box0}
+\else
+\box0
+\fi
+\endgroup
+\end{table}

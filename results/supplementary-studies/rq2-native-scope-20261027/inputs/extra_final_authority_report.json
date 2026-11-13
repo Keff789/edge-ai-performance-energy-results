@@ -1,0 +1,92 @@
+{
+  "CPU_adapter_v1_superseded_unused_preserved": true,
+  "H10_b038_pending_reason": "Old N5000 post-NMS records do not represent latest measured fixedTopK300 materialization without host NMS; discarded candidates cannot be reconstructed.",
+  "H10_standalone_source_catalogue_and_capacity_receipt": {
+    "sha256": "d514b4f33f375858a30f045461d430859304017a75dfacdeeaae47020f11d509",
+    "size_bytes": 3988
+  },
+  "Native_Full_energy_RQ1_case_and_fixed420_modified": false,
+  "actual_DeepX_b044_quality_authority": {
+    "sha256": "02ef3926c2585eff13eaf1a107d4354f38885196909bd3d93d8977758ec23d09",
+    "size_bytes": 18839
+  },
+  "extra_target_pairs": 12,
+  "hardware_or_new_model_inference_or_build_executed_here": false,
+  "historical_Native_cross_backend_quality_transfer_flags_preserved_false_for": [
+    "generic|yolo26s|H10|hailo10h_to_trt|b038",
+    "generic|yolov7_paper|DeepX|deepx_to_trt|b044"
+  ],
+  "independent_actual_Generic_quality_reuse_admissions": 1,
+  "known_RQ1_b066_case_scope_check": {
+    "sha256": "7698d3b2fefb783431170535091bf018ce63eef88a249a80eba0f5717cd43633",
+    "size_bytes": 33235
+  },
+  "latest_valid_Generic_FPS_observations": 12,
+  "new_Generic_FPS_required": [],
+  "normal_N5000_plan_index": {
+    "sha256": "45d359174d12b7aeb28c89d23f1c1abe800184a178cda48356eb02d8dd7baf66",
+    "size_bytes": 163382
+  },
+  "normal_extra_scope_CPU_adapter_derivation": {
+    "sha256": "20b58d4d870744466a80434df8549cad94db6beed19cc566c12c7c0e820de98f",
+    "size_bytes": 3266
+  },
+  "normal_extra_scope_CPU_adapter_v2": {
+    "sha256": "c0bc528460a42192adabb3d246081cd623e849b9b6b9972e9a89c8eebcf5c2f1",
+    "size_bytes": 29011
+  },
+  "normal_extra_scope_CPU_caller_derivation": {
+    "sha256": "20b58d4d870744466a80434df8549cad94db6beed19cc566c12c7c0e820de98f",
+    "size_bytes": 3266
+  },
+  "normal_extra_scope_CPU_caller_v2": {
+    "sha256": "4aa0ca4a3e9ebc53bed212e71a7462772e0383964d20c330f4d18bf60e3aeee9",
+    "size_bytes": 8052
+  },
+  "offline_decoder_validation": {
+    "errors": 0,
+    "note": "Earlier setup-only failure retained separately; rerun after output-parent creation passed all50.",
+    "passed": 50,
+    "tests": 50
+  },
+  "ordinary_normal_quality_reuse_admissions": 10,
+  "original_RQ2_Native_population": 204,
+  "pending_fresh_quality_only": [
+    "generic|yolo26s|H10|hailo10h_to_trt|b038"
+  ],
+  "profile_template_assignment_correction": {
+    "sha256": "41932e53a650b40a84b887ce2b449e780de3afe66f78592c32469b0ab18d5d3f",
+    "size_bytes": 1548
+  },
+  "raw_source_copies_preserved": true,
+  "reused_quality_UIDs": [
+    "generic|yolo11l|DeepX|deepx_to_trt|b120",
+    "generic|yolo11l|H10|hailo10h_to_trt|b120",
+    "generic|yolo11l|H8|hailo8_to_trt|b120",
+    "generic|yolo26s|DeepX|deepx_to_trt|b038",
+    "generic|yolo26s|H8|hailo8_to_trt|b038",
+    "generic|yolov7_paper|DeepX|deepx_to_trt|b044",
+    "generic|yolov7_paper|DeepX|deepx_to_trt|b066",
+    "generic|yolov7_paper|H10|hailo10h_to_trt|b044",
+    "generic|yolov7_paper|H10|hailo10h_to_trt|b066",
+    "generic|yolov7_paper|H8|hailo8_to_trt|b044",
+    "generic|yolov7_paper|H8|hailo8_to_trt|b066"
+  ],
+  "schema": "rq2-extra12-final-authority-report-v1",
+  "selected_UIDs": [
+    "generic|yolo11l|DeepX|deepx_to_trt|b120",
+    "generic|yolo11l|H10|hailo10h_to_trt|b120",
+    "generic|yolo11l|H8|hailo8_to_trt|b120",
+    "generic|yolo26s|DeepX|deepx_to_trt|b038",
+    "generic|yolo26s|H10|hailo10h_to_trt|b038",
+    "generic|yolo26s|H8|hailo8_to_trt|b038",
+    "generic|yolov7_paper|DeepX|deepx_to_trt|b044",
+    "generic|yolov7_paper|DeepX|deepx_to_trt|b066",
+    "generic|yolov7_paper|H10|hailo10h_to_trt|b044",
+    "generic|yolov7_paper|H10|hailo10h_to_trt|b066",
+    "generic|yolov7_paper|H8|hailo8_to_trt|b044",
+    "generic|yolov7_paper|H8|hailo8_to_trt|b066"
+  ],
+  "selection_rule": "Latest actually completed identity/complete-task compatible source by completion time, never FPS/AP/outcome.",
+  "total_quality_reuse_admissions": 11
+}

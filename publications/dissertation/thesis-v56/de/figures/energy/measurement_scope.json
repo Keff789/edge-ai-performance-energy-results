@@ -1,0 +1,2624 @@
+{
+  "figure": "measurement_scope",
+  "language": "de",
+  "scope": "Two principal acquisition campaigns and three separate reference/control cohorts. Not a complete count of all historical energy experiments.",
+  "counting_unit": "One physical benchmark execution with a valid final-window outcome. Multiple sensors and numerical reanalyses are not added.",
+  "counts": {
+    "rate_runs": 4842,
+    "rate_groups": 323,
+    "duration_runs": 1472,
+    "duration_groups": 100,
+    "reference_runs": 59,
+    "controlled_rate_runs": 12,
+    "pause_runs": 6
+  },
+  "rate_groups": [
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 50,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 85,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 150,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 240,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 680,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 1200,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 2000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 3300,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 5500,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 9400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 16000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 27000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 45000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 80000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 125000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 160000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 400000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 625000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 800000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 1000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 1250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 2000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 2500000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 4000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "rate_sps": 5000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 50,
+      "n_valid": 12
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 85,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 150,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 240,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 680,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 1200,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 2000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 3300,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 5500,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 9400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 16000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 27000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 45000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 80000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 125000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 160000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 400000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 625000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 800000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 1000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 1250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 2000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 2500000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 4000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "llm",
+      "rate_sps": 5000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 50,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 85,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 150,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 240,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 680,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 1200,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 2000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 3300,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 5500,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 9400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 16000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 27000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 45000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 80000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 125000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 160000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 400000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 625000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 800000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 1000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 1250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 2000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 2500000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 4000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 5000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 50,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 85,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 150,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 240,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 680,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 1200,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 2000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 3300,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 5500,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 9400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 16000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 27000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 45000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 80000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 125000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 160000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 400000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 625000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 800000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 1000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 1250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 2000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 2500000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 4000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "rate_sps": 5000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 50,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 85,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 150,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 240,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 680,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 1200,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 2000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 3300,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 5500,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 9400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 16000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 27000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 45000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 80000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 125000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 160000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 400000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 625000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 800000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 1000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 1250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 2000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 2500000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 4000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "rate_sps": 5000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 50,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 85,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 150,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 240,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 680,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 1200,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 2000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 3300,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 5500,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 9400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 16000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 27000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 45000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 80000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 125000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 160000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 400000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 625000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 800000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 1000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 1250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 2000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 2500000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 4000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "rate_sps": 5000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 50,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 85,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 150,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 240,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 680,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 1200,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 2000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 3300,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 5500,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 9400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 16000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 27000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 45000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 80000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 125000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 160000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 400000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 625000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 800000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 1000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 1250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 2000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 2500000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 4000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "rate_sps": 5000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 50,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 85,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 150,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 240,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 680,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 1200,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 2000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 3300,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 5500,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 9400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 16000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 27000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 45000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 80000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 125000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 160000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 400000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 625000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 800000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 1000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 1250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 2000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 2500000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 4000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "llm",
+      "rate_sps": 5000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 50,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 85,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 150,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 240,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 680,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 1200,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 2000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 3300,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 5500,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 9400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 16000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 27000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 45000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 80000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 125000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 160000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 400000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 625000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 800000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 1000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 1250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 2000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 2500000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 4000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "rate_sps": 5000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 50,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 85,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 150,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 240,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 680,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 1200,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 2000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 3300,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 5500,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 9400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 16000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 27000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 45000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 80000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 125000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 160000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 400000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 625000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 800000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 1000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 1250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 2000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 2500000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 4000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "rate_sps": 5000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 50,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 85,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 150,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 240,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 680,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 1200,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 2000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 3300,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 5500,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 9400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 16000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 27000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 45000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 80000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 125000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 400000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 625000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 800000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 1000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 1250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 2000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 2500000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 4000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "rate_sps": 5000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 50,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 85,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 150,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 240,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 680,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 1200,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 2000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 3300,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 5500,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 9400,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 16000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 27000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 45000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 80000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 125000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 160000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 400000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 625000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 800000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 1000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 1250000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 2000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 2500000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 4000000,
+      "n_valid": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "rate_sps": 5000000,
+      "n_valid": 15
+    }
+  ],
+  "duration_groups": [
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "requested_s": 5,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "requested_s": 10,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "requested_s": 20,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "requested_s": 50,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "requested_s": 100,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "requested_s": 200,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "requested_s": 300,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "requested_s": 400,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "requested_s": 500,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "gemm",
+      "requested_s": 600,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "requested_s": 5,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "requested_s": 10,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "requested_s": 20,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "requested_s": 50,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "requested_s": 100,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "requested_s": 200,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "requested_s": 300,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "requested_s": 400,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "requested_s": 500,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "random_pattern_yolo",
+      "requested_s": 600,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "requested_s": 5,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "requested_s": 10,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "requested_s": 20,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "requested_s": 50,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "requested_s": 100,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "requested_s": 200,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "requested_s": 300,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "requested_s": 400,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "requested_s": 500,
+      "n": 15
+    },
+    {
+      "platform": "Hailo",
+      "slug": "yolo",
+      "requested_s": 600,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "requested_s": 5,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "requested_s": 10,
+      "n": 9
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "requested_s": 20,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "requested_s": 50,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "requested_s": 100,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "requested_s": 200,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "requested_s": 300,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "requested_s": 400,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "requested_s": 500,
+      "n": 12
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp16",
+      "requested_s": 600,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "requested_s": 5,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "requested_s": 10,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "requested_s": 20,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "requested_s": 50,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "requested_s": 100,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "requested_s": 200,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "requested_s": 300,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "requested_s": 400,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "requested_s": 500,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_fp32",
+      "requested_s": 600,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "requested_s": 5,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "requested_s": 10,
+      "n": 6
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "requested_s": 20,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "requested_s": 50,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "requested_s": 100,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "requested_s": 200,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "requested_s": 300,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "requested_s": 400,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "requested_s": 500,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "gemm_int8",
+      "requested_s": 600,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "requested_s": 5,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "requested_s": 10,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "requested_s": 20,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "requested_s": 50,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "requested_s": 100,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "requested_s": 200,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "requested_s": 300,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "requested_s": 400,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "requested_s": 500,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "random_pattern_yolo",
+      "requested_s": 600,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "requested_s": 5,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "requested_s": 10,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "requested_s": 20,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "requested_s": 50,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "requested_s": 100,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "requested_s": 200,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "requested_s": 300,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "requested_s": 400,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "requested_s": 500,
+      "n": 9
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp16",
+      "requested_s": 600,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "requested_s": 5,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "requested_s": 10,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "requested_s": 20,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "requested_s": 50,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "requested_s": 100,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "requested_s": 200,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "requested_s": 300,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "requested_s": 400,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "requested_s": 500,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_fp32",
+      "requested_s": 600,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "requested_s": 5,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "requested_s": 10,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "requested_s": 20,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "requested_s": 50,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "requested_s": 100,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "requested_s": 200,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "requested_s": 300,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "requested_s": 400,
+      "n": 15
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "requested_s": 500,
+      "n": 11
+    },
+    {
+      "platform": "Jetson",
+      "slug": "yolo_int8",
+      "requested_s": 600,
+      "n": 15
+    }
+  ],
+  "sources": {
+    "source_inputs": {
+      "results/energy-measurement/data/tim/final_direct/groups_all_candidates.csv": "81e544394a803daa635011e11828cf1baffc489b7db79c386e90e3b7a3c82b6f",
+      "results/energy-measurement/data/tim/final_direct/paper_window_policy.csv": "5adacf6f3feecd40d0c52be72494c23fc7b2f5e41546df7ed41deefbbc9a777a",
+      "results/energy-measurement/tables/tim/direct_rates.csv": "ce4f54939a727eb7f42cf54e6ee608998c083bf269dbe31d2d3cb6fd3ca8fab9",
+      "results/energy-measurement/tables/tim/duration.csv": "c9d9a4e55b95cde7ad053aca50851fb5fb1a7a1b9d80c383a8eef3ac9a318909",
+      "results/energy-measurement/tables/tim/paired_all_durations.csv": "00317c8db52aed163c05b93a674a907f7d25c318e9add2918d2dc7d365e5bfa2",
+      "results/energy-measurement/data/tim/validation/multi_workload/workload_inventory.csv": "f1ac7130ab9df67d32a82e0dcf3e7ffc3bc7c95bebcfdf80af3381da39303cee",
+      "results/energy-measurement/data/tim/validation/controlled/complementary/data/combined_runs.csv": "0f18ba716c5ed7b32fea1d52af47a5b42cdceeebd896771c3ab5667f8a03ab9e",
+      "results/energy-measurement/data/tim/pause/pause_runs.csv": "d05db661e1df1f353442d9fa5ef843bfd25d78302385fc12b91fbb784ffbefc6"
+    },
+    "counting_unit": "One physical benchmark execution with a valid final-window outcome.",
+    "selection_rules": {
+      "rate_grid": "Series/window from direct_rates.csv, checked against paper_window_policy.csv; pico rows from groups_all_candidates.csv; n counts valid executions.",
+      "duration_grid": "n from duration.csv, independently checked against unique (platform, slug, series, window, requested_s, record_id) in paired_all_durations.csv.",
+      "reference": "Sum of common_rate_valid_pairs for include_in_paper and common_reference_ready rows in workload_inventory.csv; each instrument pair counts once.",
+      "rate_control": "Unique (session, index) rows in combined_runs.csv.",
+      "pause_control": "Rows in pause_runs.csv with conditioning=False."
+    },
+    "counts": {
+      "rate_groups": 323,
+      "rate_runs_valid": 4842,
+      "rate_runs_reported": 4845,
+      "duration_groups": 100,
+      "duration_runs": 1472,
+      "duration_sensor_comparisons": 4416
+    },
+    "supplementary_cohorts": {
+      "reference_runs": 59,
+      "reference_instrument_traces": 118,
+      "controlled_rate_runs": 12,
+      "pause_runs_evaluated": 6,
+      "pause_conditioning_runs_excluded": 1
+    },
+    "reference_by_calculation": [
+      {
+        "workload_id": "gemmfp32",
+        "common_rate_valid_pairs": 10
+      },
+      {
+        "workload_id": "gemmint8",
+        "common_rate_valid_pairs": 10
+      },
+      {
+        "workload_id": "yolofp32",
+        "common_rate_valid_pairs": 10
+      },
+      {
+        "workload_id": "yoloint8",
+        "common_rate_valid_pairs": 10
+      },
+      {
+        "workload_id": "gemma3-4b",
+        "common_rate_valid_pairs": 10
+      },
+      {
+        "workload_id": "resnet50",
+        "common_rate_valid_pairs": 9
+      }
+    ],
+    "overlap_policy": "The 15 long-interval FP16 traces, 30 Hailo spectral traces, and 225 fixed-window reanalyses are subsets of the rate campaign and are not counted again. No overall total across campaigns is claimed.",
+    "measurement_statistics_recomputed": false,
+    "processing": "Inventory filtering, execution-ID deduplication, integer count aggregation, and consistency checks only."
+  },
+  "display_label_sources": {
+    "Jetson/llm": "Gemma3-12B is identified in the dissertation excerpt supplied by the user. Repository CSVs label this series llm."
+  }
+}

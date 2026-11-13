@@ -1,0 +1,32 @@
+{
+  "scope": "Only costs added by analytic-operation-proxy-r29-extended-v1 are scaled. Graph identities, measurements, communication sizes and previous operation counts remain fixed.",
+  "weights": "Use exact main-run default, frozen shared, pooled and each held-out fold weights without refitting.",
+  "reports": [
+    {
+      "variant": "new_ops_x0_1",
+      "checked_groups": 21,
+      "checked_methods": [
+        "weighted_default",
+        "weighted_shared",
+        "weighted_pooled",
+        "weighted_cv"
+      ],
+      "complete_ranking_comparisons": 84,
+      "changed_rankings": [],
+      "result": "unchanged_at_fixed_weights"
+    },
+    {
+      "variant": "new_ops_x10",
+      "checked_groups": 21,
+      "checked_methods": [
+        "weighted_default",
+        "weighted_shared",
+        "weighted_pooled",
+        "weighted_cv"
+      ],
+      "complete_ranking_comparisons": 84,
+      "changed_rankings": [],
+      "result": "unchanged_at_fixed_weights"
+    }
+  ]
+}

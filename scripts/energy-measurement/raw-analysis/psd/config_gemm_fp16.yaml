@@ -1,0 +1,150 @@
+dataset_root: external-measurements/sweep_without_filter/gemm/fp16
+output_root: external-analysis/gemm_fp16_common_reference_psd_v3
+
+reference_rate_sps: 5000000
+reference_rate_directory: 5000000Sps
+analogue_bandwidth_hz: 77000
+
+# Runs 0 and 1 were classified as outliers before the common-trace analysis
+# and were already omitted from the original thesis plots.
+primary_runs: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+sensitivity_runs: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+# v0.3 adds a 1-MS/s representation. Its 500-kHz Nyquist frequency gives the
+# PSD analysis substantially more headroom than the previous 250-kS/s cache.
+cache_rates_sps: [1000000, 250000, 50000, 10000, 2000]
+
+# Directly recorded rates used by the original GEMM-FP16 sweep.
+target_rates_sps:
+  [50, 85, 150, 240, 400, 680, 1200, 2000, 3300, 5500, 9400,
+   16000, 27000, 45000, 80000, 125000, 160000, 250000,
+   400000, 625000, 800000, 1000000, 1250000, 2000000,
+   2500000, 4000000, 5000000]
+
+resampling:
+  quality: VHQ
+  chunk_seconds: 1.0
+  cache_dtype: float32
+  guard_seconds: 3.0
+
+  phase_plan:
+    - max_rate_sps: 2000
+      phases: 64
+    - max_rate_sps: 9400
+      phases: 32
+    - max_rate_sps: null
+      phases: 1
+
+  anti_alias:
+    attenuation_db: 80
+    passband_fraction_of_nyquist: 0.90
+    stopband_fraction_of_nyquist: 1.00
+
+common_trace:
+  reconstruction_modes: [anti_alias, phase_only]
+  fmin_thresholds_pct: [1.0, 2.0, 5.0]
+
+  # Primary phase-only reconstruction now starts from 1 MS/s. This reduces
+  # interpolation smoothing and keeps substantially more pre-existing signal
+  # bandwidth than the former 250-kS/s source.
+  phase_only_source_rate_sps: 1000000
+
+  # Small source-bandwidth sensitivity check for the three paper-relevant
+  # rates. It does not alter the primary common-trace statistics.
+  phase_only_sensitivity_source_rates_sps: [250000]
+  phase_only_sensitivity_target_rates_sps: [50, 150, 2000]
+
+  # Nominal rates above 1 MS/s are transparent bandwidth-saturated anchors.
+  # The 5-MS/s point itself remains the exact archived reference.
+  high_rate_extension:
+    enabled: true
+    source_rate_sps: 1000000
+
+psd:
+  # Primary PSD analysis at 1 MS/s (500-kHz Nyquist).
+  analysis_rate_sps: 1000000
+
+  # Recompute the identical active and idle windows at 250 kS/s and compare
+  # f95/f99 and variance capture with the 1-MS/s primary analysis.
+  sensitivity_rates_sps: [250000]
+  sensitivity_check_rates_sps: [125000, 160000]
+  sensitivity_relative_frequency_tolerance: 0.02
+  sensitivity_variance_fraction_tolerance: 0.01
+  plot_max_points: 50000
+
+  active_duration_s: 10.0
+  idle_duration_s: 4.0
+  idle_gap_s: 0.5
+  segment_duration_s: 1.0
+  overlap_fraction: 0.5
+  cumulative_percentiles: [0.95, 0.99]
+  peak_max_frequency_hz: 10000
+  peak_count: 10
+
+  variance_capture_rates_sps: target_rates
+  variance_capture_thresholds: [0.95, 0.99]
+  highlighted_rates_sps: [2000, 125000, 160000]
+  low_frequency_nyquist_rates_sps: [150, 400, 2000]
+  full_frequency_nyquist_rates_sps: [2000, 125000, 160000]
+
+  variance_bands:
+    - {label: "0–75 Hz", low_hz: 0, high_hz: 75}
+    - {label: "75–200 Hz", low_hz: 75, high_hz: 200}
+    - {label: "200 Hz–1 kHz", low_hz: 200, high_hz: 1000}
+    - {label: "1–5 kHz", low_hz: 1000, high_hz: 5000}
+    - {label: "5–10 kHz", low_hz: 5000, high_hz: 10000}
+    - {label: "10–20 kHz", low_hz: 10000, high_hz: 20000}
+    - {label: "20–40 kHz", low_hz: 20000, high_hz: 40000}
+    - {label: "40–77 kHz", low_hz: 40000, high_hz: 77000}
+    - {label: "77–125 kHz", low_hz: 77000, high_hz: 125000}
+    - {label: "125–250 kHz", low_hz: 125000, high_hz: 250000}
+    - {label: "250–500 kHz", low_hz: 250000, high_hz: 500000}
+
+# Duration-dependent sampling analysis. This separates two questions:
+# (1) sampling-only error for the same physical interval and
+# (2) how long a benchmark command must run before its mean power resembles
+#     the long-run steady-state result.
+duration_sensitivity:
+  enabled: true
+  source_rate_sps: 1000000
+  target_rates_sps:
+    [50, 85, 150, 240, 400, 680, 1200, 2000, 3300, 5500, 9400,
+     16000, 27000, 45000, 80000, 125000, 160000]
+  window_durations_s: [0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 5, 10, 20, 50, 100, 104]
+  windows_per_duration: 16
+  edge_margin_s: 0.5
+  reconstruction_modes: [anti_alias, phase_only]
+  thresholds_pct: [0.1, 0.5, 1.0, 2.0, 5.0]
+  highlighted_rate_sps: 2000
+  minimum_samples_per_window: 4
+
+  duration_campaign:
+    enabled: true
+    root: external-measurements/durations_without_filter
+    expected_durations_s: [5, 10, 20, 50, 100, 200, 300, 400, 500, 600]
+    reference_duration_s: 600
+    steady_state_tolerance_pct: 3.0
+    urecs_correction_factor: 0.97
+    # The stored duration-campaign firmware energies were already produced
+    # after the setup-specific 0.97 correction in the historic processing
+    # pipeline. Never multiply these values by 0.97 a second time.
+    urecs_values_already_include_correction_factor: true
+    minimum_runs_per_cell: 5
+    use_thesis_fallback: true
+    # Used only when the raw duration tree is unavailable or cannot be parsed.
+    # These are the published thesis summary values, not synthetic raw data.
+    fallback_rows:
+      - {workload: "GEMM FP32", difference_5_to_reference_pct: 47.02, first_duration_within_tolerance_s: 100}
+      - {workload: "GEMM FP16", difference_5_to_reference_pct: 45.35, first_duration_within_tolerance_s: 200}
+      - {workload: "GEMM INT8", difference_5_to_reference_pct: 45.16, first_duration_within_tolerance_s: 200}
+      - {workload: "YOLO FP32", difference_5_to_reference_pct: 20.94, first_duration_within_tolerance_s: 100}
+      - {workload: "YOLO FP16", difference_5_to_reference_pct: 21.71, first_duration_within_tolerance_s: 100}
+      - {workload: "YOLO INT8", difference_5_to_reference_pct: 18.57, first_duration_within_tolerance_s: 50}
+      - {workload: "Variable YOLO", difference_5_to_reference_pct: 17.20, first_duration_within_tolerance_s: 50}
+
+time_trace:
+  run: auto
+  active_center_offset_s: 52.0
+  window_duration_s: 0.03
+  rates_sps: [150, 2000, 250000, 5000000]
+  max_display_points: 20000

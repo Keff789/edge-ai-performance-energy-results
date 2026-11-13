@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\caption{Selection on fixed candidate sets in 21 model/setup groups. Classification groups contain 17--20 candidates; detection groups contain three. YOLOv7 uses historical Generic measurements and the reported final native campaign; the other models retain their archived measurements. Throughput loss is relative to the native winner. Energy excess uses the 18 groups with matched energy evidence, excluding YOLOv7. Each group has equal weight.}
+\label{tab:selectors}
+\centering\small
+\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Native Top1 hits} & \multicolumn{2}{c}{Throughput loss $L_R$ (\%)} & Mean energy\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-6}
+Selector & All /21 & Class. /9 & Detect. /12 & Median & Mean & excess /18 (\%)\\
+\midrule
+Smallest boundary bytes (\cutbytes) & 6 & 0 & 6 & 3.77 & 25.28 & 55.09\\
+Historical weighted score (\weighted) & 6 & 0 & 6 & 13.79 & 17.28 & 24.57\\
+Stored H10 accelerator fit (\hardware) & 6 & 0 & 6 & 12.81 & 19.65 & 32.02\\
+Heuristic cycle without handover (\cycle) & 6 & 0 & 6 & 13.79 & 17.28 & 24.57\\
+Stored streaming rate (\stream) & 7 & 0 & 7 & 9.25 & 17.42 & 24.57\\
+Measured \generic{} completion & 11 & 3 & 8 & 0.00 & 12.74 & 28.07\\
+\bottomrule
+\end{tabular}
+\end{table*}

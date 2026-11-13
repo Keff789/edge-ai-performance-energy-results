@@ -1,0 +1,22 @@
+{
+  "policy": "The newest available local v3.3 paper generator and later partial420 adapter were reviewed. Their exact original artifact binding, measured source preservation, raw/published-rate distinction and frozen method policy informed the final offline pair adapter. They predate the final359-FPS snapshot and are not used as measurement authority.",
+  "reviewed": [
+    {
+      "artifact": "reviews/figures/v3_3/generate_abc.py",
+      "sha256": "0904c04b0813e148b9dc25733003926a0eb3a544f7b03d63423fe3142c6b3d3f"
+    },
+    {
+      "artifact": "reviews/figures/v3_3/historical_h8.py",
+      "sha256": "6f4171080d9aa2e75a85de20ba5dd2a2c2250a7b5119b842add23554101c5295"
+    },
+    {
+      "artifact": "results/partial420_classifiers_v1/source/prepare_inputs.py",
+      "sha256": "29177cb5bf18ba9f89a04d4977b780f29b708f351ff6f990cdce70aa8f8f591a"
+    },
+    {
+      "artifact": "results/partial420_classifiers_v1/METHOD_AUTHORITY.json",
+      "sha256": "7dd02d9a2f7b88a3c1834e3efc1fe79385fe487b38e463d8ddf77748494b4431"
+    }
+  ],
+  "schema": "rq2-local-adapter-review-v1"
+}

@@ -1,0 +1,45 @@
+{
+  "caption": "Native throughput loss using 159 verified quality-eligible pairs in 13 model/device groups. Generic uses the final measurement snapshot. Default, shared and model-held-out graph weights and full graph normalizations are frozen from the prior study; no refit. Every group has equal weight and tests min(k,n) candidates. This is a retrospective paired subset, not all 420 Generic candidates.",
+  "rows": [
+    {
+      "groups": 13,
+      "label": "Bytes",
+      "loss_k1_pct": 23.070948650636925,
+      "loss_k3_pct": 15.055958795772039,
+      "loss_k5_pct": 6.135530625703206,
+      "method": "bytes"
+    },
+    {
+      "groups": 13,
+      "label": "Generic",
+      "loss_k1_pct": 2.1592394401146824,
+      "loss_k3_pct": 0.4212558573842498,
+      "loss_k5_pct": 0.0,
+      "method": "generic"
+    },
+    {
+      "groups": 13,
+      "label": "Weighted (default)",
+      "loss_k1_pct": 18.41284407712689,
+      "loss_k3_pct": 16.17681949522799,
+      "loss_k5_pct": 11.900750863258915,
+      "method": "weighted_default"
+    },
+    {
+      "groups": 13,
+      "label": "Weighted (frozen shared)",
+      "loss_k1_pct": 22.282156499367304,
+      "loss_k3_pct": 8.212976215109503,
+      "loss_k5_pct": 4.776365401164011,
+      "method": "weighted_pooled"
+    },
+    {
+      "groups": 13,
+      "label": "Weighted (frozen model held-out)",
+      "loss_k1_pct": 25.669642536713695,
+      "loss_k3_pct": 18.321129463910438,
+      "loss_k5_pct": 7.914897026145669,
+      "method": "weighted_cv"
+    }
+  ]
+}

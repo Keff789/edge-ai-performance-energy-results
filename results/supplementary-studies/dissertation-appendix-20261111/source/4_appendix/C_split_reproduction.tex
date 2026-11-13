@@ -1,0 +1,170 @@
+\section{Details zur Reproduktion der Split-Inferenz}
+\label{app:split_reproduction}
+
+Dieser Anhang enthält die Einstellungen, die zur Interpretation und Reproduktion der Split-Inferenz-Analysen erforderlich sind. Anhang~\ref{app:evidence_availability} ordnet die numerischen Eingaben den Reproduktionsbefehlen zu. Die Ergebnisse zum Einsatzvergleich, zur Auswahl des Ausführungsmoduls und zur Auswahl des Graphen basieren auf der unten beschriebenen gemeinsamen Kampagne.
+
+\subsection{Aufzeichnungen zur Experimentkonfiguration und -durchführung}
+\label{app:split_records}
+
+Tabelle~\ref{tab:benchmarking:final_backend_contract} fasst die erfassten Plattformbeobachtungen, die installierte Software und die Ausführungseinstellungen für die drei Konfigurationen zusammen. Die Softwarebestandsaufnahme erfolgte am 18. Oktober 2026. Die Beobachtungen zu Leistungsprofil, Taktfrequenz und PCIe stammen aus den aufgezeichneten YOLOv7-Plattformprüfungen. Kompilierte Artefakte behalten ihre eigene Identität. Eine installierte Compiler-Version wird nicht herangezogen, um die Version abzuleiten, mit der jedes Artefakt ursprünglich erstellt wurde~\cite{edgeAIResults2026,v49Confirmation2026}.
+
+\begin{table}[!htb]
+\centering\small\TableSetup
+\caption{Aufgezeichnete Einrichtungs- und Laufzeiteinstellungen. Gemeinsame Zeilen gelten für alle drei Hosts; Anforderungs- und Worker-Limits beschreiben Generic. Takt- und Verbindungswerte sind Plattformbeobachtungen und keine kontinuierlichen Aufzeichnungen jedes Durchlaufs.}
+\label{tab:benchmarking:final_backend_contract}
+\begin{tabularx}{\linewidth}{@{}L{3.0cm}Y Y Y@{}}
+\toprule
+Einstellung & H8 & H10 & DeepX \\
+\midrule
+Host & \multicolumn{3}{l}{Jetson Orin NX, 16~GB} \\
+L4T / TensorRT & \multicolumn{3}{l}{36.4.7 / 10.3.0.30} \\
+Beobachtetes Profil & \multicolumn{3}{l}{\texttt{MAXN\_SUPER}} \\
+Beobachtete CPU / GPU & \multicolumn{3}{l}{1984 / 1173~MHz} \\
+Beobachtete PCIe-Verbindung & \multicolumn{3}{l}{\num{8.0}~GT/s, $\times4$} \\
+Beschleuniger & Hailo-8 & Hailo-10H & DX-M1 \\
+Installierte Laufzeitumgebung & HailoRT 4.20.0 & HailoRT 5.3.0 & DX-RT 3.3.2 \\
+Firmware-Snapshot & 4.20.0 & 5.3.0 & 2.5.6 \\
+Installierter Compiler & DFC 3.33.1 & DFC 5.3.0 & DX-COM 2.3.0 \\
+Generic-Anfragen & 1 & 8 & 4 \\
+Worker / Warteschlange & \multicolumn{3}{l}{2 Worker / Warteschlangenlimit 2} \\
+Batch / Wiederholungen & \multicolumn{3}{l}{1 / 3 unabhängige Prozesse} \\
+Aufwärmphase / Aufgaben & \multicolumn{3}{l}{100 abgearbeitet / \num{1000} pro Wiederholung} \\
+Energielast & \multicolumn{3}{l}{60~s Aufgabenannahme und Entleerung, drei Wiederholungen} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Die Softwarebestandsaufnahme wird in der Datei \path{inputs/metrology/version_and_precision_bindings.json} im Bestätigungsarchiv gespeichert. Plattformbeobachtungen sind im YOLOv7-Quellbericht enthalten, und die Ausführungseinstellungen liegen den Messprotokollen bei. Die Felder „Trägerrevision“, „Live-Lüfterdrehzahl“ und „ursprüngliche Build-Version“ werden nicht für jede Konfiguration erfasst. Diese Lücken werden getrennt von den gemessenen Durchsatz-, Qualitäts- und Energiewerten geführt.
+
+\subsubsection{Konfigurations- und Ausgabedatensätze}
+\label{app:configuration_records}
+
+Modelldatensätze identifizieren den Graphen, die Eingabe- und Ausgabetensoren, die Klassenabbildung sowie die kompilierten Artefakte. Der Messplan erfasst die Kandidatenauswahl, die Vorverarbeitung, den Abschluss einer Inferenzaufgabe, Wiederholungen und Energieeinstellungen. Die Kalibrierungsbilder sind von den Validierungsbildern getrennt, die zur Messung der Ergebnisqualität verwendet werden. Die Exporte pro Durchlauf speichern die Anzahl der abgeschlossenen Aufgaben und die Zeitfenster, während das Berichtsmanifest die Ergebniszeilen mit ihren Laufzeiteinstellungen und der Kalibrierung verknüpft.
+
+Die Detektoradapter verarbeiten ankerbasierte Multiskalen-Heads, dekodierte Detektionen und DFL-Roh-Heads. Sie wenden die vom kompilierten Modell geforderte Dekodierung und Unterdrückung an, bevor sie das fertige Ergebnis ausgeben. Kapitel~\ref{sec:automation} beschreibt diese Abläufe. Separate Überprüfungen bei identischen Eingaben vergleichen die Ausgaben des Ausführungsmoduls mit den Full-ONNX-Vorhersagen. Deren Übereinstimmungsstatistiken stellen keine AP auf Datensatzebene dar.
+
+\subsection{Einstellungen für Ausführung und Qualitätsbewertung}
+\label{app:current_deployment_settings}
+
+Die Qualität wird anhand von \num{5000} Validierungsbeispielen pro Aufgabe gemessen. Eine Konfiguration wird zugelassen, wenn ihr relativer Qualitätsverlust gegenüber der CPU-ONNX-Referenz höchstens 5\% beträgt. Die aktuellen Zusammenfassungen des Runner-Vergleichs berichten Punktwerte. Archivierte Intervalle beschreiben Abweichungen gegenüber der CPU-Referenz und keine direkten „Split-minus-Full“-Unterschiede~\cite{mika2026mlsysSplit}.
+
+\paragraph{Detektorauswertung.}
+Die Qualität wird anhand abgeschlossener Erkennungsdatensätze bewertet. Die beibehaltene \path{accuracy_reporting_v1}-Richtlinie verwendet den kanonischen COCO-Bounding-Box-Evaluator aus \texttt{pycocotools}. Er verwendet zehn IoU-Schwellenwerte von \num{0.50} bis 0.95, 101 Recall-Positionen, die Zusammenfassung über alle Objektgrößen sowie bis zu 100 Erkennungen pro Bild und Kategorie für den AP. Die optimierte Implementierung nutzt die offiziellen Abgleichergebnisse während des Bootstrap-Resamplings~\cite{cocoapi_cocoeval,edgeAIResults2026} wieder.
+
+Die Erkennungspipeline erzeugt zunächst Begrenzungsrahmen, Bewertungen und Klassen für das Originalbild. Die festgelegte Richtlinie sieht einen Konfidenzschwellenwert von \num{0.25} und eine Ausgabebegrenzung von 300 Erkennungen vor, einschließlich des entsprechenden CPU-Referenzpfads. Der Auswerter wendet anschließend seine eigene Begrenzung von 100 Erkennungen pro Bild und Kategorie an. Diese Begrenzungen greifen in unterschiedlichen Phasen. AP beschreibt daher die vollständigen Ergebnisse der Ausführungskonfigurationen gemäß der festgelegten Dekodierungsrichtlinie. Sofern eine Host-NMS erforderlich ist, erfolgt sie klassenabhängig mit einem IoU-Schwellenwert von 0.45. Integrierte YOLO26-Ausgaben behalten ihre graphdefinierte Verarbeitung bei, ohne dass ein zweiter NMS-Durchlauf erforderlich ist.
+
+Die separate B500-Compiler-Prüfung in Abschnitt~\ref{app:split_development_details} verwendet eine frühere interne Metrik und liefert keine AP-Werte für den Hauptvergleich. Veröffentlichte Ergebniszeilen behalten die gemeldete Metrik und die Anzahl der Stichproben bei. Das abgeflachte Archiv rekonstruiert nicht jede frühere Version des Evaluator-Pakets. Die beibehaltenen Richtlinienaufzeichnungen und der aktuelle Evaluator-Quellcode liefern die oben genannten detaillierten Einstellungen.
+
+\paragraph{Zeit und Energie.}
+
+Der Durchsatz wird in drei unabhängigen Prozessen mit jeweils \num{1000} gemessenen Aufgaben ermittelt. Die überprüften Laufzeitprotokolle geben 100 Aufwärmaufgaben und eine vollständige Entleerung vor der Zeitmessung an. Die Messung umfasst das Befüllen der Pipeline, erforderliche Kopien, den Abschluss einer Inferenzaufgabe und die Entleerung. Die Energieerfassung erfordert 60\,s Arbeitszeit und entleert anschließend die angenommenen Aufgaben, bevor das Ende gemeldet wird. Die Energie pro Bild entspricht dem arithmetischen Mittel aus drei kalibrierten $E_r/N_r$-Beobachtungen. Durchsatz und Energie werden für dieselbe Konfiguration separat erfasst.
+
+DeepX Native verwendet Batch eins, eine Engine und höchstens vier ausstehende asynchrone Beschleunigeranfragen. Separate Ausgabepufferplätze erhalten die Zuordnung zu den jeweiligen Anfragen. Die Split-Ausführung nutzt ein FIFO der Tiefe drei und einen seriellen TensorRT-Konsumenten. Andere Implementierungen verwenden ihre aufgezeichneten Zeitpläne. Der Vergleich bewertet vollständige Ausführungskonfigurationen mit ihren jeweiligen Parallelitätseinstellungen.
+
+Das Abschlusskriterium für die Zeitmessung umfasst die für die Klassifikation oder Erkennung erforderliche Ausgabeverarbeitung. Ein unabhängiges Korrektheitsorakel kann außerhalb der Zeitmessung ausgeführt werden, während alle zur Erledigung der Aufgabe erforderlichen Arbeitsschritte im gemessenen Pfad verbleiben. Die Aufzeichnungen zum Abschlusskriterium erfassen die tatsächlichen Modi für Dekodierung, NMS, integrierte Ausgabe und Materialisierung. Übereinstimmende Abschlusskriterien der Aufgaben bedeuten nicht zwangsläufig identische Operationen oder gleiche Ergebnisqualität.
+
+Der Einsatzvergleich umfasst 451 Ausführungskonfigurationen: 204 Native-Splits, 205 Generic-Splits und 42 Full-Alternativen. Nach Anwendung des Fünf-Prozent-Filters verbleiben 408 Konfigurationen: 187 Native-Splits, 188 Generic-Splits und 33 Full-Alternativen. Energieangaben liegen für 450 Konfigurationen vor. Die Generic-YOLOv7/H8-b009-Beobachtung enthält Durchsatz- und Qualitätswerte, jedoch keinen Energiewert. Bei der Auswahl werden ungerundete Qualitäts- und Durchsatzwerte verwendet. Jeder Nenner bezieht sich auf eine spezifische Full-Konfiguration. Diese wird nicht durch eine über die Hosts gemittelte TensorRT-Zusammenfassung ersetzt. Verhältnisse, Energiewerte und Qualitätsangaben bleiben mit dieser Konfiguration verknüpft.
+
+\subsection{Kandidatenmengen und Auswahlbudgets}
+\label{app:current_selection_settings}
+
+Der gepaarte Vergleich umfasst 204 Schnitte, die von beiden Ausführungsmodulen unterstützt werden. Bei Anwendung der 5\%-Regel für den relativen Qualitätsverlust verbleiben 187 Paare in allen 21 Modell-Beschleuniger-Kombinationen: 151 Klassifikatorpaare in neun Kombinationen und 36 Detektorpaare in zwölf. Bei den 17 ausgeschlossenen Paaren handelt es sich um MobileNet-Schnitte auf H8 oder H10, deren Generic- und Native-Qualität beide die Regel nicht erfüllen. Jede Rangfolge wird anhand derselben zulässigen Kandidaten innerhalb einer Kombination bewertet.
+
+Generic verwendet das oben beschriebene Durchsatzprotokoll mit zwei Pipeline-Workern und einer Warteschlange der Tiefe zwei. H10 erlaubt acht ausstehende Beschleunigeranfragen und DeepX erlaubt vier. Der H8-Produzent nutzt HailoRT VStreams und führt seine Arbeit überlappend mit dem TensorRT-Konsumenten aus. Die gemessene Aufgabe umfasst die TensorRT-Ausführung, erforderliche Kopiervorgänge und die Ausgabeverarbeitung.
+
+Ein Budget von $k$ erlaubt höchstens $k$ Tests pro Kombination. Sind weniger Kandidaten verfügbar, werden alle getestet. Bei einer Vorauswahl wird das schnellste gemessene Ergebnis beibehalten und mit dem schnellsten zulässigen Schnitt für dasselbe Ausführungsmodul und dieselbe Kombination verglichen. Alle Kombinationen werden gleich gewichtet. Die Auswahl erfolgt anhand ungerundeter Mediane des Durchsatzes. Ein Schnitt, der das gemessene Maximum erreicht, gilt als exakter Treffer. Die Trefferzahlen beschreiben die getesteten Kombinationen, nicht die Erfolgswahrscheinlichkeit für ein unbekanntes Modell.
+
+Die anhand der gepaarten Daten angepassten Graphscores verwenden den Native-Durchsatz. Ihre Gewichte bleiben unverändert, wenn dieselben Vorauswahlen mit Generic ausgewertet werden. Für jeden „Model-Held-Out“-Fold erfolgt die Anpassung anhand der anderen sechs Modelle; das Testmodell wird auf allen drei Beschleunigern ausgeschlossen. Die gepaarten Detektorkombinationen enthalten jeweils drei Schnitte, sodass das Testen aller drei keinen Verlust bei den Vorauswahlen verursacht. Kapitel~\ref{sec:splitting} definiert den Score und das Anpassungsziel.
+
+Der umfassendere Generic-Vergleich wählt zwanzig Schnitte pro Modell und Beschleuniger aus, was 420 Konfigurationen ergibt. Graphfenster verteilen die Kandidaten entlang des Modells. Innerhalb jedes Fensters werden kleinere unterstützte Grenzen bevorzugt, wobei feste Regeln für Gleichstand, Abstand und Auffüllung gelten. Es handelt sich hierbei nicht um eine gleichmäßige Zufallsstichprobe aller möglichen Schnitte. Von diesen Kandidaten weisen 359 Durchsatzbeobachtungen auf. Compilerfehler und nicht unterstützte Grenzen machen die übrigen 61 aus. Die Qualitätsregel behält 331 gemessene Schnitte bei, bestehend aus 160 Klassifikator- und 171 Detektorkandidaten. Jede der 21 Kombinationen enthält zwischen sieben und zwanzig zulässige Schnitte. Dieser Vergleich umfasst Multi-Tensor-Grenzen, fügt jedoch keine Native-Messungen mit mehreren Eingängen hinzu.
+
+Für diesen umfassenderen Satz werden die Gewichte an den Generic-Durchsatz angepasst. Gemeinsame, aufgabenspezifische, beschleunigerspezifische und kombinierte Anpassungen schließen jeweils das Testmodell auf jedem Beschleuniger aus. Die Merkmalsnormalisierung nutzt den vollständigen Kandidatengraphen vor der Messung und der Qualitätsfilterung, ohne den zurückgehaltenen Durchsatz zu verwenden. Das primäre Ziel besteht darin, die Verluste bei den Budgets eins, drei und fünf zu mitteln, wobei jedes Budget und jede Trainingskombination gleich gewichtet wird. Abschnitt~\ref{sec:cost-models:generic_graph_weight_fit} enthält die Such- und Gleichstandsregeln.
+
+Die vollständige Auswahlsequenz wird anhand der gepaarten Schnitte ausgewertet. Die Grenztensorgröße liefert bis zu $k$ Kandidaten für Generic-Tests. Native testet anschließend die beiden schnellsten Generic-Kandidaten und bestimmt die endgültige Auswahl. Die Auswertung gibt auch die Variante mit nur einem Native-Test an. Bei $k=5$ erzielen 81 Generic-Tests und 42 Native-Tests denselben mittleren Native-Durchsatz wie 81 direkte Native-Tests auf denselben Graphen-Vorauswahlen. Bei $k=12$ verwendet die stufenweise Abfolge 137 Generic- und 42 Native-Tests. Hierbei handelt es sich um Anzahlen von Messungen. Kompilierung, Qualitätsbewertung und Anpassung fallen nicht unter diese Budgets, sodass diese Anzahlen keine Reduzierung der gesamten Suchkosten belegen.
+
+Abschnitt~\ref{app:current_selection_reproduction} enthält die Befehle zur Reproduktion. Das Repository speichert die individuellen Rangfolgen der Kandidaten, die Gewichte der Kreuzvalidierungs-Folds und die Budgetergebnisse.
+
+\subsubsection{Angepasste Gewichte und Sensitivität}
+\label{app:generic_fit_sensitivity}
+
+\begingroup\setlength{\emergencystretch}{1em}
+Die Generic-Variante mit gemeinsamen Gewichten und Modellausschluss wählt für jedes Testmodell einen separaten Gewichtsvektor aus (Tabelle~\ref{tab:appendix:generic_fold_weights}). Die Anpassung anhand aller Daten ergibt $(0.215,0.035,0.750)$. Dieser Vektor beschreibt den gemessenen Datensatz und wird nicht zur Darstellung der Leistung auf dem zurückgehaltenen Datensatz verwendet.
+\par\endgroup
+
+\begin{table}[!htb]
+\centering\small\TableSetup
+\caption{Gemeinsame Generic-Graphscore-Gewichte mit Modellausschluss. Jede Zeile verwendet die anderen sechs Modelle für die Anpassung.}
+\label{tab:appendix:generic_fold_weights}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Ausgeschlossenes Modell & $w_{\mathrm{comm}}$ & $w_{\mathrm{imb}}$ & $w_{\mathrm{ten}}$ \\
+\midrule
+MobileNetV3-L & \num{0.2275} & \num{0.1150} & \num{0.6575} \\
+RegNet-X & \num{0.0225} & \num{0.1550} & \num{0.8225} \\
+ResNet-50 & \num{0.2025} & \num{0.0050} & \num{0.7925} \\
+YOLO11l & \num{0.2075} & \num{0.0325} & \num{0.7600} \\
+YOLO26m & \num{0.2150} & \num{0.0350} & \num{0.7500} \\
+YOLO26s & \num{0.2175} & \num{0.0350} & \num{0.7475} \\
+YOLOv7 & \num{0.6000} & \num{0.1000} & \num{0.3000} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+„Bytes“ ist ein Kandidat bei der Gewichtsuche. Der ausgewählte Vektor darf daher auf dem durchsuchten Raster keinen höheren mittleren Verlust beim Training aufweisen als „Bytes“. Alle 56 primären Anpassungen erfüllen diese Prüfung. Dies bedeutet nicht, dass das ausgeschlossene Modell oder jedes einzelne Testbudget einen geringeren Verlust aufweist.
+
+Tabelle~\ref{tab:appendix:generic_fit_sensitivity} untersucht das Trainingsziel, die Gitterauflösung, die Gleichstandsregel und die Behandlung der zugehörigen YOLO26-Modelle. Die Optimierung ausschließlich des Fünf-Test-Budgets reduziert den Verlust der kombinierten Anpassung von \num{9.80}\% auf \num{6.28}\%, verglichen mit \num{6.61}\% bei Bytes. Dieses alternative Ziel steht unabhängig vom primären Vergleich. Werden YOLO26m und YOLO26s gemeinsam ausgeklammert, steigt der Verlust der gemeinsamen Anpassung auf \num{16.17}\%, während die spezifischen Ergebnisse für den Beschleuniger und die kombinierten Ergebnisse unverändert bleiben. Der Transfer zwischen verwandten Modellen kann daher die gemeinsame Anpassung beeinflussen.
+
+\begin{table}[!htb]
+\centering\small\TableSetup
+\caption{Generic-Durchsatzverlust (\%) bei fünf Tests unter alternativen Anpassungsoptionen. „Kombiniert“ bedeutet eine Anpassung sowohl nach Aufgabe als auch nach Beschleuniger. Der Wert für Bytes bleibt bei \num{6.61}\%.}
+\label{tab:appendix:generic_fit_sensitivity}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Anpassungsoption & Gemeinsam & Kombiniert \\
+\midrule
+Primär & \num{10.52} & \num{9.80} \\
+Zielfunktion für fünf Tests & \num{8.37} & \num{6.28} \\
+Gitterschritt \num{0.005} & \num{10.52} & \num{9.80} \\
+YOLO26-Modelle, die gemeinsam zurückgehalten wurden & \num{16.17} & \num{9.80} \\
+Die Grenztensorgröße entscheidet bei Punktgleichheit & \num{10.52} & \num{9.91} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\Needspace{22\baselineskip}
+\subsection{Statische Schätzung des Rechenaufwands}
+\label{sec:implementation}
+
+Der nachstehende Katalog erfasst die in den Entwicklungsstudien verwendeten historischen arithmetischen Proxies. Bei gewöhnlicher Faltung und Matrixmultiplikation wird gemäß den aufgeführten Konventionen eine Proxy-Einheit pro Multiplikations-Akkumulations-Schritt verwendet. Dies unterscheidet sich von der Berichtskonvention, die dem Zwei-Operationen-Modell entspricht, wie in Kapitel~\ref{sec:benchmarking} beschrieben. Der Katalog enthält keine exakten Anzahlen arithmetischer Operationen für jeden Operator. Operatoren, denen Proxy-Kosten von Null zugewiesen wurden, können während der Ausführung dennoch Speicher-, Ablaufsteuerungs- oder Konvertierungskosten verursachen.
+
+ConvTranspose verwendet den dichten, ausgangsbasierten Faltungsausdruck erneut. Hierbei handelt es sich nicht um eine allgemeine MAC-Anzahl für transponierte Faltung. Bei einem Eingangs- und einem Ausgangskanal, einem $2\times2$-Eingang, einem $2\times2$-Kernel, einem Stride von zwei sowie ohne Padding oder Bias ergibt die direkte Auswertung 16 Produkte in einem $4\times4$-Ausgang. Der beibehaltene Ausdruck liefert stattdessen 64 Proxy-Einheiten.
+
+Im Rahmen einer anschließenden Offline-Prüfung wurden sieben vollständige ONNX-Graphen untersucht, die anhand von SHA-256 identifiziert wurden und insgesamt \num{2125} Knoten enthielten. Keiner davon enthält „ConvTranspose“. Eine Änderung ausschließlich dieser Zählregel lässt daher deren Proxy-Gesamtwerte, Präfix-/Suffix-Anteile und Rangfolgen unverändert. Die neu berechneten Gesamtwerte stimmten für alle sieben Graphen mit den historischen Gesamtwerten überein. Im Rahmen der Prüfung wurden zudem \num{2111} historische Kandidaten-Datensätze überprüft. Von den 450 späteren Konfigurationsdatensätzen verweisen 437 auf diese Hash-Werte der vollständigen Graphen. Den verbleibenden 13 Datensätzen fehlt ein Hash-Wert des vollständigen Modells, und einzelne Teilgraphen wurden nicht auf Operatoren überprüft. Abschnitt~\ref{sec:review:offline_audit} dokumentiert die Identitäten und Nachweise~\cite{v53OfflineAudit2026}.
+
+Die aktuelle gewichtete Bewertung nutzt die Erweiterung zur Zählung von Operationen in Abschnitt~\ref{sec:cost-models:compute}. Sie fügt explizite Regeln für die fünfzehn Knoten „Softmax“, „ReduceMax“, „Mod“ und „TopK“ hinzu, die im früheren Export nicht berücksichtigt wurden. Tabelle~\ref{tab:cost:operation_extensions} enthält diese Regeln. Diese hinzugefügten Zählungen sind Teil der aktuellen Bewertung und haben keinen Einfluss auf die oben berichteten historischen Prüfungsergebnisse.
+
+\input{9_resources/10_anhang/operator_catalogue.tex}
+
+\subsection{Einfluss der Compiler-Optimierung auf die Ergebnisqualität}
+\label{app:split_development_details}
+
+In einem früheren YOLOv7-Experiment wurde geprüft, ob eine zusätzliche Hailo-Compiler-Optimierungseinstellung die Ergebnisqualität wiederherstellen konnte. Dabei kam der interne B500-Evaluator anstelle der COCO-Bewertung der Hauptkampagne zum Einsatz. Die erzielten Ergebnisse beziehen sich daher ausschließlich auf diesen kontrollierten Vergleich.
+
+Der begrenzte Hailo-Full-Test ändert die Optimierungsstufe von eins auf zwei. Die ausgewogene Voreinstellung, 500 Kalibrierungsbilder und eine Batchgröße von acht bleiben unverändert. Ein zusätzliches Modellskript wird nicht verwendet. Auf Hailo-8 sinkt der interne B500-Wert von \num{0.4148} auf Stufe eins auf \num{0.4098} auf Stufe zwei. Beide Konfigurationen erfüllen das Qualitätskriterium dieses Experiments nicht. Diese Werte unterscheiden sich von den COCO-AP-Werten der Hauptstudie, und dieses Experiment testet keine Optimierung des MobileNet-Compilers. Für Hailo-10H liegt kein auswertbares Qualitätsergebnis vor, da in der Anfrage \path{hailo10} anstelle des registrierten \path{hailo10h} verwendet wurde. Das fehlende Ergebnis lässt keinen Vergleich der beiden Hailo-10H-Einstellungen zu.
+
+\begin{table}[H]
+\centering\small\TableSetup
+\caption{YOLOv7-Full-Qualität unter zwei Hailo-Optimierungsstufen, bewertet anhand der internen B500-Metrik. Diese Werte sind unabhängig vom COCO-AP der Hauptkampagne.}
+\label{tab:evaluation:yolov7_opt_sensitivity}
+\begin{tabular}{@{}l c S[table-format=1.3] S[table-format=1.3] S[table-format=1.3] l@{}}
+\toprule
+Backend & Stufe & {$Q$} & {$Q^{50}$} & {$Q^{75}$} & Entscheidung \\
+\midrule
+Hailo-8 & 1 & 0.415 & 0.598 & 0.467 & nicht bestanden \\
+Hailo-8 & 2 & 0.410 & 0.596 & 0.463 & nicht bestanden \\
+Hailo-10H & 1 & 0.420 & 0.610 & 0.472 & nicht bestanden \\
+Hailo-10H & 2 & {--} & {--} & {--} & nicht ausgewertet \\
+\bottomrule
+\end{tabular}
+\end{table}
+

@@ -1,0 +1,65 @@
+\begin{table}[tbp]
+\centering
+\small
+\caption{Per-physical-run percentile medians. Empirical 5--95\% ranges and separate median-PSD curve metrics are in all\_spectral\_metrics.csv. Part 1/2.}
+\label{tab:journal-table-tek-vs-pico-psd-metrics-1}
+\begingroup
+\setbox0=\hbox{%
+\begin{tabular}{lllllll}
+\toprule
+Workload & Setup & Signal & f50 & f95 & f99 & Runs \\
+\midrule
+GEMM-FP32 & tek & current & 1.2905 kHz & 374.234 kHz & 454.62 kHz & 10 \\
+GEMM-FP32 & tek & power & 1.2734 kHz & 374.131 kHz & 453.916 kHz & 10 \\
+GEMM-FP32 & pico & current & 656.591 Hz & 46.4594 kHz & 184.086 kHz & 10 \\
+GEMM-FP32 & pico & power & 654.273 Hz & 46.413 kHz & 183.313 kHz & 10 \\
+GEMM-INT8 & tek & current & 120.889 kHz & 424.442 kHz & 756.915 kHz & 10 \\
+GEMM-INT8 & tek & power & 120.121 kHz & 424.438 kHz & 756.923 kHz & 10 \\
+GEMM-INT8 & pico & current & 29.3742 kHz & 258.109 kHz & 364.722 kHz & 10 \\
+GEMM-INT8 & pico & power & 29.3739 kHz & 257.517 kHz & 364.713 kHz & 10 \\
+YOLO-FP32 & tek & current & 43.8282 kHz & 363.534 kHz & 540.028 kHz & 10 \\
+YOLO-FP32 & tek & power & 43.7877 kHz & 363.441 kHz & 539.987 kHz & 10 \\
+YOLO-FP32 & pico & current & 16.1683 kHz & 169.881 kHz & 286.346 kHz & 10 \\
+YOLO-FP32 & pico & power & 16.1671 kHz & 169.761 kHz & 286.13 kHz & 10 \\
+YOLO-INT8 & tek & current & 42.3811 kHz & 348.719 kHz & 488.419 kHz & 10 \\
+YOLO-INT8 & tek & power & 42.3591 kHz & 348.63 kHz & 488.271 kHz & 10 \\
+YOLO-INT8 & pico & current & 9.26594 kHz & 173.125 kHz & 258.417 kHz & 10 \\
+YOLO-INT8 & pico & power & 9.26498 kHz & 173.07 kHz & 258.154 kHz & 10 \\
+Gemma3-4B & tek & current & 1.64099 kHz & 367.541 kHz & 645.56 kHz & 10 \\
+Gemma3-4B & tek & power & 1.63403 kHz & 367.525 kHz & 645.45 kHz & 10 \\
+Gemma3-4B & pico & current & 862.577 Hz & 30.6546 kHz & 333.152 kHz & 10 \\
+Gemma3-4B & pico & power & 862.336 Hz & 30.6552 kHz & 328.909 kHz & 10 \\
+ResNet-50 FP32 & tek & current & 24.5125 kHz & 362.469 kHz & 514.904 kHz & 9 \\
+ResNet-50 FP32 & tek & power & 24.4995 kHz & 362.387 kHz & 514.797 kHz & 9 \\
+\bottomrule
+\end{tabular}}
+\ifdim\wd0>\linewidth
+\resizebox{\linewidth}{!}{\box0}
+\else
+\box0
+\fi
+\endgroup
+\end{table}
+
+\begin{table}[tbp]
+\centering
+\small
+\caption{Per-physical-run percentile medians. Empirical 5--95\% ranges and separate median-PSD curve metrics are in all\_spectral\_metrics.csv. Part 2/2.}
+\label{tab:journal-table-tek-vs-pico-psd-metrics-2}
+\begingroup
+\setbox0=\hbox{%
+\begin{tabular}{lllllll}
+\toprule
+Workload & Setup & Signal & f50 & f95 & f99 & Runs \\
+\midrule
+ResNet-50 FP32 & pico & current & 14.6838 kHz & 128.04 kHz & 275.7 kHz & 9 \\
+ResNet-50 FP32 & pico & power & 14.6788 kHz & 127.772 kHz & 275.42 kHz & 9 \\
+\bottomrule
+\end{tabular}}
+\ifdim\wd0>\linewidth
+\resizebox{\linewidth}{!}{\box0}
+\else
+\box0
+\fi
+\endgroup
+\end{table}

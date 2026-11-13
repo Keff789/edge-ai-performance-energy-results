@@ -1,0 +1,14 @@
+\begin{table}[t]
+\caption{Qualitätserholung durch Split-Ausführung. MobileNetV3-Top1 auf denselben 5,000 Bildern. CPU-ONNX-Referenz: 73.70\%. Der Split verwendet b027 und ein TensorRT-Suffix.}
+\label{tab:vendor-quality}
+\centering\small
+\begin{tabular}{lrrr}
+\toprule
+Konfiguration & H8 & H10 & DX\\
+\midrule
+Beschleuniger-Full (\%) & 60.62 & 59.42 & 71.72\\
+Split b027 (\%) & 71.58 & 72.22 & 72.22\\
+Wiedergewonnene Qualität (pp) & 10.96 & 12.80 & 0.50\\
+\bottomrule
+\end{tabular}
+\end{table}

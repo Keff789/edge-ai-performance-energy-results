@@ -1,0 +1,54 @@
+{
+  "schema": "thesis-v49-operator-confirmation-v1",
+  "confirmation_date": "2026-10-19",
+  "operator": "Kevin Mika",
+  "source": {
+    "kind": "explicit_operator_statement_in_user_instruction",
+    "medium": "Codex conversation",
+    "instruction_title": "Ergänze die abschließenden Dokumentationsangaben zur v49-Nachmessung",
+    "section": "1. Betreiberbestätigungen aufnehmen",
+    "scope": "The relevant measurements of the v49 follow-up discussed in this conversation; no claim about unrelated campaigns."
+  },
+  "statements": [
+    {
+      "id": "operating_channel",
+      "statement_original_de": "Der Messkanal ist immer CH0.",
+      "confirmed_value": "CH0",
+      "evidence_kind": "operator_confirmation",
+      "status": "confirmed"
+    },
+    {
+      "id": "populated_ADC_type",
+      "statement_original_de": "Tatsächlich bestückt ist ein ADS7953.",
+      "confirmed_value": "ADS7953",
+      "evidence_kind": "operator_confirmation",
+      "status": "confirmed"
+    },
+    {
+      "id": "firmware_continuity",
+      "statement_original_de": "Die Firmware wurde zwischen den betreffenden Messungen nicht geändert.",
+      "confirmed_value": "unchanged_between_the_relevant_measurements",
+      "evidence_kind": "operator_confirmation",
+      "status": "confirmed"
+    }
+  ],
+  "interpretation": {
+    "actual_ADC_part_identity_resolved": true,
+    "literature_discrepancy": {
+      "source": "Joris Wachsmuth, Entwicklung und Validierung eines Messsystems zur energetischen Bewertung eingebetteter KI-Beschleuniger, Masterarbeit, July 2026",
+      "pdf_sha256": "897428afa66e9674f8e3ef9b2356bba2cf565fda471803bb9a2ed28de8001191",
+      "ADS7953_printed_page": 29,
+      "ADS7952_printed_page": 48,
+      "status": "retained_as_deviating_literature_statement; actual populated part is operator-confirmed ADS7953"
+    },
+    "firmware_continuity_confirmed": true,
+    "exact_historical_installed_firmware_build_bound": false,
+    "historical_build_hash_inferred": false,
+    "active_ADC_range_or_register_state_inferred": false,
+    "new_physical_uncertainty_qualification": false,
+    "reconfirmation_photos_or_measurements_required_for_these_statements": false
+  },
+  "scope_limit": "Operator confirmation establishes CH0, actual ADS7953 population and firmware continuity. Exact historical build identity, active range/reference/register configuration, detailed board/filter/wiring assignments and combined uncertainty remain separate claims.",
+  "numerical_results_changed": false,
+  "new_hardware_runs_flash_or_calibration": false
+}

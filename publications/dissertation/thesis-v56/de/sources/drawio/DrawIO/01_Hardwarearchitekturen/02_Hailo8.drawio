@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="OpenAI" version="32.6.4" type="device">
+  <diagram id="bilder-01" name="02 · Hailo-8 – Architektur">
+    <mxGraphModel dx="964" dy="1099" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="964" pageHeight="1099" math="0" shadow="0" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hailo8-26" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#F5F7F9;rounded=1;absoluteArcSize=1;arcSize=102;" vertex="1" parent="1">
+          <mxGeometry x="8.5" y="8" width="947" height="1080.5" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-27" value="" style="html=0;shadow=0;strokeColor=#D9E3EA;strokeWidth=2;fillColor=#EFF4F7;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=72;" vertex="1" parent="1">
+          <mxGeometry x="223" y="41" width="721" height="914" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-31" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=1;absoluteArcSize=1;arcSize=42;" vertex="1" parent="1">
+          <mxGeometry x="17" y="197" width="155" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-32" value="ARM" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="hailo8-31">
+          <mxGeometry x="33.589" y="16.391" width="85.952" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-33" value="M4" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="hailo8-31">
+          <mxGeometry x="50.548" y="59.391" width="55.229" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-36" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#EFF4F7;rounded=1;absoluteArcSize=1;arcSize=28;" vertex="1" parent="1">
+          <mxGeometry x="17" y="464" width="155" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-37" value="PCIe x4" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=0;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="hailo8-36">
+          <mxGeometry x="10.840" y="17.578" width="135.189" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-40" value="" style="shape=flexArrow;edgeStyle=none;curved=0;rounded=0;html=0;startArrow=block;endArrow=block;startFill=1;endFill=1;startSize=2.526667;endSize=2.526667;width=10;startWidth=9;endWidth=9;fillColor=#2E73B6;strokeColor=#18354A;strokeWidth=3;entryPerimeter=0;exitPerimeter=0;shadow=0;exitX=1.032258;exitY=0.532787;entryX=0;entryY=0.241794;" edge="1" parent="1" source="hailo8-31" target="hailo8-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="177" y="262" as="sourcePoint" />
+            <mxPoint x="223" y="262" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hailo8-42" value="" style="shape=flexArrow;edgeStyle=none;curved=0;rounded=0;html=0;startArrow=block;endArrow=block;startFill=1;endFill=1;startSize=2.526667;endSize=2.526667;width=10;startWidth=9;endWidth=9;fillColor=#2E73B6;strokeColor=#18354A;strokeWidth=3;entryPerimeter=0;exitPerimeter=0;shadow=0;exitX=1.025806;exitY=0.46988;entryX=-0.001387;entryY=0.50547;" edge="1" parent="1" source="hailo8-36" target="hailo8-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="176" y="503" as="sourcePoint" />
+            <mxPoint x="222" y="503" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hailo8-45" value="" style="html=0;shadow=0;strokeColor=#25896F;strokeWidth=2;fillColor=#EAF6F1;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="28" y="21" width="90" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-46" value="" style="html=0;shadow=0;strokeColor=#D18432;strokeWidth=2;fillColor=#FFF3E5;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="145" y="21" width="91" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-47" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="263" y="21" width="90" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-48" value="" style="html=0;shadow=0;strokeColor=#25896F;strokeWidth=2;fillColor=#EAF6F1;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="381" y="21" width="90" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-49" value="" style="html=0;shadow=0;strokeColor=#D18432;strokeWidth=2;fillColor=#FFF3E5;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="498" y="21" width="90" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-50" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="616" y="21" width="90" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-52" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="29" y="124" width="91" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-53" value="" style="html=0;shadow=0;strokeColor=#25896F;strokeWidth=2;fillColor=#EAF6F1;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="148" y="125" width="90" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-54" value="" style="html=0;shadow=0;strokeColor=#D18432;strokeWidth=2;fillColor=#FFF3E5;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="264" y="125" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-55" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="381" y="125" width="90" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-56" value="" style="html=0;shadow=0;strokeColor=#D18432;strokeWidth=2;fillColor=#FFF3E5;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="498" y="125" width="90" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-57" value="" style="html=0;shadow=0;strokeColor=#25896F;strokeWidth=2;fillColor=#EAF6F1;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="615" y="124" width="90" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-59" value="" style="html=0;shadow=0;strokeColor=#25896F;strokeWidth=2;fillColor=#EAF6F1;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="29" y="229" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-60" value="" style="html=0;shadow=0;strokeColor=#D18432;strokeWidth=2;fillColor=#FFF3E5;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="146" y="229" width="90" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-61" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="264" y="229" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-62" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="381" y="229" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-63" value="" style="html=0;shadow=0;strokeColor=#25896F;strokeWidth=2;fillColor=#EAF6F1;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="499" y="229" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-64" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="616" y="230" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-66" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="32" y="332" width="88" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-67" value="" style="html=0;shadow=0;strokeColor=#25896F;strokeWidth=2;fillColor=#EAF6F1;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="150" y="334" width="88" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-68" value="" style="html=0;shadow=0;strokeColor=#D18432;strokeWidth=2;fillColor=#FFF3E5;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="265" y="334" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-69" value="" style="html=0;shadow=0;strokeColor=#25896F;strokeWidth=2;fillColor=#EAF6F1;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="382" y="338" width="88" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-70" value="" style="html=0;shadow=0;strokeColor=#D18432;strokeWidth=2;fillColor=#FFF3E5;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="500" y="332" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-71" value="" style="html=0;shadow=0;strokeColor=#25896F;strokeWidth=2;fillColor=#EAF6F1;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="617" y="332" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-73" value="" style="html=0;shadow=0;strokeColor=#25896F;strokeWidth=2;fillColor=#EAF6F1;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="30" y="437" width="90" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-74" value="" style="html=0;shadow=0;strokeColor=#D18432;strokeWidth=2;fillColor=#FFF3E5;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="148" y="437" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-75" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="265" y="437" width="90" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-76" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="382" y="437" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-77" value="" style="html=0;shadow=0;strokeColor=#25896F;strokeWidth=2;fillColor=#EAF6F1;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="501" y="437" width="88" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-78" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="617" y="438" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-80" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="32" y="541" width="88" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-81" value="" style="html=0;shadow=0;strokeColor=#25896F;strokeWidth=2;fillColor=#EAF6F1;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="149" y="541" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-82" value="" style="html=0;shadow=0;strokeColor=#D18432;strokeWidth=2;fillColor=#FFF3E5;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="265" y="541" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-83" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="382" y="541" width="90" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-84" value="" style="html=0;shadow=0;strokeColor=#D18432;strokeWidth=2;fillColor=#FFF3E5;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="499" y="540" width="90" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-85" value="" style="html=0;shadow=0;strokeColor=#25896F;strokeWidth=2;fillColor=#EAF6F1;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="617" y="540" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-87" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="30" y="643" width="90" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-88" value="" style="html=0;shadow=0;strokeColor=#25896F;strokeWidth=2;fillColor=#EAF6F1;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="149" y="644" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-89" value="" style="html=0;shadow=0;strokeColor=#D18432;strokeWidth=2;fillColor=#FFF3E5;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="264" y="644" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-90" value="" style="html=0;shadow=0;strokeColor=#25896F;strokeWidth=2;fillColor=#EAF6F1;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="381" y="649" width="88" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-91" value="" style="html=0;shadow=0;strokeColor=#D18432;strokeWidth=2;fillColor=#FFF3E5;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="499" y="643" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-92" value="" style="html=0;shadow=0;strokeColor=#25896F;strokeWidth=2;fillColor=#EAF6F1;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="616" y="643" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-94" value="" style="html=0;shadow=0;strokeColor=#25896F;strokeWidth=2;fillColor=#EAF6F1;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="32" y="750" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-95" value="" style="html=0;shadow=0;strokeColor=#D18432;strokeWidth=2;fillColor=#FFF3E5;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="149" y="750" width="90" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-96" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="267" y="750" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-97" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="384" y="750" width="89" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-98" value="" style="html=0;shadow=0;strokeColor=#25896F;strokeWidth=2;fillColor=#EAF6F1;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="502" y="750" width="88" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-99" value="" style="html=0;shadow=0;strokeColor=#2E73B6;strokeWidth=2;fillColor=#EAF2FB;gradientColor=none;rounded=0;absoluteArcSize=1;arcSize=0;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="618" y="751" width="90" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-101" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#8661AB;fillOpacity=50;shape=stencil(pZJBDoIwEEVP0z1QiWGNeAT3FQYZLS1pK+jtbRkFJVETXXX+n/cnmbaM57YRHbAkUqIFxjcsSXZQOm28VYETKL3j64F6q3RNuiEdZxlpYTsfI7MXBsVeAnWsM/oEA1bunkHVgEEXurxgPK+1gYPRZ1WRlqjgqFH57HiMoRYdGBrIki2BnQgjQ9XqPuxwITYi7vqiplQYP7PTQj/RcRR/5Hka/cc/rvcN/40upbbwbPhivrUapaTXWSDLF/EWfRNe3AA=);" vertex="1" parent="hailo8-27">
+          <mxGeometry x="22" y="16" width="457" height="199" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-102" value="" style="html=0;shadow=0;strokeColor=none;strokeWidth=1;fillColor=#8661AB;fillOpacity=50;shape=stencil(pZLBEoIgEIafhjtK0+TZ7BG6k665heAgab194Dra0NShTuz/7/ejCzCR943sgKVcyxaY2LM0PULpjPVWBU6i8o6vR+qJDSfdkE6yjLTsOx8jc5AW5UkBdXpnzRVGrNycQd2ARRe6omAir42FszU3XZFWqOFiUPvstEyhFh1Y2pClBwI7GbYMVWuGMMN9/qlkR+SDNI9y4QMrvYz0E70cwAf+L5pvv9LxnO98qUwPr4Yv1lOrUSm6nQiJb8Rb9ExE8QQ=);" vertex="1" parent="hailo8-27">
+          <mxGeometry x="373" y="16" width="340" height="199" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-103" value="Schicht 1" style="html=0;strokeColor=none;fillColor=#E6DCEE;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#5C3B7C;fontStyle=1;spacing=0;rotation=0;connectable=0;autosize=0;rounded=1;absoluteArcSize=1;arcSize=12;;lineHeight=1.15;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="104.807" y="96.063" width="172" height="42.5" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-104" value="Schicht 2" style="html=0;strokeColor=none;fillColor=#E6DCEE;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#5C3B7C;fontStyle=1;spacing=0;rotation=0;connectable=0;autosize=0;rounded=1;absoluteArcSize=1;arcSize=12;;lineHeight=1.15;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="516.5949999999999" y="96.063" width="172" height="42.5" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-106" value="ST." style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=31.241;fontColor=#18354A;fontStyle=1;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="hailo8-94">
+          <mxGeometry x="18.445" y="17.572" width="52.611" height="35.927" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-107" value="SP." style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=31.241;fontColor=#18354A;fontStyle=1;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="hailo8-95">
+          <mxGeometry x="17.850" y="17.112" width="54.360" height="35.927" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-108" value="RE." style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=31.241;fontColor=#18354A;fontStyle=1;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="hailo8-96">
+          <mxGeometry x="16.441" y="17.572" width="56.079" height="35.927" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-109" value="NN-Rechenkern" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=36.882;fontColor=#18354A;fontStyle=1;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="hailo8-27">
+          <mxGeometry x="220.735" y="851.228" width="280.652" height="42.414" as="geometry" />
+        </mxCell>
+        <mxCell id="hailo8-110" value="HAILO-8" style="html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=nowrap;overflow=visible;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=41.221;fontColor=#18354A;fontStyle=1;spacing=0;rotation=0;connectable=0;autosize=0;;lineHeight=1.15;" vertex="1" parent="1">
+          <mxGeometry x="37.512" y="1015.479" width="168.884" height="47.404" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

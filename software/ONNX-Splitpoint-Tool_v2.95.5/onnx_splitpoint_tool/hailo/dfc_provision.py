@@ -1,0 +1,904 @@
+"""Provision managed Hailo DFC virtualenvs from bundled wheel(s).
+
+This script is intended to run on Linux (native or inside WSL).
+
+Typical usage (inside WSL):
+
+    python3 -m onnx_splitpoint_tool.hailo.dfc_provision --all
+
+It will:
+  - create per-profile venvs (hailo8 / hailo10)
+  - install the DFC wheel(s) placed in `onnx_splitpoint_tool/resources/hailo/<profile>/`
+
+Notes
+-----
+- The wheels are not shipped in this repo by default.
+- Put your Hailo wheels into the directories mentioned above.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import subprocess
+import sys
+import shutil
+import time
+import zipfile
+from email.parser import Parser
+from pathlib import Path
+from typing import Dict, List, Optional, Tuple
+
+from ..resources_utils import persistent_resource_path
+from ..runners.backends.hailo_utils import DfcProfile, get_dfc_manager
+
+
+def _clean_env(env: Optional[Dict[str, str]] = None) -> Dict[str, str]:
+    """Return a copy of *env* with pip constraint env-vars removed.
+
+    This prevents a lingering PIP_CONSTRAINT (e.g. from another venv) from
+    poisoning our provisioning resolver (hailo8 vs hailo10 constraints).
+    """
+
+    run_env: Dict[str, str] = dict(env or os.environ)
+    run_env.pop("PIP_CONSTRAINT", None)
+    run_env.pop("PIP_BUILD_CONSTRAINT", None)
+    return run_env
+
+
+def _resources_hailo_root() -> Path:
+    return persistent_resource_path("resources", "hailo")
+
+
+def _venv_python(venv_dir: Path) -> Path:
+    # Some venv layouts only ship `python` (without a `python3` shim).
+    # Prefer `python` for maximum portability, but keep a fallback.
+    py = venv_dir / "bin" / "python"
+    return py if py.exists() else (venv_dir / "bin" / "python3")
+
+
+def _run(cmd: List[str], *, cwd: Optional[Path] = None, env: Optional[Dict[str, str]] = None) -> None:
+    print("[CMD]", " ".join(cmd), flush=True)
+
+    subprocess.run(cmd, cwd=str(cwd) if cwd else None, check=True, env=_clean_env(env))
+
+
+def _py_version(py: str) -> Optional[Tuple[int, int]]:
+    """Return (major, minor) for a python executable, or None if not runnable."""
+    try:
+        out = subprocess.check_output(
+            [py, "-c", "import sys; print(f'{sys.version_info[0]}.{sys.version_info[1]}')"],
+            text=True,
+            stderr=subprocess.STDOUT,
+        ).strip()
+        parts = out.split(".")
+        if len(parts) < 2:
+            return None
+        return int(parts[0]), int(parts[1])
+    except Exception:
+        return None
+
+
+def _graphviz_dev_headers_present() -> bool:
+    """Return True if Graphviz development headers are present.
+
+    Some Hailo DFC wheel dependencies (notably `pygraphviz`) may require the
+    Graphviz C headers (e.g. graphviz/cgraph.h) at install time.
+    """
+    candidates = [
+        Path('/usr/include/graphviz/cgraph.h'),
+        Path('/usr/local/include/graphviz/cgraph.h'),
+        Path('/usr/include/graphviz/graph.h'),
+        Path('/usr/local/include/graphviz/graph.h'),
+    ]
+    return any(p.exists() for p in candidates)
+
+
+def _pick_venv_python(min_version: Tuple[int, int] = (3, 10)) -> str:
+    """Pick a python executable suitable for creating the managed DFC venvs.
+
+    Hailo DFC wheels (3.33 / 5.2) are Python-tagged. Prefer Python 3.10/3.11
+    over the GUI/repo interpreter: the GUI may run on Python 3.12/3.13 while
+    the bundled Hailo wheels are often cp310/cp311. The exact wheel tag is
+    checked again before installing and incompatible existing venvs are rebuilt.
+    """
+
+    preferred = [
+        "python3.10",
+        "python3.11",
+        "python3.12",
+        "python3",
+        "python",
+    ]
+    seen = set()
+    for cand in preferred:
+        path = shutil.which(cand)
+        if not path or path in seen:
+            continue
+        seen.add(path)
+        ver = _py_version(path)
+        if ver and ver >= min_version:
+            return path
+
+    # Last resort: current interpreter. Do not prefer it blindly because it may
+    # be too new for local Hailo wheels, but it is still valid when no dedicated
+    # python3.10/3.11 exists and wheel tags match.
+    if (sys.version_info.major, sys.version_info.minor) >= min_version:
+        return sys.executable
+
+    raise RuntimeError(
+        "Python >= 3.10 is required to provision the Hailo DFC venvs (DFC deps like jax have no wheels for Python 3.8).\n\n"
+        "If your WSL distro is Ubuntu 20.04 (python3=3.8), you have three practical options:\n"
+        "  1) Upgrade WSL distro to Ubuntu 22.04/24.04 (recommended if possible).\n"
+        "  2) Install Python 3.10 via a user-space tool (pyenv or uv).\n"
+        "  3) Provide a custom python path: --python /path/to/python3.10\n"
+    )
+
+
+def _find_wheels(wheel_dir: Path) -> List[Path]:
+    if not wheel_dir.exists():
+        return []
+    wheels = sorted([p for p in wheel_dir.glob("*.whl") if p.is_file()])
+    return wheels
+
+
+def _choose_dfc_wheel(wheels: List[Path]) -> Optional[Path]:
+    if not wheels:
+        return None
+    # Prefer something that looks like the DFC wheel name.
+    for p in wheels:
+        if "dataflow" in p.name and "compiler" in p.name:
+            return p
+    return wheels[-1]
+
+
+def _wheel_python_versions(wheel_path: Path) -> List[Tuple[int, int]]:
+    """Return exact CPython versions encoded in a wheel filename.
+
+    Hailo DFC wheels are commonly tagged for one concrete ABI, e.g.
+    ``...-cp310-cp310-linux_x86_64.whl``. If the GUI runs under Python 3.12,
+    the managed DFC venv must still be created with Python 3.10 for that wheel.
+    An empty list means no exact CPython tag was inferred.
+    """
+    name = wheel_path.name
+    if not name.endswith(".whl"):
+        return []
+    stem = name[:-4]
+    parts = stem.rsplit("-", 3)
+    if len(parts) != 4:
+        return []
+    python_tag = parts[1]
+    out: List[Tuple[int, int]] = []
+    seen = set()
+    for tag in python_tag.split("."):
+        tag = tag.strip().lower()
+        if not tag.startswith("cp"):
+            continue
+        digits = tag[2:]
+        if not digits.isdigit() or len(digits) < 2:
+            continue
+        try:
+            ver = (int(digits[0]), int(digits[1:]))
+        except Exception:
+            continue
+        if ver not in seen:
+            seen.add(ver)
+            out.append(ver)
+    return out
+
+
+def _format_pyver(ver: Optional[Tuple[int, int]]) -> str:
+    return f"{ver[0]}.{ver[1]}" if ver else "not runnable"
+
+
+def _format_pyver_list(versions: List[Tuple[int, int]]) -> str:
+    return ", ".join(_format_pyver(v) for v in versions) if versions else "any compatible Python"
+
+
+def _find_python_matching(versions: List[Tuple[int, int]], fallback_python: str) -> Optional[str]:
+    """Find a runnable Python whose major/minor matches one of *versions*."""
+    if not versions:
+        return fallback_python
+    candidates: List[str] = []
+    env_py = (os.environ.get("DFC_PYTHON") or "").strip()
+    if env_py:
+        candidates.append(env_py)
+    candidates.extend([fallback_python, sys.executable])
+    for major, minor in versions:
+        candidates.extend([f"python{major}.{minor}", f"/usr/bin/python{major}.{minor}", f"/usr/local/bin/python{major}.{minor}"])
+    candidates.extend(["python3.12", "python3.11", "python3.10", "python3", "python"])
+    checked = set()
+    for cand in candidates:
+        if not cand:
+            continue
+        path = cand
+        if os.sep not in path:
+            found = shutil.which(path)
+            if not found:
+                continue
+            path = found
+        if path in checked:
+            continue
+        checked.add(path)
+        if _py_version(path) in versions:
+            return path
+    return None
+
+
+def _select_python_for_wheel(wheel_path: Path, requested_python: str, *, strict_python: bool = False) -> str:
+    required = _wheel_python_versions(wheel_path)
+    if not required:
+        return requested_python
+    requested_ver = _py_version(requested_python)
+    if requested_ver in required:
+        return requested_python
+    if strict_python:
+        raise RuntimeError(
+            f"Wheel {wheel_path.name} requires Python {_format_pyver_list(required)}, but selected Python is {_format_pyver(requested_ver)}."
+        )
+    found = _find_python_matching(required, requested_python)
+    if found:
+        return found
+    raise RuntimeError(
+        f"Wheel {wheel_path.name} requires Python {_format_pyver_list(required)}, but no matching Python executable was found. "
+        f"Selected/default Python was {_format_pyver(requested_ver)}. Install python{required[0][0]}.{required[0][1]} "
+        f"or set DFC_PYTHON=/path/to/python{required[0][0]}.{required[0][1]}."
+    )
+
+
+def _provision_status_path(venv_dir: Path) -> Path:
+    return venv_dir / "splitpoint_dfc_provision_status.json"
+
+
+def _write_provision_status(
+    venv_dir: Path,
+    *,
+    profile_id: str,
+    ok: bool,
+    status: str,
+    message: str,
+    wheel: Optional[Path] = None,
+    python_exe: str = "",
+    expected_python: Optional[Tuple[int, int]] = None,
+) -> None:
+    """Persist the last installer result inside the managed venv.
+
+    This lets the Hardware tab explain why a venv exists but hailo_sdk_client is
+    missing, instead of showing only ModuleNotFoundError.
+    """
+    try:
+        venv_dir.mkdir(parents=True, exist_ok=True)
+        py_ver = _py_version(str(python_exe)) if python_exe else None
+        payload = {
+            "profile_id": profile_id,
+            "ok": bool(ok),
+            "status": status,
+            "message": str(message or ""),
+            "wheel": str(wheel) if wheel is not None else "",
+            "wheel_name": wheel.name if wheel is not None else "",
+            "python_exe": str(python_exe or ""),
+            "python_version": _format_pyver(py_ver) if py_ver else "",
+            "expected_python": _format_pyver(expected_python) if expected_python else "",
+            "graphviz_headers_present": _graphviz_dev_headers_present(),
+            "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+        }
+        _provision_status_path(venv_dir).write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    except Exception:
+        pass
+
+
+
+
+def _extract_exact_pins_from_wheel(wheel_path: Path) -> List[str]:
+    """Return a list of `name==version` constraints found in the wheel metadata.
+
+    Hailo DFC wheels commonly pin critical dependencies exactly
+    (e.g. `onnx==1.16.0`, `protobuf==3.20.3`). If users accidentally upgrade
+    ONNX/protobuf inside the managed venv, hailo_sdk_client imports can break.
+    """
+
+    if not wheel_path.exists():
+        return []
+
+    try:
+        with zipfile.ZipFile(str(wheel_path), "r") as zf:
+            meta_name = None
+            for n in zf.namelist():
+                if n.endswith(".dist-info/METADATA"):
+                    meta_name = n
+                    break
+            if not meta_name:
+                return []
+
+            raw = zf.read(meta_name)
+            text = raw.decode("utf-8", errors="replace")
+
+        msg = Parser().parsestr(text)
+        req_lines = msg.get_all("Requires-Dist") or []
+
+        # Try to use packaging for proper requirement parsing (available via pip).
+        try:
+            from packaging.requirements import Requirement  # type: ignore
+        except Exception:
+            Requirement = None  # type: ignore
+
+        pins: List[str] = []
+
+        for req in req_lines:
+            s = str(req).strip()
+            if not s:
+                continue
+
+            name = None
+            ver = None
+
+            if Requirement is not None:
+                try:
+                    r = Requirement(s)
+                    name = str(r.name).strip()
+                    # Only accept exact pins (==)
+                    exact = [sp for sp in r.specifier if getattr(sp, "operator", None) == "=="]
+                    if len(exact) == 1 and str(exact[0]).startswith("=="):
+                        ver = str(exact[0]).lstrip("=")
+                except Exception:
+                    name = None
+                    ver = None
+
+            if name is None or ver is None:
+                # Fallback regex for simple 'name==version' forms.
+                if "==" in s and ";" not in s:
+                    parts = s.split("==", 1)
+                    if len(parts) == 2:
+                        n0 = parts[0].strip()
+                        v0 = parts[1].strip()
+                        if n0 and v0 and " " not in n0 and " " not in v0:
+                            name = n0
+                            ver = v0
+
+            if name and ver:
+                pins.append(f"{name}=={ver}")
+
+        # De-duplicate while preserving order.
+        seen = set()
+        uniq: List[str] = []
+        for p in pins:
+            key = p.strip().lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            uniq.append(p)
+        return uniq
+    except Exception:
+        return []
+
+
+def _write_constraints_file(venv_dir: Path, pins: List[str]) -> Optional[Path]:
+    """Write a pip constraints file into the managed venv."""
+
+    if not pins:
+        return None
+    try:
+        path = venv_dir / "pip_constraints.txt"
+        lines = [
+            "# Auto-generated by ONNX Splitpoint Tool (Hailo DFC manager)",
+            "# Re-run provisioning to regenerate.",
+            "",
+        ] + [str(x).strip() for x in pins if str(x).strip()]
+        path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        return path
+    except Exception:
+        return None
+
+
+def _patch_activate_for_constraints(venv_dir: Path, constraints_path: Path) -> None:
+    """Patch venv/bin/activate so pip automatically uses the constraints file."""
+
+    act = venv_dir / "bin" / "activate"
+    if not act.exists():
+        return
+
+    marker = "# ONNX_SPLITPOINT_PIP_CONSTRAINTS"
+    export_line = f'export PIP_CONSTRAINT="{constraints_path}"'
+
+    try:
+        txt = act.read_text(encoding="utf-8", errors="replace")
+    except Exception:
+        return
+
+    # If the user has manually edited activation to set PIP_CONSTRAINT, do not touch it.
+    # (Our marker-based block is safe to update.)
+    if marker not in txt and "PIP_CONSTRAINT=" in txt:
+        return
+
+    # Remove any previously appended marker block (older tool versions only exported
+    # PIP_CONSTRAINT and caused the env var to "leak" across venvs).
+    if marker in txt:
+        try:
+            txt = txt.split(marker)[0].rstrip() + "\n"
+        except Exception:
+            # If split fails for any reason, keep original text.
+            pass
+
+    # Ensure deactivate() restores/unsets PIP_CONSTRAINT so constraints do not leak
+    # across profiles (hailo8 -> hailo10).
+    restore_snippet = """\
+    # --- ONNX Splitpoint Tool: restore pip constraints env ---
+    if [ "${_SPLITPOINT_PIP_CONSTRAINT_WAS_SET}" = "1" ]; then
+        export PIP_CONSTRAINT="${_SPLITPOINT_OLD_PIP_CONSTRAINT}"
+    else
+        unset PIP_CONSTRAINT
+    fi
+    unset _SPLITPOINT_PIP_CONSTRAINT_WAS_SET
+    unset _SPLITPOINT_OLD_PIP_CONSTRAINT
+    # --- end ONNX Splitpoint Tool restore ---
+"""
+
+    if "_SPLITPOINT_PIP_CONSTRAINT_WAS_SET" not in txt:
+        # Try the common pattern in python venv activation scripts.
+        if "unset -f deactivate" in txt:
+            txt = txt.replace("unset -f deactivate", restore_snippet + "\n    unset -f deactivate", 1)
+        else:
+            # Fallback: try to inject before the final '}' of the deactivate() function.
+            import re
+
+            m = re.search(r"(?ms)^deactivate \(\) \{.*?^\}\s*$", txt)
+            if m:
+                block = m.group(0)
+                # Insert before the last closing brace.
+                if block.rstrip().endswith("}"):
+                    block2 = block.rstrip()[:-1].rstrip() + "\n" + restore_snippet + "\n}"
+                    txt = txt[: m.start()] + block2 + txt[m.end() :]
+
+    # Append our marker block that saves the previous env value and sets the
+    # constraints for this specific profile.
+    append_block = """\
+
+{marker}
+if [ -n "${{PIP_CONSTRAINT+x}}" ]; then
+    _SPLITPOINT_PIP_CONSTRAINT_WAS_SET=1
+    _SPLITPOINT_OLD_PIP_CONSTRAINT="${{PIP_CONSTRAINT}}"
+else
+    _SPLITPOINT_PIP_CONSTRAINT_WAS_SET=0
+    _SPLITPOINT_OLD_PIP_CONSTRAINT=""
+fi
+{export_line}
+""".format(
+        marker=marker,
+        export_line=export_line,
+    )
+
+    try:
+        act.write_text(txt.rstrip() + append_block + "\n", encoding="utf-8")
+    except Exception:
+        return
+
+
+def _get_installed_versions(py: Path, names: List[str]) -> dict:
+    """Return a mapping name->version (or '' if not installed)."""
+
+    if not names:
+        return {}
+
+    import json as _json
+
+    code = (
+        "import importlib.metadata as m, json, sys; "
+        "names=json.loads(sys.argv[1]); out={}; "
+        "for n in names:\n"
+        "  key=str(n);\n"
+        "  try:\n"
+        "    out[key]=m.version(key)\n"
+        "  except Exception:\n"
+        "    out[key]=''\n"
+        "print(json.dumps(out))"
+    )
+
+    try:
+        raw = subprocess.check_output([str(py), "-c", code, _json.dumps(names)], text=True, stderr=subprocess.STDOUT).strip()
+        return _json.loads(raw) if raw else {}
+    except Exception:
+        return {}
+
+
+def provision_profile(
+    profile: DfcProfile,
+    *,
+    venv_python: str,
+    force_reinstall: bool = False,
+    upgrade_onnx: bool = False,
+    offline: bool = False,
+    strict_python: bool = False,
+) -> Tuple[bool, str]:
+    """Provision a single profile. Returns (ok, message)."""
+
+    # IMPORTANT:
+    # This function must be robust: provisioning is often invoked from the GUI
+    # and we want to attempt *all* requested profiles (hailo8 + hailo10) even
+    # if one fails. Therefore we catch subprocess errors and return a failure
+    # status instead of aborting the whole process.
+
+    hailo_root = _resources_hailo_root()
+    wheel_sub = profile.wheel_dir or profile.profile_id
+    wheel_dir = hailo_root / wheel_sub
+
+    wheels = _find_wheels(wheel_dir)
+    wheel = _choose_dfc_wheel(wheels)
+    if wheel is None:
+        return False, f"No .whl found in {wheel_dir} (expected a Hailo DFC wheel)."
+
+    required_python_versions = _wheel_python_versions(wheel)
+    expected_python = required_python_versions[0] if required_python_versions else None
+
+    try:
+        selected_python = _select_python_for_wheel(wheel, venv_python, strict_python=strict_python)
+        if selected_python != venv_python:
+            print(
+                f"[INFO] Wheel {wheel.name} requires Python {_format_pyver_list(required_python_versions)}; "
+                f"using {selected_python} instead of {venv_python} for this managed DFC venv.",
+                flush=True,
+            )
+        venv_python = selected_python
+    except Exception as e:
+        return False, f"Python/wheel compatibility failed for {profile.profile_id}: {type(e).__name__}: {e}"
+
+    venv_activate = profile.wsl_venv_activate
+    # Convert a tilde path to an absolute path on Linux.
+    # (This script runs inside Linux/WSL, so ~ expansion is valid.)
+    if venv_activate.startswith("~"):
+        venv_dir = Path(os.path.expanduser(venv_activate)).parents[1]
+    else:
+        venv_dir = Path(venv_activate).expanduser().resolve().parents[1]
+
+    try:
+        # Create venv if missing.
+        if not venv_dir.exists():
+            venv_dir.parent.mkdir(parents=True, exist_ok=True)
+            _run([venv_python, "-m", "venv", str(venv_dir)])
+
+        py = _venv_python(venv_dir)
+        if not py.exists():
+            msg = f"Venv python not found at {py}"
+            _write_provision_status(venv_dir, profile_id=profile.profile_id, ok=False, status="venv_python_missing", message=msg, wheel=wheel, python_exe=venv_python, expected_python=expected_python)
+            return False, msg
+
+        # Ensure the venv uses a sufficiently new and wheel-compatible python.
+        ver = _py_version(str(py))
+        required_versions = required_python_versions
+        recreate_reason = ""
+        if ver is not None and ver < (3, 10):
+            recreate_reason = f"Python {ver[0]}.{ver[1]} is too old (<3.10)"
+        elif required_versions and ver is not None and ver not in required_versions:
+            recreate_reason = f"Python {ver[0]}.{ver[1]} does not match wheel tag ({_format_pyver_list(required_versions)})"
+        if recreate_reason:
+            try:
+                print(f"[WARN] Existing venv for {profile.profile_id} has incompatible {recreate_reason}. Recreating…", flush=True)
+                shutil.rmtree(venv_dir)
+            except Exception as e:
+                msg = f"Existing venv is incompatible ({recreate_reason}). Could not remove {venv_dir}: {type(e).__name__}: {e}"
+                _write_provision_status(venv_dir, profile_id=profile.profile_id, ok=False, status="venv_recreate_failed", message=msg, wheel=wheel, python_exe=venv_python, expected_python=expected_python)
+                return False, msg
+
+            _run([venv_python, "-m", "venv", str(venv_dir)])
+            py = _venv_python(venv_dir)
+            if not py.exists():
+                msg = f"Venv python not found at {py} after recreate"
+                _write_provision_status(venv_dir, profile_id=profile.profile_id, ok=False, status="venv_python_missing", message=msg, wheel=wheel, python_exe=venv_python, expected_python=expected_python)
+                return False, msg
+
+        # Upgrade pip tooling.
+        #
+        # IMPORTANT (2025-11+): setuptools 82+ removed the legacy `pkg_resources`
+        # module, but several third-party packages (including some Hailo SDK
+        # components) still import it.
+        #
+        # Pin setuptools <82 to keep `pkg_resources` available.
+        _run([str(py), "-m", "pip", "install", "--upgrade", "pip", "wheel", "setuptools<82"])
+
+        # Self-heal: if setuptools got upgraded to 82+ anyway (e.g. due to a cached
+        # state or an external tool), force-reinstall a compatible version.
+        try:
+            _ = subprocess.check_output([str(py), "-c", "import pkg_resources; print('OK')"], text=True, stderr=subprocess.STDOUT)
+        except Exception:
+            print("[WARN] pkg_resources missing after pip tool upgrade. Forcing setuptools<82 …", flush=True)
+            try:
+                _run([str(py), "-m", "pip", "install", "--force-reinstall", "setuptools<82"])
+                _ = subprocess.check_output([str(py), "-c", "import pkg_resources; print('OK')"], text=True, stderr=subprocess.STDOUT)
+            except Exception as e:
+                return False, f"Failed to restore pkg_resources via setuptools<82: {type(e).__name__}: {e}"
+
+        # Preflight: Graphviz development headers may be required by pygraphviz,
+        # but not by every DFC wheel/install path. Do not abort before the real
+        # Hailo DFC wheel install; if headers are truly required, pip will fail
+        # with a concrete pygraphviz build error.
+        if not _graphviz_dev_headers_present():
+            print(
+                "[WARN] Missing Graphviz development headers (graphviz/cgraph.h). "
+                "Continuing with DFC wheel installation. If pip later fails while building pygraphviz, install: "
+                "sudo apt update && sudo apt install -y graphviz libgraphviz-dev pkg-config build-essential",
+                flush=True,
+            )
+
+        # Install wheel (offline, from directory)
+        pip_cmd = [str(py), "-m", "pip", "install"]
+        if force_reinstall:
+            pip_cmd += ["--force-reinstall"]
+
+        # Prefer local wheels, but allow pip index downloads unless --offline is set.
+        pip_cmd += ["--prefer-binary", "--find-links", str(wheel_dir)]
+        if offline:
+            pip_cmd += ["--no-index"]
+        pip_cmd += [str(wheel)]
+        _run(pip_cmd)
+    except subprocess.CalledProcessError as e:
+        cmd_s = " ".join(map(str, getattr(e, "cmd", []) or []))
+        if not cmd_s:
+            cmd_s = "<unknown command>"
+        msg = f"Command failed (rc={getattr(e, 'returncode', '?')}): {cmd_s}\nSee provisioning logs for details."
+        if (not _graphviz_dev_headers_present()) and ("pip install" in cmd_s or "-m pip" in cmd_s or " pip " in cmd_s):
+            msg += (
+                "\n\nGraphviz development headers are missing. If the log mentions pygraphviz, install system packages first:\n"
+                "  sudo apt update && sudo apt install -y graphviz libgraphviz-dev pkg-config build-essential"
+            )
+        if expected_python is not None:
+            cur = _py_version(venv_python)
+            if cur != expected_python:
+                msg += f"\n\nSelected Python is {_format_pyver(cur)}; wheel appears to require cp{expected_python[0]}{expected_python[1]}. Install/pass a matching Python."
+        _write_provision_status(venv_dir, profile_id=profile.profile_id, ok=False, status="command_failed", message=msg, wheel=wheel, python_exe=venv_python, expected_python=expected_python)
+        return False, msg
+    except Exception as e:
+        msg = f"Provisioning failed: {type(e).__name__}: {e}"
+        _write_provision_status(venv_dir, profile_id=profile.profile_id, ok=False, status="exception", message=msg, wheel=wheel, python_exe=venv_python, expected_python=expected_python)
+        return False, msg
+
+    # Write a constraints file based on exact pins inside the DFC wheel.
+    # Additionally, we pin a few fragile runtime deps (onnx/protobuf/ml-dtypes)
+    # to the versions that were actually installed by the DFC wheel.
+    #
+    # This serves as a guardrail: if someone runs `pip install onnx` inside the
+    # managed venv, pip will keep the pinned versions instead of upgrading and
+    # breaking hailo_sdk_client imports.
+    pins = _extract_exact_pins_from_wheel(wheel)
+
+    # Guardrail: keep pkg_resources available.
+    if not any(str(p).strip().lower().startswith("setuptools") for p in pins):
+        pins.append("setuptools<82")
+
+    # Ensure critical runtime deps are pinned, even if the wheel only specifies
+    # ranges via transitive dependencies.
+    critical_names = ["onnx", "protobuf", "ml-dtypes", "ml_dtypes"]
+    installed = _get_installed_versions(py, critical_names)
+
+    def _has_pin(name_lc: str) -> bool:
+        for p in pins:
+            if p.split("==", 1)[0].strip().lower() == name_lc:
+                return True
+        return False
+
+    if installed.get("onnx") and (not _has_pin("onnx")):
+        pins.append(f"onnx=={installed['onnx']}")
+    if installed.get("protobuf") and (not _has_pin("protobuf")):
+        pins.append(f"protobuf=={installed['protobuf']}")
+    ml_ver = installed.get("ml-dtypes") or installed.get("ml_dtypes")
+    if ml_ver and (not _has_pin("ml-dtypes")) and (not _has_pin("ml_dtypes")):
+        # Prefer the canonical package name.
+        pins.append(f"ml-dtypes=={ml_ver}")
+    constraints_path = _write_constraints_file(venv_dir, pins)
+    if constraints_path is not None:
+        _patch_activate_for_constraints(venv_dir, constraints_path)
+
+        # If a managed venv already existed and someone upgraded packages
+        # manually, make a best-effort attempt to restore pinned versions.
+        # We only enforce a small set of known fragile deps to avoid excessive
+        # downloads.
+        critical = [
+            "onnx",
+            "protobuf",
+            "ml-dtypes",
+            "ml_dtypes",
+        ]
+        desired: List[str] = []
+        # Collect exact pins for the critical packages.
+        for p in pins:
+            try:
+                name, ver = p.split("==", 1)
+            except Exception:
+                continue
+            if name.strip().lower() in {c.lower() for c in critical}:
+                desired.append(f"{name.strip()}=={ver.strip()}")
+
+        if desired:
+            # Check installed versions first.
+            names = [d.split("==", 1)[0] for d in desired]
+            vers = _get_installed_versions(py, names)
+            mismatched: List[str] = []
+            for d in desired:
+                n, v = d.split("==", 1)
+                got = str(vers.get(n, "") or "")
+                if got != str(v):
+                    mismatched.append(d)
+
+            if mismatched:
+                print(f"[WARN] Detected dependency drift in '{profile.profile_id}' venv. Restoring pins: {', '.join(mismatched)}", flush=True)
+                fix_cmd = [str(py), "-m", "pip", "install", "--force-reinstall", "--no-deps"]
+                if offline:
+                    fix_cmd += ["--no-index"]
+                fix_cmd += mismatched
+                try:
+                    _run(fix_cmd)
+                except subprocess.CalledProcessError as e:
+                    cmd_s = " ".join(map(str, getattr(e, "cmd", []) or []))
+                    if not cmd_s:
+                        cmd_s = "<unknown command>"
+                    return False, (
+                        f"Failed to restore pinned deps for {profile.profile_id} (rc={getattr(e, 'returncode', '?')}).\n"
+                        f"Command: {cmd_s}\n"
+                        "See provisioning logs for details."
+                    )
+
+    # IMPORTANT:
+    # Do NOT upgrade ONNX by default.
+    # The Hailo DFC wheels pin specific versions (e.g. hailo8 DFC 3.33 pins onnx==1.16.0, protobuf==3.20.3).
+    # Upgrading ONNX often upgrades protobuf too, which breaks hailo_sdk_client imports.
+    if upgrade_onnx:
+        print(
+            f"[WARN] Upgrading onnx inside the managed venv for '{profile.profile_id}'. "
+            "This is NOT recommended and may break DFC pinned dependencies.",
+            flush=True,
+        )
+        try:
+            _run([str(py), "-m", "pip", "install", "--upgrade", "onnx"])
+        except subprocess.CalledProcessError as e:
+            cmd_s = " ".join(map(str, getattr(e, "cmd", []) or []))
+            if not cmd_s:
+                cmd_s = "<unknown command>"
+            return False, f"Failed to upgrade onnx for {profile.profile_id} (rc={getattr(e, 'returncode', '?')}): {cmd_s}"
+
+    # Fail fast if dependencies are inconsistent.
+    try:
+        chk = subprocess.check_output(
+            [str(py), "-m", "pip", "check"],
+            text=True,
+            stderr=subprocess.STDOUT,
+            env=_clean_env(),
+        ).strip()
+    except subprocess.CalledProcessError as e:
+        msg = f"pip check failed for {profile.profile_id}:\n{e.output}"
+        _write_provision_status(venv_dir, profile_id=profile.profile_id, ok=False, status="pip_check_failed", message=msg, wheel=wheel, python_exe=venv_python, expected_python=expected_python)
+        return False, msg
+    # Newer pip prints a success message on stdout ("No broken requirements found.")
+    # while still returning rc=0.  Treat that as success; older tool versions
+    # interpreted any stdout as an issue and left the venv in a false NOT READY
+    # state even though pip check was clean.
+    chk_norm = str(chk or "").strip().lower()
+    if chk and not ("no broken requirements found" in chk_norm and "requires" not in chk_norm and "incompatible" not in chk_norm):
+        msg = f"pip check reported dependency issues for {profile.profile_id}:\n{chk}"
+        _write_provision_status(venv_dir, profile_id=profile.profile_id, ok=False, status="pip_check_issues", message=msg, wheel=wheel, python_exe=venv_python, expected_python=expected_python)
+        return False, msg
+
+    # Sanity import
+    # Sanity import:
+    # - pkg_resources is provided by setuptools and is needed by some SDK versions
+    # - hailo_sdk_client must import cleanly
+    # - onnx/protobuf versions should match the pins used by the DFC wheel
+    code = (
+        "import pkg_resources, hailo_sdk_client, onnx, google.protobuf; "
+        "print(getattr(hailo_sdk_client,'__version__','unknown'), onnx.__version__, google.protobuf.__version__)"
+    )
+    try:
+        out = subprocess.check_output(
+            [str(py), "-c", code],
+            text=True,
+            env=_clean_env(),
+            # First DFC import can be interactive (system requirements check).
+            input="y\n",
+        ).strip()
+    except Exception as e:
+        msg = f"Installed wheel but import failed: {type(e).__name__}: {e}"
+        _write_provision_status(venv_dir, profile_id=profile.profile_id, ok=False, status="import_failed", message=msg, wheel=wheel, python_exe=venv_python, expected_python=expected_python)
+        return False, msg
+
+    msg = f"OK: {profile.profile_id} (hailo_sdk_client / onnx / protobuf: {out})\n  venv: {venv_dir}\n  wheel: {wheel.name}"
+    _write_provision_status(venv_dir, profile_id=profile.profile_id, ok=True, status="ready", message=msg, wheel=wheel, python_exe=venv_python, expected_python=expected_python)
+    return True, msg
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--list", action="store_true", help="List known profiles and exit")
+    ap.add_argument("--status", action="store_true", help="Show wheel/managed-venv readiness for all DFC profiles and exit")
+    ap.add_argument("--probe-import", action="store_true", help="With --status, also import hailo_sdk_client inside each managed venv")
+    ap.add_argument("--all", action="store_true", help="Provision all profiles")
+    ap.add_argument("--profile", action="append", default=None, help="Provision only this profile_id (repeatable)")
+    ap.add_argument("--force-reinstall", action="store_true", help="Force reinstall the wheel into the venv")
+    # Default: do NOT upgrade onnx. (Upgrading can break DFC pinned deps.)
+    ap.add_argument(
+        "--upgrade-onnx",
+        action="store_true",
+        help="Upgrade onnx inside the managed venv (NOT recommended; can break DFC pinned deps)",
+    )
+    ap.add_argument(
+        "--no-onnx-upgrade",
+        action="store_true",
+        help=argparse.SUPPRESS,  # legacy / backward compatibility
+    )
+    ap.add_argument("--offline", action="store_true", help="Do not use pip index; install only from local wheel directories")
+    ap.add_argument(
+        "--python",
+        dest="python_exe",
+        default=None,
+        help="Python executable (>=3.10) to use for venv creation. If the DFC wheel is tagged for another Python, the installer auto-selects a matching interpreter unless --strict-python is set.",
+    )
+    ap.add_argument(
+        "--strict-python",
+        action="store_true",
+        help="Fail instead of auto-selecting a Python matching the Hailo wheel tag.",
+    )
+
+    args = ap.parse_args()
+
+    # Decide which python to use for creating the managed venvs.
+    if args.python_exe:
+        venv_python = str(args.python_exe).strip()
+        ver = _py_version(venv_python)
+        if ver is None:
+            print(f"[ERR] --python '{venv_python}' is not runnable.", file=sys.stderr)
+            return 4
+        if ver < (3, 10):
+            print(f"[ERR] --python must be >=3.10 (got {ver[0]}.{ver[1]}).", file=sys.stderr)
+            return 4
+    else:
+        try:
+            venv_python = _pick_venv_python()
+        except Exception as e:
+            print(f"[ERR] {e}", file=sys.stderr)
+            return 4
+
+    mgr = get_dfc_manager()
+
+    if args.list:
+        for p in mgr.profiles:
+            print(
+                f"{p.profile_id}: prefixes={list(p.hw_arch_prefixes)} venv={p.wsl_venv_activate} wheel_dir={p.wheel_dir or ''}"
+            )
+        return 0
+
+    if args.status:
+        from .dfc_env_status import format_status_text, inspect_profiles
+
+        statuses = inspect_profiles(probe_import=bool(getattr(args, "probe_import", False)))
+        print(format_status_text(probe_import=bool(getattr(args, "probe_import", False))))
+        return 0 if all(bool(s.get("ready")) for s in statuses) else 3
+
+    wanted: List[str] = []
+    if args.profile:
+        wanted = [str(x).strip().lower() for x in args.profile if str(x).strip()]
+    elif args.all:
+        wanted = [p.profile_id for p in mgr.profiles]
+    else:
+        ap.error("Specify --all or --profile <id> (or --list)")
+
+    ok_all = True
+    for pid in wanted:
+        prof = mgr.get_profile(pid)
+        if prof is None:
+            print(f"[ERR] Unknown profile_id: {pid}", file=sys.stderr)
+            ok_all = False
+            continue
+
+        print(f"[INFO] Provisioning profile '{prof.profile_id}' …", flush=True)
+        ok, msg = provision_profile(
+            prof,
+            venv_python=venv_python,
+            force_reinstall=bool(args.force_reinstall),
+            upgrade_onnx=(bool(getattr(args, "upgrade_onnx", False)) and (not bool(getattr(args, "no_onnx_upgrade", False)))),
+            offline=bool(args.offline),
+            strict_python=bool(getattr(args, "strict_python", False)),
+        )
+        print(msg)
+        ok_all = ok_all and ok
+
+    return 0 if ok_all else 3
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

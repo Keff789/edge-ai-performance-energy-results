@@ -1,0 +1,74 @@
+[
+  {
+    "all_hits": 6,
+    "classification_hits": 0,
+    "detection_hits": 6,
+    "energy_groups": 18,
+    "groups": 21,
+    "label": "Smallest boundary bytes",
+    "mean_energy_excess_pct": 55.086118543738316,
+    "mean_loss_pct": 25.284490584318174,
+    "median_loss_pct": 3.77011716274378,
+    "method": "cut_bytes_only"
+  },
+  {
+    "all_hits": 6,
+    "classification_hits": 0,
+    "detection_hits": 6,
+    "energy_groups": 18,
+    "groups": 21,
+    "label": "Weighted graph score",
+    "mean_energy_excess_pct": 24.566293306336096,
+    "mean_loss_pct": 17.283459484091725,
+    "median_loss_pct": 13.787922051758938,
+    "method": "weighted_score"
+  },
+  {
+    "all_hits": 6,
+    "classification_hits": 0,
+    "detection_hits": 6,
+    "energy_groups": 18,
+    "groups": 21,
+    "label": "H10 accelerator-fit score",
+    "mean_energy_excess_pct": 32.02200724451843,
+    "mean_loss_pct": 19.64894571630482,
+    "median_loss_pct": 12.814016457659816,
+    "method": "onnx_real_boundary_hardware_aware"
+  },
+  {
+    "all_hits": 6,
+    "classification_hits": 0,
+    "detection_hits": 6,
+    "energy_groups": 18,
+    "groups": 21,
+    "label": "Cycle without handover",
+    "mean_energy_excess_pct": 24.566293306336096,
+    "mean_loss_pct": 17.283459484091725,
+    "median_loss_pct": 13.787922051758938,
+    "method": "cycle_time_no_handover"
+  },
+  {
+    "all_hits": 7,
+    "classification_hits": 0,
+    "detection_hits": 7,
+    "energy_groups": 18,
+    "groups": 21,
+    "label": "Streaming-rate heuristic",
+    "mean_energy_excess_pct": 24.566293306336096,
+    "mean_loss_pct": 17.422851649581155,
+    "median_loss_pct": 9.250584281689866,
+    "method": "stored_predicted_stream_fps"
+  },
+  {
+    "all_hits": 11,
+    "classification_hits": 3,
+    "detection_hits": 8,
+    "energy_groups": 18,
+    "groups": 21,
+    "label": "Measured Generic completion",
+    "mean_energy_excess_pct": 28.06710125494995,
+    "mean_loss_pct": 12.741933938579638,
+    "median_loss_pct": 0.0,
+    "method": "measured_generic_completion"
+  }
+]

@@ -1,0 +1,94 @@
+{
+  "schema": "technical-exclusion-examples-v1",
+  "scope": "Two documented examples among the fixed 420 model-device-cut candidates. Examples explain observed compiler failures; they do not assign a mechanism to every technical exclusion.",
+  "source": {
+    "archive_filename": "SM2_Generic420_Zwischenstand_20261025T095823Z_d36c66.zip",
+    "archive_sha256": "450318998459c7891951c887216a3c226c672ba9c4f44c6ea65038a9fa198591",
+    "member": "data/job/selection/execution_precision_authorities160.json",
+    "member_sha256": "54638648843d1b582563ddde3eae7e7e8c8f34ef32fdd9bed2ed5ba82167612c",
+    "private_paths_omitted": true
+  },
+  "current_candidate_table": "candidates.csv",
+  "technical_exclusion_counts": {
+    "COMPILE_FAILED": 37,
+    "UNSUPPORTED": 24
+  },
+  "examples": [
+    {
+      "model": "yolo11l",
+      "accelerator": "H10",
+      "setup_id": "orin_nx_hailo10_01",
+      "case_id": "b031",
+      "generic_uid": "generic|yolo11l|H10|hailo10h_to_trt|b031",
+      "boundary_id": "sha256:f0fcdf56a4ac24d87ec30c627170492ccad9db80486ec5694df6de65c1b3d147:topo:16ced2c27cf5429155986850b049b437224e09fc8cace2a855032dac61c8c575:b000031",
+      "technical_exclusion": "COMPILE_FAILED",
+      "boundary_tensor_count": 3,
+      "example_kind": "boundary_output_shape",
+      "explanation": "The Hailo compiler could not resolve the output shape of a Split feature-splitter in the extracted prefix. This is a compiler restriction at this selected boundary, not a general prohibition on multi-tensor cuts.",
+      "source_json_pointer": "/rows/2/compile_status",
+      "compiler_error": "feature splitter layer feature_splitter1 (translated from /model.2/Split) successor name is missing, output shape is ambiguous\n\nDetails were written to gui.log (Logs tab).",
+      "compiler_status": {
+        "ok": false,
+        "context_mode": "failed",
+        "timed_out": false,
+        "watchdog_expired": false,
+        "mapping_failed": false
+      },
+      "recorded_receipt_hashes": [
+        {
+          "filename": "attempt_20260925T084246Z_51dbcf1f3b0e4a569758d20684d1d078.json",
+          "sha256": "af93d6496e6d10b1eecd558b0e3cbd2fcac0311d884ce999de907c056761edc2",
+          "size_bytes": 50512
+        },
+        {
+          "filename": "attempt_20260925T161126Z_856bbea7b31d47e8af2b89d0ffa5155b.json",
+          "sha256": "bbeb6898b39fbf41eedd2a0c9585278205a1b28e35fc7cc130b549f897740b20",
+          "size_bytes": 59503
+        },
+        {
+          "filename": "terminal_attempt.json",
+          "sha256": "6eed98411ea58a951d346defe67a1989672599ac84fdfd8232f3d353d6aeca3d",
+          "size_bytes": 59867
+        }
+      ]
+    },
+    {
+      "model": "yolo26m",
+      "accelerator": "H10",
+      "setup_id": "orin_nx_hailo10_01",
+      "case_id": "b416",
+      "generic_uid": "generic|yolo26m|H10|hailo10h_to_trt|b416",
+      "boundary_id": "sha256:d1c6a922dd92f896c69e2f6767ea3ca23fac0e53e5ac69681965eb8a74cda897:topo:4e7515728644c78ae850c06d20d6f896cc2d6f4a650b9d9a33c26b9d609a1c6b:b000416",
+      "technical_exclusion": "COMPILE_FAILED",
+      "boundary_tensor_count": 3,
+      "example_kind": "unsupported_detection_head_operations",
+      "explanation": "The extracted prefix contains detector-head operations that this compiler path does not support, including TopK and GatherElements. These operations select and gather detection entries. A cut that leaves them on the GPU is a different candidate.",
+      "source_json_pointer": "/rows/118/compile_status",
+      "compiler_error": "Parsing failed. The errors found in the graph are:\n UnsupportedOperationError in op /model.23/GatherElements: GatherElements operation is unsupported\n UnsupportedOperationError in op /model.23/GatherElements_1: GatherElements operation is unsupported\n UnsupportedShuffleLayerError in op /model.23/Flatten: Failed to determine type of layer to create in node /model.23/Flatten\n UnsupportedOperationError in op /model.23/TopK: TopK operation is unsupported\n UnsupportedOperationError in op /model.23/TopK_1: TopK operation is unsupported\n UnsupportedOperationError in op /model.23/Mod: Mod operation is unsupported\n UnsupportedGatherLayerError in op /model.23/Gather_3: Can't find index\nPlease try to parse the model again, using these end node names: /model.23/Transpose\n\nDetails were written to gui.log (Logs tab).",
+      "compiler_status": {
+        "ok": false,
+        "context_mode": "failed",
+        "timed_out": false,
+        "watchdog_expired": false,
+        "mapping_failed": false
+      },
+      "recorded_receipt_hashes": [
+        {
+          "filename": "attempt_20260925T084648Z_2ad9f7bd561942c4a19767f7ea0dde2d.json",
+          "sha256": "0cca62b78994c43aa94a05f4a340921f4b6e6baf366985c5f0bfd3ff6f8328a0",
+          "size_bytes": 50802
+        },
+        {
+          "filename": "attempt_20260926T205213Z_4011b672084940668c950519a38a8c7a.json",
+          "sha256": "7a7cc97732cb4477c1029ca15bdbc5bee0cd4207aadf2dfeb5d555daa46a0afa",
+          "size_bytes": 61734
+        },
+        {
+          "filename": "terminal_attempt.json",
+          "sha256": "b26c3ccbb6651008d6ba6344ba4a7514017eeb83be731e8f7ba54a3b26c4792e",
+          "size_bytes": 62098
+        }
+      ]
+    }
+  ]
+}

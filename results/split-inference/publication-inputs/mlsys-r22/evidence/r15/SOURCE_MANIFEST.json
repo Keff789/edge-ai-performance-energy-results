@@ -1,0 +1,1030 @@
+{
+  "schema": "r15-compact-evidence-v1",
+  "scope": "Byte-identical excerpts of the two result archives. SHA256 values bind files to these supplied packages; they are integrity checks, not independent authentication of the external measurement environment. Full quality, energy, graph, canary, and hardware state proofs remain in the original archives. The included 100 raw worker reports support independent process-rate and block-contrast reconstruction.",
+  "archives": [
+    {
+      "series": "audit_regnet",
+      "filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "sha256": "703c1824b64659bea6e06feb403301fc9d86fe0175d9d7725a5a37c988429b68",
+      "size_bytes": 42481560,
+      "source_directory_on_sm2": "/home/kmika/Reports/mlsys_r14_evidence_mechanism_20261017_sm2"
+    },
+    {
+      "series": "resnet_replication",
+      "filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "sha256": "7e0bd1c86f57184cd6c53cc5122a20d664ca1f8a05b57eeb8d8d3a3807ae5056",
+      "size_bytes": 10786385,
+      "source_directory_on_sm2": "/home/kmika/Reports/mlsys_r14_resnet_full_replication_20261017_sm2"
+    }
+  ],
+  "files": [
+    {
+      "bundled_path": "audit_regnet/PROTOCOL.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "PROTOCOL.json",
+      "sha256": "bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd",
+      "size_bytes": 494839,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/REPORT.md",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "REPORT.md",
+      "sha256": "8817288a1cb9fc53d076350ed078d221da3bb713f2547395ebf6c3d0e6a46cd2",
+      "size_bytes": 21544,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/PAPER_DELTA.md",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "PAPER_DELTA.md",
+      "sha256": "b3a4d4945e5ac19a86d629d5ae6d588980cd36d7d52a8301ba85dcc04aafe875",
+      "size_bytes": 6331,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/CLAIM_STATUS.csv",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "CLAIM_STATUS.csv",
+      "sha256": "5c40615f1f30a2922edd4dcde1419eae1d9a34cd6cd64563e87d75d933063b4e",
+      "size_bytes": 25359,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/r14_quality_audit.csv",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/r14_quality_audit.csv",
+      "sha256": "7e0de501a0f4773dd5e25f4ca5a8d13766552bc8e0307ad13c3be07238dce706",
+      "size_bytes": 192669,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/audit_summary.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/audit_summary.json",
+      "sha256": "4fffb5c9fcd6cf613f29f5816dd8c5ee0ef09c9e922fc7729b46fb48af2be88d",
+      "size_bytes": 1462,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/r14_winner_configurations.csv",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/r14_winner_configurations.csv",
+      "sha256": "b94d543dbb9a31d78c3c5f72aac78c3050cb752de23389fb4a07140c372330b1",
+      "size_bytes": 2788,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/calibration_candidate_audit.csv",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/calibration_candidate_audit.csv",
+      "sha256": "cba79522f785c3e844910795fcb90bd2504938b5d7aef403db96702e79cac8ed",
+      "size_bytes": 162451,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/calibration_groups.csv",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/calibration_groups.csv",
+      "sha256": "c920f0b841392ec6215b4b729b28c0e41ca735fd00350c0b4270a27752d2fbbc",
+      "size_bytes": 126974,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/calibration_predictions.csv",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/calibration_predictions.csv",
+      "sha256": "7b9c920580ff9bb6f2bf6a15d93c929fd3650949c81eb008b29766d0cef4534f",
+      "size_bytes": 57274,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/calibration_folds.csv",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/calibration_folds.csv",
+      "sha256": "4c2ad1ff0c62aa77ea38690186715d6087191116b2e95c48f82beab8772172a3",
+      "size_bytes": 5735,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/calibration_memberships.csv",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/calibration_memberships.csv",
+      "sha256": "74c60ebe755c71222d91e9b0ba2b62869609965b087345e2116e6f82f54f6264",
+      "size_bytes": 103681,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/calibration_summary.csv",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/calibration_summary.csv",
+      "sha256": "e12b533eaf7e3af76a562ac5c7e9a699cb1294e0747f7515861defbeaaa4b250",
+      "size_bytes": 4159,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/calibration_protocol.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/calibration_protocol.json",
+      "sha256": "be80a3f9e7e9662da907e438271ae564330ea7b3c0e648212c674828fecf637c",
+      "size_bytes": 2991,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism_confirmation_cells.csv",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism_confirmation_cells.csv",
+      "sha256": "91ea87fb69a4e52bea13ff337c55e8567eea63297c13ce3e2aaff96f4c0b9782",
+      "size_bytes": 43414,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism_confirmation_blocks.csv",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism_confirmation_blocks.csv",
+      "sha256": "5df7f7950d5ac77a410ec47d22f8c679508cd111d62010e9f9d7fcfee984c769",
+      "size_bytes": 19020,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism_confirmation_summary.csv",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism_confirmation_summary.csv",
+      "sha256": "d758e511fd3de80785306213be12bf18ef3b0a237e7777860e682f8a04e539e4",
+      "size_bytes": 4162,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism_extension_trigger_final.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism_extension_trigger_final.json",
+      "sha256": "1476c0744863b48ff914fc9b1bf5cba7f2cfa9366027f7f794f577ab6a56813f",
+      "size_bytes": 6291,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/66e16b95690effb2d81ae068665d6754353079f50926cd4b9a829271295c306d_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/66e16b95690effb2d81ae068665d6754353079f50926cd4b9a829271295c306d_attempt01.json",
+      "sha256": "2dd83237edba776775d83f0e27c790ef3100b0f11a64f65c3c53eb0dea61300a",
+      "size_bytes": 14438,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/8602d601b455d7aee240f65798edac2e0d336ed9040a958d78435e240fdcfad1_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/8602d601b455d7aee240f65798edac2e0d336ed9040a958d78435e240fdcfad1_attempt01.json",
+      "sha256": "85e60886a44cb0920ef8647096fd37da688756975232fed83bb23542e006fcb5",
+      "size_bytes": 8940,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/f3b9c3888dc1182d3fe1e7ad08623fad0dd7f4bc2791cdbe0a19029ca3c18c77_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/f3b9c3888dc1182d3fe1e7ad08623fad0dd7f4bc2791cdbe0a19029ca3c18c77_attempt01.json",
+      "sha256": "7db66ed95743ca11c4d0f71d9275f1579b96784d70625fc668e9f42c6ccf7165",
+      "size_bytes": 14466,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/e1aade824b805a2f7a116137bdfc94bbafd2c463b72210e9aee9c3dd56ea6ea0_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/e1aade824b805a2f7a116137bdfc94bbafd2c463b72210e9aee9c3dd56ea6ea0_attempt01.json",
+      "sha256": "ecc49c204c6f6b76844b13d40e10a15c2faa9e9c980081bf0d3fcab0dc8be99d",
+      "size_bytes": 8934,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/58265118d7c23147f7121738d4550f9896d4a3a2cbd24519a83b65f125476a85_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/58265118d7c23147f7121738d4550f9896d4a3a2cbd24519a83b65f125476a85_attempt01.json",
+      "sha256": "3a02676a4881b79cecb9d095f14a182bedc2fd0cb3b72c7929ef4e217109b87d",
+      "size_bytes": 14428,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/9e2fc22a92097f8d296a4255a33ba090df77a94a4e23436726d14a6aafe0c497_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/9e2fc22a92097f8d296a4255a33ba090df77a94a4e23436726d14a6aafe0c497_attempt01.json",
+      "sha256": "7e62192bde03d3e934c1002d76387b12e960c935ba4337877025602fc3657de4",
+      "size_bytes": 14461,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/8eb14a277db62029783c67ace40c832476cd4f730e8c7a3cbe716116715afb7a_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/8eb14a277db62029783c67ace40c832476cd4f730e8c7a3cbe716116715afb7a_attempt01.json",
+      "sha256": "b80b4402d31561c5adf0d5d8448bd1d9b46be1c1c1b6116c071ccc3b96812d94",
+      "size_bytes": 8909,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/be6ff28b54c5b1e99407ed858a1d333b0cce5cd679ceaf721119daebad37a717_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/be6ff28b54c5b1e99407ed858a1d333b0cce5cd679ceaf721119daebad37a717_attempt01.json",
+      "sha256": "b004acf4934b675eb7840bb06fa1032b2835b83f2bf177452be0fd21778bd22f",
+      "size_bytes": 8908,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/0175b839510f32f17f2ae4171edd9de1a7457c2e12aaee1c3f8cfa28851f9543_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/0175b839510f32f17f2ae4171edd9de1a7457c2e12aaee1c3f8cfa28851f9543_attempt01.json",
+      "sha256": "0b8cd3f4ba4309f3477d12252fd2776520cc779439e5799fc8b4c5ad6e2d9877",
+      "size_bytes": 14431,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/d73147e49067f5346403cd7acb48e0dbbbdd335e503db6e691a4b0d8e8bc0f94_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/d73147e49067f5346403cd7acb48e0dbbbdd335e503db6e691a4b0d8e8bc0f94_attempt01.json",
+      "sha256": "db41b62872b30a1fcaebafd6f7e74817210e84ad3f555a88500c11355158f22d",
+      "size_bytes": 14467,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/2fde18f1fcf4c704c3a008836dcbe418a5ec203e496e8d0630d444c510f9bf41_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/2fde18f1fcf4c704c3a008836dcbe418a5ec203e496e8d0630d444c510f9bf41_attempt01.json",
+      "sha256": "802aa5fd4a63f942b232d6a054c1e5b7da5774d0dbc41018bd683f72fb6b53b2",
+      "size_bytes": 14433,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/86a19e2ca7f6b790f4cc3276ce616beccfb84d89acaa6e822f70e3d74a1ba6a2_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/86a19e2ca7f6b790f4cc3276ce616beccfb84d89acaa6e822f70e3d74a1ba6a2_attempt01.json",
+      "sha256": "e75b04eca231b6e851ae2facaa1b06b5a2da6be6ee41408c15a11411b65968c1",
+      "size_bytes": 8907,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/c7c00b3fed5d980aff14059a3e360b2efa50985a9bbf5a05643a5d6c32ff0271_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/c7c00b3fed5d980aff14059a3e360b2efa50985a9bbf5a05643a5d6c32ff0271_attempt01.json",
+      "sha256": "5aa5270456df22b1007eed0caed1fbd340c15dbc07a59bf979e33ba4a86e4126",
+      "size_bytes": 8936,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/ee3364d186f73b7928b3bdf56bb23facb65511c799b62ebeb6ff24138c5d4a5f_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/ee3364d186f73b7928b3bdf56bb23facb65511c799b62ebeb6ff24138c5d4a5f_attempt01.json",
+      "sha256": "24bbc6ac5fba629952bcfd9da1ba7b60caf69146b9e82db07b55b40743536238",
+      "size_bytes": 8904,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/f5a2b926b33a3d4af503a4c1d664aca0748094acfb897b5e1165521e363f5240_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/f5a2b926b33a3d4af503a4c1d664aca0748094acfb897b5e1165521e363f5240_attempt01.json",
+      "sha256": "c85a186083be28c14e073ca8d29dfb5443e01492d0e9709fde3b8d7cf3d30112",
+      "size_bytes": 14460,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/79ef7736021dad610528b9a8ca78a5a1e1c6ec2be556da93c4c096ecf30a6daa_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/79ef7736021dad610528b9a8ca78a5a1e1c6ec2be556da93c4c096ecf30a6daa_attempt01.json",
+      "sha256": "59667895e90d4e6065b55f9a51fc22e5349cc7219b37b293013e3326f5793331",
+      "size_bytes": 8940,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/b8b02567cf248f860f5d62208e2d539022874499bd5a3d46b2b56c5755c2717f_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/b8b02567cf248f860f5d62208e2d539022874499bd5a3d46b2b56c5755c2717f_attempt01.json",
+      "sha256": "fbbc8c4de19b062d73b8c9c7502de2046e729e50696ae683b5fe626e7b6a84c8",
+      "size_bytes": 8908,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/5159489456fbb496e208d1e09f027e8824b9444a460ba014a51045bc1c8ca3e9_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/5159489456fbb496e208d1e09f027e8824b9444a460ba014a51045bc1c8ca3e9_attempt01.json",
+      "sha256": "d84d65f6ad1eb6e9d03a1ad5e98c10254fa202dc551ce2942b932f3a218ea013",
+      "size_bytes": 8907,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/9fa7725a7787668697288305d83228dd2f5a550006c04f3620fe0a5d6a48713f_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/9fa7725a7787668697288305d83228dd2f5a550006c04f3620fe0a5d6a48713f_attempt01.json",
+      "sha256": "3c2a6f11cbf7f0d1fd26afd8a98c87aa6dc70031674275342366a2b80aeebd76",
+      "size_bytes": 14441,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/0d8175e7664ea6f07d5107eb2f1a180b62b50a6669008aca2408274c81e2e10f_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/0d8175e7664ea6f07d5107eb2f1a180b62b50a6669008aca2408274c81e2e10f_attempt01.json",
+      "sha256": "298e159465a118ce1febe4e25171484337490817b9d787a141ca3376d73667bd",
+      "size_bytes": 14427,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/471c1480addea9c5523fa37ab6f88e875db52323bf3b889c4b5a4772aabd98f6_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/471c1480addea9c5523fa37ab6f88e875db52323bf3b889c4b5a4772aabd98f6_attempt01.json",
+      "sha256": "3905bca8ffc12a05b13bd6ffdcd065c85748254a2a8d1af1feacde648079472e",
+      "size_bytes": 14462,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/d4d66fc321a9df52a9bd210dae4cd95d847b986cb650f0aba442c0cdc0ee60e8_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/d4d66fc321a9df52a9bd210dae4cd95d847b986cb650f0aba442c0cdc0ee60e8_attempt01.json",
+      "sha256": "11812d33c196b10d9c318b84765c618b6a0e27fcd4a50785fb7925c38b2d6667",
+      "size_bytes": 8938,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/4bcbb66ede4eff24cdd225947f63de532e60446d6a7e179c1aaa2998a103ca23_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/4bcbb66ede4eff24cdd225947f63de532e60446d6a7e179c1aaa2998a103ca23_attempt01.json",
+      "sha256": "cec96dfba4b02ff3649c2fc522856d6caad68177d94a2183829ac9a6c3c9f0ff",
+      "size_bytes": 14469,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/9be0bbd75c998c9e03dd7a312de4864a738cd494bd93a0cbb6c602f7a9ec697f_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/9be0bbd75c998c9e03dd7a312de4864a738cd494bd93a0cbb6c602f7a9ec697f_attempt01.json",
+      "sha256": "f7dfc7e42a9c1222234e5a0acab22d367b0e79bbfbf7d79cd999d328dc6664b5",
+      "size_bytes": 8938,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/8e76908394c4e8213536fb4b92c393d8a0a9533a692b77bdc177bd6d418741f9_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/8e76908394c4e8213536fb4b92c393d8a0a9533a692b77bdc177bd6d418741f9_attempt01.json",
+      "sha256": "7afbcef88e1d65061679341d78f3872d7e579ff9ecdb0dac86d5e98eb5e5c29b",
+      "size_bytes": 14460,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/a0025890c0efa3afd83bc4bdcae5d0a27b57d9f8280571441abd50b08ceb69b5_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/a0025890c0efa3afd83bc4bdcae5d0a27b57d9f8280571441abd50b08ceb69b5_attempt01.json",
+      "sha256": "cccfb57325c51a1db006fe851a9b6c062d5f72605ad88f41486e31b2e52fd7e8",
+      "size_bytes": 8940,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/67c17def8665574facb8340f64b24decaa24796e884554cee226537a7a476ad2_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/67c17def8665574facb8340f64b24decaa24796e884554cee226537a7a476ad2_attempt01.json",
+      "sha256": "01c984131552527447de5e9b437a628323d270c00fe2527a0b0aeb16280c70dd",
+      "size_bytes": 8940,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/7b43b6e94a8b5525f284e8af0397c5ea92119dfa3ac91edcddbacc565c8661df_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/7b43b6e94a8b5525f284e8af0397c5ea92119dfa3ac91edcddbacc565c8661df_attempt01.json",
+      "sha256": "4728a11620feb96f5d73fd050a09394e111f4820669f9b04f956d0552be3d89e",
+      "size_bytes": 14464,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/0238416688dad6f0020f82a18735999967724472466371b2d4e20dcd5cc54b68_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/0238416688dad6f0020f82a18735999967724472466371b2d4e20dcd5cc54b68_attempt01.json",
+      "sha256": "ab2e23ac6eadfbd3fd25bd45ed5ef661ff97572b91b872ca1292201e392d4d29",
+      "size_bytes": 8906,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/c74d5fd5b2c87e21199c8d015d0e53f76c960f2fd81efdb56d42de1e7a2bd913_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/c74d5fd5b2c87e21199c8d015d0e53f76c960f2fd81efdb56d42de1e7a2bd913_attempt01.json",
+      "sha256": "ca91e866815e76ecc42af0c95ebfb2ed0f1e815875f917f4fffb7f78d539b8ef",
+      "size_bytes": 8909,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/08e312ed03a2e07011e179e3e531b1b89b9608ea8d681396fe9096a876815949_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/08e312ed03a2e07011e179e3e531b1b89b9608ea8d681396fe9096a876815949_attempt01.json",
+      "sha256": "2cc6819046590f690f965c561c72194169abd465f03f249b797f8fbd16f1819b",
+      "size_bytes": 14427,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/2a79c44ab8c99665b226fecb22863a2bd4c80c3ebea3b3e0660586e9089c0689_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/2a79c44ab8c99665b226fecb22863a2bd4c80c3ebea3b3e0660586e9089c0689_attempt01.json",
+      "sha256": "538ee396f232aaa24ce0e0b835ad8eefbea0fe75f7473fa09bfc6112b0d16e68",
+      "size_bytes": 14438,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/5ba5cece0e5b198fa80b19ccfcdd10bb85b06b58654e8970e39de41f7b4076bb_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/5ba5cece0e5b198fa80b19ccfcdd10bb85b06b58654e8970e39de41f7b4076bb_attempt01.json",
+      "sha256": "d777ba77a9594c86920ed0b896bee1273e7002a860373959267998d322c32739",
+      "size_bytes": 14427,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/202793f68cb6ba5a490d0e157bcb5650da4a7df386477b85dd5ace277e4ee3c0_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/202793f68cb6ba5a490d0e157bcb5650da4a7df386477b85dd5ace277e4ee3c0_attempt01.json",
+      "sha256": "8d26288630e18cc97a8da295101dca3ef4d17cb13c03aa5d53bfdc88dc172a2e",
+      "size_bytes": 14434,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/dddaae2cce9bf5c0130a8963874f81004758cfa1db446c8ee9a57876e3efa219_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/dddaae2cce9bf5c0130a8963874f81004758cfa1db446c8ee9a57876e3efa219_attempt01.json",
+      "sha256": "d9c976c055ded6f7e5a05a5723d9cce8de873fe678fea82026534f8a26fc970d",
+      "size_bytes": 8907,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/c1d856e5abf524bb6c27033afbce701bba816853b6805e132057697b27ff8685_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/c1d856e5abf524bb6c27033afbce701bba816853b6805e132057697b27ff8685_attempt01.json",
+      "sha256": "8565ab3ed4dd65edb6c4d1a5e73e7149f113659293208d09d99eb3161e35f3a4",
+      "size_bytes": 14460,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/8065a43b9fef2b817ab7388c1a46c8fc43538ab5064c26c6469227bc215fc59b_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/8065a43b9fef2b817ab7388c1a46c8fc43538ab5064c26c6469227bc215fc59b_attempt01.json",
+      "sha256": "63e32c58822d343cfb17c26f8821efef22899c1051932607019fe7bba2a628a3",
+      "size_bytes": 14461,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/99a573cc1ece0f22a4398f9177d6d41d610975497010ce603837c5f75e23ed56_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/99a573cc1ece0f22a4398f9177d6d41d610975497010ce603837c5f75e23ed56_attempt01.json",
+      "sha256": "04821faa6f3bab8737d146e54ccbbf4d86f4f6ada545cb172d6f61bfb6ab1998",
+      "size_bytes": 8938,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/c6bc9df6e019a5030f28e56fdc9e275d2302f35bcced523b0f0dc3c88a82ff91_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/c6bc9df6e019a5030f28e56fdc9e275d2302f35bcced523b0f0dc3c88a82ff91_attempt01.json",
+      "sha256": "8ee04a816db914f4b2916b3206d2f55ec42855a1df72dbc9c693c60d8b6cba2b",
+      "size_bytes": 8908,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/c2ca391ccb43f8dbe62ad12973cd067525eadcb78eaaed4df86307f413352e6f_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/c2ca391ccb43f8dbe62ad12973cd067525eadcb78eaaed4df86307f413352e6f_attempt01.json",
+      "sha256": "565bcdde9f03388554b82ec006fc63cac00cf108c414b45bdbb63fc15b74be8e",
+      "size_bytes": 8938,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/PROTOCOL.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "PROTOCOL.json",
+      "sha256": "c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601",
+      "size_bytes": 307115,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/REPORT.md",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "REPORT.md",
+      "sha256": "6dedf054fae2385628df8cfc3ea54701f93fb4de33bfcd4d0ce3caf31c10b1c9",
+      "size_bytes": 9999,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/PAPER_DELTA.md",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "PAPER_DELTA.md",
+      "sha256": "538ea1ffe9263515ce3db62e92989f19cedea664b2cbdcefa6a623b586e95abf",
+      "size_bytes": 1812,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/PROTOCOL.md",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "PROTOCOL.md",
+      "sha256": "e5cc6d1bee38aa184c4b9406acfe1322f7ec5ce9214709086ca77419442da187",
+      "size_bytes": 3668,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/CLAIM_STATUS_DELTA.md",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "CLAIM_STATUS_DELTA.md",
+      "sha256": "d34dbc3bc012145e93f3351961da6afb49df2529a338ef8b76c1405873894567",
+      "size_bytes": 2894,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/replication_analysis_cells.csv",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/replication_analysis_cells.csv",
+      "sha256": "1643a666dec650aa83f4574781aca391841e7a9692cb7412631ffe5ddabfc64d",
+      "size_bytes": 48813,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/replication_analysis_blocks.csv",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/replication_analysis_blocks.csv",
+      "sha256": "652718266551c9bd18a8b8ae7e56ce49439e15f455ada34b58704e6a24661b8f",
+      "size_bytes": 3981,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/replication_analysis_summaries.csv",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/replication_analysis_summaries.csv",
+      "sha256": "f9e79d58f718bfbeb931949b97bcdd9fe1b9ab26c2739ce32698da28f7eee61d",
+      "size_bytes": 2664,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/f7c31e1d2438268c72463d90f8f275ea15be5fb969ecef04ed0e0c874ea3fb18_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/f7c31e1d2438268c72463d90f8f275ea15be5fb969ecef04ed0e0c874ea3fb18_attempt01.json",
+      "sha256": "b38153b8350002b7be69be8ea1ed8c8bff066481bb9dec5a21940fd7a7584ebc",
+      "size_bytes": 14835,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/cc6f0caff940ebd7b6aa3be0b528818fb9d0494fb196ea1076b4dfd1beebbedb_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/cc6f0caff940ebd7b6aa3be0b528818fb9d0494fb196ea1076b4dfd1beebbedb_attempt01.json",
+      "sha256": "a1e208ded6cf52224c5d8a7e93c0620bbf5403c797eee3690a004e3e9d447605",
+      "size_bytes": 9204,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/7c1f0ec2ca359416c25d06af00dc53330fd7e12484a874945cf24d54fe39ad5c_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/7c1f0ec2ca359416c25d06af00dc53330fd7e12484a874945cf24d54fe39ad5c_attempt01.json",
+      "sha256": "1b93235792bc9eb050bef0085c3faa912504c6a6536b9e715ae9299212b83c8f",
+      "size_bytes": 14858,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/b7dfb5e6010df7be6da8d6a299d7050da5268bca040d3e267e23ad5d318a3486_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/b7dfb5e6010df7be6da8d6a299d7050da5268bca040d3e267e23ad5d318a3486_attempt01.json",
+      "sha256": "74bb5dd8db58c0593016c03aad14772a6f4120f34d05167906e7890c36e047a7",
+      "size_bytes": 9199,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/f7d3a524a376db2798a6d8dec99f9c0e15e6814ea10efbbdf6ab5be544ac2296_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/f7d3a524a376db2798a6d8dec99f9c0e15e6814ea10efbbdf6ab5be544ac2296_attempt01.json",
+      "sha256": "ffb7215256f543ee8a6e97173eeeb7ef57e95ac8363a088e5baf4257675164f3",
+      "size_bytes": 14825,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/575397cbcc0338f59d6c7fc1c30abc61e7ed8266e3655c1ffe48b9ca8297f085_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/575397cbcc0338f59d6c7fc1c30abc61e7ed8266e3655c1ffe48b9ca8297f085_attempt01.json",
+      "sha256": "c8eb8aca8542b9cf27ead737e8022f9317694dd152f6c247d3bd609e625277d9",
+      "size_bytes": 14862,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/9984d7edece3b71b8d1234f7a5798bed6e13bbb6369090ed7629818073cbc454_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/9984d7edece3b71b8d1234f7a5798bed6e13bbb6369090ed7629818073cbc454_attempt01.json",
+      "sha256": "1fb71350f6e419e08eee1b4088c651c31a9495df0785ce94a2d842a7fd7aea25",
+      "size_bytes": 9172,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/12c0dcd27c1fdb17e1fd5a693c31aa81ace7e544cbb30780b6d3e34ead3a1807_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/12c0dcd27c1fdb17e1fd5a693c31aa81ace7e544cbb30780b6d3e34ead3a1807_attempt01.json",
+      "sha256": "f98398d6af7893b9f4fdbcb08c3281134b91b3b4131d224a029be4eeb412bda3",
+      "size_bytes": 9170,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/28a42d4036ecb9452d8035868373e02d2d0f8271828ce601c87313828b2ffdc4_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/28a42d4036ecb9452d8035868373e02d2d0f8271828ce601c87313828b2ffdc4_attempt01.json",
+      "sha256": "aa33da415de5f88a825819b083822250deaba29f39bf440ea2dcd220bd9c39f1",
+      "size_bytes": 14822,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/8dc91f930565e8f034b32543d1164e9d1a568a08b581395c307f39e904267ef6_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/8dc91f930565e8f034b32543d1164e9d1a568a08b581395c307f39e904267ef6_attempt01.json",
+      "sha256": "5c768ba6172b5970d18eb7c784688bd1ccf6539d2f247eb016579e96ef02502f",
+      "size_bytes": 14847,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/9da2cc9a43fa51821fb84b21bd082d260f2fb77b68ebd928fb05a2a08c53331b_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/9da2cc9a43fa51821fb84b21bd082d260f2fb77b68ebd928fb05a2a08c53331b_attempt01.json",
+      "sha256": "8939137d723ea898528adf1b5fc54d714301bba766a3f0fbf5587e21207ddefb",
+      "size_bytes": 14833,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/65067381130e1615aa1380415bb328ec13a66bb6cca6b6b69a5213230629fadd_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/65067381130e1615aa1380415bb328ec13a66bb6cca6b6b69a5213230629fadd_attempt01.json",
+      "sha256": "cb15709754efdae5effdaac5209a311f24be7d383e387d29a1161b30aeaaff8c",
+      "size_bytes": 9174,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/b2664b2ef196c8f6974d345e9f0e9caa6367c17d9685f33dd3fa1b519a23c32f_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/b2664b2ef196c8f6974d345e9f0e9caa6367c17d9685f33dd3fa1b519a23c32f_attempt01.json",
+      "sha256": "a480f874beb68c5a4f55f81cf586164a81c09387c2d2ce0ad5dd2bc1f9971f92",
+      "size_bytes": 9201,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/92003bc1bc09504c158749c4cc4b386a1abde48c61f717877667d429ced7df67_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/92003bc1bc09504c158749c4cc4b386a1abde48c61f717877667d429ced7df67_attempt01.json",
+      "sha256": "5506f22d0c70a57ab718158bb0b582da352402f4f63f10931d377afc85119221",
+      "size_bytes": 9174,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/dc513ae3205b04b02da503149df5f24fa163ee3b9747933f701ced3295bd9c58_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/dc513ae3205b04b02da503149df5f24fa163ee3b9747933f701ced3295bd9c58_attempt01.json",
+      "sha256": "b7c06e1259395ffcc9658c07c52ac3454de176b19593109d96395937ee19d564",
+      "size_bytes": 14857,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/81334253d1abf0c67e19059bcb5f4954892a3e8492bc6b8ee11cf6594f779677_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/81334253d1abf0c67e19059bcb5f4954892a3e8492bc6b8ee11cf6594f779677_attempt01.json",
+      "sha256": "929804a0f70f1a262498758f7d0907e48340cd8169fc120613034385cda121e8",
+      "size_bytes": 9206,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/bb4ac53691839d86fc6d88631690dc7bc012efafc036453cc5a1608a6211547b_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/bb4ac53691839d86fc6d88631690dc7bc012efafc036453cc5a1608a6211547b_attempt01.json",
+      "sha256": "b4acdfcee1b80c2c27823d245820fed4ae7ab1703208e26c1361ad8db1ee48d6",
+      "size_bytes": 9174,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/f78f74f9ab138c7f81fcb744bb43c2c4a2c90826295efe92745028f1a03b41a5_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/f78f74f9ab138c7f81fcb744bb43c2c4a2c90826295efe92745028f1a03b41a5_attempt01.json",
+      "sha256": "845fe3fa19b70bcef067c11aa4526c5a0bc7a11c29f58ea5decff7a82ea26a3e",
+      "size_bytes": 9172,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/df0b5938d222be1c5005d15691e47d1a274a84bad43ceae14266fa5c9480978a_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/df0b5938d222be1c5005d15691e47d1a274a84bad43ceae14266fa5c9480978a_attempt01.json",
+      "sha256": "11f93cb9119a8d930ad3ad4e3936be128dcfad0f1de155458c8b160d746f7435",
+      "size_bytes": 14827,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/d9a3416a75940ef224e8b3419e8afc282b784f2b2531967b1866a05198b490f2_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/d9a3416a75940ef224e8b3419e8afc282b784f2b2531967b1866a05198b490f2_attempt01.json",
+      "sha256": "3c49fa773f93d79812d24ed30e9a8ba82a2662ea66437eb17bf1ad52ada5641a",
+      "size_bytes": 14829,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/03a6a83eba1a688bdccf7e5129aefae4b779db350d30c3b204e258b059d707f8_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/03a6a83eba1a688bdccf7e5129aefae4b779db350d30c3b204e258b059d707f8_attempt01.json",
+      "sha256": "a0262a71740ced866ebf9424eacbc6406ccd0f0a72fad78f4f393f7321f29eee",
+      "size_bytes": 14856,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/9db6c938f919623412b073d3bfc2cfe177d5642713dea25c17c55cafd0ebfed1_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/9db6c938f919623412b073d3bfc2cfe177d5642713dea25c17c55cafd0ebfed1_attempt01.json",
+      "sha256": "64dd56f3c6734d5d8128e185717520a6da23b123810d63a9766260a825cdf2ad",
+      "size_bytes": 9201,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/127b83030dac565bbdc9c1f21093f996ee263ee92f1d46af545caab4d6341775_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/127b83030dac565bbdc9c1f21093f996ee263ee92f1d46af545caab4d6341775_attempt01.json",
+      "sha256": "7bb44c1bf9b0532e6ddc6cb34b2865992b755ee30968e0d04fa44554b01dbfd5",
+      "size_bytes": 14852,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/997b8544d10d823fd8296f5d25bd21f2f84729a7342ca4c4d09da5986ce6c85f_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/997b8544d10d823fd8296f5d25bd21f2f84729a7342ca4c4d09da5986ce6c85f_attempt01.json",
+      "sha256": "6dab06b0200b6f7384b9a3cfa11420754280c28f709f2e6a9b7350e1b9472394",
+      "size_bytes": 9206,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/0582c9bc276a3ec6b09f7d37aed8ce8a2dd2d8ad9a1ed0bb5dc6e99b9b8f3411_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/0582c9bc276a3ec6b09f7d37aed8ce8a2dd2d8ad9a1ed0bb5dc6e99b9b8f3411_attempt01.json",
+      "sha256": "4e12f4492b529847b5483d042ba4110850144ce15b6a85063011b1cede694820",
+      "size_bytes": 14860,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/51f6df0b4b47a331cd1b32af456b65b36d6563677ce38c861eb81b42b2e22919_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/51f6df0b4b47a331cd1b32af456b65b36d6563677ce38c861eb81b42b2e22919_attempt01.json",
+      "sha256": "f13fd3b49b7a3cf124cd2758217ba6457efe4c310946524709634050d869072f",
+      "size_bytes": 9202,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/933e92893e926a0792559f4affb607b00fac777ef20404a5aa7a2ea9445ca543_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/933e92893e926a0792559f4affb607b00fac777ef20404a5aa7a2ea9445ca543_attempt01.json",
+      "sha256": "8e59790c2b3e53e38c5403a5bc383229a0c750efb8dae3ebd4e515944956f322",
+      "size_bytes": 9201,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/4fe3c60e5786cce2c4671311fd4bbc53d6bb9d64218b4f780d26d7855159d231_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/4fe3c60e5786cce2c4671311fd4bbc53d6bb9d64218b4f780d26d7855159d231_attempt01.json",
+      "sha256": "a5f3653d2dc412667652c9d8a9dcb55a45de33c1e8d75589f8c70b3e26b6a8cf",
+      "size_bytes": 14853,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/69fb187f57ab374a8733fc863d013393cf066a2b61a6483c7fd47a724fd9083f_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/69fb187f57ab374a8733fc863d013393cf066a2b61a6483c7fd47a724fd9083f_attempt01.json",
+      "sha256": "7c923ca63355f8475b8b9c91063fcfcd942046078b787e92c5a5115596a3d052",
+      "size_bytes": 9174,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/711f30b048c830eadcb41a64609bfef625c21434d4f650e5d6dc5ccf4930b38e_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/711f30b048c830eadcb41a64609bfef625c21434d4f650e5d6dc5ccf4930b38e_attempt01.json",
+      "sha256": "e3c63530ad56e24276d4eafc457432091f2ce4bd5925f671aeeee9970607e6f0",
+      "size_bytes": 9172,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/873fc176bcbce79207013385135cbcadbdab1e5093a065df899b269323ad9ca2_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/873fc176bcbce79207013385135cbcadbdab1e5093a065df899b269323ad9ca2_attempt01.json",
+      "sha256": "9b22d2eaf178fc25062339712f98b03059b8045d8ce09dae1ee2608e9f75a9ed",
+      "size_bytes": 14826,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/d811b8fbf2f0aa3f927b2038da8efa5b09d39736a1b62cbe871b9bff2feac3de_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/d811b8fbf2f0aa3f927b2038da8efa5b09d39736a1b62cbe871b9bff2feac3de_attempt01.json",
+      "sha256": "d9515115c1c1a847ac8dd1284451be4a0cbc832a65802fd16f8e36bc284413e8",
+      "size_bytes": 14828,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/46959df2f533c8b041492212474983aa60c15f09283f0dc07c1e2d3bbd7b01ea_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/46959df2f533c8b041492212474983aa60c15f09283f0dc07c1e2d3bbd7b01ea_attempt01.json",
+      "sha256": "6be28659c6610d787bc442b305c24e973fa82d76b14291aaca75db2a1bb2dd16",
+      "size_bytes": 14827,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/11785d9fb90b79040e850c2049cf1765cbc32e24876abae206850f1db30f520b_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/11785d9fb90b79040e850c2049cf1765cbc32e24876abae206850f1db30f520b_attempt01.json",
+      "sha256": "8d88b6d1c35e6ed0b81b64f456628e6dc7075d9dd3cd2ddb917246cf67dc820c",
+      "size_bytes": 14831,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/9edb24202054e625473ddc5ea10ba4909b21885118d961ff3e6b8a09f9c0f60e_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/9edb24202054e625473ddc5ea10ba4909b21885118d961ff3e6b8a09f9c0f60e_attempt01.json",
+      "sha256": "2de6b7fbc711ac5e73e353fce67c8aa42886340975d595fb7ba699384693e6b1",
+      "size_bytes": 9170,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/01d7ce9b43ca938094f90f1f2955083aad42cd56bf1a7bf21b0405614a1d1f08_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/01d7ce9b43ca938094f90f1f2955083aad42cd56bf1a7bf21b0405614a1d1f08_attempt01.json",
+      "sha256": "5cc3c45bb4ac07570532d59dc4daa1b2d7fcaf5eebf316bdb7d23ad3d74665ee",
+      "size_bytes": 14850,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/1279dc1700fd41e123f6287bb258b1787dbe2e2d406d6ccd4101d9d70cef3d8a_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/1279dc1700fd41e123f6287bb258b1787dbe2e2d406d6ccd4101d9d70cef3d8a_attempt01.json",
+      "sha256": "bcccd350d2b03226ddf924df8e7f9d16b115bb3391ec1bec15a0b1d8aa5fb127",
+      "size_bytes": 14858,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/a6c4c24f341f80e502835c73a0a6c2468750c4583d34ffee893a9f388344425d_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/a6c4c24f341f80e502835c73a0a6c2468750c4583d34ffee893a9f388344425d_attempt01.json",
+      "sha256": "fdb07a096f9bfbf5a1414030f6659378e26d6a97e2f4d77650abffa10de79fd1",
+      "size_bytes": 9206,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/d4e434a6dbca7b805cc4965ca50a2c7cae7acd6737eb747e7c8acc1301a9eab4_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/d4e434a6dbca7b805cc4965ca50a2c7cae7acd6737eb747e7c8acc1301a9eab4_attempt01.json",
+      "sha256": "83b614359df614f4fcf02a4b1f48b13c03322e2cb6d9a6d133a54f1fbb45e69b",
+      "size_bytes": 9174,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "resnet_replication/results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/6cd5c0a9628f084da0fb4327e0d63f22ab433f703529eba7eacc9972474e422b_attempt01.json",
+      "archive_filename": "MLSYS_R14_RESNET_FULL_REPLIKATION_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/c57205b0cbcdd2c7862bf0c21d88eec585a374c7b566bb6896a8571f37be2601/reports/6cd5c0a9628f084da0fb4327e0d63f22ab433f703529eba7eacc9972474e422b_attempt01.json",
+      "sha256": "19a63dc641a1a75ea7cbb13e6c6938ac9a39ee5a3f16f4f3ec557ecade32b4da",
+      "size_bytes": 9201,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/b763f25c6f0812f7478b82a290c90bf7c396719c243ae0fd3ef5151df42f513f_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/b763f25c6f0812f7478b82a290c90bf7c396719c243ae0fd3ef5151df42f513f_attempt01.json",
+      "sha256": "3e31ac12c24a1372c38af5ac0816b8ae2d46604d7e064d5a0175491c2bf5ee9f",
+      "size_bytes": 14405,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/28cb88953eb1c91851902cff086f99f43392598bdb98d830af24f4863c799fd5_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/28cb88953eb1c91851902cff086f99f43392598bdb98d830af24f4863c799fd5_attempt01.json",
+      "sha256": "004de5062ca827fe10933924f85294741ab95569a48dd9488f09c8960da9739f",
+      "size_bytes": 14412,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/8cd4ed5d6462ef7a90eeb6d01c4c95939978dced6905064bce91a8b16f8c3486_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/8cd4ed5d6462ef7a90eeb6d01c4c95939978dced6905064bce91a8b16f8c3486_attempt01.json",
+      "sha256": "eb04200df1163648e6684d7a70affac58ce64569f9df92f93a1f774fc808fdfe",
+      "size_bytes": 14375,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/b6539b2c1fdb2c452a3681c57d39def42b4162d3ca8d3cc9b2b3a81c8d6838c2_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/b6539b2c1fdb2c452a3681c57d39def42b4162d3ca8d3cc9b2b3a81c8d6838c2_attempt01.json",
+      "sha256": "1c8acbaf63534663f42effc3a2cc757d1c3670fa8c01406b2b8d02020690f9e5",
+      "size_bytes": 14379,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/75412fb49aa7d90838e1f16c5b7bab97686cbf89b84384e7096d11caface4e94_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/75412fb49aa7d90838e1f16c5b7bab97686cbf89b84384e7096d11caface4e94_attempt01.json",
+      "sha256": "7dea9704b91bfa7c24a7dc8796427a121e951625bdb00e76765c48a6d6057051",
+      "size_bytes": 14407,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/0ff3abe6a94667e7c0a3014a3676a3142be0066a17109e39c8d89b73182c0b01_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/0ff3abe6a94667e7c0a3014a3676a3142be0066a17109e39c8d89b73182c0b01_attempt01.json",
+      "sha256": "670d219197ad440191823c9dbe6c4b67e3dcf6b4f9199bd35f95a36556cdd842",
+      "size_bytes": 14378,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/c4a0ef711ce500b09494ca345d704e181a86137cb24638ee4aa280d7d07596b4_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/c4a0ef711ce500b09494ca345d704e181a86137cb24638ee4aa280d7d07596b4_attempt01.json",
+      "sha256": "91784d5433b0223ad557488584b53d04cda8f2f9b1584b640378349ec30f3b76",
+      "size_bytes": 14389,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/cfb4108018a1702f6e8b3b775edf0182a74617fd98ce2ab4bf295869fb8e735b_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/cfb4108018a1702f6e8b3b775edf0182a74617fd98ce2ab4bf295869fb8e735b_attempt01.json",
+      "sha256": "e3f588583cade3300eed478479427b55f906117db6ff587ac84ddb2996a65702",
+      "size_bytes": 14409,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/b1d78f7ea570c27621a2115afc980e6be350b59000b874285a80b583d58b29f6_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/b1d78f7ea570c27621a2115afc980e6be350b59000b874285a80b583d58b29f6_attempt01.json",
+      "sha256": "e169bd3cf346275e703e06cbeae796bd798be6e24c664faa5cadababd3c3f10d",
+      "size_bytes": 14380,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/845472ffa5f72e27d7ede579b745a7e866619377524db2eebbb854e3292a279e_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/845472ffa5f72e27d7ede579b745a7e866619377524db2eebbb854e3292a279e_attempt01.json",
+      "sha256": "7991295433f5de78e013f21ba706857fa0348a07e69ab547faa320b2ec0c464c",
+      "size_bytes": 14416,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/bd6e94e8a92a041dce92d42dcf88305f9528d26f04bca8c24076fe4e7836032e_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/bd6e94e8a92a041dce92d42dcf88305f9528d26f04bca8c24076fe4e7836032e_attempt01.json",
+      "sha256": "ca1063744195169abaf0b6e0d45473cdb7f665cbf1cc13c448ed31a84bbc86cf",
+      "size_bytes": 14386,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/f9f08b6f16a98bed90dd3b7824b387ae9193c15d53f7fee7eaa90c9adacb8f82_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/f9f08b6f16a98bed90dd3b7824b387ae9193c15d53f7fee7eaa90c9adacb8f82_attempt01.json",
+      "sha256": "3661264da5a987ca5fcbe66def59fa38fb135d5a1286f6a126a9d6738c5a1165",
+      "size_bytes": 14405,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/794c637797f7da0ae59ba73a9667d14dcc788d12568e42f3424020cd9f7d4288_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/794c637797f7da0ae59ba73a9667d14dcc788d12568e42f3424020cd9f7d4288_attempt01.json",
+      "sha256": "b33bbf1b0bf3ca49541f440bc3bf33055ee531539244b4550094986e8b16b32b",
+      "size_bytes": 14383,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/b5c0c3082dbaeed3ad2bfdf755b76d0852feea8e258d9f3aaa4c75f8b9380d68_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/b5c0c3082dbaeed3ad2bfdf755b76d0852feea8e258d9f3aaa4c75f8b9380d68_attempt01.json",
+      "sha256": "2fdad39c501456c6e8743bf870bdc8e9ba6fab25f83d225c5e3fbf9914426698",
+      "size_bytes": 14385,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/cd85015a0eb85e0c4215eeed0a2313ff56f10afdbb6b95ad12b5396aa30618a1_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/cd85015a0eb85e0c4215eeed0a2313ff56f10afdbb6b95ad12b5396aa30618a1_attempt01.json",
+      "sha256": "afffc42f294a11b04eefbe06fecaa56adcc8eb156f9694b6654d2dc7ba785af4",
+      "size_bytes": 14408,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/418f864bcea0774f1ca20785d7a9e27dc89aa917006eed9d0a736f4853908b76_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/418f864bcea0774f1ca20785d7a9e27dc89aa917006eed9d0a736f4853908b76_attempt01.json",
+      "sha256": "1b8db3b360f54cda706ad01ebae6cdd7fc8f10089bbad9ca24834c30db4318d2",
+      "size_bytes": 14413,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/5b5231ec754b8425cfcf09f05d401f14e74953ed917889f1098b34b7dcc08e3a_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/5b5231ec754b8425cfcf09f05d401f14e74953ed917889f1098b34b7dcc08e3a_attempt01.json",
+      "sha256": "63c6ec72f5bc66d2fbe705288378c0ef4e771fdfe4a262d95598bbfcb77964f4",
+      "size_bytes": 14417,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/6b8e64bcba2ee63e19c0b5ce16b3af1c1046ff1634d77ce496acc40ec1b5f99c_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/6b8e64bcba2ee63e19c0b5ce16b3af1c1046ff1634d77ce496acc40ec1b5f99c_attempt01.json",
+      "sha256": "8439e2cf5616306ac72edd208d4e27c3e03f7d6491fbf9e33bb44cf98b7e8cb5",
+      "size_bytes": 14382,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/fb35488c9fb761d4d34c577dcd2b871c17a9a1dee027faddadb8f655ef598580_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/fb35488c9fb761d4d34c577dcd2b871c17a9a1dee027faddadb8f655ef598580_attempt01.json",
+      "sha256": "18cc297a8d61385125fcf34f8b13fb3e5bd740b3139d85420929c0c11ed4a857",
+      "size_bytes": 14406,
+      "byte_identical_to_archive_member": true
+    },
+    {
+      "bundled_path": "audit_regnet/results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/3115865cfe3a5a48c0c9ee57d2e0f639d1f6e6c11a8a89bf97a41fee595cb455_attempt01.json",
+      "archive_filename": "MLSYS_R14_SM2_ABKLAERUNG_20261017_RESULTS.zip",
+      "archive_member": "results/mechanism/bff5aff0a26d8148256a688bccd2dd7e254092d42fcafb36b59f486edb96d9fd/reports/3115865cfe3a5a48c0c9ee57d2e0f639d1f6e6c11a8a89bf97a41fee595cb455_attempt01.json",
+      "sha256": "19500d0d0ed54daa8d8c8f366abe8eb4b9d48679293d7938df2f29afd5eaedd9",
+      "size_bytes": 14381,
+      "byte_identical_to_archive_member": true
+    }
+  ]
+}

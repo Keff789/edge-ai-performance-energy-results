@@ -1,0 +1,26 @@
+series,label,paper_window,reason
+historical/durations_without_filter/gemm/fp16/fp16,Jetson / GEMM FP16,envelope_0.5,NPY-derived envelope
+historical/durations_without_filter/gemm/int8/int8,Jetson / GEMM INT8,envelope_0.5,NPY-derived envelope
+historical/durations_without_filter/yolo/fp16/fp16,Jetson / YOLO FP16,envelope_0.5,NPY-derived envelope
+historical/durations_without_filter/yolo/fp32/fp32,Jetson / YOLO FP32,envelope_0.5,NPY-derived envelope
+historical/durations_without_filter/yolo/int8/int8,Jetson / YOLO INT8,envelope_0.5,NPY-derived envelope
+historical/gpu_sweep/gemm/fp16,GPU / GEMM FP16,envelope_0.5,NPY-derived envelope
+historical/gpu_sweep/gemm/fp32,GPU / GEMM FP32,envelope_0.5,NPY-derived envelope
+historical/hailo_durations/gemm,Hailo / GEMM,envelope_0.5,NPY-derived envelope
+historical/hailo_durations/random_pattern_yolo,Hailo / Random-pattern YOLO,reported_legacy,Hailo random-pattern historical window
+historical/hailo_durations/yolo,Hailo / YOLO,envelope_0.5,NPY-derived envelope
+historical/hailo_sweep/gemm,Hailo / GEMM,envelope_0.5,NPY-derived envelope
+historical/hailo_sweep/llm,Hailo / LLM,envelope_0.5,NPY-derived envelope
+historical/hailo_sweep/random_pattern_yolo,Hailo / Random-pattern YOLO,reported_legacy,Hailo random-pattern historical window
+historical/hailo_sweep/yolo,Hailo / YOLO,envelope_0.5,NPY-derived envelope
+historical/sweep_without_filter/gemm/fp16,Jetson / GEMM FP16,envelope_0.5,NPY-derived envelope
+historical/sweep_without_filter/gemm/fp32,Jetson / GEMM FP32,envelope_0.5,NPY-derived envelope
+historical/sweep_without_filter/gemm/int8,Jetson / GEMM INT8,envelope_0.5,NPY-derived envelope
+historical/sweep_without_filter/llm,Jetson / LLM,envelope_0.5,NPY-derived envelope
+historical/sweep_without_filter/random_pattern_yolo,Jetson / Random-pattern YOLO,envelope_0.5,NPY-derived envelope
+historical/sweep_without_filter/yolo/fp16/fp16,Jetson / YOLO FP16,envelope_0.5,NPY-derived envelope
+historical/sweep_without_filter/yolo/fp32/fp32,Jetson / YOLO FP32,envelope_0.5,NPY-derived envelope
+historical/sweep_without_filter/yolo/int8/int8,Jetson / YOLO INT8,envelope_0.5,NPY-derived envelope
+memmert_archive/durations/gemm/fp32,Jetson / GEMM FP32,envelope_0.5,NPY-derived envelope
+memmert_archive/durations/random_pattern_yolo_durations,Jetson / Random-pattern YOLO,envelope_0.5,NPY-derived envelope
+memmert_archive/durations/random_pattern_yolo_durations_adjusted,Jetson / Random-pattern YOLO (adjusted),envelope_0.5,NPY-derived envelope

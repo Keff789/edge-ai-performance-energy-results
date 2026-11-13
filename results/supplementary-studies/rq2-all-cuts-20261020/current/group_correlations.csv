@@ -1,0 +1,43 @@
+view,model,setup,task,n,rho_bytes_native,rho_bytes_generic,rho_generic_native,byte_features_available,byte_unavailability_reason,unique_boundary_sizes,native_best_fps,native_best_case,boundary_bytes_native_winner_first_rank,boundary_bytes_trials_to_loss_le_5pct,generic_native_winner_first_rank,generic_trials_to_loss_le_5pct,calibrated_generic_native_winner_first_rank,calibrated_generic_trials_to_loss_le_5pct
+all_measured,mobilenet_v3_large,DeepX,classification,17,0.764888976949481,0.272290574318585,-0.198529411764706,True,,10,1551.62674122196,b135,1,1,13,13,5,3
+all_measured,mobilenet_v3_large,H10,classification,17,-0.356453115471603,-0.503737562489383,0.362745098039216,True,,10,1171.78108561774,b078,16,8,11,9,,
+all_measured,mobilenet_v3_large,H8,classification,17,-0.677013382510301,-0.663398853794372,0.997549019607843,True,,10,993.083599,b027,11,11,1,1,,
+all_measured,regnet_x_1_6gf,DeepX,classification,20,0.79818331771194,-0.340778784349554,-0.542857142857143,True,,6,729.03494213377,b109,12,11,17,16,13,12
+all_measured,regnet_x_1_6gf,H10,classification,20,0.90240207214894,-0.253929822318721,-0.493233082706767,True,,6,1367.11248377648,b123,2,2,18,18,18,18
+all_measured,regnet_x_1_6gf,H8,classification,20,0.411085086945942,-0.129859876560388,0.757894736842105,True,,6,617.505899,b073,6,6,4,4,6,6
+all_measured,resnet50,DeepX,classification,19,0.799775599802563,0.8089684227888,0.457894736842105,True,,5,781.541729401305,b104,3,2,6,6,2,2
+all_measured,resnet50,H10,classification,19,0.0992824882513527,0.162712966856384,0.478947368421053,True,,5,1099.53814729907,b095,12,11,15,13,12,11
+all_measured,resnet50,H8,classification,19,-0.53594158009758,-0.416434881276507,0.970175438596491,True,,5,581.33212,b038,14,5,2,1,2,1
+all_measured,yolo11l,DeepX,detection,3,,,0.5,False,Detector graph-byte bindings are absent from the current calibration audit.,0,49.753976427142,b062,,,1,1,,
+all_measured,yolo11l,H10,detection,3,,,-0.5,False,Detector graph-byte bindings are absent from the current calibration audit.,0,53.2837092317369,b120,,,2,2,,
+all_measured,yolo11l,H8,detection,3,,,1,False,Detector graph-byte bindings are absent from the current calibration audit.,0,43.7765982015976,b120,,,1,1,,
+all_measured,yolo26m,DeepX,detection,3,,,0.5,False,Detector graph-byte bindings are absent from the current calibration audit.,0,98.2156877763637,b043,,,2,1,,
+all_measured,yolo26m,H10,detection,3,,,0.5,False,Detector graph-byte bindings are absent from the current calibration audit.,0,110.292412066109,b043,,,2,1,,
+all_measured,yolo26m,H8,detection,3,,,0.5,False,Detector graph-byte bindings are absent from the current calibration audit.,0,78.7858247407675,b038,,,2,1,,
+all_measured,yolo26s,DeepX,detection,3,,,0.5,False,Detector graph-byte bindings are absent from the current calibration audit.,0,163.359488357223,b021,,,1,1,,
+all_measured,yolo26s,H10,detection,3,,,1,False,Detector graph-byte bindings are absent from the current calibration audit.,0,181.931185137995,b021,,,1,1,,
+all_measured,yolo26s,H8,detection,3,,,1,False,Detector graph-byte bindings are absent from the current calibration audit.,0,187.00493851383,b021,,,1,1,,
+all_measured,yolov7_paper,DeepX,detection,3,,,0.5,False,Detector graph-byte bindings are absent from the current calibration audit.,0,64.0454177976234,b044,,,1,1,,
+all_measured,yolov7_paper,H10,detection,3,,,0.5,False,Detector graph-byte bindings are absent from the current calibration audit.,0,69.619008524253,b044,,,1,1,,
+all_measured,yolov7_paper,H8,detection,3,,,1,False,Detector graph-byte bindings are absent from the current calibration audit.,0,112.867784213556,b066,,,1,1,,
+quality_5pct,mobilenet_v3_large,DeepX,classification,17,0.764888976949481,0.272290574318585,-0.198529411764706,True,,10,1551.62674122196,b135,1,1,13,13,5,3
+quality_5pct,mobilenet_v3_large,H10,classification,9,0.953065230366386,-0.419698450069601,-0.533333333333333,True,,5,1142.90468257984,b074,4,4,9,9,8,8
+quality_5pct,mobilenet_v3_large,H8,classification,8,-0.711991493403343,-0.626061485578801,0.976190476190476,True,,5,993.083599,b027,4,4,1,1,1,1
+quality_5pct,regnet_x_1_6gf,DeepX,classification,20,0.79818331771194,-0.340778784349554,-0.542857142857143,True,,6,729.03494213377,b109,12,11,17,16,13,12
+quality_5pct,regnet_x_1_6gf,H10,classification,20,0.90240207214894,-0.253929822318721,-0.493233082706767,True,,6,1367.11248377648,b123,2,2,18,18,18,18
+quality_5pct,regnet_x_1_6gf,H8,classification,20,0.411085086945942,-0.129859876560388,0.757894736842105,True,,6,617.505899,b073,6,6,4,4,6,6
+quality_5pct,resnet50,DeepX,classification,19,0.799775599802563,0.8089684227888,0.457894736842105,True,,5,781.541729401305,b104,3,2,6,6,2,2
+quality_5pct,resnet50,H10,classification,19,0.0992824882513527,0.162712966856384,0.478947368421053,True,,5,1099.53814729907,b095,12,11,15,13,12,11
+quality_5pct,resnet50,H8,classification,19,-0.53594158009758,-0.416434881276507,0.970175438596491,True,,5,581.33212,b038,14,5,2,1,2,1
+quality_5pct,yolo11l,DeepX,detection,3,,,0.5,False,Detector graph-byte bindings are absent from the current calibration audit.,0,49.753976427142,b062,,,1,1,,
+quality_5pct,yolo11l,H10,detection,3,,,-0.5,False,Detector graph-byte bindings are absent from the current calibration audit.,0,53.2837092317369,b120,,,2,2,,
+quality_5pct,yolo11l,H8,detection,3,,,1,False,Detector graph-byte bindings are absent from the current calibration audit.,0,43.7765982015976,b120,,,1,1,,
+quality_5pct,yolo26m,DeepX,detection,3,,,0.5,False,Detector graph-byte bindings are absent from the current calibration audit.,0,98.2156877763637,b043,,,2,1,,
+quality_5pct,yolo26m,H10,detection,3,,,0.5,False,Detector graph-byte bindings are absent from the current calibration audit.,0,110.292412066109,b043,,,2,1,,
+quality_5pct,yolo26m,H8,detection,3,,,0.5,False,Detector graph-byte bindings are absent from the current calibration audit.,0,78.7858247407675,b038,,,2,1,,
+quality_5pct,yolo26s,DeepX,detection,3,,,0.5,False,Detector graph-byte bindings are absent from the current calibration audit.,0,163.359488357223,b021,,,1,1,,
+quality_5pct,yolo26s,H10,detection,3,,,1,False,Detector graph-byte bindings are absent from the current calibration audit.,0,181.931185137995,b021,,,1,1,,
+quality_5pct,yolo26s,H8,detection,3,,,1,False,Detector graph-byte bindings are absent from the current calibration audit.,0,187.00493851383,b021,,,1,1,,
+quality_5pct,yolov7_paper,DeepX,detection,3,,,0.5,False,Detector graph-byte bindings are absent from the current calibration audit.,0,64.0454177976234,b044,,,1,1,,
+quality_5pct,yolov7_paper,H10,detection,3,,,0.5,False,Detector graph-byte bindings are absent from the current calibration audit.,0,69.619008524253,b044,,,1,1,,
+quality_5pct,yolov7_paper,H8,detection,3,,,1,False,Detector graph-byte bindings are absent from the current calibration audit.,0,112.867784213556,b066,,,1,1,,

@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering\small\TableSetup
+\caption{Completed-detection throughput for the B500 matrix, including the specified host decoder and NMS. Intervals are bootstrap intervals for the median of three fresh-process repeats; quality is the separately bound dataset decision.}
+\label{tab:evaluation:yolov7_standard_native}
+\begin{tabularx}{\linewidth}{@{}L{1.55cm}Y S[table-format=2.2]r l@{}}
+\toprule
+\textbf{Setup} & \textbf{Path} & {\textbf{FPS}} & \textbf{95\% interval} & \textbf{Quality} \\
+\midrule
+DEEPX & Split b044 & 12.41 & \num{11.71}--\num{12.42} & pass \\
+ & Accelerator Full & 9.73 & \num{9.71}--\num{9.95} & pass \\
+ & TensorRT Full & 12.58 & \num{12.56}--\num{12.66} & pass \\
+\addlinespace[.3em]
+Hailo-10H & Split b044 & 16.92 & \num{16.82}--\num{16.97} & pass \\
+ & Accelerator Full & 9.04 & \num{9.01}--\num{9.05} & fail \\
+ & TensorRT Full & 18.69 & \num{18.59}--\num{18.78} & pass \\
+\addlinespace[.3em]
+Hailo-8 & Split b044 & 15.85 & \num{15.74}--\num{15.85} & pass \\
+ & Accelerator Full & 16.18 & \num{16.17}--\num{16.19} & fail \\
+ & TensorRT Full & 18.84 & \num{18.81}--\num{18.87} & pass \\
+\bottomrule
+\end{tabularx}
+\end{table}

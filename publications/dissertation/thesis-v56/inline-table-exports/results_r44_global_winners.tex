@@ -1,0 +1,20 @@
+\begin{table}[!htb]
+\centering\small\setlength{\tabcolsep}{3pt}
+\caption{„Schnellste beobachtete“ Werte beziehen sich auf „Full“ und „Split“ über alle Konfigurationen hinweg. YOLO11l verwendet „Generic“, die übrigen Splits „Native“. Alle vierzehn Bereitstellungen erfüllen die 5\%-Qualitätsregel. „Energie“ bezieht sich auf genau diese nach Durchsatz ausgewählten Konfigurationen. Bei den Verhältnissen werden ungerundete Daten verwendet.}
+\label{tab:evaluation:global_winners}
+\begin{tabular}{@{}llS[table-format=4.0]lS[table-format=4.0]S[table-format=1.2]S[table-format=3.2]S[table-format=3.2]@{}}
+\toprule
+& \multicolumn{2}{c}{Full} & \multicolumn{2}{c}{Split} & & \multicolumn{2}{c}{mJ/Bild} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){7-8}
+Modell & Backend & {FPS} & Einrichtung/Schnitt & {FPS} & {$R_g$} & {Full} & {Split} \\
+\midrule
+MobileNetV3-L & DX & 1469 & DX/b135 & 1552 & 1.06 & 12.01 & 12.59 \\
+RegNet-X & DX & 538 & H10/b123 & 1367 & 2.54 & 31.54 & 15.83 \\
+ResNet-50 & DX & 656 & H10/b095 & 1100 & 1.68 & 27.65 & 29.46 \\
+YOLO11l & DX & 63 & DX/b511 & 69 & 1.10 & 315.23 & 326.19 \\
+YOLO26m & TRT (H8) & 85 & H10/b043 & 110 & 1.30 & 400.03 & 319.65 \\
+YOLO26s & TRT (DX) & 152 & H8/b021 & 187 & 1.23 & 187.80 & 157.65 \\
+YOLOv7 & DX & 83 & H8/b066 & 113 & 1.35 & 269.44 & 330.14 \\
+\bottomrule
+\end{tabular}
+\end{table}

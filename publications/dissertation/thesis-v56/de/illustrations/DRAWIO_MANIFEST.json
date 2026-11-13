@@ -1,0 +1,5726 @@
+{
+  "schema": "german-dissertation-drawio-source-release-v1",
+  "date": "2026-10-29",
+  "language": "de",
+  "count": 17,
+  "source_file_count": 34,
+  "pdf_count": 17,
+  "scope": "Only the seventeen German supplied DrawIO-derived figures used by the thesis; no author photographs and no LaTeX project files.",
+  "paths_relative_to": "repository root",
+  "exporter": {
+    "path": "scripts/dissertation/drawio/export_drawio_de.py",
+    "sha256": "f3c06649feca50c134d141c210491243e3be6d6211be935aaa8f7b125c733aad",
+    "role": "Transforms the original uploaded German bundle; committed SVGs are already corrected and normalized."
+  },
+  "renderer": {
+    "inkscape": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+    "pdf_producer": "cairo 1.18.0 (https://cairographics.org)",
+    "fonts": "Nimbus Sans Regular/Bold",
+    "reproduction": "Re-export each corrected SVG using export_command_from_repository_root. PDF creation timestamps vary; the committed PDF SHA-256 identifies this release snapshot. All seventeen committed SVG re-exports matched text, vector object counts, and rendered pixels."
+  },
+  "figures": [
+    {
+      "number": "01",
+      "project_asset": "9_resources/illustrations/architecture_orin_nx.pdf",
+      "figure_numbers": [
+        "5.3"
+      ],
+      "pdf": "publications/dissertation/thesis-v56/de/illustrations/architekturen/architecture_orin_nx.pdf",
+      "pdf_sha256": "9471da59d40656d6c27e4dacc4daccf2de734aedc764ddfa14b882c41cd5e61d",
+      "corrected_svg": "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/01_Hardwarearchitekturen/01_Orin_NX.svg",
+      "corrected_svg_sha256": "92a9c74f905f33bc2313b5b1da7c7b9691fecdf95df22f5b37739166a64a0ed6",
+      "corrected_drawio": "publications/dissertation/thesis-v56/de/sources/drawio/DrawIO/01_Hardwarearchitekturen/01_Orin_NX.drawio",
+      "corrected_drawio_sha256": "b8380ceea089f5b045971752cb325725538abad670b75e43e4d396152a2d6cac",
+      "uploaded_source": {
+        "language": "Deutsch",
+        "svg_bundle_path": "Export_SVG/01_Hardwarearchitekturen/01_Orin_NX.svg",
+        "svg_sha256": "8411982ee0705214be24e597825a390b2f7a73c9bcd890202b4e6902f9e52bcd",
+        "drawio_bundle_path": "DrawIO/01_Hardwarearchitekturen/01_Orin_NX.drawio",
+        "drawio_sha256": "992a307805a393a3253d5c0c82207bde8ba3c9454cd357d3ccb8a32e30e5608f"
+      },
+      "semantic_changes": [],
+      "typography_changes": [
+        {
+          "cell": "orin-24",
+          "text": "A78AE-CPU · 8 Kerne",
+          "old_css_px": 31.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-35",
+          "text": "Ampere-GPU · 1024 Kerne",
+          "old_css_px": 29.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-36",
+          "text": "32 Tensorkerne",
+          "old_css_px": 32.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-84",
+          "text": "2x NVDLA v2",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-86",
+          "text": "PVA v2",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-89",
+          "text": "Speichercontroller-Verbund",
+          "old_css_px": 32.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-92",
+          "text": "Multimedia-",
+          "old_css_px": 32.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-93",
+          "text": "Komplex",
+          "old_css_px": 32.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-95",
+          "text": "NV",
+          "old_css_px": 22.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-96",
+          "text": "Kodierer",
+          "old_css_px": 20.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-98",
+          "text": "NV",
+          "old_css_px": 22.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-99",
+          "text": "Dekodierer",
+          "old_css_px": 20.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-101",
+          "text": "NV",
+          "old_css_px": 22.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-102",
+          "text": "JPEG",
+          "old_css_px": 22.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-106",
+          "text": "DP / HDMI /",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-107",
+          "text": "eDP",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-110",
+          "text": "PCIe x1",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-113",
+          "text": "PCIe x2",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-116",
+          "text": "PCIe x4",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-119",
+          "text": "3x USB 3.2",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-122",
+          "text": "GbE",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-125",
+          "text": "4x CSI",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-128",
+          "text": "I2C / UART /",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-129",
+          "text": "QSPI / I2S /",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-130",
+          "text": "CAN / GPIO",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-133",
+          "text": "16 GB",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-134",
+          "text": "DRAM",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-154",
+          "text": "L1/L2/L3",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-156",
+          "text": "Systemcache",
+          "old_css_px": 24.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-158",
+          "text": "L2",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "orin-160",
+          "text": "ORIN NX",
+          "old_css_px": 44.0,
+          "new_css_px": 41.221,
+          "target_final_pt": 9.5
+        }
+      ],
+      "local_label_refinements": [
+        {
+          "cell": "orin-35",
+          "old": "Ampere-GPU · 1024 Kerne",
+          "new": "Ampere-GPU · 1024 Kerne",
+          "target_final_pt": 7.7,
+          "svg_center_baseline_y": 403.39,
+          "svg_text_x": "225.43"
+        },
+        {
+          "cell": "orin-95",
+          "old": "NV",
+          "new": "NV",
+          "target_final_pt": 6.6,
+          "svg_center_baseline_y": 163.52,
+          "svg_text_x": "756.09"
+        },
+        {
+          "cell": "orin-96",
+          "old": "Kodierer",
+          "new": "Kodierer",
+          "target_final_pt": 6.6,
+          "svg_center_baseline_y": 189.77,
+          "svg_text_x": "756.36"
+        },
+        {
+          "cell": "orin-98",
+          "old": "NV",
+          "new": "NV",
+          "target_final_pt": 6.6,
+          "svg_center_baseline_y": 233.52,
+          "svg_text_x": "756.09"
+        },
+        {
+          "cell": "orin-99",
+          "old": "Dekodierer",
+          "new": "Dekodierer",
+          "target_final_pt": 6.6,
+          "svg_center_baseline_y": 259.77,
+          "svg_text_x": "756.35"
+        },
+        {
+          "cell": "orin-101",
+          "old": "NV",
+          "new": "NV",
+          "target_final_pt": 6.6,
+          "svg_center_baseline_y": 197.02,
+          "svg_text_x": "878.59"
+        },
+        {
+          "cell": "orin-102",
+          "old": "JPEG",
+          "new": "JPEG",
+          "target_final_pt": 6.6,
+          "svg_center_baseline_y": 224.14,
+          "svg_text_x": "877.43"
+        },
+        {
+          "cell": "orin-93",
+          "old": "Komplex",
+          "new": "Komplex",
+          "target_final_pt": null,
+          "svg_center_baseline_y": 125.9,
+          "svg_text_x": "808.36"
+        }
+      ],
+      "rendering_cleanup": "Removed the DrawIO unsupported-SVG-text fallback, if present; actual labels are native SVG text.",
+      "export_command_from_repository_root": [
+        "inkscape",
+        "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/01_Hardwarearchitekturen/01_Orin_NX.svg",
+        "--export-area-page",
+        "--export-type=pdf",
+        "--export-filename=publications/dissertation/thesis-v56/de/illustrations/architekturen/architecture_orin_nx.pdf"
+      ],
+      "recommended_tex_width_fraction": 0.64,
+      "page_size_pdf_points": [
+        740.25,
+        840.75
+      ],
+      "fonts": [
+        "NimbusSans-Bold",
+        "NimbusSans-Regular"
+      ],
+      "text_at_recommended_tex_size": [
+        {
+          "text": "A78AE-CPU · 8 Kerne",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Ampere-GPU · 1024 Kerne",
+          "pdf_font_pt": 25.05824851989746,
+          "final_font_pt": 7.7
+        },
+        {
+          "text": "32 Tensorkerne",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "2x NVDLA v2",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "PVA v2",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Speichercontroller-Verbund",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Multimedia-",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Komplex",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "NV",
+          "pdf_font_pt": 21.478500366210938,
+          "final_font_pt": 6.6
+        },
+        {
+          "text": "Kodierer",
+          "pdf_font_pt": 21.478500366210938,
+          "final_font_pt": 6.6
+        },
+        {
+          "text": "NV",
+          "pdf_font_pt": 21.478500366210938,
+          "final_font_pt": 6.6
+        },
+        {
+          "text": "Dekodierer",
+          "pdf_font_pt": 21.478500366210938,
+          "final_font_pt": 6.6
+        },
+        {
+          "text": "NV",
+          "pdf_font_pt": 21.478500366210938,
+          "final_font_pt": 6.6
+        },
+        {
+          "text": "JPEG",
+          "pdf_font_pt": 21.478500366210938,
+          "final_font_pt": 6.6
+        },
+        {
+          "text": "DP / HDMI /",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "eDP",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "PCIe x1",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "PCIe x2",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "PCIe x4",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "3x USB 3.2",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "GbE",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "4x CSI",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "I2C / UART /",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "QSPI / I2S /",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "CAN / GPIO",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "16 GB",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "DRAM",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "L1/L2/L3",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Systemcache",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "L2",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "ORIN NX",
+          "pdf_font_pt": 30.91575050354004,
+          "final_font_pt": 9.5
+        }
+      ],
+      "validation": {
+        "one_page": true,
+        "raster_images": 0,
+        "text_spans_inside_page": true,
+        "selectable_text": true,
+        "visual_qa": "reviewed; no clipped or overlapping substantive labels at recommended size",
+        "font_embedding": "pdffonts reports all fonts embedded; Nimbus Sans Regular/Bold",
+        "committed_source_reexport_identical_text": true,
+        "committed_source_reexport_identical_vector_object_count": true,
+        "committed_source_reexport_identical_72dpi_render": true,
+        "pdf_creation_date": "D:20261029071246-03'00"
+      }
+    },
+    {
+      "number": "02",
+      "project_asset": "9_resources/illustrations/architecture_hailo8.pdf",
+      "figure_numbers": [
+        "5.4"
+      ],
+      "pdf": "publications/dissertation/thesis-v56/de/illustrations/architekturen/architecture_hailo8.pdf",
+      "pdf_sha256": "8378461f0d2d49774f30eba81ea64a0e548326a175fc3cd82dd3da5d847f6319",
+      "corrected_svg": "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/01_Hardwarearchitekturen/02_Hailo8.svg",
+      "corrected_svg_sha256": "d6d2e604b0ae1ccf2ada5ef4989de83fc9cc3478cf4718dfaf3b96134fd424e7",
+      "corrected_drawio": "publications/dissertation/thesis-v56/de/sources/drawio/DrawIO/01_Hardwarearchitekturen/02_Hailo8.drawio",
+      "corrected_drawio_sha256": "989222c6c93126e1ceef49f099c3275e01414dad7b76ae901da5f25e70ba0d28",
+      "uploaded_source": {
+        "language": "Deutsch",
+        "svg_bundle_path": "Export_SVG/01_Hardwarearchitekturen/02_Hailo8.svg",
+        "svg_sha256": "c7ae5bf2f610ca195679cdd8707d50b9a431f2b77a3e1c93bc7992e6586d6264",
+        "drawio_bundle_path": "DrawIO/01_Hardwarearchitekturen/02_Hailo8.drawio",
+        "drawio_sha256": "78510cbaa72c78b2920a65bf9e09e05fe5fc7fd14d375d481e23c5aa4ebac4b9"
+      },
+      "semantic_changes": [
+        {
+          "removed_labels": [
+            "ISP",
+            "H.264"
+          ],
+          "removed_cells": [
+            "hailo8-29",
+            "hailo8-30",
+            "hailo8-34",
+            "hailo8-35",
+            "hailo8-39",
+            "hailo8-41"
+          ],
+          "reason": "Retain the verified prior Hailo-8 correction: these video-processing blocks are unsupported; delete their boxes and connecting arrows too."
+        }
+      ],
+      "typography_changes": [
+        {
+          "cell": "hailo8-106",
+          "text": "STEU.",
+          "old_css_px": 19.0,
+          "new_css_px": 28.638,
+          "target_final_pt": 6.6
+        },
+        {
+          "cell": "hailo8-107",
+          "text": "SPEICH.",
+          "old_css_px": 18.0,
+          "new_css_px": 28.638,
+          "target_final_pt": 6.6
+        },
+        {
+          "cell": "hailo8-108",
+          "text": "RECH.",
+          "old_css_px": 19.0,
+          "new_css_px": 28.638,
+          "target_final_pt": 6.6
+        },
+        {
+          "cell": "hailo8-103",
+          "text": "Schicht 1",
+          "old_css_px": 30.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "hailo8-104",
+          "text": "Schicht 2",
+          "old_css_px": 30.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "hailo8-109",
+          "text": "NN-Rechenkern",
+          "old_css_px": 33.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "hailo8-32",
+          "text": "ARM",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "hailo8-33",
+          "text": "M4",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "hailo8-37",
+          "text": "PCIe x4",
+          "old_css_px": 34.0,
+          "new_css_px": 36.882,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "hailo8-110",
+          "text": "HAILO-8",
+          "old_css_px": 44.0,
+          "new_css_px": 41.221,
+          "target_final_pt": 9.5
+        }
+      ],
+      "local_label_refinements": [
+        {
+          "cell": "hailo8-106",
+          "old": "STEU.",
+          "new": "ST.",
+          "target_final_pt": 7.2,
+          "svg_center_baseline_y": 831.32,
+          "svg_text_x": "290.75"
+        },
+        {
+          "cell": "hailo8-107",
+          "old": "SPEICH.",
+          "new": "SP.",
+          "target_final_pt": 7.2,
+          "svg_center_baseline_y": 830.71,
+          "svg_text_x": "408.03"
+        },
+        {
+          "cell": "hailo8-108",
+          "old": "RECH.",
+          "new": "RE.",
+          "target_final_pt": 7.2,
+          "svg_center_baseline_y": 831.32,
+          "svg_text_x": "525.48"
+        }
+      ],
+      "rendering_cleanup": "Removed the DrawIO unsupported-SVG-text fallback, if present; actual labels are native SVG text.",
+      "export_command_from_repository_root": [
+        "inkscape",
+        "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/01_Hardwarearchitekturen/02_Hailo8.svg",
+        "--export-area-page",
+        "--export-type=pdf",
+        "--export-filename=publications/dissertation/thesis-v56/de/illustrations/architekturen/architecture_hailo8.pdf"
+      ],
+      "recommended_tex_width_fraction": 0.64,
+      "page_size_pdf_points": [
+        740.25,
+        840.75
+      ],
+      "fonts": [
+        "NimbusSans-Bold",
+        "NimbusSans-Regular"
+      ],
+      "text_at_recommended_tex_size": [
+        {
+          "text": "ST.",
+          "pdf_font_pt": 23.430749893188477,
+          "final_font_pt": 7.2
+        },
+        {
+          "text": "SP.",
+          "pdf_font_pt": 23.430749893188477,
+          "final_font_pt": 7.2
+        },
+        {
+          "text": "RE.",
+          "pdf_font_pt": 23.430749893188477,
+          "final_font_pt": 7.2
+        },
+        {
+          "text": "Schicht 1",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Schicht 2",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "NN-Rechenkern",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "ARM",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "M4",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "PCIe x4",
+          "pdf_font_pt": 27.661500930786133,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "HAILO-8",
+          "pdf_font_pt": 30.91575050354004,
+          "final_font_pt": 9.5
+        }
+      ],
+      "validation": {
+        "one_page": true,
+        "raster_images": 0,
+        "text_spans_inside_page": true,
+        "selectable_text": true,
+        "visual_qa": "reviewed; no clipped or overlapping substantive labels at recommended size",
+        "font_embedding": "pdffonts reports all fonts embedded; Nimbus Sans Regular/Bold",
+        "committed_source_reexport_identical_text": true,
+        "committed_source_reexport_identical_vector_object_count": true,
+        "committed_source_reexport_identical_72dpi_render": true,
+        "pdf_creation_date": "D:20261029071245-03'00"
+      }
+    },
+    {
+      "number": "03",
+      "project_asset": "9_resources/illustrations/architecture_hailo10h.pdf",
+      "figure_numbers": [
+        "5.5"
+      ],
+      "pdf": "publications/dissertation/thesis-v56/de/illustrations/architekturen/architecture_hailo10h.pdf",
+      "pdf_sha256": "a434d22020896cacafcd96d618e658ebee545da658b0af9cb111111d672f27e9",
+      "corrected_svg": "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/01_Hardwarearchitekturen/03_Hailo10H.svg",
+      "corrected_svg_sha256": "6a2114805d4dbed5cb66d9610fed58a1ec8e817d0dbdf4591fbda87ed0921404",
+      "corrected_drawio": "publications/dissertation/thesis-v56/de/sources/drawio/DrawIO/01_Hardwarearchitekturen/03_Hailo10H.drawio",
+      "corrected_drawio_sha256": "af6c9db2af986afa60a8d43eb3b20b9e78b7e1632fb2698c1cccc34a5fa20f8f",
+      "uploaded_source": {
+        "language": "Deutsch",
+        "svg_bundle_path": "Export_SVG/01_Hardwarearchitekturen/03_Hailo10H.svg",
+        "svg_sha256": "1b5bd1affcecc09b8199d3b3d29bd5aa4e74cc82e737359910acd8fd8b8cdbcc",
+        "drawio_bundle_path": "DrawIO/01_Hardwarearchitekturen/03_Hailo10H.drawio",
+        "drawio_sha256": "7574ef93f15bf2b1f1f6fbad3e04d3ccaddc745cddfb9c43bd9fb69ac49cd594"
+      },
+      "semantic_changes": [],
+      "typography_changes": [
+        {
+          "cell": "4",
+          "text": "Chip",
+          "old_css_px": 23.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "6",
+          "text": "NN-Rechenkern · 2. Generation",
+          "old_css_px": 32.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "32",
+          "text": "STEU.",
+          "old_css_px": 19.0,
+          "new_css_px": 28.261,
+          "target_final_pt": 6.6
+        },
+        {
+          "cell": "34",
+          "text": "SPEICH.",
+          "old_css_px": 18.0,
+          "new_css_px": 28.261,
+          "target_final_pt": 6.6
+        },
+        {
+          "cell": "36",
+          "text": "RECH.",
+          "old_css_px": 19.0,
+          "new_css_px": 28.261,
+          "target_final_pt": 6.6
+        },
+        {
+          "cell": "38",
+          "text": "STEU.",
+          "old_css_px": 19.0,
+          "new_css_px": 28.261,
+          "target_final_pt": 6.6
+        },
+        {
+          "cell": "40",
+          "text": "SPEICH.",
+          "old_css_px": 18.0,
+          "new_css_px": 28.261,
+          "target_final_pt": 6.6
+        },
+        {
+          "cell": "42",
+          "text": "RECH.",
+          "old_css_px": 19.0,
+          "new_css_px": 28.261,
+          "target_final_pt": 6.6
+        },
+        {
+          "cell": "45",
+          "text": "Schicht 1",
+          "old_css_px": 30.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "46",
+          "text": "Schicht 2",
+          "old_css_px": 30.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "47",
+          "text": "Ressourcenanordnung / Schichtzuordnung: schematisch",
+          "old_css_px": 21.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "49",
+          "text": "PCIe",
+          "old_css_px": 30.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "50",
+          "text": "Gen3 ×4",
+          "old_css_px": 30.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "52",
+          "text": "Maximale\nRechenleistung",
+          "old_css_px": 18.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "53",
+          "text": "20 TOPS",
+          "old_css_px": 28.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "54",
+          "text": "(INT8)",
+          "old_css_px": 28.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "55",
+          "text": "40 TOPS",
+          "old_css_px": 28.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "56",
+          "text": "(INT4)",
+          "old_css_px": 28.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "58",
+          "text": "LPDDR4-/LPDDR4X-Schnittstelle",
+          "old_css_px": 28.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "62",
+          "text": "4 / 8 GB",
+          "old_css_px": 32.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "63",
+          "text": "LPDDR4 / LPDDR4X",
+          "old_css_px": 32.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "64",
+          "text": "HAILO-10H",
+          "old_css_px": 44.0,
+          "new_css_px": 40.678,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "65",
+          "text": "M.2-Speichervarianten",
+          "old_css_px": 23.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        }
+      ],
+      "local_label_refinements": [
+        {
+          "cell": "32",
+          "old": "STEU.",
+          "new": "ST.",
+          "target_final_pt": 7.2,
+          "svg_center_baseline_y": 610.0,
+          "svg_text_x": "299"
+        },
+        {
+          "cell": "34",
+          "old": "SPEICH.",
+          "new": "SP.",
+          "target_final_pt": 7.2,
+          "svg_center_baseline_y": 609.0,
+          "svg_text_x": "401"
+        },
+        {
+          "cell": "36",
+          "old": "RECH.",
+          "new": "RE.",
+          "target_final_pt": 7.2,
+          "svg_center_baseline_y": 610.0,
+          "svg_text_x": "503"
+        },
+        {
+          "cell": "38",
+          "old": "STEU.",
+          "new": "ST.",
+          "target_final_pt": 7.2,
+          "svg_center_baseline_y": 610.0,
+          "svg_text_x": "605"
+        },
+        {
+          "cell": "40",
+          "old": "SPEICH.",
+          "new": "SP.",
+          "target_final_pt": 7.2,
+          "svg_center_baseline_y": 609.0,
+          "svg_text_x": "707"
+        },
+        {
+          "cell": "42",
+          "old": "RECH.",
+          "new": "RE.",
+          "target_final_pt": 7.2,
+          "svg_center_baseline_y": 610.0,
+          "svg_text_x": "809"
+        },
+        {
+          "cell": "47",
+          "old": "Ressourcenanordnung / Schichtzuordnung: schematisch",
+          "new": "Ressourcenanordnung /\nSchichtzuordnung: schematisch",
+          "target_final_pt": 7.0,
+          "svg_center_baseline_y": 688,
+          "svg_text_x": "557"
+        },
+        {
+          "cell": "52",
+          "old": "Maximale\nRechenleistung",
+          "new": "Maximale\nRechen-\nleistung",
+          "target_final_pt": 6.8,
+          "svg_center_baseline_y": 385,
+          "svg_text_x": "123"
+        }
+      ],
+      "rendering_cleanup": "Removed the DrawIO unsupported-SVG-text fallback, if present; actual labels are native SVG text.",
+      "export_command_from_repository_root": [
+        "inkscape",
+        "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/01_Hardwarearchitekturen/03_Hailo10H.svg",
+        "--export-area-page",
+        "--export-type=pdf",
+        "--export-filename=publications/dissertation/thesis-v56/de/illustrations/architekturen/architecture_hailo10h.pdf"
+      ],
+      "recommended_tex_width_fraction": 0.64,
+      "page_size_pdf_points": [
+        730.5,
+        843.0
+      ],
+      "fonts": [
+        "NimbusSans-Bold",
+        "NimbusSans-Regular"
+      ],
+      "text_at_recommended_tex_size": [
+        {
+          "text": "Chip",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "NN-Rechenkern · 2. Generation",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "ST.",
+          "pdf_font_pt": 23.122499465942383,
+          "final_font_pt": 7.2
+        },
+        {
+          "text": "SP.",
+          "pdf_font_pt": 23.122499465942383,
+          "final_font_pt": 7.2
+        },
+        {
+          "text": "RE.",
+          "pdf_font_pt": 23.122499465942383,
+          "final_font_pt": 7.2
+        },
+        {
+          "text": "ST.",
+          "pdf_font_pt": 23.122499465942383,
+          "final_font_pt": 7.2
+        },
+        {
+          "text": "SP.",
+          "pdf_font_pt": 23.122499465942383,
+          "final_font_pt": 7.2
+        },
+        {
+          "text": "RE.",
+          "pdf_font_pt": 23.122499465942383,
+          "final_font_pt": 7.2
+        },
+        {
+          "text": "Schicht 1",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Schicht 2",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Ressourcenanordnung /",
+          "pdf_font_pt": 22.47974967956543,
+          "final_font_pt": 7.0
+        },
+        {
+          "text": "Schichtzuordnung: schematisch",
+          "pdf_font_pt": 22.47974967956543,
+          "final_font_pt": 7.0
+        },
+        {
+          "text": "PCIe",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Gen3 ×4",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Maximale",
+          "pdf_font_pt": 21.837749481201172,
+          "final_font_pt": 6.8
+        },
+        {
+          "text": "Rechen-",
+          "pdf_font_pt": 21.837749481201172,
+          "final_font_pt": 6.8
+        },
+        {
+          "text": "leistung",
+          "pdf_font_pt": 21.837749481201172,
+          "final_font_pt": 6.8
+        },
+        {
+          "text": "20 TOPS",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "(INT8)",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "40 TOPS",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "(INT4)",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "LPDDR4-/LPDDR4X-Schnittstelle",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "4 / 8 GB",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "LPDDR4 / LPDDR4X",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "HAILO-10H",
+          "pdf_font_pt": 30.508501052856445,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "M.2-Speichervarianten",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        }
+      ],
+      "validation": {
+        "one_page": true,
+        "raster_images": 0,
+        "text_spans_inside_page": true,
+        "selectable_text": true,
+        "visual_qa": "reviewed; no clipped or overlapping substantive labels at recommended size",
+        "font_embedding": "pdffonts reports all fonts embedded; Nimbus Sans Regular/Bold",
+        "committed_source_reexport_identical_text": true,
+        "committed_source_reexport_identical_vector_object_count": true,
+        "committed_source_reexport_identical_72dpi_render": true,
+        "pdf_creation_date": "D:20261029071245-03'00"
+      }
+    },
+    {
+      "number": "04",
+      "project_asset": "9_resources/illustrations/architecture_deepx_dxm1.pdf",
+      "figure_numbers": [
+        "5.6"
+      ],
+      "pdf": "publications/dissertation/thesis-v56/de/illustrations/architekturen/architecture_deepx_dxm1.pdf",
+      "pdf_sha256": "577d7d772fa61050fc6b61e08cc92063b7546d753ad2775abe2734bd997bb4ae",
+      "corrected_svg": "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/01_Hardwarearchitekturen/04_DEEPX_DXM1.svg",
+      "corrected_svg_sha256": "d635cc2947b9399bf07955db357afb9bb0b0ea5c0354fde7e017429107cf0bbd",
+      "corrected_drawio": "publications/dissertation/thesis-v56/de/sources/drawio/DrawIO/01_Hardwarearchitekturen/04_DEEPX_DXM1.drawio",
+      "corrected_drawio_sha256": "89c3bf1ca17e9fdcca69f563bc1a7b8f43c78919d1f0413c08a47179a0172d26",
+      "uploaded_source": {
+        "language": "Deutsch",
+        "svg_bundle_path": "Export_SVG/01_Hardwarearchitekturen/04_DEEPX_DXM1.svg",
+        "svg_sha256": "32c0e22d8a42ccb109cb9927630c0daf3a40547ad0d79575c322321780075546",
+        "drawio_bundle_path": "DrawIO/01_Hardwarearchitekturen/04_DEEPX_DXM1.drawio",
+        "drawio_sha256": "62c9099e2f11aabef73798f45f78dcd78e6c4ae4a5c50627edf393cc9cdf7da8"
+      },
+      "semantic_changes": [],
+      "typography_changes": [
+        {
+          "cell": "4",
+          "text": "Chip",
+          "old_css_px": 23.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "7",
+          "text": "LPDDR5-2-Kanal-Controller",
+          "old_css_px": 30.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "8",
+          "text": "LPDDR5-2-Kanal-Controller",
+          "old_css_px": 30.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "10",
+          "text": "PCIe",
+          "old_css_px": 31.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "11",
+          "text": "Gen3 ×4",
+          "old_css_px": 31.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "13",
+          "text": "CPU",
+          "old_css_px": 38.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "15",
+          "text": "Genesis",
+          "old_css_px": 34.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "16",
+          "text": "NPU 0",
+          "old_css_px": 34.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "18",
+          "text": "Systembus",
+          "old_css_px": 35.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "26",
+          "text": "Genesis",
+          "old_css_px": 38.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "27",
+          "text": "NPU 1",
+          "old_css_px": 38.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "28",
+          "text": "Genesis",
+          "old_css_px": 38.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "29",
+          "text": "NPU 2",
+          "old_css_px": 38.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "32",
+          "text": "25 TOPS (INT8, gesamt)",
+          "old_css_px": 31.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "37",
+          "text": "2 GB",
+          "old_css_px": 32.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "38",
+          "text": "LPDDR5",
+          "old_css_px": 32.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "39",
+          "text": "2 GB",
+          "old_css_px": 32.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "40",
+          "text": "LPDDR5",
+          "old_css_px": 32.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "41",
+          "text": "DEEPX DX-M1",
+          "old_css_px": 44.0,
+          "new_css_px": 40.678,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "42",
+          "text": "4 GB auf dem M.2-Modul",
+          "old_css_px": 23.0,
+          "new_css_px": 36.396,
+          "target_final_pt": 8.5
+        }
+      ],
+      "local_label_refinements": [],
+      "rendering_cleanup": "Removed the DrawIO unsupported-SVG-text fallback, if present; actual labels are native SVG text.",
+      "export_command_from_repository_root": [
+        "inkscape",
+        "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/01_Hardwarearchitekturen/04_DEEPX_DXM1.svg",
+        "--export-area-page",
+        "--export-type=pdf",
+        "--export-filename=publications/dissertation/thesis-v56/de/illustrations/architekturen/architecture_deepx_dxm1.pdf"
+      ],
+      "recommended_tex_width_fraction": 0.64,
+      "page_size_pdf_points": [
+        730.5,
+        843.0
+      ],
+      "fonts": [
+        "NimbusSans-Bold",
+        "NimbusSans-Regular"
+      ],
+      "text_at_recommended_tex_size": [
+        {
+          "text": "Chip",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "LPDDR5-2-Kanal-Controller",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "LPDDR5-2-Kanal-Controller",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "PCIe",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Gen3 ×4",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "CPU",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Genesis",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "NPU 0",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Systembus",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Genesis",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "NPU 1",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Genesis",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "NPU 2",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "25 TOPS (INT8, gesamt)",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "2 GB",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "LPDDR5",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "2 GB",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "LPDDR5",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "DEEPX DX-M1",
+          "pdf_font_pt": 30.508501052856445,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "4 GB auf dem M.2-Modul",
+          "pdf_font_pt": 27.297000885009766,
+          "final_font_pt": 8.5
+        }
+      ],
+      "validation": {
+        "one_page": true,
+        "raster_images": 0,
+        "text_spans_inside_page": true,
+        "selectable_text": true,
+        "visual_qa": "reviewed; no clipped or overlapping substantive labels at recommended size",
+        "font_embedding": "pdffonts reports all fonts embedded; Nimbus Sans Regular/Bold",
+        "committed_source_reexport_identical_text": true,
+        "committed_source_reexport_identical_vector_object_count": true,
+        "committed_source_reexport_identical_72dpi_render": true,
+        "pdf_creation_date": "D:20261029071245-03'00"
+      }
+    },
+    {
+      "number": "10",
+      "project_asset": "9_resources/layout_v48/energy/figures/measurement_boundaries.pdf",
+      "figure_numbers": [
+        "4.1"
+      ],
+      "pdf": "publications/dissertation/thesis-v56/de/illustrations/energie/measurement_boundaries.pdf",
+      "pdf_sha256": "ab82813a838ab20350645187c1383544ddfd282b143ea3e88a6a091588fd05c6",
+      "corrected_svg": "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/02_Messung_und_Energie/10_Messgrenzen_und_Datenerfassung.svg",
+      "corrected_svg_sha256": "e852dc4bfa1e6c469e92400735e48b2abe87e07f72c2ed9bc3931e75c7905e85",
+      "corrected_drawio": "publications/dissertation/thesis-v56/de/sources/drawio/DrawIO/02_Messung_und_Energie/10_Messgrenzen_und_Datenerfassung.drawio",
+      "corrected_drawio_sha256": "0b28254376b79c0ababccd6673839db4a7b0f7862606aa8bfdba41adeb603091",
+      "uploaded_source": {
+        "language": "Deutsch",
+        "svg_bundle_path": "Export_SVG/02_Messung_und_Energie/10_Messgrenzen_und_Datenerfassung.svg",
+        "svg_sha256": "2dc9ce73c3164b635aa81962d96cf8d510445e1ae76f451bb96b67e9c6e686dd",
+        "drawio_bundle_path": "DrawIO/02_Messung_und_Energie/10_Messgrenzen_und_Datenerfassung.drawio",
+        "drawio_sha256": "cdfd1d816f45c20a1302b3bda5ea1d6c0de593a3ac00de341476fcb07a8476e0"
+      },
+      "semantic_changes": [],
+      "typography_changes": [
+        {
+          "cell": "text-3",
+          "text": "Messgrenzen und Datenerfassung",
+          "old_css_px": 26.0,
+          "new_css_px": 34.48,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "text-5",
+          "text": "Versorgungspfad",
+          "old_css_px": 18.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-8",
+          "text": "Shelly",
+          "old_css_px": 21.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-9",
+          "text": "AC-Messgerät",
+          "old_css_px": 17.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-12",
+          "text": "Labor-",
+          "old_css_px": 21.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-13",
+          "text": "DC-Versorgung",
+          "old_css_px": 17.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-16",
+          "text": "Gemessener",
+          "old_css_px": 21.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-17",
+          "text": "DC-Eingang",
+          "old_css_px": 17.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-20",
+          "text": "Jetson-Modul",
+          "old_css_px": 21.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-21",
+          "text": "oder Hailo-Karte",
+          "old_css_px": 17.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-26",
+          "text": "Messdaten",
+          "old_css_px": 18.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-29",
+          "text": "PicoScope / INA225",
+          "old_css_px": 21.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-30",
+          "text": "Externe Datenerfassung",
+          "old_css_px": 17.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-33",
+          "text": "u.RECS ADC",
+          "old_css_px": 21.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-34",
+          "text": "2 kS/s",
+          "old_css_px": 17.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-36",
+          "text": "Modulinterne Sicht",
+          "old_css_px": 18.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-39",
+          "text": "Herstellertelemetrie",
+          "old_css_px": 21.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-40",
+          "text": "Eigene Messgrenze",
+          "old_css_px": 17.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-45",
+          "text": "Versorgung",
+          "old_css_px": 16.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-47",
+          "text": "Messdaten",
+          "old_css_px": 16.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-49",
+          "text": "Telemetrie",
+          "old_css_px": 16.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        }
+      ],
+      "local_label_refinements": [
+        {
+          "cell": "text-9",
+          "old": "AC-Messgerät",
+          "new": "AC-Messgerät",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 276.0,
+          "svg_text_x": "131"
+        },
+        {
+          "cell": "text-13",
+          "old": "DC-Versorgung",
+          "new": "DC-Versorgung",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 276.0,
+          "svg_text_x": "399"
+        },
+        {
+          "cell": "text-17",
+          "old": "DC-Eingang",
+          "new": "DC-Eingang",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 276.0,
+          "svg_text_x": "692"
+        },
+        {
+          "cell": "text-21",
+          "old": "oder Hailo-Karte",
+          "new": "oder Hailo-Karte",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 276.0,
+          "svg_text_x": "1044"
+        },
+        {
+          "cell": "text-30",
+          "old": "Externe Datenerfassung",
+          "new": "Externe Datenerfassung",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 561.0,
+          "svg_text_x": "214"
+        },
+        {
+          "cell": "text-34",
+          "old": "2 kS/s",
+          "new": "2 kS/s",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 561.0,
+          "svg_text_x": "619"
+        },
+        {
+          "cell": "text-40",
+          "old": "Eigene Messgrenze",
+          "new": "Eigene Messgrenze",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 561.0,
+          "svg_text_x": "1051"
+        }
+      ],
+      "rendering_cleanup": "Removed the DrawIO unsupported-SVG-text fallback, if present; actual labels are native SVG text.",
+      "export_command_from_repository_root": [
+        "inkscape",
+        "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/02_Messung_und_Energie/10_Messgrenzen_und_Datenerfassung.svg",
+        "--export-area-page",
+        "--export-type=pdf",
+        "--export-filename=publications/dissertation/thesis-v56/de/illustrations/energie/measurement_boundaries.pdf"
+      ],
+      "recommended_tex_width_fraction": 1.0,
+      "page_size_pdf_points": [
+        967.5,
+        539.25
+      ],
+      "fonts": [
+        "NimbusSans-Bold",
+        "NimbusSans-Regular"
+      ],
+      "text_at_recommended_tex_size": [
+        {
+          "text": "Messgrenzen und Datenerfassung",
+          "pdf_font_pt": 25.860000610351562,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "Versorgungspfad",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Shelly",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "AC-Messgerät",
+          "pdf_font_pt": 21.77699851989746,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Labor-",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "DC-Versorgung",
+          "pdf_font_pt": 21.77699851989746,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Gemessener",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "DC-Eingang",
+          "pdf_font_pt": 21.77699851989746,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Jetson-Modul",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "oder Hailo-Karte",
+          "pdf_font_pt": 21.77699851989746,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Messdaten",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "PicoScope / INA225",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Externe Datenerfassung",
+          "pdf_font_pt": 21.77699851989746,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "u.RECS ADC",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "2 kS/s",
+          "pdf_font_pt": 21.77699851989746,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Modulinterne Sicht",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Herstellertelemetrie",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Eigene Messgrenze",
+          "pdf_font_pt": 21.77699851989746,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Versorgung",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Messdaten",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Telemetrie",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        }
+      ],
+      "validation": {
+        "one_page": true,
+        "raster_images": 0,
+        "text_spans_inside_page": true,
+        "selectable_text": true,
+        "visual_qa": "reviewed; no clipped or overlapping substantive labels at recommended size",
+        "font_embedding": "pdffonts reports all fonts embedded; Nimbus Sans Regular/Bold",
+        "committed_source_reexport_identical_text": true,
+        "committed_source_reexport_identical_vector_object_count": true,
+        "committed_source_reexport_identical_72dpi_render": true,
+        "pdf_creation_date": "D:20261029071246-03'00"
+      }
+    },
+    {
+      "number": "11",
+      "project_asset": "9_resources/review_v49/power_boundaries.pdf",
+      "figure_numbers": [
+        "4.2"
+      ],
+      "pdf": "publications/dissertation/thesis-v56/de/illustrations/energie/power_boundaries.pdf",
+      "pdf_sha256": "6078b49187f1f3be005a5c9ad2a990d53701734e9c44b2750b712aee77148931",
+      "corrected_svg": "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/02_Messung_und_Energie/11_System_und_Modulmessgrenzen.svg",
+      "corrected_svg_sha256": "ebffb8fbd14718f20e69357a9204a8ecdda31a07300bdd31e988a096c6ca7952",
+      "corrected_drawio": "publications/dissertation/thesis-v56/de/sources/drawio/DrawIO/02_Messung_und_Energie/11_System_und_Modulmessgrenzen.drawio",
+      "corrected_drawio_sha256": "83ece348772128350a2e393b3319dd028ec315d792068dc2bf2e9fe528da8d89",
+      "uploaded_source": {
+        "language": "Deutsch",
+        "svg_bundle_path": "Export_SVG/02_Messung_und_Energie/11_System_und_Modulmessgrenzen.svg",
+        "svg_sha256": "4335753bf180c71c4d3faf14026d357a558c06f35eb401ac51e9fdc702af4eb4",
+        "drawio_bundle_path": "DrawIO/02_Messung_und_Energie/11_System_und_Modulmessgrenzen.drawio",
+        "drawio_sha256": "57ac2281429fef47134bb7937e0d22808dd9058405459f6821fc322160084949"
+      },
+      "semantic_changes": [
+        {
+          "cell": "text-4",
+          "old": "Messgrenzen; Kanalverdrahtung je Messreihe festzulegen",
+          "new": "Systemeingang und nachgelagerte Versorgungspfade",
+          "reason": "Retain the verified prior caption correction; describe the finished schematic rather than an unfinished measurement step."
+        }
+      ],
+      "typography_changes": [
+        {
+          "cell": "text-3",
+          "text": "System- und Modulmessgrenzen",
+          "old_css_px": 26.0,
+          "new_css_px": 36.619,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "text-4",
+          "text": "Systemeingang und nachgelagerte Versorgungspfade",
+          "old_css_px": 17.0,
+          "new_css_px": 32.764,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-6",
+          "text": "Erfasster Systembereich",
+          "old_css_px": 18.0,
+          "new_css_px": 32.764,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-12",
+          "text": "Gesamtsystem-\nmessgrenze",
+          "old_css_px": 22.0,
+          "new_css_px": 32.764,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-14",
+          "text": "Spannungsregler",
+          "old_css_px": 21.0,
+          "new_css_px": 32.764,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-17",
+          "text": "5-V-Modulversorgung",
+          "old_css_px": 21.0,
+          "new_css_px": 32.764,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-18",
+          "text": "Jetson / SMARC",
+          "old_css_px": 17.0,
+          "new_css_px": 32.764,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-21",
+          "text": "Beschleuniger +\nHilfskomponenten",
+          "old_css_px": 21.0,
+          "new_css_px": 32.764,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-22",
+          "text": "Getrennte Versorgungspfade",
+          "old_css_px": 17.0,
+          "new_css_px": 32.764,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-8",
+          "text": "DC-Versorgung",
+          "old_css_px": 20.0,
+          "new_css_px": 32.764,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-9",
+          "text": "19 V",
+          "old_css_px": 28.0,
+          "new_css_px": 36.619,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "text-10",
+          "text": "im gepaarten Versuch",
+          "old_css_px": 17.0,
+          "new_css_px": 32.764,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-29",
+          "text": "Einschließlich nachgelagerter Wandlungsverluste",
+          "old_css_px": 18.0,
+          "new_css_px": 32.764,
+          "target_final_pt": 8.5
+        }
+      ],
+      "local_label_refinements": [
+        {
+          "cell": "text-14",
+          "old": "Spannungsregler",
+          "new": "Spannungs-\nregler",
+          "target_final_pt": null,
+          "svg_center_baseline_y": 369.0,
+          "svg_text_x": "767"
+        },
+        {
+          "cell": "text-17",
+          "old": "5-V-Modulversorgung",
+          "new": "5-V-Modulversorgung",
+          "target_final_pt": 7.8,
+          "svg_center_baseline_y": 255.0,
+          "svg_text_x": "1131"
+        },
+        {
+          "cell": "text-18",
+          "old": "Jetson / SMARC",
+          "new": "Jetson / SMARC",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 297.0,
+          "svg_text_x": "1131"
+        },
+        {
+          "cell": "text-10",
+          "old": "im gepaarten Versuch",
+          "new": "im gepaarten\nVersuch",
+          "target_final_pt": 7.8,
+          "svg_center_baseline_y": 421,
+          "svg_text_x": "125"
+        },
+        {
+          "cell": "text-21",
+          "old": "Beschleuniger +\nHilfskomponenten",
+          "new": "Beschleuniger +\nHilfskomponenten",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 439,
+          "svg_text_x": "1131"
+        },
+        {
+          "cell": "text-22",
+          "old": "Getrennte Versorgungspfade",
+          "new": "Getrennte\nVersorgungspfade",
+          "target_final_pt": 7.7,
+          "svg_center_baseline_y": 511,
+          "svg_text_x": "1131"
+        }
+      ],
+      "rendering_cleanup": "Removed the DrawIO unsupported-SVG-text fallback, if present; actual labels are native SVG text.",
+      "export_command_from_repository_root": [
+        "inkscape",
+        "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/02_Messung_und_Energie/11_System_und_Modulmessgrenzen.svg",
+        "--export-area-page",
+        "--export-type=pdf",
+        "--export-filename=publications/dissertation/thesis-v56/de/illustrations/energie/power_boundaries.pdf"
+      ],
+      "recommended_tex_width_fraction": 1.0,
+      "page_size_pdf_points": [
+        1027.5,
+        543.75
+      ],
+      "fonts": [
+        "NimbusSans-Bold",
+        "NimbusSans-Regular"
+      ],
+      "text_at_recommended_tex_size": [
+        {
+          "text": "System- und Modulmessgrenzen",
+          "pdf_font_pt": 27.464250564575195,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "Systemeingang und nachgelagerte Versorgungspfade",
+          "pdf_font_pt": 24.572999954223633,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Erfasster Systembereich",
+          "pdf_font_pt": 24.572999954223633,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Gesamtsystem-",
+          "pdf_font_pt": 24.572999954223633,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "messgrenze",
+          "pdf_font_pt": 24.572999954223633,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Spannungs-",
+          "pdf_font_pt": 24.572999954223633,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "regler",
+          "pdf_font_pt": 24.572999954223633,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "5-V-Modulversorgung",
+          "pdf_font_pt": 22.54949951171875,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "Jetson / SMARC",
+          "pdf_font_pt": 23.127750396728516,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Beschleuniger +",
+          "pdf_font_pt": 23.127750396728516,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Hilfskomponenten",
+          "pdf_font_pt": 23.127750396728516,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Getrennte",
+          "pdf_font_pt": 22.260000228881836,
+          "final_font_pt": 7.7
+        },
+        {
+          "text": "Versorgungspfade",
+          "pdf_font_pt": 22.260000228881836,
+          "final_font_pt": 7.7
+        },
+        {
+          "text": "DC-Versorgung",
+          "pdf_font_pt": 24.572999954223633,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "19 V",
+          "pdf_font_pt": 27.464250564575195,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "im gepaarten",
+          "pdf_font_pt": 22.54949951171875,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "Versuch",
+          "pdf_font_pt": 22.54949951171875,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "Einschließlich nachgelagerter Wandlungsverluste",
+          "pdf_font_pt": 24.572999954223633,
+          "final_font_pt": 8.5
+        }
+      ],
+      "validation": {
+        "one_page": true,
+        "raster_images": 0,
+        "text_spans_inside_page": true,
+        "selectable_text": true,
+        "visual_qa": "reviewed; no clipped or overlapping substantive labels at recommended size",
+        "font_embedding": "pdffonts reports all fonts embedded; Nimbus Sans Regular/Bold",
+        "committed_source_reexport_identical_text": true,
+        "committed_source_reexport_identical_vector_object_count": true,
+        "committed_source_reexport_identical_72dpi_render": true,
+        "pdf_creation_date": "D:20261029071248-03'00"
+      }
+    },
+    {
+      "number": "12",
+      "project_asset": "9_resources/layout_v48/foundations/figures/related_work_settings.pdf",
+      "figure_numbers": [
+        "2.1"
+      ],
+      "pdf": "publications/dissertation/thesis-v56/de/illustrations/grundlagen/related_work_settings.pdf",
+      "pdf_sha256": "6ed4b92c4f3281942a800a82ed8e9b4afabe3426272f6c8b8fdf8dae9e114939",
+      "corrected_svg": "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/03_Grundlagen/12_Systemebenen_verteilter_Inferenz.svg",
+      "corrected_svg_sha256": "54b5e60522c0a8e671e7ce23a706e2c87cc6f109728b6131274e4e46fa4017fc",
+      "corrected_drawio": "publications/dissertation/thesis-v56/de/sources/drawio/DrawIO/03_Grundlagen/12_Systemebenen_verteilter_Inferenz.drawio",
+      "corrected_drawio_sha256": "9acd218e2c6b76a694865ce7d5ced348d183dae11a341faaeb69076a99dbd638",
+      "uploaded_source": {
+        "language": "Deutsch",
+        "svg_bundle_path": "Export_SVG/03_Grundlagen/12_Systemebenen_verteilter_Inferenz.svg",
+        "svg_sha256": "492a16c766792604a65bd3a5410885d9adad33859eb8c1f0b3afd0d1435d18af",
+        "drawio_bundle_path": "DrawIO/03_Grundlagen/12_Systemebenen_verteilter_Inferenz.drawio",
+        "drawio_sha256": "276d6d70d717d274c9a097dc0292fe894fc8b34cfa67d3cddaf6181fe8c4cfc9"
+      },
+      "semantic_changes": [],
+      "typography_changes": [
+        {
+          "cell": "text-3",
+          "text": "Verteilte Inferenz: drei Systemebenen",
+          "old_css_px": 26.0,
+          "new_css_px": 36.084,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "node-5",
+          "text": "CE",
+          "old_css_px": 17.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-6",
+          "text": "Cloud–Randknoten",
+          "old_css_px": 22.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-17",
+          "text": "Gerät",
+          "old_css_px": 20.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-20",
+          "text": "Cloud",
+          "old_css_px": 20.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "node-21",
+          "text": "WAN / LTE",
+          "old_css_px": 14.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-24",
+          "text": "Netzschwankungen\nÜbertragungsenergie",
+          "old_css_px": 20.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "node-8",
+          "text": "EC",
+          "old_css_px": 17.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-9",
+          "text": "Randknotenverbund",
+          "old_css_px": 22.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-27",
+          "text": "Randknoten\n1",
+          "old_css_px": 16.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-30",
+          "text": "Randknoten\n2",
+          "old_css_px": 16.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-33",
+          "text": "Randknoten\n3",
+          "old_css_px": 16.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-36",
+          "text": "Stufenbalance",
+          "old_css_px": 20.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-37",
+          "text": "Warteschlangen /\nAblaufsteuerung",
+          "old_css_px": 18.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "node-11",
+          "text": "IN",
+          "old_css_px": 17.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-12",
+          "text": "Knotenintern",
+          "old_css_px": 22.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-39",
+          "text": "Mikroserver",
+          "old_css_px": 19.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-42",
+          "text": "GPU\nSoC",
+          "old_css_px": 19.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-45",
+          "text": "ASIC\nNPU",
+          "old_css_px": 19.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "node-46",
+          "text": "PCIe / DMA",
+          "old_css_px": 14.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-49",
+          "text": "Unterschiede der Werkzeugketten\nDMA / Kopien / Datenanordnung",
+          "old_css_px": 17.0,
+          "new_css_px": 32.286,
+          "target_final_pt": 8.5
+        }
+      ],
+      "local_label_refinements": [
+        {
+          "cell": "node-21",
+          "old": "WAN / LTE",
+          "new": "WAN / LTE",
+          "target_final_pt": 7.5,
+          "svg_center_baseline_y": 248.0,
+          "svg_text_x": "200"
+        },
+        {
+          "cell": "text-27",
+          "old": "Randknoten\n1",
+          "new": "Rand-\nknoten\n1",
+          "target_final_pt": 7.5,
+          "svg_center_baseline_y": 290,
+          "svg_text_x": "525"
+        },
+        {
+          "cell": "text-30",
+          "old": "Randknoten\n2",
+          "new": "Rand-\nknoten\n2",
+          "target_final_pt": 7.5,
+          "svg_center_baseline_y": 290,
+          "svg_text_x": "655"
+        },
+        {
+          "cell": "text-33",
+          "old": "Randknoten\n3",
+          "new": "Rand-\nknoten\n3",
+          "target_final_pt": 7.5,
+          "svg_center_baseline_y": 290,
+          "svg_text_x": "785"
+        },
+        {
+          "cell": "text-24",
+          "old": "Netzschwankungen\nÜbertragungsenergie",
+          "new": "Netzschwankungen\nÜbertragungsenergie",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 510,
+          "svg_text_x": "24"
+        },
+        {
+          "cell": "text-36",
+          "old": "Stufenbalance",
+          "new": "Stufenbalance",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 478,
+          "svg_text_x": "468"
+        },
+        {
+          "cell": "text-37",
+          "old": "Warteschlangen /\nAblaufsteuerung",
+          "new": "Warteschlangen /\nAblaufsteuerung",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 536,
+          "svg_text_x": "468"
+        },
+        {
+          "cell": "text-49",
+          "old": "Unterschiede der Werkzeugketten\nDMA / Kopien / Datenanordnung",
+          "new": "Unterschiede der\nWerkzeugketten\nDMA / Kopien /\nDatenanordnung",
+          "target_final_pt": 7.4,
+          "svg_center_baseline_y": 526,
+          "svg_text_x": "912"
+        }
+      ],
+      "rendering_cleanup": "Removed the DrawIO unsupported-SVG-text fallback, if present; actual labels are native SVG text.",
+      "export_command_from_repository_root": [
+        "inkscape",
+        "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/03_Grundlagen/12_Systemebenen_verteilter_Inferenz.svg",
+        "--export-area-page",
+        "--export-type=pdf",
+        "--export-filename=publications/dissertation/thesis-v56/de/illustrations/grundlagen/related_work_settings.pdf"
+      ],
+      "recommended_tex_width_fraction": 1.0,
+      "page_size_pdf_points": [
+        1012.5,
+        468.75
+      ],
+      "fonts": [
+        "NimbusSans-Bold",
+        "NimbusSans-Regular"
+      ],
+      "text_at_recommended_tex_size": [
+        {
+          "text": "Verteilte Inferenz: drei Systemebenen",
+          "pdf_font_pt": 27.062999725341797,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "CE",
+          "pdf_font_pt": 24.21449851989746,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": " Cloud–Randknoten",
+          "pdf_font_pt": 24.21449851989746,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Gerät",
+          "pdf_font_pt": 24.21449851989746,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Cloud",
+          "pdf_font_pt": 24.21449851989746,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "WAN / LTE",
+          "pdf_font_pt": 21.365249633789062,
+          "final_font_pt": 7.5
+        },
+        {
+          "text": "Netzschwankungen",
+          "pdf_font_pt": 22.79024887084961,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Übertragungsenergie",
+          "pdf_font_pt": 22.79024887084961,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "EC",
+          "pdf_font_pt": 24.21449851989746,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": " Randknotenverbund",
+          "pdf_font_pt": 24.21449851989746,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Rand-",
+          "pdf_font_pt": 21.365249633789062,
+          "final_font_pt": 7.5
+        },
+        {
+          "text": "knoten",
+          "pdf_font_pt": 21.365249633789062,
+          "final_font_pt": 7.5
+        },
+        {
+          "text": "1",
+          "pdf_font_pt": 21.365249633789062,
+          "final_font_pt": 7.5
+        },
+        {
+          "text": "Rand-",
+          "pdf_font_pt": 21.365249633789062,
+          "final_font_pt": 7.5
+        },
+        {
+          "text": "knoten",
+          "pdf_font_pt": 21.365249633789062,
+          "final_font_pt": 7.5
+        },
+        {
+          "text": "2",
+          "pdf_font_pt": 21.365249633789062,
+          "final_font_pt": 7.5
+        },
+        {
+          "text": "Rand-",
+          "pdf_font_pt": 21.365249633789062,
+          "final_font_pt": 7.5
+        },
+        {
+          "text": "knoten",
+          "pdf_font_pt": 21.365249633789062,
+          "final_font_pt": 7.5
+        },
+        {
+          "text": "3",
+          "pdf_font_pt": 21.365249633789062,
+          "final_font_pt": 7.5
+        },
+        {
+          "text": "Stufenbalance",
+          "pdf_font_pt": 22.79024887084961,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Warteschlangen /",
+          "pdf_font_pt": 22.79024887084961,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Ablaufsteuerung",
+          "pdf_font_pt": 22.79024887084961,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "IN",
+          "pdf_font_pt": 24.21449851989746,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": " Knotenintern",
+          "pdf_font_pt": 24.21449851989746,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Mikroserver",
+          "pdf_font_pt": 24.21449851989746,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "GPU",
+          "pdf_font_pt": 24.21449851989746,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "SoC",
+          "pdf_font_pt": 24.21449851989746,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "ASIC",
+          "pdf_font_pt": 24.21449851989746,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "NPU",
+          "pdf_font_pt": 24.21449851989746,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "PCIe / DMA",
+          "pdf_font_pt": 24.21449851989746,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Unterschiede der",
+          "pdf_font_pt": 21.08099937438965,
+          "final_font_pt": 7.4
+        },
+        {
+          "text": "Werkzeugketten",
+          "pdf_font_pt": 21.08099937438965,
+          "final_font_pt": 7.4
+        },
+        {
+          "text": "DMA / Kopien /",
+          "pdf_font_pt": 21.08099937438965,
+          "final_font_pt": 7.4
+        },
+        {
+          "text": "Datenanordnung",
+          "pdf_font_pt": 21.08099937438965,
+          "final_font_pt": 7.4
+        }
+      ],
+      "validation": {
+        "one_page": true,
+        "raster_images": 0,
+        "text_spans_inside_page": true,
+        "selectable_text": true,
+        "visual_qa": "reviewed; no clipped or overlapping substantive labels at recommended size",
+        "font_embedding": "pdffonts reports all fonts embedded; Nimbus Sans Regular/Bold",
+        "committed_source_reexport_identical_text": true,
+        "committed_source_reexport_identical_vector_object_count": true,
+        "committed_source_reexport_identical_72dpi_render": true,
+        "pdf_creation_date": "D:20261029071247-03'00"
+      }
+    },
+    {
+      "number": "13",
+      "project_asset": "9_resources/illustrations/runner_tensor_boundaries.pdf",
+      "figure_numbers": [
+        "7.2"
+      ],
+      "pdf": "publications/dissertation/thesis-v56/de/illustrations/methoden/runner_tensor_boundaries.pdf",
+      "pdf_sha256": "965140b4b10d43197ac53e2029ba6857a5e0d032e4f02c8e7f66366c2bc24d71",
+      "corrected_svg": "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/04_Methoden_und_Laufzeit/13_Generisch_und_Nativ_Tensorgrenzen.svg",
+      "corrected_svg_sha256": "cf353d7299bc141395096348294b219f5f9723f4feb847f1e08a16a0d7efb186",
+      "corrected_drawio": "publications/dissertation/thesis-v56/de/sources/drawio/DrawIO/04_Methoden_und_Laufzeit/13_Generisch_und_Nativ_Tensorgrenzen.drawio",
+      "corrected_drawio_sha256": "f64d751e61fa4dd6a88948108a7529caa16a1b7bf64b58b3ed525c3ba8aee0eb",
+      "uploaded_source": {
+        "language": "Deutsch",
+        "svg_bundle_path": "Export_SVG/04_Methoden_und_Laufzeit/13_Generisch_und_Nativ_Tensorgrenzen.svg",
+        "svg_sha256": "f6df491c4b464753248a3e494f101de0e64726859152f80a7eaf4a06f5890f51",
+        "drawio_bundle_path": "DrawIO/04_Methoden_und_Laufzeit/13_Generisch_und_Nativ_Tensorgrenzen.drawio",
+        "drawio_sha256": "c223304294fa89323c8a6bdcc5fc72afcab64ae27978de4a6b2f168b421a2d1d"
+      },
+      "semantic_changes": [
+        {
+          "cell": "text-3",
+          "old": "Generisch und nativ: Wahl der Tensorgrenze",
+          "new": "Generic und Native: Wahl der Tensorgrenze",
+          "reason": "Generic and Native are experiment method names and remain untranslated."
+        },
+        {
+          "cell": "text-6",
+          "old": "Generisch",
+          "new": "Generic",
+          "reason": "Generic and Native are experiment method names and remain untranslated."
+        },
+        {
+          "cell": "text-26",
+          "old": "Nativ",
+          "new": "Native",
+          "reason": "Generic and Native are experiment method names and remain untranslated."
+        }
+      ],
+      "typography_changes": [
+        {
+          "cell": "text-3",
+          "text": "Generic und Native: Wahl der Tensorgrenze",
+          "old_css_px": 26.0,
+          "new_css_px": 32.342,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "text-4",
+          "text": "Übergabe zwischen Beschleuniger und GPU",
+          "old_css_px": 17.0,
+          "new_css_px": 28.938,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-6",
+          "text": "Generic",
+          "old_css_px": 24.0,
+          "new_css_px": 28.938,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-7",
+          "text": "Breite Exploration",
+          "old_css_px": 18.0,
+          "new_css_px": 28.938,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "node-8",
+          "text": "2 Grenztensoren",
+          "old_css_px": 17.0,
+          "new_css_px": 28.938,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-11",
+          "text": "Beschleuniger",
+          "old_css_px": 16.0,
+          "new_css_px": 28.938,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-12",
+          "text": "GPU",
+          "old_css_px": 16.0,
+          "new_css_px": 28.938,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-13",
+          "text": "Eingabe",
+          "old_css_px": 14.0,
+          "new_css_px": 28.938,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "Generic-task",
+          "text": "Aufgaben-\nabschluss",
+          "old_css_px": 19.0,
+          "new_css_px": 28.938,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-24",
+          "text": "Gemeinsame Implementierung: ein oder mehrere Grenztensoren.",
+          "old_css_px": 18.0,
+          "new_css_px": 28.938,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-26",
+          "text": "Native",
+          "old_css_px": 24.0,
+          "new_css_px": 28.938,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-27",
+          "text": "Messung im Zielsystem",
+          "old_css_px": 18.0,
+          "new_css_px": 28.938,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "node-28",
+          "text": "1 Grenztensor",
+          "old_css_px": 17.0,
+          "new_css_px": 28.938,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-31",
+          "text": "Beschleuniger",
+          "old_css_px": 16.0,
+          "new_css_px": 28.938,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-32",
+          "text": "GPU",
+          "old_css_px": 16.0,
+          "new_css_px": 28.938,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-33",
+          "text": "Eingabe",
+          "old_css_px": 14.0,
+          "new_css_px": 28.938,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "Native-task",
+          "text": "Aufgaben-\nabschluss",
+          "old_css_px": 19.0,
+          "new_css_px": 28.938,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-43",
+          "text": "Ein Eingang des Restmodells: modell- und zielumgebungsspezifische Integration.",
+          "old_css_px": 18.0,
+          "new_css_px": 28.938,
+          "target_final_pt": 8.5
+        }
+      ],
+      "local_label_refinements": [
+        {
+          "cell": "text-13",
+          "old": "Eingabe",
+          "new": "Eingabe",
+          "target_final_pt": 7.5,
+          "svg_center_baseline_y": 306.0,
+          "svg_text_x": "54"
+        },
+        {
+          "cell": "text-33",
+          "old": "Eingabe",
+          "new": "Eingabe",
+          "target_final_pt": 7.5,
+          "svg_center_baseline_y": 632.0,
+          "svg_text_x": "54"
+        },
+        {
+          "cell": "text-43",
+          "old": "Ein Eingang des Restmodells: modell- und zielumgebungsspezifische Integration.",
+          "new": "Ein Eingang des Restmodells: modell- und zielumgebungsspezifische Integration.",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 709.0,
+          "svg_text_x": "24"
+        }
+      ],
+      "rendering_cleanup": "Removed the DrawIO unsupported-SVG-text fallback, if present; actual labels are native SVG text.",
+      "export_command_from_repository_root": [
+        "inkscape",
+        "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/04_Methoden_und_Laufzeit/13_Generisch_und_Nativ_Tensorgrenzen.svg",
+        "--export-area-page",
+        "--export-type=pdf",
+        "--export-filename=publications/dissertation/thesis-v56/de/illustrations/methoden/runner_tensor_boundaries.pdf"
+      ],
+      "recommended_tex_width_fraction": 1.0,
+      "page_size_pdf_points": [
+        907.5,
+        582.75
+      ],
+      "fonts": [
+        "NimbusSans-Bold",
+        "NimbusSans-Regular"
+      ],
+      "text_at_recommended_tex_size": [
+        {
+          "text": "Generic und Native: Wahl der Tensorgrenze",
+          "pdf_font_pt": 24.256498336791992,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "Übergabe zwischen Beschleuniger und GPU",
+          "pdf_font_pt": 21.703500747680664,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Generic",
+          "pdf_font_pt": 21.703500747680664,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Breite Exploration",
+          "pdf_font_pt": 21.703500747680664,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "2 Grenztensoren",
+          "pdf_font_pt": 21.703500747680664,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Beschleuniger",
+          "pdf_font_pt": 21.703500747680664,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "GPU",
+          "pdf_font_pt": 21.703500747680664,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Eingabe",
+          "pdf_font_pt": 19.149751663208008,
+          "final_font_pt": 7.5
+        },
+        {
+          "text": "Aufgaben-",
+          "pdf_font_pt": 21.703500747680664,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "abschluss",
+          "pdf_font_pt": 21.703500747680664,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Gemeinsame Implementierung: ein oder mehrere Grenztensoren.",
+          "pdf_font_pt": 21.703500747680664,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Native",
+          "pdf_font_pt": 21.703500747680664,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Messung im Zielsystem",
+          "pdf_font_pt": 21.703500747680664,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "1 Grenztensor",
+          "pdf_font_pt": 21.703500747680664,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Beschleuniger",
+          "pdf_font_pt": 21.703500747680664,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "GPU",
+          "pdf_font_pt": 21.703500747680664,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Eingabe",
+          "pdf_font_pt": 19.149751663208008,
+          "final_font_pt": 7.5
+        },
+        {
+          "text": "Aufgaben-",
+          "pdf_font_pt": 21.703500747680664,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "abschluss",
+          "pdf_font_pt": 21.703500747680664,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Ein Eingang des Restmodells: modell- und zielumgebungsspeziﬁsche Integration.",
+          "pdf_font_pt": 20.426250457763672,
+          "final_font_pt": 8.0
+        }
+      ],
+      "validation": {
+        "one_page": true,
+        "raster_images": 0,
+        "text_spans_inside_page": true,
+        "selectable_text": true,
+        "visual_qa": "reviewed; no clipped or overlapping substantive labels at recommended size",
+        "font_embedding": "pdffonts reports all fonts embedded; Nimbus Sans Regular/Bold",
+        "committed_source_reexport_identical_text": true,
+        "committed_source_reexport_identical_vector_object_count": true,
+        "committed_source_reexport_identical_72dpi_render": true,
+        "pdf_creation_date": "D:20261029071246-03'00"
+      }
+    },
+    {
+      "number": "14",
+      "project_asset": "9_resources/integration_v47/methods/cost_decomposition.pdf",
+      "figure_numbers": [
+        "6.2"
+      ],
+      "pdf": "publications/dissertation/thesis-v56/de/illustrations/methoden/cost_decomposition.pdf",
+      "pdf_sha256": "3ec46ae058fdcba5eee9a34f0439ad86dad9a92586a9cb6ce135363dc5c31907",
+      "corrected_svg": "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/04_Methoden_und_Laufzeit/14_Kosten_einer_geteilten_Ausfuehrung.svg",
+      "corrected_svg_sha256": "0a77d3f7e3bf67269802121c538b790b5feb29ef1dd37e56fe721eeb2e82f55f",
+      "corrected_drawio": "publications/dissertation/thesis-v56/de/sources/drawio/DrawIO/04_Methoden_und_Laufzeit/14_Kosten_einer_geteilten_Ausfuehrung.drawio",
+      "corrected_drawio_sha256": "3cca11610475bdebbbd125980fd7de2f5307ed44b6020ffbccc39a8b74c53467",
+      "uploaded_source": {
+        "language": "Deutsch",
+        "svg_bundle_path": "Export_SVG/04_Methoden_und_Laufzeit/14_Kosten_einer_geteilten_Ausfuehrung.svg",
+        "svg_sha256": "4ac4373fd5f16cb0d8931ca613b4c9878206c201ca6746ac3aa9566a16b03084",
+        "drawio_bundle_path": "DrawIO/04_Methoden_und_Laufzeit/14_Kosten_einer_geteilten_Ausfuehrung.drawio",
+        "drawio_sha256": "768a1c8ef0bb342ceaac44c2a3ff04202c3676771088ec055ed925fa8c42aafb"
+      },
+      "semantic_changes": [
+        {
+          "cell": "text-10",
+          "old": "Arbeit +\nKalibrierung",
+          "new": "Kompilierter\nTeilgraph",
+          "reason": "Retain the verified prior cost-model correction: calibration is not part of timed stage execution."
+        },
+        {
+          "cell": "text-22",
+          "old": "Arbeit +\nKalibrierung",
+          "new": "Kompilierter\nTeilgraph",
+          "reason": "Retain the verified prior cost-model correction: calibration is not part of timed stage execution."
+        }
+      ],
+      "typography_changes": [
+        {
+          "cell": "text-3",
+          "text": "Kosten einer geteilten Ausführung",
+          "old_css_px": 26.0,
+          "new_css_px": 33.946,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "node-4",
+          "text": "Stufe 1",
+          "old_css_px": 19.0,
+          "new_css_px": 30.372,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-9",
+          "text": "Berechnung",
+          "old_css_px": 22.0,
+          "new_css_px": 30.372,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-10",
+          "text": "Kompilierter\nTeilgraph",
+          "old_css_px": 18.0,
+          "new_css_px": 30.372,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-6",
+          "text": "Übergang zwischen den Stufen",
+          "old_css_px": 19.0,
+          "new_css_px": 30.372,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-13",
+          "text": "Tensorübergabe",
+          "old_css_px": 23.0,
+          "new_css_px": 30.372,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-14",
+          "text": "Aktivierungsbytes",
+          "old_css_px": 17.0,
+          "new_css_px": 30.372,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-17",
+          "text": "Laufzeit-Zusatzaufwand",
+          "old_css_px": 23.0,
+          "new_css_px": 30.372,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-18",
+          "text": "Synchronisation + Warteschlangen",
+          "old_css_px": 17.0,
+          "new_css_px": 30.372,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "node-5",
+          "text": "Stufe 2",
+          "old_css_px": 19.0,
+          "new_css_px": 30.372,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-21",
+          "text": "Berechnung",
+          "old_css_px": 22.0,
+          "new_css_px": 30.372,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-22",
+          "text": "Kompilierter\nTeilgraph",
+          "old_css_px": 18.0,
+          "new_css_px": 30.372,
+          "target_final_pt": 8.5
+        }
+      ],
+      "local_label_refinements": [
+        {
+          "cell": "text-9",
+          "old": "Berechnung",
+          "new": "Berechnung",
+          "target_final_pt": null,
+          "svg_center_baseline_y": 295.0,
+          "svg_text_x": "155"
+        },
+        {
+          "cell": "text-21",
+          "old": "Berechnung",
+          "new": "Berechnung",
+          "target_final_pt": null,
+          "svg_center_baseline_y": 295.0,
+          "svg_text_x": "1073"
+        },
+        {
+          "cell": "text-10",
+          "old": "Kompilierter\nTeilgraph",
+          "new": "Kompilierter\nTeilgraph",
+          "target_final_pt": null,
+          "svg_center_baseline_y": 357,
+          "svg_text_x": "155"
+        },
+        {
+          "cell": "text-22",
+          "old": "Kompilierter\nTeilgraph",
+          "new": "Kompilierter\nTeilgraph",
+          "target_final_pt": null,
+          "svg_center_baseline_y": 357,
+          "svg_text_x": "1073"
+        },
+        {
+          "cell": "text-14",
+          "old": "Aktivierungsbytes",
+          "new": "Aktivierungsbytes",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 267.0,
+          "svg_text_x": "614"
+        },
+        {
+          "cell": "text-17",
+          "old": "Laufzeit-Zusatzaufwand",
+          "new": "Laufzeit-Zusatzaufwand",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 403.0,
+          "svg_text_x": "614"
+        },
+        {
+          "cell": "text-18",
+          "old": "Synchronisation + Warteschlangen",
+          "new": "Synchronisation +\nWarteschlangen",
+          "target_final_pt": 7.8,
+          "svg_center_baseline_y": 459,
+          "svg_text_x": "614"
+        },
+        {
+          "cell": "text-6",
+          "old": "Übergang zwischen den Stufen",
+          "new": "Übergang zwischen den Stufen",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 138.0,
+          "svg_text_x": "614"
+        }
+      ],
+      "rendering_cleanup": "Removed the DrawIO unsupported-SVG-text fallback, if present; actual labels are native SVG text.",
+      "export_command_from_repository_root": [
+        "inkscape",
+        "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/04_Methoden_und_Laufzeit/14_Kosten_einer_geteilten_Ausfuehrung.svg",
+        "--export-area-page",
+        "--export-type=pdf",
+        "--export-filename=publications/dissertation/thesis-v56/de/illustrations/methoden/cost_decomposition.pdf"
+      ],
+      "recommended_tex_width_fraction": 1.0,
+      "page_size_pdf_points": [
+        952.5,
+        415.5
+      ],
+      "fonts": [
+        "NimbusSans-Bold",
+        "NimbusSans-Regular"
+      ],
+      "text_at_recommended_tex_size": [
+        {
+          "text": "Kosten einer geteilten Ausführung",
+          "pdf_font_pt": 25.45949935913086,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "Stufe 1",
+          "pdf_font_pt": 22.77899932861328,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Berechnung",
+          "pdf_font_pt": 22.77899932861328,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Kompilierter",
+          "pdf_font_pt": 22.77899932861328,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Teilgraph",
+          "pdf_font_pt": 22.77899932861328,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Übergang zwischen den Stufen",
+          "pdf_font_pt": 21.43950080871582,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Tensorübergabe",
+          "pdf_font_pt": 22.77899932861328,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Aktivierungsbytes",
+          "pdf_font_pt": 21.43950080871582,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Laufzeit-Zusatzaufwand",
+          "pdf_font_pt": 21.43950080871582,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Synchronisation +",
+          "pdf_font_pt": 20.903249740600586,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "Warteschlangen",
+          "pdf_font_pt": 20.903249740600586,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "Stufe 2",
+          "pdf_font_pt": 22.77899932861328,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Berechnung",
+          "pdf_font_pt": 22.77899932861328,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Kompilierter",
+          "pdf_font_pt": 22.77899932861328,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Teilgraph",
+          "pdf_font_pt": 22.77899932861328,
+          "final_font_pt": 8.5
+        }
+      ],
+      "validation": {
+        "one_page": true,
+        "raster_images": 0,
+        "text_spans_inside_page": true,
+        "selectable_text": true,
+        "visual_qa": "reviewed; no clipped or overlapping substantive labels at recommended size",
+        "font_embedding": "pdffonts reports all fonts embedded; Nimbus Sans Regular/Bold",
+        "committed_source_reexport_identical_text": true,
+        "committed_source_reexport_identical_vector_object_count": true,
+        "committed_source_reexport_identical_72dpi_render": true,
+        "pdf_creation_date": "D:20261029071246-03'00"
+      }
+    },
+    {
+      "number": "15",
+      "project_asset": "9_resources/layout_v48/methods/edge_pipeline.pdf",
+      "figure_numbers": [
+        "5.1"
+      ],
+      "pdf": "publications/dissertation/thesis-v56/de/illustrations/methoden/edge_pipeline.pdf",
+      "pdf_sha256": "b5f8230660ac97d36fcb718bc56e6153c5cedbb8bc5c3582c248a01159fced54",
+      "corrected_svg": "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/04_Methoden_und_Laufzeit/15_Verarbeitungskette_am_Netzwerkrand.svg",
+      "corrected_svg_sha256": "4c9b870cb60758222f563482b6223643c537433e76902ef2f910a1776f7c8917",
+      "corrected_drawio": "publications/dissertation/thesis-v56/de/sources/drawio/DrawIO/04_Methoden_und_Laufzeit/15_Verarbeitungskette_am_Netzwerkrand.drawio",
+      "corrected_drawio_sha256": "c3672db616767650f9fd3183ee3cf80462a7be126d5bc7ede1dce1e71ce54769",
+      "uploaded_source": {
+        "language": "Deutsch",
+        "svg_bundle_path": "Export_SVG/04_Methoden_und_Laufzeit/15_Verarbeitungskette_am_Netzwerkrand.svg",
+        "svg_sha256": "f6fc220e224c2a112acfe8eb3bd480d0bee1664ee87ceb19740ac93e821ae5cf",
+        "drawio_bundle_path": "DrawIO/04_Methoden_und_Laufzeit/15_Verarbeitungskette_am_Netzwerkrand.drawio",
+        "drawio_sha256": "f99989f3d45574ba04c040c4ded61740d2079b87ae99c675c4abda73a398dbd3"
+      },
+      "semantic_changes": [],
+      "typography_changes": [
+        {
+          "cell": "text-3",
+          "text": "Verarbeitungskette am Netzwerkrand",
+          "old_css_px": 26.0,
+          "new_css_px": 37.153,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "text-10",
+          "text": "Vorverarbeitung",
+          "old_css_px": 21.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-11",
+          "text": "Dekodieren / Skalieren",
+          "old_css_px": 18.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-14",
+          "text": "DNN\nInferenz",
+          "old_css_px": 24.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "node-15",
+          "text": "NPU/GPU/FPGA",
+          "old_css_px": 19.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-18",
+          "text": "Nachverarbeitung",
+          "old_css_px": 20.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-19",
+          "text": "NMS / Objektverfolgung",
+          "old_css_px": 18.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "node-27",
+          "text": "CPU/GPU",
+          "old_css_px": 18.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-28",
+          "text": "Flexible Rechenroutinen",
+          "old_css_px": 18.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-29",
+          "text": "Regulär rechnen",
+          "old_css_px": 18.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "node-30",
+          "text": "CPU/GPU",
+          "old_css_px": 18.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-31",
+          "text": "Irreguläre Operationen",
+          "old_css_px": 18.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-5",
+          "text": "Sensor",
+          "old_css_px": 22.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-6",
+          "text": "I/O",
+          "old_css_px": 17.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-21",
+          "text": "Anwendung",
+          "old_css_px": 20.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-22",
+          "text": "Ausgabe",
+          "old_css_px": 17.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        }
+      ],
+      "local_label_refinements": [
+        {
+          "cell": "text-10",
+          "old": "Vorverarbeitung",
+          "new": "Vor-\nverarbeitung",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 254,
+          "svg_text_x": "343"
+        },
+        {
+          "cell": "text-11",
+          "old": "Dekodieren / Skalieren",
+          "new": "Dekodieren /\nSkalieren",
+          "target_final_pt": 7.8,
+          "svg_center_baseline_y": 325,
+          "svg_text_x": "343"
+        },
+        {
+          "cell": "text-18",
+          "old": "Nachverarbeitung",
+          "new": "Nach-\nverarbeitung",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 254,
+          "svg_text_x": "1006"
+        },
+        {
+          "cell": "text-19",
+          "old": "NMS / Objektverfolgung",
+          "new": "NMS /\nObjektverfolgung",
+          "target_final_pt": 7.8,
+          "svg_center_baseline_y": 325,
+          "svg_text_x": "1006"
+        },
+        {
+          "cell": "text-28",
+          "old": "Flexible Rechenroutinen",
+          "new": "Flexible\nRechenroutinen",
+          "target_final_pt": 7.8,
+          "svg_center_baseline_y": 490,
+          "svg_text_x": "343"
+        },
+        {
+          "cell": "text-31",
+          "old": "Irreguläre Operationen",
+          "new": "Irreguläre\nOperationen",
+          "target_final_pt": 7.8,
+          "svg_center_baseline_y": 490,
+          "svg_text_x": "1006"
+        },
+        {
+          "cell": "text-21",
+          "old": "Anwendung",
+          "new": "Anwendung",
+          "target_final_pt": 7.3,
+          "svg_center_baseline_y": 276.0,
+          "svg_text_x": "1267"
+        },
+        {
+          "cell": "text-22",
+          "old": "Ausgabe",
+          "new": "Ausgabe",
+          "target_final_pt": 7.5,
+          "svg_center_baseline_y": 313.0,
+          "svg_text_x": "1267"
+        }
+      ],
+      "rendering_cleanup": "Removed the DrawIO unsupported-SVG-text fallback, if present; actual labels are native SVG text.",
+      "export_command_from_repository_root": [
+        "inkscape",
+        "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/04_Methoden_und_Laufzeit/15_Verarbeitungskette_am_Netzwerkrand.svg",
+        "--export-area-page",
+        "--export-type=pdf",
+        "--export-filename=publications/dissertation/thesis-v56/de/illustrations/methoden/edge_pipeline.pdf"
+      ],
+      "recommended_tex_width_fraction": 1.0,
+      "page_size_pdf_points": [
+        1042.5,
+        444.0
+      ],
+      "fonts": [
+        "NimbusSans-Bold",
+        "NimbusSans-Regular"
+      ],
+      "text_at_recommended_tex_size": [
+        {
+          "text": "Verarbeitungskette am Netzwerkrand",
+          "pdf_font_pt": 27.864749908447266,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "Vor-",
+          "pdf_font_pt": 23.46525001525879,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "verarbeitung",
+          "pdf_font_pt": 23.46525001525879,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Dekodieren /",
+          "pdf_font_pt": 22.87874984741211,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "Skalieren",
+          "pdf_font_pt": 22.87874984741211,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "DNN",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Inferenz",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "NPU/GPU/FPGA",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Nach-",
+          "pdf_font_pt": 23.46525001525879,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "verarbeitung",
+          "pdf_font_pt": 23.46525001525879,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "NMS /",
+          "pdf_font_pt": 22.87874984741211,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "Objektverfolgung",
+          "pdf_font_pt": 22.87874984741211,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "CPU/GPU",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Flexible",
+          "pdf_font_pt": 22.87874984741211,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "Rechenroutinen",
+          "pdf_font_pt": 22.87874984741211,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "Regulär rechnen",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "CPU/GPU",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Irreguläre",
+          "pdf_font_pt": 22.87874984741211,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "Operationen",
+          "pdf_font_pt": 22.87874984741211,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "Sensor",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "I/O",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Anwendung",
+          "pdf_font_pt": 21.41175079345703,
+          "final_font_pt": 7.3
+        },
+        {
+          "text": "Ausgabe",
+          "pdf_font_pt": 21.998249053955078,
+          "final_font_pt": 7.5
+        }
+      ],
+      "validation": {
+        "one_page": true,
+        "raster_images": 0,
+        "text_spans_inside_page": true,
+        "selectable_text": true,
+        "visual_qa": "reviewed; no clipped or overlapping substantive labels at recommended size",
+        "font_embedding": "pdffonts reports all fonts embedded; Nimbus Sans Regular/Bold",
+        "committed_source_reexport_identical_text": true,
+        "committed_source_reexport_identical_vector_object_count": true,
+        "committed_source_reexport_identical_72dpi_render": true,
+        "pdf_creation_date": "D:20261029071248-03'00"
+      }
+    },
+    {
+      "number": "16",
+      "project_asset": "9_resources/layout_v48/methods/multicontext.pdf",
+      "figure_numbers": [
+        "6.3"
+      ],
+      "pdf": "publications/dissertation/thesis-v56/de/illustrations/methoden/multicontext.pdf",
+      "pdf_sha256": "2c7c2a3dd0203da90b1ec997b47156ad90dd57b0bf8ec789f425e089b6ff76e9",
+      "corrected_svg": "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/04_Methoden_und_Laufzeit/16_Einzel_und_Mehrfachkontext.svg",
+      "corrected_svg_sha256": "ca8434b2ae1f45cc55bef43c856150b97a3b03f1ed9f0d6cf0990e602688bd43",
+      "corrected_drawio": "publications/dissertation/thesis-v56/de/sources/drawio/DrawIO/04_Methoden_und_Laufzeit/16_Einzel_und_Mehrfachkontext.drawio",
+      "corrected_drawio_sha256": "92ac80a633a35a2aadac201765f17e552f2cd29dd424192cdc114ad8ba82838a",
+      "uploaded_source": {
+        "language": "Deutsch",
+        "svg_bundle_path": "Export_SVG/04_Methoden_und_Laufzeit/16_Einzel_und_Mehrfachkontext.svg",
+        "svg_sha256": "67e5dc0cc653eaf984623d11bed52ce007ea6365b9a5c0191d2babe7bff5167d",
+        "drawio_bundle_path": "DrawIO/04_Methoden_und_Laufzeit/16_Einzel_und_Mehrfachkontext.drawio",
+        "drawio_sha256": "4ed3ef77c77b7f9399aecd4d975bf36a456534773438151519f161a4437b60f5"
+      },
+      "semantic_changes": [],
+      "typography_changes": [
+        {
+          "cell": "text-3",
+          "text": "Ein Kontext oder mehrere?",
+          "old_css_px": 26.0,
+          "new_css_px": 34.48,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "text-5",
+          "text": "Passt in einen\nKontext",
+          "old_css_px": 22.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-8",
+          "text": "Ein NPU-\nAblaufplan",
+          "old_css_px": 23.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "multi-one-explanation",
+          "text": "Ein kompilierter\nAblaufplan",
+          "old_css_px": 21.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-11",
+          "text": "Benötigt mehrere\nKontexte",
+          "old_css_px": 22.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-16",
+          "text": "Kontext\n1",
+          "old_css_px": 21.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-21",
+          "text": "Kontext\n2",
+          "old_css_px": 21.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-26",
+          "text": "Kontext\n3",
+          "old_css_px": 21.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-29",
+          "text": "Hostseitiger\nZusatzaufwand",
+          "old_css_px": 22.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-32",
+          "text": "Einrichtung und Zwischentransfers können Zusatzaufwand erzeugen.",
+          "old_css_px": 18.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        }
+      ],
+      "local_label_refinements": [
+        {
+          "cell": "text-11",
+          "old": "Benötigt mehrere\nKontexte",
+          "new": "Benötigt mehrere\nKontexte",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 448.0,
+          "svg_text_x": "144"
+        }
+      ],
+      "rendering_cleanup": "Removed the DrawIO unsupported-SVG-text fallback, if present; actual labels are native SVG text.",
+      "export_command_from_repository_root": [
+        "inkscape",
+        "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/04_Methoden_und_Laufzeit/16_Einzel_und_Mehrfachkontext.svg",
+        "--export-area-page",
+        "--export-type=pdf",
+        "--export-filename=publications/dissertation/thesis-v56/de/illustrations/methoden/multicontext.pdf"
+      ],
+      "recommended_tex_width_fraction": 1.0,
+      "page_size_pdf_points": [
+        967.5,
+        512.25
+      ],
+      "fonts": [
+        "NimbusSans-Bold",
+        "NimbusSans-Regular"
+      ],
+      "text_at_recommended_tex_size": [
+        {
+          "text": "Ein Kontext oder mehrere?",
+          "pdf_font_pt": 25.860000610351562,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "Passt in einen",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Kontext",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Ein NPU-",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Ablaufplan",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Ein kompilierter",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Ablaufplan",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Benötigt mehrere",
+          "pdf_font_pt": 21.77699851989746,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Kontexte",
+          "pdf_font_pt": 21.77699851989746,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Kontext",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "1",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Kontext",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "2",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Kontext",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "3",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Hostseitiger",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Zusatzaufwand",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Einrichtung und Zwischentransfers können Zusatzaufwand erzeugen.",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        }
+      ],
+      "validation": {
+        "one_page": true,
+        "raster_images": 0,
+        "text_spans_inside_page": true,
+        "selectable_text": true,
+        "visual_qa": "reviewed; no clipped or overlapping substantive labels at recommended size",
+        "font_embedding": "pdffonts reports all fonts embedded; Nimbus Sans Regular/Bold",
+        "committed_source_reexport_identical_text": true,
+        "committed_source_reexport_identical_vector_object_count": true,
+        "committed_source_reexport_identical_72dpi_render": true,
+        "pdf_creation_date": "D:20261029071248-03'00"
+      }
+    },
+    {
+      "number": "17",
+      "project_asset": "9_resources/layout_v48/methods/split_workflow.pdf",
+      "figure_numbers": [
+        "7.1"
+      ],
+      "pdf": "publications/dissertation/thesis-v56/de/illustrations/methoden/split_workflow.pdf",
+      "pdf_sha256": "540b07295a033eb8a78de0235a7189d17bb9881c953737408298728022c238d0",
+      "corrected_svg": "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/04_Methoden_und_Laufzeit/17_Ablauf_der_Modellaufteilung.svg",
+      "corrected_svg_sha256": "48004d1c0ae6a9c776eb150b9d91247f279bd5f1b2130362380c82e0a429c3d8",
+      "corrected_drawio": "publications/dissertation/thesis-v56/de/sources/drawio/DrawIO/04_Methoden_und_Laufzeit/17_Ablauf_der_Modellaufteilung.drawio",
+      "corrected_drawio_sha256": "3b245fe46a18eb75a7b3ee3f0a27b4288d6526fc4f3e52c4fe239b54eaf1d02c",
+      "uploaded_source": {
+        "language": "Deutsch",
+        "svg_bundle_path": "Export_SVG/04_Methoden_und_Laufzeit/17_Ablauf_der_Modellaufteilung.svg",
+        "svg_sha256": "c4af891a620989856dbd21275b66425f25659319e75043e4e1d07c8d86a806e4",
+        "drawio_bundle_path": "DrawIO/04_Methoden_und_Laufzeit/17_Ablauf_der_Modellaufteilung.drawio",
+        "drawio_sha256": "0a967203eabae47bbf5811f72317c9c66a55a7af558b6391b280cff082355aa2"
+      },
+      "semantic_changes": [],
+      "typography_changes": [
+        {
+          "cell": "text-3",
+          "text": "Ablauf der Modellaufteilung",
+          "old_css_px": 26.0,
+          "new_css_px": 36.886,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "text-4",
+          "text": "Analyse und Anforderungen der Zielumgebung",
+          "old_css_px": 17.0,
+          "new_css_px": 33.003,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-12",
+          "text": "Formen +\nMetadaten",
+          "old_css_px": 21.0,
+          "new_css_px": 33.003,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-15",
+          "text": "Schnitte\nerzeugen",
+          "old_css_px": 21.0,
+          "new_css_px": 33.003,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-18",
+          "text": "Zielumgebung:\nAnforderungen",
+          "old_css_px": 21.0,
+          "new_css_px": 33.003,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-27",
+          "text": "Grenztensorgröße",
+          "old_css_px": 19.0,
+          "new_css_px": 33.003,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-28",
+          "text": "+ FLOPs",
+          "old_css_px": 17.0,
+          "new_css_px": 33.003,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-30",
+          "text": "Ausführbarkeit",
+          "old_css_px": 20.0,
+          "new_css_px": 33.003,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-31",
+          "text": "prüfen",
+          "old_css_px": 17.0,
+          "new_css_px": 33.003,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-5",
+          "text": "Ergebnis",
+          "old_css_px": 17.0,
+          "new_css_px": 33.003,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-21",
+          "text": "Rangfolge bilden\n+ exportieren",
+          "old_css_px": 21.0,
+          "new_css_px": 33.003,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-34",
+          "text": "CSV/PDF",
+          "old_css_px": 21.0,
+          "new_css_px": 33.003,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-35",
+          "text": "Export über\nBedienoberfläche",
+          "old_css_px": 16.0,
+          "new_css_px": 33.003,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-8",
+          "text": "ONNX-Modell",
+          "old_css_px": 21.0,
+          "new_css_px": 33.003,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-9",
+          "text": "laden",
+          "old_css_px": 18.0,
+          "new_css_px": 33.003,
+          "target_final_pt": 8.5
+        }
+      ],
+      "local_label_refinements": [
+        {
+          "cell": "text-8",
+          "old": "ONNX-Modell",
+          "new": "ONNX-\nModell",
+          "target_final_pt": 8.5,
+          "svg_center_baseline_y": 245,
+          "svg_text_x": "92"
+        },
+        {
+          "cell": "text-9",
+          "old": "laden",
+          "new": "laden",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 311,
+          "svg_text_x": "92"
+        },
+        {
+          "cell": "text-18",
+          "old": "Zielumgebung:\nAnforderungen",
+          "new": "Zielumgebung:\nAnforderungen",
+          "target_final_pt": 7.3,
+          "svg_center_baseline_y": 268.5,
+          "svg_text_x": "917"
+        },
+        {
+          "cell": "text-21",
+          "old": "Rangfolge bilden\n+ exportieren",
+          "new": "Rangfolge bilden\n+ exportieren",
+          "target_final_pt": 7.3,
+          "svg_center_baseline_y": 268.5,
+          "svg_text_x": "1206"
+        },
+        {
+          "cell": "text-27",
+          "old": "Grenztensorgröße",
+          "new": "Grenztensor-\ngröße",
+          "target_final_pt": 7.6,
+          "svg_center_baseline_y": 466,
+          "svg_text_x": "356"
+        },
+        {
+          "cell": "text-28",
+          "old": "+ FLOPs",
+          "new": "+ FLOPs",
+          "target_final_pt": 7.8,
+          "svg_center_baseline_y": 518,
+          "svg_text_x": "356"
+        },
+        {
+          "cell": "text-30",
+          "old": "Ausführbarkeit",
+          "new": "Ausführbarkeit",
+          "target_final_pt": 7.2,
+          "svg_center_baseline_y": 464.0,
+          "svg_text_x": "917"
+        },
+        {
+          "cell": "text-31",
+          "old": "prüfen",
+          "new": "prüfen",
+          "target_final_pt": 7.8,
+          "svg_center_baseline_y": 505.0,
+          "svg_text_x": "917"
+        },
+        {
+          "cell": "text-34",
+          "old": "CSV/PDF",
+          "new": "CSV/PDF",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 453,
+          "svg_text_x": "1206"
+        },
+        {
+          "cell": "text-35",
+          "old": "Export über\nBedienoberfläche",
+          "new": "Export über\nBedienoberfläche",
+          "target_final_pt": 7.0,
+          "svg_center_baseline_y": 502,
+          "svg_text_x": "1206"
+        }
+      ],
+      "rendering_cleanup": "Removed the DrawIO unsupported-SVG-text fallback, if present; actual labels are native SVG text.",
+      "export_command_from_repository_root": [
+        "inkscape",
+        "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/04_Methoden_und_Laufzeit/17_Ablauf_der_Modellaufteilung.svg",
+        "--export-area-page",
+        "--export-type=pdf",
+        "--export-filename=publications/dissertation/thesis-v56/de/illustrations/methoden/split_workflow.pdf"
+      ],
+      "recommended_tex_width_fraction": 1.0,
+      "page_size_pdf_points": [
+        1035.0,
+        453.75
+      ],
+      "fonts": [
+        "NimbusSans-Bold",
+        "NimbusSans-Regular"
+      ],
+      "text_at_recommended_tex_size": [
+        {
+          "text": "Ablauf der Modellaufteilung",
+          "pdf_font_pt": 27.664501190185547,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "Analyse und Anforderungen der Zielumgebung",
+          "pdf_font_pt": 24.752248764038086,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Formen +",
+          "pdf_font_pt": 24.752248764038086,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Metadaten",
+          "pdf_font_pt": 24.752248764038086,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Schnitte",
+          "pdf_font_pt": 24.752248764038086,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "erzeugen",
+          "pdf_font_pt": 24.752248764038086,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Zielumgebung:",
+          "pdf_font_pt": 21.257999420166016,
+          "final_font_pt": 7.3
+        },
+        {
+          "text": "Anforderungen",
+          "pdf_font_pt": 21.257999420166016,
+          "final_font_pt": 7.3
+        },
+        {
+          "text": "Grenztensor-",
+          "pdf_font_pt": 22.131750106811523,
+          "final_font_pt": 7.6
+        },
+        {
+          "text": "größe",
+          "pdf_font_pt": 22.131750106811523,
+          "final_font_pt": 7.6
+        },
+        {
+          "text": "+ FLOPs",
+          "pdf_font_pt": 22.7137508392334,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "Ausführbarkeit",
+          "pdf_font_pt": 20.966999053955078,
+          "final_font_pt": 7.2
+        },
+        {
+          "text": "prüfen",
+          "pdf_font_pt": 22.7137508392334,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "Ergebnis",
+          "pdf_font_pt": 24.752248764038086,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Rangfolge bilden",
+          "pdf_font_pt": 21.257999420166016,
+          "final_font_pt": 7.3
+        },
+        {
+          "text": "+ exportieren",
+          "pdf_font_pt": 21.257999420166016,
+          "final_font_pt": 7.3
+        },
+        {
+          "text": "CSV/PDF",
+          "pdf_font_pt": 23.296499252319336,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Export über",
+          "pdf_font_pt": 20.38425064086914,
+          "final_font_pt": 7.0
+        },
+        {
+          "text": "Bedienoberﬂäche",
+          "pdf_font_pt": 20.38425064086914,
+          "final_font_pt": 7.0
+        },
+        {
+          "text": "ONNX-",
+          "pdf_font_pt": 24.752248764038086,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Modell",
+          "pdf_font_pt": 24.752248764038086,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "laden",
+          "pdf_font_pt": 23.296499252319336,
+          "final_font_pt": 8.0
+        }
+      ],
+      "validation": {
+        "one_page": true,
+        "raster_images": 0,
+        "text_spans_inside_page": true,
+        "selectable_text": true,
+        "visual_qa": "reviewed; no clipped or overlapping substantive labels at recommended size",
+        "font_embedding": "pdffonts reports all fonts embedded; Nimbus Sans Regular/Bold",
+        "committed_source_reexport_identical_text": true,
+        "committed_source_reexport_identical_vector_object_count": true,
+        "committed_source_reexport_identical_72dpi_render": true,
+        "pdf_creation_date": "D:20261029071248-03'00"
+      }
+    },
+    {
+      "number": "18",
+      "project_asset": "9_resources/integration_v47/methods/throughput_taxonomy.pdf",
+      "figure_numbers": [
+        "5.2"
+      ],
+      "pdf": "publications/dissertation/thesis-v56/de/illustrations/methoden/throughput_taxonomy.pdf",
+      "pdf_sha256": "92553bd154f96432fafbe34b3ad2cf9c468d36aa1d7682f641f15413871442e7",
+      "corrected_svg": "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/04_Methoden_und_Laufzeit/18_Durchsatz_bei_ueberlappender_Ausfuehrung.svg",
+      "corrected_svg_sha256": "60fa2b9c6522389126e532864a360d84effa88f310ab36f630add1285dd82309",
+      "corrected_drawio": "publications/dissertation/thesis-v56/de/sources/drawio/DrawIO/04_Methoden_und_Laufzeit/18_Durchsatz_bei_ueberlappender_Ausfuehrung.drawio",
+      "corrected_drawio_sha256": "66f709e3984bde8caafdef667849642e4c7f490b9d528f9a4e072fc28fa0b7dd",
+      "uploaded_source": {
+        "language": "Deutsch",
+        "svg_bundle_path": "Export_SVG/04_Methoden_und_Laufzeit/18_Durchsatz_bei_ueberlappender_Ausfuehrung.svg",
+        "svg_sha256": "1a2d29c0e173a89026966a9e5c3fc56881b45c7cf05490b977ca4beab82c0517",
+        "drawio_bundle_path": "DrawIO/04_Methoden_und_Laufzeit/18_Durchsatz_bei_ueberlappender_Ausfuehrung.drawio",
+        "drawio_sha256": "eb25042db29726c059918d7ef4be9326b38f15d5e85160af78b15fab57908a80"
+      },
+      "semantic_changes": [],
+      "typography_changes": [
+        {
+          "cell": "text-3",
+          "text": "Durchsatz durch überlappende Ausführung",
+          "old_css_px": 26.0,
+          "new_css_px": 34.48,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "text-5",
+          "text": "Ungeteilte Ausführung",
+          "old_css_px": 22.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "throughput-model-label",
+          "text": "Modell",
+          "old_css_px": 21.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "throughput-full-1",
+          "text": "1",
+          "old_css_px": 24.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "throughput-full-2",
+          "text": "2",
+          "old_css_px": 24.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "throughput-full-3",
+          "text": "3",
+          "old_css_px": 24.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "throughput-full-4",
+          "text": "4",
+          "old_css_px": 24.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "throughput-full-5",
+          "text": "5",
+          "old_css_px": 24.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-7",
+          "text": "Geteilte Ausführung",
+          "old_css_px": 22.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "throughput-stage-1-label",
+          "text": "Stufe 1",
+          "old_css_px": 21.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "throughput-stage-2-label",
+          "text": "Stufe 2",
+          "old_css_px": 21.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "throughput-stage1-1",
+          "text": "1",
+          "old_css_px": 24.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "throughput-stage2-1",
+          "text": "1",
+          "old_css_px": 24.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "throughput-stage1-2",
+          "text": "2",
+          "old_css_px": 24.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "throughput-stage2-2",
+          "text": "2",
+          "old_css_px": 24.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "throughput-stage1-3",
+          "text": "3",
+          "old_css_px": 24.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "throughput-stage2-3",
+          "text": "3",
+          "old_css_px": 24.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "throughput-stage1-4",
+          "text": "4",
+          "old_css_px": 24.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "throughput-stage2-4",
+          "text": "4",
+          "old_css_px": 24.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "throughput-overlap-caption",
+          "text": "Überlappung im stationären Betrieb",
+          "old_css_px": 19.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-10",
+          "text": "Zahlen bezeichnen Eingaben. Die Zeit verläuft nach rechts.",
+          "old_css_px": 17.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        }
+      ],
+      "local_label_refinements": [],
+      "rendering_cleanup": "Removed the DrawIO unsupported-SVG-text fallback, if present; actual labels are native SVG text.",
+      "export_command_from_repository_root": [
+        "inkscape",
+        "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/04_Methoden_und_Laufzeit/18_Durchsatz_bei_ueberlappender_Ausfuehrung.svg",
+        "--export-area-page",
+        "--export-type=pdf",
+        "--export-filename=publications/dissertation/thesis-v56/de/illustrations/methoden/throughput_taxonomy.pdf"
+      ],
+      "recommended_tex_width_fraction": 1.0,
+      "page_size_pdf_points": [
+        967.5,
+        581.25
+      ],
+      "fonts": [
+        "NimbusSans-Bold",
+        "NimbusSans-Regular"
+      ],
+      "text_at_recommended_tex_size": [
+        {
+          "text": "Durchsatz durch überlappende Ausführung",
+          "pdf_font_pt": 25.860000610351562,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "Ungeteilte Ausführung",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Modell",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "1",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "2",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "3",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "4",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "5",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Geteilte Ausführung",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Stufe 1",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Stufe 2",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "1",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "1",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "2",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "2",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "3",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "3",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "4",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "4",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Überlappung im stationären Betrieb",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Zahlen bezeichnen Eingaben. Die Zeit verläuft nach rechts.",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        }
+      ],
+      "validation": {
+        "one_page": true,
+        "raster_images": 0,
+        "text_spans_inside_page": true,
+        "selectable_text": true,
+        "visual_qa": "reviewed; no clipped or overlapping substantive labels at recommended size",
+        "font_embedding": "pdffonts reports all fonts embedded; Nimbus Sans Regular/Bold",
+        "committed_source_reexport_identical_text": true,
+        "committed_source_reexport_identical_vector_object_count": true,
+        "committed_source_reexport_identical_72dpi_render": true,
+        "pdf_creation_date": "D:20261029071246-03'00"
+      }
+    },
+    {
+      "number": "24",
+      "project_asset": "9_resources/layout_v48/foundations/figures/management_overview.pdf",
+      "figure_numbers": [
+        "3.3"
+      ],
+      "pdf": "publications/dissertation/thesis-v56/de/illustrations/recs/management_overview.pdf",
+      "pdf_sha256": "bcf51df8f15b566161d8503b51ce1f33876d9c9146658bf3d5c363d0858d2054",
+      "corrected_svg": "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/07_uRECS/24_Verwaltung_und_Messung.svg",
+      "corrected_svg_sha256": "1270a895500713173758ff6e2a7ccb3c543297579fc420b5abd11d4896f4d8dd",
+      "corrected_drawio": "publications/dissertation/thesis-v56/de/sources/drawio/DrawIO/07_uRECS/24_Verwaltung_und_Messung.drawio",
+      "corrected_drawio_sha256": "9f455b499e7e93bbd1de015c8f45e68ed51a3ba9cc22a4e332949359d906eb22",
+      "uploaded_source": {
+        "language": "Deutsch",
+        "svg_bundle_path": "Export_SVG/07_uRECS/24_Verwaltung_und_Messung.svg",
+        "svg_sha256": "7cfd95d2d25fadf920dc5a24d55ebf2152bcd65a4329d53d53abee3c9994830a",
+        "drawio_bundle_path": "DrawIO/07_uRECS/24_Verwaltung_und_Messung.drawio",
+        "drawio_sha256": "36dd304e8c44643342b6f7f50ef60f7c3698b724bd3b9b5bb5c90926caf4fdc1"
+      },
+      "semantic_changes": [],
+      "typography_changes": [
+        {
+          "cell": "text-3",
+          "text": "Verwaltung und Messung",
+          "old_css_px": 26.0,
+          "new_css_px": 32.877,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "text-6",
+          "text": "Erfassen & steuern",
+          "old_css_px": 20.0,
+          "new_css_px": 29.416,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-10",
+          "text": "I/O-Erweiterungen",
+          "old_css_px": 21.0,
+          "new_css_px": 29.416,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-11",
+          "text": "Versorgung freigeben",
+          "old_css_px": 17.0,
+          "new_css_px": 29.416,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-14",
+          "text": "ADS7953 (SPI)",
+          "old_css_px": 21.0,
+          "new_css_px": 29.416,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-15",
+          "text": "Strommessung",
+          "old_css_px": 17.0,
+          "new_css_px": 29.416,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-18",
+          "text": "Lüfter + Temperatur",
+          "old_css_px": 20.0,
+          "new_css_px": 29.416,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-19",
+          "text": "Steuerungen",
+          "old_css_px": 17.0,
+          "new_css_px": 29.416,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-7",
+          "text": "Anbinden & warten",
+          "old_css_px": 20.0,
+          "new_css_px": 29.416,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-22",
+          "text": "Ethernet",
+          "old_css_px": 21.0,
+          "new_css_px": 29.416,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-23",
+          "text": "Netzwerkverteiler",
+          "old_css_px": 17.0,
+          "new_css_px": 29.416,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-26",
+          "text": "Wi-Fi / LoRa",
+          "old_css_px": 21.0,
+          "new_css_px": 29.416,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-27",
+          "text": "Fernverwaltung",
+          "old_css_px": 17.0,
+          "new_css_px": 29.416,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-30",
+          "text": "UART / USB",
+          "old_css_px": 21.0,
+          "new_css_px": 29.416,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-31",
+          "text": "Fehlersuche",
+          "old_css_px": 17.0,
+          "new_css_px": 29.416,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-33",
+          "text": "ESP32",
+          "old_css_px": 25.0,
+          "new_css_px": 32.877,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "node-34",
+          "text": "BMC",
+          "old_css_px": 20.0,
+          "new_css_px": 29.416,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "node-38",
+          "text": "SPI",
+          "old_css_px": 13.0,
+          "new_css_px": 29.416,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-44",
+          "text": "Verwaltung und Messung bleiben bei abgeschalteten Rechenmodulen verfügbar",
+          "old_css_px": 18.0,
+          "new_css_px": 29.416,
+          "target_final_pt": 8.5
+        }
+      ],
+      "local_label_refinements": [
+        {
+          "cell": "text-44",
+          "old": "Verwaltung und Messung bleiben bei abgeschalteten Rechenmodulen verfügbar",
+          "new": "Verwaltung und Messung bleiben bei abgeschalteten Rechenmodulen verfügbar",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 605.0,
+          "svg_text_x": "594"
+        },
+        {
+          "cell": "text-11",
+          "old": "Versorgung freigeben",
+          "new": "Versorgung freigeben",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 237.0,
+          "svg_text_x": "183"
+        },
+        {
+          "cell": "text-15",
+          "old": "Strommessung",
+          "new": "Strommessung",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 362.0,
+          "svg_text_x": "183"
+        },
+        {
+          "cell": "text-19",
+          "old": "Steuerungen",
+          "new": "Steuerungen",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 487.0,
+          "svg_text_x": "183"
+        },
+        {
+          "cell": "text-23",
+          "old": "Netzwerkverteiler",
+          "new": "Netzwerkverteiler",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 237.0,
+          "svg_text_x": "1005"
+        },
+        {
+          "cell": "text-27",
+          "old": "Fernverwaltung",
+          "new": "Fernverwaltung",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 362.0,
+          "svg_text_x": "1005"
+        },
+        {
+          "cell": "text-31",
+          "old": "Fehlersuche",
+          "new": "Fehlersuche",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 487.0,
+          "svg_text_x": "1005"
+        }
+      ],
+      "rendering_cleanup": "Removed the DrawIO unsupported-SVG-text fallback, if present; actual labels are native SVG text.",
+      "export_command_from_repository_root": [
+        "inkscape",
+        "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/07_uRECS/24_Verwaltung_und_Messung.svg",
+        "--export-area-page",
+        "--export-type=pdf",
+        "--export-filename=publications/dissertation/thesis-v56/de/illustrations/recs/management_overview.pdf"
+      ],
+      "recommended_tex_width_fraction": 1.0,
+      "page_size_pdf_points": [
+        922.5,
+        503.25
+      ],
+      "fonts": [
+        "NimbusSans-Bold",
+        "NimbusSans-Regular"
+      ],
+      "text_at_recommended_tex_size": [
+        {
+          "text": "Verwaltung und Messung",
+          "pdf_font_pt": 24.65774917602539,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "Erfassen & steuern",
+          "pdf_font_pt": 22.062000274658203,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "I/O-Erweiterungen",
+          "pdf_font_pt": 22.062000274658203,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Versorgung freigeben",
+          "pdf_font_pt": 20.763750076293945,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "ADS7953 (SPI)",
+          "pdf_font_pt": 22.062000274658203,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Strommessung",
+          "pdf_font_pt": 20.763750076293945,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Lüfter + Temperatur",
+          "pdf_font_pt": 22.062000274658203,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Steuerungen",
+          "pdf_font_pt": 20.763750076293945,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Anbinden & warten",
+          "pdf_font_pt": 22.062000274658203,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Ethernet",
+          "pdf_font_pt": 22.062000274658203,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Netzwerkverteiler",
+          "pdf_font_pt": 20.763750076293945,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Wi-Fi / LoRa",
+          "pdf_font_pt": 22.062000274658203,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Fernverwaltung",
+          "pdf_font_pt": 20.763750076293945,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "UART / USB",
+          "pdf_font_pt": 22.062000274658203,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Fehlersuche",
+          "pdf_font_pt": 20.763750076293945,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "ESP32",
+          "pdf_font_pt": 24.65774917602539,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "BMC",
+          "pdf_font_pt": 22.062000274658203,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "SPI",
+          "pdf_font_pt": 22.062000274658203,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Verwaltung und Messung bleiben bei abgeschalteten Rechenmodulen verfügbar",
+          "pdf_font_pt": 20.763750076293945,
+          "final_font_pt": 8.0
+        }
+      ],
+      "validation": {
+        "one_page": true,
+        "raster_images": 0,
+        "text_spans_inside_page": true,
+        "selectable_text": true,
+        "visual_qa": "reviewed; no clipped or overlapping substantive labels at recommended size",
+        "font_embedding": "pdffonts reports all fonts embedded; Nimbus Sans Regular/Bold",
+        "committed_source_reexport_identical_text": true,
+        "committed_source_reexport_identical_vector_object_count": true,
+        "committed_source_reexport_identical_72dpi_render": true,
+        "pdf_creation_date": "D:20261029071247-03'00"
+      }
+    },
+    {
+      "number": "25",
+      "project_asset": "9_resources/layout_v48/foundations/figures/toolchain_bridge.pdf",
+      "figure_numbers": [
+        "3.6"
+      ],
+      "pdf": "publications/dissertation/thesis-v56/de/illustrations/recs/toolchain_bridge.pdf",
+      "pdf_sha256": "4715292d446af5f8a7cf09750c5de164ff61e194736bbcb0879ac333323e58db",
+      "corrected_svg": "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/07_uRECS/25_Werkzeugketten_und_Laufzeit.svg",
+      "corrected_svg_sha256": "e064724a630c477418b7a0c825fcce0d05646a9379289e11f038a1a7eca46ec3",
+      "corrected_drawio": "publications/dissertation/thesis-v56/de/sources/drawio/DrawIO/07_uRECS/25_Werkzeugketten_und_Laufzeit.drawio",
+      "corrected_drawio_sha256": "333c52b61a3c2918ada0449477ca3c1bac9a43827813db908f207f3af8f3928b",
+      "uploaded_source": {
+        "language": "Deutsch",
+        "svg_bundle_path": "Export_SVG/07_uRECS/25_Werkzeugketten_und_Laufzeit.svg",
+        "svg_sha256": "cb501f533dd8fdbc652d1ab49d871c0cf89153cf815073c9fced2be49333269b",
+        "drawio_bundle_path": "DrawIO/07_uRECS/25_Werkzeugketten_und_Laufzeit.drawio",
+        "drawio_sha256": "b67f9957bab88b2cc3dc852fc9444a214851db4a69632d5deabf5cdd6651d653"
+      },
+      "semantic_changes": [],
+      "typography_changes": [
+        {
+          "cell": "text-3",
+          "text": "Vom Modell zur heterogenen Laufzeit",
+          "old_css_px": 26.0,
+          "new_css_px": 34.48,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "text-6",
+          "text": "Logischer ONNX-DAG",
+          "old_css_px": 21.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-9",
+          "text": "Partitionierung +",
+          "old_css_px": 21.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-10",
+          "text": "Graphanpassung",
+          "old_css_px": 17.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "node-12",
+          "text": "GPU",
+          "old_css_px": 18.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-16",
+          "text": "TensorRT / CUDA",
+          "old_css_px": 20.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-17",
+          "text": "GPU-Werkzeugkette",
+          "old_css_px": 17.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-20",
+          "text": "Ausführungs-\nartefakt",
+          "old_css_px": 20.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "node-13",
+          "text": "NPU",
+          "old_css_px": 18.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-23",
+          "text": "NPU-Übersetzer",
+          "old_css_px": 20.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-24",
+          "text": "+ Kalibrierung",
+          "old_css_px": 17.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-27",
+          "text": "HEF / Kontexte",
+          "old_css_px": 18.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-28",
+          "text": "Artefakt",
+          "old_css_px": 17.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-35",
+          "text": "Laufzeitsteuerung",
+          "old_css_px": 23.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-36",
+          "text": "Warteschlangen, Synchronisation,\nProtokollierung",
+          "old_css_px": 16.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-41",
+          "text": "Grenztensor: PCIe / DMA + Datenanordnung / (De-)Quantisierung",
+          "old_css_px": 18.0,
+          "new_css_px": 30.851,
+          "target_final_pt": 8.5
+        }
+      ],
+      "local_label_refinements": [
+        {
+          "cell": "text-17",
+          "old": "GPU-Werkzeugkette",
+          "new": "GPU-Werkzeug-\nkette",
+          "target_final_pt": 7.7,
+          "svg_center_baseline_y": 430,
+          "svg_text_x": "157"
+        },
+        {
+          "cell": "text-35",
+          "old": "Laufzeitsteuerung",
+          "new": "Laufzeitsteuerung",
+          "target_final_pt": null,
+          "svg_center_baseline_y": 582,
+          "svg_text_x": "624"
+        },
+        {
+          "cell": "text-36",
+          "old": "Warteschlangen, Synchronisation,\nProtokollierung",
+          "new": "Warteschlangen,\nSynchronisation, Protokollierung",
+          "target_final_pt": 7.8,
+          "svg_center_baseline_y": 643,
+          "svg_text_x": "624"
+        },
+        {
+          "cell": "text-10",
+          "old": "Graphanpassung",
+          "new": "Graphanpassung",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 188.0,
+          "svg_text_x": "684"
+        },
+        {
+          "cell": "text-24",
+          "old": "+ Kalibrierung",
+          "new": "+ Kalibrierung",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 424.0,
+          "svg_text_x": "809"
+        },
+        {
+          "cell": "text-28",
+          "old": "Artefakt",
+          "new": "Artefakt",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 423.0,
+          "svg_text_x": "1109"
+        }
+      ],
+      "rendering_cleanup": "Removed the DrawIO unsupported-SVG-text fallback, if present; actual labels are native SVG text.",
+      "export_command_from_repository_root": [
+        "inkscape",
+        "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/07_uRECS/25_Werkzeugketten_und_Laufzeit.svg",
+        "--export-area-page",
+        "--export-type=pdf",
+        "--export-filename=publications/dissertation/thesis-v56/de/illustrations/recs/toolchain_bridge.pdf"
+      ],
+      "recommended_tex_width_fraction": 1.0,
+      "page_size_pdf_points": [
+        967.5,
+        591.75
+      ],
+      "fonts": [
+        "NimbusSans-Bold",
+        "NimbusSans-Regular"
+      ],
+      "text_at_recommended_tex_size": [
+        {
+          "text": "Vom Modell zur heterogenen Laufzeit",
+          "pdf_font_pt": 25.860000610351562,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "Logischer ONNX-DAG",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Partitionierung +",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Graphanpassung",
+          "pdf_font_pt": 21.77699851989746,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "GPU",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "TensorRT / CUDA",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "GPU-Werkzeug-",
+          "pdf_font_pt": 20.960250854492188,
+          "final_font_pt": 7.7
+        },
+        {
+          "text": "kette",
+          "pdf_font_pt": 20.960250854492188,
+          "final_font_pt": 7.7
+        },
+        {
+          "text": "Ausführungs-",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "artefakt",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "NPU",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "NPU-Übersetzer",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "+ Kalibrierung",
+          "pdf_font_pt": 21.77699851989746,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "HEF / Kontexte",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Artefakt",
+          "pdf_font_pt": 21.77699851989746,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Laufzeitsteuerung",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Warteschlangen,",
+          "pdf_font_pt": 21.232500076293945,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "Synchronisation, Protokollierung",
+          "pdf_font_pt": 21.232500076293945,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "Grenztensor: PCIe / DMA + Datenanordnung / (De-)Quantisierung",
+          "pdf_font_pt": 23.13825035095215,
+          "final_font_pt": 8.5
+        }
+      ],
+      "validation": {
+        "one_page": true,
+        "raster_images": 0,
+        "text_spans_inside_page": true,
+        "selectable_text": true,
+        "visual_qa": "reviewed; no clipped or overlapping substantive labels at recommended size",
+        "font_embedding": "pdffonts reports all fonts embedded; Nimbus Sans Regular/Bold",
+        "committed_source_reexport_identical_text": true,
+        "committed_source_reexport_identical_vector_object_count": true,
+        "committed_source_reexport_identical_72dpi_render": true,
+        "pdf_creation_date": "D:20261029071247-03'00"
+      }
+    },
+    {
+      "number": "26",
+      "project_asset": "9_resources/layout_v48/foundations/figures/urecs_architecture.pdf",
+      "figure_numbers": [
+        "3.1"
+      ],
+      "pdf": "publications/dissertation/thesis-v56/de/illustrations/recs/urecs_architecture.pdf",
+      "pdf_sha256": "7292b035c1dd54a94b700e4545eca38b52d06b7cd0c1d86299e57be005938656",
+      "corrected_svg": "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/07_uRECS/26_uRECS_Systemarchitektur.svg",
+      "corrected_svg_sha256": "b48941a36d0539eaad13fd474f29d7ac1c376b115350fa7600ed54e80853c9f7",
+      "corrected_drawio": "publications/dissertation/thesis-v56/de/sources/drawio/DrawIO/07_uRECS/26_uRECS_Systemarchitektur.drawio",
+      "corrected_drawio_sha256": "0fe0dd0d9248dfad969281ac416a1c6d95d6ff1ee5aea00c72a13b6b78c91d79",
+      "uploaded_source": {
+        "language": "Deutsch",
+        "svg_bundle_path": "Export_SVG/07_uRECS/26_uRECS_Systemarchitektur.svg",
+        "svg_sha256": "c1e930c49d8161f4064f0a5e9a70d855b9bbba3f61ef2908f0ac83ae724b62e7",
+        "drawio_bundle_path": "DrawIO/07_uRECS/26_uRECS_Systemarchitektur.drawio",
+        "drawio_sha256": "4d74741be7255d7747a40eaba08caaf70e549788b4837b63e7791dfb99085e24"
+      },
+      "semantic_changes": [],
+      "typography_changes": [
+        {
+          "cell": "text-3",
+          "text": "u.RECS: Rechnen, verbinden, verwalten",
+          "old_css_px": 26.0,
+          "new_css_px": 37.153,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "text-13",
+          "text": "Rechenpfad",
+          "old_css_px": 22.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-18",
+          "text": "Jetson Orin NX",
+          "old_css_px": 20.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-19",
+          "text": "GPU SoC",
+          "old_css_px": 17.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-22",
+          "text": "SMARC 2.1",
+          "old_css_px": 20.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-23",
+          "text": "SoM-Steckplatz",
+          "old_css_px": 17.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-26",
+          "text": "COM-Brick",
+          "old_css_px": 23.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-27",
+          "text": "PCIe-Verschaltung",
+          "old_css_px": 17.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-30",
+          "text": "M.2 M-Key",
+          "old_css_px": 23.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-31",
+          "text": "KI-Beschleuniger",
+          "old_css_px": 17.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-49",
+          "text": "Passiver Pfad: ein Endpunktpaar",
+          "old_css_px": 18.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-15",
+          "text": "Verwaltung und Ein-/Ausgabe",
+          "old_css_px": 22.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-52",
+          "text": "USB-C / Hohlstecker",
+          "old_css_px": 22.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-53",
+          "text": "→ Versorgung + ADC",
+          "old_css_px": 17.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-56",
+          "text": "ESP32 BMC",
+          "old_css_px": 23.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-57",
+          "text": "Versorgung + Überwachung",
+          "old_css_px": 17.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-60",
+          "text": "Ethernet",
+          "old_css_px": 23.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-61",
+          "text": "Netzwerkverteiler",
+          "old_css_px": 17.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-63",
+          "text": "RJ-45 / PoE",
+          "old_css_px": 21.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-65",
+          "text": "SpE / LoRa",
+          "old_css_px": 21.0,
+          "new_css_px": 33.242,
+          "target_final_pt": 8.5
+        }
+      ],
+      "local_label_refinements": [
+        {
+          "cell": "text-19",
+          "old": "GPU SoC",
+          "new": "GPU SoC",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 273.0,
+          "svg_text_x": "164"
+        },
+        {
+          "cell": "text-23",
+          "old": "SoM-Steckplatz",
+          "new": "SoM-Steckplatz",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 273.0,
+          "svg_text_x": "493"
+        },
+        {
+          "cell": "text-27",
+          "old": "PCIe-Verschaltung",
+          "new": "PCIe-Verschaltung",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 463.0,
+          "svg_text_x": "328"
+        },
+        {
+          "cell": "text-31",
+          "old": "KI-Beschleuniger",
+          "new": "KI-Beschleuniger",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 654.0,
+          "svg_text_x": "328"
+        },
+        {
+          "cell": "text-53",
+          "old": "→ Versorgung + ADC",
+          "new": "→ Versorgung + ADC",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 265.0,
+          "svg_text_x": "1020"
+        },
+        {
+          "cell": "text-61",
+          "old": "Netzwerkverteiler",
+          "new": "Netzwerkverteiler",
+          "target_final_pt": 8.0,
+          "svg_center_baseline_y": 567.0,
+          "svg_text_x": "1020"
+        },
+        {
+          "cell": "text-56",
+          "old": "ESP32 BMC",
+          "new": "ESP32 BMC",
+          "target_final_pt": null,
+          "svg_center_baseline_y": 360,
+          "svg_text_x": "1020"
+        },
+        {
+          "cell": "text-57",
+          "old": "Versorgung + Überwachung",
+          "new": "Versorgung +\nÜberwachung",
+          "target_final_pt": 7.8,
+          "svg_center_baseline_y": 412,
+          "svg_text_x": "1020"
+        }
+      ],
+      "rendering_cleanup": "Removed the DrawIO unsupported-SVG-text fallback, if present; actual labels are native SVG text.",
+      "export_command_from_repository_root": [
+        "inkscape",
+        "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/07_uRECS/26_uRECS_Systemarchitektur.svg",
+        "--export-area-page",
+        "--export-type=pdf",
+        "--export-filename=publications/dissertation/thesis-v56/de/illustrations/recs/urecs_architecture.pdf"
+      ],
+      "recommended_tex_width_fraction": 1.0,
+      "page_size_pdf_points": [
+        1042.5,
+        593.25
+      ],
+      "fonts": [
+        "NimbusSans-Bold",
+        "NimbusSans-Regular"
+      ],
+      "text_at_recommended_tex_size": [
+        {
+          "text": "u.RECS: Rechnen, verbinden, verwalten",
+          "pdf_font_pt": 27.864749908447266,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "Rechenpfad",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Jetson Orin NX",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "GPU SoC",
+          "pdf_font_pt": 23.46525001525879,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "SMARC 2.1",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "SoM-Steckplatz",
+          "pdf_font_pt": 23.46525001525879,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "COM-Brick",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "PCIe-Verschaltung",
+          "pdf_font_pt": 23.46525001525879,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "M.2 M-Key",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "KI-Beschleuniger",
+          "pdf_font_pt": 23.46525001525879,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "Passiver Pfad: ein Endpunktpaar",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Verwaltung und Ein-/Ausgabe",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "USB-C / Hohlstecker",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "→ Versorgung + ADC",
+          "pdf_font_pt": 23.46525001525879,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "ESP32 BMC",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Versorgung +",
+          "pdf_font_pt": 22.87874984741211,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "Überwachung",
+          "pdf_font_pt": 22.87874984741211,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "Ethernet",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Netzwerkverteiler",
+          "pdf_font_pt": 23.46525001525879,
+          "final_font_pt": 8.0
+        },
+        {
+          "text": "RJ-45 / PoE",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "SpE / LoRa",
+          "pdf_font_pt": 24.931499481201172,
+          "final_font_pt": 8.5
+        }
+      ],
+      "validation": {
+        "one_page": true,
+        "raster_images": 0,
+        "text_spans_inside_page": true,
+        "selectable_text": true,
+        "visual_qa": "reviewed; no clipped or overlapping substantive labels at recommended size",
+        "font_embedding": "pdffonts reports all fonts embedded; Nimbus Sans Regular/Bold",
+        "committed_source_reexport_identical_text": true,
+        "committed_source_reexport_identical_vector_object_count": true,
+        "committed_source_reexport_identical_72dpi_render": true,
+        "pdf_creation_date": "D:20261029071247-03'00"
+      }
+    },
+    {
+      "number": "27",
+      "project_asset": "9_resources/layout_v48/foundations/figures/urecs_power.pdf",
+      "figure_numbers": [
+        "3.2"
+      ],
+      "pdf": "publications/dissertation/thesis-v56/de/illustrations/recs/urecs_power.pdf",
+      "pdf_sha256": "3c323e292176485c72d432c9d2ad8a502f0c1ec2c94c7180ba4239d5ab2f5694",
+      "corrected_svg": "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/07_uRECS/27_Versorgungspfade_und_Leistungsbudgets.svg",
+      "corrected_svg_sha256": "c3b7441d3765c141f86da79868d0f04e1b58d1e90e4ed99dced994b1a7c4d179",
+      "corrected_drawio": "publications/dissertation/thesis-v56/de/sources/drawio/DrawIO/07_uRECS/27_Versorgungspfade_und_Leistungsbudgets.drawio",
+      "corrected_drawio_sha256": "3483d3194298cc7cb8614079aaa8be8b55f862404b5805aac16dd6fc751b900e",
+      "uploaded_source": {
+        "language": "Deutsch",
+        "svg_bundle_path": "Export_SVG/07_uRECS/27_Versorgungspfade_und_Leistungsbudgets.svg",
+        "svg_sha256": "3f7740b15c840586a52b171922cb8ad9e04bbb60a7cedc396ccc0e4287961d08",
+        "drawio_bundle_path": "DrawIO/07_uRECS/27_Versorgungspfade_und_Leistungsbudgets.drawio",
+        "drawio_sha256": "8a8659d4887757c7c22bcd8d0d9004c553e34fe332a954c6647df9b54fb96c99"
+      },
+      "semantic_changes": [],
+      "typography_changes": [
+        {
+          "cell": "text-3",
+          "text": "Versorgungspfade und Leistungsbudgets",
+          "old_css_px": 26.0,
+          "new_css_px": 36.057,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "text-4",
+          "text": "Einspeisung",
+          "old_css_px": 20.0,
+          "new_css_px": 32.262,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-7",
+          "text": "USB-C",
+          "old_css_px": 21.0,
+          "new_css_px": 32.262,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-8",
+          "text": "PD",
+          "old_css_px": 17.0,
+          "new_css_px": 32.262,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-11",
+          "text": "Hohlstecker",
+          "old_css_px": 18.0,
+          "new_css_px": 32.262,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-13",
+          "text": "20 V",
+          "old_css_px": 29.0,
+          "new_css_px": 36.057,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "text-14",
+          "text": "Eingang",
+          "old_css_px": 20.0,
+          "new_css_px": 32.262,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-19",
+          "text": "Lastschalter + ADC-Strommessung",
+          "old_css_px": 18.0,
+          "new_css_px": 32.262,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "rail-0",
+          "text": "54 V",
+          "old_css_px": 25.0,
+          "new_css_px": 36.057,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "text-22",
+          "text": "PoE-Ausgang",
+          "old_css_px": 20.0,
+          "new_css_px": 32.262,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "node-23",
+          "text": "30 W",
+          "old_css_px": 19.0,
+          "new_css_px": 32.262,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "rail-1",
+          "text": "5 V",
+          "old_css_px": 25.0,
+          "new_css_px": 36.057,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "text-28",
+          "text": "Jetson + SMARC",
+          "old_css_px": 20.0,
+          "new_css_px": 32.262,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "node-29",
+          "text": "45 W",
+          "old_css_px": 19.0,
+          "new_css_px": 32.262,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "rail-2",
+          "text": "3,3 V",
+          "old_css_px": 25.0,
+          "new_css_px": 36.057,
+          "target_final_pt": 9.5
+        },
+        {
+          "cell": "text-34",
+          "text": "M.2 + BMC",
+          "old_css_px": 20.0,
+          "new_css_px": 32.262,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "node-35",
+          "text": "20 W",
+          "old_css_px": 19.0,
+          "new_css_px": 32.262,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "rail-3",
+          "text": "Hilfs-\nspannung",
+          "old_css_px": 20.0,
+          "new_css_px": 32.262,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-40",
+          "text": "Netzwerkverteiler /\nPHY / Lüfter",
+          "old_css_px": 17.0,
+          "new_css_px": 32.262,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "node-41",
+          "text": "Logik",
+          "old_css_px": 19.0,
+          "new_css_px": 32.262,
+          "target_final_pt": 8.5
+        },
+        {
+          "cell": "text-46",
+          "text": "BMC schaltet Versorgungspfade und liefert kalibrierte Telemetrie",
+          "old_css_px": 19.0,
+          "new_css_px": 32.262,
+          "target_final_pt": 8.5
+        }
+      ],
+      "local_label_refinements": [
+        {
+          "cell": "rail-3",
+          "old": "Hilfs-\nspannung",
+          "new": "Hilfs-\nspannung",
+          "target_final_pt": 7.8,
+          "svg_center_baseline_y": 585.0,
+          "svg_text_x": "759"
+        }
+      ],
+      "rendering_cleanup": "Removed the DrawIO unsupported-SVG-text fallback, if present; actual labels are native SVG text.",
+      "export_command_from_repository_root": [
+        "inkscape",
+        "publications/dissertation/thesis-v56/de/sources/drawio/Export_SVG/07_uRECS/27_Versorgungspfade_und_Leistungsbudgets.svg",
+        "--export-area-page",
+        "--export-type=pdf",
+        "--export-filename=publications/dissertation/thesis-v56/de/illustrations/recs/urecs_power.pdf"
+      ],
+      "recommended_tex_width_fraction": 1.0,
+      "page_size_pdf_points": [
+        1011.75,
+        582.75
+      ],
+      "fonts": [
+        "NimbusSans-Bold",
+        "NimbusSans-Regular"
+      ],
+      "text_at_recommended_tex_size": [
+        {
+          "text": "Versorgungspfade und Leistungsbudgets",
+          "pdf_font_pt": 27.042749404907227,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "Einspeisung",
+          "pdf_font_pt": 24.196500778198242,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "USB-C",
+          "pdf_font_pt": 24.196500778198242,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "PD",
+          "pdf_font_pt": 24.196500778198242,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Hohlstecker",
+          "pdf_font_pt": 24.196500778198242,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "20 V",
+          "pdf_font_pt": 27.042749404907227,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "Eingang",
+          "pdf_font_pt": 24.196500778198242,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Lastschalter + ADC-Strommessung",
+          "pdf_font_pt": 24.196500778198242,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "54 V",
+          "pdf_font_pt": 27.042749404907227,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "PoE-Ausgang",
+          "pdf_font_pt": 24.196500778198242,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "30 W",
+          "pdf_font_pt": 24.196500778198242,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "5 V",
+          "pdf_font_pt": 27.042749404907227,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "Jetson + SMARC",
+          "pdf_font_pt": 24.196500778198242,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "45 W",
+          "pdf_font_pt": 24.196500778198242,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "3,3 V",
+          "pdf_font_pt": 27.042749404907227,
+          "final_font_pt": 9.5
+        },
+        {
+          "text": "M.2 + BMC",
+          "pdf_font_pt": 24.196500778198242,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "20 W",
+          "pdf_font_pt": 24.196500778198242,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Hilfs-",
+          "pdf_font_pt": 22.203750610351562,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "spannung",
+          "pdf_font_pt": 22.203750610351562,
+          "final_font_pt": 7.8
+        },
+        {
+          "text": "Netzwerkverteiler /",
+          "pdf_font_pt": 24.196500778198242,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "PHY / Lüfter",
+          "pdf_font_pt": 24.196500778198242,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "Logik",
+          "pdf_font_pt": 24.196500778198242,
+          "final_font_pt": 8.5
+        },
+        {
+          "text": "BMC schaltet Versorgungspfade und liefert kalibrierte Telemetrie",
+          "pdf_font_pt": 24.196500778198242,
+          "final_font_pt": 8.5
+        }
+      ],
+      "validation": {
+        "one_page": true,
+        "raster_images": 0,
+        "text_spans_inside_page": true,
+        "selectable_text": true,
+        "visual_qa": "reviewed; no clipped or overlapping substantive labels at recommended size",
+        "font_embedding": "pdffonts reports all fonts embedded; Nimbus Sans Regular/Bold",
+        "committed_source_reexport_identical_text": true,
+        "committed_source_reexport_identical_vector_object_count": true,
+        "committed_source_reexport_identical_72dpi_render": true,
+        "pdf_creation_date": "D:20261029071247-03'00"
+      }
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "source_gaps": [],
+    "sources_sha256_match_working_manifest": true,
+    "pdfs_sha256_match_thesis_assets": true,
+    "reexported_pdf_count": 17,
+    "reexports_identical_text_and_render": true
+  }
+}

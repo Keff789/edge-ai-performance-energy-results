@@ -1,0 +1,21 @@
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Workload & Runs & Max. CV (\%) & Max. shift (\%) \\
+\midrule
+\multicolumn{4}{l}{\textit{Jetson}} \\
+GEMM-FP32 & 405 & 0.37 & 0.40 \\
+GEMM-FP16 & 405 & 0.73 & 2.08 \\
+GEMM-INT8 & 405 & 0.63 & 1.69 \\
+YOLO-FP32 & 390 & 0.41 & 0.89 \\
+YOLO-FP16 & 405 & 0.44 & 0.25 \\
+YOLO-INT8 & 405 & 0.73 & 0.31 \\
+Variable YOLO & 405 & 0.49 & 0.56 \\
+Gemma3-12B & 405 & 0.58 & 1.66 \\
+\midrule
+\multicolumn{4}{l}{\textit{Hailo}} \\
+GEMM & 405 & 0.68 & 1.48 \\
+YOLO & 405 & 1.01 & 1.20 \\
+Variable YOLO & 405 & 9.45 & 6.74 \\
+LLM & 402 & 46.06 & 24.30 \\
+\bottomrule
+\end{tabular}

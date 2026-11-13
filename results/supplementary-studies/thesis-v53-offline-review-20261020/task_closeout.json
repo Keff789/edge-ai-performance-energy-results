@@ -1,0 +1,478 @@
+{
+  "actual_execution_boundary": "Compact audit, targeted tests and separately receipted A table reproduction only. B derivations and C physical runs were not executed.",
+  "code_hashes": [
+    {
+      "bytes": 1627,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/README.md",
+      "sha256": "374821b77cd7b2f7ac18fd3c366b4be9da38b53f64c2cbfec26532032cb85d1c"
+    },
+    {
+      "bytes": 23166,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/binding.py",
+      "sha256": "2cbe9d1468101f99804b940948ab5175362a81e2524601ea83a308c93ff9acf4"
+    },
+    {
+      "bytes": 18117,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/capture_operator_sources.py",
+      "sha256": "85651c1a770b6e53ad0cf2065238d571aaef8e1aaca191bf595bbe4cbc9de31b"
+    },
+    {
+      "bytes": 16867,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/operators.py",
+      "sha256": "8a42e23095c0d7e042b312cb664847cd5fc5cb3d4b55e8f668af5493e419f310"
+    },
+    {
+      "bytes": 23027,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/paths.py",
+      "sha256": "1bcad8260aeeef183e4c3e6ded48a5743de91b619c4edf7bb5cb13e3bba5c6c7"
+    },
+    {
+      "bytes": 20221,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/report.py",
+      "sha256": "9b600c3a860178c8c582a9ba4b87a85ae35d6bbde80f71ad4befb5bc12f8f47f"
+    },
+    {
+      "bytes": 9037,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/reproduce.py",
+      "sha256": "9c7d0d2888a124d840861247e9cf7f77ffb6398973e53a9e108fd5a31d3c6a2b"
+    },
+    {
+      "bytes": 29660,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/scores.py",
+      "sha256": "b6b43a07735aa599759bf747adbfb67d0b6bece89edbecfe682116d5c4071540"
+    },
+    {
+      "bytes": 5347,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/test_binding.py",
+      "sha256": "b06aaa66574d9c6e5c8382a22121dd540aeffb6c55c10d93cd7fcc6d2159dcaf"
+    },
+    {
+      "bytes": 3939,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/test_operators.py",
+      "sha256": "65133c3f5dff72ca923e2f8d236d209a79e199052566872721fe0270f00a034f"
+    },
+    {
+      "bytes": 4030,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/test_paths.py",
+      "sha256": "0053619ee0c0dd5b081e2a92bf262319f0f87ecb9128fdbdab5c8bc1ba1d0c1e"
+    },
+    {
+      "bytes": 2010,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/test_reproduce.py",
+      "sha256": "07e2ce5d5d6e5e983281e3a1264243a9a93f7fa40c64e4b49874ce08a145a2b8"
+    },
+    {
+      "bytes": 8757,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/test_scores.py",
+      "sha256": "7c7b07b358e2e601df6e57f1cb81f25f35132172fef6b267999fd635bf5e220b"
+    }
+  ],
+  "git": {
+    "base_commit": "b10d15992d0ce45d0f81329a5e961cb6207a1d09",
+    "base_is_ancestor": true,
+    "branch": "codex/thesis-v53-offline-review-20261020",
+    "captured_at_utc": "2026-10-20T11:28:05.415911+00:00",
+    "historical_measurement_input_or_quality_file_changes": [],
+    "implementation_commit": "fe4259d01d37ade0caf46db53eaa7dd7bc56827d",
+    "note": "This receipt names the already existing implementation commit. A subsequent local metadata commit stores this receipt and regenerated manifests; its own future hash is deliberately not embedded. Push remains with the user. Other-worktree status is an observation, not a claim to have verified every foreign dirty file byte.",
+    "other_worktrees_observed": [
+      {
+        "head": "11b46ad3c09377651778054c5db369f8e49065cb",
+        "name": "original_user_results_checkout",
+        "status_entry_count": 0,
+        "stripped_porcelain_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "task_wrote_files": false
+      },
+      {
+        "head": "fc57876b0a6ba69e90723e3a9209b72b36cbaa51",
+        "name": "original_source_results",
+        "status_entry_count": 0,
+        "stripped_porcelain_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "task_wrote_files": false
+      },
+      {
+        "head": "78644e639b71797c8b822fd9296f3cb8d90bfd20",
+        "name": "foreign_tool_checkout",
+        "status_entry_count": 508,
+        "stripped_porcelain_sha256": "593b260e500e15426bf2c4bb7bfbf57ef4fe4ca64ac0d8a6892afbe28e73b752",
+        "task_wrote_files": false
+      }
+    ],
+    "preexisting_modified_files": [
+      "publications/dissertation/README.md",
+      "results/supplementary-studies/README.md",
+      "scripts/README.md"
+    ],
+    "push_status": "not_attempted_user_reserved_push",
+    "push_target": "origin codex/thesis-v53-offline-review-20261020",
+    "schema": "thesis-v53/git-receipt/v1",
+    "self_commit_hash_embedded": false,
+    "status_at_capture": "implementation_committed_and_worktree_clean_before_receipt_update",
+    "task_commit_changed_files": [
+      "publications/dissertation/README.md",
+      "results/supplementary-studies/README.md",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/README.md",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/convtranspose_audit.json",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/binding/source_bindings.json",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/git_status.json",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/operators/LICENSE.tool",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/operators/archive_bindings.json",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/operators/graphs.json",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/operators/historical_metrics_counting.py.txt",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/operators/historical_onnx_shape_helpers.py.txt",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/operators/source_bindings.json",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/reproduction/a-confirmation-tables.log",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/reproduction/a-deployment-tables.log",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/reproduction/executed_A.json",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/reproduction/source_inspection.json",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/scores/source_bindings.json",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/source_context.json",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/mobilenet_evaluator_binding.json",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/operator_inventory.csv",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/reproduction_paths.json",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/score_audit.json",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/score_rank_deltas.csv",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/score_units.csv",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/source_manifest.json",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/task_closeout.json",
+      "results/supplementary-studies/thesis-v53-offline-review-20261020/thesis_insert.md",
+      "scripts/README.md",
+      "scripts/supplementary-studies/thesis-v53-offline-review-20261020/README.md",
+      "scripts/supplementary-studies/thesis-v53-offline-review-20261020/binding.py",
+      "scripts/supplementary-studies/thesis-v53-offline-review-20261020/capture_operator_sources.py",
+      "scripts/supplementary-studies/thesis-v53-offline-review-20261020/operators.py",
+      "scripts/supplementary-studies/thesis-v53-offline-review-20261020/paths.py",
+      "scripts/supplementary-studies/thesis-v53-offline-review-20261020/report.py",
+      "scripts/supplementary-studies/thesis-v53-offline-review-20261020/reproduce.py",
+      "scripts/supplementary-studies/thesis-v53-offline-review-20261020/scores.py",
+      "scripts/supplementary-studies/thesis-v53-offline-review-20261020/test_binding.py",
+      "scripts/supplementary-studies/thesis-v53-offline-review-20261020/test_operators.py",
+      "scripts/supplementary-studies/thesis-v53-offline-review-20261020/test_paths.py",
+      "scripts/supplementary-studies/thesis-v53-offline-review-20261020/test_reproduce.py",
+      "scripts/supplementary-studies/thesis-v53-offline-review-20261020/test_scores.py"
+    ]
+  },
+  "input_hashes": [
+    {
+      "bytes": 100268,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/binding/source_bindings.json",
+      "sha256": "c067047a2cfeebb1a452cc8c7cbcc5d911575deb8fd57325d52bb4425b0bb9e5"
+    },
+    {
+      "bytes": 5829,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/git_status.json",
+      "sha256": "fcbfc32be4032e6585ebcbd2dd603edd57e8357e5720580b3ea1981e1bd142c5"
+    },
+    {
+      "bytes": 1064,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/operators/LICENSE.tool",
+      "sha256": "7ad6d60baf1708b786bcfb8810006cb1c078460ed3a87b2cef6544583aba02b7"
+    },
+    {
+      "bytes": 24579,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/operators/archive_bindings.json",
+      "sha256": "38548ff7ec8c271b388a8e499b8fc74c84972ede8b95ddfb6d9fb62c4d9fd232"
+    },
+    {
+      "bytes": 1082925,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/operators/graphs.json",
+      "sha256": "a976105c02f6c7b5ef43fb4edcf0dc35bdbcfd3eb0c1181dce46b70a031abdc2"
+    },
+    {
+      "bytes": 10739,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/operators/historical_metrics_counting.py.txt",
+      "sha256": "c953120d8cc652245543b61f2ec8d17ae84c3fa4ddfda556d5faec034b4a28b7"
+    },
+    {
+      "bytes": 1351,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/operators/historical_onnx_shape_helpers.py.txt",
+      "sha256": "2d005ab605aa0d950eff47532625131edb469ae8841ae375245d4f4b0ab005d5"
+    },
+    {
+      "bytes": 9473,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/operators/source_bindings.json",
+      "sha256": "4c84c5c5aee857236aeb3bd851f7a0312a84844e323f6720250aed7ae7198f83"
+    },
+    {
+      "bytes": 657,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/reproduction/a-confirmation-tables.log",
+      "sha256": "510ba253f41a7c00b6b32acc214f8e9b4179189d4878458a777b9e6bce97fe05"
+    },
+    {
+      "bytes": 19569,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/reproduction/a-deployment-tables.log",
+      "sha256": "3b2ebb045af2eb2b3e43ecf555cce9627dfb3ca9118ca2fbe52fce188e6d0ff1"
+    },
+    {
+      "bytes": 204163,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/reproduction/executed_A.json",
+      "sha256": "673dfbc54c6bb49153f889302acd1a6e9c3211032ad2383e967b2ec22d8efcd3"
+    },
+    {
+      "bytes": 17180,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/reproduction/source_inspection.json",
+      "sha256": "f6897c0eda982ea4823039ad36ca3e337837c1930c0d8cf575590138d6a3e461"
+    },
+    {
+      "bytes": 9643,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/scores/source_bindings.json",
+      "sha256": "1a1bc1feb9b6eb9021ed6ab384a4ea046af73c12dabbc5f4c8b7eab2cf18920b"
+    },
+    {
+      "bytes": 4203,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/source_context.json",
+      "sha256": "54de301950041bf927db8cb1004676e9f91c8612fcf7f003c2e9127238a30cc4"
+    }
+  ],
+  "inputs_unchanged_during_reproduction": true,
+  "overall_status": "completed_with_limits",
+  "result_files": [
+    "README.md",
+    "convtranspose_audit.json",
+    "mobilenet_evaluator_binding.json",
+    "operator_inventory.csv",
+    "reproduction_paths.json",
+    "score_audit.json",
+    "score_rank_deltas.csv",
+    "score_units.csv",
+    "source_manifest.json",
+    "task_closeout.json",
+    "thesis_insert.md"
+  ],
+  "result_hashes_except_self": [
+    {
+      "bytes": 8269,
+      "path": "README.md",
+      "sha256": "6bf3f7142f593464e006ba01b2c1007cc1294a99c0e3833146f316650e6b9dec"
+    },
+    {
+      "bytes": 52307,
+      "path": "convtranspose_audit.json",
+      "sha256": "9a26e68c89d69e155716ef7845a69b28706e23b6d8cf30373e9f1d57d9913d3a"
+    },
+    {
+      "bytes": 28321,
+      "path": "mobilenet_evaluator_binding.json",
+      "sha256": "2b67b15448e997f325eae38aea2f0ddf3dc32378a7893363c0e6c4f23c84d47b"
+    },
+    {
+      "bytes": 16228,
+      "path": "operator_inventory.csv",
+      "sha256": "41e09a416fecb6cd43e199a3c032115deb263cf0314634f9de67b1493dd14dbb"
+    },
+    {
+      "bytes": 231112,
+      "path": "reproduction_paths.json",
+      "sha256": "c3f8d6d7cb47608aace3b7959aa46211d1ab11e7194fd2b13b38e38efb022340"
+    },
+    {
+      "bytes": 347461,
+      "path": "score_audit.json",
+      "sha256": "10981b2f85cb736747ca4241734f02aa295dba2664b0544776374b6e7a230c9b"
+    },
+    {
+      "bytes": 1198475,
+      "path": "score_rank_deltas.csv",
+      "sha256": "e54f66e90f347db6052ee6d8176dea1ba3bcba7af0cd9d153b0e72318d500d0e"
+    },
+    {
+      "bytes": 5815,
+      "path": "score_units.csv",
+      "sha256": "3acac966f9d5f5113a9d0321ef06a39a74657c70ce9e6e0e0417cbc2d1b9d14b"
+    },
+    {
+      "bytes": 12872,
+      "path": "source_manifest.json",
+      "sha256": "2e4ac974499571c43daa1ed0aeca3ad855b357c984e4361def304a764ff023bf"
+    },
+    {
+      "bytes": 4268,
+      "path": "thesis_insert.md",
+      "sha256": "657991235b554dc8ad5492c9805ebe2cb7a9c3ce0ebf46793685c059260f4ef2"
+    }
+  ],
+  "schema": "thesis-v53/task-closeout/v1",
+  "scope": {
+    "environment_updates": false,
+    "inference": false,
+    "large_models_or_waveforms_added": false,
+    "model_compilation": false,
+    "new_bootstrap_resampling": false,
+    "new_quality_evaluation": false,
+    "physical_acquisition": false,
+    "tool_checkout_edits": false
+  },
+  "self_reference_policy": "The result file list includes this closeout. It contains neither its own hash nor the future commit that stores it; the Git receipt names only an already existing implementation commit.",
+  "task_id": "thesis_v53_review_offline_20261020",
+  "tasks": [
+    {
+      "affected_claims": [
+        "Exact historical analyzer execution",
+        "Direct manuscript reconciliation"
+      ],
+      "checks": [
+        "Repository identities and base/pinned commits frozen",
+        "Actual compact inputs and audit code hashed",
+        "Historical definitions separated from execution binding",
+        "Original tool dirty tree excluded from implementation"
+      ],
+      "evidence": [
+        "source_manifest.json",
+        "inputs/source_context.json",
+        "inputs/operators/source_bindings.json"
+      ],
+      "next_action": "Obtain the exact v53 source only for manuscript reconciliation; obtain historical execution receipts for any stronger process attribution.",
+      "open_points": [
+        "Local v53 thesis source not found",
+        "Original process-to-analyzer-module hash binding not recorded in inspected critical-module lists"
+      ],
+      "status": "completed_with_limits",
+      "task": 1
+    },
+    {
+      "affected_claims": [
+        "ConvTranspose absence outside inspected full-graph hashes",
+        "Runtime-weighted operator coverage"
+      ],
+      "checks": [
+        "16 direct products independently enumerated; 64 historical proxy checked against original code",
+        "Groups, cropped contributions and dilation tested",
+        "7 original full graphs / 2125 nodes inspected and hash bound",
+        "Historical totals and candidate feature correspondence checked",
+        "Current deployment and confirmation identities kept separate from part-graph references"
+      ],
+      "evidence": [
+        "operator_inventory.csv",
+        "convtranspose_audit.json",
+        "inputs/operators/graphs.json"
+      ],
+      "next_action": "Obtain missing model identities and exact part graph bytes only if those separate graphs are to be included in an operator claim. No hardware execution is needed.",
+      "open_points": [
+        "Historical release/definition provenance is distinct from proof of the source bytes imported by a particular historical process.",
+        "The selected historical runtime critical-module lists omit onnx_splitpoint_tool/metrics.py; no exact process-to-metrics binding was found in these inspected manifests.",
+        "13 current population rows lack model_sha256; model names do not close this identity gap.",
+        "No execution-cost or backend-fusion claim follows from this graph inventory.",
+        "The count replay uses the captured ONNX 1.21.0 static shape projection, not a historical shape-inference execution receipt.",
+        "Distinct part graphs referenced but not inspected"
+      ],
+      "status": "completed_with_limits",
+      "task": 2
+    },
+    {
+      "affected_claims": [
+        "Physical timing prediction",
+        "Unavailable historical score families"
+      ],
+      "checks": [
+        "Historical scores exactly reconstructed before comparison",
+        "Decimal MB versus binary MiB discrepancy reproduced",
+        "Versioned score/rank comparison with unchanged universe, gates and ties",
+        "Unaffected byte, weighted and bottleneck controls verified"
+      ],
+      "evidence": [
+        "score_units.csv",
+        "score_rank_deltas.csv",
+        "score_audit.json"
+      ],
+      "next_action": "No additional action required for the unit audit. Any calibration or missing-model study would be a separately scoped task.",
+      "open_points": [
+        "Physical ms/FPS calibration is not established by this comparison",
+        "Historical GUI SystemSpecs and Native handover models remain unavailable"
+      ],
+      "status": "completed",
+      "task": 3
+    },
+    {
+      "affected_claims": [
+        "Historical execution-to-evaluator/environment binding for the selected MobileNet split"
+      ],
+      "checks": [
+        "Full UID, original runtime request, later replay, receipt and selected result cross-linked",
+        "Original referenced source files checked against projected hashes/pointers",
+        "Selected candidate/reference hashes, sampled record schema and all image-ID pairing checked",
+        "No quality evaluator or bootstrap executed"
+      ],
+      "evidence": [
+        "mobilenet_evaluator_binding.json",
+        "inputs/binding/source_bindings.json"
+      ],
+      "next_action": "A contemporaneous receipt or log for replay request 4a5702ca2dff3ec3414917370ffd59e3d23d421c5296be3187886669957b30ff / evaluation fingerprint 2723b4e07f3a96a0b2035b2ee3a9406c3d47e6f834607d49d24cd9cf22199180 binding the loaded evaluator, service/helper source hashes and Python/NumPy environment; the referenced DX56_QUALITY_COMMANDS.json may supply a further source path but its hash alone does not close the binding.",
+      "open_points": {
+        "evaluation_bound_evaluator_sha256": null,
+        "evaluation_bound_helper_sha256": null,
+        "evaluation_bound_numpy_version_or_hash": null,
+        "evaluation_bound_python_version": null,
+        "evaluation_bound_service_sha256": null,
+        "producer_runner_search_status_source": {
+          "as_of": "2026-10-18T13:06:41.867929+00:00",
+          "new_runner_search_performed": false,
+          "source": "historical_evaluator_audit"
+        },
+        "referenced_command_manifest": {
+          "path": "revision3_report:/operations/token_saving_batch_20261009/continuous_20261010/dx56/prepared/dataset_fixed/DX56_QUALITY_COMMANDS.json",
+          "sha256": "21250c2d6295df18ad50a81c88d338bd5aa8e93eb5ff498f735f47e6daeca59d",
+          "status": "not present in canonical payload; original resolver explicitly marks unresolved"
+        },
+        "request_bound_producer_runner_bytes_status": "not_available_after_targeted_search",
+        "request_bound_producer_runner_sha256": "fb3b953dccffa4aebed5399ab35ec8f4ade1d74004127769892a7d61543f1b7d"
+      },
+      "status": "completed_with_limits",
+      "task": 4
+    },
+    {
+      "affected_claims": [
+        "End-to-end individual metric/raw-signal or physical repeatability"
+      ],
+      "checks": [
+        "A: actual safe numeric reproduction in fresh external outputs",
+        "B: bounded source/CLI review and selected input hash/format controls",
+        "C: source and prerequisite inventory only"
+      ],
+      "evidence": [
+        "reproduction_paths.json",
+        "inputs/reproduction/"
+      ],
+      "next_action": "Use per-route prerequisites to scope any later explicitly authorized reproduction. No new run is needed to close this inventory task.",
+      "open_points": [
+        "B derivations and C physical runs were not executed or certified by this audit",
+        "Full individual-data environments and historical execution-source bindings are not restored"
+      ],
+      "status": "completed_with_limits",
+      "task": 5
+    }
+  ],
+  "tests": {
+    "command": "python3 -I -B -m unittest discover -s scripts/supplementary-studies/thesis-v53-offline-review-20261020 -p 'test_*.py' -v",
+    "count": 26,
+    "scope": "Only the small regression suite belonging to this audit.",
+    "status": "executed_pass",
+    "tests": [
+      "test_binding.BindingTests.test_archived_inventory_counts_all_selected_uids",
+      "test_binding.BindingTests.test_build_is_deterministic_and_does_not_claim_original_verification",
+      "test_binding.BindingTests.test_corroborating_code_cannot_silently_become_execution_proof",
+      "test_binding.BindingTests.test_equal_quality_values_do_not_replace_result_hash_binding",
+      "test_binding.BindingTests.test_existing_provenance_chain_preserves_limit",
+      "test_binding.BindingTests.test_longest_historical_path_substitution_takes_precedence",
+      "test_binding.BindingTests.test_model_and_cut_alone_cannot_replace_full_uid",
+      "test_binding.BindingTests.test_original_runtime_request_cannot_be_used_as_replay",
+      "test_binding.BindingTests.test_original_source_verification_rejects_changed_projection",
+      "test_operators.OperatorAuditTests.test_bound_projection_matches_original_function_and_stored_totals",
+      "test_operators.OperatorAuditTests.test_counterexample_independent_coordinates",
+      "test_operators.OperatorAuditTests.test_crop_excludes_outside_output",
+      "test_operators.OperatorAuditTests.test_dilation_counts_sparse_direct_products",
+      "test_operators.OperatorAuditTests.test_groups_keep_channels_separate",
+      "test_operators.OperatorAuditTests.test_tampered_projection_rejected_before_analysis",
+      "test_paths.ReproductionPathTests.test_bound_receipts_and_separate_execution_statuses",
+      "test_paths.ReproductionPathTests.test_documented_command_cannot_be_promoted_to_executed",
+      "test_paths.ReproductionPathTests.test_hash_drift_and_external_path_are_rejected",
+      "test_reproduce.OutputProtectionTests.test_historical_and_input_directories_cannot_be_outputs",
+      "test_reproduce.OutputProtectionTests.test_populated_external_or_symlinked_source_cannot_be_overwritten",
+      "test_scores.ScoreUnitTests.test_changed_frozen_candidate_gate_is_rejected",
+      "test_scores.ScoreUnitTests.test_complete_frozen_regression_and_versioned_effects",
+      "test_scores.ScoreUnitTests.test_decimal_MB_binary_MiB_fit_threshold_independently",
+      "test_scores.ScoreUnitTests.test_exact_ties_use_boundary_and_case_without_rounding",
+      "test_scores.ScoreUnitTests.test_full_universe_normalization_is_not_subset_normalization",
+      "test_scores.ScoreUnitTests.test_stream_conversion_changes_hinge_without_changing_bottleneck"
+    ]
+  }
+}

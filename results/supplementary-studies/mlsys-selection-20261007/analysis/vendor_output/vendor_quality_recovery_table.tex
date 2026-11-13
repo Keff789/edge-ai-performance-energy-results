@@ -1,0 +1,14 @@
+\begin{table}[t]
+\caption{Splitting can recover task quality lost in a full accelerator deployment. MobileNetV3 Top1 on the same 5,000 images; CPU ONNX reference: 73.70\%. The split uses b027 and a TensorRT suffix.}
+\label{tab:vendor-quality}
+\centering\small
+\begin{tabular}{lrrr}
+\toprule
+Configuration & H8 & H10 & DX\\
+\midrule
+Accelerator Full (\%) & 60.62 & 59.42 & 71.72\\
+Split b027 (\%) & 71.58 & 72.22 & 72.22\\
+Quality recovered (pp) & 10.96 & 12.80 & 0.50\\
+\bottomrule
+\end{tabular}
+\end{table}

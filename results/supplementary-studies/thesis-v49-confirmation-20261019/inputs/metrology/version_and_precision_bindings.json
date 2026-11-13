@@ -1,0 +1,1678 @@
+{
+  "schema": "thesis-v49/versions-precision-and-configuration-v1",
+  "generated_at_utc": "2026-10-18T13:29:33.834989+00:00",
+  "selected_count": 14,
+  "historical_version_attribution_from_current": false,
+  "interpretation_rules": [
+    "uint8 boundary data are storage/transport formats, not proof of all internal HEF/DXNN arithmetic or signedness.",
+    "TensorRT --fp16 enables compiler use of FP16; it does not prove every layer runs in FP16.",
+    "native_full_deepx runtime_options.trt_precision applies to other backends and is not a DeepX compiler recipe.",
+    "Null historical package/firmware versions remain unavailable; current installed versions appear only in current_installed_separate.",
+    "Request IDs and per-image geometry change in the new qualification by design; compare frozen numerical policies, bound artifacts and configured concurrency separately from performance."
+  ],
+  "entries": [
+    {
+      "uid": "native|mobilenet_v3_large|DeepX|deepx_to_trt|b135",
+      "model": "mobilenet_v3_large",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "backend": "deepx_to_trt",
+      "historical_python_version_recorded": "3.10.12 (main, Mar  3 2026, 11:56:32) [GCC 11.4.0]",
+      "historical_runtime_package_versions": null,
+      "historical_compiler_package_versions": null,
+      "historical_firmware_version": null,
+      "historical_version_status": "complete_package_and_firmware_versions_not_recorded_in_selected_contract; binary_hashes_separately_bound",
+      "historical_precision_identity": "float32_layout_fp16",
+      "stage_precision": {
+        "kind": "DXNN",
+        "runtime_input_dtype": "uint8",
+        "runtime_output_dtype": "float32",
+        "input_description": "HWC RGB uint8",
+        "boundary_layout": "as_input",
+        "boundary_transform": "identity",
+        "dequant_scale": null,
+        "dequant_zero_point": null,
+        "trt_external_boundary_input_dtype": "float32",
+        "trt_external_input_metadata": [
+          {
+            "elem_type": "FLOAT",
+            "has_dynamic": false,
+            "name": "mean_8",
+            "shape": [
+              1,
+              960,
+              1,
+              1
+            ]
+          }
+        ],
+        "trt_external_output_metadata": [
+          {
+            "elem_type": "FLOAT",
+            "has_dynamic": false,
+            "name": "logits",
+            "shape": [
+              1,
+              1000
+            ]
+          }
+        ],
+        "trt_compiler_precision_configuration": "FP16 enabled",
+        "trt_exact_internal_layer_arithmetic": "not_available_without_engine_layer_inspection",
+        "npu_exact_internal_precision": "Exact internal layer arithmetic and weight/activation bit widths are not exposed by the bound HEF/DXNN boundary contract.",
+        "internal_precision_inferred_from_boundary_dtype": false,
+        "compiler_recipe": {
+          "build_returncode": 0,
+          "command": [
+            "/usr/src/tensorrt/bin/trtexec",
+            "--onnx=private-path-id:383f2feaa9b6fe2890f34714e3175ec8c70df13198c95c6fa068c40827dfed22",
+            "--saveEngine=private-path-id:6bc466268e100b0052802b4c75428e66fa987055bdef9a5f79b05221dc911226",
+            "--fp16",
+            "--timingCacheFile=private-path-id:9070afbfb3a11c62a965c555513190c476d4f8e910daf8c65b48f2fec416ef9c",
+            "--memPoolSize=workspace:4096"
+          ],
+          "dry_run": false,
+          "engine": "private-path-id:6bc466268e100b0052802b4c75428e66fa987055bdef9a5f79b05221dc911226",
+          "engine_sha256": "bc02abf8c6a8e48e4865a9eb813c07681714f2c75e7151e2cfac8d73348a647c",
+          "receipt_sha256": "85b1452afb60c94bd4242a24ff83d700403764dcce2e43dad1246b5c0d1d8aa4",
+          "schema": "onnx-splitpoint/tensorrt-engine-build-receipt",
+          "schema_version": 1,
+          "source_onnx": "private-path-id:383f2feaa9b6fe2890f34714e3175ec8c70df13198c95c6fa068c40827dfed22",
+          "source_onnx_sha256": "789cf35875ab925fcab4f8f1d5b8f10959a2e66039cd1b868f11fd326019b7bd",
+          "trtexec": "/usr/src/tensorrt/bin/trtexec",
+          "trtexec_sha256": "b800990508793a9bf50713d78d4fedfe475381d8cd749abda80909b9197fa1c4"
+        },
+        "compiler_recipe_evidence": {
+          "source": {
+            "path": "external-sha256:0bea91aac423e109ff0c1541cbdf3ce3fd6cae769a51909fd94897de733e07b7",
+            "sha256": "0bea91aac423e109ff0c1541cbdf3ce3fd6cae769a51909fd94897de733e07b7",
+            "json_pointer": "/rows/0/native_split_quality_binding/engine_build_receipt"
+          },
+          "kind": "embedded_original_split_receipt"
+        }
+      },
+      "current_installed_separate": {
+        "captured_at_utc": "2026-10-18T12:59:11.493161+00:00",
+        "platform_packages": {
+          "nvidia-l4t-core": "36.4.7-20250918154033",
+          "cuda-cudart-12-6": "12.6.68-1",
+          "tensorrt": "10.3.0.30-1+cuda12.5",
+          "libnvinfer10": "10.3.0.30-1+cuda12.5",
+          "libcudnn9-cuda-12": "9.3.0.75-1",
+          "dxrt-driver-dkms": "2.4.0-2"
+        },
+        "accelerator_runtime_metadata": {
+          "actual_qualification_loaded_library_identity": "No matching process mappings were visible at this snapshot. Binary identity is current installed file evidence, not proof of which library earlier/future qualification loaded.",
+          "dx_engine_distribution": "3.3.2",
+          "dxrt_cli_runtime_version": "3.3.2",
+          "firmware_installed_version": null,
+          "firmware_minimum_from_cli": "2.5.2",
+          "firmware_minimum_is_installed_version": false,
+          "firmware_version_gap": "No passive installed firmware version found. Status/info paths initialize device cores and were intentionally not executed during current qualification.",
+          "installed_libdxrt_elf_soname": "libdxrt.so",
+          "installed_libdxrt_embedded_version_string": "v3.3.2",
+          "installed_libdxrt_sha256": "18bc8d90ab5da6b40bd8cc5ba6e65366d3c5c4b0125e6d1c1436adc8b2117410",
+          "loaded_kernel_module_dx_dma": "2.2.0",
+          "loaded_kernel_module_dxrt_driver": "2.4.0-\"\""
+        },
+        "active_backend_runtime": "DXRT 3.3.2",
+        "tensorrt_current": "10.3.0.30-1+cuda12.5",
+        "accelerator_firmware_used_by_selected_backend": true,
+        "historical_attribution": false,
+        "accelerator_firmware_live": {
+          "version_lines": [
+            "* FW version          : v2.5.6"
+          ],
+          "driver_lines": [
+            "* RT Driver version   : v2.4.0",
+            "* PCIe Driver version : v2.2.0"
+          ],
+          "query_started_at_utc": "2026-10-18T13:22:49.241420+00:00",
+          "query_finished_at_utc": "2026-10-18T13:22:49.728085+00:00",
+          "source": {
+            "path": "archive:evidence/host_inventory_deepx_firmware_live.json",
+            "sha256": "507a647e2e906a4076a5dbf7e51b791df17957c750c7161fc086cb1aa6d5fb4e",
+            "json_pointer": ""
+          }
+        },
+        "accelerator_compiler_current": {
+          "metadata_path": "private-path-id:1b1278693a665d862e2e0a55e03b1b9bf3117d773cbb9e0eb10bcff3059ec5f8",
+          "metadata_sha256": "3b490ff4bba7e7242586e95637657f748ef8d99ead43d1c1f3ba3c88bbf2f6bc",
+          "name": "dx-com",
+          "site_packages": "private-path-id:67040f53b78b2e91df7c21a8bfb54df7f7d1aeca2f89c221ee00236359482716",
+          "version": "2.3.0"
+        },
+        "compiler_metadata_source": {
+          "path": "archive:evidence/host_inventory/current_versions_summary.json",
+          "sha256": "8f048c07c402e4cc8613cfc4250b6c5f0956f7ff577063c8fd60affcecfc2109",
+          "json_pointer": "/compiler_metadata"
+        },
+        "compiler_source_release_files": [
+          {
+            "path": "external-sha256:cdb0811c2542421ebdcbe08c9a15e276c05cac9f2a34d1e43b2b2894a6fb2f2a",
+            "sha256": "cdb0811c2542421ebdcbe08c9a15e276c05cac9f2a34d1e43b2b2894a6fb2f2a",
+            "text": "v2.3.1"
+          }
+        ],
+        "compiler_source_release_evidence": {
+          "path": "archive:evidence/host_inventory/controller_compiler_metadata.json",
+          "sha256": "535e01bfc81357d7c882a55b21321a801e7af9a75f9266a83356942848e2c250",
+          "json_pointer": "/files"
+        }
+      }
+    },
+    {
+      "uid": "native|mobilenet_v3_large|DeepX|native_full_deepx|full",
+      "model": "mobilenet_v3_large",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "backend": "native_full_deepx",
+      "historical_python_version_recorded": "3.10.12 (main, Mar  3 2026, 11:56:32) [GCC 11.4.0]",
+      "historical_runtime_package_versions": null,
+      "historical_compiler_package_versions": null,
+      "historical_firmware_version": null,
+      "historical_version_status": "complete_package_and_firmware_versions_not_recorded_in_selected_contract; binary_hashes_separately_bound",
+      "historical_precision_identity": "deepx_dxnn_sha256:b2e053f3919ea5bce0889f9cc66a83af5d51f5bbb48f79256f7e9680ce4144ac",
+      "stage_precision": {
+        "kind": "DXNN",
+        "runtime_input_dtype": "uint8",
+        "runtime_output_dtype": "not_recorded_in_selected_summary",
+        "input_description": "uint8 HWC RGB",
+        "boundary_layout": "HWC",
+        "boundary_transform": "embedded_dxcom_preprocessing",
+        "dequant_scale": null,
+        "dequant_zero_point": null,
+        "trt_external_boundary_input_dtype": null,
+        "trt_external_input_metadata": null,
+        "trt_external_output_metadata": null,
+        "trt_compiler_precision_configuration": "not_applicable",
+        "trt_exact_internal_layer_arithmetic": "not_applicable",
+        "npu_exact_internal_precision": "Internal DXNN layer precision and compiler quantization recipe unavailable in selected evidence.",
+        "internal_precision_inferred_from_boundary_dtype": false,
+        "compiler_recipe": {
+          "configuration": null,
+          "gap": "No full DXNN compiler precision recipe in the selected command contract. trt_precision=fp16 option is inapplicable to native_full_deepx."
+        },
+        "compiler_recipe_evidence": {
+          "kind": "compiled_dxnn_identity_only",
+          "source": {
+            "path": "external-sha256:aedba5946f6411f191877a593ed736410c423b848c9c616dcc4b0bbe9cbb18f7",
+            "sha256": "aedba5946f6411f191877a593ed736410c423b848c9c616dcc4b0bbe9cbb18f7",
+            "json_pointer": "/rows/0/full_command_contract/model_binding"
+          },
+          "recorded_dxnn": {
+            "path": "external-sha256:b2e053f3919ea5bce0889f9cc66a83af5d51f5bbb48f79256f7e9680ce4144ac",
+            "sha256": "b2e053f3919ea5bce0889f9cc66a83af5d51f5bbb48f79256f7e9680ce4144ac"
+          }
+        }
+      },
+      "current_installed_separate": {
+        "captured_at_utc": "2026-10-18T12:59:11.493161+00:00",
+        "platform_packages": {
+          "nvidia-l4t-core": "36.4.7-20250918154033",
+          "cuda-cudart-12-6": "12.6.68-1",
+          "tensorrt": "10.3.0.30-1+cuda12.5",
+          "libnvinfer10": "10.3.0.30-1+cuda12.5",
+          "libcudnn9-cuda-12": "9.3.0.75-1",
+          "dxrt-driver-dkms": "2.4.0-2"
+        },
+        "accelerator_runtime_metadata": {
+          "actual_qualification_loaded_library_identity": "No matching process mappings were visible at this snapshot. Binary identity is current installed file evidence, not proof of which library earlier/future qualification loaded.",
+          "dx_engine_distribution": "3.3.2",
+          "dxrt_cli_runtime_version": "3.3.2",
+          "firmware_installed_version": null,
+          "firmware_minimum_from_cli": "2.5.2",
+          "firmware_minimum_is_installed_version": false,
+          "firmware_version_gap": "No passive installed firmware version found. Status/info paths initialize device cores and were intentionally not executed during current qualification.",
+          "installed_libdxrt_elf_soname": "libdxrt.so",
+          "installed_libdxrt_embedded_version_string": "v3.3.2",
+          "installed_libdxrt_sha256": "18bc8d90ab5da6b40bd8cc5ba6e65366d3c5c4b0125e6d1c1436adc8b2117410",
+          "loaded_kernel_module_dx_dma": "2.2.0",
+          "loaded_kernel_module_dxrt_driver": "2.4.0-\"\""
+        },
+        "active_backend_runtime": "DXRT 3.3.2",
+        "tensorrt_current": null,
+        "accelerator_firmware_used_by_selected_backend": true,
+        "historical_attribution": false,
+        "accelerator_firmware_live": {
+          "version_lines": [
+            "* FW version          : v2.5.6"
+          ],
+          "driver_lines": [
+            "* RT Driver version   : v2.4.0",
+            "* PCIe Driver version : v2.2.0"
+          ],
+          "query_started_at_utc": "2026-10-18T13:22:49.241420+00:00",
+          "query_finished_at_utc": "2026-10-18T13:22:49.728085+00:00",
+          "source": {
+            "path": "archive:evidence/host_inventory_deepx_firmware_live.json",
+            "sha256": "507a647e2e906a4076a5dbf7e51b791df17957c750c7161fc086cb1aa6d5fb4e",
+            "json_pointer": ""
+          }
+        },
+        "accelerator_compiler_current": {
+          "metadata_path": "private-path-id:1b1278693a665d862e2e0a55e03b1b9bf3117d773cbb9e0eb10bcff3059ec5f8",
+          "metadata_sha256": "3b490ff4bba7e7242586e95637657f748ef8d99ead43d1c1f3ba3c88bbf2f6bc",
+          "name": "dx-com",
+          "site_packages": "private-path-id:67040f53b78b2e91df7c21a8bfb54df7f7d1aeca2f89c221ee00236359482716",
+          "version": "2.3.0"
+        },
+        "compiler_metadata_source": {
+          "path": "archive:evidence/host_inventory/current_versions_summary.json",
+          "sha256": "8f048c07c402e4cc8613cfc4250b6c5f0956f7ff577063c8fd60affcecfc2109",
+          "json_pointer": "/compiler_metadata"
+        },
+        "compiler_source_release_files": [
+          {
+            "path": "external-sha256:cdb0811c2542421ebdcbe08c9a15e276c05cac9f2a34d1e43b2b2894a6fb2f2a",
+            "sha256": "cdb0811c2542421ebdcbe08c9a15e276c05cac9f2a34d1e43b2b2894a6fb2f2a",
+            "text": "v2.3.1"
+          }
+        ],
+        "compiler_source_release_evidence": {
+          "path": "archive:evidence/host_inventory/controller_compiler_metadata.json",
+          "sha256": "535e01bfc81357d7c882a55b21321a801e7af9a75f9266a83356942848e2c250",
+          "json_pointer": "/files"
+        }
+      }
+    },
+    {
+      "uid": "native|regnet_x_1_6gf|H10|hailo10h_to_trt|b123",
+      "model": "regnet_x_1_6gf",
+      "setup_id": "orin_nx_hailo10_01",
+      "backend": "hailo10h_to_trt",
+      "historical_python_version_recorded": "3.10.12 (main, Aug 15 2025, 14:32:43) [GCC 11.4.0]",
+      "historical_runtime_package_versions": null,
+      "historical_compiler_package_versions": null,
+      "historical_firmware_version": null,
+      "historical_version_status": "complete_package_and_firmware_versions_not_recorded_in_selected_contract; binary_hashes_separately_bound",
+      "historical_precision_identity": "uint8_dequant_fp16",
+      "stage_precision": {
+        "kind": "HEF",
+        "runtime_input_dtype": "uint8",
+        "runtime_output_dtype": "uint8",
+        "input_description": "HWC RGB uint8",
+        "boundary_layout": "memory_nhwc_to_nchw",
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 0.6206522583961487,
+        "dequant_zero_point": 112.0,
+        "trt_external_boundary_input_dtype": "uint8",
+        "trt_external_input_metadata": [
+          {
+            "elem_type": "UINT8",
+            "has_dynamic": false,
+            "name": "add_16",
+            "shape": [
+              1,
+              912,
+              7,
+              7
+            ]
+          }
+        ],
+        "trt_external_output_metadata": [
+          {
+            "elem_type": "FLOAT",
+            "has_dynamic": false,
+            "name": "logits",
+            "shape": [
+              1,
+              1000
+            ]
+          }
+        ],
+        "trt_compiler_precision_configuration": "FP16 enabled",
+        "trt_exact_internal_layer_arithmetic": "not_available_without_engine_layer_inspection",
+        "npu_exact_internal_precision": "Exact internal layer arithmetic and weight/activation bit widths are not exposed by the bound HEF/DXNN boundary contract.",
+        "internal_precision_inferred_from_boundary_dtype": false,
+        "compiler_recipe": {
+          "build_returncode": 0,
+          "command": [
+            "/usr/src/tensorrt/bin/trtexec",
+            "--onnx=private-path-id:7d63ba9994719249a99e69f396a72b95dd9db45411fa7fd8debf721fa060aa7d",
+            "--saveEngine=private-path-id:c049c1024c04462dc98ffce2786cc2f5d3d57382ab4e13be7efd2e09be13f688",
+            "--fp16",
+            "--timingCacheFile=private-path-id:3500d62292c57ad20f5ccaeab8078179530004f4ac9cca95ad9466f08eb59cae",
+            "--memPoolSize=workspace:4096"
+          ],
+          "dry_run": false,
+          "engine": "private-path-id:c049c1024c04462dc98ffce2786cc2f5d3d57382ab4e13be7efd2e09be13f688",
+          "engine_sha256": "8697decddc89abc41fd78bc6c537bfa44d74d2580a75318922971e40f4f1f63b",
+          "receipt_sha256": "d46e1caa4dcb27cd30ede4ef08820e37c510c6608462667df4cd3670f61a4aea",
+          "schema": "onnx-splitpoint/tensorrt-engine-build-receipt",
+          "schema_version": 1,
+          "source_onnx": "private-path-id:7d63ba9994719249a99e69f396a72b95dd9db45411fa7fd8debf721fa060aa7d",
+          "source_onnx_sha256": "4f4f2b75c4d43fbda02cfd003b6ecaec3d3a885e71e7d2ea070a79a95faa304f",
+          "trtexec": "/usr/src/tensorrt/bin/trtexec",
+          "trtexec_sha256": "b800990508793a9bf50713d78d4fedfe475381d8cd749abda80909b9197fa1c4"
+        },
+        "compiler_recipe_evidence": {
+          "source": {
+            "path": "external-sha256:5faa6fece6a38ca8d44efade65e32ea11f6ce86415745bc9f31e2c460e289706",
+            "sha256": "5faa6fece6a38ca8d44efade65e32ea11f6ce86415745bc9f31e2c460e289706",
+            "json_pointer": "/native_split_quality_binding/engine_build_receipt"
+          },
+          "kind": "embedded_original_split_receipt"
+        }
+      },
+      "current_installed_separate": {
+        "captured_at_utc": "2026-10-18T12:59:11.719303+00:00",
+        "platform_packages": {
+          "nvidia-l4t-core": "36.4.7-20250918154033",
+          "cuda-cudart-12-6": "12.6.77-1",
+          "tensorrt": "10.3.0.30-1+cuda12.5",
+          "libnvinfer10": "10.3.0.30-1+cuda12.5",
+          "libcudnn9-cuda-12": "9.3.0.75-1",
+          "hailort": "5.3.0"
+        },
+        "accelerator_runtime_metadata": {
+          "firmware_identify_returncode": 0,
+          "firmware_live_identify": "5.3.0",
+          "hailort_distribution": "5.3.0",
+          "loaded_kernel_module_hailo_pci": "5.3.0"
+        },
+        "active_backend_runtime": "HailoRT 5.3.0",
+        "tensorrt_current": "10.3.0.30-1+cuda12.5",
+        "accelerator_firmware_used_by_selected_backend": true,
+        "historical_attribution": false,
+        "accelerator_firmware_live": {
+          "version": "5.3.0",
+          "source": {
+            "path": "archive:evidence/host_inventory_versions_supplement.json",
+            "sha256": "f4f66bcb667e06fd1b96ddacf44361c09868a09b0348890cdc7264ce57ab9d2c",
+            "json_pointer": "/current_version_conclusions/orin_nx_hailo10_01"
+          }
+        },
+        "accelerator_compiler_current": {
+          "metadata_path": "private-path-id:1eee453fa56326bd517014d4cbf6290dccaac7629c397f7b3a186f24e8485784",
+          "metadata_sha256": "1071c5a781ec96079e9967228b4f8c0bf5fa99526ee630819589510446d67117",
+          "name": "hailo-dataflow-compiler",
+          "site_packages": "private-path-id:6c5191880d4f0dd3939478b5a5b013df4926428ddea269dc909178050ec8b6e1",
+          "version": "5.3.0"
+        },
+        "compiler_metadata_source": {
+          "path": "archive:evidence/host_inventory/current_versions_summary.json",
+          "sha256": "8f048c07c402e4cc8613cfc4250b6c5f0956f7ff577063c8fd60affcecfc2109",
+          "json_pointer": "/compiler_metadata"
+        },
+        "compiler_source_release_files": [],
+        "compiler_source_release_evidence": null
+      }
+    },
+    {
+      "uid": "native|regnet_x_1_6gf|DeepX|native_full_deepx|full",
+      "model": "regnet_x_1_6gf",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "backend": "native_full_deepx",
+      "historical_python_version_recorded": "3.10.12 (main, Mar  3 2026, 11:56:32) [GCC 11.4.0]",
+      "historical_runtime_package_versions": null,
+      "historical_compiler_package_versions": null,
+      "historical_firmware_version": null,
+      "historical_version_status": "complete_package_and_firmware_versions_not_recorded_in_selected_contract; binary_hashes_separately_bound",
+      "historical_precision_identity": "deepx_dxnn_sha256:a9feb79eba58b14a19ee03db028a288269f178efbfdecced9fb29e077360d714",
+      "stage_precision": {
+        "kind": "DXNN",
+        "runtime_input_dtype": "uint8",
+        "runtime_output_dtype": "not_recorded_in_selected_summary",
+        "input_description": "uint8 HWC RGB",
+        "boundary_layout": "HWC",
+        "boundary_transform": "embedded_dxcom_preprocessing",
+        "dequant_scale": null,
+        "dequant_zero_point": null,
+        "trt_external_boundary_input_dtype": null,
+        "trt_external_input_metadata": null,
+        "trt_external_output_metadata": null,
+        "trt_compiler_precision_configuration": "not_applicable",
+        "trt_exact_internal_layer_arithmetic": "not_applicable",
+        "npu_exact_internal_precision": "Internal DXNN layer precision and compiler quantization recipe unavailable in selected evidence.",
+        "internal_precision_inferred_from_boundary_dtype": false,
+        "compiler_recipe": {
+          "configuration": null,
+          "gap": "No full DXNN compiler precision recipe in the selected command contract. trt_precision=fp16 option is inapplicable to native_full_deepx."
+        },
+        "compiler_recipe_evidence": {
+          "kind": "compiled_dxnn_identity_only",
+          "source": {
+            "path": "external-sha256:2a7f51f73e6de83ef5090fbf7b5b2d7f21c8530c2f8aa36302494ebfd2c4fac4",
+            "sha256": "2a7f51f73e6de83ef5090fbf7b5b2d7f21c8530c2f8aa36302494ebfd2c4fac4",
+            "json_pointer": "/rows/0/full_command_contract/model_binding"
+          },
+          "recorded_dxnn": {
+            "path": "external-sha256:a9feb79eba58b14a19ee03db028a288269f178efbfdecced9fb29e077360d714",
+            "sha256": "a9feb79eba58b14a19ee03db028a288269f178efbfdecced9fb29e077360d714"
+          }
+        }
+      },
+      "current_installed_separate": {
+        "captured_at_utc": "2026-10-18T12:59:11.493161+00:00",
+        "platform_packages": {
+          "nvidia-l4t-core": "36.4.7-20250918154033",
+          "cuda-cudart-12-6": "12.6.68-1",
+          "tensorrt": "10.3.0.30-1+cuda12.5",
+          "libnvinfer10": "10.3.0.30-1+cuda12.5",
+          "libcudnn9-cuda-12": "9.3.0.75-1",
+          "dxrt-driver-dkms": "2.4.0-2"
+        },
+        "accelerator_runtime_metadata": {
+          "actual_qualification_loaded_library_identity": "No matching process mappings were visible at this snapshot. Binary identity is current installed file evidence, not proof of which library earlier/future qualification loaded.",
+          "dx_engine_distribution": "3.3.2",
+          "dxrt_cli_runtime_version": "3.3.2",
+          "firmware_installed_version": null,
+          "firmware_minimum_from_cli": "2.5.2",
+          "firmware_minimum_is_installed_version": false,
+          "firmware_version_gap": "No passive installed firmware version found. Status/info paths initialize device cores and were intentionally not executed during current qualification.",
+          "installed_libdxrt_elf_soname": "libdxrt.so",
+          "installed_libdxrt_embedded_version_string": "v3.3.2",
+          "installed_libdxrt_sha256": "18bc8d90ab5da6b40bd8cc5ba6e65366d3c5c4b0125e6d1c1436adc8b2117410",
+          "loaded_kernel_module_dx_dma": "2.2.0",
+          "loaded_kernel_module_dxrt_driver": "2.4.0-\"\""
+        },
+        "active_backend_runtime": "DXRT 3.3.2",
+        "tensorrt_current": null,
+        "accelerator_firmware_used_by_selected_backend": true,
+        "historical_attribution": false,
+        "accelerator_firmware_live": {
+          "version_lines": [
+            "* FW version          : v2.5.6"
+          ],
+          "driver_lines": [
+            "* RT Driver version   : v2.4.0",
+            "* PCIe Driver version : v2.2.0"
+          ],
+          "query_started_at_utc": "2026-10-18T13:22:49.241420+00:00",
+          "query_finished_at_utc": "2026-10-18T13:22:49.728085+00:00",
+          "source": {
+            "path": "archive:evidence/host_inventory_deepx_firmware_live.json",
+            "sha256": "507a647e2e906a4076a5dbf7e51b791df17957c750c7161fc086cb1aa6d5fb4e",
+            "json_pointer": ""
+          }
+        },
+        "accelerator_compiler_current": {
+          "metadata_path": "private-path-id:1b1278693a665d862e2e0a55e03b1b9bf3117d773cbb9e0eb10bcff3059ec5f8",
+          "metadata_sha256": "3b490ff4bba7e7242586e95637657f748ef8d99ead43d1c1f3ba3c88bbf2f6bc",
+          "name": "dx-com",
+          "site_packages": "private-path-id:67040f53b78b2e91df7c21a8bfb54df7f7d1aeca2f89c221ee00236359482716",
+          "version": "2.3.0"
+        },
+        "compiler_metadata_source": {
+          "path": "archive:evidence/host_inventory/current_versions_summary.json",
+          "sha256": "8f048c07c402e4cc8613cfc4250b6c5f0956f7ff577063c8fd60affcecfc2109",
+          "json_pointer": "/compiler_metadata"
+        },
+        "compiler_source_release_files": [
+          {
+            "path": "external-sha256:cdb0811c2542421ebdcbe08c9a15e276c05cac9f2a34d1e43b2b2894a6fb2f2a",
+            "sha256": "cdb0811c2542421ebdcbe08c9a15e276c05cac9f2a34d1e43b2b2894a6fb2f2a",
+            "text": "v2.3.1"
+          }
+        ],
+        "compiler_source_release_evidence": {
+          "path": "archive:evidence/host_inventory/controller_compiler_metadata.json",
+          "sha256": "535e01bfc81357d7c882a55b21321a801e7af9a75f9266a83356942848e2c250",
+          "json_pointer": "/files"
+        }
+      }
+    },
+    {
+      "uid": "native|resnet50|H10|hailo10h_to_trt|b095",
+      "model": "resnet50",
+      "setup_id": "orin_nx_hailo10_01",
+      "backend": "hailo10h_to_trt",
+      "historical_python_version_recorded": "3.10.12 (main, Aug 15 2025, 14:32:43) [GCC 11.4.0]",
+      "historical_runtime_package_versions": null,
+      "historical_compiler_package_versions": null,
+      "historical_firmware_version": null,
+      "historical_version_status": "complete_package_and_firmware_versions_not_recorded_in_selected_contract; binary_hashes_separately_bound",
+      "historical_precision_identity": "uint8_dequant_fp16",
+      "stage_precision": {
+        "kind": "HEF",
+        "runtime_input_dtype": "uint8",
+        "runtime_output_dtype": "uint8",
+        "input_description": "HWC RGB uint8",
+        "boundary_layout": "memory_nhwc_to_nchw",
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 0.3276331424713135,
+        "dequant_zero_point": 110.0,
+        "trt_external_boundary_input_dtype": "uint8",
+        "trt_external_input_metadata": [
+          {
+            "elem_type": "UINT8",
+            "has_dynamic": false,
+            "name": "add_12",
+            "shape": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          }
+        ],
+        "trt_external_output_metadata": [
+          {
+            "elem_type": "FLOAT",
+            "has_dynamic": false,
+            "name": "logits",
+            "shape": [
+              1,
+              1000
+            ]
+          }
+        ],
+        "trt_compiler_precision_configuration": "FP16 enabled",
+        "trt_exact_internal_layer_arithmetic": "not_available_without_engine_layer_inspection",
+        "npu_exact_internal_precision": "Exact internal layer arithmetic and weight/activation bit widths are not exposed by the bound HEF/DXNN boundary contract.",
+        "internal_precision_inferred_from_boundary_dtype": false,
+        "compiler_recipe": {
+          "build_returncode": 0,
+          "command": [
+            "/usr/src/tensorrt/bin/trtexec",
+            "--onnx=private-path-id:1b18c774707f11e2326d739ec441e91e1407ebd324a2cd91747162e10fb68b90",
+            "--saveEngine=private-path-id:7af3a287e6941508e6e4bc4b57a5c7e7ebe1d99d48422eabb6150fa5a172bb18",
+            "--fp16",
+            "--timingCacheFile=private-path-id:cd7e206c4f6ea85a8f04e9bba56cd85ce452dcc1076983387980a0fa1e912dc4",
+            "--memPoolSize=workspace:4096"
+          ],
+          "dry_run": false,
+          "engine": "private-path-id:7af3a287e6941508e6e4bc4b57a5c7e7ebe1d99d48422eabb6150fa5a172bb18",
+          "engine_sha256": "e715d50c02d9b1806d7c8f15483639efd68d17131631a249c268e10b908dd8de",
+          "receipt_sha256": "1ee23c146c7caa2cd20633f61fb389da0b42fb1c4e67daa0cebee98c999d8f50",
+          "schema": "onnx-splitpoint/tensorrt-engine-build-receipt",
+          "schema_version": 1,
+          "source_onnx": "private-path-id:1b18c774707f11e2326d739ec441e91e1407ebd324a2cd91747162e10fb68b90",
+          "source_onnx_sha256": "4d6efadd699498eef816abdae520815981deef3303a4a70d487c6e0b1d3f80c4",
+          "trtexec": "/usr/src/tensorrt/bin/trtexec",
+          "trtexec_sha256": "b800990508793a9bf50713d78d4fedfe475381d8cd749abda80909b9197fa1c4"
+        },
+        "compiler_recipe_evidence": {
+          "source": {
+            "path": "external-sha256:16f23a37595d3dade2b1d2794a846da7a2e12835cd7fac29afb38da3a2a19834",
+            "sha256": "16f23a37595d3dade2b1d2794a846da7a2e12835cd7fac29afb38da3a2a19834",
+            "json_pointer": "/native_split_quality_binding/engine_build_receipt"
+          },
+          "kind": "embedded_original_split_receipt"
+        }
+      },
+      "current_installed_separate": {
+        "captured_at_utc": "2026-10-18T12:59:11.719303+00:00",
+        "platform_packages": {
+          "nvidia-l4t-core": "36.4.7-20250918154033",
+          "cuda-cudart-12-6": "12.6.77-1",
+          "tensorrt": "10.3.0.30-1+cuda12.5",
+          "libnvinfer10": "10.3.0.30-1+cuda12.5",
+          "libcudnn9-cuda-12": "9.3.0.75-1",
+          "hailort": "5.3.0"
+        },
+        "accelerator_runtime_metadata": {
+          "firmware_identify_returncode": 0,
+          "firmware_live_identify": "5.3.0",
+          "hailort_distribution": "5.3.0",
+          "loaded_kernel_module_hailo_pci": "5.3.0"
+        },
+        "active_backend_runtime": "HailoRT 5.3.0",
+        "tensorrt_current": "10.3.0.30-1+cuda12.5",
+        "accelerator_firmware_used_by_selected_backend": true,
+        "historical_attribution": false,
+        "accelerator_firmware_live": {
+          "version": "5.3.0",
+          "source": {
+            "path": "archive:evidence/host_inventory_versions_supplement.json",
+            "sha256": "f4f66bcb667e06fd1b96ddacf44361c09868a09b0348890cdc7264ce57ab9d2c",
+            "json_pointer": "/current_version_conclusions/orin_nx_hailo10_01"
+          }
+        },
+        "accelerator_compiler_current": {
+          "metadata_path": "private-path-id:1eee453fa56326bd517014d4cbf6290dccaac7629c397f7b3a186f24e8485784",
+          "metadata_sha256": "1071c5a781ec96079e9967228b4f8c0bf5fa99526ee630819589510446d67117",
+          "name": "hailo-dataflow-compiler",
+          "site_packages": "private-path-id:6c5191880d4f0dd3939478b5a5b013df4926428ddea269dc909178050ec8b6e1",
+          "version": "5.3.0"
+        },
+        "compiler_metadata_source": {
+          "path": "archive:evidence/host_inventory/current_versions_summary.json",
+          "sha256": "8f048c07c402e4cc8613cfc4250b6c5f0956f7ff577063c8fd60affcecfc2109",
+          "json_pointer": "/compiler_metadata"
+        },
+        "compiler_source_release_files": [],
+        "compiler_source_release_evidence": null
+      }
+    },
+    {
+      "uid": "native|resnet50|DeepX|native_full_deepx|full",
+      "model": "resnet50",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "backend": "native_full_deepx",
+      "historical_python_version_recorded": "3.10.12 (main, Mar  3 2026, 11:56:32) [GCC 11.4.0]",
+      "historical_runtime_package_versions": null,
+      "historical_compiler_package_versions": null,
+      "historical_firmware_version": null,
+      "historical_version_status": "complete_package_and_firmware_versions_not_recorded_in_selected_contract; binary_hashes_separately_bound",
+      "historical_precision_identity": "deepx_dxnn_sha256:a5174972caabc799c1b0ef5dcfec802abea431083f95af10296e2c6230ceaa9d",
+      "stage_precision": {
+        "kind": "DXNN",
+        "runtime_input_dtype": "uint8",
+        "runtime_output_dtype": "not_recorded_in_selected_summary",
+        "input_description": "uint8 HWC RGB",
+        "boundary_layout": "HWC",
+        "boundary_transform": "embedded_dxcom_preprocessing",
+        "dequant_scale": null,
+        "dequant_zero_point": null,
+        "trt_external_boundary_input_dtype": null,
+        "trt_external_input_metadata": null,
+        "trt_external_output_metadata": null,
+        "trt_compiler_precision_configuration": "not_applicable",
+        "trt_exact_internal_layer_arithmetic": "not_applicable",
+        "npu_exact_internal_precision": "Internal DXNN layer precision and compiler quantization recipe unavailable in selected evidence.",
+        "internal_precision_inferred_from_boundary_dtype": false,
+        "compiler_recipe": {
+          "configuration": null,
+          "gap": "No full DXNN compiler precision recipe in the selected command contract. trt_precision=fp16 option is inapplicable to native_full_deepx."
+        },
+        "compiler_recipe_evidence": {
+          "kind": "compiled_dxnn_identity_only",
+          "source": {
+            "path": "external-sha256:a646179708e9c47c460a25937085fbcaf69089d436cc697e938dbf0f8edd1ee3",
+            "sha256": "a646179708e9c47c460a25937085fbcaf69089d436cc697e938dbf0f8edd1ee3",
+            "json_pointer": "/rows/0/full_command_contract/model_binding"
+          },
+          "recorded_dxnn": {
+            "path": "external-sha256:a5174972caabc799c1b0ef5dcfec802abea431083f95af10296e2c6230ceaa9d",
+            "sha256": "a5174972caabc799c1b0ef5dcfec802abea431083f95af10296e2c6230ceaa9d"
+          }
+        }
+      },
+      "current_installed_separate": {
+        "captured_at_utc": "2026-10-18T12:59:11.493161+00:00",
+        "platform_packages": {
+          "nvidia-l4t-core": "36.4.7-20250918154033",
+          "cuda-cudart-12-6": "12.6.68-1",
+          "tensorrt": "10.3.0.30-1+cuda12.5",
+          "libnvinfer10": "10.3.0.30-1+cuda12.5",
+          "libcudnn9-cuda-12": "9.3.0.75-1",
+          "dxrt-driver-dkms": "2.4.0-2"
+        },
+        "accelerator_runtime_metadata": {
+          "actual_qualification_loaded_library_identity": "No matching process mappings were visible at this snapshot. Binary identity is current installed file evidence, not proof of which library earlier/future qualification loaded.",
+          "dx_engine_distribution": "3.3.2",
+          "dxrt_cli_runtime_version": "3.3.2",
+          "firmware_installed_version": null,
+          "firmware_minimum_from_cli": "2.5.2",
+          "firmware_minimum_is_installed_version": false,
+          "firmware_version_gap": "No passive installed firmware version found. Status/info paths initialize device cores and were intentionally not executed during current qualification.",
+          "installed_libdxrt_elf_soname": "libdxrt.so",
+          "installed_libdxrt_embedded_version_string": "v3.3.2",
+          "installed_libdxrt_sha256": "18bc8d90ab5da6b40bd8cc5ba6e65366d3c5c4b0125e6d1c1436adc8b2117410",
+          "loaded_kernel_module_dx_dma": "2.2.0",
+          "loaded_kernel_module_dxrt_driver": "2.4.0-\"\""
+        },
+        "active_backend_runtime": "DXRT 3.3.2",
+        "tensorrt_current": null,
+        "accelerator_firmware_used_by_selected_backend": true,
+        "historical_attribution": false,
+        "accelerator_firmware_live": {
+          "version_lines": [
+            "* FW version          : v2.5.6"
+          ],
+          "driver_lines": [
+            "* RT Driver version   : v2.4.0",
+            "* PCIe Driver version : v2.2.0"
+          ],
+          "query_started_at_utc": "2026-10-18T13:22:49.241420+00:00",
+          "query_finished_at_utc": "2026-10-18T13:22:49.728085+00:00",
+          "source": {
+            "path": "archive:evidence/host_inventory_deepx_firmware_live.json",
+            "sha256": "507a647e2e906a4076a5dbf7e51b791df17957c750c7161fc086cb1aa6d5fb4e",
+            "json_pointer": ""
+          }
+        },
+        "accelerator_compiler_current": {
+          "metadata_path": "private-path-id:1b1278693a665d862e2e0a55e03b1b9bf3117d773cbb9e0eb10bcff3059ec5f8",
+          "metadata_sha256": "3b490ff4bba7e7242586e95637657f748ef8d99ead43d1c1f3ba3c88bbf2f6bc",
+          "name": "dx-com",
+          "site_packages": "private-path-id:67040f53b78b2e91df7c21a8bfb54df7f7d1aeca2f89c221ee00236359482716",
+          "version": "2.3.0"
+        },
+        "compiler_metadata_source": {
+          "path": "archive:evidence/host_inventory/current_versions_summary.json",
+          "sha256": "8f048c07c402e4cc8613cfc4250b6c5f0956f7ff577063c8fd60affcecfc2109",
+          "json_pointer": "/compiler_metadata"
+        },
+        "compiler_source_release_files": [
+          {
+            "path": "external-sha256:cdb0811c2542421ebdcbe08c9a15e276c05cac9f2a34d1e43b2b2894a6fb2f2a",
+            "sha256": "cdb0811c2542421ebdcbe08c9a15e276c05cac9f2a34d1e43b2b2894a6fb2f2a",
+            "text": "v2.3.1"
+          }
+        ],
+        "compiler_source_release_evidence": {
+          "path": "archive:evidence/host_inventory/controller_compiler_metadata.json",
+          "sha256": "535e01bfc81357d7c882a55b21321a801e7af9a75f9266a83356942848e2c250",
+          "json_pointer": "/files"
+        }
+      }
+    },
+    {
+      "uid": "native|yolo11l|H10|hailo10h_to_trt|b120",
+      "model": "yolo11l",
+      "setup_id": "orin_nx_hailo10_01",
+      "backend": "hailo10h_to_trt",
+      "historical_python_version_recorded": "3.10.12 (main, Aug 15 2025, 14:32:43) [GCC 11.4.0]",
+      "historical_runtime_package_versions": null,
+      "historical_compiler_package_versions": null,
+      "historical_firmware_version": null,
+      "historical_version_status": "complete_package_and_firmware_versions_not_recorded_in_selected_contract; binary_hashes_separately_bound",
+      "historical_precision_identity": "uint8_dequant_fp16",
+      "stage_precision": {
+        "kind": "HEF",
+        "runtime_input_dtype": "uint8",
+        "runtime_output_dtype": "uint8",
+        "input_description": "HWC RGB uint8",
+        "boundary_layout": "memory_nhwc_to_nchw",
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 0.045654717832803726,
+        "dequant_zero_point": 7.0,
+        "trt_external_boundary_input_dtype": "uint8",
+        "trt_external_input_metadata": [
+          {
+            "elem_type": "UINT8",
+            "has_dynamic": false,
+            "name": "/model.4/cv2/act/Mul_output_0",
+            "shape": [
+              1,
+              512,
+              80,
+              80
+            ]
+          }
+        ],
+        "trt_external_output_metadata": [
+          {
+            "elem_type": "FLOAT",
+            "has_dynamic": false,
+            "name": "output0",
+            "shape": [
+              1,
+              84,
+              8400
+            ]
+          }
+        ],
+        "trt_compiler_precision_configuration": "FP16 enabled",
+        "trt_exact_internal_layer_arithmetic": "not_available_without_engine_layer_inspection",
+        "npu_exact_internal_precision": "Exact internal layer arithmetic and weight/activation bit widths are not exposed by the bound HEF/DXNN boundary contract.",
+        "internal_precision_inferred_from_boundary_dtype": false,
+        "compiler_recipe": {
+          "build_returncode": 0,
+          "command": [
+            "/usr/src/tensorrt/bin/trtexec",
+            "--onnx=private-path-id:5c0d8a0c343fe063fcb2d7919257f3c408432b6ae56992fb3eac851e67c47a63",
+            "--saveEngine=private-path-id:e36a7c46ebc9adbec2805d060788585a10332864265177c8c8f32b9a2b36fad8",
+            "--fp16",
+            "--timingCacheFile=private-path-id:ee5a6377b7ec345db343d7674883614263f1e70363df62e0ad0cc7f1f4a46af2",
+            "--memPoolSize=workspace:4096"
+          ],
+          "dry_run": false,
+          "engine": "private-path-id:e36a7c46ebc9adbec2805d060788585a10332864265177c8c8f32b9a2b36fad8",
+          "engine_sha256": "ec96951893708432ace3e555e994ee66ed8c1f037ed50efb7315e5305a5ccdd1",
+          "receipt_sha256": "13b8e750548d4cd7b18c7391ab8101d36e1c96beb1cda4ed8e5140b344168443",
+          "schema": "onnx-splitpoint/tensorrt-engine-build-receipt",
+          "schema_version": 1,
+          "source_onnx": "private-path-id:5c0d8a0c343fe063fcb2d7919257f3c408432b6ae56992fb3eac851e67c47a63",
+          "source_onnx_sha256": "6ce24bd73f51bc0544b2a88363540f286f7dc01ae7a3630ba421c387be20101a",
+          "trtexec": "/usr/src/tensorrt/bin/trtexec",
+          "trtexec_sha256": "b800990508793a9bf50713d78d4fedfe475381d8cd749abda80909b9197fa1c4"
+        },
+        "compiler_recipe_evidence": {
+          "source": {
+            "path": "external-sha256:8739105a7d6a529704c7064abcc87b5b2e7b3e37972273b1e690d9319c671fb0",
+            "sha256": "8739105a7d6a529704c7064abcc87b5b2e7b3e37972273b1e690d9319c671fb0",
+            "json_pointer": "/native_split_quality_binding/engine_build_receipt"
+          },
+          "kind": "embedded_original_split_receipt"
+        }
+      },
+      "current_installed_separate": {
+        "captured_at_utc": "2026-10-18T12:59:11.719303+00:00",
+        "platform_packages": {
+          "nvidia-l4t-core": "36.4.7-20250918154033",
+          "cuda-cudart-12-6": "12.6.77-1",
+          "tensorrt": "10.3.0.30-1+cuda12.5",
+          "libnvinfer10": "10.3.0.30-1+cuda12.5",
+          "libcudnn9-cuda-12": "9.3.0.75-1",
+          "hailort": "5.3.0"
+        },
+        "accelerator_runtime_metadata": {
+          "firmware_identify_returncode": 0,
+          "firmware_live_identify": "5.3.0",
+          "hailort_distribution": "5.3.0",
+          "loaded_kernel_module_hailo_pci": "5.3.0"
+        },
+        "active_backend_runtime": "HailoRT 5.3.0",
+        "tensorrt_current": "10.3.0.30-1+cuda12.5",
+        "accelerator_firmware_used_by_selected_backend": true,
+        "historical_attribution": false,
+        "accelerator_firmware_live": {
+          "version": "5.3.0",
+          "source": {
+            "path": "archive:evidence/host_inventory_versions_supplement.json",
+            "sha256": "f4f66bcb667e06fd1b96ddacf44361c09868a09b0348890cdc7264ce57ab9d2c",
+            "json_pointer": "/current_version_conclusions/orin_nx_hailo10_01"
+          }
+        },
+        "accelerator_compiler_current": {
+          "metadata_path": "private-path-id:1eee453fa56326bd517014d4cbf6290dccaac7629c397f7b3a186f24e8485784",
+          "metadata_sha256": "1071c5a781ec96079e9967228b4f8c0bf5fa99526ee630819589510446d67117",
+          "name": "hailo-dataflow-compiler",
+          "site_packages": "private-path-id:6c5191880d4f0dd3939478b5a5b013df4926428ddea269dc909178050ec8b6e1",
+          "version": "5.3.0"
+        },
+        "compiler_metadata_source": {
+          "path": "archive:evidence/host_inventory/current_versions_summary.json",
+          "sha256": "8f048c07c402e4cc8613cfc4250b6c5f0956f7ff577063c8fd60affcecfc2109",
+          "json_pointer": "/compiler_metadata"
+        },
+        "compiler_source_release_files": [],
+        "compiler_source_release_evidence": null
+      }
+    },
+    {
+      "uid": "native|yolo11l|DeepX|native_full_deepx|full",
+      "model": "yolo11l",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "backend": "native_full_deepx",
+      "historical_python_version_recorded": "3.10.12 (main, Mar  3 2026, 11:56:32) [GCC 11.4.0]",
+      "historical_runtime_package_versions": null,
+      "historical_compiler_package_versions": null,
+      "historical_firmware_version": null,
+      "historical_version_status": "complete_package_and_firmware_versions_not_recorded_in_selected_contract; binary_hashes_separately_bound",
+      "historical_precision_identity": "deepx_dxnn_sha256:34cf97b46dd46b82986175cd4c11d35a864c91af39f63d13e259913cec3d59fb",
+      "stage_precision": {
+        "kind": "DXNN",
+        "runtime_input_dtype": "uint8",
+        "runtime_output_dtype": "float32",
+        "input_description": "uint8 HWC RGB",
+        "boundary_layout": "HWC",
+        "boundary_transform": "embedded_dxcom_preprocessing",
+        "dequant_scale": null,
+        "dequant_zero_point": null,
+        "trt_external_boundary_input_dtype": null,
+        "trt_external_input_metadata": null,
+        "trt_external_output_metadata": null,
+        "trt_compiler_precision_configuration": "not_applicable",
+        "trt_exact_internal_layer_arithmetic": "not_applicable",
+        "npu_exact_internal_precision": "Internal DXNN layer precision and compiler quantization recipe unavailable in selected evidence.",
+        "internal_precision_inferred_from_boundary_dtype": false,
+        "compiler_recipe": {
+          "configuration": null,
+          "gap": "No full DXNN compiler precision recipe in the selected command contract. trt_precision=fp16 option is inapplicable to native_full_deepx."
+        },
+        "compiler_recipe_evidence": {
+          "kind": "compiled_dxnn_identity_only",
+          "source": {
+            "path": "external-sha256:0a29ab1998ef8c7ca78786239bf423c084c171b46efa30268186f379cf25d6b7",
+            "sha256": "0a29ab1998ef8c7ca78786239bf423c084c171b46efa30268186f379cf25d6b7",
+            "json_pointer": "/rows/0/full_command_contract/model_binding"
+          },
+          "recorded_dxnn": {
+            "path": "external-sha256:34cf97b46dd46b82986175cd4c11d35a864c91af39f63d13e259913cec3d59fb",
+            "sha256": "34cf97b46dd46b82986175cd4c11d35a864c91af39f63d13e259913cec3d59fb"
+          }
+        }
+      },
+      "current_installed_separate": {
+        "captured_at_utc": "2026-10-18T12:59:11.493161+00:00",
+        "platform_packages": {
+          "nvidia-l4t-core": "36.4.7-20250918154033",
+          "cuda-cudart-12-6": "12.6.68-1",
+          "tensorrt": "10.3.0.30-1+cuda12.5",
+          "libnvinfer10": "10.3.0.30-1+cuda12.5",
+          "libcudnn9-cuda-12": "9.3.0.75-1",
+          "dxrt-driver-dkms": "2.4.0-2"
+        },
+        "accelerator_runtime_metadata": {
+          "actual_qualification_loaded_library_identity": "No matching process mappings were visible at this snapshot. Binary identity is current installed file evidence, not proof of which library earlier/future qualification loaded.",
+          "dx_engine_distribution": "3.3.2",
+          "dxrt_cli_runtime_version": "3.3.2",
+          "firmware_installed_version": null,
+          "firmware_minimum_from_cli": "2.5.2",
+          "firmware_minimum_is_installed_version": false,
+          "firmware_version_gap": "No passive installed firmware version found. Status/info paths initialize device cores and were intentionally not executed during current qualification.",
+          "installed_libdxrt_elf_soname": "libdxrt.so",
+          "installed_libdxrt_embedded_version_string": "v3.3.2",
+          "installed_libdxrt_sha256": "18bc8d90ab5da6b40bd8cc5ba6e65366d3c5c4b0125e6d1c1436adc8b2117410",
+          "loaded_kernel_module_dx_dma": "2.2.0",
+          "loaded_kernel_module_dxrt_driver": "2.4.0-\"\""
+        },
+        "active_backend_runtime": "DXRT 3.3.2",
+        "tensorrt_current": null,
+        "accelerator_firmware_used_by_selected_backend": true,
+        "historical_attribution": false,
+        "accelerator_firmware_live": {
+          "version_lines": [
+            "* FW version          : v2.5.6"
+          ],
+          "driver_lines": [
+            "* RT Driver version   : v2.4.0",
+            "* PCIe Driver version : v2.2.0"
+          ],
+          "query_started_at_utc": "2026-10-18T13:22:49.241420+00:00",
+          "query_finished_at_utc": "2026-10-18T13:22:49.728085+00:00",
+          "source": {
+            "path": "archive:evidence/host_inventory_deepx_firmware_live.json",
+            "sha256": "507a647e2e906a4076a5dbf7e51b791df17957c750c7161fc086cb1aa6d5fb4e",
+            "json_pointer": ""
+          }
+        },
+        "accelerator_compiler_current": {
+          "metadata_path": "private-path-id:1b1278693a665d862e2e0a55e03b1b9bf3117d773cbb9e0eb10bcff3059ec5f8",
+          "metadata_sha256": "3b490ff4bba7e7242586e95637657f748ef8d99ead43d1c1f3ba3c88bbf2f6bc",
+          "name": "dx-com",
+          "site_packages": "private-path-id:67040f53b78b2e91df7c21a8bfb54df7f7d1aeca2f89c221ee00236359482716",
+          "version": "2.3.0"
+        },
+        "compiler_metadata_source": {
+          "path": "archive:evidence/host_inventory/current_versions_summary.json",
+          "sha256": "8f048c07c402e4cc8613cfc4250b6c5f0956f7ff577063c8fd60affcecfc2109",
+          "json_pointer": "/compiler_metadata"
+        },
+        "compiler_source_release_files": [
+          {
+            "path": "external-sha256:cdb0811c2542421ebdcbe08c9a15e276c05cac9f2a34d1e43b2b2894a6fb2f2a",
+            "sha256": "cdb0811c2542421ebdcbe08c9a15e276c05cac9f2a34d1e43b2b2894a6fb2f2a",
+            "text": "v2.3.1"
+          }
+        ],
+        "compiler_source_release_evidence": {
+          "path": "archive:evidence/host_inventory/controller_compiler_metadata.json",
+          "sha256": "535e01bfc81357d7c882a55b21321a801e7af9a75f9266a83356942848e2c250",
+          "json_pointer": "/files"
+        }
+      }
+    },
+    {
+      "uid": "native|yolo26m|H10|hailo10h_to_trt|b043",
+      "model": "yolo26m",
+      "setup_id": "orin_nx_hailo10_01",
+      "backend": "hailo10h_to_trt",
+      "historical_python_version_recorded": "3.10.12 (main, Aug 15 2025, 14:32:43) [GCC 11.4.0]",
+      "historical_runtime_package_versions": null,
+      "historical_compiler_package_versions": null,
+      "historical_firmware_version": null,
+      "historical_version_status": "complete_package_and_firmware_versions_not_recorded_in_selected_contract; binary_hashes_separately_bound",
+      "historical_precision_identity": "uint8_dequant_fp16",
+      "stage_precision": {
+        "kind": "HEF",
+        "runtime_input_dtype": "uint8",
+        "runtime_output_dtype": "uint8",
+        "input_description": "HWC RGB uint8",
+        "boundary_layout": "memory_nhwc_to_nchw",
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 0.035168521106243134,
+        "dequant_zero_point": 8.0,
+        "trt_external_boundary_input_dtype": "uint8",
+        "trt_external_input_metadata": [
+          {
+            "elem_type": "UINT8",
+            "has_dynamic": false,
+            "name": "/model.4/cv1/act/Mul_output_0",
+            "shape": [
+              1,
+              256,
+              80,
+              80
+            ]
+          }
+        ],
+        "trt_external_output_metadata": [
+          {
+            "elem_type": "FLOAT",
+            "has_dynamic": false,
+            "name": "output0",
+            "shape": [
+              1,
+              300,
+              6
+            ]
+          }
+        ],
+        "trt_compiler_precision_configuration": "FP16 enabled",
+        "trt_exact_internal_layer_arithmetic": "not_available_without_engine_layer_inspection",
+        "npu_exact_internal_precision": "Exact internal layer arithmetic and weight/activation bit widths are not exposed by the bound HEF/DXNN boundary contract.",
+        "internal_precision_inferred_from_boundary_dtype": false,
+        "compiler_recipe": {
+          "build_returncode": 0,
+          "command": [
+            "/usr/src/tensorrt/bin/trtexec",
+            "--onnx=private-path-id:6bc4daec0bcc815d80d65c2ce97b471515b42e5c3c8b072dd9ff7e8cea139e17",
+            "--saveEngine=private-path-id:56f62beb328ea47938999df1aade24b49359ae781198e925333f6b89e54e8c56",
+            "--fp16",
+            "--timingCacheFile=private-path-id:b993c8a9b4440c4c69b0672c366eac27b5275fca7f6b7dbdac451f0cd3a8acc8",
+            "--memPoolSize=workspace:4096"
+          ],
+          "dry_run": false,
+          "engine": "private-path-id:56f62beb328ea47938999df1aade24b49359ae781198e925333f6b89e54e8c56",
+          "engine_sha256": "2a713bdffb2cdf606d1b700fdf9549a638318ac0480ddbdf145ea8862b50511f",
+          "receipt_sha256": "26b5bc6f4ddd3694bbb3fb85603711894b1eaa5ba658afa831d76a995a109bc8",
+          "schema": "onnx-splitpoint/tensorrt-engine-build-receipt",
+          "schema_version": 1,
+          "source_onnx": "private-path-id:6bc4daec0bcc815d80d65c2ce97b471515b42e5c3c8b072dd9ff7e8cea139e17",
+          "source_onnx_sha256": "d657f509cd134c9b1823c991efc7e699d7aa8b3af9eabf280bbbe28dddeae424",
+          "trtexec": "/usr/src/tensorrt/bin/trtexec",
+          "trtexec_sha256": "b800990508793a9bf50713d78d4fedfe475381d8cd749abda80909b9197fa1c4"
+        },
+        "compiler_recipe_evidence": {
+          "source": {
+            "path": "external-sha256:ce113f440812055611c4c64513580b75ad7fe639a3916cd7678199c30a3b78a4",
+            "sha256": "ce113f440812055611c4c64513580b75ad7fe639a3916cd7678199c30a3b78a4",
+            "json_pointer": "/native_split_quality_binding/engine_build_receipt"
+          },
+          "kind": "embedded_original_split_receipt"
+        }
+      },
+      "current_installed_separate": {
+        "captured_at_utc": "2026-10-18T12:59:11.719303+00:00",
+        "platform_packages": {
+          "nvidia-l4t-core": "36.4.7-20250918154033",
+          "cuda-cudart-12-6": "12.6.77-1",
+          "tensorrt": "10.3.0.30-1+cuda12.5",
+          "libnvinfer10": "10.3.0.30-1+cuda12.5",
+          "libcudnn9-cuda-12": "9.3.0.75-1",
+          "hailort": "5.3.0"
+        },
+        "accelerator_runtime_metadata": {
+          "firmware_identify_returncode": 0,
+          "firmware_live_identify": "5.3.0",
+          "hailort_distribution": "5.3.0",
+          "loaded_kernel_module_hailo_pci": "5.3.0"
+        },
+        "active_backend_runtime": "HailoRT 5.3.0",
+        "tensorrt_current": "10.3.0.30-1+cuda12.5",
+        "accelerator_firmware_used_by_selected_backend": true,
+        "historical_attribution": false,
+        "accelerator_firmware_live": {
+          "version": "5.3.0",
+          "source": {
+            "path": "archive:evidence/host_inventory_versions_supplement.json",
+            "sha256": "f4f66bcb667e06fd1b96ddacf44361c09868a09b0348890cdc7264ce57ab9d2c",
+            "json_pointer": "/current_version_conclusions/orin_nx_hailo10_01"
+          }
+        },
+        "accelerator_compiler_current": {
+          "metadata_path": "private-path-id:1eee453fa56326bd517014d4cbf6290dccaac7629c397f7b3a186f24e8485784",
+          "metadata_sha256": "1071c5a781ec96079e9967228b4f8c0bf5fa99526ee630819589510446d67117",
+          "name": "hailo-dataflow-compiler",
+          "site_packages": "private-path-id:6c5191880d4f0dd3939478b5a5b013df4926428ddea269dc909178050ec8b6e1",
+          "version": "5.3.0"
+        },
+        "compiler_metadata_source": {
+          "path": "archive:evidence/host_inventory/current_versions_summary.json",
+          "sha256": "8f048c07c402e4cc8613cfc4250b6c5f0956f7ff577063c8fd60affcecfc2109",
+          "json_pointer": "/compiler_metadata"
+        },
+        "compiler_source_release_files": [],
+        "compiler_source_release_evidence": null
+      }
+    },
+    {
+      "uid": "native|yolo26m|H8|native_full_tensorrt|full",
+      "model": "yolo26m",
+      "setup_id": "orin_nx_hailo8_01",
+      "backend": "native_full_tensorrt",
+      "historical_python_version_recorded": null,
+      "historical_runtime_package_versions": null,
+      "historical_compiler_package_versions": null,
+      "historical_firmware_version": null,
+      "historical_version_status": "complete_package_and_firmware_versions_not_recorded_in_selected_contract; binary_hashes_separately_bound",
+      "historical_precision_identity": null,
+      "stage_precision": {
+        "kind": "TensorRT engine",
+        "runtime_input_dtype": "float32",
+        "runtime_output_dtype": "float32 exported outputs",
+        "input_description": "float32 NCHW RGB",
+        "boundary_layout": "NCHW",
+        "boundary_transform": "prepared_float32_input",
+        "dequant_scale": null,
+        "dequant_zero_point": null,
+        "trt_external_boundary_input_dtype": "float32",
+        "trt_external_input_metadata": null,
+        "trt_external_output_metadata": null,
+        "trt_compiler_precision_configuration": "FP16 enabled in bound original engine recipe",
+        "trt_exact_internal_layer_arithmetic": "not_available_without_engine_layer_inspection",
+        "npu_exact_internal_precision": "not_applicable",
+        "internal_precision_inferred_from_boundary_dtype": false,
+        "compiler_recipe": {
+          "configuration": "fp16",
+          "evidence_scope": "Original plan binds exact fp16 engine and engine-build receipt; do not claim all internal TensorRT layers are FP16."
+        },
+        "compiler_recipe_evidence": {
+          "kind": "original_plan_bound_receipt_reference",
+          "source": {
+            "path": "external-sha256:09d5abf0a993ec8ce8a486868575134dafad94040da3ae4a8be656359d9c3c6f",
+            "sha256": "09d5abf0a993ec8ce8a486868575134dafad94040da3ae4a8be656359d9c3c6f",
+            "json_pointer": "/readonly_artifacts"
+          },
+          "recorded_receipt_path": "private-path-id:89fc0ae627ff8dbf5005630247e6bf7a2afdbef070e35c3505811223fa3d3fd5",
+          "recorded_receipt_sha256": "d34c1a7ae280be7e3f658b71d1765e9716ba295ea992eadf59f5077460958ee9"
+        }
+      },
+      "current_installed_separate": {
+        "captured_at_utc": "2026-10-18T12:59:11.712130+00:00",
+        "platform_packages": {
+          "nvidia-l4t-core": "36.4.7-20250918154033",
+          "cuda-cudart-12-6": "12.6.68-1",
+          "tensorrt": "10.3.0.30-1+cuda12.5",
+          "libnvinfer10": "10.3.0.30-1+cuda12.5",
+          "libcudnn9-cuda-12": "9.3.0.75-1",
+          "hailort": "4.20.0"
+        },
+        "accelerator_runtime_metadata": {
+          "firmware_identify_returncode": 0,
+          "firmware_live_identify": "4.20.0",
+          "hailort_distribution": "4.20.0",
+          "loaded_kernel_module_hailo_pci": "4.20.0"
+        },
+        "active_backend_runtime": "TensorRT 10.3.0.30-1+cuda12.5",
+        "tensorrt_current": "10.3.0.30-1+cuda12.5",
+        "accelerator_firmware_used_by_selected_backend": false,
+        "historical_attribution": false,
+        "accelerator_firmware_live": {
+          "version": "4.20.0",
+          "source": {
+            "path": "archive:evidence/host_inventory_versions_supplement.json",
+            "sha256": "f4f66bcb667e06fd1b96ddacf44361c09868a09b0348890cdc7264ce57ab9d2c",
+            "json_pointer": "/current_version_conclusions/orin_nx_hailo8_01"
+          }
+        },
+        "accelerator_compiler_current": null,
+        "compiler_metadata_source": {
+          "path": "archive:evidence/host_inventory/current_versions_summary.json",
+          "sha256": "8f048c07c402e4cc8613cfc4250b6c5f0956f7ff577063c8fd60affcecfc2109",
+          "json_pointer": "/compiler_metadata"
+        },
+        "compiler_source_release_files": [],
+        "compiler_source_release_evidence": null
+      }
+    },
+    {
+      "uid": "native|yolo26s|H8|hailo8_to_trt|b021",
+      "model": "yolo26s",
+      "setup_id": "orin_nx_hailo8_01",
+      "backend": "hailo8_to_trt",
+      "historical_python_version_recorded": "3.10.12 (main, Jan  8 2026, 06:52:19) [GCC 11.4.0]",
+      "historical_runtime_package_versions": null,
+      "historical_compiler_package_versions": null,
+      "historical_firmware_version": null,
+      "historical_version_status": "complete_package_and_firmware_versions_not_recorded_in_selected_contract; binary_hashes_separately_bound",
+      "historical_precision_identity": "uint8_dequant_fp16",
+      "stage_precision": {
+        "kind": "HEF",
+        "runtime_input_dtype": "uint8",
+        "runtime_output_dtype": "uint8",
+        "input_description": "HWC RGB uint8",
+        "boundary_layout": "memory_nhwc_to_nchw",
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 0.0818437933921814,
+        "dequant_zero_point": 141.0,
+        "trt_external_boundary_input_dtype": "uint8",
+        "trt_external_input_metadata": [
+          {
+            "elem_type": "UINT8",
+            "has_dynamic": false,
+            "name": "/model.3/conv/Conv_output_0",
+            "shape": [
+              1,
+              128,
+              80,
+              80
+            ]
+          }
+        ],
+        "trt_external_output_metadata": [
+          {
+            "elem_type": "FLOAT",
+            "has_dynamic": false,
+            "name": "output0",
+            "shape": [
+              1,
+              300,
+              6
+            ]
+          }
+        ],
+        "trt_compiler_precision_configuration": "FP16 enabled",
+        "trt_exact_internal_layer_arithmetic": "not_available_without_engine_layer_inspection",
+        "npu_exact_internal_precision": "Exact internal layer arithmetic and weight/activation bit widths are not exposed by the bound HEF/DXNN boundary contract.",
+        "internal_precision_inferred_from_boundary_dtype": false,
+        "compiler_recipe": {
+          "build_returncode": 0,
+          "command": [
+            "/usr/src/tensorrt/bin/trtexec",
+            "--onnx=private-path-id:d0882f6d35b5139dbf8260b23bd7dd469127dd75ec8ac1b31fcf250991237895",
+            "--saveEngine=private-path-id:41395c07ba68e9ecd255cbbd9b359adb8ea903ea37129a2fe6bec5c3d7e71326",
+            "--fp16",
+            "--timingCacheFile=private-path-id:d41b91ccf190076469511169034730cbc530d1d1e100bc2446f6e4b44d216f33",
+            "--memPoolSize=workspace:4096"
+          ],
+          "dry_run": false,
+          "engine": "private-path-id:41395c07ba68e9ecd255cbbd9b359adb8ea903ea37129a2fe6bec5c3d7e71326",
+          "engine_sha256": "b2e15d72496ae39a34c829712897e6f70a08ebd3187c1fbe648c0e8423597be8",
+          "receipt_sha256": "3a4c74f0485af148f42dd36036236e2b8bef66862362bf77e4385166e823ef7a",
+          "schema": "onnx-splitpoint/tensorrt-engine-build-receipt",
+          "schema_version": 1,
+          "source_onnx": "private-path-id:d0882f6d35b5139dbf8260b23bd7dd469127dd75ec8ac1b31fcf250991237895",
+          "source_onnx_sha256": "a8688ab8ba35d688a96e170524373101c52293185fb9f3466ae6712102875609",
+          "trtexec": "/usr/src/tensorrt/bin/trtexec",
+          "trtexec_sha256": "b800990508793a9bf50713d78d4fedfe475381d8cd749abda80909b9197fa1c4"
+        },
+        "compiler_recipe_evidence": {
+          "source": {
+            "path": "external-sha256:881eb6cd6358dbd849f4536dec8d390c82426d8e963b699e8866ab5dca01ac40",
+            "sha256": "881eb6cd6358dbd849f4536dec8d390c82426d8e963b699e8866ab5dca01ac40",
+            "json_pointer": "/native_split_quality_binding/engine_build_receipt"
+          },
+          "kind": "embedded_original_split_receipt"
+        }
+      },
+      "current_installed_separate": {
+        "captured_at_utc": "2026-10-18T12:59:11.712130+00:00",
+        "platform_packages": {
+          "nvidia-l4t-core": "36.4.7-20250918154033",
+          "cuda-cudart-12-6": "12.6.68-1",
+          "tensorrt": "10.3.0.30-1+cuda12.5",
+          "libnvinfer10": "10.3.0.30-1+cuda12.5",
+          "libcudnn9-cuda-12": "9.3.0.75-1",
+          "hailort": "4.20.0"
+        },
+        "accelerator_runtime_metadata": {
+          "firmware_identify_returncode": 0,
+          "firmware_live_identify": "4.20.0",
+          "hailort_distribution": "4.20.0",
+          "loaded_kernel_module_hailo_pci": "4.20.0"
+        },
+        "active_backend_runtime": "HailoRT 4.20.0",
+        "tensorrt_current": "10.3.0.30-1+cuda12.5",
+        "accelerator_firmware_used_by_selected_backend": true,
+        "historical_attribution": false,
+        "accelerator_firmware_live": {
+          "version": "4.20.0",
+          "source": {
+            "path": "archive:evidence/host_inventory_versions_supplement.json",
+            "sha256": "f4f66bcb667e06fd1b96ddacf44361c09868a09b0348890cdc7264ce57ab9d2c",
+            "json_pointer": "/current_version_conclusions/orin_nx_hailo8_01"
+          }
+        },
+        "accelerator_compiler_current": {
+          "metadata_path": "private-path-id:e1c84f74b3251e6f0a17f9d7c6a8cb1bf2ce5e39ea7c604317975ebae5e3c0f4",
+          "metadata_sha256": "7faf9dc7bfffd46b38ac2ab645be561e526d55f37d5c181f1e7052994803fdef",
+          "name": "hailo-dataflow-compiler",
+          "site_packages": "private-path-id:10a4ebe2373065891cdba0c5e6660cbde6803f17066a85962a77e2902150c94b",
+          "version": "3.33.1"
+        },
+        "compiler_metadata_source": {
+          "path": "archive:evidence/host_inventory/current_versions_summary.json",
+          "sha256": "8f048c07c402e4cc8613cfc4250b6c5f0956f7ff577063c8fd60affcecfc2109",
+          "json_pointer": "/compiler_metadata"
+        },
+        "compiler_source_release_files": [],
+        "compiler_source_release_evidence": null
+      }
+    },
+    {
+      "uid": "native|yolo26s|DeepX|native_full_tensorrt|full",
+      "model": "yolo26s",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "backend": "native_full_tensorrt",
+      "historical_python_version_recorded": null,
+      "historical_runtime_package_versions": null,
+      "historical_compiler_package_versions": null,
+      "historical_firmware_version": null,
+      "historical_version_status": "complete_package_and_firmware_versions_not_recorded_in_selected_contract; binary_hashes_separately_bound",
+      "historical_precision_identity": null,
+      "stage_precision": {
+        "kind": "TensorRT engine",
+        "runtime_input_dtype": "float32",
+        "runtime_output_dtype": "float32 exported outputs",
+        "input_description": "float32 NCHW RGB",
+        "boundary_layout": "NCHW",
+        "boundary_transform": "prepared_float32_input",
+        "dequant_scale": null,
+        "dequant_zero_point": null,
+        "trt_external_boundary_input_dtype": "float32",
+        "trt_external_input_metadata": null,
+        "trt_external_output_metadata": null,
+        "trt_compiler_precision_configuration": "FP16 enabled in bound original engine recipe",
+        "trt_exact_internal_layer_arithmetic": "not_available_without_engine_layer_inspection",
+        "npu_exact_internal_precision": "not_applicable",
+        "internal_precision_inferred_from_boundary_dtype": false,
+        "compiler_recipe": {
+          "configuration": "fp16",
+          "evidence_scope": "Original plan binds exact fp16 engine and engine-build receipt; do not claim all internal TensorRT layers are FP16."
+        },
+        "compiler_recipe_evidence": {
+          "kind": "original_plan_bound_receipt_reference",
+          "source": {
+            "path": "external-sha256:dd27361cd14e147691dbb58ede34d798a1db03c5c5d4c52ea65e09fa27bf34c2",
+            "sha256": "dd27361cd14e147691dbb58ede34d798a1db03c5c5d4c52ea65e09fa27bf34c2",
+            "json_pointer": "/readonly_artifacts"
+          },
+          "recorded_receipt_path": "private-path-id:a7486c2a4652258a77d978448330cdba5e43c55bc6fb0800fdd89ae41016160a",
+          "recorded_receipt_sha256": "c57e68a564fb65fa276e58c853807f08d6b882804c322cc2be0f2ebe3dff79cf"
+        }
+      },
+      "current_installed_separate": {
+        "captured_at_utc": "2026-10-18T12:59:11.493161+00:00",
+        "platform_packages": {
+          "nvidia-l4t-core": "36.4.7-20250918154033",
+          "cuda-cudart-12-6": "12.6.68-1",
+          "tensorrt": "10.3.0.30-1+cuda12.5",
+          "libnvinfer10": "10.3.0.30-1+cuda12.5",
+          "libcudnn9-cuda-12": "9.3.0.75-1",
+          "dxrt-driver-dkms": "2.4.0-2"
+        },
+        "accelerator_runtime_metadata": {
+          "actual_qualification_loaded_library_identity": "No matching process mappings were visible at this snapshot. Binary identity is current installed file evidence, not proof of which library earlier/future qualification loaded.",
+          "dx_engine_distribution": "3.3.2",
+          "dxrt_cli_runtime_version": "3.3.2",
+          "firmware_installed_version": null,
+          "firmware_minimum_from_cli": "2.5.2",
+          "firmware_minimum_is_installed_version": false,
+          "firmware_version_gap": "No passive installed firmware version found. Status/info paths initialize device cores and were intentionally not executed during current qualification.",
+          "installed_libdxrt_elf_soname": "libdxrt.so",
+          "installed_libdxrt_embedded_version_string": "v3.3.2",
+          "installed_libdxrt_sha256": "18bc8d90ab5da6b40bd8cc5ba6e65366d3c5c4b0125e6d1c1436adc8b2117410",
+          "loaded_kernel_module_dx_dma": "2.2.0",
+          "loaded_kernel_module_dxrt_driver": "2.4.0-\"\""
+        },
+        "active_backend_runtime": "TensorRT 10.3.0.30-1+cuda12.5",
+        "tensorrt_current": "10.3.0.30-1+cuda12.5",
+        "accelerator_firmware_used_by_selected_backend": false,
+        "historical_attribution": false,
+        "accelerator_firmware_live": {
+          "version_lines": [
+            "* FW version          : v2.5.6"
+          ],
+          "driver_lines": [
+            "* RT Driver version   : v2.4.0",
+            "* PCIe Driver version : v2.2.0"
+          ],
+          "query_started_at_utc": "2026-10-18T13:22:49.241420+00:00",
+          "query_finished_at_utc": "2026-10-18T13:22:49.728085+00:00",
+          "source": {
+            "path": "archive:evidence/host_inventory_deepx_firmware_live.json",
+            "sha256": "507a647e2e906a4076a5dbf7e51b791df17957c750c7161fc086cb1aa6d5fb4e",
+            "json_pointer": ""
+          }
+        },
+        "accelerator_compiler_current": null,
+        "compiler_metadata_source": {
+          "path": "archive:evidence/host_inventory/current_versions_summary.json",
+          "sha256": "8f048c07c402e4cc8613cfc4250b6c5f0956f7ff577063c8fd60affcecfc2109",
+          "json_pointer": "/compiler_metadata"
+        },
+        "compiler_source_release_files": [],
+        "compiler_source_release_evidence": null
+      }
+    },
+    {
+      "uid": "native|yolov7_paper|H8|hailo8_to_trt|b066",
+      "model": "yolov7_paper",
+      "setup_id": "orin_nx_hailo8_01",
+      "backend": "hailo8_to_trt",
+      "historical_python_version_recorded": "3.10.12 (main, Jan  8 2026, 06:52:19) [GCC 11.4.0]",
+      "historical_runtime_package_versions": null,
+      "historical_compiler_package_versions": null,
+      "historical_firmware_version": null,
+      "historical_version_status": "complete_package_and_firmware_versions_not_recorded_in_selected_contract; binary_hashes_separately_bound",
+      "historical_precision_identity": "uint8_dequant_fp16",
+      "stage_precision": {
+        "kind": "HEF",
+        "runtime_input_dtype": "uint8",
+        "runtime_output_dtype": "uint8",
+        "input_description": "HWC RGB uint8",
+        "boundary_layout": "memory_nhwc_to_nchw",
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 0.06533566862344742,
+        "dequant_zero_point": 5.0,
+        "trt_external_boundary_input_dtype": "uint8",
+        "trt_external_input_metadata": [
+          {
+            "elem_type": "UINT8",
+            "has_dynamic": false,
+            "name": "mul_20",
+            "shape": [
+              1,
+              512,
+              80,
+              80
+            ]
+          }
+        ],
+        "trt_external_output_metadata": [
+          {
+            "elem_type": "FLOAT",
+            "has_dynamic": false,
+            "name": "output",
+            "shape": [
+              1,
+              3,
+              80,
+              80,
+              85
+            ]
+          },
+          {
+            "elem_type": "FLOAT",
+            "has_dynamic": false,
+            "name": "clone_1",
+            "shape": [
+              1,
+              3,
+              40,
+              40,
+              85
+            ]
+          },
+          {
+            "elem_type": "FLOAT",
+            "has_dynamic": false,
+            "name": "clone_2",
+            "shape": [
+              1,
+              3,
+              20,
+              20,
+              85
+            ]
+          }
+        ],
+        "trt_compiler_precision_configuration": "FP16 enabled",
+        "trt_exact_internal_layer_arithmetic": "not_available_without_engine_layer_inspection",
+        "npu_exact_internal_precision": "Exact internal layer arithmetic and weight/activation bit widths are not exposed by the bound HEF/DXNN boundary contract.",
+        "internal_precision_inferred_from_boundary_dtype": false,
+        "compiler_recipe": {
+          "build_returncode": 0,
+          "command": [
+            "/usr/src/tensorrt/bin/trtexec",
+            "--onnx=private-path-id:9b6a947fc6f05a540b081776c93fd1de7eda2d56caf6f01f55e064553d881513",
+            "--saveEngine=private-path-id:db0e8a17528245ef0f6008c593cf4ced2b989173ee68fb2ce48f093e32124820",
+            "--fp16",
+            "--timingCacheFile=private-path-id:61087ae1724ed6b5570f38633d01d6b964782c6175cad4590197313d40988b09",
+            "--memPoolSize=workspace:4096"
+          ],
+          "dry_run": false,
+          "engine": "private-path-id:db0e8a17528245ef0f6008c593cf4ced2b989173ee68fb2ce48f093e32124820",
+          "engine_sha256": "e93f81da79faf9374507460588f3dd4fd88a55a510b29da278903ebafd14603e",
+          "receipt_sha256": "17219174587c4d83dcbebe51e40749cbb9240536657b2e3d79aa1ff498559fa8",
+          "schema": "onnx-splitpoint/tensorrt-engine-build-receipt",
+          "schema_version": 1,
+          "source_onnx": "private-path-id:9b6a947fc6f05a540b081776c93fd1de7eda2d56caf6f01f55e064553d881513",
+          "source_onnx_sha256": "f2d9eb20e63e249fe56a44bccb31c533dea26e97985273f90c4b554adf9477fb",
+          "trtexec": "/usr/src/tensorrt/bin/trtexec",
+          "trtexec_sha256": "b800990508793a9bf50713d78d4fedfe475381d8cd749abda80909b9197fa1c4"
+        },
+        "compiler_recipe_evidence": {
+          "source": {
+            "path": "external-sha256:f2a7f2daab2baeaafbce76e3e8bb50ff6cef71a70801db723f94bf94200867f7",
+            "sha256": "f2a7f2daab2baeaafbce76e3e8bb50ff6cef71a70801db723f94bf94200867f7",
+            "json_pointer": "/native_split_quality_binding/engine_build_receipt"
+          },
+          "kind": "embedded_original_split_receipt"
+        }
+      },
+      "current_installed_separate": {
+        "captured_at_utc": "2026-10-18T12:59:11.712130+00:00",
+        "platform_packages": {
+          "nvidia-l4t-core": "36.4.7-20250918154033",
+          "cuda-cudart-12-6": "12.6.68-1",
+          "tensorrt": "10.3.0.30-1+cuda12.5",
+          "libnvinfer10": "10.3.0.30-1+cuda12.5",
+          "libcudnn9-cuda-12": "9.3.0.75-1",
+          "hailort": "4.20.0"
+        },
+        "accelerator_runtime_metadata": {
+          "firmware_identify_returncode": 0,
+          "firmware_live_identify": "4.20.0",
+          "hailort_distribution": "4.20.0",
+          "loaded_kernel_module_hailo_pci": "4.20.0"
+        },
+        "active_backend_runtime": "HailoRT 4.20.0",
+        "tensorrt_current": "10.3.0.30-1+cuda12.5",
+        "accelerator_firmware_used_by_selected_backend": true,
+        "historical_attribution": false,
+        "accelerator_firmware_live": {
+          "version": "4.20.0",
+          "source": {
+            "path": "archive:evidence/host_inventory_versions_supplement.json",
+            "sha256": "f4f66bcb667e06fd1b96ddacf44361c09868a09b0348890cdc7264ce57ab9d2c",
+            "json_pointer": "/current_version_conclusions/orin_nx_hailo8_01"
+          }
+        },
+        "accelerator_compiler_current": {
+          "metadata_path": "private-path-id:e1c84f74b3251e6f0a17f9d7c6a8cb1bf2ce5e39ea7c604317975ebae5e3c0f4",
+          "metadata_sha256": "7faf9dc7bfffd46b38ac2ab645be561e526d55f37d5c181f1e7052994803fdef",
+          "name": "hailo-dataflow-compiler",
+          "site_packages": "private-path-id:10a4ebe2373065891cdba0c5e6660cbde6803f17066a85962a77e2902150c94b",
+          "version": "3.33.1"
+        },
+        "compiler_metadata_source": {
+          "path": "archive:evidence/host_inventory/current_versions_summary.json",
+          "sha256": "8f048c07c402e4cc8613cfc4250b6c5f0956f7ff577063c8fd60affcecfc2109",
+          "json_pointer": "/compiler_metadata"
+        },
+        "compiler_source_release_files": [],
+        "compiler_source_release_evidence": null
+      }
+    },
+    {
+      "uid": "native|yolov7_paper|DeepX|native_full_deepx|full",
+      "model": "yolov7_paper",
+      "setup_id": "orin_nx_deepx_m1_01",
+      "backend": "native_full_deepx",
+      "historical_python_version_recorded": "3.10.12 (main, Mar  3 2026, 11:56:32) [GCC 11.4.0]",
+      "historical_runtime_package_versions": null,
+      "historical_compiler_package_versions": null,
+      "historical_firmware_version": null,
+      "historical_version_status": "complete_package_and_firmware_versions_not_recorded_in_selected_contract; binary_hashes_separately_bound",
+      "historical_precision_identity": "deepx_dxnn_sha256:840f96fa7bd6cebf6db5272231aac9d84a69851424cc9cddcfaed7835423fa99",
+      "stage_precision": {
+        "kind": "DXNN",
+        "runtime_input_dtype": "uint8",
+        "runtime_output_dtype": "float32",
+        "input_description": "uint8 HWC RGB",
+        "boundary_layout": "HWC",
+        "boundary_transform": "embedded_dxcom_preprocessing",
+        "dequant_scale": null,
+        "dequant_zero_point": null,
+        "trt_external_boundary_input_dtype": null,
+        "trt_external_input_metadata": null,
+        "trt_external_output_metadata": null,
+        "trt_compiler_precision_configuration": "not_applicable",
+        "trt_exact_internal_layer_arithmetic": "not_applicable",
+        "npu_exact_internal_precision": "Internal DXNN layer precision and compiler quantization recipe unavailable in selected evidence.",
+        "internal_precision_inferred_from_boundary_dtype": false,
+        "compiler_recipe": {
+          "configuration": null,
+          "gap": "No full DXNN compiler precision recipe in the selected command contract. trt_precision=fp16 option is inapplicable to native_full_deepx."
+        },
+        "compiler_recipe_evidence": {
+          "kind": "compiled_dxnn_identity_only",
+          "source": {
+            "path": "external-sha256:2e127256d2be4e0af9f4376b389e366103bf317777eed1c39654b3857d6e0a49",
+            "sha256": "2e127256d2be4e0af9f4376b389e366103bf317777eed1c39654b3857d6e0a49",
+            "json_pointer": "/rows/0/full_command_contract/model_binding"
+          },
+          "recorded_dxnn": {
+            "path": "external-sha256:840f96fa7bd6cebf6db5272231aac9d84a69851424cc9cddcfaed7835423fa99",
+            "sha256": "840f96fa7bd6cebf6db5272231aac9d84a69851424cc9cddcfaed7835423fa99"
+          }
+        }
+      },
+      "current_installed_separate": {
+        "captured_at_utc": "2026-10-18T12:59:11.493161+00:00",
+        "platform_packages": {
+          "nvidia-l4t-core": "36.4.7-20250918154033",
+          "cuda-cudart-12-6": "12.6.68-1",
+          "tensorrt": "10.3.0.30-1+cuda12.5",
+          "libnvinfer10": "10.3.0.30-1+cuda12.5",
+          "libcudnn9-cuda-12": "9.3.0.75-1",
+          "dxrt-driver-dkms": "2.4.0-2"
+        },
+        "accelerator_runtime_metadata": {
+          "actual_qualification_loaded_library_identity": "No matching process mappings were visible at this snapshot. Binary identity is current installed file evidence, not proof of which library earlier/future qualification loaded.",
+          "dx_engine_distribution": "3.3.2",
+          "dxrt_cli_runtime_version": "3.3.2",
+          "firmware_installed_version": null,
+          "firmware_minimum_from_cli": "2.5.2",
+          "firmware_minimum_is_installed_version": false,
+          "firmware_version_gap": "No passive installed firmware version found. Status/info paths initialize device cores and were intentionally not executed during current qualification.",
+          "installed_libdxrt_elf_soname": "libdxrt.so",
+          "installed_libdxrt_embedded_version_string": "v3.3.2",
+          "installed_libdxrt_sha256": "18bc8d90ab5da6b40bd8cc5ba6e65366d3c5c4b0125e6d1c1436adc8b2117410",
+          "loaded_kernel_module_dx_dma": "2.2.0",
+          "loaded_kernel_module_dxrt_driver": "2.4.0-\"\""
+        },
+        "active_backend_runtime": "DXRT 3.3.2",
+        "tensorrt_current": null,
+        "accelerator_firmware_used_by_selected_backend": true,
+        "historical_attribution": false,
+        "accelerator_firmware_live": {
+          "version_lines": [
+            "* FW version          : v2.5.6"
+          ],
+          "driver_lines": [
+            "* RT Driver version   : v2.4.0",
+            "* PCIe Driver version : v2.2.0"
+          ],
+          "query_started_at_utc": "2026-10-18T13:22:49.241420+00:00",
+          "query_finished_at_utc": "2026-10-18T13:22:49.728085+00:00",
+          "source": {
+            "path": "archive:evidence/host_inventory_deepx_firmware_live.json",
+            "sha256": "507a647e2e906a4076a5dbf7e51b791df17957c750c7161fc086cb1aa6d5fb4e",
+            "json_pointer": ""
+          }
+        },
+        "accelerator_compiler_current": {
+          "metadata_path": "private-path-id:1b1278693a665d862e2e0a55e03b1b9bf3117d773cbb9e0eb10bcff3059ec5f8",
+          "metadata_sha256": "3b490ff4bba7e7242586e95637657f748ef8d99ead43d1c1f3ba3c88bbf2f6bc",
+          "name": "dx-com",
+          "site_packages": "private-path-id:67040f53b78b2e91df7c21a8bfb54df7f7d1aeca2f89c221ee00236359482716",
+          "version": "2.3.0"
+        },
+        "compiler_metadata_source": {
+          "path": "archive:evidence/host_inventory/current_versions_summary.json",
+          "sha256": "8f048c07c402e4cc8613cfc4250b6c5f0956f7ff577063c8fd60affcecfc2109",
+          "json_pointer": "/compiler_metadata"
+        },
+        "compiler_source_release_files": [
+          {
+            "path": "external-sha256:cdb0811c2542421ebdcbe08c9a15e276c05cac9f2a34d1e43b2b2894a6fb2f2a",
+            "sha256": "cdb0811c2542421ebdcbe08c9a15e276c05cac9f2a34d1e43b2b2894a6fb2f2a",
+            "text": "v2.3.1"
+          }
+        ],
+        "compiler_source_release_evidence": {
+          "path": "archive:evidence/host_inventory/controller_compiler_metadata.json",
+          "sha256": "535e01bfc81357d7c882a55b21321a801e7af9a75f9266a83356942848e2c250",
+          "json_pointer": "/files"
+        }
+      }
+    }
+  ]
+}

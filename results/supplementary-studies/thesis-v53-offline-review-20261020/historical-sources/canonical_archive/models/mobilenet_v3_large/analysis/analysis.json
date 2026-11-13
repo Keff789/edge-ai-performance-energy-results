@@ -1,0 +1,25 @@
+{
+  "artifact_id": "analysis_mobilenet_v3_large_a246ba480ba1",
+  "candidate_count": 138,
+  "candidate_objective": "cut_bytes_only",
+  "candidate_source": "onnx_real_boundary_hardware_aware",
+  "effective_require_single_part2_input": false,
+  "model_id": "mobilenet_v3_large",
+  "model_path": "/home/kmika/Models/mobilenet_v3_large.onnx",
+  "model_resolved": true,
+  "native_multi_input_policy": "supported_subset_of_selected_generic_cases",
+  "native_split_requires_single_part2_input": true,
+  "node_count": 140,
+  "notes": [
+    "This mandatory artifact is written before benchmark-set generation."
+  ],
+  "parse_error": "",
+  "parse_status": "ok",
+  "policy_excluded_candidate_count": 0,
+  "policy_excluded_candidates": [],
+  "requested_require_single_part2_input": false,
+  "require_single_part2_input": false,
+  "schema": "onnx-splitpoint/model-analysis",
+  "schema_version": 1,
+  "task": "classification"
+}

@@ -1,0 +1,62 @@
+{
+  "CURRENT_matches_expected_final_root_adoption_pointer": true,
+  "CURRENT_unchanged_during_extraction": true,
+  "actual_ledger_counts_used_without_hardcoded_quality_totals": true,
+  "all_21_groups_have_20_selected": true,
+  "all_group_partitions_sum_to_planned": true,
+  "completed_at": "2026-10-27T12:13:57.775627+00:00",
+  "no_hardware_or_inference_or_build_started": true,
+  "no_private_absolute_paths_in_exports": true,
+  "old_postprocess_untouched": true,
+  "output_files": [
+    {
+      "filename": "closure_matrix.csv",
+      "report_relative_path": "rq2_detector_followup_20261027/final_closure420_v1/closure_matrix.csv",
+      "sha256": "6980cbcd52439c7ad80a0329b586f8e44ca591746d81f8c1e118243ef6addba3",
+      "size_bytes": 861
+    },
+    {
+      "filename": "closure_matrix.json",
+      "report_relative_path": "rq2_detector_followup_20261027/final_closure420_v1/closure_matrix.json",
+      "sha256": "5b5af9e696e437dee7d6492f9326b317602e3501b2c43570bf416034123ea6df",
+      "size_bytes": 10693
+    },
+    {
+      "filename": "closure_cases.csv",
+      "report_relative_path": "rq2_detector_followup_20261027/final_closure420_v1/closure_cases.csv",
+      "sha256": "f1d85055f205f9c2801dfc08ca6e82316ce7bf3d46fe5a9007f5ab4091977041",
+      "size_bytes": 401750
+    },
+    {
+      "filename": "closure_cases.json",
+      "report_relative_path": "rq2_detector_followup_20261027/final_closure420_v1/closure_cases.json",
+      "sha256": "c739186dea3035f40df3ef411feeb75a2dbc46af45f96f7ed4730f902fcc62ff",
+      "size_bytes": 4471458
+    },
+    {
+      "filename": "closure_b009.json",
+      "report_relative_path": "rq2_detector_followup_20261027/final_closure420_v1/closure_b009.json",
+      "sha256": "b5fe1bef101fcb96cb69fee6698681aa9b83e7f7cf464815ed4410e9dadf76bb",
+      "size_bytes": 4633
+    },
+    {
+      "filename": "closure_process_status.json",
+      "report_relative_path": "rq2_detector_followup_20261027/final_closure420_v1/closure_process_status.json",
+      "sha256": "023c0a464edfbbe5d9191e90a0ee25c7965fe19093944586491160bd787a1b9e",
+      "size_bytes": 2649
+    }
+  ],
+  "per_row_original_source_epochs_preserved": true,
+  "schema": "generic420-final-closure-validation-v2",
+  "selection_and_ledger_UID_sets_exact": true,
+  "totals": {
+    "FPS": 359,
+    "compile_failed": 37,
+    "open": 0,
+    "planned": 420,
+    "quality_eligible": 331,
+    "quality_exclusion": 28,
+    "technical_exclusion": 61,
+    "unsupported": 24
+  }
+}

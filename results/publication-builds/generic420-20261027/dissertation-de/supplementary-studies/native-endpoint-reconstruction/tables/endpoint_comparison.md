@@ -1,0 +1,6 @@
+| Konfiguration | Bilder | Rohe FPS | Vollständige FPS | Vollständig/roh |
+| --- | --- | --- | --- | --- |
+| Serieller Abschluss auf dem Host | 1 | NA | 16 | NA |
+| Dreistufiger Einbild-Kurztest | 1 | 97 | 97 | 0.999811 |
+
+Mediane von drei neuen Laufzeitwiederholungen. NA bezeichnet einen nicht separat beobachteten Rohendpunkt. Beide Zeilen verwenden ein Bild, jedoch unterschiedliche Ausführungs- und Vorverarbeitungsverträge. Daraus ergibt sich keine kontrollierte Beschleunigungsschätzung. Die CSV mit voller Genauigkeit enthält beobachtete Minima und Maxima der Wiederholungen, keine Konfidenzintervalle.

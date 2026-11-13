@@ -1,0 +1,73 @@
+{
+  "family_selection_results": [
+    {
+      "common_pair_groups": 21,
+      "current_generic_mean_loss_same_pairs_pct": 1.3467521152436048,
+      "exact_winners": 15,
+      "family": "all",
+      "groups_n_ge_2": 21,
+      "mean_loss_n_ge_2_pct": 1.3467521152436048,
+      "mean_loss_pct": 1.3467521152436048,
+      "model_device_groups": 21,
+      "old_generic_mean_loss_same_pairs_pct": 15.077128973324955,
+      "original_native_cases": 204,
+      "paired_candidates": 187,
+      "scope": "quality_admitted",
+      "singleton_groups": 0
+    },
+    {
+      "common_pair_groups": 9,
+      "current_generic_mean_loss_same_pairs_pct": 3.1189014134989854,
+      "exact_winners": 4,
+      "family": "classification",
+      "groups_n_ge_2": 9,
+      "mean_loss_n_ge_2_pct": 3.1189014134989854,
+      "mean_loss_pct": 3.1189014134989854,
+      "model_device_groups": 9,
+      "old_generic_mean_loss_same_pairs_pct": 32.80433865060003,
+      "original_native_cases": 168,
+      "paired_candidates": 151,
+      "scope": "quality_admitted",
+      "singleton_groups": 0
+    },
+    {
+      "common_pair_groups": 12,
+      "current_generic_mean_loss_same_pairs_pct": 0.01764014155206939,
+      "exact_winners": 11,
+      "family": "detection",
+      "groups_n_ge_2": 12,
+      "mean_loss_n_ge_2_pct": 0.01764014155206939,
+      "mean_loss_pct": 0.01764014155206939,
+      "model_device_groups": 12,
+      "old_generic_mean_loss_same_pairs_pct": 1.7817217153686513,
+      "original_native_cases": 36,
+      "paired_candidates": 36,
+      "scope": "quality_admitted",
+      "singleton_groups": 0
+    }
+  ],
+  "original_native_cases": 204,
+  "paired_cases": 204,
+  "quality_excluded": 17,
+  "quality_groups": 21,
+  "quality_pairs": 187,
+  "result": "PASS",
+  "reviewed_metadata_pairs": 0,
+  "schema": "rq2-current-validation-v2",
+  "sensitivity": "results/supplementary-studies/rq2-native-scope-20261027/data/pairing_sensitivity.csv",
+  "study_validation": {
+    "current_native_replacements_source_bound": true,
+    "every_original_cut_admitted_excluded_or_unresolved": true,
+    "final_actual_import_accounting_verified": true,
+    "historical_generic_import_accounting_bound": true,
+    "no_fixed420_admission_filter": true,
+    "no_new_fps_old_energy_joint_measurement": true,
+    "original_native_and_full_records_modified": false,
+    "original_native_population_fully_accounted": true,
+    "result": "PASS",
+    "selection_precedes_quality": true,
+    "validation_scope": "Offline importer and evidence accounting only; this does not claim hardware or missing quality PASS.",
+    "weights_refitted": false
+  },
+  "summary_sha256": "b4a9c10881c89f7659ea695014bdbe186f2af5fc436169e9e3e6a620d97ef976"
+}

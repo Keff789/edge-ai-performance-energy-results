@@ -1,0 +1,1289 @@
+{
+  "schema": "thesis-v56-source-separation-v1",
+  "reference_commit": "aed301819663b5fa27bd5731fb74fef3e46ee927",
+  "repository": "https://github.com/Keff789/edge-ai-performance-energy-results",
+  "source_archive": "doctor_thesis_v56_de_minimal_aktualisiert.zip",
+  "source_archive_sha256": "cc3566d257637e3af05986658dc022efd68a79289129e564fb2042669d98c1ac",
+  "scope": "Frozen thesis v56 presentation exports and legacy source inputs; no changes to current scientific analyses. Three author photos remain in the LaTeX project.",
+  "files": [
+    {
+      "latex_path": "9_resources/grafiken/energie/measurement_boundaries.pdf",
+      "original_path": "9_resources/layout_v48/energy/figures/measurement_boundaries.pdf",
+      "category": "grafik",
+      "repository_path": "publications/dissertation/thesis-v56/illustrations/energie/measurement_boundaries.pdf",
+      "action": "preserved",
+      "sha256": "26edcf425d04e22eb0b723785b4904c3a98f94de38b46b15cd544697a0f00177",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/grafiken/energie/power_boundaries.pdf",
+      "original_path": "9_resources/review_v49/power_boundaries.pdf",
+      "category": "grafik",
+      "repository_path": "publications/dissertation/thesis-v56/illustrations/energie/power_boundaries.pdf",
+      "action": "preserved",
+      "sha256": "acf5fdb166905843829526839de679a813468c019c01b3612e121bab569cbc87",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/grafiken/fotos/recs_pcb_back_clean.png",
+      "original_path": "9_resources/redesigned/photos/recs_pcb_back_clean.png",
+      "category": "grafik",
+      "repository_path": null,
+      "action": "latex_photo",
+      "sha256": "c38a678eaf11fedfbe685d4878f79ed5d19342ab32aa80b2faf33bf48bd94746",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/grafiken/fotos/recs_pcb_front_clean.png",
+      "original_path": "9_resources/redesigned/photos/recs_pcb_front_clean.png",
+      "category": "grafik",
+      "repository_path": null,
+      "action": "latex_photo",
+      "sha256": "0c1d50b7cee8be544c50665ad3276cd7992f47efdda5a47c85dddd5bb073f09d",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/grafiken/fotos/urecs_real_front_clean.png",
+      "original_path": "9_resources/redesigned/photos/urecs_real_front_clean.png",
+      "category": "grafik",
+      "repository_path": null,
+      "action": "latex_photo",
+      "sha256": "3022adb032dc908c190097e4f49f397a759e23076c5a391e0c331138dbee5e99",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/grafiken/grundlagen/related_work_settings.pdf",
+      "original_path": "9_resources/layout_v48/foundations/figures/related_work_settings.pdf",
+      "category": "grafik",
+      "repository_path": "publications/dissertation/thesis-v56/illustrations/grundlagen/related_work_settings.pdf",
+      "action": "preserved",
+      "sha256": "c21d2add8a5e3d2f555a6b4bd352b86df4bf10f302fcbeed0b06e77c6802dc3c",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/grafiken/methoden/cost_decomposition.pdf",
+      "original_path": "9_resources/integration_v47/methods/cost_decomposition.pdf",
+      "category": "grafik",
+      "repository_path": "publications/dissertation/thesis-v56/illustrations/methoden/cost_decomposition.pdf",
+      "action": "preserved",
+      "sha256": "d1c6b456a7f3aaa73fa89abd4957bf9b5822fc850041c751fdf10a861b803125",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/grafiken/methoden/dag_cut.pdf",
+      "original_path": "9_resources/layout_v48/methods/dag_cut.pdf",
+      "category": "grafik",
+      "repository_path": "publications/dissertation/thesis-v56/illustrations/methoden/dag_cut.pdf",
+      "action": "preserved",
+      "sha256": "b8ecb072db36db32a16337ad5669c3570286aeddc29665c4ea7e60a05a2d86bd",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/grafiken/methoden/edge_pipeline.pdf",
+      "original_path": "9_resources/layout_v48/methods/edge_pipeline.pdf",
+      "category": "grafik",
+      "repository_path": "publications/dissertation/thesis-v56/illustrations/methoden/edge_pipeline.pdf",
+      "action": "preserved",
+      "sha256": "0aa396e36a966502900994147e19e1c08fa57f71754d0c2a31078cbe8079e0db",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/grafiken/methoden/multicontext.pdf",
+      "original_path": "9_resources/layout_v48/methods/multicontext.pdf",
+      "category": "grafik",
+      "repository_path": "publications/dissertation/thesis-v56/illustrations/methoden/multicontext.pdf",
+      "action": "preserved",
+      "sha256": "6a08727b3c596fd8b96dc7223c3b1ffd35044d43068b242aae6bb80a87e4f73d",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/grafiken/methoden/split_workflow.pdf",
+      "original_path": "9_resources/layout_v48/methods/split_workflow.pdf",
+      "category": "grafik",
+      "repository_path": "publications/dissertation/thesis-v56/illustrations/methoden/split_workflow.pdf",
+      "action": "preserved",
+      "sha256": "34819cfc29d131ca03878ce3bc24aeb06760f2919368dbcb81643f899c1c25bf",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/grafiken/methoden/throughput_taxonomy.pdf",
+      "original_path": "9_resources/integration_v47/methods/throughput_taxonomy.pdf",
+      "category": "grafik",
+      "repository_path": "publications/dissertation/thesis-v56/illustrations/methoden/throughput_taxonomy.pdf",
+      "action": "preserved",
+      "sha256": "f2a3ccf67c7d88116daf4f88070f603f488ff13e2ac227accd1c789c6d68998d",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/grafiken/recs/management_overview.pdf",
+      "original_path": "9_resources/layout_v48/foundations/figures/management_overview.pdf",
+      "category": "grafik",
+      "repository_path": "publications/dissertation/thesis-v56/illustrations/recs/management_overview.pdf",
+      "action": "preserved",
+      "sha256": "fa0c63c0e7a8ecca7923199279a35a5f26c2360f44dc61f07caba29f0c3d243f",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/grafiken/recs/toolchain_bridge.pdf",
+      "original_path": "9_resources/layout_v48/foundations/figures/toolchain_bridge.pdf",
+      "category": "grafik",
+      "repository_path": "publications/dissertation/thesis-v56/illustrations/recs/toolchain_bridge.pdf",
+      "action": "preserved",
+      "sha256": "0c0712680d2eb17a2d30d5ffcd363b820435e5052924a298e9d65f83d1f6a297",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/grafiken/recs/urecs_architecture.pdf",
+      "original_path": "9_resources/layout_v48/foundations/figures/urecs_architecture.pdf",
+      "category": "grafik",
+      "repository_path": "publications/dissertation/thesis-v56/illustrations/recs/urecs_architecture.pdf",
+      "action": "preserved",
+      "sha256": "b1320347e3e887e314c3f24307112473095d9bca9f71627dd207ce0031c87727",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/grafiken/recs/urecs_power.pdf",
+      "original_path": "9_resources/layout_v48/foundations/figures/urecs_power.pdf",
+      "category": "grafik",
+      "repository_path": "publications/dissertation/thesis-v56/illustrations/recs/urecs_power.pdf",
+      "action": "preserved",
+      "sha256": "ffa71f07f05fa0ad3287201e974ba6878755b08a1e3dfdf7796e9ab4163eac84",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/messdaten/energie/cross_workload_spectra.pdf",
+      "original_path": "9_resources/layout_v48/energy/figures/cross_workload_spectra.pdf",
+      "category": "messgrafik",
+      "repository_path": "publications/dissertation/thesis-v56/figures/energie/cross_workload_spectra.pdf",
+      "action": "preserved",
+      "sha256": "7843c16baf316370769d35aed0c28eaf552d51c0512a1538c008b27f303f24ed",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/messdaten/energie/current_verification.pdf",
+      "original_path": "9_resources/layout_v48/energy/figures/current_verification.pdf",
+      "category": "messgrafik",
+      "repository_path": "publications/dissertation/thesis-v56/figures/energie/current_verification.pdf",
+      "action": "preserved",
+      "sha256": "5926de10b35e863071e528a7d3ffc726609fef5ae96467ed2c243bc7a21d74c5",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/messdaten/energie/duration_comparison.pdf",
+      "original_path": "9_resources/layout_v48/energy/figures/duration_comparison.pdf",
+      "category": "messgrafik",
+      "repository_path": "publications/dissertation/thesis-v56/figures/energie/duration_comparison.pdf",
+      "action": "preserved",
+      "sha256": "7b70edb4597ee60dcb7dc5ffac10181375575c287625d2300540ae1af48f23ce",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/messdaten/energie/fp16_objectives.pdf",
+      "original_path": "9_resources/layout_v48/energy/figures/fp16_objectives.pdf",
+      "category": "messgrafik",
+      "repository_path": "publications/dissertation/thesis-v56/figures/energie/fp16_objectives.pdf",
+      "action": "preserved",
+      "sha256": "f1a3230a86535c5ae34b55b7847f374504fdb56736556e67861c2eeaa652d1c4",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/messdaten/energie/hailo_meters.pdf",
+      "original_path": "9_resources/layout_v48/energy/figures/hailo_meters.pdf",
+      "category": "messgrafik",
+      "repository_path": "publications/dissertation/thesis-v56/figures/energie/hailo_meters.pdf",
+      "action": "preserved",
+      "sha256": "21387a3fcf39e6a2df6b24338cc27a8fb4cba1c9f0aa4f312befcc6700044b06",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/messdaten/energie/hailo_spectral_tail.pdf",
+      "original_path": "9_resources/layout_v48/energy/figures/hailo_spectral_tail.pdf",
+      "category": "messgrafik",
+      "repository_path": "publications/dissertation/thesis-v56/figures/energie/hailo_spectral_tail.pdf",
+      "action": "preserved",
+      "sha256": "e284e9b9c65e6eda344ffa2878d7e73f4b807c16cc1430ad01eb1bb4ee6f1581",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/messdaten/energie/hailo_variable_intervals.pdf",
+      "original_path": "9_resources/layout_v48/energy/figures/hailo_variable_intervals.pdf",
+      "category": "messgrafik",
+      "repository_path": "publications/dissertation/thesis-v56/figures/energie/hailo_variable_intervals.pdf",
+      "action": "preserved",
+      "sha256": "50f38e09bc54c798f6c607d94aed026553d4dc7b774ff513bbe4e73c9397d9e7",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/messdaten/energie/jetson_deployed_meters.pdf",
+      "original_path": "9_resources/layout_v48/energy/figures/jetson_deployed_meters.pdf",
+      "category": "messgrafik",
+      "repository_path": "publications/dissertation/thesis-v56/figures/energie/jetson_deployed_meters.pdf",
+      "action": "preserved",
+      "sha256": "52a68781c534244f8dc8b4e4bb10eca048cd7f1c6889ecb36407d1478417ebeb",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/messdaten/energie/jetson_rate_duration.pdf",
+      "original_path": "9_resources/layout_v48/energy/figures/jetson_rate_duration.pdf",
+      "category": "messgrafik",
+      "repository_path": "publications/dissertation/thesis-v56/figures/energie/jetson_rate_duration.pdf",
+      "action": "preserved",
+      "sha256": "5ee0cbbdbb350da8352a178d25dd737f1d06b67485ca1e911ea6407eb3c92de9",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/messdaten/energie/native_cdf.pdf",
+      "original_path": "9_resources/layout_v48/energy/figures/native_cdf.pdf",
+      "category": "messgrafik",
+      "repository_path": "publications/dissertation/thesis-v56/figures/energie/native_cdf.pdf",
+      "action": "preserved",
+      "sha256": "95079e247a86acb3de40f4fb6473c83d60075a17a92d4c0d7bca8e2579683a69",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/messdaten/energie/pause_sequence.pdf",
+      "original_path": "9_resources/layout_v48/energy/figures/pause_sequence.pdf",
+      "category": "messgrafik",
+      "repository_path": "publications/dissertation/thesis-v56/figures/energie/pause_sequence.pdf",
+      "action": "preserved",
+      "sha256": "c481a43c3cc6a261420d6ac807e82f8e16f84834ba285a06e15655d7881f202d",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/messdaten/evaluation/fastest_deployment_tradeoff.pdf",
+      "original_path": "9_resources/results_r44/figures/fastest_deployment_tradeoff.pdf",
+      "category": "messgrafik",
+      "repository_path": "results/publication-builds/generic420-20261027/dissertation-de/mlsys-r30/figures/fastest_deployment_tradeoff.pdf",
+      "action": "existing_exact_export",
+      "sha256": "18e9fe2337c42f7ec21118d36ab6cc625150f12fd606f2744e933134e9745692",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/dissertation-de/mlsys-r30/figures/fastest_deployment_tradeoff.pdf",
+        "results/publication-builds/generic420-20261027/paper/de/mlsys-r30/figures/fastest_deployment_tradeoff.pdf"
+      ]
+    },
+    {
+      "latex_path": "9_resources/messdaten/evaluation/fastest_split_baseline_comparison.pdf",
+      "original_path": "9_resources/results_r44/figures/fastest_split_baseline_comparison.pdf",
+      "category": "messgrafik",
+      "repository_path": "results/publication-builds/generic420-20261027/dissertation-de/mlsys-r30/figures/fastest_split_baseline_comparison.pdf",
+      "action": "existing_exact_export",
+      "sha256": "6806212418a636aa9eb7499318207dbbe5b3d1ecea055437d22ba2c84c765bee",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/dissertation-de/mlsys-r30/figures/fastest_split_baseline_comparison.pdf",
+        "results/publication-builds/generic420-20261027/paper/de/mlsys-r30/figures/fastest_split_baseline_comparison.pdf"
+      ]
+    },
+    {
+      "latex_path": "9_resources/messdaten/evaluation/ranking_methods.pdf",
+      "original_path": "9_resources/layout_v48/evaluation/figures/ranking_methods.pdf",
+      "category": "messgrafik",
+      "repository_path": "publications/dissertation/thesis-v56/figures/evaluation/ranking_methods.pdf",
+      "action": "preserved",
+      "sha256": "3df53e4e085410fb2091d6fad212c54ad2a83909fd451a614d706ed96eecaaba",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/messdaten/evaluation/ranking_proxies.pdf",
+      "original_path": "9_resources/layout_v48/evaluation/figures/ranking_proxies.pdf",
+      "category": "messgrafik",
+      "repository_path": "publications/dissertation/thesis-v56/figures/evaluation/ranking_proxies.pdf",
+      "action": "preserved",
+      "sha256": "1ec9f12d9f327eb150181543eaffab215bc6c790abf51e8e6a0726961d8a6d0b",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/messdaten/evaluation/resnet_energy.pdf",
+      "original_path": "9_resources/layout_v48/evaluation/figures/resnet_energy.pdf",
+      "category": "messgrafik",
+      "repository_path": "publications/dissertation/thesis-v56/figures/evaluation/resnet_energy.pdf",
+      "action": "preserved",
+      "sha256": "c60bfaaeb4a4b44feefd3b437c2f17c3edb80df8ed29fdf00b2fbfe73387c808",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/messdaten/evaluation/rq2_generic_selection_loss.pdf",
+      "original_path": "9_resources/results_r44/figures/rq2_generic_selection_loss.pdf",
+      "category": "messgrafik",
+      "repository_path": "results/publication-builds/generic420-20261027/dissertation-de/mlsys-r30/figures/rq2_generic_selection_loss.pdf",
+      "action": "existing_exact_export",
+      "sha256": "42c9f2b20bc9b58bed31af005b09c5f6d81e368fa39b88d6b620203c11799dd1",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/dissertation-de/mlsys-r30/figures/quality_generic_selection_loss.pdf",
+        "results/publication-builds/generic420-20261027/dissertation-de/mlsys-r30/figures/rq2_generic_selection_loss.pdf",
+        "results/publication-builds/generic420-20261027/paper/de/mlsys-r30/figures/quality_generic_selection_loss.pdf",
+        "results/publication-builds/generic420-20261027/paper/de/mlsys-r30/figures/rq2_generic_selection_loss.pdf"
+      ]
+    },
+    {
+      "latex_path": "9_resources/messdaten/evaluation/rq2_weighted_all_models.pdf",
+      "original_path": "9_resources/results_r44/figures/rq2_weighted_all_models.pdf",
+      "category": "messgrafik",
+      "repository_path": "results/publication-builds/generic420-20261027/dissertation-de/mlsys-r30/figures/rq2_weighted_all_models.pdf",
+      "action": "existing_exact_export",
+      "sha256": "216d29068e5c7d6b763c6e8f833c730181b1574cec5381f8c7641d90d40fe6fb",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/dissertation-de/mlsys-r30/figures/rq2_weighted_all_models.pdf",
+        "results/publication-builds/generic420-20261027/paper/de/mlsys-r30/figures/rq2_weighted_all_models.pdf"
+      ]
+    },
+    {
+      "latex_path": "9_resources/messdaten/evaluation/shortlist_loss.pdf",
+      "original_path": "9_resources/results_r44/figures/shortlist_loss.pdf",
+      "category": "messgrafik",
+      "repository_path": "results/publication-builds/generic420-20261027/dissertation-de/rq3-generic420/de/figures/shortlist_loss_single_column.pdf",
+      "action": "existing_exact_export",
+      "sha256": "5e82dd67d45d1981eae93068c98004796a9e618fd62fed9282aa97f2fcaf37c0",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/dissertation-de/rq3-generic420/de/figures/shortlist_loss_single_column.pdf",
+        "results/publication-builds/generic420-20261027/paper/rq3-generic420/de/figures/shortlist_loss_single_column.pdf",
+        "results/supplementary-studies/rq3-generic420-detector-corrected-20261027/artifacts/de/figures/shortlist_loss_single_column.pdf"
+      ]
+    },
+    {
+      "latex_path": "9_resources/messdaten/evaluation/staged_selection_budget.pdf",
+      "original_path": "9_resources/results_r44/figures/staged_selection_budget.pdf",
+      "category": "messgrafik",
+      "repository_path": "results/supplementary-studies/staged-selection/artifacts/de/figures/staged_selection_budget.pdf",
+      "action": "existing_exact_export",
+      "sha256": "593e318ea01d3b61042d71173aea30fec68c3d0cf60d3b4092226774d9326a4a",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/staged-selection/artifacts/de/figures/staged_selection_budget.pdf",
+        "results/supplementary-studies/staged-selection/artifacts/de/figures/staged_selection_budget.pdf"
+      ]
+    },
+    {
+      "latex_path": "9_resources/messdaten/evaluation/staged_selection_flow.pdf",
+      "original_path": "9_resources/results_r44/figures/staged_selection_flow.pdf",
+      "category": "messgrafik",
+      "repository_path": "results/supplementary-studies/staged-selection/artifacts/de/figures/staged_selection_flow.pdf",
+      "action": "existing_exact_export",
+      "sha256": "3ed3bd9c14b6c67f1a0141359bd471a8919e10f7db4bccdda7149c493292ca1f",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/staged-selection/artifacts/de/figures/staged_selection_flow.pdf",
+        "results/supplementary-studies/staged-selection/artifacts/de/figures/staged_selection_flow.pdf"
+      ]
+    },
+    {
+      "latex_path": "9_resources/messdaten/evaluation/yolov7_h8_case.pdf",
+      "original_path": "9_resources/results_r44/figures/yolov7_h8_case.pdf",
+      "category": "messgrafik",
+      "repository_path": "results/publication-builds/generic420-20261027/dissertation-de/mlsys-r22/figures/yolov7_h8_case.pdf",
+      "action": "existing_exact_export",
+      "sha256": "5897a4da4b789efa937dc807d3c4c337725bfd0d1dda1f2323955ee4e793f566",
+      "existing_identical_repository_paths": [
+        "publications/dissertation/de/mlsys-r22/figures/yolov7_h8_case.pdf",
+        "publications/dissertation/de/mlsys-r30/figures/yolov7_h8_case.pdf",
+        "results/publication-builds/generic420-20261027/dissertation-de/mlsys-r22/figures/yolov7_h8_case.pdf",
+        "results/publication-builds/generic420-20261027/dissertation-de/mlsys-r30/figures/yolov7_h8_case.pdf",
+        "results/publication-builds/generic420-20261027/paper/de/mlsys-r22/figures/yolov7_h8_case.pdf",
+        "results/publication-builds/generic420-20261027/paper/de/mlsys-r30/figures/yolov7_h8_case.pdf"
+      ]
+    },
+    {
+      "latex_path": "9_resources/messdaten/kostenmodelle/stage_costs.pdf",
+      "original_path": "9_resources/integration_v47/methods/stage_costs.pdf",
+      "category": "messgrafik",
+      "repository_path": "publications/dissertation/thesis-v56/figures/kostenmodelle/stage_costs.pdf",
+      "action": "preserved",
+      "sha256": "524e34f26840aedd38828f4087b516cb160b2a3ed74157eaf19d5f9a76bdb274",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/messdaten/modellvergleiche/04_tradeoff_mobilenet_v3_large.pdf",
+      "original_path": "9_resources/results_r44_appendix/04_tradeoff_mobilenet_v3_large.pdf",
+      "category": "messgrafik",
+      "repository_path": "results/publication-builds/generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_mobilenet_v3_large.pdf",
+      "action": "existing_exact_export",
+      "sha256": "7d759ef9f1f472b8a6fe35f04ced7fd98322d02f48686e9fc8dc81bf0e6b7d53",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_mobilenet_v3_large.pdf",
+        "results/publication-builds/generic420-20261027/paper/de/split-inference/figures/04_tradeoff_mobilenet_v3_large.pdf"
+      ]
+    },
+    {
+      "latex_path": "9_resources/messdaten/modellvergleiche/04_tradeoff_regnet_x_1_6gf.pdf",
+      "original_path": "9_resources/results_r44_appendix/04_tradeoff_regnet_x_1_6gf.pdf",
+      "category": "messgrafik",
+      "repository_path": "results/publication-builds/generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_regnet_x_1_6gf.pdf",
+      "action": "existing_exact_export",
+      "sha256": "8a9305e5690347476e3994faa6844ae874d848186e97da841a086b3e4323f60f",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_regnet_x_1_6gf.pdf",
+        "results/publication-builds/generic420-20261027/paper/de/split-inference/figures/04_tradeoff_regnet_x_1_6gf.pdf"
+      ]
+    },
+    {
+      "latex_path": "9_resources/messdaten/modellvergleiche/04_tradeoff_resnet50.pdf",
+      "original_path": "9_resources/results_r44_appendix/04_tradeoff_resnet50.pdf",
+      "category": "messgrafik",
+      "repository_path": "results/publication-builds/generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_resnet50.pdf",
+      "action": "existing_exact_export",
+      "sha256": "6bcfdddffe5f4becf38059f2d643d871cbd9e3172f57736dd7408ab0d75d2f78",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_resnet50.pdf",
+        "results/publication-builds/generic420-20261027/paper/de/split-inference/figures/04_tradeoff_resnet50.pdf"
+      ]
+    },
+    {
+      "latex_path": "9_resources/messdaten/modellvergleiche/04_tradeoff_yolo11l.pdf",
+      "original_path": "9_resources/results_r44_appendix/04_tradeoff_yolo11l.pdf",
+      "category": "messgrafik",
+      "repository_path": "results/publication-builds/generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_yolo11l.pdf",
+      "action": "existing_exact_export",
+      "sha256": "2c68014ff6342f3a5d26d8d9def31751b39a39d61d1b6759bb4aa721dc96eb76",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_yolo11l.pdf",
+        "results/publication-builds/generic420-20261027/paper/de/split-inference/figures/04_tradeoff_yolo11l.pdf"
+      ]
+    },
+    {
+      "latex_path": "9_resources/messdaten/modellvergleiche/04_tradeoff_yolo26m.pdf",
+      "original_path": "9_resources/results_r44_appendix/04_tradeoff_yolo26m.pdf",
+      "category": "messgrafik",
+      "repository_path": "results/publication-builds/generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_yolo26m.pdf",
+      "action": "existing_exact_export",
+      "sha256": "afeb1935da9309b0e232f225bd4b403fec321c619d22b29d997a4040dc13c5b2",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_yolo26m.pdf",
+        "results/publication-builds/generic420-20261027/paper/de/split-inference/figures/04_tradeoff_yolo26m.pdf"
+      ]
+    },
+    {
+      "latex_path": "9_resources/messdaten/modellvergleiche/04_tradeoff_yolo26s.pdf",
+      "original_path": "9_resources/results_r44_appendix/04_tradeoff_yolo26s.pdf",
+      "category": "messgrafik",
+      "repository_path": "results/publication-builds/generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_yolo26s.pdf",
+      "action": "existing_exact_export",
+      "sha256": "40450ebef9f2d394a23b71fad05737c6165c3e62dfec1502e22efeaf4a407dbc",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_yolo26s.pdf",
+        "results/publication-builds/generic420-20261027/paper/de/split-inference/figures/04_tradeoff_yolo26s.pdf"
+      ]
+    },
+    {
+      "latex_path": "9_resources/messdaten/modellvergleiche/04_tradeoff_yolov7_paper.pdf",
+      "original_path": "9_resources/results_r44_appendix/04_tradeoff_yolov7_paper.pdf",
+      "category": "messgrafik",
+      "repository_path": "results/publication-builds/generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_yolov7_paper.pdf",
+      "action": "existing_exact_export",
+      "sha256": "c39cf7a2b3b8ccdb70a1ecd2b38f5cb3a65852d9bb8014436b0f7dc566787858",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/dissertation-de/split-inference/figures/04_tradeoff_yolov7_paper.pdf",
+        "results/publication-builds/generic420-20261027/paper/de/split-inference/figures/04_tradeoff_yolov7_paper.pdf"
+      ]
+    },
+    {
+      "latex_path": "9_resources/tabellen/anhang/confirmation_blocks.tex",
+      "original_path": "9_resources/review_v53/generated/confirmation_blocks.tex",
+      "category": "tabelle",
+      "repository_path": "publications/dissertation/thesis-v56/tables/anhang/confirmation_blocks.tex",
+      "action": "preserved",
+      "sha256": "f14d35adf25268fb34d6a5ff49a90b7a4ebde256e06e75fee289257d690ae1de",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/tabellen/anhang/operator_catalogue.tex",
+      "original_path": "9_resources/style_v44/generated/operator_catalogue.tex",
+      "category": "tabelle",
+      "repository_path": "publications/dissertation/thesis-v56/tables/anhang/operator_catalogue.tex",
+      "action": "preserved",
+      "sha256": "ead871e8fd7ffbd7ed04df08a094030fcf4fd25fd7780fa93785d5ebcc2930b6",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/tabellen/anhang/resnet_matrix.tex",
+      "original_path": "9_resources/style_v44/generated/resnet_matrix.tex",
+      "category": "tabelle",
+      "repository_path": "publications/dissertation/thesis-v56/tables/anhang/resnet_matrix.tex",
+      "action": "preserved",
+      "sha256": "53a9e6525be8328b14ed8bba555e81e710d37c37ef0a9b58ceb04a95bd147a41",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/tabellen/energie/direct_rates.tex",
+      "original_path": "9_resources/integration_v47/energy/generated/direct_rates.tex",
+      "category": "tabelle",
+      "repository_path": "publications/dissertation/thesis-v56/tables/energie/direct_rates.tex",
+      "action": "preserved",
+      "sha256": "c08766e23ddd8da8f9a04839ba9dc010d8ad4c3581f7c7daef2ae8c104b481ed",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/tabellen/evaluation/rates.tex",
+      "original_path": "9_resources/review_v49/rates.tex",
+      "category": "tabelle",
+      "repository_path": "publications/dissertation/thesis-v56/tables/evaluation/rates.tex",
+      "action": "preserved",
+      "sha256": "7f449278bd3e55fd2a0368631e0927ab028b009b444307b597e62776c9a50ca6",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/tabellen/evaluation/repeat_ranges.tex",
+      "original_path": "9_resources/results_r44/tables/repeat_ranges.tex",
+      "category": "tabelle",
+      "repository_path": "publications/dissertation/thesis-v56/tables/evaluation/repeat_ranges.tex",
+      "action": "preserved",
+      "sha256": "98e5285e41978384c07ca83151e1056c4c047504dc231c30f22e7c9c28a3f480",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "9_resources/tabellen/evaluation/thresholds.tex",
+      "original_path": "9_resources/review_v49/thresholds.tex",
+      "category": "tabelle",
+      "repository_path": "publications/dissertation/thesis-v56/tables/evaluation/thresholds.tex",
+      "action": "preserved",
+      "sha256": "d3c430def322af733784c5edff962a0de340a9ca8bd6c010c1a0fdc9fef92214",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "daten/energie/AUTO_PIPELINE_SUMMARY.md",
+      "original_path": "9_resources/energy_reference_v41/data/AUTO_PIPELINE_SUMMARY.md",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/energie/AUTO_PIPELINE_SUMMARY.md",
+      "action": "preserved",
+      "sha256": "b7f07e39dc9cb3197a059c6fb041226c66f6bbcaee5643d6210f0f03b328c86a",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "daten/energie/MULTI_WORKLOAD_SUMMARY.md",
+      "original_path": "9_resources/energy_reference_v41/data/MULTI_WORKLOAD_SUMMARY.md",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/energie/MULTI_WORKLOAD_SUMMARY.md",
+      "action": "preserved",
+      "sha256": "683c6fa436e210f578d3a04fdfc69e35f69a7661d92d2d0f1834686a836c2aca",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "daten/energie/common_reference_summary.csv",
+      "original_path": "9_resources/energy_reference_v41/data/common_reference_summary.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/energie/common_reference_summary.csv",
+      "action": "preserved",
+      "sha256": "fa67f7fc332326ec5afd89ff1d74a1188a11535feac753ab566cf38cb55ccdbb",
+      "existing_identical_repository_paths": [
+        "results/energy-measurement/data/tim/validation/multi_workload/common_reference_summary.csv"
+      ]
+    },
+    {
+      "latex_path": "daten/energie/direct_rate_validation.csv",
+      "original_path": "9_resources/energy_reference_v41/data/direct_rate_validation.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/energie/direct_rate_validation.csv",
+      "action": "preserved",
+      "sha256": "8fae4b72d9924f1ed3a2a013c9c2a4b5d2fdc5e96d2462945b1afab2d4433151",
+      "existing_identical_repository_paths": [
+        "results/energy-measurement/data/multi-workload/direct_rate_validation/direct_rate_validation.csv"
+      ]
+    },
+    {
+      "latex_path": "daten/energie/highlighted_rate_thresholds.csv",
+      "original_path": "9_resources/energy_reference_v41/data/highlighted_rate_thresholds.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/energie/highlighted_rate_thresholds.csv",
+      "action": "preserved",
+      "sha256": "334e5d21e0389381817b000577c2ddb6384910e313d948b40a3ae69141ed407d",
+      "existing_identical_repository_paths": [
+        "results/energy-measurement/data/tim/validation/multi_workload/highlighted_rate_thresholds.csv"
+      ]
+    },
+    {
+      "latex_path": "daten/energie/idle_load_frequency_bands.csv",
+      "original_path": "9_resources/energy_reference_v41/data/idle_load_frequency_bands.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/energie/idle_load_frequency_bands.csv",
+      "action": "preserved",
+      "sha256": "2d4dd79380821969f7074eb22a9912c6bf7670d21d977e62d08328e2c776c9d7",
+      "existing_identical_repository_paths": [
+        "results/energy-measurement/data/multi-workload/psd/idle_load_frequency_bands.csv"
+      ]
+    },
+    {
+      "latex_path": "daten/energie/long_record_duration_q95.csv",
+      "original_path": "9_resources/energy_reference_v41/data/long_record_duration_q95.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/energie/long_record_duration_q95.csv",
+      "action": "preserved",
+      "sha256": "1a3a864af055f29b889de7941f93cbe99ff6f6c9ae34e1dc7bfc459226b8357a",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "daten/energie/multi_workload_two_k_worst_q95.csv",
+      "original_path": "9_resources/energy_reference_v41/data/multi_workload_two_k_worst_q95.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/energie/multi_workload_two_k_worst_q95.csv",
+      "action": "preserved",
+      "sha256": "5e1addebdc9f0976d10f8d7c187a83a8000e268b3bb5fc5f5e5ede6769e6cdc8",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "daten/energie/table_cross_workload_direct_validation.csv",
+      "original_path": "9_resources/energy_reference_v41/data/table_cross_workload_direct_validation.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/energie/table_cross_workload_direct_validation.csv",
+      "action": "preserved",
+      "sha256": "820fff98f284743a6ebe0ef1bec4602b261d329d362cfc1989e9d98eda3a5c0b",
+      "existing_identical_repository_paths": [
+        "results/energy-measurement/tables/multi-workload/paper_artifacts/tables/table_cross_workload_direct_validation.csv"
+      ]
+    },
+    {
+      "latex_path": "daten/energie/table_cross_workload_high_rate_coverage.csv",
+      "original_path": "9_resources/energy_reference_v41/data/table_cross_workload_high_rate_coverage.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/energie/table_cross_workload_high_rate_coverage.csv",
+      "action": "preserved",
+      "sha256": "ed1b9c4bc50195d60e8e2dc8508d6909487854130cbe771dcbe5462c4357bd29",
+      "existing_identical_repository_paths": [
+        "results/energy-measurement/tables/multi-workload/paper_artifacts/tables/table_cross_workload_high_rate_coverage.csv"
+      ]
+    },
+    {
+      "latex_path": "daten/energie/table_cross_workload_idle_load_summary.csv",
+      "original_path": "9_resources/energy_reference_v41/data/table_cross_workload_idle_load_summary.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/energie/table_cross_workload_idle_load_summary.csv",
+      "action": "preserved",
+      "sha256": "23ce2d28f634c35d57fcbf4deb1cfe7aa5b2da934ec931903631176513b7abc3",
+      "existing_identical_repository_paths": [
+        "results/energy-measurement/data/tim/validation/multi_workload/table_cross_workload_idle_load_summary.csv",
+        "results/energy-measurement/tables/multi-workload/paper_artifacts/tables/table_cross_workload_idle_load_summary.csv"
+      ]
+    },
+    {
+      "latex_path": "daten/energie/table_cross_workload_psd_metrics.csv",
+      "original_path": "9_resources/energy_reference_v41/data/table_cross_workload_psd_metrics.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/energie/table_cross_workload_psd_metrics.csv",
+      "action": "preserved",
+      "sha256": "1d31588d889a512d044298d3c393d19effb17b1cfa3ac9ab472878d3755eaae5",
+      "existing_identical_repository_paths": [
+        "results/energy-measurement/tables/multi-workload/paper_artifacts/tables/table_cross_workload_psd_metrics.csv"
+      ]
+    },
+    {
+      "latex_path": "daten/energie/table_cross_workload_two_k_sufficiency.csv",
+      "original_path": "9_resources/energy_reference_v41/data/table_cross_workload_two_k_sufficiency.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/energie/table_cross_workload_two_k_sufficiency.csv",
+      "action": "preserved",
+      "sha256": "6f9a0cfd8a8efe79efa2d28d97fe0339c0ab02b75e00b699693548689a289b42",
+      "existing_identical_repository_paths": [
+        "results/energy-measurement/data/tim/validation/multi_workload/table_cross_workload_two_k_sufficiency.csv",
+        "results/energy-measurement/tables/multi-workload/paper_artifacts/tables/table_cross_workload_two_k_sufficiency.csv"
+      ]
+    },
+    {
+      "latex_path": "daten/energie/worst_case_envelope.csv",
+      "original_path": "9_resources/energy_reference_v41/data/worst_case_envelope.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/energie/worst_case_envelope.csv",
+      "action": "preserved",
+      "sha256": "4717b00cc92e20be3df544e34791a631a2f489c1cbd8ef3bb4e857eba1e29919",
+      "existing_identical_repository_paths": [
+        "results/energy-measurement/data/tim/validation/multi_workload/worst_case_envelope.csv"
+      ]
+    },
+    {
+      "latex_path": "daten/evaluation/generic_fit_scopes.csv",
+      "original_path": "9_resources/results_r44/data/generic_fit_scopes.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/evaluation/generic_fit_scopes.csv",
+      "action": "preserved",
+      "sha256": "42f0196226d8d6e35beb275adbac48a158cd9058dc6f05441ae95c149d10899a",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/dissertation-de/rq3-generic420/de/tables/paper_fit_scopes.csv",
+        "results/publication-builds/generic420-20261027/paper/rq3-generic420/de/tables/paper_fit_scopes.csv",
+        "results/supplementary-studies/rq3-generic420-detector-corrected-20261027/artifacts/de/tables/paper_fit_scopes.csv"
+      ]
+    },
+    {
+      "latex_path": "daten/evaluation/ranking/phase2_ranking_diagnostic_spearman_six_eligible_strata.csv",
+      "original_path": "9_resources/generated/phase2_ranking_audit/phase2_ranking_diagnostic_spearman_six_eligible_strata.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/evaluation/ranking/phase2_ranking_diagnostic_spearman_six_eligible_strata.csv",
+      "action": "preserved",
+      "sha256": "b4b9024425dd5224305ae1189f5e41c1f4fd07f2dd7cba5c143ab927adc62133",
+      "existing_identical_repository_paths": [
+        "results/supplementary-studies/dissertation-development-2026/inputs/ranking/phase2_ranking_diagnostic_spearman_six_eligible_strata.csv",
+        "results/supplementary-studies/dissertation-development-2026/tables/phase2_ranking_diagnostic_spearman_six_eligible_strata.csv"
+      ]
+    },
+    {
+      "latex_path": "daten/evaluation/ranking/static_proxy_spearman_confirmatory.csv",
+      "original_path": "9_resources/generated/phase2_ranking_audit/static_proxy_spearman_confirmatory.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/evaluation/ranking/static_proxy_spearman_confirmatory.csv",
+      "action": "preserved",
+      "sha256": "881df859bc3f4905c833a5095b12b1259faf60fbc5f379f7670a766cfa171940",
+      "existing_identical_repository_paths": [
+        "results/supplementary-studies/dissertation-development-2026/inputs/ranking/static_proxy_spearman_confirmatory.csv",
+        "results/supplementary-studies/dissertation-development-2026/tables/static_proxy_spearman_confirmatory.csv"
+      ]
+    },
+    {
+      "latex_path": "daten/evaluation/runner_graph_comparison.csv",
+      "original_path": "9_resources/results_r44/data/runner_graph_comparison.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/evaluation/runner_graph_comparison.csv",
+      "action": "preserved",
+      "sha256": "6183bb18bd67dfeb3ee374c78a68fe5b3162f8b127172c2e57249fe0dfc797d9",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/paper/publications/mlsys-r30/data/runner_graph_comparison.csv",
+        "results/split-inference/publications/mlsys-r30/data/runner_graph_comparison.csv",
+        "results/supplementary-studies/rq2-native-scope-20261027/data/runner_graph_comparison.csv"
+      ]
+    },
+    {
+      "latex_path": "daten/evaluation/staged_group_budgets.csv",
+      "original_path": "9_resources/results_r44/data/staged_group_budgets.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/evaluation/staged_group_budgets.csv",
+      "action": "preserved",
+      "sha256": "86eb7eaf887dcc831b253b33b645faafe035d7fe5af6faf9c0f3ea49fb597d5d",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/staged-selection/artifacts/de/tables/group_budgets.csv",
+        "results/publication-builds/generic420-20261027/staged-selection/artifacts/en/tables/group_budgets.csv",
+        "results/supplementary-studies/staged-selection/artifacts/de/tables/group_budgets.csv",
+        "results/supplementary-studies/staged-selection/artifacts/en/tables/group_budgets.csv"
+      ]
+    },
+    {
+      "latex_path": "daten/evaluation/staged_native_comparison.csv",
+      "original_path": "9_resources/results_r44/data/staged_native_comparison.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/evaluation/staged_native_comparison.csv",
+      "action": "preserved",
+      "sha256": "56828b17f408b5a6ddb29c796dd37696d7992c79d3897082671b22f03c4e7d2e",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/staged-selection/artifacts/de/tables/native_test_comparison.csv",
+        "results/publication-builds/generic420-20261027/staged-selection/artifacts/en/tables/native_test_comparison.csv",
+        "results/supplementary-studies/staged-selection/artifacts/de/tables/native_test_comparison.csv",
+        "results/supplementary-studies/staged-selection/artifacts/en/tables/native_test_comparison.csv"
+      ]
+    },
+    {
+      "latex_path": "daten/evaluation/staged_task_budgets.csv",
+      "original_path": "9_resources/results_r44/data/staged_task_budgets.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/evaluation/staged_task_budgets.csv",
+      "action": "preserved",
+      "sha256": "702d16de6c082226794c4d58f8466cbe0b4a348faf68e4fc790e340bac421db2",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/staged-selection/artifacts/de/tables/task_budgets.csv",
+        "results/publication-builds/generic420-20261027/staged-selection/artifacts/en/tables/task_budgets.csv",
+        "results/supplementary-studies/staged-selection/artifacts/de/tables/task_budgets.csv",
+        "results/supplementary-studies/staged-selection/artifacts/en/tables/task_budgets.csv"
+      ]
+    },
+    {
+      "latex_path": "daten/literatur/missing_read_list_updated.csv",
+      "original_path": "9_resources/related_work/missing_read_list_updated.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/literatur/missing_read_list_updated.csv",
+      "action": "preserved",
+      "sha256": "8aaa05c668e9757dfca52c541d6de8da005e11fc8ab5bd45eb1c40e57a70aa0a",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "daten/literatur/related_work_matrix_updated.csv",
+      "original_path": "9_resources/related_work/related_work_matrix_updated.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/literatur/related_work_matrix_updated.csv",
+      "action": "preserved",
+      "sha256": "e6cab57d87fdbd98bed5d4516f5afb64536700bf87e36e8cde01f0e72f9ad1cb",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "daten/modellvergleich/detection_scaling_summary.csv",
+      "original_path": "9_resources/generated_eval/cross_model/data/detection_scaling_summary.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/modellvergleich/detection_scaling_summary.csv",
+      "action": "preserved",
+      "sha256": "61ee743cbb81de718a8ae4bf7d56b820be7c3543a6ed4313b24959b739ed16f6",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "daten/modellvergleich/model_facts_source.json",
+      "original_path": "9_resources/generated_eval/cross_model/data/model_facts_source.json",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/modellvergleich/model_facts_source.json",
+      "action": "preserved",
+      "sha256": "a02cc677df48bf22a96450b12d63aa9096132787bf0e0ff5d94629853d7fd457",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "daten/modellvergleich/model_facts_source.md",
+      "original_path": "9_resources/generated_eval/cross_model/data/model_facts_source.md",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/modellvergleich/model_facts_source.md",
+      "action": "preserved",
+      "sha256": "d31fb2d906d7503b7e5bec9b0e57628153d85adeda5009edf22054278ee27fa5",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "daten/resnet50/resnet50_deepx_stage2_v54c_summary.json",
+      "original_path": "9_resources/results/resnet50_deepx_stage2_v54c_summary.json",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/resnet50/resnet50_deepx_stage2_v54c_summary.json",
+      "action": "preserved",
+      "sha256": "b9695e07cceca6eca16261af5980d5ee9541ecad6d53d95fbbc6ff6424a8ae7a",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "daten/yolov7/prediction_vs_benchmark_yolov7_cases.csv",
+      "original_path": "9_resources/generated_eval/yolov7/data/prediction_vs_benchmark_yolov7_cases.csv",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/yolov7/prediction_vs_benchmark_yolov7_cases.csv",
+      "action": "preserved",
+      "sha256": "fc931e3d039b5f18eeed87a2726807b3fc1673f2170de70dd5eff98ee31b0f76",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "daten/yolov7/prediction_vs_benchmark_yolov7_summary.md",
+      "original_path": "9_resources/generated_eval/yolov7/data/prediction_vs_benchmark_yolov7_summary.md",
+      "category": "daten",
+      "repository_path": "results/supplementary-studies/dissertation-v56/inputs/yolov7/prediction_vs_benchmark_yolov7_summary.md",
+      "action": "preserved",
+      "sha256": "ab3548151ab66c433b0b78181aa06fb4c51c6fad4a460501e99824cd892e6363",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/integration_v47/split/tables/global_winners.tex",
+      "original_path": "9_resources/integration_v47/split/tables/global_winners.tex",
+      "category": "archiv_tabelle",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/integration_v47/split/tables/global_winners.tex",
+      "action": "preserved",
+      "sha256": "3a1f1b2ddb85ecf9174fbe3c11c8848b9ba7339eef8b9ff592fa2fe46371bd54",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/integration_v47/split/tables/quality_tolerance.tex",
+      "original_path": "9_resources/integration_v47/split/tables/quality_tolerance.tex",
+      "category": "archiv_tabelle",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/integration_v47/split/tables/quality_tolerance.tex",
+      "action": "preserved",
+      "sha256": "26676c880130d51dc47dce6b0a1952d8d6969720a4ed708d81e2f05d17fb500f",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/integration_v47/split/tables/repeat_ranges.tex",
+      "original_path": "9_resources/integration_v47/split/tables/repeat_ranges.tex",
+      "category": "archiv_tabelle",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/integration_v47/split/tables/repeat_ranges.tex",
+      "action": "preserved",
+      "sha256": "617cb0e57404aa7a55f9a868bdbb58bb6f0cf5607af7aaf6666660e4382489c4",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/layout_v48/appendix/figures/mobilenet_v3_large.pdf",
+      "original_path": "9_resources/layout_v48/appendix/figures/mobilenet_v3_large.pdf",
+      "category": "archiv_grafik",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/layout_v48/appendix/figures/mobilenet_v3_large.pdf",
+      "action": "preserved",
+      "sha256": "5c269657d879b59bf025d13399dbdec8c7b6469f059572986056750a4821a39b",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/layout_v48/appendix/figures/regnet_x_1_6gf.pdf",
+      "original_path": "9_resources/layout_v48/appendix/figures/regnet_x_1_6gf.pdf",
+      "category": "archiv_grafik",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/layout_v48/appendix/figures/regnet_x_1_6gf.pdf",
+      "action": "preserved",
+      "sha256": "2319041e69c396edb4f2071e7c2ddb9b0acf28fbada7856fc9ebc3c1fa7382b0",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/layout_v48/appendix/figures/resnet50.pdf",
+      "original_path": "9_resources/layout_v48/appendix/figures/resnet50.pdf",
+      "category": "archiv_grafik",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/layout_v48/appendix/figures/resnet50.pdf",
+      "action": "preserved",
+      "sha256": "5f415fd46fb9a6c881204e51f8acd3e0a7129d09a9466415cc0d0290918218dc",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/layout_v48/appendix/figures/yolo11l.pdf",
+      "original_path": "9_resources/layout_v48/appendix/figures/yolo11l.pdf",
+      "category": "archiv_grafik",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/layout_v48/appendix/figures/yolo11l.pdf",
+      "action": "preserved",
+      "sha256": "19882398f44510966fa60e16949b7ec1ee0a7f7999a29c6a4c765b954d603d72",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/layout_v48/appendix/figures/yolo26m.pdf",
+      "original_path": "9_resources/layout_v48/appendix/figures/yolo26m.pdf",
+      "category": "archiv_grafik",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/layout_v48/appendix/figures/yolo26m.pdf",
+      "action": "preserved",
+      "sha256": "b360bb822f3719198651957413453f45ec918cf7ca67728041018469b4a51075",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/layout_v48/appendix/figures/yolo26s.pdf",
+      "original_path": "9_resources/layout_v48/appendix/figures/yolo26s.pdf",
+      "category": "archiv_grafik",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/layout_v48/appendix/figures/yolo26s.pdf",
+      "action": "preserved",
+      "sha256": "a68bb5513a7374153d9b9b6d8f84040ab9bc5bdca6ce1a6aa84ca910ccb332e1",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/layout_v48/appendix/figures/yolov7_paper.pdf",
+      "original_path": "9_resources/layout_v48/appendix/figures/yolov7_paper.pdf",
+      "category": "archiv_grafik",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/layout_v48/appendix/figures/yolov7_paper.pdf",
+      "action": "preserved",
+      "sha256": "c6ff9fb6b8f7328aa27fbb741427f7fa3f73d006d2f52cd7b9c11cc283f87db3",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/layout_v48/evaluation/figures/baseline_effect.pdf",
+      "original_path": "9_resources/layout_v48/evaluation/figures/baseline_effect.pdf",
+      "category": "archiv_grafik",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/layout_v48/evaluation/figures/baseline_effect.pdf",
+      "action": "preserved",
+      "sha256": "4faa5fe2bf0aecc6db28dc866fe998f27f8ccd99b5b8ccb8fc1551818787fe42",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/layout_v48/evaluation/figures/global_tradeoff.pdf",
+      "original_path": "9_resources/layout_v48/evaluation/figures/global_tradeoff.pdf",
+      "category": "archiv_grafik",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/layout_v48/evaluation/figures/global_tradeoff.pdf",
+      "action": "preserved",
+      "sha256": "c60222d9673b0e47a73604ea2a039d403f49876017bcf596e635978d048e753d",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/layout_v48/evaluation/figures/yolov7_quality_energy.pdf",
+      "original_path": "9_resources/layout_v48/evaluation/figures/yolov7_quality_energy.pdf",
+      "category": "archiv_grafik",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/layout_v48/evaluation/figures/yolov7_quality_energy.pdf",
+      "action": "preserved",
+      "sha256": "416a25202b58f3da58245eb29dec529d9bf985a0fdd4361d1d31d1adb97000d9",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/paper_sync_v56/FIGURE_PROVENANCE.json",
+      "original_path": "9_resources/paper_sync_v56/FIGURE_PROVENANCE.json",
+      "category": "herkunftsnachweis",
+      "repository_path": "results/supplementary-studies/dissertation-v56/provenance/FIGURE_PROVENANCE.json",
+      "action": "preserved",
+      "sha256": "d9953e2096997eb57a60031b021871ac4ab5312738501ac460162d1608648e20",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/paper_sync_v56/figures/rq2_generic_selection_loss.pdf",
+      "original_path": "9_resources/paper_sync_v56/figures/rq2_generic_selection_loss.pdf",
+      "category": "archiv_grafik",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/paper_sync_v56/figures/rq2_generic_selection_loss.pdf",
+      "action": "preserved",
+      "sha256": "f0d82cae5b75430ed4e050a20c09d430ce24339e3a0473416089ebccb1d60f91",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/paper_sync_v56/figures/rq2_weighted_all_models.pdf",
+      "original_path": "9_resources/paper_sync_v56/figures/rq2_weighted_all_models.pdf",
+      "category": "archiv_grafik",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/paper_sync_v56/figures/rq2_weighted_all_models.pdf",
+      "action": "preserved",
+      "sha256": "5f4e86b6384bb979bdbee891e004ff8a58177fd7b2050c5a272233c3d5d72fac",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/results_r44/data/current_deployments.tex",
+      "original_path": "9_resources/results_r44/data/current_deployments.tex",
+      "category": "archiv_tabelle",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/results_r44/data/current_deployments.tex",
+      "action": "preserved",
+      "sha256": "0ff044525e4529522529a8b6800e1d1f3c7fb5fe791848f3542347a02ab9a763",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/dissertation-de/mlsys-r30/tables/current_quality_highlights.tex",
+        "results/publication-builds/generic420-20261027/paper/de/mlsys-r30/tables/current_quality_highlights.tex"
+      ]
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/results_r44/data/current_fastest_deployments.tex",
+      "original_path": "9_resources/results_r44/data/current_fastest_deployments.tex",
+      "category": "archiv_tabelle",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/results_r44/data/current_fastest_deployments.tex",
+      "action": "preserved",
+      "sha256": "f977f136e96a87bad8c1afcfd8a309d034343ab3474688dda675a721285aa5f2",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/dissertation-de/split-inference/tables/table3_fastest_deployments.tex",
+        "results/publication-builds/generic420-20261027/paper/de/split-inference/tables/table3_fastest_deployments.tex"
+      ]
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/results_r44/data/current_quality_tolerance.tex",
+      "original_path": "9_resources/results_r44/data/current_quality_tolerance.tex",
+      "category": "archiv_tabelle",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/results_r44/data/current_quality_tolerance.tex",
+      "action": "preserved",
+      "sha256": "bd5a55e8d2e336397a662de32efc4f662e1dddeea5146c86d16647ca6be8cce6",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/dissertation-de/mlsys-r30/tables/r14_quality_advantages.tex",
+        "results/publication-builds/generic420-20261027/paper/de/mlsys-r30/tables/r14_quality_advantages.tex"
+      ]
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/results_r44/data/current_repeat_ranges.tex",
+      "original_path": "9_resources/results_r44/data/current_repeat_ranges.tex",
+      "category": "archiv_tabelle",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/results_r44/data/current_repeat_ranges.tex",
+      "action": "preserved",
+      "sha256": "db2fc9122c6f4e3a4acf95ae941f499d7f01a6ed54b8491ddec98d12e508644b",
+      "existing_identical_repository_paths": [
+        "results/publication-builds/generic420-20261027/dissertation-de/mlsys-r30/tables/r21_winner_repeat_ranges.tex",
+        "results/publication-builds/generic420-20261027/paper/de/mlsys-r30/tables/r21_winner_repeat_ranges.tex"
+      ]
+    },
+    {
+      "latex_path": "redaktion/archiv/ressourcen/review_v49/quality.tex",
+      "original_path": "9_resources/review_v49/quality.tex",
+      "category": "archiv_tabelle",
+      "repository_path": "results/supplementary-studies/dissertation-v56/archive/review_v49/quality.tex",
+      "action": "preserved",
+      "sha256": "0113a7a151b611439766c64af4044a2f920bb1bca17af130a5c867733c88b513",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/quellen/energy_reference_v41_README.md",
+      "original_path": "9_resources/energy_reference_v41/README.md",
+      "category": "herkunftsnachweis",
+      "repository_path": "results/supplementary-studies/dissertation-v56/provenance/energy_reference_v41_README.md",
+      "action": "preserved",
+      "sha256": "8f0e5feab899b9b5aaa3b10aae0e5b129c14ec8447fc3d189ee3bf68256b6362",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/quellen/energy_reference_v41_SOURCE_SHA256.txt",
+      "original_path": "9_resources/energy_reference_v41/SOURCE_SHA256.txt",
+      "category": "herkunftsnachweis",
+      "repository_path": "results/supplementary-studies/dissertation-v56/provenance/energy_reference_v41_SOURCE_SHA256.txt",
+      "action": "preserved",
+      "sha256": "356e63860e67b8ae1ccd4e6bb86e72de2b5893d49f31da8155f3f1f622b1ca60",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/quellen/results_r44_SOURCE_MANIFEST.json",
+      "original_path": "9_resources/results_r44/SOURCE_MANIFEST.json",
+      "category": "herkunftsnachweis",
+      "repository_path": "results/supplementary-studies/dissertation-v56/provenance/results_r44_SOURCE_MANIFEST.json",
+      "action": "preserved",
+      "sha256": "52cd12759303fae37fe58c2cb317378b0482b14ed9423c2e4d48883ea8c203c1",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "redaktion/quellen/results_r44_appendix_SOURCE.json",
+      "original_path": "9_resources/results_r44_appendix/SOURCE.json",
+      "category": "herkunftsnachweis",
+      "repository_path": "results/supplementary-studies/dissertation-v56/provenance/results_r44_appendix_SOURCE.json",
+      "action": "preserved",
+      "sha256": "ee38ce5b83954137c7c5823b55376d758470f94fd5447ad0b96935b1201f7680",
+      "existing_identical_repository_paths": []
+    },
+    {
+      "latex_path": "0_latex/energy_numbers.tex",
+      "original_path": "9_resources/energy_v43/generated/energy_numbers.tex",
+      "category": "kennzahlenmakros",
+      "repository_path": "publications/dissertation/thesis-v56/values/energy_numbers.tex",
+      "action": "preserved",
+      "sha256": "d22eebc0cdce04044df690dfa39134cdac25e3bde57e6b1dd95c7974a3f92778"
+    }
+  ],
+  "inline_tables": [
+    {
+      "section": "2_body/08_evaluation/20_confirmation.tex",
+      "original_path": "9_resources/confirmation_v50/generated/energy.tex",
+      "repository_path": "publications/dissertation/thesis-v56/inline-table-exports/confirmation_v50_energy.tex",
+      "sha256": "ce79cdd8b8f3d7d338b31118b29366a43b21b951a09fdb11917890eacf08f40e"
+    },
+    {
+      "section": "2_body/08_evaluation/19_review_qualification.tex",
+      "original_path": "9_resources/confirmation_v50/generated/quality.tex",
+      "repository_path": "publications/dissertation/thesis-v56/inline-table-exports/confirmation_v50_quality.tex",
+      "sha256": "5bfcc9ac22b2039b323bf131be658306f681abe5dc92cb742bc74a6664c8a77e"
+    },
+    {
+      "section": "2_body/04_energy/13_execution_protocol_evidence.tex",
+      "original_path": "9_resources/integration_v47/energy/generated/fixed_window.tex",
+      "repository_path": "publications/dissertation/thesis-v56/inline-table-exports/integration_v47_fixed_window.tex",
+      "sha256": "e80a06f6c1d449e219325a749233b82a8cf2ae03b9ea3aa4dd0635ad4752faf3"
+    },
+    {
+      "section": "2_body/04_energy/10_sampling_window_evidence.tex",
+      "original_path": "9_resources/integration_v47/energy/generated/rate_duration.tex",
+      "repository_path": "publications/dissertation/thesis-v56/inline-table-exports/integration_v47_rate_duration.tex",
+      "sha256": "36fe5259a6795dc183e9ddf2d32f3b08c7381c9926096e9c0323ca7a9b6c4b82"
+    },
+    {
+      "section": "2_body/04_energy/11_spectral_evidence.tex",
+      "original_path": "9_resources/integration_v47/energy/generated/spectral_paths.tex",
+      "repository_path": "publications/dissertation/thesis-v56/inline-table-exports/integration_v47_spectral_paths.tex",
+      "sha256": "0e26a3442c4c02f4dbfd7fdf6b7060101081976b3a662c48e05ede1d9664ef87"
+    },
+    {
+      "section": "2_body/08_evaluation/15_deployment_comparison.tex",
+      "original_path": "9_resources/integration_v47/split/tables/full_overview.tex",
+      "repository_path": "publications/dissertation/thesis-v56/inline-table-exports/integration_v47_full_overview.tex",
+      "sha256": "a864049f8f4fe3650350524dc99f947234a5a7c11d32d8cf37f8fd4ddabbddae"
+    },
+    {
+      "section": "2_body/08_evaluation/21_graph_selection.tex",
+      "original_path": "9_resources/results_r44/tables/generic_fit_scopes.tex",
+      "repository_path": "publications/dissertation/thesis-v56/inline-table-exports/results_r44_generic_fit_scopes.tex",
+      "sha256": "614c864c9d4bfd397c0fe80bae2982f8abc88b94c409be04070c4d4395b86404"
+    },
+    {
+      "section": "2_body/08_evaluation/15_deployment_comparison.tex",
+      "original_path": "9_resources/results_r44/tables/global_winners.tex",
+      "repository_path": "publications/dissertation/thesis-v56/inline-table-exports/results_r44_global_winners.tex",
+      "sha256": "85d4bf5f027b176a9114ad24d0917819e0e4744393878988c63125656d3c3d60"
+    },
+    {
+      "section": "2_body/08_evaluation/15_deployment_comparison.tex",
+      "original_path": "9_resources/results_r44/tables/quality.tex",
+      "repository_path": "publications/dissertation/thesis-v56/inline-table-exports/results_r44_quality.tex",
+      "sha256": "ea2c6640d5867a70a388e71a5db6f816258ad8f62a6fbbbdb98acc7e81aea0b0"
+    },
+    {
+      "section": "2_body/08_evaluation/15_deployment_comparison.tex",
+      "original_path": "9_resources/results_r44/tables/quality_tolerance.tex",
+      "repository_path": "publications/dissertation/thesis-v56/inline-table-exports/results_r44_quality_tolerance.tex",
+      "sha256": "66de32a868aed0df62de49a4e37fde202ddc6c2ae25dc64e922e62bf878a110c"
+    },
+    {
+      "section": "2_body/08_evaluation/21_graph_selection.tex",
+      "original_path": "9_resources/results_r44/tables/staged_budget.tex",
+      "repository_path": "publications/dissertation/thesis-v56/inline-table-exports/results_r44_staged_budget.tex",
+      "sha256": "0d11ec64afa58250f8df164221539ff2b6a4f847f89e65b835d13776f95acfbf"
+    },
+    {
+      "section": "2_body/08_evaluation/11_resnet50_energy_throughput_case_study.tex",
+      "original_path": "9_resources/review_v49/sensitivity.tex",
+      "repository_path": "publications/dissertation/thesis-v56/inline-table-exports/review_v49_sensitivity.tex",
+      "sha256": "d870daec5a2cd2e87a7f739a4b848b78ee2d5b0a2804600ed11697a387547d54"
+    },
+    {
+      "section": "2_body/08_evaluation/20_confirmation.tex",
+      "original_path": "9_resources/review_v53/generated/confirmation_performance.tex",
+      "repository_path": "publications/dissertation/thesis-v56/inline-table-exports/review_v53_confirmation_performance.tex",
+      "sha256": "5f125284253a0aebec788e0ee47d0a3ecd71abc0d4979f633aef1bbd16806959"
+    },
+    {
+      "section": "2_body/08_evaluation/20_confirmation.tex",
+      "original_path": "9_resources/review_v53/generated/energy_sessions.tex",
+      "repository_path": "publications/dissertation/thesis-v56/inline-table-exports/review_v53_energy_sessions.tex",
+      "sha256": "358493a1a4c75d829a6107a25a52c44b255d68fb94c7b77e9aa5ab615e30fa63"
+    },
+    {
+      "section": "2_body/08_evaluation/20_confirmation.tex",
+      "original_path": "9_resources/review_v53/generated/joint_outcomes.tex",
+      "repository_path": "publications/dissertation/thesis-v56/inline-table-exports/review_v53_joint_outcomes.tex",
+      "sha256": "e9edefd4dce06e99abe054d037a7d2351a6acde0a9295951b93264b6a94b23b6"
+    },
+    {
+      "section": "2_body/08_evaluation/13_yolov7_standard_contract_closeout.tex",
+      "original_path": "9_resources/style_v44/generated/decoder_table.tex",
+      "repository_path": "publications/dissertation/thesis-v56/inline-table-exports/style_v44_decoder_table.tex",
+      "sha256": "43a88a355d37511bc842823bace210cc91ff030bb9e695d9fe75b50e15e063f0"
+    },
+    {
+      "section": "2_body/08_evaluation/13_yolov7_standard_contract_closeout.tex",
+      "original_path": "9_resources/style_v44/generated/native_table.tex",
+      "repository_path": "publications/dissertation/thesis-v56/inline-table-exports/style_v44_native_table.tex",
+      "sha256": "0dbda4f1c86e20f0447c83c75d92572762f208d5b7801779c6b34abb47151b8a"
+    },
+    {
+      "section": "2_body/08_evaluation/13_yolov7_standard_contract_closeout.tex",
+      "original_path": "9_resources/style_v44/generated/quality_table.tex",
+      "repository_path": "publications/dissertation/thesis-v56/inline-table-exports/style_v44_quality_table.tex",
+      "sha256": "e45a1f8849683bb65448afcb3fab3fc6047fcfa7dc645f70bbc9c143fc41dd91"
+    },
+    {
+      "section": "2_body/04_energy/13_execution_protocol_evidence.tex",
+      "original_path": "9_resources/style_v45/generated/controlled_rate_table.tex",
+      "repository_path": "publications/dissertation/thesis-v56/inline-table-exports/style_v45_controlled_rate_table.tex",
+      "sha256": "be2b61e672d9f1f6873f9747e98704da93a859e817a0546d674057b57ebf1ad7"
+    }
+  ],
+  "legacy_generators": [
+    {
+      "repository_path": "scripts/dissertation/legacy-v56/energie/generate_energy_results_v41.py",
+      "original_path": "9_resources/energy_reference_v41/generate_energy_results_v41.py",
+      "original_sha256": "dc62bf45d9ea72843a5ca38f42300ab226b05b218b9bf6ac7fd9424e61bcb7c0",
+      "repository_sha256": "f4e3ca139edcf288965ad9f47e0b2f4702b4f4c125a154e12c56dfd996a74e8f",
+      "status": "historical_source_not_current_pipeline"
+    },
+    {
+      "repository_path": "scripts/dissertation/legacy-v56/energie/generate_measurement_setups_v41.py",
+      "original_path": "9_resources/energy_reference_v41/generate_measurement_setups_v41.py",
+      "original_sha256": "979e0f334e9a2fb8f18fc7b0e6e1467b9739b44b1ba7b9545bb7aaa62010167c",
+      "repository_sha256": "10240dccdceea9552c6c3b0425d413ca85f9ac3f3fae87f8e420ba80ea377f22",
+      "status": "historical_source_not_current_pipeline"
+    },
+    {
+      "repository_path": "scripts/dissertation/legacy-v56/energie/generate_thesis_energy_figures_v41.py",
+      "original_path": "9_resources/energy_reference_v41/generate_thesis_energy_figures_v41.py",
+      "original_sha256": "05e65e548326847b3426321b302ac1cb850e12b444b8ef03c017e307ecadc8b6",
+      "repository_sha256": "b6d9bd3ccafc4925053334f9facf8ed3094de53f6ed6f8f340a031c507a148c3",
+      "status": "historical_source_not_current_pipeline"
+    },
+    {
+      "repository_path": "scripts/dissertation/legacy-v56/evaluation/generate_phase2_ranking_audit_figure.py",
+      "original_path": "9_resources/generated/phase2_ranking_audit/generate_phase2_ranking_audit_figure.py",
+      "original_sha256": "d472cec1faf7677d716361af5e88f6ce3d18f1e164dfb88c6008c6ec90821a26",
+      "repository_sha256": "3fbcadc418f628b1fcc47679ff7b8f224de52638d89291de2582dcd7c34a53bf",
+      "status": "historical_source_not_current_pipeline"
+    },
+    {
+      "repository_path": "scripts/dissertation/legacy-v56/evaluation/generate_static_proxy_figure.py",
+      "original_path": "9_resources/generated/phase2_ranking_audit/generate_static_proxy_figure.py",
+      "original_sha256": "e1f1bf61a81157220aba1083ccd6d56d7d887d19c0017fbcda7a5df8f094142f",
+      "repository_sha256": "b4f172f854c653fd05bc7bfae0c59f609aaaade83b0d679a396bb1701ea98b9d",
+      "status": "historical_source_not_current_pipeline"
+    },
+    {
+      "repository_path": "scripts/dissertation/legacy-v56/grafiken/generate_redesigned_figures.py",
+      "original_path": "9_resources/redesigned/scripts/generate_redesigned_figures.py",
+      "original_sha256": "a829c87ae5e829f5b71dfe17ae383c14081bc80f620d9d99b405a715a1f9493e",
+      "repository_sha256": "9253241e95d80a0ec16c983ea1dbe16a8999968a6603b09ac4a8d2e26532b0bc",
+      "status": "historical_source_not_current_pipeline"
+    }
+  ],
+  "legacy_energy_reproduction": {
+    "inputs": "inputs/energie/",
+    "source_code": "scripts/dissertation/legacy-v56/energie/",
+    "date": "2026-10-28",
+    "new_measurements": false,
+    "description": "Five historical English PDFs and the historical v41 numeric macro export, regenerated from the frozen CSV/Markdown inputs. These are not the active German v56/v43 exports.",
+    "artifacts": [
+      {
+        "repository_path": "results/supplementary-studies/dissertation-v56/artifacts/energy-v41/figures/cross_workload_frequency_bands_thesis_v41.pdf",
+        "sha256": "815fd8b61b564a371c948b5db2a9b82e53ec60c44c8dc73b4a724f985b4e6e11"
+      },
+      {
+        "repository_path": "results/supplementary-studies/dissertation-v56/artifacts/energy-v41/figures/direct_vs_same_trace_2p5ksps_thesis_v41.pdf",
+        "sha256": "8543d2b1eca71c29fafcd93f85f51b2497d004c40d9f5a00aed1d788e9f0f695"
+      },
+      {
+        "repository_path": "results/supplementary-studies/dissertation-v56/artifacts/energy-v41/figures/measurement_reference_setups_thesis_v41.pdf",
+        "sha256": "0d7dd1d2f14e9801a52452afc7f978c21623b1dbc2216151bf160c9aec777e2e"
+      },
+      {
+        "repository_path": "results/supplementary-studies/dissertation-v56/artifacts/energy-v41/figures/measurement_setups_v41.pdf",
+        "sha256": "6a686e3d050f6e1a242c90ed67a330002854be2940cbc7b5e3b5b1d59b87b456"
+      },
+      {
+        "repository_path": "results/supplementary-studies/dissertation-v56/artifacts/energy-v41/figures/sampling_duration_evidence_thesis_v41.pdf",
+        "sha256": "1091c5d86669d56675eb167ae9fb5cc362a365493bfc6da01fc777767b69dd82"
+      },
+      {
+        "repository_path": "results/supplementary-studies/dissertation-v56/artifacts/energy-v41/tex/energy_results_v41.tex",
+        "sha256": "799a98600e78d37adee4978d2c5e8fadeba4d74bbe3a79559e323b8ee9954a44"
+      }
+    ]
+  }
+}

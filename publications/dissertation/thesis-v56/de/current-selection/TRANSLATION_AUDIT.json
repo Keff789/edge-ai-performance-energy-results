@@ -1,0 +1,2193 @@
+{
+  "figures_checked": 15,
+  "untranslated": [],
+  "figures": {
+    "figures/fastest_split_baseline_comparison": {
+      "labels": [
+        [
+          "0×",
+          "0×"
+        ],
+        [
+          "1.06",
+          "1,06"
+        ],
+        [
+          "1.10",
+          "1,10"
+        ],
+        [
+          "1.23 / 1.24",
+          "1,23 / 1,24"
+        ],
+        [
+          "1.30 / 1.31",
+          "1,30 / 1,31"
+        ],
+        [
+          "1.35",
+          "1,35"
+        ],
+        [
+          "1.68",
+          "1,68"
+        ],
+        [
+          "1×",
+          "1×"
+        ],
+        [
+          "2.11",
+          "2,11"
+        ],
+        [
+          "2.13",
+          "2,13"
+        ],
+        [
+          "2.54",
+          "2,54"
+        ],
+        [
+          "2×",
+          "2×"
+        ],
+        [
+          "3×",
+          "3×"
+        ],
+        [
+          "4.33",
+          "4,33"
+        ],
+        [
+          "4×",
+          "4×"
+        ],
+        [
+          "5×",
+          "5×"
+        ],
+        [
+          "Global Full",
+          "Globaler Full"
+        ],
+        [
+          "MobileNetV3-L",
+          "MobileNetV3-L"
+        ],
+        [
+          "RegNet-X",
+          "RegNet-X"
+        ],
+        [
+          "ResNet-50",
+          "ResNet-50"
+        ],
+        [
+          "Same-host Full",
+          "Full auf demselben System"
+        ],
+        [
+          "Split throughput / Full throughput",
+          "Split-Durchsatz / Full-Durchsatz"
+        ],
+        [
+          "YOLO11l",
+          "YOLO11l"
+        ],
+        [
+          "YOLO26m",
+          "YOLO26m"
+        ],
+        [
+          "YOLO26s",
+          "YOLO26s"
+        ],
+        [
+          "YOLOv7",
+          "YOLOv7"
+        ]
+      ],
+      "untranslated": []
+    },
+    "figures/fastest_deployment_tradeoff": {
+      "labels": [
+        [
+          "0.2×",
+          "0,2×"
+        ],
+        [
+          "0.4×",
+          "0,4×"
+        ],
+        [
+          "0.5×",
+          "0,5×"
+        ],
+        [
+          "0.6×",
+          "0,6×"
+        ],
+        [
+          "0.75×",
+          "0,75×"
+        ],
+        [
+          "0.8×",
+          "0,8×"
+        ],
+        [
+          "1.25×",
+          "1,25×"
+        ],
+        [
+          "1.2×",
+          "1,2×"
+        ],
+        [
+          "1.4×",
+          "1,4×"
+        ],
+        [
+          "1.5×",
+          "1,5×"
+        ],
+        [
+          "1.6×",
+          "1,6×"
+        ],
+        [
+          "1.75×",
+          "1,75×"
+        ],
+        [
+          "1.8×",
+          "1,8×"
+        ],
+        [
+          "1×",
+          "1×"
+        ],
+        [
+          "2.25×",
+          "2,25×"
+        ],
+        [
+          "2.5×",
+          "2,5×"
+        ],
+        [
+          "2.75×",
+          "2,75×"
+        ],
+        [
+          "2×",
+          "2×"
+        ],
+        [
+          "3×",
+          "3×"
+        ],
+        [
+          "MobileNetV3-L",
+          "MobileNetV3-L"
+        ],
+        [
+          "RegNet-X",
+          "RegNet-X"
+        ],
+        [
+          "ResNet-50",
+          "ResNet-50"
+        ],
+        [
+          "Split / globally fastest Full: throughput",
+          "Split / global schnellster Full: Durchsatz"
+        ],
+        [
+          "Split / same Full: energy per image",
+          "Split / derselbe Full: Energie je Bild"
+        ],
+        [
+          "YOLO11l",
+          "YOLO11l"
+        ],
+        [
+          "YOLO26m",
+          "YOLO26m"
+        ],
+        [
+          "YOLO26s",
+          "YOLO26s"
+        ],
+        [
+          "YOLOv7",
+          "YOLOv7"
+        ]
+      ],
+      "untranslated": []
+    },
+    "figures/resnet_h8_energy_current": {
+      "labels": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "100",
+          "100"
+        ],
+        [
+          "120",
+          "120"
+        ],
+        [
+          "140",
+          "140"
+        ],
+        [
+          "20",
+          "20"
+        ],
+        [
+          "200",
+          "200"
+        ],
+        [
+          "300",
+          "300"
+        ],
+        [
+          "40",
+          "40"
+        ],
+        [
+          "400",
+          "400"
+        ],
+        [
+          "500",
+          "500"
+        ],
+        [
+          "60",
+          "60"
+        ],
+        [
+          "600",
+          "600"
+        ],
+        [
+          "700",
+          "700"
+        ],
+        [
+          "80",
+          "80"
+        ],
+        [
+          "H8 Full",
+          "H8 Full"
+        ],
+        [
+          "Native splits",
+          "Native-Splits"
+        ],
+        [
+          "System energy (mJ/image)",
+          "Systemenergie (mJ/Bild)"
+        ],
+        [
+          "TensorRT Full",
+          "TensorRT Full"
+        ],
+        [
+          "Throughput (FPS)",
+          "Durchsatz (FPS)"
+        ],
+        [
+          "b038",
+          "b038"
+        ],
+        [
+          "b060",
+          "b060"
+        ]
+      ],
+      "untranslated": []
+    },
+    "figures/yolov7_h8_case": {
+      "labels": [
+        [
+          "% · higher is better",
+          "% · höher ist besser"
+        ],
+        [
+          "(a) Throughput",
+          "(a) Durchsatz"
+        ],
+        [
+          "(b) System energy",
+          "(b) Systemenergie"
+        ],
+        [
+          "(c) COCO AP$_{50:95}$",
+          "(c) COCO AP$_{50:95}$"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "113",
+          "113"
+        ],
+        [
+          "120",
+          "120"
+        ],
+        [
+          "20",
+          "20"
+        ],
+        [
+          "200",
+          "200"
+        ],
+        [
+          "32",
+          "32"
+        ],
+        [
+          "330.14",
+          "330,14"
+        ],
+        [
+          "40",
+          "40"
+        ],
+        [
+          "40.78",
+          "40,78"
+        ],
+        [
+          "400",
+          "400"
+        ],
+        [
+          "45.74",
+          "45,74"
+        ],
+        [
+          "46.02",
+          "46,02"
+        ],
+        [
+          "53",
+          "53"
+        ],
+        [
+          "549.84",
+          "549,84"
+        ],
+        [
+          "598.41",
+          "598,41"
+        ],
+        [
+          "600",
+          "600"
+        ],
+        [
+          "80",
+          "80"
+        ],
+        [
+          "FPS · higher is better",
+          "FPS · höher ist besser"
+        ],
+        [
+          "H8\nFull",
+          "H8\nFull"
+        ],
+        [
+          "Split\nb066",
+          "Split\nb066"
+        ],
+        [
+          "TRT\nFull",
+          "TRT\nFull"
+        ],
+        [
+          "mJ/image · lower is better",
+          "mJ/Bild · niedriger ist besser"
+        ]
+      ],
+      "untranslated": []
+    },
+    "figures/04_tradeoff_mobilenet_v3_large": {
+      "labels": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "100",
+          "100"
+        ],
+        [
+          "120",
+          "120"
+        ],
+        [
+          "1200",
+          "1200"
+        ],
+        [
+          "15",
+          "15"
+        ],
+        [
+          "150",
+          "150"
+        ],
+        [
+          "160",
+          "160"
+        ],
+        [
+          "1600",
+          "1600"
+        ],
+        [
+          "200",
+          "200"
+        ],
+        [
+          "2000",
+          "2000"
+        ],
+        [
+          "30",
+          "30"
+        ],
+        [
+          "40",
+          "40"
+        ],
+        [
+          "400",
+          "400"
+        ],
+        [
+          "45",
+          "45"
+        ],
+        [
+          "50",
+          "50"
+        ],
+        [
+          "58",
+          "58"
+        ],
+        [
+          "60",
+          "60"
+        ],
+        [
+          "62",
+          "62"
+        ],
+        [
+          "64",
+          "64"
+        ],
+        [
+          "66",
+          "66"
+        ],
+        [
+          "68",
+          "68"
+        ],
+        [
+          "70",
+          "70"
+        ],
+        [
+          "72",
+          "72"
+        ],
+        [
+          "74",
+          "74"
+        ],
+        [
+          "80",
+          "80"
+        ],
+        [
+          "800",
+          "800"
+        ],
+        [
+          "Beschleuniger-Full",
+          "Beschleuniger-Full"
+        ],
+        [
+          "DeepX   n=36 · front=2",
+          "DeepX   n=36 · Pareto-Punkte=2"
+        ],
+        [
+          "Empirical Pareto point",
+          "Empirischer Pareto-Punkt"
+        ],
+        [
+          "Energy (mJ/image)",
+          "Energie (mJ/Bild)"
+        ],
+        [
+          "F: fastest · E: lowest energy · N/G: Native/Generic",
+          "F: schnellster · E: energieärmster · N/G: Native/Generic"
+        ],
+        [
+          "G E b019",
+          "G E b019"
+        ],
+        [
+          "G F b027",
+          "G F b027"
+        ],
+        [
+          "G F=E b027",
+          "G F=E b027"
+        ],
+        [
+          "G F=E b056",
+          "G F=E b056"
+        ],
+        [
+          "Generic",
+          "Generic"
+        ],
+        [
+          "H10   n=36 · front=3",
+          "H10   n=36 · Pareto-Punkte=3"
+        ],
+        [
+          "H8   n=36 · front=1",
+          "H8   n=36 · Pareto-Punkte=1"
+        ],
+        [
+          "N E b085",
+          "N E b085"
+        ],
+        [
+          "N F b078",
+          "N F b078"
+        ],
+        [
+          "N F=E b027",
+          "N F=E b027"
+        ],
+        [
+          "N F=E b135",
+          "N F=E b135"
+        ],
+        [
+          "Native",
+          "Native"
+        ],
+        [
+          "TRT Full",
+          "TRT Full"
+        ],
+        [
+          "Throughput (images/s)",
+          "Durchsatz (Bilder/s)"
+        ],
+        [
+          "Top-1 accuracy (%)",
+          "Top-1-Genauigkeit (%)"
+        ],
+        [
+          "Vendor Full",
+          "Beschleuniger-Full"
+        ],
+        [
+          "−40",
+          "−40"
+        ],
+        [
+          "−400",
+          "−400"
+        ],
+        [
+          "−50",
+          "−50"
+        ]
+      ],
+      "untranslated": []
+    },
+    "figures/04_tradeoff_regnet_x_1_6gf": {
+      "labels": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "100",
+          "100"
+        ],
+        [
+          "1000",
+          "1000"
+        ],
+        [
+          "120",
+          "120"
+        ],
+        [
+          "125",
+          "125"
+        ],
+        [
+          "150",
+          "150"
+        ],
+        [
+          "1500",
+          "1500"
+        ],
+        [
+          "160",
+          "160"
+        ],
+        [
+          "20",
+          "20"
+        ],
+        [
+          "200",
+          "200"
+        ],
+        [
+          "2000",
+          "2000"
+        ],
+        [
+          "25",
+          "25"
+        ],
+        [
+          "300",
+          "300"
+        ],
+        [
+          "40",
+          "40"
+        ],
+        [
+          "400",
+          "400"
+        ],
+        [
+          "450",
+          "450"
+        ],
+        [
+          "50",
+          "50"
+        ],
+        [
+          "500",
+          "500"
+        ],
+        [
+          "60",
+          "60"
+        ],
+        [
+          "600",
+          "600"
+        ],
+        [
+          "75",
+          "75"
+        ],
+        [
+          "750",
+          "750"
+        ],
+        [
+          "77.4",
+          "77,4"
+        ],
+        [
+          "77.6",
+          "77,6"
+        ],
+        [
+          "77.8",
+          "77,8"
+        ],
+        [
+          "78.0",
+          "78,0"
+        ],
+        [
+          "78.2",
+          "78,2"
+        ],
+        [
+          "78.4",
+          "78,4"
+        ],
+        [
+          "78.6",
+          "78,6"
+        ],
+        [
+          "78.8",
+          "78,8"
+        ],
+        [
+          "79.0",
+          "79,0"
+        ],
+        [
+          "79.2",
+          "79,2"
+        ],
+        [
+          "80",
+          "80"
+        ],
+        [
+          "800",
+          "800"
+        ],
+        [
+          "Beschleuniger-Full",
+          "Beschleuniger-Full"
+        ],
+        [
+          "DeepX   n=42 · front=2",
+          "DeepX   n=42 · Pareto-Punkte=2"
+        ],
+        [
+          "Empirical Pareto point",
+          "Empirischer Pareto-Punkt"
+        ],
+        [
+          "Energy (mJ/image)",
+          "Energie (mJ/Bild)"
+        ],
+        [
+          "F: fastest · E: lowest energy · N/G: Native/Generic",
+          "F: schnellster · E: energieärmster · N/G: Native/Generic"
+        ],
+        [
+          "G E b080",
+          "G E b080"
+        ],
+        [
+          "G F b052",
+          "G F b052"
+        ],
+        [
+          "G F=E b052",
+          "G F=E b052"
+        ],
+        [
+          "G F=E b066",
+          "G F=E b066"
+        ],
+        [
+          "Generic",
+          "Generic"
+        ],
+        [
+          "H10   n=42 · front=1",
+          "H10   n=42 · Pareto-Punkte=1"
+        ],
+        [
+          "H8   n=42 · front=1",
+          "H8   n=42 · Pareto-Punkte=1"
+        ],
+        [
+          "N E b115",
+          "N E b115"
+        ],
+        [
+          "N F b109",
+          "N F b109"
+        ],
+        [
+          "N F=E b073",
+          "N F=E b073"
+        ],
+        [
+          "N F=E b123",
+          "N F=E b123"
+        ],
+        [
+          "Native",
+          "Native"
+        ],
+        [
+          "TRT Full",
+          "TRT Full"
+        ],
+        [
+          "Throughput (images/s)",
+          "Durchsatz (Bilder/s)"
+        ],
+        [
+          "Top-1 accuracy (%)",
+          "Top-1-Genauigkeit (%)"
+        ],
+        [
+          "Vendor Full",
+          "Beschleuniger-Full"
+        ],
+        [
+          "−40",
+          "−40"
+        ],
+        [
+          "−500",
+          "−500"
+        ]
+      ],
+      "untranslated": []
+    },
+    "figures/04_tradeoff_resnet50": {
+      "labels": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1000",
+          "1000"
+        ],
+        [
+          "120",
+          "120"
+        ],
+        [
+          "1200",
+          "1200"
+        ],
+        [
+          "160",
+          "160"
+        ],
+        [
+          "1600",
+          "1600"
+        ],
+        [
+          "200",
+          "200"
+        ],
+        [
+          "250",
+          "250"
+        ],
+        [
+          "40",
+          "40"
+        ],
+        [
+          "400",
+          "400"
+        ],
+        [
+          "500",
+          "500"
+        ],
+        [
+          "600",
+          "600"
+        ],
+        [
+          "750",
+          "750"
+        ],
+        [
+          "80",
+          "80"
+        ],
+        [
+          "80.0",
+          "80,0"
+        ],
+        [
+          "80.1",
+          "80,1"
+        ],
+        [
+          "80.2",
+          "80,2"
+        ],
+        [
+          "80.3",
+          "80,3"
+        ],
+        [
+          "80.4",
+          "80,4"
+        ],
+        [
+          "80.5",
+          "80,5"
+        ],
+        [
+          "80.6",
+          "80,6"
+        ],
+        [
+          "80.7",
+          "80,7"
+        ],
+        [
+          "80.8",
+          "80,8"
+        ],
+        [
+          "800",
+          "800"
+        ],
+        [
+          "Beschleuniger-Full",
+          "Beschleuniger-Full"
+        ],
+        [
+          "DeepX   n=40 · front=4",
+          "DeepX   n=40 · Pareto-Punkte=4"
+        ],
+        [
+          "Empirical Pareto point",
+          "Empirischer Pareto-Punkt"
+        ],
+        [
+          "Energy (mJ/image)",
+          "Energie (mJ/Bild)"
+        ],
+        [
+          "F: fastest · E: lowest energy · N/G: Native/Generic",
+          "F: schnellster · E: energieärmster · N/G: Native/Generic"
+        ],
+        [
+          "G E b060",
+          "G E b060"
+        ],
+        [
+          "G E b119",
+          "G E b119"
+        ],
+        [
+          "G F b002",
+          "G F b002"
+        ],
+        [
+          "G F=E b002",
+          "G F=E b002"
+        ],
+        [
+          "Generic",
+          "Generic"
+        ],
+        [
+          "H10   n=40 · front=1",
+          "H10   n=40 · Pareto-Punkte=1"
+        ],
+        [
+          "H8   n=40 · front=2",
+          "H8   n=40 · Pareto-Punkte=2"
+        ],
+        [
+          "N E b060",
+          "N E b060"
+        ],
+        [
+          "N E b119",
+          "N E b119"
+        ],
+        [
+          "N F b038",
+          "N F b038"
+        ],
+        [
+          "N F b104",
+          "N F b104"
+        ],
+        [
+          "N F=E b095",
+          "N F=E b095"
+        ],
+        [
+          "Native",
+          "Native"
+        ],
+        [
+          "TRT Full",
+          "TRT Full"
+        ],
+        [
+          "Throughput (images/s)",
+          "Durchsatz (Bilder/s)"
+        ],
+        [
+          "Top-1 accuracy (%)",
+          "Top-1-Genauigkeit (%)"
+        ],
+        [
+          "Vendor Full",
+          "Beschleuniger-Full"
+        ],
+        [
+          "−400",
+          "−400"
+        ]
+      ],
+      "untranslated": []
+    },
+    "figures/04_tradeoff_yolo11l": {
+      "labels": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1200",
+          "1200"
+        ],
+        [
+          "15",
+          "15"
+        ],
+        [
+          "150",
+          "150"
+        ],
+        [
+          "1600",
+          "1600"
+        ],
+        [
+          "20",
+          "20"
+        ],
+        [
+          "2000",
+          "2000"
+        ],
+        [
+          "30",
+          "30"
+        ],
+        [
+          "300",
+          "300"
+        ],
+        [
+          "40",
+          "40"
+        ],
+        [
+          "400",
+          "400"
+        ],
+        [
+          "44.0",
+          "44,0"
+        ],
+        [
+          "44.5",
+          "44,5"
+        ],
+        [
+          "45",
+          "45"
+        ],
+        [
+          "45.0",
+          "45,0"
+        ],
+        [
+          "45.5",
+          "45,5"
+        ],
+        [
+          "450",
+          "450"
+        ],
+        [
+          "46.0",
+          "46,0"
+        ],
+        [
+          "46.5",
+          "46,5"
+        ],
+        [
+          "47.0",
+          "47,0"
+        ],
+        [
+          "60",
+          "60"
+        ],
+        [
+          "600",
+          "600"
+        ],
+        [
+          "75",
+          "75"
+        ],
+        [
+          "750",
+          "750"
+        ],
+        [
+          "80",
+          "80"
+        ],
+        [
+          "800",
+          "800"
+        ],
+        [
+          "90",
+          "90"
+        ],
+        [
+          "900",
+          "900"
+        ],
+        [
+          "Beschleuniger-Full",
+          "Beschleuniger-Full"
+        ],
+        [
+          "COCO mAP@[.50:.95] (%)",
+          "COCO mAP@[.50:.95] (%)"
+        ],
+        [
+          "DeepX   n=9 · front=2",
+          "DeepX   n=9 · Pareto-Punkte=2"
+        ],
+        [
+          "Empirical Pareto point",
+          "Empirischer Pareto-Punkt"
+        ],
+        [
+          "Energy (mJ/image)",
+          "Energie (mJ/Bild)"
+        ],
+        [
+          "F: fastest · E: lowest energy · N/G: Native/Generic",
+          "F: schnellster · E: energieärmster · N/G: Native/Generic"
+        ],
+        [
+          "G E b120",
+          "G E b120"
+        ],
+        [
+          "G F b003",
+          "G F b003"
+        ],
+        [
+          "G F=E b120",
+          "G F=E b120"
+        ],
+        [
+          "G F=E b511",
+          "G F=E b511"
+        ],
+        [
+          "Generic",
+          "Generic"
+        ],
+        [
+          "H10   n=8 · front=1",
+          "H10   n=8 · Pareto-Punkte=1"
+        ],
+        [
+          "H8   n=8 · front=1",
+          "H8   n=8 · Pareto-Punkte=1"
+        ],
+        [
+          "N F=E b062",
+          "N F=E b062"
+        ],
+        [
+          "N F=E b120",
+          "N F=E b120"
+        ],
+        [
+          "Native",
+          "Native"
+        ],
+        [
+          "TRT Full",
+          "TRT Full"
+        ],
+        [
+          "Throughput (images/s)",
+          "Durchsatz (Bilder/s)"
+        ],
+        [
+          "Vendor Full",
+          "Beschleuniger-Full"
+        ]
+      ],
+      "untranslated": []
+    },
+    "figures/04_tradeoff_yolo26m": {
+      "labels": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "100",
+          "100"
+        ],
+        [
+          "1000",
+          "1000"
+        ],
+        [
+          "120",
+          "120"
+        ],
+        [
+          "1200",
+          "1200"
+        ],
+        [
+          "125",
+          "125"
+        ],
+        [
+          "1250",
+          "1250"
+        ],
+        [
+          "150",
+          "150"
+        ],
+        [
+          "160",
+          "160"
+        ],
+        [
+          "1600",
+          "1600"
+        ],
+        [
+          "25",
+          "25"
+        ],
+        [
+          "250",
+          "250"
+        ],
+        [
+          "300",
+          "300"
+        ],
+        [
+          "39",
+          "39"
+        ],
+        [
+          "40",
+          "40"
+        ],
+        [
+          "400",
+          "400"
+        ],
+        [
+          "41",
+          "41"
+        ],
+        [
+          "42",
+          "42"
+        ],
+        [
+          "43",
+          "43"
+        ],
+        [
+          "44",
+          "44"
+        ],
+        [
+          "45",
+          "45"
+        ],
+        [
+          "450",
+          "450"
+        ],
+        [
+          "50",
+          "50"
+        ],
+        [
+          "500",
+          "500"
+        ],
+        [
+          "600",
+          "600"
+        ],
+        [
+          "75",
+          "75"
+        ],
+        [
+          "750",
+          "750"
+        ],
+        [
+          "80",
+          "80"
+        ],
+        [
+          "800",
+          "800"
+        ],
+        [
+          "Beschleuniger-Full",
+          "Beschleuniger-Full"
+        ],
+        [
+          "COCO mAP@[.50:.95] (%)",
+          "COCO mAP@[.50:.95] (%)"
+        ],
+        [
+          "DeepX   n=8 · front=2",
+          "DeepX   n=8 · Pareto-Punkte=2"
+        ],
+        [
+          "Empirical Pareto point",
+          "Empirischer Pareto-Punkt"
+        ],
+        [
+          "Energy (mJ/image)",
+          "Energie (mJ/Bild)"
+        ],
+        [
+          "F: fastest · E: lowest energy · N/G: Native/Generic",
+          "F: schnellster · E: energieärmster · N/G: Native/Generic"
+        ],
+        [
+          "G E b043",
+          "G E b043"
+        ],
+        [
+          "G F b038",
+          "G F b038"
+        ],
+        [
+          "G F=E b043",
+          "G F=E b043"
+        ],
+        [
+          "Generic",
+          "Generic"
+        ],
+        [
+          "H10   n=8 · front=1",
+          "H10   n=8 · Pareto-Punkte=1"
+        ],
+        [
+          "H8   n=8 · front=4",
+          "H8   n=8 · Pareto-Punkte=4"
+        ],
+        [
+          "N E b043",
+          "N E b043"
+        ],
+        [
+          "N F b038",
+          "N F b038"
+        ],
+        [
+          "N F=E b043",
+          "N F=E b043"
+        ],
+        [
+          "Native",
+          "Native"
+        ],
+        [
+          "TRT Full",
+          "TRT Full"
+        ],
+        [
+          "Throughput (images/s)",
+          "Durchsatz (Bilder/s)"
+        ],
+        [
+          "Vendor Full",
+          "Beschleuniger-Full"
+        ],
+        [
+          "−40",
+          "−40"
+        ]
+      ],
+      "untranslated": []
+    },
+    "figures/04_tradeoff_yolo26s": {
+      "labels": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "100",
+          "100"
+        ],
+        [
+          "1000",
+          "1000"
+        ],
+        [
+          "120",
+          "120"
+        ],
+        [
+          "1200",
+          "1200"
+        ],
+        [
+          "150",
+          "150"
+        ],
+        [
+          "160",
+          "160"
+        ],
+        [
+          "1600",
+          "1600"
+        ],
+        [
+          "180",
+          "180"
+        ],
+        [
+          "200",
+          "200"
+        ],
+        [
+          "240",
+          "240"
+        ],
+        [
+          "250",
+          "250"
+        ],
+        [
+          "300",
+          "300"
+        ],
+        [
+          "32",
+          "32"
+        ],
+        [
+          "33",
+          "33"
+        ],
+        [
+          "34",
+          "34"
+        ],
+        [
+          "35",
+          "35"
+        ],
+        [
+          "350",
+          "350"
+        ],
+        [
+          "36",
+          "36"
+        ],
+        [
+          "37",
+          "37"
+        ],
+        [
+          "38",
+          "38"
+        ],
+        [
+          "39",
+          "39"
+        ],
+        [
+          "40",
+          "40"
+        ],
+        [
+          "400",
+          "400"
+        ],
+        [
+          "41",
+          "41"
+        ],
+        [
+          "60",
+          "60"
+        ],
+        [
+          "600",
+          "600"
+        ],
+        [
+          "80",
+          "80"
+        ],
+        [
+          "800",
+          "800"
+        ],
+        [
+          "Beschleuniger-Full",
+          "Beschleuniger-Full"
+        ],
+        [
+          "COCO mAP@[.50:.95] (%)",
+          "COCO mAP@[.50:.95] (%)"
+        ],
+        [
+          "DeepX   n=8 · front=1",
+          "DeepX   n=8 · Pareto-Punkte=1"
+        ],
+        [
+          "Empirical Pareto point",
+          "Empirischer Pareto-Punkt"
+        ],
+        [
+          "Energy (mJ/image)",
+          "Energie (mJ/Bild)"
+        ],
+        [
+          "F: fastest · E: lowest energy · N/G: Native/Generic",
+          "F: schnellster · E: energieärmster · N/G: Native/Generic"
+        ],
+        [
+          "G E b038",
+          "G E b038"
+        ],
+        [
+          "G F b021",
+          "G F b021"
+        ],
+        [
+          "G F=E b021",
+          "G F=E b021"
+        ],
+        [
+          "Generic",
+          "Generic"
+        ],
+        [
+          "H10   n=8 · front=1",
+          "H10   n=8 · Pareto-Punkte=1"
+        ],
+        [
+          "H8   n=8 · front=1",
+          "H8   n=8 · Pareto-Punkte=1"
+        ],
+        [
+          "N F=E b021",
+          "N F=E b021"
+        ],
+        [
+          "Native",
+          "Native"
+        ],
+        [
+          "TRT Full",
+          "TRT Full"
+        ],
+        [
+          "Throughput (images/s)",
+          "Durchsatz (Bilder/s)"
+        ],
+        [
+          "Vendor Full",
+          "Beschleuniger-Full"
+        ],
+        [
+          "−400",
+          "−400"
+        ],
+        [
+          "−60",
+          "−60"
+        ]
+      ],
+      "untranslated": []
+    },
+    "figures/04_tradeoff_yolov7_paper": {
+      "labels": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "100",
+          "100"
+        ],
+        [
+          "1000",
+          "1000"
+        ],
+        [
+          "1050",
+          "1050"
+        ],
+        [
+          "120",
+          "120"
+        ],
+        [
+          "150",
+          "150"
+        ],
+        [
+          "20",
+          "20"
+        ],
+        [
+          "200",
+          "200"
+        ],
+        [
+          "30",
+          "30"
+        ],
+        [
+          "300",
+          "300"
+        ],
+        [
+          "40",
+          "40"
+        ],
+        [
+          "400",
+          "400"
+        ],
+        [
+          "41",
+          "41"
+        ],
+        [
+          "42",
+          "42"
+        ],
+        [
+          "43",
+          "43"
+        ],
+        [
+          "44",
+          "44"
+        ],
+        [
+          "45",
+          "45"
+        ],
+        [
+          "450",
+          "450"
+        ],
+        [
+          "46",
+          "46"
+        ],
+        [
+          "47",
+          "47"
+        ],
+        [
+          "500",
+          "500"
+        ],
+        [
+          "60",
+          "60"
+        ],
+        [
+          "600",
+          "600"
+        ],
+        [
+          "700",
+          "700"
+        ],
+        [
+          "750",
+          "750"
+        ],
+        [
+          "80",
+          "80"
+        ],
+        [
+          "800",
+          "800"
+        ],
+        [
+          "90",
+          "90"
+        ],
+        [
+          "900",
+          "900"
+        ],
+        [
+          "Beschleuniger-Full",
+          "Beschleuniger-Full"
+        ],
+        [
+          "COCO mAP@[.50:.95] (%)",
+          "COCO mAP@[.50:.95] (%)"
+        ],
+        [
+          "DeepX   n=8 · front=1",
+          "DeepX   n=8 · Pareto-Punkte=1"
+        ],
+        [
+          "Empirical Pareto point",
+          "Empirischer Pareto-Punkt"
+        ],
+        [
+          "Energy (mJ/image)",
+          "Energie (mJ/Bild)"
+        ],
+        [
+          "F: fastest · E: lowest energy · N/G: Native/Generic",
+          "F: schnellster · E: energieärmster · N/G: Native/Generic"
+        ],
+        [
+          "G F=E b044",
+          "G F=E b044"
+        ],
+        [
+          "G F=E b066",
+          "G F=E b066"
+        ],
+        [
+          "Generic",
+          "Generic"
+        ],
+        [
+          "H10   n=8 · front=1",
+          "H10   n=8 · Pareto-Punkte=1"
+        ],
+        [
+          "H8   n=7 · front=1",
+          "H8   n=7 · Pareto-Punkte=1"
+        ],
+        [
+          "N F=E b044",
+          "N F=E b044"
+        ],
+        [
+          "N F=E b066",
+          "N F=E b066"
+        ],
+        [
+          "Native",
+          "Native"
+        ],
+        [
+          "TRT Full",
+          "TRT Full"
+        ],
+        [
+          "Throughput (images/s)",
+          "Durchsatz (Bilder/s)"
+        ],
+        [
+          "Vendor Full",
+          "Beschleuniger-Full"
+        ]
+      ],
+      "untranslated": []
+    },
+    "render_work/paired/figures/rq2_weighted_all_models": {
+      "labels": [
+        [
+          "0.0",
+          "0,0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "10",
+          "10"
+        ],
+        [
+          "10.0",
+          "10,0"
+        ],
+        [
+          "12.5",
+          "12,5"
+        ],
+        [
+          "15",
+          "15"
+        ],
+        [
+          "15.0",
+          "15,0"
+        ],
+        [
+          "17.5",
+          "17,5"
+        ],
+        [
+          "2.5",
+          "2,5"
+        ],
+        [
+          "20",
+          "20"
+        ],
+        [
+          "20.0",
+          "20,0"
+        ],
+        [
+          "3",
+          "3"
+        ],
+        [
+          "5",
+          "5"
+        ],
+        [
+          "5.0",
+          "5,0"
+        ],
+        [
+          "7.5",
+          "7,5"
+        ],
+        [
+          "Boundary size",
+          "Bytes (Grenztensorgröße)"
+        ],
+        [
+          "Generic",
+          "Generic"
+        ],
+        [
+          "Maximum Native tests per combination",
+          "Maximale Native-Tests je Kombination"
+        ],
+        [
+          "Mean Native throughput loss (%)",
+          "Mittlerer Native-Durchsatzverlust (%)"
+        ],
+        [
+          "Model-held-out weights",
+          "Weighted (Modell ausgelassen)"
+        ],
+        [
+          "Shared fitted weights",
+          "Weighted (gemeinsam angepasst)"
+        ],
+        [
+          "Standard weights",
+          "Weighted (Standard)"
+        ],
+        [
+          "−2.5",
+          "−2,5"
+        ]
+      ],
+      "untranslated": []
+    },
+    "render_work/paired/figures/rq2_native_success": {
+      "labels": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "10",
+          "10"
+        ],
+        [
+          "100",
+          "100"
+        ],
+        [
+          "110",
+          "110"
+        ],
+        [
+          "15",
+          "15"
+        ],
+        [
+          "20",
+          "20"
+        ],
+        [
+          "3",
+          "3"
+        ],
+        [
+          "30",
+          "30"
+        ],
+        [
+          "40",
+          "40"
+        ],
+        [
+          "5",
+          "5"
+        ],
+        [
+          "50",
+          "50"
+        ],
+        [
+          "60",
+          "60"
+        ],
+        [
+          "70",
+          "70"
+        ],
+        [
+          "80",
+          "80"
+        ],
+        [
+          "90",
+          "90"
+        ],
+        [
+          "Boundary size",
+          "Bytes (Grenztensorgröße)"
+        ],
+        [
+          "Exact Native optimum found (%)",
+          "Exaktes Native-Optimum gefunden (%)"
+        ],
+        [
+          "Generic",
+          "Generic"
+        ],
+        [
+          "Maximum Native tests per combination",
+          "Maximale Native-Tests je Kombination"
+        ],
+        [
+          "Model-held-out weights",
+          "Weighted (Modell ausgelassen)"
+        ],
+        [
+          "Shared fitted weights",
+          "Weighted (gemeinsam angepasst)"
+        ],
+        [
+          "Standard weights",
+          "Weighted (Standard)"
+        ]
+      ],
+      "untranslated": []
+    },
+    "render_work/paired/figures/current_generic_selection_loss": {
+      "labels": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "14.08%\noff scale",
+          "14,08%\naußerhalb"
+        ],
+        [
+          "2",
+          "2"
+        ],
+        [
+          "3",
+          "3"
+        ],
+        [
+          "4",
+          "4"
+        ],
+        [
+          "5",
+          "5"
+        ],
+        [
+          "6",
+          "6"
+        ],
+        [
+          "DeepX",
+          "DeepX"
+        ],
+        [
+          "H10",
+          "H10"
+        ],
+        [
+          "H8",
+          "H8"
+        ],
+        [
+          "MobileNetV3-L",
+          "MobileNetV3-L"
+        ],
+        [
+          "Native throughput lost (%)",
+          "Native-Durchsatzverlust (%)"
+        ],
+        [
+          "RegNet-X",
+          "RegNet-X"
+        ],
+        [
+          "ResNet-50",
+          "ResNet-50"
+        ],
+        [
+          "YOLO11l",
+          "YOLO11l"
+        ],
+        [
+          "YOLO26m",
+          "YOLO26m"
+        ],
+        [
+          "YOLO26s",
+          "YOLO26s"
+        ],
+        [
+          "YOLOv7",
+          "YOLOv7"
+        ]
+      ],
+      "untranslated": []
+    },
+    "render_work/paired/figures/quality_generic_selection_loss": {
+      "labels": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "14.08%\noff scale",
+          "14,08%\naußerhalb"
+        ],
+        [
+          "2",
+          "2"
+        ],
+        [
+          "3",
+          "3"
+        ],
+        [
+          "4",
+          "4"
+        ],
+        [
+          "5",
+          "5"
+        ],
+        [
+          "6",
+          "6"
+        ],
+        [
+          "DeepX",
+          "DeepX"
+        ],
+        [
+          "H10",
+          "H10"
+        ],
+        [
+          "H8",
+          "H8"
+        ],
+        [
+          "MobileNetV3-L",
+          "MobileNetV3-L"
+        ],
+        [
+          "Native throughput lost (%)",
+          "Native-Durchsatzverlust (%)"
+        ],
+        [
+          "RegNet-X",
+          "RegNet-X"
+        ],
+        [
+          "ResNet-50",
+          "ResNet-50"
+        ],
+        [
+          "YOLO11l",
+          "YOLO11l"
+        ],
+        [
+          "YOLO26m",
+          "YOLO26m"
+        ],
+        [
+          "YOLO26s",
+          "YOLO26s"
+        ],
+        [
+          "YOLOv7",
+          "YOLOv7"
+        ]
+      ],
+      "untranslated": []
+    }
+  }
+}

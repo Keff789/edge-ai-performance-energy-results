@@ -1,0 +1,145 @@
+{
+  "CURRENT_written": false,
+  "FPS_values_repeats_attempts_and_source_authorities_unchanged": true,
+  "baseline": {
+    "path": "retained_source::Reports/generic_detectors20_multitensor_20261021T163124Z/status420/fr58_deepx_y7_b306_single_sourceb4_incremental_v1/scope_ledger.json",
+    "sha256": "36d0a02e1b941edb08a179ed05a0e9e38056eef6544ea6a5d135e4850b3b2e3e",
+    "size_bytes": 83854220
+  },
+  "corrected_capture_bindings": {
+    "generic|yolo11l|H8|hailo8_to_trt|b003": {
+      "actual_N5000_boundary_observations": 5000,
+      "actual_capture_source_closure": {
+        "json_pointer": "/generic_quality_source_capture/evidence/0",
+        "source": {
+          "path": "followup_source::h8_diagnostic/n5000_corrected_v2/yolo11l/evaluation_runs/rq2_h8_yolo11l_physical_bridge_6acdf86_n5000_b1000_v1_20261027_062115/models/yolo11l/benchmark_results/remote_benchmark_status_orin_nx_hailo8_01.json",
+          "sha256": "5beb0b59c22ab29570349ddb9f5c7abfd4bd4b00b2d5cd47b9cba2991f6affbf",
+          "size_bytes": 53257
+        }
+      },
+      "actual_loader_sha256": "c49b9f7eda029fbff7c286203e175cb7583e752013d82a4ef90bf40d2f87ceba",
+      "actual_python_runtime_members": 37,
+      "actual_request": {
+        "path": "followup_source::h8_diagnostic/n5000_corrected_v2/yolo11l/evaluation_runs/rq2_h8_yolo11l_physical_bridge_6acdf86_n5000_b1000_v1_20261027_062115/models/yolo11l/benchmark_results/quality_inputs/orin_nx_hailo8_01/results/b003/results_hailo8_to_trt/task_quality_inputs/composed_request.json",
+        "sha256": "1e3c0f67ec532185580cb03e35b4df5ddd8fee16471898b98da6feaf089a020c",
+        "size_bytes": 100738471
+      },
+      "actual_runner_sha256": "1242bcd9698a0df33a116465e993514906e5cf9404b70c5d9171f284bd852954",
+      "corrected_runtime_source_commit": "6acdf869f329a2a23632436857daffcf90c0337a",
+      "original_FPS_physical_bridge_sha256": "ce1807fa4bf9a5e4f974bc6a48daf8c06f951b01a76a31e6181649a0742acf4e"
+    },
+    "generic|yolo11l|H8|hailo8_to_trt|b062": {
+      "actual_N5000_boundary_observations": 5000,
+      "actual_capture_source_closure": {
+        "json_pointer": "/generic_quality_source_capture/evidence/1",
+        "source": {
+          "path": "followup_source::h8_diagnostic/n5000_corrected_v2/yolo11l/evaluation_runs/rq2_h8_yolo11l_physical_bridge_6acdf86_n5000_b1000_v1_20261027_062115/models/yolo11l/benchmark_results/remote_benchmark_status_orin_nx_hailo8_01.json",
+          "sha256": "5beb0b59c22ab29570349ddb9f5c7abfd4bd4b00b2d5cd47b9cba2991f6affbf",
+          "size_bytes": 53257
+        }
+      },
+      "actual_loader_sha256": "c49b9f7eda029fbff7c286203e175cb7583e752013d82a4ef90bf40d2f87ceba",
+      "actual_python_runtime_members": 37,
+      "actual_request": {
+        "path": "followup_source::h8_diagnostic/n5000_corrected_v2/yolo11l/evaluation_runs/rq2_h8_yolo11l_physical_bridge_6acdf86_n5000_b1000_v1_20261027_062115/models/yolo11l/benchmark_results/quality_inputs/orin_nx_hailo8_01/results/b062/results_hailo8_to_trt/task_quality_inputs/composed_request.json",
+        "sha256": "1a308fa35eeb6ed5290e1720129bce0a552aaceed4c3e8d5f4af64fe66503d95",
+        "size_bytes": 100810145
+      },
+      "actual_runner_sha256": "1242bcd9698a0df33a116465e993514906e5cf9404b70c5d9171f284bd852954",
+      "corrected_runtime_source_commit": "6acdf869f329a2a23632436857daffcf90c0337a",
+      "original_FPS_physical_bridge_sha256": "bb02c00a9e0b4080016788313c7e5f9638b0a95a12ce0f79c8c2b94fb913dade"
+    }
+  },
+  "fps_reuse_proof": {
+    "path": "followup_source::current_observations/fps_reuse_after_quality_fix.json",
+    "sha256": "d85e3c3cac0b68c30e3206d470454c8f0216e954966fc2cb518a336992866fac",
+    "size_bytes": 71290
+  },
+  "full_affected_scope_complete": false,
+  "new_FPS_or_hardware_or_statistics_started": false,
+  "only_UIDs": [
+    "generic|yolo11l|H8|hailo8_to_trt|b003",
+    "generic|yolo11l|H8|hailo8_to_trt|b062"
+  ],
+  "pending_affected_UIDs": [
+    "generic|yolo11l|H10|hailo10h_to_trt|b003",
+    "generic|yolo11l|H10|hailo10h_to_trt|b062",
+    "generic|yolo26m|H10|hailo10h_to_trt|b003",
+    "generic|yolo26m|H10|hailo10h_to_trt|b038",
+    "generic|yolo26m|H10|hailo10h_to_trt|b043",
+    "generic|yolo26m|H8|hailo8_to_trt|b003",
+    "generic|yolo26m|H8|hailo8_to_trt|b038",
+    "generic|yolo26m|H8|hailo8_to_trt|b043",
+    "generic|yolo26s|H10|hailo10h_to_trt|b003",
+    "generic|yolo26s|H10|hailo10h_to_trt|b021",
+    "generic|yolo26s|H8|hailo8_to_trt|b003",
+    "generic|yolo26s|H8|hailo8_to_trt|b021",
+    "generic|yolov7_paper|H10|hailo10h_to_trt|b009"
+  ],
+  "quality_decisions": [
+    {
+      "generic_uid": "generic|yolo11l|H8|hailo8_to_trt|b003",
+      "quality_eligible": true,
+      "quality_role": "historical_completed_operator_quality_import",
+      "quality_status": "reference_close"
+    },
+    {
+      "generic_uid": "generic|yolo11l|H8|hailo8_to_trt|b062",
+      "quality_eligible": true,
+      "quality_role": "historical_completed_operator_quality_import",
+      "quality_status": "reference_close"
+    }
+  ],
+  "quality_index": {
+    "path": "followup_source::publication_backup/H8_Y11L_TWO_ACTUAL_Q_INDEX_v1.json",
+    "sha256": "b70d3deba8feca4a82116609ef0e644980dac9624388cd47c0e05e6e1bd8da9f",
+    "size_bytes": 62176
+  },
+  "quality_outcome_filter": null,
+  "reader_publication": {
+    "path": "retained_source::Reports/generic_detectors20_multitensor_20261021T163124Z/continuation_v3_20261022/historical_hailo_pre_nms_quality_import_product_v1/PUBLICATION_MAIN_v1.json",
+    "sha256": "e275215023c35514377281e1633c826283a0f877ae340faaaa0509664c15656a",
+    "size_bytes": 10560
+  },
+  "result": {
+    "path": "retained_source::Reports/generic_detectors20_multitensor_20261021T163124Z/status420/rq2_followup_corrected_quality_h8_y11l_b003_b062_v1/scope_ledger.json",
+    "sha256": "9006bb99f35b0a9c5062311234dff6f874386c892d082b26b18217fa821c6f43",
+    "size_bytes": 83869005
+  },
+  "schema": "rq2-corrected-historical-quality-import-receipt-v1",
+  "separate_new_Generic_FPS_and_Quality_uid": "generic|yolov7_paper|H8|hailo8_to_trt|b009",
+  "state": "NORMAL_TYPED_QUALITY_IMPORT_AND_NORMAL_RENDER_COMPLETE_AWAIT_ROOT_ADOPTION",
+  "summary": {
+    "COMPILE_FAILED": 37,
+    "H8_actual_P2_engine_and_receipt_bytes_observed": 108,
+    "UNSUPPORTED": 24,
+    "actual_current_quality_preflight_failures": 1,
+    "additional260_actual_P2_engine_and_receipt_bytes_observed": 228,
+    "all20_complete_groups": 15,
+    "current_new_quality_observations": 156,
+    "current_quality_eligible_measured": 317,
+    "effective_completed_observations": 359,
+    "existing_cached_P1_P2_pairs": 359,
+    "fixed_selected": 420,
+    "fresh_current_job_Generic_only_observations": 168,
+    "groups": 21,
+    "hardware_or_model_inference_or_build_started_by_ledger": false,
+    "historical_available_but_unadmitted": 0,
+    "local_valid_P1": 359,
+    "measured_current_quality_pending": 1,
+    "measured_quality_FAIL": 41,
+    "missing_fps_value": "null inJSON / blank inCSV; never0",
+    "no_P1_only_runtime_readiness_claim": true,
+    "per_group": 20,
+    "reused_original_generic_H8_observations": 64,
+    "reused_original_paired_observations": 127,
+    "supported_unmeasured_pending": 0
+  },
+  "typed_API": "workflow.historical_quality_import.import_historical_operator_quality",
+  "unchanged_CURRENT_source": {
+    "path": "retained_source::Reports/generic_detectors20_multitensor_20261021T163124Z/status420/CURRENT.json",
+    "sha256": "5108a6fa185b8b4e895ecae48cf3460c40ed18513b078e293d04471d4569356e",
+    "size_bytes": 346
+  },
+  "untargeted_whole_rows_unchanged": true
+}

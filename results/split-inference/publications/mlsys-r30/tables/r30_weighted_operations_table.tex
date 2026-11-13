@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Additional analytic operation rules. $L$ is the reduction-vector length. TopK selects $K$ values from length $N$. Counts are per vector except for elementwise Mod.}
+\label{tab:weighted-operations}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Operation & Count \\
+\midrule
+Stable Softmax & $6L-3$ \\
+ReduceMax & $2(L-1)$ \\
+Integer Mod & One per output element \\
+TopK reference & $3\sum_{j=0}^{K-1}(N-j-1)$ \\
+\bottomrule
+\end{tabular}
+\end{table}

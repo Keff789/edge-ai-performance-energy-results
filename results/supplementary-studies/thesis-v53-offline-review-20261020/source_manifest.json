@@ -1,0 +1,259 @@
+{
+  "audit_code": [
+    {
+      "bytes": 1627,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/README.md",
+      "sha256": "374821b77cd7b2f7ac18fd3c366b4be9da38b53f64c2cbfec26532032cb85d1c"
+    },
+    {
+      "bytes": 23166,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/binding.py",
+      "sha256": "2cbe9d1468101f99804b940948ab5175362a81e2524601ea83a308c93ff9acf4"
+    },
+    {
+      "bytes": 18117,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/capture_operator_sources.py",
+      "sha256": "85651c1a770b6e53ad0cf2065238d571aaef8e1aaca191bf595bbe4cbc9de31b"
+    },
+    {
+      "bytes": 16867,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/operators.py",
+      "sha256": "8a42e23095c0d7e042b312cb664847cd5fc5cb3d4b55e8f668af5493e419f310"
+    },
+    {
+      "bytes": 23027,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/paths.py",
+      "sha256": "1bcad8260aeeef183e4c3e6ded48a5743de91b619c4edf7bb5cb13e3bba5c6c7"
+    },
+    {
+      "bytes": 20221,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/report.py",
+      "sha256": "9b600c3a860178c8c582a9ba4b87a85ae35d6bbde80f71ad4befb5bc12f8f47f"
+    },
+    {
+      "bytes": 9037,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/reproduce.py",
+      "sha256": "9c7d0d2888a124d840861247e9cf7f77ffb6398973e53a9e108fd5a31d3c6a2b"
+    },
+    {
+      "bytes": 29660,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/scores.py",
+      "sha256": "b6b43a07735aa599759bf747adbfb67d0b6bece89edbecfe682116d5c4071540"
+    },
+    {
+      "bytes": 5347,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/test_binding.py",
+      "sha256": "b06aaa66574d9c6e5c8382a22121dd540aeffb6c55c10d93cd7fcc6d2159dcaf"
+    },
+    {
+      "bytes": 3939,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/test_operators.py",
+      "sha256": "65133c3f5dff72ca923e2f8d236d209a79e199052566872721fe0270f00a034f"
+    },
+    {
+      "bytes": 4030,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/test_paths.py",
+      "sha256": "0053619ee0c0dd5b081e2a92bf262319f0f87ecb9128fdbdab5c8bc1ba1d0c1e"
+    },
+    {
+      "bytes": 2010,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/test_reproduce.py",
+      "sha256": "07e2ce5d5d6e5e983281e3a1264243a9a93f7fa40c64e4b49874ce08a145a2b8"
+    },
+    {
+      "bytes": 8757,
+      "path": "scripts/supplementary-studies/thesis-v53-offline-review-20261020/test_scores.py",
+      "sha256": "7c7b07b358e2e601df6e57f1cb81f25f35132172fef6b267999fd635bf5e220b"
+    }
+  ],
+  "audit_inputs": [
+    {
+      "bytes": 100268,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/binding/source_bindings.json",
+      "sha256": "c067047a2cfeebb1a452cc8c7cbcc5d911575deb8fd57325d52bb4425b0bb9e5"
+    },
+    {
+      "bytes": 5829,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/git_status.json",
+      "sha256": "fcbfc32be4032e6585ebcbd2dd603edd57e8357e5720580b3ea1981e1bd142c5"
+    },
+    {
+      "bytes": 1064,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/operators/LICENSE.tool",
+      "sha256": "7ad6d60baf1708b786bcfb8810006cb1c078460ed3a87b2cef6544583aba02b7"
+    },
+    {
+      "bytes": 24579,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/operators/archive_bindings.json",
+      "sha256": "38548ff7ec8c271b388a8e499b8fc74c84972ede8b95ddfb6d9fb62c4d9fd232"
+    },
+    {
+      "bytes": 1082925,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/operators/graphs.json",
+      "sha256": "a976105c02f6c7b5ef43fb4edcf0dc35bdbcfd3eb0c1181dce46b70a031abdc2"
+    },
+    {
+      "bytes": 10739,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/operators/historical_metrics_counting.py.txt",
+      "sha256": "c953120d8cc652245543b61f2ec8d17ae84c3fa4ddfda556d5faec034b4a28b7"
+    },
+    {
+      "bytes": 1351,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/operators/historical_onnx_shape_helpers.py.txt",
+      "sha256": "2d005ab605aa0d950eff47532625131edb469ae8841ae375245d4f4b0ab005d5"
+    },
+    {
+      "bytes": 9473,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/operators/source_bindings.json",
+      "sha256": "4c84c5c5aee857236aeb3bd851f7a0312a84844e323f6720250aed7ae7198f83"
+    },
+    {
+      "bytes": 657,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/reproduction/a-confirmation-tables.log",
+      "sha256": "510ba253f41a7c00b6b32acc214f8e9b4179189d4878458a777b9e6bce97fe05"
+    },
+    {
+      "bytes": 19569,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/reproduction/a-deployment-tables.log",
+      "sha256": "3b2ebb045af2eb2b3e43ecf555cce9627dfb3ca9118ca2fbe52fce188e6d0ff1"
+    },
+    {
+      "bytes": 204163,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/reproduction/executed_A.json",
+      "sha256": "673dfbc54c6bb49153f889302acd1a6e9c3211032ad2383e967b2ec22d8efcd3"
+    },
+    {
+      "bytes": 17180,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/reproduction/source_inspection.json",
+      "sha256": "f6897c0eda982ea4823039ad36ca3e337837c1930c0d8cf575590138d6a3e461"
+    },
+    {
+      "bytes": 9643,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/scores/source_bindings.json",
+      "sha256": "1a1bc1feb9b6eb9021ed6ab384a4ea046af73c12dabbc5f4c8b7eab2cf18920b"
+    },
+    {
+      "bytes": 4203,
+      "path": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/source_context.json",
+      "sha256": "54de301950041bf927db8cb1004676e9f91c8612fcf7f003c2e9127238a30cc4"
+    }
+  ],
+  "component_evidence": {
+    "binding": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/binding/source_bindings.json",
+    "operators": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/operators/source_bindings.json",
+    "scores": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/scores/source_bindings.json"
+  },
+  "evidence_boundary": "Reproducing a compact projection verifies the audit calculation and its recorded source chain. It does not newly verify absent originals or prove historical process imports.",
+  "external_dependencies": {
+    "compact_audit": "Python >=3.10 standard library and the existing repository sources only; no network or external paths.",
+    "individual_derivation_B": "Exact individual predictions or raw traces plus original evaluators/exporter and environment; status is per route.",
+    "original_binding_verification": "Only the explicitly indexed canonical sources and three preserved confirmation archive members; not required for compact audit.",
+    "original_graph_verification": "Seven original hash-bound ONNX files and the capture environment, separately identified in inputs/operators/source_bindings.json; not required for compact audit.",
+    "physical_repetition_C": "Separate original hardware, runtimes, models, datasets, collector and authorization; inventoried only.",
+    "table_reproduction_A": "Existing numerical environment; exact versions and code/input/output receipts in reproduction_paths.json and inputs/reproduction/."
+  },
+  "local_source_verification": {
+    "binding": "Projected original hashes and full-UID request/receipt/result cross-links checked by binding.py.",
+    "operators": "Compact projections, historical counting definitions and candidate bindings checked by operators.py.",
+    "paths": "Recorded successful A commands and exact local input/code/output bindings checked by paths.py.",
+    "scores": "Frozen canonical feature/method/group inputs, copied method definitions and selected archive source members checked by scores.py."
+  },
+  "reproduction_evidence": "results/supplementary-studies/thesis-v53-offline-review-20261020/inputs/reproduction",
+  "schema": "thesis-v53/source-manifest/v1",
+  "source_context": {
+    "assignment_bytes": 14286,
+    "assignment_sha256": "d4b663fe5bcfc7a7863f39dd6a407268baa56bdd2b2bf361bc836a55ce5e33a6",
+    "branch": "codex/thesis-v53-offline-review-20261020",
+    "capture_date": "2026-10-20",
+    "historical_pins": [
+      {
+        "changed_input_files_at_audit_base": [],
+        "commit": "820f6ecaf3e1e4cba2796a7418ff42913cf43e51",
+        "paths_compared": [
+          "results/split-inference/data"
+        ],
+        "study": "main split deployment"
+      },
+      {
+        "changed_input_files_at_audit_base": [],
+        "commit": "6ebc90deca31c9890d7ebccd7fd2981f8bda0c96",
+        "paths_compared": [
+          "results/supplementary-studies/thesis-v49-confirmation-20261019/inputs"
+        ],
+        "study": "v49 confirmation"
+      }
+    ],
+    "instructions": {
+      "assignment_name": "Codex_Twix_Thesis_v53_Review_20261020.txt",
+      "project_instructions": "Results worktree and ancestors: no AGENTS.md found. Tool origin/main AGENTS.md read from exact Git object; tool checkout remains read-only.",
+      "push_policy": "Original user reserves push; no separate current-branch push authorization established. New task explicitly authorizes local task-only commits."
+    },
+    "preservation_policy": {
+      "environment_updates": false,
+      "inference": false,
+      "large_models_or_waveforms_added": false,
+      "model_compilation": false,
+      "new_bootstrap_resampling": false,
+      "new_quality_evaluation": false,
+      "physical_acquisition": false,
+      "tool_checkout_edits": false
+    },
+    "repositories": [
+      {
+        "head": "b10d15992d0ce45d0f81329a5e961cb6207a1d09",
+        "name": "results",
+        "origin": "git@github.com:Keff789/edge-ai-performance-energy-results.git",
+        "origin_main": "b10d15992d0ce45d0f81329a5e961cb6207a1d09",
+        "status_entry_count": 0,
+        "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "head": "78644e639b71797c8b822fd9296f3cb8d90bfd20",
+        "name": "tool",
+        "origin": "https://github.com/Keff789/ONNX-Splitpoint-Tool",
+        "origin_main": "db729b9fcde00e4bcadf9200d43282977d7bf1cc",
+        "status_entry_count": 508,
+        "status_sha256": "593b260e500e15426bf2c4bb7bfbf57ef4fe4ca64ac0d8a6892afbe28e73b752"
+      },
+      {
+        "head": "fc57876b0a6ba69e90723e3a9209b72b36cbaa51",
+        "name": "original_results",
+        "origin": "git@github.com:Keff789/onnx-splitpoint-results.git",
+        "origin_main": "fc57876b0a6ba69e90723e3a9209b72b36cbaa51",
+        "status_entry_count": 0,
+        "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "repository_observation_note": "Observed before audit implementation. origin/main fetched read-only. The tool checkout contains foreign uncommitted changes; no file in it was changed or imported.",
+    "schema": "thesis-v53/source-context/v1",
+    "task_id": "thesis_v53_review_offline_20261020",
+    "thesis_context": {
+      "located_older_working_copy": "doctor_thesis_v42_with_translation_tool_v04",
+      "manuscript_modified": false,
+      "observed_context_files": [
+        {
+          "bytes": 3394,
+          "path": "README.md",
+          "role": "older local thesis context only; not v53",
+          "sha256": "95cdd43f52d16ff4bfcf4df3e03e4af9a21d17417905413c2ecca5f219ccbfce"
+        },
+        {
+          "bytes": 7560,
+          "path": "2_body/07_tool_implementation/10_candidate_ranking_strategies.tex",
+          "role": "older local thesis context only; not v53",
+          "sha256": "1c84577932ca23dc111ee6fa087933195570132696e5ba526b61a173e3a0be4b"
+        }
+      ],
+      "older_readme_identifies": "v41/v42; not treated as v53",
+      "requested_paths": {
+        "2_body/07_tool_implementation/10_candidate_ranking_strategies.tex": "present in older local copy; context only",
+        "4_appendix/02_split_reproduction.tex": "absent in older local copy",
+        "9_resources/integration_v47/split/data/paper/analysis/methods/METHOD_PROVENANCE.md": "absent in older local copy; results-repository method provenance used",
+        "9_resources/style_v44/generated/operator_catalogue.tex": "absent in older local copy"
+      },
+      "task_blocked": false,
+      "v53_local_status": "not_found_in_explicit_workspace_and_top_level_download_candidates"
+    }
+  },
+  "task_id": "thesis_v53_review_offline_20261020"
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "retrospective-native-energy-selection-v1",
+  "source_path": "results/split-inference/data/PAPER_DATASET.json",
+  "source_sha256": "1ec1e759a4e0a4855bee9dd5b2686499b9dc462a85935d62821f87c94f663ee8",
+  "source_git_blob_sha": "f46fd63681579e8a29160627fa9a1d1725910740",
+  "quality_tolerance": 0.05,
+  "selection": "minimum measured energy among Native splits with FPS >= floor * maximum admitted Native FPS, within each model/setup",
+  "tie_break": "energy ascending, FPS descending, UID ascending; fastest uses FPS descending then UID ascending",
+  "scope": "Measured Native splits only; single-backend Full and Generic are excluded. No new measurements. Numeric admissibility is not statistical equivalence. No end-to-end or limited-budget energy-search cost is evaluated.",
+  "summary": {
+    "99": {
+      "combinations": 21,
+      "candidates": 187,
+      "changed_choices": 2,
+      "maximum_energy_reduction_pct": 2.066517236296783,
+      "mean_energy_reduction_pct": 0.15921872359061084,
+      "maximum_throughput_loss_pct": 0.21168169862483266
+    },
+    "95": {
+      "combinations": 21,
+      "candidates": 187,
+      "changed_choices": 3,
+      "maximum_energy_reduction_pct": 9.502307952099553,
+      "mean_energy_reduction_pct": 0.6117095784524944,
+      "maximum_throughput_loss_pct": 1.938144240163442
+    }
+  },
+  "generator": "scripts/split-inference/energy_aware_selection.py",
+  "generator_sha256": "d2d655b7cf82658ff257b97a4433b104ee5e8e21f6224e74b669221ef8afbf9e",
+  "hardware_measurements": false,
+  "outputs": {
+    "artifacts/de/tables/energy_floor_95.csv": "b6df935e1a6a1aac5b1c7b9c095f96b897155fe0d8c8f6263e18e4ef99dc1296",
+    "artifacts/de/tables/energy_floor_95.json": "7985ed3a46e0e326e9028da75866df9f5dae62ff9ba1b9dedde7109f627c9695",
+    "artifacts/de/tables/energy_floor_95.tex": "ba877b11873af0d2e4522b84b99289a3fa5def76e8422b07c0c8b5c413ce72d7",
+    "artifacts/de/tables/energy_floor_99.csv": "54c794ad3d62d02368c105a961fec15b8610423b6233d5dbdcbdcde13e8e1f03",
+    "artifacts/de/tables/energy_floor_99.json": "30e3c78b507970e037d87cc4faf10697203c84ba8a1c8d6c74de0e16627e682d",
+    "artifacts/de/tables/energy_floor_99.tex": "49157fc360dfbead489addd4e9461623f39af1b505e9aa21ffc65eea6e23b728",
+    "artifacts/en/tables/energy_floor_95.csv": "b6df935e1a6a1aac5b1c7b9c095f96b897155fe0d8c8f6263e18e4ef99dc1296",
+    "artifacts/en/tables/energy_floor_95.json": "7985ed3a46e0e326e9028da75866df9f5dae62ff9ba1b9dedde7109f627c9695",
+    "artifacts/en/tables/energy_floor_95.tex": "502d9dc941967717ab01aea3351401d5aff76530f0f92437474e49b98482f61a",
+    "artifacts/en/tables/energy_floor_99.csv": "54c794ad3d62d02368c105a961fec15b8610423b6233d5dbdcbdcde13e8e1f03",
+    "artifacts/en/tables/energy_floor_99.json": "30e3c78b507970e037d87cc4faf10697203c84ba8a1c8d6c74de0e16627e682d",
+    "artifacts/en/tables/energy_floor_99.tex": "15e116c81a6dfde409af9ead58bdaf2bb6f367413218a038ab7309711712c524"
+  }
+}

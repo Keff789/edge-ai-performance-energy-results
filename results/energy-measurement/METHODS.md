@@ -1,0 +1,41 @@
+# Methods and limits
+
+The finalized selection and estimators follow the source [TIM v0.3 method specification](https://github.com/Keff789/onnx-splitpoint-results/blob/fc57876b0a6ba69e90723e3a9209b72b36cbaa51/energy-measurement/papers/tim-v0.3/METHOD_DETAILS.md). Native reconstruction settings, measurement transformations, cohort IDs and compact source metadata are retained under `data/`.
+
+## Electrical boundaries and calibration
+
+Jetson measures the selected module-associated DC input on u.RECS; Hailo measures the whole M.2 card input and excludes the host. Shelly measures the connected AC supply arrangement with the recorded empirical scaling. Vendor telemetry retains its own reported domain. AC/DC differences do not independently identify host energy or instrument error. Mean power is each path's energy divided by its actual retained duration, with its own timestamps or N−1 integration intervals.
+
+Current verification uses an electronic load, a Fluke reference, endpoint gain/offset calibration and ten-second means over 36 settings; relative-error summaries exclude the zero-target setting. The [workbook](data/tim/validation/calibration/jetson_calibration.ods) and [all verification points](data/tim/validation/calibration/jetson_calibration_verification_rows.csv) retain the measured values. Scope power uses the recorded nonlinear model P = I(a + bI), with a = 19.062607082705 V and b = −0.07444582 V/A, specified over 0–3.5 A. Values outside that interval extrapolate the model. The workload-only YOLO-FP32 Tektronix current offset remains disclosed in the [transformation data](data/tim/provenance/transformations/transformationtable.csv); corrected absolute agreement is not independent validation.
+
+The separate three-system split-inference [calibration records](galleries/calibration.md) retain final September post-gain factors, reference currents/voltages, repeat statistics and warnings. Operational network addresses and collector/control logs were removed from these export copies. These records do not retroactively recalibrate the TIM campaigns. There is no complete dynamic power uncertainty budget.
+
+## Reconstruction and spectra
+
+The six-workload primary reference is native 5-MS/s derived power: 59 paired executions / 118 traces, nine durations from 20 ms to 10 s, 19 tested target rates, up to 16 windows and 64 offsets. Four target samples are required. The 1-MS/s path is a sensitivity branch. The hierarchy is Q95 across window/offset cases per recording, Q95 across recordings, then the maximum across workload/path groups. A persistent minimum passes at that and every higher eligible tested rate; it is not an interpolation or confidence guarantee. Fixed 2 kS/s passes 1% at 2, 5 and 10 s; the persistent 1% minimum at 2 s remains 16 kS/s. Missing/ineligible cells stay missing.
+
+FP16 uses all recording IDs 0–14, 64 offsets and 960 cases per energy rate. At 50 S/s the pooled Q95 passes 1%, while some individual cases fail. All tested 85-S/s cases pass. The spectral primary branch is `matched_4s_4s`: matched four-second active/idle segments, 1-MS/s representation, one-second Hann Welch segments, 50% overlap and seven complete segments on each side. Idle is subtracted per recording and positive excess is integrated before across-record quantiles. Tested 125/160 kS/s meet 95/99% coverage; no untested minimum is inferred.
+
+Native Jetson PSD comparisons use 5 MS/s and independent ten-second idle recordings, pointwise-median active/idle spectra, then clipped positive excess. Hailo uses matched ten-second active prefixes and same-record idle, 1,048,576-sample Hann Welch segments, half overlap, constant detrending and density scaling, with metrics calculated per recording before cross-record quantiles. These estimator orders and cohorts remain separate. Full-band CDFs and independently renormalized 0–77-kHz CDFs have different denominators. The nominal 77-kHz bandwidth is not a brick-wall cutoff or an anti-alias guarantee. Sampled review curves are for plotting; exact spectral tables came from the full-resolution arrays. [Detailed spectral conventions](data/spectra/METHODS.md).
+
+## Meter comparisons and direct sweeps
+
+For each matched execution and X = energy, power or span, the signed difference is 100(X_sensor/X_Pico − 1). Summaries use medians of these individual differences and linear/type-7 fifth/95th percentiles. Three comparators observing an execution are not three independent executions. At 300 s there are 150 executions and 450 pairs; all ten duration requests yield 4,416 pairs and 300 summary cells.
+
+The [fixed window policy](data/tim/final_direct/paper_window_policy.csv) selects detected `envelope_0.5` load intervals, except Hailo variable YOLO's explicit `reported_legacy` interval. Internal burst pauses remain. Missing Hailo LLM intervals are not replaced by zeros or another window. The adjusted Jetson variable-YOLO series remains a separate diagnostic. Direct sweeps are independent executions and combine acquisition, order, duration and run variability; they do not isolate sampling error.
+
+Final direct-rate CV uses population standard deviation / mean. Between-rate displacement compares each rate-group mean with the unweighted mean of those means. The 600-s duration comparator is the workload's fixed median power at that request; it is not a proven steady state. Supplemental heatmaps additionally compare rates with the fixed 2-kS/s within-series median, as explicitly labeled; their observed-grid agreement is not a calibrated minimum rate.
+
+The expanded direct-view figures are offline redraws of the finished TIM Figures 1.1.0 data using TIM v0.3 §§4–5 for the individual rate-panel reference and individual duration paired-deviation bars. Their original mixed mean/median reference and ratio-of-medians bars are superseded here. All recorded input numbers, finite outcomes, distribution summaries and source estimator columns remain available. Main overview cohorts follow the finalized TIM selection; earlier GPU and adjusted-window observations remain in separate supplementary galleries. This is an explicit derived refresh, not a claim of byte-identical old plots.
+
+## Controls and unfinished evidence
+
+The complementary FP16 control has two six-run sessions, ABBAAB/BAABBA, 250 completed queries, useSpinWait and 120-s process gaps. Its fixed additive design has rank 8 and four residual degrees of freedom. The rate estimate and two-sided t interval are normalized by the observed 2-kS/s mean. It is not an equivalence test or a complete uncertainty budget.
+
+The FP32 pause diagnostic has one excluded conditioner and six scored 100-query runs, three per pause condition. Unchanged logged GPU/CPU frequency is retained as counterevidence against claiming observed clock throttling. The test is diagnostic, not a randomized causal trial; waiting energy is excluded and its absolute energy scaling remains limited. The fixed-window analysis retains all 225 executions across five workloads, three rates and 15 repeats.
+
+Updated discrete-GPU evidence, complete execution-bound Hailo model/software identities, Hailo same-trace energy bounds, separate host decomposition and synchronized dynamic telemetry remain unavailable for stronger claims. Earlier GPU tables do not fill these gaps. Raw reconstruction and PSD programs are included for inspection/reuse, but their required waveform/aggregate archives are not bundled or reprocessed by the tested export commands.
+
+## Historical FP16 spectral and rate curves
+
+The [earlier 13-run study](galleries/historical-fp16.md) retains run IDs 2–14 and the completed 9 August 2026 snapshot. Its ten-second active/four-second idle PSD windows differ from the current all-15 matched-four-second branch. Numerical summaries are re-aggregated from archived case/per-run outcomes; spectra are exact selected bins of previously aggregated curves. The original full-grid, per-record positive-excess integrals remain the source of coverage values. Sparse plotting samples must not be reintegrated for new coverage estimates. Across-run spectral percentiles and within-run phase distributions are descriptive ranges, not confidence intervals. No acquisition, calibration or raw-waveform estimation is repeated.

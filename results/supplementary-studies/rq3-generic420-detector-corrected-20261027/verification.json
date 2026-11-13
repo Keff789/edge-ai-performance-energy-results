@@ -1,0 +1,53 @@
+{
+  "schema": "generic420-verification-v2",
+  "candidate_count": 420,
+  "eligible_count": 331,
+  "groups": 21,
+  "counts": {
+    "selected": 420,
+    "fps_measured": 359,
+    "eligible": 331,
+    "quality_fail_measured": 28,
+    "quality_pending_measured": 0,
+    "technical_excluded": 61,
+    "fps_pending": 0,
+    "nonempty_eligible_groups": 21,
+    "analysis_complete_groups": 21
+  },
+  "fits": {
+    "budget5_fit": {
+      "folds": 56,
+      "metrics": 3360,
+      "descriptive_fits": 12,
+      "summary_reproduced": true
+    },
+    "coarse_grid": {
+      "folds": 56,
+      "metrics": 3360,
+      "descriptive_fits": 12,
+      "summary_reproduced": true
+    },
+    "family_holdout": {
+      "folds": 48,
+      "metrics": 3360,
+      "descriptive_fits": 12,
+      "summary_reproduced": true
+    },
+    "primary": {
+      "folds": 56,
+      "metrics": 3360,
+      "descriptive_fits": 12,
+      "summary_reproduced": true
+    },
+    "tie_secondary_bytes": {
+      "folds": 56,
+      "metrics": 3360,
+      "descriptive_fits": 12,
+      "summary_reproduced": true
+    }
+  },
+  "model_holdout_and_training_bytes_dominance_checked": 272,
+  "metrics_checked": 16800,
+  "summary_reproduced": true,
+  "localized_numeric_table_pairs_checked": 28
+}

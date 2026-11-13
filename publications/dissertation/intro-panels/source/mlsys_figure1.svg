@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="170mm" height="69.7mm" viewBox="0 0 1000 410">
+<rect width="1000" height="410" fill="white" />
+<defs><clipPath id="photoClip"><path d="M 28.074468085106382,60.670212765957444 L 280.8404255319149,61.37234042553192 L 280.8404255319149,59.61702127659574 L 282.59574468085106,58.56382978723404 L 323.3191489361702,58.56382978723404 L 324.72340425531917,59.96808510638298 L 325.0744680851064,61.37234042553192 L 335.9574468085106,61.72340425531915 L 340.17021276595744,63.12765957446808 L 343.32978723404256,66.63829787234043 L 344.031914893617,70.85106382978724 L 344.031914893617,82.43617021276596 L 343.32978723404256,230.2340425531915 L 342.97872340425533,330.63829787234044 L 342.27659574468083,372.7659574468085 L 341.5744680851064,377.6808510638298 L 249.24468085106383,378.3829787234043 L 249.24468085106383,383.6489361702128 L 247.48936170212767,385.75531914893617 L 216.59574468085106,386.1063829787234 L 215.89361702127658,379.0851063829787 L 197.63829787234042,379.0851063829787 L 196.93617021276594,382.24468085106383 L 181.8404255319149,382.59574468085106 L 181.13829787234042,379.78723404255317 L 162.88297872340425,379.78723404255317 L 162.88297872340425,386.8085106382979 L 160.4255319148936,389.2659574468085 L 137.95744680851064,389.2659574468085 L 135.14893617021278,387.86170212765956 L 134.44680851063828,380.13829787234044 L 120.75531914893617,380.13829787234044 L 120.40425531914893,386.1063829787234 L 117.59574468085107,386.8085106382979 L 116.54255319148936,389.968085106383 L 90.56382978723404,389.968085106383 L 88.80851063829788,388.9148936170213 L 86.35106382978724,388.56382978723406 L 86.0,386.8085106382979 L 87.05319148936171,385.40425531914894 L 87.05319148936171,380.13829787234044 L 74.41489361702128,380.13829787234044 L 73.7127659574468,382.24468085106383 L 71.25531914893617,384.3510638297872 L 56.861702127659576,384.3510638297872 L 55.45744680851064,382.59574468085106 L 55.1063829787234,380.13829787234044 L 52.297872340425535,379.78723404255317 L 50.8936170212766,383.6489361702128 L 48.787234042553195,385.40425531914894 L 31.23404255319149,385.40425531914894 L 29.127659574468083,384.0 L 28.77659574468085,380.48936170212767 L 27.372340425531917,379.0851063829787 L 27.372340425531917,368.20212765957444 L 27.72340425531915,250.9468085106383 L 27.02127659574468,137.90425531914894 L 27.02127659574468,64.88297872340425 Z" /></clipPath></defs>
+<text x="20" y="29.8" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#253746">(a) Modular u.RECS hardware</text>
+<image x="-173.08510638297872" y="19.595744680851062" width="718.9787234042553" height="404.4255319148936" clip-path="url(#photoClip)" xlink:href="urecs_board_original.png" />
+<rect x="65.63829787234042" y="85.59574468085107" width="88.11702127659575" height="154.81914893617022" rx="5" fill="#7b8790" fill-opacity="0.34" stroke="#7b8790" stroke-width="1.8" />
+<text x="109.69680851063829" y="156.40531914893617" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#ffffff">SMARC</text>
+<text x="109.69680851063829" y="177.40531914893617" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#ffffff">CPU/FPGA</text>
+<rect x="228.18085106382978" y="79.97872340425532" width="80.74468085106383" height="136.56382978723406" rx="5" fill="#c77822" fill-opacity="0.34" stroke="#c77822" stroke-width="1.8" />
+<text x="268.55319148936167" y="141.66063829787234" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#ffffff">Jetson NX</text>
+<text x="268.55319148936167" y="162.66063829787234" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#ffffff">CPU/GPU</text>
+<rect x="158.31914893617022" y="123.86170212765957" width="49.851063829787236" height="133.0531914893617" rx="5" fill="#2678ad" fill-opacity="0.34" stroke="#2678ad" stroke-width="1.8" />
+<text x="183.24468085106383" y="183.78829787234042" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#ffffff">AI</text>
+<text x="183.24468085106383" y="204.78829787234042" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#ffffff">accel.</text>
+<rect x="212.38297872340425" y="231.2872340425532" width="99.70212765957447" height="43.53191489361702" rx="5" fill="#2678ad" fill-opacity="0.34" stroke="#2678ad" stroke-width="1.8" />
+<text x="262.2340425531915" y="256.9531914893617" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#ffffff">AI accel.</text>
+<text x="365" y="29.8" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#253746">(b) Evaluated execution</text>
+<rect x="534" y="45" width="452" height="126" rx="5" fill="#ffffff" fill-opacity="1" stroke="#687b89" stroke-width="1.4" />
+<text x="550" y="68.0" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="17.5" font-weight="700" fill="#253746">Jetson Orin NX</text>
+<text x="427.5" y="74.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#526676">Prepared input</text>
+<path d="M427.5 85 L427.5 104" fill="none" stroke="#687b89" stroke-width="1.6" />
+<polygon points="427.5,104 430.02,98.0 424.98,98.0" fill="#687b89" />
+<rect x="365" y="104" width="125" height="52" rx="4" fill="#edf5fa" fill-opacity="1" stroke="#2678ad" stroke-width="1.4" />
+<text x="427.5" y="126.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16.5" font-weight="700" fill="#253746">Accelerator</text>
+<text x="427.5" y="146.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16.5" font-weight="400" fill="#253746">prefix</text>
+<rect x="540" y="104" width="120" height="52" rx="4" fill="#f2f4f6" fill-opacity="1" stroke="#687b89" stroke-width="1.4" />
+<text x="600.0" y="126.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16.5" font-weight="700" fill="#253746">Host</text>
+<text x="600.0" y="146.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16.5" font-weight="400" fill="#253746">buffers</text>
+<rect x="735" y="104" width="100" height="52" rx="4" fill="#fff3e6" fill-opacity="1" stroke="#c77822" stroke-width="1.4" />
+<text x="785.0" y="126.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16.5" font-weight="700" fill="#253746">GPU suffix</text>
+<text x="785.0" y="146.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16.5" font-weight="400" fill="#253746">TensorRT</text>
+<rect x="865" y="104" width="115" height="52" rx="4" fill="#ffffff" fill-opacity="1" stroke="#687b89" stroke-width="1.4" />
+<text x="922.5" y="126.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16.5" font-weight="700" fill="#253746">Task</text>
+<text x="922.5" y="146.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16.5" font-weight="400" fill="#253746">completion</text>
+<path d="M490 130 L540 130" fill="none" stroke="#687b89" stroke-width="1.6" />
+<polygon points="540,130 534.0,127.48 534.0,132.52" fill="#687b89" />
+<text x="512" y="94.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#526676">PCIe</text>
+<path d="M660 130 L735 130" fill="none" stroke="#687b89" stroke-width="1.6" />
+<polygon points="735,130 729.0,127.48 729.0,132.52" fill="#687b89" />
+<text x="697.5" y="94.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#526676">CUDA transfer</text>
+<path d="M835 130 L865 130" fill="none" stroke="#687b89" stroke-width="1.6" />
+<polygon points="865,130 859.0,127.48 859.0,132.52" fill="#687b89" />
+<text x="365" y="210.8" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#253746">(c) Runner interfaces</text>
+<text x="365" y="252.8" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="700" fill="#253746">Generic</text>
+<rect x="395" y="300" width="90" height="60" rx="5" fill="#edf5fa" fill-opacity="1" stroke="none" stroke-width="0" />
+<rect x="485" y="300" width="90" height="60" rx="5" fill="#fff3e6" fill-opacity="1" stroke="none" stroke-width="0" />
+<text x="440.0" y="284.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#2678ad">Accelerator</text>
+<text x="530.0" y="284.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#c77822">GPU</text>
+<path d="M388.0 330.0 L404.0 330.0" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="404.0,330.0 398.0,327.48 398.0,332.52" fill="#687b89" />
+<path d="M419.25376889510807 326.6261540022753 L446.83950999300345 313.79557674744024" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="446.83950999300345,313.79557674744024 440.33642183238914,314.0410240437747 442.4619448109557,318.6108984476928" fill="#687b89" />
+<path d="M419.25376889510807 333.3738459977247 L446.83950999300345 346.20442325255976" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="446.83950999300345,346.20442325255976 442.4619448109557,341.3891015523072 440.33642183238914,345.9589759562253" fill="#687b89" />
+<path d="M462.5894663844041 312.5298221281347 L506.4618503175454 327.1539501058485" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="506.4618503175454,327.1539501058485 501.5666444996047,322.8659015986601 499.97285655887987,327.64726542083474" fill="#687b89" />
+<path d="M462.5894663844041 347.4701778718653 L506.4618503175454 332.8460498941515" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="506.4618503175454,332.8460498941515 499.97285655887987,332.35273457916526 501.5666444996047,337.1340984013399" fill="#687b89" />
+<path d="M523.0 330.0 L554.0 330.0" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="554.0,330.0 548.0,327.48 548.0,332.52" fill="#687b89" />
+<path d="M571 330 L580 330" fill="none" stroke="#687b89" stroke-width="1.6" />
+<polygon points="580,330 574.0,327.48 574.0,332.52" fill="#687b89" />
+<path d="M485 298 L485 362" fill="none" stroke="#566c69" stroke-width="1.5" stroke-dasharray="5 4" />
+<rect x="481" y="316.5" width="8" height="7" rx="0" fill="#ffffff" fill-opacity="1" stroke="#566c69" stroke-width="1.4" />
+<rect x="481" y="336.5" width="8" height="7" rx="0" fill="#ffffff" fill-opacity="1" stroke="#566c69" stroke-width="1.4" />
+<circle cx="382" cy="330" r="5.5" fill="#ffffff" stroke="#7b8790" stroke-width="1.9" />
+<circle cx="412" cy="330" r="7" fill="#ffffff" stroke="#2678ad" stroke-width="1.9" />
+<circle cx="455" cy="310" r="7" fill="#ffffff" stroke="#2678ad" stroke-width="1.9" />
+<circle cx="455" cy="350" r="7" fill="#ffffff" stroke="#2678ad" stroke-width="1.9" />
+<circle cx="515" cy="330" r="7" fill="#ffffff" stroke="#c77822" stroke-width="1.9" />
+<circle cx="563" cy="330" r="7" fill="#ffffff" stroke="#c77822" stroke-width="1.9" />
+<text x="382" y="357.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#526676">Input</text>
+<rect x="580" y="308" width="85" height="44" rx="5" fill="#f2f4f6" fill-opacity="1" stroke="#7b8790" stroke-width="1.4" />
+<text x="622.5" y="325.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#253746">Task</text>
+<text x="622.5" y="345.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#253746">completion</text>
+<text x="485" y="385.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#566c69">2 tensors</text>
+<path d="M672.5 235 L672.5 388" fill="none" stroke="#d9e1e7" stroke-width="1.1" />
+<text x="680" y="252.8" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="18.5" font-weight="700" fill="#253746">Native</text>
+<rect x="710" y="300" width="143" height="60" rx="5" fill="#edf5fa" fill-opacity="1" stroke="none" stroke-width="0" />
+<rect x="853" y="300" width="37" height="60" rx="5" fill="#fff3e6" fill-opacity="1" stroke="none" stroke-width="0" />
+<text x="781.5" y="284.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#2678ad">Accelerator</text>
+<text x="871.5" y="284.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#c77822">GPU</text>
+<path d="M703.0 330.0 L719.0 330.0" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="719.0,330.0 713.0,327.48 713.0,332.52" fill="#687b89" />
+<path d="M734.253768895108 326.6261540022753 L761.8395099930034 313.79557674744024" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="761.8395099930034,313.79557674744024 755.3364218323891,314.0410240437747 757.4619448109556,318.6108984476928" fill="#687b89" />
+<path d="M734.253768895108 333.3738459977247 L761.8395099930034 346.20442325255976" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="761.8395099930034,346.20442325255976 757.4619448109556,341.3891015523072 755.3364218323891,345.9589759562253" fill="#687b89" />
+<path d="M777.5894663844041 312.5298221281347 L821.4618503175453 327.1539501058485" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="821.4618503175453,327.1539501058485 816.5666444996048,322.8659015986601 814.9728565588798,327.64726542083474" fill="#687b89" />
+<path d="M777.5894663844041 347.4701778718653 L821.4618503175453 332.8460498941515" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="821.4618503175453,332.8460498941515 814.9728565588798,332.35273457916526 816.5666444996048,337.1340984013399" fill="#687b89" />
+<path d="M838.0 330.0 L869.0 330.0" fill="none" stroke="#687b89" stroke-width="1.55" />
+<polygon points="869.0,330.0 863.0,327.48 863.0,332.52" fill="#687b89" />
+<path d="M886 330 L895 330" fill="none" stroke="#687b89" stroke-width="1.6" />
+<polygon points="895,330 889.0,327.48 889.0,332.52" fill="#687b89" />
+<path d="M853 298 L853 362" fill="none" stroke="#566c69" stroke-width="1.5" stroke-dasharray="5 4" />
+<rect x="849" y="326.5" width="8" height="7" rx="0" fill="#ffffff" fill-opacity="1" stroke="#566c69" stroke-width="1.4" />
+<circle cx="697" cy="330" r="5.5" fill="#ffffff" stroke="#7b8790" stroke-width="1.9" />
+<circle cx="727" cy="330" r="7" fill="#ffffff" stroke="#2678ad" stroke-width="1.9" />
+<circle cx="770" cy="310" r="7" fill="#ffffff" stroke="#2678ad" stroke-width="1.9" />
+<circle cx="770" cy="350" r="7" fill="#ffffff" stroke="#2678ad" stroke-width="1.9" />
+<circle cx="830" cy="330" r="7" fill="#ffffff" stroke="#2678ad" stroke-width="1.9" />
+<circle cx="878" cy="330" r="7" fill="#ffffff" stroke="#c77822" stroke-width="1.9" />
+<text x="697" y="357.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#526676">Input</text>
+<rect x="895" y="308" width="85" height="44" rx="5" fill="#f2f4f6" fill-opacity="1" stroke="#7b8790" stroke-width="1.4" />
+<text x="937.5" y="325.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#253746">Task</text>
+<text x="937.5" y="345.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#253746">completion</text>
+<text x="853" y="385.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" fill="#566c69">1 tensor</text>
+</svg>

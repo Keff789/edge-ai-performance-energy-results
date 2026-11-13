@@ -1,0 +1,7 @@
+Workload,Highest Tek rate,Basis,>2.5 MHz [\%],Captured below 2.5 MHz [\%]
+GEMM-FP32,250 MS/s,active_only,0.0146,99.9854
+GEMM-INT8,250 MS/s,active_minus_idle,0.0089,99.9911
+YOLO-FP32,250 MS/s,active_minus_idle,0.0036,99.9964
+YOLO-INT8,250 MS/s,active_minus_idle,0.0025,99.9975
+Gemma3-4B,250 MS/s,active_minus_idle,0.0053,99.9947
+ResNet-50 FP32,250 MS/s,active_minus_idle,0.0029,99.9971

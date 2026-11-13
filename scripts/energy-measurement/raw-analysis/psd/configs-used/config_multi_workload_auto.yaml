@@ -1,0 +1,172 @@
+output_root: external-analysis/edge_ai_multi_workload_v1
+analysis_template_config: external-workspace/common_reference_psd_tool_v0.8.2/config_gemm_fp16.yaml
+workloads:
+- id: gemmfp32
+  label: GEMM-FP32
+  family: GEMM
+  precision: FP32
+  scope_config: external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_gemmfp32.yaml
+  enabled: auto
+  include_in_paper: true
+  notes: Automatically discovered paired Tektronix/PicoScope campaign.
+- id: gemmint8
+  label: GEMM-INT8
+  family: GEMM
+  precision: INT8
+  scope_config: external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_gemmint8.yaml
+  enabled: auto
+  include_in_paper: true
+  notes: Automatically discovered paired Tektronix/PicoScope campaign.
+- id: yolofp32
+  label: YOLO-FP32
+  family: YOLO
+  precision: FP32
+  scope_config: external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_yolofp32.yaml
+  enabled: auto
+  include_in_paper: true
+  notes: Automatically discovered paired Tektronix/PicoScope campaign.
+- id: yoloint8
+  label: YOLO-INT8
+  family: YOLO
+  precision: INT8
+  scope_config: external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_yoloint8.yaml
+  enabled: auto
+  include_in_paper: true
+  notes: Automatically discovered paired Tektronix/PicoScope campaign.
+- id: gemma3-4b
+  label: Gemma3-4B
+  family: Gemma3-4B
+  precision: unspecified
+  scope_config: external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_gemma3-4b.yaml
+  enabled: auto
+  include_in_paper: true
+  notes: Automatically discovered paired Tektronix/PicoScope campaign.
+- id: resnet50
+  label: ResNet-50 FP32
+  family: ResNet-50
+  precision: FP32
+  scope_config: external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_scope_resnet50.yaml
+  enabled: auto
+  include_in_paper: true
+  notes: Automatically discovered paired Tektronix/PicoScope campaign.
+psd:
+  enabled: true
+  comparison_rate_sps: 5000000
+  minimum_pairs: 5
+  cumulative_percentiles:
+  - 0.5
+  - 0.9
+  - 0.95
+  - 0.99
+  dominant_peak_count: 8
+  minimum_peak_frequency_hz: 1.0
+  maximum_peak_frequency_hz: 2500000
+  spectrogram_enabled: true
+  spectrogram_run_policy: representative
+  high_rate_coverage_threshold_hz: 2500000
+  log_frequency_derivative_enabled: true
+  fine_structure_enabled: true
+  idle_load_comparison_enabled: true
+  idle_record_policy: full_record_per_run_equal_weight
+  idle_peak_match_bins: 3
+  idle_load_ratio_bins_per_decade: 24
+  idle_load_amplification_threshold_db: 3.0
+  idle_load_only_threshold_db: 6.0
+  fine_structure_windows:
+  - label: 0–1 kHz
+    low_hz: 0
+    high_hz: 1000
+  - label: 1–8 kHz
+    low_hz: 1000
+    high_hz: 8000
+  - label: 8–16 kHz
+    low_hz: 8000
+    high_hz: 16000
+  - label: 25–35 kHz
+    low_hz: 25000
+    high_hz: 35000
+  - label: 300–700 kHz
+    low_hz: 300000
+    high_hz: 700000
+  bands:
+  - label: 0–100 Hz
+    low_hz: 0
+    high_hz: 100
+  - label: 100 Hz–1 kHz
+    low_hz: 100
+    high_hz: 1000
+  - label: 1–10 kHz
+    low_hz: 1000
+    high_hz: 10000
+  - label: 10–77 kHz
+    low_hz: 10000
+    high_hz: 77000
+  - label: 77–500 kHz
+    low_hz: 77000
+    high_hz: 500000
+  - label: 500 kHz–2.5 MHz
+    low_hz: 500000
+    high_hz: 2500000
+common_reference:
+  enabled: true
+  sources:
+  - tek
+  - pico
+  source_rate_sps: 5000000
+  analysis_rate_sps: 1000000
+  target_rates_sps:
+  - 50
+  - 85
+  - 150
+  - 240
+  - 400
+  - 680
+  - 1200
+  - 2000
+  - 2500
+  - 3300
+  - 5500
+  - 9400
+  - 16000
+  - 25000
+  - 45000
+  - 80000
+  - 100000
+  - 125000
+  - 160000
+  window_durations_s:
+  - 0.02
+  - 0.05
+  - 0.1
+  - 0.2
+  - 0.5
+  - 1
+  - 2
+  - 5
+  - 10
+  windows_per_duration: 16
+  edge_margin_s: 0.0
+  guard_seconds: 0.5
+  reconstruction_modes:
+  - anti_alias
+  - phase_only
+  thresholds_pct:
+  - 0.1
+  - 0.5
+  - 1.0
+  - 2.0
+  - 5.0
+  highlighted_rate_sps: 2000
+  minimum_samples_per_window: 4
+  cache_dtype: float32
+direct_rate_validation:
+  enabled: true
+  maximum_rate_sps: 5000000
+  use_normalised_power: true
+paper_artifacts:
+  generate_pdf: true
+  generate_png: true
+  generate_tables: true
+  generate_macros: true
+  generate_bundles: true
+  plot_max_points: 50000

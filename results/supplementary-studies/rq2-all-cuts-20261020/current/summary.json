@@ -1,0 +1,24 @@
+{
+  "measured_pairs": 204,
+  "quality_eligible_pairs": 187,
+  "classifier_pairs_all": 168,
+  "classifier_pairs_quality": 151,
+  "detector_pairs": 36,
+  "detector_boundary_features_available": 0,
+  "full_ranking_rows": 391,
+  "group_correlations": 42,
+  "all_k_group_curve_rows": 1386,
+  "published_k135_comparisons": 108,
+  "max_published_absolute_error_pp": 2.4868995751603507e-14,
+  "boundary_score": "ascending logical boundary bytes; ties use ascending configuration identity",
+  "rank_correlation": "Spearman average ranks; corr(-boundary_bytes,FPS), so positive means smaller boundary accompanies higher throughput",
+  "aggregation": "Equal weight across fixed nine classifier groups (or twelve detector groups). k_eff=min(max_native_trials,n). No aggregate over a reduced subset when a method lacks any group.",
+  "budget_scope": "Native trials in the evaluated group only. Generic acquisition, calibration training, compilation and quality evaluation are additional and excluded. Uniform-random values are exact expectations over all distinct subsets.",
+  "calibrated_scope": "Frozen published architecture-held-out predictions; no new fitting or extrapolation to the 17 quality-excluded classifier cuts or any detector.",
+  "source_commit": "b10d15992d0ce45d0f81329a5e961cb6207a1d09",
+  "input_sha256": {
+    "calibration_candidate_audit.csv": "cba79522f785c3e844910795fcb90bd2504938b5d7aef403db96702e79cac8ed",
+    "calibration_predictions.csv": "7b9c920580ff9bb6f2bf6a15d93c929fd3650949c81eb008b29766d0cef4534f",
+    "published_calibration_groups.csv": "3cf84119fa52cbc220d77e2b941523eee6a2fe2e0a9d97300053842fc834f040"
+  }
+}

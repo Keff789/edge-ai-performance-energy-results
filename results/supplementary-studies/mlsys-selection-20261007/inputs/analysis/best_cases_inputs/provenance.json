@@ -1,0 +1,133 @@
+{
+  "native_cases.csv": {
+    "source": "inputs/native_cases.csv",
+    "source_sha256": "19576e6e8665073df36e1fcf60399f21074eed65c99aef0129d9c8aa6438d56e",
+    "projection_sha256": "8426dfdd75737579d2cee8e5bfadc55327146c3ae927e06ae165185ec88b2028",
+    "rows": 246,
+    "selected_columns": [
+      "cohort",
+      "model_id",
+      "case_id",
+      "setup_id",
+      "backend",
+      "precision",
+      "task",
+      "endpoint_id",
+      "case_uid",
+      "execution_mode",
+      "fps",
+      "source_runner"
+    ]
+  },
+  "performance_repeats.csv": {
+    "source": "inputs/performance_repeats.csv",
+    "source_sha256": "47408af1a3da766111e3779e9955946960d4489c548a17880c8525e04ccb6df0",
+    "projection_sha256": "c8132877d5507054aa8eb78e2c85e13db3e6fb3c91dbc690e69c76eb16610c44",
+    "rows": 738,
+    "selected_columns": [
+      "case_uid",
+      "repetition",
+      "completed_count",
+      "makespan_s",
+      "recomputed_fps"
+    ]
+  },
+  "energy_cases.csv": {
+    "source": "inputs/energy_cases.csv",
+    "source_sha256": "3d93c40dde0ab65c19731723403f99dba4f93a3dcb1df362f30e2990518321cd",
+    "projection_sha256": "aae36f11b81f9445cdd10817a96fdc9031d8eb3450f706d7b8cc380def921643",
+    "rows": 246,
+    "selected_columns": [
+      "cohort",
+      "model_id",
+      "case_id",
+      "setup_id",
+      "backend",
+      "precision",
+      "task",
+      "endpoint_id",
+      "case_uid",
+      "accuracy_class",
+      "energy_per_task_j",
+      "performance_fps",
+      "physical_scope",
+      "window",
+      "calibration_sha256",
+      "quality_relative_loss"
+    ]
+  },
+  "energy_repeats.csv": {
+    "source": "inputs/energy_repeats.csv",
+    "source_sha256": "cec8e9e464a8519a5552ac219cda093231d10d62587906ff8a9cce0c8fa3fec8",
+    "projection_sha256": "01263ebfbf490d0412eb2f0bf7d1b1e90be3e3219076e3ad3fbbe60d67781689",
+    "rows": 738,
+    "selected_columns": [
+      "case_uid",
+      "repetition",
+      "completed_count",
+      "active_duration_s",
+      "energy_j",
+      "recomputed_j_per_task"
+    ]
+  },
+  "pair_admissions.csv": {
+    "source": "inputs/energy_split_full_pairs.csv",
+    "source_sha256": "1b975af9cff4f236f93ab4d8537ac67b1702b2da1adca968dd9be9597826fe37",
+    "projection_sha256": "286e88fb7e0a6aab5b5f6548fec2a7bd36a3ddd1ec64a68f014e310d593d5ef9",
+    "rows": 408,
+    "selected_columns": [
+      "cohort",
+      "model_id",
+      "case_id",
+      "setup_id",
+      "split_backend",
+      "baseline_backend",
+      "baseline_kind",
+      "descriptive_comparable",
+      "semantic_comparable",
+      "semantic_comparison_reasons",
+      "descriptive_energy_ratio",
+      "precision",
+      "split_boundary_precision",
+      "baseline_runtime_precision",
+      "energy_scope",
+      "energy_window_effective",
+      "energy_calibration_sha256",
+      "evidence_id",
+      "reason",
+      "runtime_conditions_comparable"
+    ]
+  },
+  "coverage.csv": {
+    "source": "inputs/coverage.csv",
+    "source_sha256": "5a93a526bf7e134422d9c8df48104b080f1b5d590ec6291a867f281151c8f7a1",
+    "projection_sha256": "62db386c331d0daaed931dcc9d201c248c1a55421bc5373d06b4327120927a00",
+    "rows": 588,
+    "selected_columns": [
+      "model_id",
+      "case_id",
+      "setup_id",
+      "backend",
+      "status",
+      "variant",
+      "measurement_endpoint",
+      "quality_decision"
+    ]
+  },
+  "native_unsupported.csv": {
+    "source": "deep_analysis/inputs/native_unsupported.csv",
+    "source_sha256": "0b7a4207ef56f2f7f9bb24aafa8fe7a92249282d4d42e333fae963b1d945dad7",
+    "projection_sha256": "27389a30a270fe67c0dcdab71df02dd7ef4a43b70d6767da5b472ccef03c361a",
+    "rows": 228,
+    "selected_columns": [
+      "model_id",
+      "case_id",
+      "setup_id",
+      "backend",
+      "precision",
+      "status",
+      "reason",
+      "part2_input_count"
+    ]
+  }
+}

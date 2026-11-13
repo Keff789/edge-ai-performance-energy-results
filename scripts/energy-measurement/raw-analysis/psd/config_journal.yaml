@@ -1,0 +1,33 @@
+# Journal extension only. Existing PARMA and numerical result trees are READ ONLY.
+output_root: external-analysis/edge_ai_multi_workload_v1/journal_artifacts
+multi_workload_output_root: external-analysis/edge_ai_multi_workload_v1
+multi_workload_config: external-analysis/edge_ai_auto_pipeline_v1/generated_configs/config_multi_workload_auto.yaml
+psd:
+  native_rate_sps: 5000000
+  nperseg: 1048576
+  minimum_welch_segments: 2
+  nominal_bandwidth_hz: 77000   # Marker, NOT a hard cutoff or a certified passband.
+plot_max_points: 6000
+fine_structure: true
+matched_duration_s: 10
+idle_guard_s: 0.1
+energy_check_tolerance_pct: 0.5
+
+# Existing both-source Jetson PSDs already contain Pico, so no raw rerun is needed.
+# Hailo's legacy NPY files are read as POWER after an energy/window consistency
+# check. No second Pico calibration; no Jetson voltage model is applied to Hailo.
+npy_sources:
+  - id: hailo10
+    enabled: true
+    platform_label: Hailo-10
+    root: external-measurements/hailo_sweep
+    signal: power
+    unit: W
+    contract: legacy_results_energy_checked
+    setup_id: pico_ina225
+    setup_evidence: user_reported_same_setup
+    measurement_boundary: unspecified
+    precision: unspecified
+    # Optional factual overrides; never guess from platform name:
+    # gemm: {precision: INT8, measurement_boundary: accelerator_rail}
+    workload_metadata: {}

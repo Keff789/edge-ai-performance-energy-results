@@ -1,0 +1,39 @@
+\begin{table*}[!t]
+\caption{Alle 21 technischen Generic/Native-Rangfolgegruppen. $n$ zählt gemessene Kandidaten, $\rho$ ist die Spearman-Korrelation innerhalb der Gruppe und $L_R$ der Native-Durchsatzverlust durch Auswahl des Generic-Gewinners. G-Auswahl und N-Optimum verwenden Mediane aus drei Wiederholungen. Die letzte Spalte führt neun abhängige Kombinationen der Generic/Native-Wiederholungen auf, kein Konfidenzintervall. YOLOv7 kombiniert historische Generic- und berichtete abschließende Native-Wiederholungen. Die übrigen Zeilen behalten ihre archivierten Messreihen. DX bezeichnet DeepX M1.}
+\label{tab:allgroups}
+\centering\small
+\setlength{\tabcolsep}{3.0pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrllr@{}}
+\toprule
+Modell & System & $n$ & $\rho$ & $L_R$ (\%) & G-Auswahl & N-Optimum & Wdh.-Bereich $L_R$ (\%)\\
+\midrule
+MobileNetV3-Large & H8 & 17 & 0.995 & 0.00 & b027 & b027 & 0.00--0.00\\
+ & H10 & 17 & 0.382 & 31.86 & b027 & b085 & 30.99--38.39\\
+ & DX & 17 & 0.946 & 1.24 & b062 & b056 & 0.00--3.15\\
+\addlinespace[2pt]
+RegNetX-1.6GF & H8 & 20 & 0.941 & 8.03 & b066 & b073 & 8.03--8.22\\
+ & H10 & 20 & -0.456 & 70.61 & b052 & b123 & 70.22--74.67\\
+ & DX & 20 & 0.983 & 0.00 & b052 & b052 & 0.00--0.00\\
+\addlinespace[2pt]
+ResNet-50 & H8 & 19 & 0.854 & 13.92 & b002 & b031 & 13.23--14.61\\
+ & H10 & 19 & 0.489 & 52.15 & b002 & b095 & 49.76--53.52\\
+ & DX & 19 & 0.981 & 0.00 & b002 & b002 & 0.00--0.00\\
+\addlinespace[2pt]
+YOLO11l & H8 & 3 & 1.000 & 0.00 & b120 & b120 & 0.00--0.00\\
+ & H10 & 3 & -0.500 & 13.34 & b003 & b120 & 13.34--13.48\\
+ & DX & 3 & 0.500 & 0.00 & b062 & b062 & 0.00--0.00\\
+\addlinespace[2pt]
+YOLO26m & H8 & 3 & 1.000 & 0.00 & b043 & b043 & 0.00--0.00\\
+ & H10 & 3 & 0.500 & 1.64 & b038 & b043 & 0.00--1.66\\
+ & DX & 3 & 1.000 & 0.00 & b043 & b043 & 0.00--0.39\\
+\addlinespace[2pt]
+YOLO26s & H8 & 3 & 1.000 & 0.00 & b021 & b021 & 0.00--0.00\\
+ & H10 & 3 & 1.000 & 0.00 & b021 & b021 & 0.00--0.00\\
+ & DX & 3 & 1.000 & 0.00 & b021 & b021 & 0.00--0.00\\
+\addlinespace[2pt]
+YOLOv7 & H8 & 3 & 0.500 & 57.51 & b044 & b066 & 57.46--57.71\\
+ & H10 & 3 & 0.500 & 17.29 & b066 & b044 & 0.00--18.13\\
+ & DX & 3 & 0.500 & 0.00 & b044 & b044 & 0.00--38.72\\
+\bottomrule
+\end{tabular*}
+\end{table*}

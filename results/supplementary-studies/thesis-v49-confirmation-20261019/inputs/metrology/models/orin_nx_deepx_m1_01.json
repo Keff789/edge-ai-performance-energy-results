@@ -1,0 +1,27 @@
+{
+  "kind": "polynomial19v",
+  "model_id": "thesis-v49-historical19v-conditional-orin_nx_deepx_m1_01",
+  "source": "archive:evidence/electrical/new_acquisition_models/sources/orin_nx_deepx_m1_01_binding.json",
+  "source_sha256": "111a8744745c80e772f081ed2f2d2b50f4a6f90120e92b538e34465b129c7027",
+  "g": 0.997224237630222,
+  "o": 0.004704622,
+  "a": 19.062607082705,
+  "b": -0.07444582,
+  "c": 0.9705324920014426,
+  "s": 0.9035075097142278,
+  "setup_id": "orin_nx_deepx_m1_01",
+  "conditional_estimate_only": true,
+  "valid_for_final_absolute_energy": false,
+  "new_independent_calibration": false,
+  "model_current_domain_a": [
+    0.0,
+    3.5
+  ],
+  "extrapolation_policy": "unclipped_with_flag",
+  "physical_scope": "FS upstream nominal19V",
+  "reference_uncertainty": null,
+  "complete_uncertainty_available": false,
+  "calibration_evidence": "private-path-id:14b5ef137d085e94d7655307071e42e659d65d7a2f90325eabfcc64f8d874579",
+  "calibration_sha256": "9494eea7de1d18167f73854e276bf6f9bba0066c51ff2c81c49737486235cfd1",
+  "current_config_sha256": "ac10b296a47a975d0c2f15214fdf6c90893a2002532973e7194081aa8f00eb02"
+}

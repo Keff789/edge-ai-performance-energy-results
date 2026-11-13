@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Cut-Durchsatzverhältnisse auf H10: RegNet b123/b052 und ResNet b095/b002. Jede Spalte ist ein separates Experiment mit vierzig Prozessen in fünf vollständigen randomisierten Blöcken. Geometrische Mittel und nominale 95\%-t-Intervalle verwenden logarithmierte Blockverhältnisse.}
+\label{tab:scheduling}
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lll}
+\toprule
+Laufzeit/Scheduling & RegNet & ResNet \\
+\midrule
+Generic produktiv & \shortstack{{0.660}\\{[0.656, 0.665]}} & \shortstack{{0.606}\\{[0.603, 0.608]}} \\
+Native produktiv & \shortstack{{3.371}\\{[3.356, 3.387]}} & \shortstack{{2.060}\\{[2.028, 2.092]}} \\
+Generic Einzelauftrag & \shortstack{{1.029}\\{[1.023, 1.035]}} & \shortstack{{0.836}\\{[0.828, 0.844]}} \\
+Native Einzelauftrag & \shortstack{{1.028}\\{[1.016, 1.040]}} & \shortstack{{0.829}\\{[0.824, 0.834]}} \\
+\bottomrule
+\end{tabular}
+\endgroup
+\end{table}

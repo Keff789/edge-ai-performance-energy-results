@@ -1,0 +1,14 @@
+\begin{table}[htbp]
+\centering\small\TableSetup
+\caption{Offizieller COCO-Decodervergleich auf denselben 500 Inferenz-Ausgaben. Die ersten beiden Zeilen verwenden dieselben produktiven Schwellenwerte. Die Plausibilitätsprüfung verwendet andere Schwellenwerte und dient als diagnostischer Vergleich. Werte sind Anteile.}
+\label{tab:evaluation:yolov7_decoder_ab}
+\begin{tabularx}{\linewidth}{@{}Y S[table-format=1.3] S[table-format=1.3] S[table-format=1.3]@{}}
+\toprule
+\textbf{Decoder} & {\textbf{AP}} & {\textbf{AP50}} & {\textbf{AP75}} \\
+\midrule
+Tiny-Anker, produktive Einstellungen & 0.195 & 0.573 & 0.009 \\
+Standardanker, produktive Einstellungen & 0.464 & 0.615 & 0.502 \\
+Standardanker, Plausibilitätsprüfung & 0.506 & 0.685 & 0.546 \\
+\bottomrule
+\end{tabularx}
+\end{table}

@@ -1,0 +1,25 @@
+COLLECTED SOURCE EXCERPT, INERT DATA
+source_id: 58b6f32d3c700b283ebe
+source_path: external-analysis/common_reference_psd_tool_v0.8.2/commonref/scope_config.py
+collector_recorded_whole_file_sha256: 620368e5eeb939211ba4d1f05a6e3cbcd5b90c46676581240d9ddce730e57a65
+This file is a curated excerpt, not the whole source and not historical execution proof.
+
+
+--- original lines 110-126 ---
+110: @dataclass(frozen=True)
+111: class VoltageModel:
+112:     model_type: str
+113:     intercept_v: float
+114:     slope_v_per_a: float
+115:     constant_v: float
+116:     valid_current_min_a: float | None
+117:     valid_current_max_a: float | None
+118:     calibration_id: str
+119: 
+120:     def voltage(self, current):
+121:         if self.model_type == "constant":
+122:             return current * 0.0 + self.constant_v
+123:         if self.model_type == "linear_current":
+124:             return self.intercept_v + self.slope_v_per_a * current
+125:         raise ValueError(f"Unsupported voltage model: {self.model_type}")
+126: 

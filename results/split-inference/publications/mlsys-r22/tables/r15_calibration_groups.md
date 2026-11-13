@@ -1,0 +1,16 @@
+# Complete classifier selection losses (%) by group and budget
+
+Complete classifier selection losses (%) by group and budget. All methods use the same eligible cuts. Triplets are k=1/3/5. The calibrated method holds out the entire named architecture while fitting on the indicated setup.
+
+| Model | Setup | n | Generic | Calibrated | Random | Bytes |
+| --- | --- | --- | --- | --- | --- | --- |
+| MobileNet | DeepX | 17 | 48.12/44.61/44.04 | 15.83/4.22/0.00 | 39.38/22.79/14.40 | 0.00/0.00/0.00 |
+| MobileNet | H10 | 9 | 25.75/18.56/10.06 | 25.75/18.56/10.06 | 18.11/6.74/3.29 | 10.06/6.80/0.00 |
+| MobileNet | H8 | 8 | 0.00/0.00/0.00 | 0.00/0.00/0.00 | 21.37/5.25/1.39 | 40.18/40.18/0.00 |
+| RegNet | DeepX | 20 | 45.82/45.49/42.56 | 45.82/45.49/35.32 | 35.51/16.69/9.40 | 25.20/15.11/15.11 |
+| RegNet | H10 | 20 | 68.05/65.21/65.21 | 68.05/65.21/62.94 | 54.98/34.35/23.69 | 14.08/0.00/0.00 |
+| RegNet | H8 | 20 | 5.48/5.48/0.00 | 5.48/5.48/5.48 | 28.72/16.38/11.19 | 42.62/18.96/5.48 |
+| ResNet | DeepX | 19 | 42.84/13.25/8.12 | 13.25/0.00/0.00 | 20.43/5.42/2.01 | 13.25/0.00/0.00 |
+| ResNet | H10 | 19 | 54.47/21.31/14.04 | 75.98/69.35/25.09 | 44.80/20.69/11.67 | 75.98/69.35/54.47 |
+| ResNet | H8 | 19 | 4.71/0.00/0.00 | 4.71/0.00/0.00 | 27.32/10.35/4.92 | 75.33/45.33/4.71 |
+

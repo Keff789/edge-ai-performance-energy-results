@@ -1,0 +1,13 @@
+# Energie der schnellsten Konfigurationen
+
+Absolute kalibrierte Systemenergie desselben global nach Durchsatz gewählten Full und Splits. Dies sind tatsächliche Konfigurationen, keine Host-Mittelwerte.
+
+| Modell | Full | mJ/Bild | Split | mJ/Bild | Energieänderung (%) |
+| --- | --- | ---: | --- | ---: | ---: |
+| MobileNetV3-L | DeepX | 12.01 | DeepX/b135 | 12.59 | +4.8 |
+| RegNet-X | DeepX | 31.54 | H10/b123 | 15.83 | -49.8 |
+| ResNet-50 | DeepX | 27.65 | H10/b095 | 29.46 | +6.6 |
+| YOLO11l | DeepX | 315.23 | H10/b120 | 555.75 | +76.3 |
+| YOLO26m | TRT (H8) | 400.03 | H10/b043 | 319.65 | -20.1 |
+| YOLO26s | TRT (DeepX) | 187.80 | H8/b021 | 157.65 | -16.1 |
+| YOLOv7 | DeepX | 269.44 | H8/b066 | 330.14 | +22.5 |

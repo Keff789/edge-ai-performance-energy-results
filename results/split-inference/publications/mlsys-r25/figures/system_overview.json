@@ -1,0 +1,101 @@
+{
+  "caption": "Generic and Native execute the same one-input cut. Generic also supports multi-tensor boundaries beyond this paired comparison. Native is tailored to the accelerator–GPU combination. The shared cut does not imply equal runtime costs.",
+  "data_generation": "conceptual-spec-v1",
+  "input_files": [
+    "scripts/split-inference/publication_mlsys_figures.py"
+  ],
+  "input_uids": [],
+  "kind": "conceptual",
+  "schema": "mlsys-r22-figure-v1",
+  "specification": {
+    "canvas": [
+      240,
+      188
+    ],
+    "completion_bounds": [
+      202,
+      237
+    ],
+    "cut_x": 151.0,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "heading": "Paired comparison: same graph and cut",
+    "kind": "conceptual",
+    "nodes": [
+      [
+        10,
+        0
+      ],
+      [
+        38,
+        0
+      ],
+      [
+        72,
+        8
+      ],
+      [
+        72,
+        -8
+      ],
+      [
+        129,
+        0
+      ],
+      [
+        177,
+        0
+      ]
+    ],
+    "notes": [
+      "Generic also supports multi-tensor boundaries.",
+      "Native uses one input to the GPU suffix."
+    ],
+    "prefix_bounds": [
+      23,
+      151
+    ],
+    "runners": [
+      {
+        "name": "Generic",
+        "runtime": "Common runtime",
+        "y": 130
+      },
+      {
+        "name": "Native",
+        "runtime": "Model- and backend-specific runtime",
+        "y": 57
+      }
+    ],
+    "schema": "mlsys-r22-same-cut-schematic-v1",
+    "source": "scripts/split-inference/publication_mlsys_figures.py:SYSTEM_SPEC",
+    "suffix_bounds": [
+      151,
+      190
+    ]
+  }
+}

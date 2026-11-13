@@ -1,0 +1,150 @@
+{
+  "graph_candidates": 2111,
+  "score_rows": 14777,
+  "availability_rows": 189,
+  "model_verification": [
+    {
+      "model_id": "mobilenet_v3_large",
+      "graph_candidates": 138,
+      "historical_fit_rows_verified": 138,
+      "stored_fallback_latency_rows_verified": 138,
+      "stored_bottleneck_and_stream_rows_verified": 138,
+      "historical_fit_profile": {
+        "cut_free_mib": 10.0,
+        "cut_soft_mib": 20.0,
+        "hard_high": 0.72,
+        "high": 0.58,
+        "ideal": 0.42,
+        "low": 0.25,
+        "over_w": 2.2,
+        "stage1": "hailo10",
+        "stage2": "tensorrt",
+        "under_w": 0.6
+      },
+      "system_spec_available": false
+    },
+    {
+      "model_id": "regnet_x_1_6gf",
+      "graph_candidates": 133,
+      "historical_fit_rows_verified": 133,
+      "stored_fallback_latency_rows_verified": 133,
+      "stored_bottleneck_and_stream_rows_verified": 133,
+      "historical_fit_profile": {
+        "cut_free_mib": 10.0,
+        "cut_soft_mib": 20.0,
+        "hard_high": 0.72,
+        "high": 0.58,
+        "ideal": 0.42,
+        "low": 0.25,
+        "over_w": 2.2,
+        "stage1": "hailo10",
+        "stage2": "tensorrt",
+        "under_w": 0.6
+      },
+      "system_spec_available": false
+    },
+    {
+      "model_id": "resnet50",
+      "graph_candidates": 120,
+      "historical_fit_rows_verified": 120,
+      "stored_fallback_latency_rows_verified": 120,
+      "stored_bottleneck_and_stream_rows_verified": 120,
+      "historical_fit_profile": {
+        "cut_free_mib": 10.0,
+        "cut_soft_mib": 20.0,
+        "hard_high": 0.72,
+        "high": 0.58,
+        "ideal": 0.42,
+        "low": 0.25,
+        "over_w": 2.2,
+        "stage1": "hailo10",
+        "stage2": "tensorrt",
+        "under_w": 0.6
+      },
+      "system_spec_available": false
+    },
+    {
+      "model_id": "yolo11l",
+      "graph_candidates": 615,
+      "historical_fit_rows_verified": 615,
+      "stored_fallback_latency_rows_verified": 615,
+      "stored_bottleneck_and_stream_rows_verified": 615,
+      "historical_fit_profile": {
+        "cut_free_mib": 10.0,
+        "cut_soft_mib": 20.0,
+        "hard_high": 0.72,
+        "high": 0.58,
+        "ideal": 0.42,
+        "low": 0.25,
+        "over_w": 2.2,
+        "stage1": "hailo10",
+        "stage2": "tensorrt",
+        "under_w": 0.6
+      },
+      "system_spec_available": false
+    },
+    {
+      "model_id": "yolo26m",
+      "graph_candidates": 416,
+      "historical_fit_rows_verified": 416,
+      "stored_fallback_latency_rows_verified": 416,
+      "stored_bottleneck_and_stream_rows_verified": 416,
+      "historical_fit_profile": {
+        "cut_free_mib": 10.0,
+        "cut_soft_mib": 20.0,
+        "hard_high": 0.72,
+        "high": 0.58,
+        "ideal": 0.42,
+        "low": 0.25,
+        "over_w": 2.2,
+        "stage1": "hailo10",
+        "stage2": "tensorrt",
+        "under_w": 0.6
+      },
+      "system_spec_available": false
+    },
+    {
+      "model_id": "yolo26s",
+      "graph_candidates": 382,
+      "historical_fit_rows_verified": 382,
+      "stored_fallback_latency_rows_verified": 382,
+      "stored_bottleneck_and_stream_rows_verified": 382,
+      "historical_fit_profile": {
+        "cut_free_mib": 10.0,
+        "cut_soft_mib": 20.0,
+        "hard_high": 0.72,
+        "high": 0.58,
+        "ideal": 0.42,
+        "low": 0.25,
+        "over_w": 2.2,
+        "stage1": "hailo10",
+        "stage2": "tensorrt",
+        "under_w": 0.6
+      },
+      "system_spec_available": false
+    },
+    {
+      "model_id": "yolov7_paper",
+      "graph_candidates": 307,
+      "historical_fit_rows_verified": 307,
+      "stored_fallback_latency_rows_verified": 307,
+      "stored_bottleneck_and_stream_rows_verified": 307,
+      "historical_fit_profile": {
+        "cut_free_mib": 10.0,
+        "cut_soft_mib": 20.0,
+        "hard_high": 0.72,
+        "high": 0.58,
+        "ideal": 0.42,
+        "low": 0.25,
+        "over_w": 2.2,
+        "stage1": "hailo10",
+        "stage2": "tensorrt",
+        "under_w": 0.6
+      },
+      "system_spec_available": false
+    }
+  ],
+  "normalization_scope": "full original model graph candidate universe before any measured/quality filtering",
+  "new_fitted_parameters": false,
+  "system_specs_reconstructed": 0
+}

@@ -1,0 +1,264 @@
+{
+  "cohort_comparison_note": "These are distinct measured/quality-admitted cohorts, not an isolated algorithm experiment. The full feature universe is byte-identical. The corrected cohort is the active result; older cohorts remain historical.",
+  "counts": {
+    "analysis_complete_groups": 21,
+    "eligible": 331,
+    "fps_measured": 359,
+    "fps_pending": 0,
+    "nonempty_eligible_groups": 21,
+    "quality_fail_measured": 28,
+    "quality_pending_measured": 0,
+    "selected": 420,
+    "technical_excluded": 61
+  },
+  "current_cohort": {
+    "eligible": 331,
+    "fps_measured": 359,
+    "groups": 21,
+    "primary_loss_pct": {
+      "boundary_size": {
+        "k1": 22.224462602920283,
+        "k3": 15.828005613937316,
+        "k5": 6.610355860925138,
+        "mean_1_3_5": 14.887608025927578
+      },
+      "device": {
+        "k1": 21.112468465160326,
+        "k3": 15.292202766935686,
+        "k5": 9.888454711761472,
+        "mean_1_3_5": 15.431041981285828
+      },
+      "global": {
+        "k1": 22.48156893209717,
+        "k3": 19.346566038587923,
+        "k5": 10.519976852329805,
+        "mean_1_3_5": 17.449370607671632
+      },
+      "task": {
+        "k1": 25.46322024965459,
+        "k3": 17.773157248499928,
+        "k5": 10.956996278508461,
+        "mean_1_3_5": 18.064457925554326
+      },
+      "task_device": {
+        "k1": 17.74199681229376,
+        "k3": 13.338408552050534,
+        "k5": 9.800774905763765,
+        "mean_1_3_5": 13.62706009003602
+      },
+      "weighted_default": {
+        "k1": 34.77110455523861,
+        "k3": 32.265246882279634,
+        "k5": 21.70882047292692,
+        "mean_1_3_5": 29.58172397014839
+      }
+    }
+  },
+  "final_study_verifier_exit_code": 0,
+  "internal_reproduction_receipt": {
+    "report_relative_path": "rq2_detector_followup_20261027/publication_backup/rq3_final_reproduction/FINAL_RQ3_REPRODUCTION_RECEIPT.json",
+    "sha256": "aa5e10a33bf8d1453ea1037f511dc41aa9304a71631dc372bce8c5fb1b059bfb",
+    "size_bytes": 77793
+  },
+  "manifest_file_hashes": {
+    "results/supplementary-studies/rq3-generic420-detector-corrected-20261027/MANIFEST.json": "53e1591fc2bfe32ae1bd68b69354e7778a80c9cb394146bc7cf166033a9dd57a"
+  },
+  "method": {
+    "boundary_vertex_1_0_0_in_grid": true,
+    "equal_group_averaging": true,
+    "fit_scopes": [
+      "global",
+      "task",
+      "device",
+      "task_device"
+    ],
+    "full_data_fit_is_descriptive_not_heldout": true,
+    "full_graph_universe_candidates": 2111,
+    "graph_universe_sha256": "360452de54c9c32376fe6df9df45b65798b7729b81357c380215041668ec4241",
+    "main_fit_unchanged_by_posthoc_scope_performance": true,
+    "normalization_uses_measured_outcomes": false,
+    "one_model_held_out_across_all_accelerators": true,
+    "primary": "prespecified global whole-model heldout fit",
+    "primary_grid_points": 80602,
+    "primary_grid_step": 0.0025,
+    "published_graph_features": {
+      "all420_boundary_ids_match": true,
+      "all_model_sha256_match": true,
+      "all_workflow_candidate_features_complete": true,
+      "path": "results/supplementary-studies/rq2-weighted-20261020/features/graph_boundary_features.csv",
+      "sha256": "05856138ad5eb5de1f05f8b57d234d4bd14bd2acc0713a4b3cc984955d24da2e"
+    },
+    "published_normalization": {
+      "path": "results/supplementary-studies/rq2-weighted-20261020/features/normalization_universes.json",
+      "sha256": "a00131150b5578f31ac7ecb184f5b2bf71a24f2a435cde725020cf864a8619d0"
+    },
+    "published_operation_proxy": "analytic-operation-proxy-r29-extended-v1",
+    "single_ranking_per_fold_for_k1_3_5": true,
+    "standard_normalized_in_grid": [
+      0.23809523809523808,
+      0.7142857142857143,
+      0.047619047619047616
+    ],
+    "standard_unnormalized": [
+      1,
+      3,
+      0.2
+    ]
+  },
+  "previous_published_cohort": {
+    "eligible": 315,
+    "fps_measured": 359,
+    "groups": 21,
+    "primary_loss_pct": {
+      "boundary_size": {
+        "k1": 24.87513748011432,
+        "k3": 15.669239123105424,
+        "k5": 5.68142468504013,
+        "mean_1_3_5": 15.408600429419957
+      },
+      "device": {
+        "k1": 25.79270558818432,
+        "k3": 13.552372286245236,
+        "k5": 7.0408144129478,
+        "mean_1_3_5": 15.461964095792453
+      },
+      "global": {
+        "k1": 25.11224916550437,
+        "k3": 17.098464119688863,
+        "k5": 6.076341880497676,
+        "mean_1_3_5": 16.095685055230305
+      },
+      "task": {
+        "k1": 27.134172722088827,
+        "k3": 20.05782706175568,
+        "k5": 9.60878315872168,
+        "mean_1_3_5": 18.933594314188728
+      },
+      "task_device": {
+        "k1": 21.02951537467167,
+        "k3": 14.381381567225338,
+        "k5": 9.669794637816768,
+        "mean_1_3_5": 15.026897193237923
+      },
+      "weighted_default": {
+        "k1": 22.35507822195964,
+        "k3": 19.559088800193624,
+        "k5": 13.36952690443844,
+        "mean_1_3_5": 18.427897975530566
+      }
+    }
+  },
+  "private_path_scan": {
+    "absolute_private_path_and_local_URI_scan": true,
+    "matching_files": []
+  },
+  "public_input_reproduction": {
+    "byte_identical_files": 169,
+    "different_files": [
+      "MANIFEST.json",
+      "README.md"
+    ],
+    "documentation_difference": "README --inputs uses the in-repository study path for the source output and <STUDY>/inputs for the private external rebuild. Manifests differ only in that README hash.",
+    "exact_figure_files": {
+      "artifacts/de/figures/fit_scopes_k5.pdf": "0c9db64e034396744d6cd1283ad123f248e3e742c3213f3f615d0fc5572e6ac7",
+      "artifacts/de/figures/fit_scopes_k5.png": "14ef57a7ba4db20dbc6626f9824b84dbca631809c6a176e12d2fd5b7f02a1ca1",
+      "artifacts/de/figures/fit_scopes_k5.svg": "4ed9d0e156167cdadd971f323e58e71b5df3ac2fef494e3e5dcff040ccb4cbe7",
+      "artifacts/de/figures/shortlist_loss.pdf": "5527410597a713f6bf2046ad6fa0dc5f72a1cb6cf4fa026d3cfe4aa43a615d0a",
+      "artifacts/de/figures/shortlist_loss.png": "bbc41e487dc199b9498627a00cafafb432262395f0bff19a9f87c873bceb2c61",
+      "artifacts/de/figures/shortlist_loss.svg": "97dd50151eb8b7fce9caee71e5c0cc38923e8a22a1b77659d861a78e5a78ef7a",
+      "artifacts/de/figures/shortlist_loss_single_column.pdf": "5e82dd67d45d1981eae93068c98004796a9e618fd62fed9282aa97f2fcaf37c0",
+      "artifacts/de/figures/shortlist_loss_single_column.png": "c6b1dbe80bd817d81e069d5c721703a71c639be90e79b0bb87f0422903c53408",
+      "artifacts/de/figures/shortlist_loss_single_column.svg": "c2a0f91fc1bce0bade11858cad4cec99db17af4f1252fd334516e2bdb8c79850",
+      "artifacts/en/figures/fit_scopes_k5.pdf": "86e16f67d3b70cb1d46e646d61866a7b697fa795ca5d07a1e777da618c234048",
+      "artifacts/en/figures/fit_scopes_k5.png": "a659a6501aefcd2a14dd7f218ae7d08675611fcad14c2046ea6a9bf566b12aef",
+      "artifacts/en/figures/fit_scopes_k5.svg": "d7cd07d2a0d03e2589cdc6120de298b26cb50000a79a51635b6d0ecbb18bf701",
+      "artifacts/en/figures/shortlist_loss.pdf": "8fe34dc1d86e47677737ca9759150e0f3148da11d6b9142a24fafde901f91158",
+      "artifacts/en/figures/shortlist_loss.png": "460af185110c9309758da3ee6ebdd5982e3c68576fda7f8e95a872520c3cc1eb",
+      "artifacts/en/figures/shortlist_loss.svg": "f232065a2e081c715c0717f13361faec344f41d7eaa37920c7f8f893663772ee",
+      "artifacts/en/figures/shortlist_loss_single_column.pdf": "d65e8b08ffe2adca2e8536dd4db7da377149f2a189ca25259d9aa19eec23b2e1",
+      "artifacts/en/figures/shortlist_loss_single_column.png": "fefbf4edc4fd434d97ec0636ae4747d9ba128f0a263e51a19d01d57eb7742230",
+      "artifacts/en/figures/shortlist_loss_single_column.svg": "6e486c9d65537805161a8795a84e12e66ad9d823ab6f7b6063d630454415e80b"
+    },
+    "manifest_equal_after_only_readme_hash_normalization": true,
+    "readme_equal_after_only_output_path_normalization": true,
+    "rebuild_files": 171,
+    "scientific_outputs_all_byte_identical": true,
+    "source_files": 171
+  },
+  "published_input_reproduction_exit_code": 0,
+  "quality_completion": {
+    "claim": "All fixed420 configurations have resolved scientific status; admitted pool includes corrected quality.",
+    "complete": true,
+    "historical_quality_is_current_admission": false,
+    "pending_measured": []
+  },
+  "schema": "generic420-rq3-closeout-validation-v1",
+  "snapshot_ledger_sha256": "d658eb195bcb20322c587c47180fc6c4d78003c9368e206943e0ab9ae1c55216",
+  "snapshot_locator_relative_to_sprite": "Reports/generic_detectors20_multitensor_20261021T163124Z/paper_rq3_snapshots/rq2_detector_followup_20261027/generic420_d658eb195bcb2032",
+  "source_reproduction_exit_code": 0,
+  "study": "results/supplementary-studies/rq3-generic420-detector-corrected-20261027",
+  "verification": {
+    "candidate_count": 420,
+    "counts": {
+      "analysis_complete_groups": 21,
+      "eligible": 331,
+      "fps_measured": 359,
+      "fps_pending": 0,
+      "nonempty_eligible_groups": 21,
+      "quality_fail_measured": 28,
+      "quality_pending_measured": 0,
+      "selected": 420,
+      "technical_excluded": 61
+    },
+    "eligible_count": 331,
+    "fits": {
+      "budget5_fit": {
+        "descriptive_fits": 12,
+        "folds": 56,
+        "metrics": 3360,
+        "summary_reproduced": true
+      },
+      "coarse_grid": {
+        "descriptive_fits": 12,
+        "folds": 56,
+        "metrics": 3360,
+        "summary_reproduced": true
+      },
+      "family_holdout": {
+        "descriptive_fits": 12,
+        "folds": 48,
+        "metrics": 3360,
+        "summary_reproduced": true
+      },
+      "primary": {
+        "descriptive_fits": 12,
+        "folds": 56,
+        "metrics": 3360,
+        "summary_reproduced": true
+      },
+      "tie_secondary_bytes": {
+        "descriptive_fits": 12,
+        "folds": 56,
+        "metrics": 3360,
+        "summary_reproduced": true
+      }
+    },
+    "groups": 21,
+    "localized_numeric_table_pairs_checked": 28,
+    "metrics_checked": 16800,
+    "model_holdout_and_training_bytes_dominance_checked": 272,
+    "schema": "generic420-verification-v2",
+    "summary_reproduced": true
+  },
+  "visual_review": {
+    "pngs_reviewed": [
+      "artifacts/de/figures/fit_scopes_k5.png",
+      "artifacts/de/figures/shortlist_loss.png",
+      "artifacts/de/figures/shortlist_loss_single_column.png",
+      "artifacts/en/figures/fit_scopes_k5.png",
+      "artifacts/en/figures/shortlist_loss.png",
+      "artifacts/en/figures/shortlist_loss_single_column.png"
+    ],
+    "result": "PASS: labels, axes, legends, values and margins legible in both languages; no clipping observed"
+  }
+}

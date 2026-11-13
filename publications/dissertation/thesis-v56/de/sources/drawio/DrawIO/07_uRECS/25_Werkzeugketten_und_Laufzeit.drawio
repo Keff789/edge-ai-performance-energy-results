@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="OpenAI" version="32.6.4" type="device">
+  <diagram id="bilder-01" name="25 · Werkzeugketten und Laufzeit">
+    <mxGraphModel dx="1320" dy="810" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1320" pageHeight="810" math="0" shadow="0" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="text-3" value="Vom Modell zur heterogenen Laufzeit" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=34.480;fontStyle=1;align=left;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="1">
+          <mxGeometry x="36.000" y="29.206" width="615.158" height="39.652" as="geometry" />
+        </mxCell>
+        <mxCell id="dag" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#E8EFF6;strokeColor=#8AA6BD;strokeWidth=1.3;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="138" width="330" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="text-6" value="Logischer ONNX-DAG" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="dag">
+          <mxGeometry x="1.017" y="32.813" width="327.966" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="partition" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#EFEBF3;strokeColor=#A798B6;strokeWidth=1.3;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="520" y="138" width="400" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="text-9" value="Partitionierung +" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="partition">
+          <mxGeometry x="74.997" y="17.813" width="250.006" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="text-10" value="Graphanpassung" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=29.036;fontStyle=0;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="partition">
+          <mxGeometry x="86.632" y="56.092" width="226.735" height="33.391" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-11" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=block;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#507696;strokeWidth=2.8;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;arcSize=10;" edge="1" parent="1" source="dag" target="partition">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="192" as="sourcePoint" />
+            <mxPoint x="520" y="192" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gpu-lane" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#FAFBFC;strokeColor=#D2D9E0;strokeWidth=1;fontColor=#18354A;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=24;fontStyle=1;align=left;verticalAlign=top;spacing=20;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="36" y="310" width="596" height="214" as="geometry" />
+        </mxCell>
+        <mxCell id="npu-lane" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#FAFBFC;strokeColor=#D2D9E0;strokeWidth=1;fontColor=#18354A;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=24;fontStyle=1;align=left;verticalAlign=top;spacing=20;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="688" y="310" width="596" height="214" as="geometry" />
+        </mxCell>
+        <mxCell id="node-12" value="GPU" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=nowrap;html=0;fillColor=none;strokeColor=none;strokeWidth=1.4;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=1;align=left;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;gradientDirection=south;;lineHeight=1.15;" vertex="1" parent="gpu-lane">
+          <mxGeometry x="24.000" y="7.763" width="70.854" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="node-13" value="NPU" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=nowrap;html=0;fillColor=none;strokeColor=none;strokeWidth=1.4;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=1;align=left;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;gradientDirection=south;;lineHeight=1.15;" vertex="1" parent="npu-lane">
+          <mxGeometry x="24.000" y="7.763" width="69.126" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="gpu" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#EFEBF3;strokeColor=#A798B6;strokeWidth=1.3;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="gpu-lane">
+          <mxGeometry x="24" y="61" width="266" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="text-16" value="TensorRT / CUDA" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="gpu">
+          <mxGeometry x="1.595" y="20.963" width="262.809" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="text-17" value="GPU-Werkzeug-&#10;kette" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=27.947;fontStyle=0;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="gpu">
+          <mxGeometry x="28.518" y="50.029" width="208.963" height="64.278" as="geometry" />
+        </mxCell>
+        <mxCell id="engine" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#F6ECE1;strokeColor=#C4A281;strokeWidth=1.3;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="gpu-lane">
+          <mxGeometry x="344" y="61" width="226" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="text-20" value="Ausführungs-&#10;artefakt" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="engine">
+          <mxGeometry x="9.886" y="18.224" width="206.228" height="70.957" as="geometry" />
+        </mxCell>
+        <mxCell id="npu" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#EFEBF3;strokeColor=#A798B6;strokeWidth=1.3;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="npu-lane">
+          <mxGeometry x="24" y="61" width="266" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="text-23" value="NPU-Übersetzer" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="npu">
+          <mxGeometry x="13.581" y="20.963" width="238.838" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="text-24" value="+ Kalibrierung" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=29.036;fontStyle=0;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="npu">
+          <mxGeometry x="41.032" y="59.092" width="183.936" height="33.391" as="geometry" />
+        </mxCell>
+        <mxCell id="hef" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#F6ECE1;strokeColor=#C4A281;strokeWidth=1.3;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="npu-lane">
+          <mxGeometry x="344" y="61" width="226" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="text-27" value="HEF / Kontexte" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="hef">
+          <mxGeometry x="1.294" y="20.263" width="223.412" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="text-28" value="Artefakt" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=29.036;fontStyle=0;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="hef">
+          <mxGeometry x="60.971" y="57.592" width="104.058" height="33.391" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-29" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=block;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#8C779F;strokeWidth=2.5;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;exitX=0.22;exitY=1;entryX=0.5;entryY=0;arcSize=10;" edge="1" parent="1" source="partition" target="gpu">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="608" y="246" as="sourcePoint" />
+            <mxPoint x="193" y="371" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="608" y="279" />
+              <mxPoint x="193" y="279" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-30" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=block;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#8C779F;strokeWidth=2.5;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;exitX=0.78;exitY=1;entryX=0.5;entryY=0;arcSize=10;" edge="1" parent="1" source="partition" target="npu">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="832" y="246" as="sourcePoint" />
+            <mxPoint x="845" y="371" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="832" y="279" />
+              <mxPoint x="845" y="279" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-31" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=block;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#8C779F;strokeWidth=2.8;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;arcSize=10;" edge="1" parent="1" source="gpu" target="engine">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="326" y="428.5" as="sourcePoint" />
+            <mxPoint x="380" y="428.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-32" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=block;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#8C779F;strokeWidth=2.8;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;arcSize=10;" edge="1" parent="1" source="npu" target="hef">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="978" y="428.5" as="sourcePoint" />
+            <mxPoint x="1032" y="428.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="runtime" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=#EAF1EC;strokeColor=#90AA98;strokeWidth=1.3;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="450" y="584" width="420" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="text-35" value="Laufzeitsteuerung" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#263746;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=1;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="runtime">
+          <mxGeometry x="75.156" y="2.513" width="269.689" height="35.479" as="geometry" />
+        </mxCell>
+        <mxCell id="text-36" value="Warteschlangen,&#10;Synchronisation, Protokollierung" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=28.310;fontStyle=0;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="runtime">
+          <mxGeometry x="5.031" y="49.135" width="409.937" height="65.113" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-37" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=block;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#AA8058;strokeWidth=2.5;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;exitX=0.5;exitY=1;entryX=0.2;entryY=0;arcSize=10;" edge="1" parent="1" source="engine" target="runtime">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="493" y="486" as="sourcePoint" />
+            <mxPoint x="534" y="584" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="493" y="554" />
+              <mxPoint x="534" y="554" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-38" value="" style="edgeStyle=none;html=0;rounded=1;curved=0;startArrow=none;endArrow=block;startFill=1;endFill=1;startSize=7;endSize=7;strokeColor=#AA8058;strokeWidth=2.5;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=18;fontColor=#64798A;entryPerimeter=0;exitPerimeter=0;labelBackgroundColor=#ffffff;shadow=0;exitX=0.5;exitY=1;entryX=0.8;entryY=0;arcSize=10;" edge="1" parent="1" source="hef" target="runtime">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1145" y="486" as="sourcePoint" />
+            <mxPoint x="786" y="584" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1145" y="554" />
+              <mxPoint x="786" y="554" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="node-39" value="" style="rounded=1;absoluteArcSize=1;arcSize=12;whiteSpace=wrap;html=0;fillColor=none;strokeColor=none;strokeWidth=1.4;fontColor=#18354A;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=21;fontStyle=0;align=center;verticalAlign=middle;spacing=10;shadow=0;gradientColor=none;gradientDirection=south;container=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="733" width="1248" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="text-41" value="Grenztensor: PCIe / DMA + Datenanordnung / (De-)Quantisierung" style="text=;html=0;whiteSpace=nowrap;fillColor=none;strokeColor=none;fontColor=#536475;fontFamily=Arial, Nimbus Sans, sans-serif;fontSize=30.851;fontStyle=0;align=center;verticalAlign=middle;spacing=0;shadow=0;gradientColor=none;;lineHeight=1.15;" vertex="1" parent="node-39">
+          <mxGeometry x="170.619" y="1.763" width="906.762" height="35.479" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

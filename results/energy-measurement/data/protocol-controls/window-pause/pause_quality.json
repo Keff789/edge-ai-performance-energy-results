@@ -1,0 +1,55 @@
+{
+  "schema": "jetson-pause-review-20260929-v1",
+  "manifest_checked_files": 43,
+  "checks_passed": true,
+  "telemetry_rows": 1147,
+  "tegrastats_rows": 1142,
+  "unique_frequency_readouts": {
+    "cpu:policy0": [
+      1984000000.0
+    ],
+    "cpu:policy4": [
+      1984000000.0
+    ],
+    "devfreq:15340000.vic": [
+      729600000.0
+    ],
+    "devfreq:15380000.nvjpg": [
+      729600000.0
+    ],
+    "devfreq:15480000.nvdec": [
+      857600000.0
+    ],
+    "devfreq:154c0000.nvenc": [
+      793600000.0
+    ],
+    "devfreq:15540000.nvjpg": [
+      729600000.0
+    ],
+    "devfreq:15a50000.ofa": [
+      780800000.0
+    ],
+    "devfreq:17000000.gpu": [
+      1173000000.0
+    ]
+  },
+  "max_pause_error_s": 0.00015583900000137874,
+  "max_envelope_span_minus_trt_abs_s": 0.06839999999999691,
+  "engine_sha256": "fa18c8ed8042ba56e159e7f5dd4856f7a01621c67248002fbdd975d71f9df0ca",
+  "missing_measurements": [
+    "fan speed (none enumerated)",
+    "EMC frequency",
+    "thermal cooling/trip states",
+    "overcurrent and throttle counters",
+    "raw Parquet bytes in review ZIP"
+  ],
+  "limits": [
+    "One continuous capture, one conditioning run, three sequential diagnostic repeats per condition; not a population-level randomized trial.",
+    "Process monotonic time and Pico sample time are not hardware synchronized.",
+    "Energy reintegration was executed on Memmert. This review verifies exported bins and endpoint bounds, not raw Parquet.",
+    "Power uses unchanged NvGpu profile; calibration remains not electrically validated for current Jetson setup.",
+    "Reported cur_freq is constant. A concrete thermal/electrical throttling mechanism is not identified.",
+    "VDD_IN comparison is in a separately defined inner PROCESS window, not a synchronized absolute metrology reference.",
+    "Envelope energy excludes waiting energy; longer pauses are not shown to reduce energy of the full schedule."
+  ]
+}

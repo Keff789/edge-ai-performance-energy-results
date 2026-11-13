@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{Historisches Experiment mit sechs Auswahlregeln auf festen Kandidatenmengen. YOLOv7 verwendet historische Generic-Messungen und die berichtete Native-Messreihe. Die übrigen Modelle behalten archivierte Messungen. Festgelegte Auswahlregeln werden nicht erneut angepasst. Die Energie verwendet übereinstimmende Gruppen ohne YOLOv7. Jede Gruppe wird gleich gewichtet.}
+\label{tab:selectors}
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l r r r r r r@{}}
+\toprule
+Auswahlregel & Alle /21 & Klassif. /9 & Detekt. /12 & \shortstack{Medianer\\Verlust (\%)} & \shortstack{Mittlerer\\Verlust (\%)} & Energie /18 (\%) \\
+\midrule
+Kleinste Grenzdatenmenge & 6 & 0 & 6 & 3.77 & 25.28 & 55.09 \\
+Gewichteter Graph-Score & 6 & 0 & 6 & 13.79 & 17.28 & 24.57 \\
+H10-Eignungsscore & 6 & 0 & 6 & 12.81 & 19.65 & 32.02 \\
+Cycle ohne Übergabe & 6 & 0 & 6 & 13.79 & 17.28 & 24.57 \\
+Streaming-Raten-Heuristik & 7 & 0 & 7 & 9.25 & 17.42 & 24.57 \\
+Gemessene Generic-Ausführung & 11 & 3 & 8 & 0.00 & 12.74 & 28.07 \\
+\bottomrule
+\end{tabular*}
+\endgroup
+\end{table*}

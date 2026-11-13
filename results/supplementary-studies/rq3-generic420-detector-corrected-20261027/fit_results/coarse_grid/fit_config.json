@@ -1,0 +1,21 @@
+{
+  "denominator": 200,
+  "grid_step": 0.005,
+  "grid_points": 20302,
+  "objective_budgets": [
+    1,
+    3,
+    5
+  ],
+  "objective": "equal mean over model-device groups and listed budgets of 1-best_shortlist_FPS/best_group_FPS",
+  "score": "w_comm*C + w_imb*I + w_ten*T; nonnegative weights sum to one; smaller is preferred",
+  "tie_rank": "round score to 12 decimals; ascending generic_uid; stable sort",
+  "tie_fit": "minimum training objective, maximum minimum score-line distance on training groups, nearest normalized default, lexicographic weights",
+  "holdout": "entire model, including all accelerator groups; no test labels or graph pairs used for fitting/tie selection",
+  "candidate_scope": "measured and quality-admitted cuts only; unmeasured excluded; min(k,n)",
+  "groups": 21,
+  "models": 7,
+  "candidates": 331,
+  "limitations": "Group coverage is recorded separately; incomplete snapshots exclude pending results. Grid minimizer is not a proof of the continuous global optimum.",
+  "full_data_weights": "descriptive only; evaluated loss is training loss, not generalization"
+}

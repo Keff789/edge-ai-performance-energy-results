@@ -1,0 +1,29 @@
+{
+  "schema": "english-thesis-fixed-method-figures-v1",
+  "kind": "fixed_publication_exports",
+  "source_archive": "doctor_thesis_v56_en_original(1).zip",
+  "source_archive_sha256": "45899e9d394c657017cb58716f882613bc7855c1de225ec6bef8733076c180a5",
+  "scope": "Byte-preserved supplied English v56 publication figures. Existing related generators do not imply identical-layout regeneration.",
+  "figures": [
+    {
+      "file": "figures/methods/dag_cut.pdf",
+      "sha256": "081a88de9691c832cebea7f8774c5801280936853c94e05581bd1efc70783f5a",
+      "source_archive_member": "doctor_thesis_v56_en_original/9_resources/layout_v48/methods/dag_cut.pdf",
+      "latex_project_path": "9_resources/layout_v48/methods/dag_cut.pdf",
+      "kind": "fixed_publication_export",
+      "note": "A fixed English v48 schematic. Earlier conceptual source: scripts/dissertation/legacy-v56/grafiken/generate_redesigned_figures.py; no claim of byte-identical regeneration.",
+      "include_width": "3.95in",
+      "placed_modal_font_bp": 8.566
+    },
+    {
+      "file": "figures/methods/stage_costs.pdf",
+      "sha256": "609a224fdf89333d84f97b6ce1fbe79e5f4fa6565f54a709c97353069cce057d",
+      "source_archive_member": "doctor_thesis_v56_en_original/9_resources/integration_v47/methods/stage_costs.pdf",
+      "latex_project_path": "9_resources/integration_v47/methods/stage_costs.pdf",
+      "kind": "fixed_publication_export",
+      "note": "Fixed English stage-cost layout. Numerical source: results/supplementary-studies/stage-cost-composition; renderer: scripts/supplementary-studies/stage-cost-composition/render_stage_costs.py.",
+      "include_width": "\\linewidth",
+      "placed_modal_font_bp": 8.44
+    }
+  ]
+}

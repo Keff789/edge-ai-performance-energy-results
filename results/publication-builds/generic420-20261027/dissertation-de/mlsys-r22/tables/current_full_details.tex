@@ -1,0 +1,34 @@
+\begin{table*}[t]
+\centering
+\caption{Alle tatsächlichen Full-Alternativen je Host. Die Qualität q ist Top1 für Klassifikatoren und COCO AP50:95 für Detektoren, jeweils in Prozent. * kennzeichnet mehr als 5\% numerischen Qualitätsverlust gegenüber der CPU.}
+\label{tab:current-full-details}
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l l r r r r r r@{}}
+\toprule
+Modell & Host & Beschl.-FPS & mJ/Bild & q (\%) & TRT FPS & mJ/Bild & q (\%) \\
+\midrule
+MobileNetV3-L & H8 & 118* & 126.75 & 60.62 & 749 & 29.16 & 73.64 \\
+MobileNetV3-L & H10 & 210* & 74.96 & 59.42 & 710 & 27.63 & 73.64 \\
+MobileNetV3-L & DeepX & 1469 & 12.01 & 71.72 & 694 & 27.76 & 73.60 \\
+RegNet-X & H8 & 362 & 43.24 & 78.76 & 314 & 77.22 & 78.92 \\
+RegNet-X & H10 & 259 & 61.79 & 78.84 & 316 & 74.25 & 78.94 \\
+RegNet-X & DeepX & 538 & 31.54 & 78.70 & 333 & 71.81 & 78.94 \\
+ResNet-50 & H8 & 122 & 132.45 & 80.32 & 523 & 56.90 & 80.50 \\
+ResNet-50 & H10 & 184 & 89.54 & 80.60 & 522 & 55.17 & 80.50 \\
+ResNet-50 & DeepX & 656 & 27.65 & 80.54 & 517 & 53.97 & 80.50 \\
+YOLO11l & H8 & 11* & 1426.62 & 44.15 & 39 & 680.33 & 46.66 \\
+YOLO11l & H10 & 11 & 1659.47 & 45.31 & 39 & 653.47 & 46.66 \\
+YOLO11l & DeepX & 63 & 315.23 & 45.67 & 38 & 675.47 & 46.68 \\
+YOLO26m & H8 & 18* & 935.03 & 39.65 & 85 & 400.03 & 44.82 \\
+YOLO26m & H10 & 14* & 1290.53 & 40.55 & 84 & 390.25 & 44.85 \\
+YOLO26m & DeepX & 80 & 239.32 & 44.27 & 83 & 389.08 & 44.86 \\
+YOLO26s & H8 & 23* & 701.73 & 32.33 & 151 & 197.98 & 40.09 \\
+YOLO26s & H10 & 15* & 1108.70 & 34.17 & 150 & 192.20 & 40.09 \\
+YOLO26s & DeepX & 105 & 176.81 & 39.39 & 152 & 187.80 & 40.11 \\
+YOLOv7 & H8 & 32* & 549.84 & 40.78 & 53 & 598.41 & 46.02 \\
+YOLOv7 & H10 & 33* & 601.83 & 41.52 & 53 & 583.57 & 46.02 \\
+YOLOv7 & DeepX & 83 & 269.44 & 45.86 & 48 & 613.18 & 46.04 \\
+\bottomrule
+\end{tabular*}
+\endgroup
+\end{table*}

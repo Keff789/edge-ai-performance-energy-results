@@ -1,0 +1,3 @@
+collector_table,host,code_or_status,path,detail
+root_coverage.csv,twix,missing,external-analysis/tek_scope_comparison_yolofp32_v1,Old output path was missing; does not prove moved output absent.
+scan_issues.csv,twix,text_byte_limit,,Scan limit reached; absence of findings is not proof of absence.

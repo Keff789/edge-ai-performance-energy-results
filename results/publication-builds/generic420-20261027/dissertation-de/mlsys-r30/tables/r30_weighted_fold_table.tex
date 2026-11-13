@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Angepasste Gewichte bei Ausschluss eines vollständigen Modells. Jeder Fit nutzt die übrigen sechs Modelle auf allen drei Geräten. Das Kommunikationsgewicht legt die Skala fest. Das Tensorgewicht bleibt fest, da alle gemessenen Cuts eine Tensorstrafe von null haben.}
+\label{tab:weighted-folds}
+\begin{tabular}{@{}lrD{.}{.}{6}D{.}{.}{1}@{}}
+\toprule
+Ausgeschlossenes Modell & {$w_{\rm comm}$} & \multicolumn{1}{c}{$w_{\rm imb}$} & \multicolumn{1}{c}{$w_{\rm ten}$} \\
+\midrule
+MobileNetV3-L & 1 & 0.569343 & 0.2 \\
+RegNet-X & 1 & 0.157993 & 0.2 \\
+ResNet-50 & 1 & 0.025085 & 0.2 \\
+YOLO11l & 1 & 0.157993 & 0.2 \\
+YOLO26m & 1 & 0.157993 & 0.2 \\
+YOLO26s & 1 & 0.157993 & 0.2 \\
+YOLOv7 & 1 & 0.157993 & 0.2 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,70 @@
+{
+  "CPU_reference_actual_runner": {
+    "function": "_extract_detections_for_proxy",
+    "line": 11362,
+    "path": "retained_source::diss_results/models/yolo26m/benchmark_set/legacy_suite/b003/run_split_onnxruntime.py",
+    "route": "YoloHarness.postprocess then canonical numeric detection mapping; if that raises, local _decode_bn6 also applies NMS",
+    "sha256": "c4ee2ec1f181bcbc10fe87050f16481f255e60abc6f86ab1b88ed46945390fc8"
+  },
+  "CPU_reference_retained_vendored_harness": {
+    "caveat": "CPU job records top-level generated-runner hash and adapter contract; it does not retain an independent measured before/after harness source closure. Associated retained suite harness is provided and executed; both source routes explicitly apply NMS.",
+    "functions": [
+      "YoloHarness.postprocess",
+      "_decode_bn6",
+      "_nms_xyxy"
+    ],
+    "path": "retained_source::diss_results/models/yolo26m/benchmark_set/legacy_suite/splitpoint_runners/harness/yolo.py",
+    "sha256": "a6dffb51368b1c016729610658446c2fb8d609db3de7f3b5a5931d114c69d7e8",
+    "unconditional_per_class_NMS_lines": [
+      1910,
+      1924
+    ]
+  },
+  "decision": {
+    "CPU_reference_status": "Bound source model/5000 dataset valid; actual producer applies postfilter NMS, so it is not evidence of no-second-NMS reference semantics.",
+    "additional_assignment_gap_demonstrated": true,
+    "affected_claim": "Historical Native Quality cannot be asserted to measure the exact selected Native FPS complete-task no-second-NMS output contract merely from the existing portable artifact/boundary join. Actual fixed examples produce different records.",
+    "historical_quality_AP_values": "Preserve as valid observations of their recorded historical postfilter contracts.",
+    "normal_product_expected_difference": "Version1 historical postfilter versus version2 source-completed no-second-NMS is explicitly documented in native_detection_postprocess.build_frozen_decoded_nms_normalization_contract; independent Generic candidate vs CPU reference adapters are allowed by quality_service.",
+    "required_scope": "Retain separate quality and FPS postprocessing identities. Admit/hold claims using actual complete-task compatibility evidence; do not change Native values, NMS thresholds, labels or datasets. No broad Native rerun is authorized by this audit."
+  },
+  "historical_Native_quality": {
+    "host_NMS": true,
+    "same_NMS_contract_sha256": "29cb10532c89c13fc2a0146105aca955138afca87e5b549befc7f5df626783d1",
+    "same_bound_generated_runner_sha256": "c4ee2ec1f181bcbc10fe87050f16481f255e60abc6f86ab1b88ed46945390fc8",
+    "same_decoder_contract_sha256": "6fffccd57de6fc1359bd41ff881c85bb51d4a20431283de99f64b4ab78a17138"
+  },
+  "measured_Generic_FPS": {
+    "fast_runtime_path": "retained_source::Reports/generic_main_freeze_h10_deepx_20261021T123251Z/measurements/h10/yolo26m/runner-bundle/splitpoint_runners/native_three_stage.py",
+    "fast_runtime_sha256": "22657a4b26d12ce3962862537ca7f994ebb7324259b5e25d983344277ab0a129",
+    "host_NMS": false,
+    "postprocess_path": "retained_source::Reports/generic_main_freeze_h10_deepx_20261021T123251Z/measurements/h10/yolo26m/runner-bundle/splitpoint_runners/native_detection_postprocess.py",
+    "postprocess_sha256": "8c202f4237ec39316a54dda7ea8f71dd19bae4bb02e3311bbd8fed7be43214b8",
+    "route": "create_detection_completion_runtime -> FastDetectionCompletionRuntime.process -> _decoded_nms_records -> _AttestedDecodedNmsMaterializer.process"
+  },
+  "measured_Native_FPS": {
+    "actual_preserved_first_image_completed_detection_count": 16,
+    "fast_runtime_sha256": "22657a4b26d12ce3962862537ca7f994ebb7324259b5e25d983344277ab0a129",
+    "host_NMS": false,
+    "matched_git_source": "followup_source::h10_diagnostic/postprocess_trace_v1/native_detection_postprocess_NATIVE_FPS_e499.py",
+    "matched_git_source_sha256": "e4999c38f46ed4736c83899d01d2ef220a8fb41b32d19d117d6d8d67fde1995b",
+    "postprocess_sha256": "e4999c38f46ed4736c83899d01d2ef220a8fb41b32d19d117d6d8d67fde1995b",
+    "source_git_commit": "8346d43d526221bd9d138943122206b658d56cbf"
+  },
+  "no_hardware": true,
+  "no_model_inference": true,
+  "normal_product_current_portable_NativeQuality_to_FPS_binding": {
+    "accepted": true,
+    "function": "native_split_quality.bind_quality_to_native_split(verification_mode=portable)",
+    "predicate_checks": "Model/cut/setup/precision; sealed eight-file executable and preselection/boundary identity; command and consumer attestation. Does not compare quality host postfilter execution with timed completion materializer.",
+    "reason": "portable_binding_command_and_consumer_attestation_exact_match"
+  },
+  "schema": "b043-exact-postprocess-source-and-compatibility-v1",
+  "synthetic_duplicate_same_class_BN6_fixture": {
+    "exact_CPU_producer_fallback_output_count": 1,
+    "exact_CPU_producer_proxy_output_count": 1,
+    "measured_Generic_FPS_no_second_NMS_output_count": 2,
+    "proxy_warnings": [],
+    "raw_rows_over_threshold": 2
+  }
+}

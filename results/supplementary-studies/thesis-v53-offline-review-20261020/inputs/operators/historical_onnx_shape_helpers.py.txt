@@ -1,0 +1,38 @@
+def shape_from_vi(vi) -> Optional[List[Optional[int]]]:
+    if vi is None or not vi.type.HasField("tensor_type"):
+        return None
+    shp: List[Optional[int]] = []
+    for d in vi.type.tensor_type.shape.dim:
+        shp.append(int(d.dim_value) if d.HasField("dim_value") else None)
+    return shp
+
+def numel_from_shape(shape: Optional[List[Optional[int]]], batch_override: Optional[int] = None) -> int:
+    if not shape:
+        return 0
+    shp = list(shape)
+    if batch_override is not None and shp:
+        if shp[0] is None or int(shp[0] or 0) == 0:
+            shp[0] = int(batch_override)
+    n = 1
+    for d in shp:
+        n *= int(d) if (d is not None and int(d) > 0) else 1
+    return int(n)
+
+def _get_attr(node: onnx.NodeProto, name: str, default=None):
+    for a in node.attribute:
+        if a.name != name:
+            continue
+        if a.type == onnx.AttributeProto.INTS:
+            return list(a.ints)
+        if a.type == onnx.AttributeProto.INT:
+            return int(a.i)
+        if a.type == onnx.AttributeProto.FLOAT:
+            return float(a.f)
+        if a.type == onnx.AttributeProto.FLOATS:
+            return list(a.floats)
+        if a.type == onnx.AttributeProto.STRING:
+            try:
+                return a.s.decode("utf-8")
+            except Exception:
+                return str(a.s)
+    return default

@@ -1,0 +1,252 @@
+{
+  "schema": "thesis-v49-resume-targeted-metrology-v1",
+  "scope": "Targeted reread of cited original configurations, three original FS calibrations, their m2-idle records, archived diagrams/images/workbook; no whole-tree content search,42-trace or5000-image rerun.",
+  "setups": [
+    {
+      "setup_id": "orin_nx_hailo8_01",
+      "label": "H8",
+      "measurement_source_port": 3000,
+      "evidence_kind": "saved_configuration_and_original_calibration_binding",
+      "calibration_path": "private-path-id:55ffd9ebd3a41f193d929ace6658d3bea787b095c0898203eca3a143aed6f9ae",
+      "calibration_sha256": "90a559f5467c0fef13409d472f14b797f4cf44b1038f0e491f62c5436ea2b5f6",
+      "calibration_finished_at": "2026-09-04T20:08:48.231301+00:00",
+      "channel_requested": 0,
+      "sample_rate_requested_hz": 2000,
+      "physical_scope_recorded": "FS",
+      "load_connection_recorded": "9V_20V_IN_after_R16_to_GND",
+      "scale_factor_unchanged": 0.9136343897390969,
+      "reference_fit_points": [
+        {
+          "reference_current_a": 0.509,
+          "reference_voltage_v": 18.67,
+          "reference_power_w": 9.50303
+        },
+        {
+          "reference_current_a": 1.01,
+          "reference_voltage_v": 18.37,
+          "reference_power_w": 18.553700000000003
+        }
+      ],
+      "reference_model_serial_range_certificate_uncertainty": null,
+      "historical_selected_window_current_range_A": [
+        0.779534795725971,
+        3.4979680675059566
+      ],
+      "historical_replicates_reused_without_reintegration": 9,
+      "historical_samples_above_3p5A_voltage_model_domain": 0,
+      "r3_complete_current_ranges_reused": [],
+      "separate_m2_idle_records_checked": [
+        {
+          "path": "private-path-id:2c16899dc964082133b34e276faad29fc2359081941736881558bc6cf8a65194",
+          "schema": "onnx-splitpoint/m2-idle-power-calibration",
+          "keys": [
+            "accelerator",
+            "accelerator_idle_power_w",
+            "configuration_projection",
+            "data_port",
+            "events",
+            "finished_at",
+            "idle_power_with_m2_w",
+            "idle_power_without_m2_w",
+            "initial_status",
+            "m2_off",
+            "m2_on",
+            "measure_s",
+            "measurement_scope",
+            "physical_scope",
+            "preflight",
+            "restored_m2_on",
+            "saved",
+            "schema",
+            "schema_version",
+            "setup_id",
+            "stabilize_s",
+            "started_at",
+            "status",
+            "urecs_address"
+          ],
+          "independent_absolute_current_voltage_reference_established": false
+        }
+      ],
+      "still_missing": [
+        "physical board serial/revision bound to source and date",
+        "schematic and populated shunt/gain/ADC/selected Vref/fullscale for channel0",
+        "active firmware/build and ADC register configuration bound to captures",
+        "wired power boundary and all consumers",
+        "independent simultaneous U/I idle and active references before/after load with uncertainty",
+        "actual sample-clock characterization and complete analogue/filter response"
+      ]
+    },
+    {
+      "setup_id": "orin_nx_hailo10_01",
+      "label": "H10",
+      "measurement_source_port": 3000,
+      "evidence_kind": "saved_configuration_and_original_calibration_binding",
+      "calibration_path": "private-path-id:f8e849339c6d875f593bc7c301bdcf46ce7e1842d94dc73da1275365b9e9aede",
+      "calibration_sha256": "b3fe9eb8c7ac6e7ffc78edabf834910b699bed0f766d9d7b2eddddde9ce8e946",
+      "calibration_finished_at": "2026-09-04T20:15:15.094688+00:00",
+      "channel_requested": 0,
+      "sample_rate_requested_hz": 2000,
+      "physical_scope_recorded": "FS",
+      "load_connection_recorded": "9V_20V_IN_after_R16_to_GND",
+      "scale_factor_unchanged": 0.8963972779781232,
+      "reference_fit_points": [
+        {
+          "reference_current_a": 0.509,
+          "reference_voltage_v": 18.55,
+          "reference_power_w": 9.44195
+        },
+        {
+          "reference_current_a": 1.01,
+          "reference_voltage_v": 18.29,
+          "reference_power_w": 18.4729
+        }
+      ],
+      "reference_model_serial_range_certificate_uncertainty": null,
+      "historical_selected_window_current_range_A": [
+        0.7546041897852154,
+        3.6615128424773125
+      ],
+      "historical_replicates_reused_without_reintegration": 12,
+      "historical_samples_above_3p5A_voltage_model_domain": 25,
+      "r3_complete_current_ranges_reused": [
+        {
+          "run_id": "b01_p03",
+          "min_A": 0.946071243410218,
+          "max_A": 2.939522494433032
+        }
+      ],
+      "separate_m2_idle_records_checked": [
+        {
+          "path": "private-path-id:b704990fc369f377e4601409b4c5871d0b729a1c664023bdf44c33acf16bb337",
+          "schema": "onnx-splitpoint/m2-idle-power-calibration",
+          "keys": [
+            "accelerator",
+            "accelerator_idle_power_w",
+            "configuration_projection",
+            "data_port",
+            "events",
+            "finished_at",
+            "idle_power_with_m2_w",
+            "idle_power_without_m2_w",
+            "initial_status",
+            "m2_off",
+            "m2_on",
+            "measure_s",
+            "measurement_scope",
+            "physical_scope",
+            "preflight",
+            "restored_m2_on",
+            "saved",
+            "schema",
+            "schema_version",
+            "setup_id",
+            "stabilize_s",
+            "started_at",
+            "status",
+            "urecs_address"
+          ],
+          "independent_absolute_current_voltage_reference_established": false
+        }
+      ],
+      "still_missing": [
+        "physical board serial/revision bound to source and date",
+        "schematic and populated shunt/gain/ADC/selected Vref/fullscale for channel0",
+        "active firmware/build and ADC register configuration bound to captures",
+        "wired power boundary and all consumers",
+        "independent simultaneous U/I idle and active references before/after load with uncertainty",
+        "actual sample-clock characterization and complete analogue/filter response"
+      ]
+    },
+    {
+      "setup_id": "orin_nx_deepx_m1_01",
+      "label": "DeepX",
+      "measurement_source_port": 3000,
+      "evidence_kind": "saved_configuration_and_original_calibration_binding",
+      "calibration_path": "private-path-id:14b5ef137d085e94d7655307071e42e659d65d7a2f90325eabfcc64f8d874579",
+      "calibration_sha256": "9494eea7de1d18167f73854e276bf6f9bba0066c51ff2c81c49737486235cfd1",
+      "calibration_finished_at": "2026-09-04T19:59:27.536313+00:00",
+      "channel_requested": 0,
+      "sample_rate_requested_hz": 2000,
+      "physical_scope_recorded": "FS",
+      "load_connection_recorded": "9V_20V_IN_after_R16_to_GND",
+      "scale_factor_unchanged": 0.9035075097142278,
+      "reference_fit_points": [
+        {
+          "reference_current_a": 0.508,
+          "reference_voltage_v": 18.27,
+          "reference_power_w": 9.28116
+        },
+        {
+          "reference_current_a": 1.009,
+          "reference_voltage_v": 18.14,
+          "reference_power_w": 18.303259999999998
+        }
+      ],
+      "reference_model_serial_range_certificate_uncertainty": null,
+      "historical_selected_window_current_range_A": [
+        0.7565986382604758,
+        3.1349784450085556
+      ],
+      "historical_replicates_reused_without_reintegration": 21,
+      "historical_samples_above_3p5A_voltage_model_domain": 0,
+      "r3_complete_current_ranges_reused": [
+        {
+          "run_id": "b01_p01",
+          "min_A": 0.7765431230130803,
+          "max_A": 1.4097805139082713
+        },
+        {
+          "run_id": "b01_p02",
+          "min_A": 0.7775403472507105,
+          "max_A": 2.201576558586668
+        }
+      ],
+      "separate_m2_idle_records_checked": [
+        {
+          "path": "private-path-id:57a7cb28f5fd9638c8387ae24d6149f8b9446689c79e1ccfec745524cbc204f8",
+          "schema": "onnx-splitpoint/m2-idle-power-calibration",
+          "keys": [
+            "accelerator",
+            "accelerator_idle_power_w",
+            "configuration_projection",
+            "data_port",
+            "events",
+            "finished_at",
+            "idle_power_with_m2_w",
+            "idle_power_without_m2_w",
+            "initial_status",
+            "m2_off",
+            "m2_on",
+            "measure_s",
+            "measurement_scope",
+            "physical_scope",
+            "preflight",
+            "restored_m2_on",
+            "saved",
+            "schema",
+            "schema_version",
+            "setup_id",
+            "stabilize_s",
+            "started_at",
+            "status",
+            "urecs_address"
+          ],
+          "independent_absolute_current_voltage_reference_established": false
+        }
+      ],
+      "still_missing": [
+        "physical board serial/revision bound to source and date",
+        "schematic and populated shunt/gain/ADC/selected Vref/fullscale for channel0",
+        "active firmware/build and ADC register configuration bound to captures",
+        "wired power boundary and all consumers",
+        "independent simultaneous U/I idle and active references before/after load with uncertainty",
+        "actual sample-clock characterization and complete analogue/filter response"
+      ]
+    }
+  ],
+  "newly_closed_absolute_electrical_review_points": [],
+  "physical_absolute_qualification": false,
+  "combined_physical_energy_uncertainty": null,
+  "new_independent_reference_acquired": false
+}

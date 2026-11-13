@@ -1,0 +1,1397 @@
+{
+  "CURRENT_mutations": 0,
+  "FPS_measured": false,
+  "conclusion": "The existing selected FPS observation for every verified case already used the bound Native physical-memory adapter. This quality-only repair does not require FPS recapture for those cases.",
+  "counts": {
+    "FPS_REUSABLE_AFTER_QUALITY_ONLY_PHYSICAL_LAYOUT_REPAIR": 15
+  },
+  "hardware_accessed": false,
+  "observation_input_mutations": 0,
+  "product_review": {
+    "Native_priority_preserved": true,
+    "all_other_normal_runtime_members_byte_identical": true,
+    "base_commit": "b4a05101e558aa498bdd1dff12a54a8413573d88",
+    "changed_normal_runtime_members": [
+      "runner/run_split_onnxruntime.py"
+    ],
+    "general_test_suites_run_for_this_review": 0,
+    "git_changed_files": [
+      "SHA256SUMS.txt",
+      "SOURCE_MANIFEST.json",
+      "docs/ARBEITSSTAND.md",
+      "onnx_splitpoint_tool/resources/templates/run_split_onnxruntime.py.txt",
+      "tests/test_generic_quality_boundary_bridge.py"
+    ],
+    "new_path_condition": "Only when args._native_split_quality_binding is not a Mapping, the locally verified Generic Quality interface binding is considered. Input name, layout and engine shape must match; existing prepare_quality_first_boundary_input performs the physical-memory transform.",
+    "normal_runtime_member_count": 42,
+    "old_FPS_helper_AST_equals_B4_before_fix": true,
+    "physical_adapter_byte_identical_old_FPS_B4_repair": true,
+    "preprocessing_and_completion_runtime_functions_unchanged": true,
+    "quality_loader_scope": "6acdf changes no loader. B4 uses the existing loader which propagates the verified Generic interface binding; older H10 quality captures with a loader lacking that propagation must rerun using normal corrected B4 bundle.",
+    "repair_commit": "6acdf869f329a2a23632436857daffcf90c0337a",
+    "runtime_changed_functions": [
+      "prepare_generic_native_boundary_input"
+    ],
+    "separate_historical_completion_policy_delta": "Existing YOLO26 no-second-NMS completed-task policy and original Native legacy quality postfilter-NMS evidence remain distinct and unchanged. Byte-order repair establishes feed equivalence; it does not erase this existing documented policy difference."
+  },
+  "rows": [
+    {
+      "actual_FPS_runner": {
+        "boundary_helper_AST_sha256": "4ced29a99bc8d30dea92a3e701f0e9a90b5882a4db2fe92c4ed0075bac16df0e",
+        "boundary_helper_line": 3203,
+        "native_binding_install_line": 15965,
+        "physical_adapter_sha256": "0e97f0640686a227519920eb51952413d35ab5c2cd8deca5d30809d235249264",
+        "route": "original_run_cfg.native_split_quality_binding -> ordinary local validator -> args._native_split_quality_binding + args._native_split_boundary_layout -> prepare_generic_native_boundary_input Native-first branch -> unchanged prepare_quality_first_boundary_input",
+        "runner_member": "runner/run_split_onnxruntime.py",
+        "runner_sha256": "e772c52e31b1b0fb2158c4719ef0ca37236d9eeafdfaff4dc7bb917502a44512"
+      },
+      "boundary_contract_sha256": "91214ddfe553a7d46ff1634f8d2f48e152652938894ca59becd101ec122471e9",
+      "case_id": "b003",
+      "exceptions": [],
+      "fps_completed_at": "2026-10-08T12:07:17.662882+00:00",
+      "fps_recapture_required": false,
+      "generic_uid": "generic|yolo11l|H8|hailo8_to_trt|b003",
+      "model": "yolo11l",
+      "native_split_quality_binding_file_sha256": "cc738a861e08c6beac0b27461ba5c0c24c6c42371d1bd2fff9cce885c287b42f",
+      "native_split_quality_binding_sha256": "987f93f24e0ab017895440cbd245b9caa77e3cf818f3092775a4d392222ab71d",
+      "normal_reuse_authority_sha256": "66294f01962889e6e9ddb1749295b593bb3b14b7c0ebccb6c1ebf97e70e00012",
+      "normal_reuse_row_sha256": "083eb0697323b339279c9c89bb52e5a577eaf5b0b75c8bab7fcea60cbcd761c4",
+      "original_native_binding_sha256": "ce1807fa4bf9a5e4f974bc6a48daf8c06f951b01a76a31e6181649a0742acf4e",
+      "performance_source_sha256": "696d82eb0a832b3132260fa6de856badd8d49d9312437d77b50ba26aa3dac1a5",
+      "physical_bridge": {
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 1.3171815872192383,
+        "dequant_zero_point": 154.0,
+        "input_name": "/model.1/conv/Conv_output_0",
+        "input_shape": [
+          1,
+          128,
+          160,
+          160
+        ],
+        "layout": {
+          "applied": true,
+          "effective": "memory_nhwc_to_nchw",
+          "memory_shape": [
+            1,
+            160,
+            160,
+            128
+          ],
+          "output": "/model.1/conv/Conv_output_0__boundary_to_nchw",
+          "perm": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "requested": "memory_nhwc_to_nchw"
+        }
+      },
+      "physical_setup_id": "orin_nx_hailo8_01",
+      "runtime_artifacts": {
+        "part1_sha256": "e6fadad2fe2d46a8425b5a463c31948cf7878569b3abcd3442b0ff3ecd66453a",
+        "part2_engine_sha256": "dbd9ec863864c2150e75125bdb1d3472a1b596ead552fbd4175862dacc2d47b2"
+      },
+      "runtime_bundle_sha256": "a837bd56e8d72b501e42fac27ffc3d2b041848ebf616111f531efe14e1190ed8",
+      "runtime_config_sha256": "e653cdfde69a31b002cd5e812740549a4b2080e3a9b657eae63b76929a6a23dc",
+      "setup": "H8",
+      "source_plan_row_sha256": "ce44da9271f7c5566203d490073478fa4571bed309be5db647f67f848114320a",
+      "source_plan_sha256": "388767df4e5fcc3dd7e8e9637804560a316fe76bb35da1c3004e91a21160e56c",
+      "staging_changed_binding_fields": [
+        "binding_sha256",
+        "central_quality_selection",
+        "central_quality_selection_sha256",
+        "central_result_sha256",
+        "producer_binding_sha256",
+        "source_request_sha256"
+      ],
+      "status": "FPS_REUSABLE_AFTER_QUALITY_ONLY_PHYSICAL_LAYOUT_REPAIR",
+      "unchanged_FPS_completion": {
+        "canonical_contract_sha256": "9057ae2b55d7051767505b537c3ad93c569f3ebe52ee98c0981b7c92eda1528c",
+        "contract_sha256": "3a68519b67159b79be87190c48fcd9b05d74849c0f30971aed70af88e6100221",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "preserved_observation_note": "Original selected FPS bytes/configuration, preprocessing and completed-task policy remain unchanged; the correction enables the equivalent physical-feed route only in separate Generic Quality.",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ]
+      },
+      "unchanged_FPS_inputs": {
+        "input_binding_sha256": "37c80a94d2bf20814e0e96bf2e1e1907a75ae021fb814f481dc88c20a78c005f",
+        "prepared_input_contract_sha256": "ed4662e735f90779b61fc6642aaa77d002de08ef4cbc0dcde3005baee4e5d8e5",
+        "preprocessing_timed": false,
+        "representative_input_sha256": [
+          "0bd0f530dd401d77b085e0cd847c03cef94346395ff6e852a68f6e615c58b8cb"
+        ]
+      }
+    },
+    {
+      "actual_FPS_runner": {
+        "boundary_helper_AST_sha256": "4ced29a99bc8d30dea92a3e701f0e9a90b5882a4db2fe92c4ed0075bac16df0e",
+        "boundary_helper_line": 3203,
+        "native_binding_install_line": 16242,
+        "physical_adapter_sha256": "0e97f0640686a227519920eb51952413d35ab5c2cd8deca5d30809d235249264",
+        "route": "original_run_cfg.native_split_quality_binding -> ordinary local validator -> args._native_split_quality_binding + args._native_split_boundary_layout -> prepare_generic_native_boundary_input Native-first branch -> unchanged prepare_quality_first_boundary_input",
+        "runner_member": "runner/run_split_onnxruntime.py",
+        "runner_sha256": "5acbf3e61c7332cfbbc4cb4b1657092295dfcfd6e319c714bcd69e5cf9e8ffc8"
+      },
+      "boundary_contract_sha256": "4a4ad37a3cc30560136b831016636f30abb9643d3bb861be11ee33eeadcf7996",
+      "case_id": "b003",
+      "exceptions": [],
+      "fps_completed_at": "2026-10-21T13:35:59.321771+00:00",
+      "fps_recapture_required": false,
+      "generic_uid": "generic|yolo11l|H10|hailo10h_to_trt|b003",
+      "model": "yolo11l",
+      "native_split_quality_binding_file_sha256": "c4b4c5f956861f61f77b0d7a65544f270de710f385b1acf6135a1c5a50159f33",
+      "native_split_quality_binding_sha256": "61ed909a18e14ab683d7a76bee1b6424e84b1e3fa214f8bfec2b682274e26fc8",
+      "normal_reuse_authority_sha256": "614690663d049bbff8d89f13f981f6a0ce5e5a6fca746f79618ad3eb3bda358a",
+      "normal_reuse_row_sha256": "cad7b65950317e3c411c3d0541c3c0a1dadf07dd80b00c12db1e89969657cb55",
+      "original_native_binding_sha256": "e92d9b62c7b3e10055008be683a292d9c6a4e269ada946684f9cf8d785a59327",
+      "performance_source_sha256": "7022d0c6caba5529153c950c83384b567387bb6ff7413f03183c4f0f10ac748e",
+      "physical_bridge": {
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 1.3171815872192383,
+        "dequant_zero_point": 154.0,
+        "input_name": "/model.1/conv/Conv_output_0",
+        "input_shape": [
+          1,
+          128,
+          160,
+          160
+        ],
+        "layout": {
+          "applied": true,
+          "effective": "memory_nhwc_to_nchw",
+          "memory_shape": [
+            1,
+            160,
+            160,
+            128
+          ],
+          "output": "/model.1/conv/Conv_output_0__boundary_to_nchw",
+          "perm": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "requested": "memory_nhwc_to_nchw"
+        }
+      },
+      "physical_setup_id": "orin_nx_hailo10_01",
+      "runtime_artifacts": {
+        "part1_sha256": "8459e9f25de3713e8deede4949b8fffeb5309e46272e7e307a538dff740b0367",
+        "part2_engine_sha256": "1f2318ffba5f461830558789808f0d97497b3fef4afafcd7455b602034bd6840"
+      },
+      "runtime_bundle_sha256": "b4f13ac1522e88f5d2118c27d3aa2ffab6d761f758c1361d5f56a712680f2853",
+      "runtime_config_sha256": "392824d2d7dd78007c22e2c66bac41229dcdc9d5a42197d13be398e199e327cc",
+      "setup": "H10",
+      "source_plan_row_sha256": "51736cbcabbf7c8e468f629f4dcc0776581769900754edb3cdcd9f8737f087ed",
+      "source_plan_sha256": "90b5f2b2d894fb20cd5f5b66ef9079ad7aa8bd66db2af8cb222ac6752d4482b0",
+      "staging_changed_binding_fields": [
+        "binding_sha256",
+        "central_quality_selection",
+        "central_quality_selection_sha256",
+        "central_result_sha256",
+        "producer_binding_sha256",
+        "source_request_sha256"
+      ],
+      "status": "FPS_REUSABLE_AFTER_QUALITY_ONLY_PHYSICAL_LAYOUT_REPAIR",
+      "unchanged_FPS_completion": {
+        "canonical_contract_sha256": "9057ae2b55d7051767505b537c3ad93c569f3ebe52ee98c0981b7c92eda1528c",
+        "contract_sha256": "3a68519b67159b79be87190c48fcd9b05d74849c0f30971aed70af88e6100221",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "preserved_observation_note": "Original selected FPS bytes/configuration, preprocessing and completed-task policy remain unchanged; the correction enables the equivalent physical-feed route only in separate Generic Quality.",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ]
+      },
+      "unchanged_FPS_inputs": {
+        "input_binding_sha256": "f9e8571be9fe938e49fdaf4dd683508850558adc861ffa9527fc9e0070e9bd8f",
+        "prepared_input_contract_sha256": "2a83c8fefaef5eb634f49f237ad69f2e70dd23c1584bae54279d0994610c68cf",
+        "preprocessing_timed": false,
+        "representative_input_sha256": [
+          "027f452e6687eb60e293cd408f0ca77aab7fbe797d287b9a428a16df0b532fb4"
+        ]
+      }
+    },
+    {
+      "actual_FPS_runner": {
+        "boundary_helper_AST_sha256": "4ced29a99bc8d30dea92a3e701f0e9a90b5882a4db2fe92c4ed0075bac16df0e",
+        "boundary_helper_line": 3203,
+        "native_binding_install_line": 15965,
+        "physical_adapter_sha256": "0e97f0640686a227519920eb51952413d35ab5c2cd8deca5d30809d235249264",
+        "route": "original_run_cfg.native_split_quality_binding -> ordinary local validator -> args._native_split_quality_binding + args._native_split_boundary_layout -> prepare_generic_native_boundary_input Native-first branch -> unchanged prepare_quality_first_boundary_input",
+        "runner_member": "runner/run_split_onnxruntime.py",
+        "runner_sha256": "e772c52e31b1b0fb2158c4719ef0ca37236d9eeafdfaff4dc7bb917502a44512"
+      },
+      "boundary_contract_sha256": "374bf6535d21cfcd8550d060792c60a8872d9b416233dee4a613c0d8a90149a8",
+      "case_id": "b062",
+      "exceptions": [],
+      "fps_completed_at": "2026-10-08T12:09:22.502733+00:00",
+      "fps_recapture_required": false,
+      "generic_uid": "generic|yolo11l|H8|hailo8_to_trt|b062",
+      "model": "yolo11l",
+      "native_split_quality_binding_file_sha256": "3a924c7127c260aeaf0ac90f33604d99c491783d17a021777908807cfcd583c3",
+      "native_split_quality_binding_sha256": "ab251d22d1a507c0927364e910b152082f53f925d3bab74e4c35d0d60d381dae",
+      "normal_reuse_authority_sha256": "66294f01962889e6e9ddb1749295b593bb3b14b7c0ebccb6c1ebf97e70e00012",
+      "normal_reuse_row_sha256": "afe3693c7171a2a77f4cb1eec9a58449db0d578bdaa4c7444cb7ce0a352bf74d",
+      "original_native_binding_sha256": "bb02c00a9e0b4080016788313c7e5f9638b0a95a12ce0f79c8c2b94fb913dade",
+      "performance_source_sha256": "7f9e58ab87f1107f19153a5bb12d8c4b681f4dc1e28a7944aa21dcc6f806ba00",
+      "physical_bridge": {
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 0.10172491520643234,
+        "dequant_zero_point": 143.0,
+        "input_name": "/model.3/conv/Conv_output_0",
+        "input_shape": [
+          1,
+          256,
+          80,
+          80
+        ],
+        "layout": {
+          "applied": true,
+          "effective": "memory_nhwc_to_nchw",
+          "memory_shape": [
+            1,
+            80,
+            80,
+            256
+          ],
+          "output": "/model.3/conv/Conv_output_0__boundary_to_nchw",
+          "perm": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "requested": "memory_nhwc_to_nchw"
+        }
+      },
+      "physical_setup_id": "orin_nx_hailo8_01",
+      "runtime_artifacts": {
+        "part1_sha256": "af0019fcf28799a9233337fce1fb04af5d3fc0b779ca1f815ec5481d0221d9a4",
+        "part2_engine_sha256": "d6604227819d84efc217ab421439685e65523b079e246b42fdfb4215e4f96219"
+      },
+      "runtime_bundle_sha256": "a837bd56e8d72b501e42fac27ffc3d2b041848ebf616111f531efe14e1190ed8",
+      "runtime_config_sha256": "5d5d859ed422e37f37139059b75f865cd6b9e261af4f83bc4256cff77684f717",
+      "setup": "H8",
+      "source_plan_row_sha256": "5d9851395b082f6074c5913dc57550ae9783e87e3e805189fbcac19328682d22",
+      "source_plan_sha256": "388767df4e5fcc3dd7e8e9637804560a316fe76bb35da1c3004e91a21160e56c",
+      "staging_changed_binding_fields": [
+        "binding_sha256",
+        "central_quality_selection",
+        "central_quality_selection_sha256",
+        "central_result_sha256",
+        "producer_binding_sha256",
+        "source_request_sha256"
+      ],
+      "status": "FPS_REUSABLE_AFTER_QUALITY_ONLY_PHYSICAL_LAYOUT_REPAIR",
+      "unchanged_FPS_completion": {
+        "canonical_contract_sha256": "9057ae2b55d7051767505b537c3ad93c569f3ebe52ee98c0981b7c92eda1528c",
+        "contract_sha256": "3a68519b67159b79be87190c48fcd9b05d74849c0f30971aed70af88e6100221",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "preserved_observation_note": "Original selected FPS bytes/configuration, preprocessing and completed-task policy remain unchanged; the correction enables the equivalent physical-feed route only in separate Generic Quality.",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ]
+      },
+      "unchanged_FPS_inputs": {
+        "input_binding_sha256": "eb953df468a08fb52e6a8a1057263cfdf10a37ade436ee7bc7def8a56d7c1fcd",
+        "prepared_input_contract_sha256": "c1fea7fa9a6c039fd4a7dbe3cea29c2f5c7585cd33757e9dbd849311d8369385",
+        "preprocessing_timed": false,
+        "representative_input_sha256": [
+          "0bd0f530dd401d77b085e0cd847c03cef94346395ff6e852a68f6e615c58b8cb"
+        ]
+      }
+    },
+    {
+      "actual_FPS_runner": {
+        "boundary_helper_AST_sha256": "4ced29a99bc8d30dea92a3e701f0e9a90b5882a4db2fe92c4ed0075bac16df0e",
+        "boundary_helper_line": 3203,
+        "native_binding_install_line": 16242,
+        "physical_adapter_sha256": "0e97f0640686a227519920eb51952413d35ab5c2cd8deca5d30809d235249264",
+        "route": "original_run_cfg.native_split_quality_binding -> ordinary local validator -> args._native_split_quality_binding + args._native_split_boundary_layout -> prepare_generic_native_boundary_input Native-first branch -> unchanged prepare_quality_first_boundary_input",
+        "runner_member": "runner/run_split_onnxruntime.py",
+        "runner_sha256": "5acbf3e61c7332cfbbc4cb4b1657092295dfcfd6e319c714bcd69e5cf9e8ffc8"
+      },
+      "boundary_contract_sha256": "f0cd752a1659f14a8874ca0481d7c824fb71767c5b6903dccc87c55cc8817c9c",
+      "case_id": "b062",
+      "exceptions": [],
+      "fps_completed_at": "2026-10-21T13:38:03.221048+00:00",
+      "fps_recapture_required": false,
+      "generic_uid": "generic|yolo11l|H10|hailo10h_to_trt|b062",
+      "model": "yolo11l",
+      "native_split_quality_binding_file_sha256": "5ed37773c0440dfc7e0fa04b988bc7334235b9378edc0d2f5403a1f46eb749cc",
+      "native_split_quality_binding_sha256": "24c2a5e8c2cebde9e4963401a2343b258de837ae7dee8b6df1192f163c6b52bc",
+      "normal_reuse_authority_sha256": "614690663d049bbff8d89f13f981f6a0ce5e5a6fca746f79618ad3eb3bda358a",
+      "normal_reuse_row_sha256": "98a51329a93822a4c136226ccaed16250a799da493a36367ec5c0e29fa0775d5",
+      "original_native_binding_sha256": "47ba95d14bdd8af0786dc65ade3c3a61dd158d8b3c85ce9c049f95a6c2b4f191",
+      "performance_source_sha256": "abb5d006618e30221d91e9ab52fa9778d78a9095433ddf5a32234ae75fd73158",
+      "physical_bridge": {
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 0.10172491520643234,
+        "dequant_zero_point": 143.0,
+        "input_name": "/model.3/conv/Conv_output_0",
+        "input_shape": [
+          1,
+          256,
+          80,
+          80
+        ],
+        "layout": {
+          "applied": true,
+          "effective": "memory_nhwc_to_nchw",
+          "memory_shape": [
+            1,
+            80,
+            80,
+            256
+          ],
+          "output": "/model.3/conv/Conv_output_0__boundary_to_nchw",
+          "perm": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "requested": "memory_nhwc_to_nchw"
+        }
+      },
+      "physical_setup_id": "orin_nx_hailo10_01",
+      "runtime_artifacts": {
+        "part1_sha256": "c9c606e28c140a98444a97208198a3697269064deda40e1bf1af5214bd4960b0",
+        "part2_engine_sha256": "fbc5f980fdfce6bbaa17b493f60f16360f0e9e084e131cda15f35a3c14536e84"
+      },
+      "runtime_bundle_sha256": "b4f13ac1522e88f5d2118c27d3aa2ffab6d761f758c1361d5f56a712680f2853",
+      "runtime_config_sha256": "e61fc7ad626495c4f4425f0510b7e62757beb0946d2efc0ba045f154059fcc88",
+      "setup": "H10",
+      "source_plan_row_sha256": "7c2130f66b4fc9db667850094541c819fb9936bac9a41c93276a1345240dd9de",
+      "source_plan_sha256": "90b5f2b2d894fb20cd5f5b66ef9079ad7aa8bd66db2af8cb222ac6752d4482b0",
+      "staging_changed_binding_fields": [
+        "binding_sha256",
+        "central_quality_selection",
+        "central_quality_selection_sha256",
+        "central_result_sha256",
+        "producer_binding_sha256",
+        "source_request_sha256"
+      ],
+      "status": "FPS_REUSABLE_AFTER_QUALITY_ONLY_PHYSICAL_LAYOUT_REPAIR",
+      "unchanged_FPS_completion": {
+        "canonical_contract_sha256": "9057ae2b55d7051767505b537c3ad93c569f3ebe52ee98c0981b7c92eda1528c",
+        "contract_sha256": "3a68519b67159b79be87190c48fcd9b05d74849c0f30971aed70af88e6100221",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "preserved_observation_note": "Original selected FPS bytes/configuration, preprocessing and completed-task policy remain unchanged; the correction enables the equivalent physical-feed route only in separate Generic Quality.",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ]
+      },
+      "unchanged_FPS_inputs": {
+        "input_binding_sha256": "329dbb8724d4e6b5e670d80a61a7a6480478da4831ddd96f7e25fa22eeb589f6",
+        "prepared_input_contract_sha256": "6d7f8a0d3032c04e938c2e67bc58c73e3598e1b6ef695b535f61a1a8ad1e3396",
+        "preprocessing_timed": false,
+        "representative_input_sha256": [
+          "027f452e6687eb60e293cd408f0ca77aab7fbe797d287b9a428a16df0b532fb4"
+        ]
+      }
+    },
+    {
+      "actual_FPS_runner": {
+        "boundary_helper_AST_sha256": "4ced29a99bc8d30dea92a3e701f0e9a90b5882a4db2fe92c4ed0075bac16df0e",
+        "boundary_helper_line": 3203,
+        "native_binding_install_line": 16242,
+        "physical_adapter_sha256": "0e97f0640686a227519920eb51952413d35ab5c2cd8deca5d30809d235249264",
+        "route": "original_run_cfg.native_split_quality_binding -> ordinary local validator -> args._native_split_quality_binding + args._native_split_boundary_layout -> prepare_generic_native_boundary_input Native-first branch -> unchanged prepare_quality_first_boundary_input",
+        "runner_member": "runner/run_split_onnxruntime.py",
+        "runner_sha256": "5acbf3e61c7332cfbbc4cb4b1657092295dfcfd6e319c714bcd69e5cf9e8ffc8"
+      },
+      "boundary_contract_sha256": "a373d31387686a83583696b03cbfe7a3ef494f61e5588edf398b6b5da844ba4b",
+      "case_id": "b009",
+      "exceptions": [],
+      "fps_completed_at": "2026-10-21T14:28:40.879837+00:00",
+      "fps_recapture_required": false,
+      "generic_uid": "generic|yolov7_paper|H10|hailo10h_to_trt|b009",
+      "model": "yolov7_paper",
+      "native_split_quality_binding_file_sha256": "b0c14b77c3f9a7c430e6335e979b10519c89834934badea714c094e9a4386dd6",
+      "native_split_quality_binding_sha256": "7ca8ddc0497e871c55015eeb48fd302c1324e7dac0063856a974e721fc88aa69",
+      "normal_reuse_authority_sha256": "614690663d049bbff8d89f13f981f6a0ce5e5a6fca746f79618ad3eb3bda358a",
+      "normal_reuse_row_sha256": "10fb76b3093540df15e0843a37f0dedf00b708639079fd18f033f19556785a7e",
+      "original_native_binding_sha256": "8453b317ddeb48b52af94cc75b09bcbc4f3a30736f7685249e50e6befb7a9d05",
+      "performance_source_sha256": "ec01282623ceb7968186edc933b42aebf368b64523c3b6761c6dc1732810b104",
+      "physical_bridge": {
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 0.27992919087409973,
+        "dequant_zero_point": 157.0,
+        "input_name": "getitem_9",
+        "input_shape": [
+          1,
+          128,
+          160,
+          160
+        ],
+        "layout": {
+          "applied": true,
+          "effective": "memory_nhwc_to_nchw",
+          "memory_shape": [
+            1,
+            160,
+            160,
+            128
+          ],
+          "output": "getitem_9__boundary_to_nchw",
+          "perm": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "requested": "memory_nhwc_to_nchw"
+        }
+      },
+      "physical_setup_id": "orin_nx_hailo10_01",
+      "runtime_artifacts": {
+        "part1_sha256": "abfd7f0105dcdeb0e50a735074c500238eb2264ed162c5ed2bc2d9e257839d90",
+        "part2_engine_sha256": "451cfc1ef3f952b5a83aff8c85696863acc480dd8c77194f2444ddc722b839d9"
+      },
+      "runtime_bundle_sha256": "b4f13ac1522e88f5d2118c27d3aa2ffab6d761f758c1361d5f56a712680f2853",
+      "runtime_config_sha256": "456a9313554d5fb330f25dba28e77fa05ef0f016e2f8e173c97d6568521912db",
+      "setup": "H10",
+      "source_plan_row_sha256": "d6fcbf9a3fd6535a1be8675ef8012795bb90a319d9fe8ead9bcb60942c7b1b52",
+      "source_plan_sha256": "84d1e7299faabfb506a750a00b7ee6215f1ec01de9f2524ce5613b21b525dc8a",
+      "staging_changed_binding_fields": [
+        "binding_sha256",
+        "central_quality_selection",
+        "central_quality_selection_sha256",
+        "central_result_sha256",
+        "producer_binding_sha256",
+        "source_request_sha256"
+      ],
+      "status": "FPS_REUSABLE_AFTER_QUALITY_ONLY_PHYSICAL_LAYOUT_REPAIR",
+      "unchanged_FPS_completion": {
+        "canonical_contract_sha256": "c697dc115ff59fa48a8d7762a75cb236332b3c4554bc0d6b735647739f73b935",
+        "contract_sha256": "a3806858b67f1321ecf36f0ee6d75657a3d6b2404f7a7c2f0064bc712697664f",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "preserved_observation_note": "Original selected FPS bytes/configuration, preprocessing and completed-task policy remain unchanged; the correction enables the equivalent physical-feed route only in separate Generic Quality.",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ]
+      },
+      "unchanged_FPS_inputs": {
+        "input_binding_sha256": "47e047e7de9dba2792ec2e841e4314205178dcd732071ade8462be29469bea25",
+        "prepared_input_contract_sha256": "bbd141000aca8cf707758f720e43138ee3395f55a042407bb93ef5a2708cb1b1",
+        "preprocessing_timed": false,
+        "representative_input_sha256": [
+          "027f452e6687eb60e293cd408f0ca77aab7fbe797d287b9a428a16df0b532fb4"
+        ]
+      }
+    },
+    {
+      "actual_FPS_runner": {
+        "boundary_helper_AST_sha256": "4ced29a99bc8d30dea92a3e701f0e9a90b5882a4db2fe92c4ed0075bac16df0e",
+        "boundary_helper_line": 3203,
+        "native_binding_install_line": 15965,
+        "physical_adapter_sha256": "0e97f0640686a227519920eb51952413d35ab5c2cd8deca5d30809d235249264",
+        "route": "original_run_cfg.native_split_quality_binding -> ordinary local validator -> args._native_split_quality_binding + args._native_split_boundary_layout -> prepare_generic_native_boundary_input Native-first branch -> unchanged prepare_quality_first_boundary_input",
+        "runner_member": "runner/run_split_onnxruntime.py",
+        "runner_sha256": "e772c52e31b1b0fb2158c4719ef0ca37236d9eeafdfaff4dc7bb917502a44512"
+      },
+      "boundary_contract_sha256": "7dce2fd76b6716a5c09691eb6bc415a138268916b8d0fb574a619bfcfb4bd90e",
+      "case_id": "b003",
+      "exceptions": [],
+      "fps_completed_at": "2026-10-08T17:20:21.546015+00:00",
+      "fps_recapture_required": false,
+      "generic_uid": "generic|yolo26m|H8|hailo8_to_trt|b003",
+      "model": "yolo26m",
+      "native_split_quality_binding_file_sha256": "9e2347ea303566ec428e4186ab38a7b6f0690f92e17f0412244590dbc4a6d47f",
+      "native_split_quality_binding_sha256": "404a1b699da441bdf64794f1dfa262647ad23a95844e40b0ffc3cbaab5196ee0",
+      "normal_reuse_authority_sha256": "66294f01962889e6e9ddb1749295b593bb3b14b7c0ebccb6c1ebf97e70e00012",
+      "normal_reuse_row_sha256": "b1615a63f102a3753881b61043e30511944693883eda5a53ab9f5b7535732807",
+      "original_native_binding_sha256": "00910a67a4fd603b4d9a434616d6c13f8403af80d0cbc13af679bfbb8c563696",
+      "performance_source_sha256": "8c257b113f146c502afdf36191207a7aae3e2cd31eaa6da58ffaaaed6dd490cd",
+      "physical_bridge": {
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 2.180621862411499,
+        "dequant_zero_point": 158.0,
+        "input_name": "/model.1/conv/Conv_output_0",
+        "input_shape": [
+          1,
+          128,
+          160,
+          160
+        ],
+        "layout": {
+          "applied": true,
+          "effective": "memory_nhwc_to_nchw",
+          "memory_shape": [
+            1,
+            160,
+            160,
+            128
+          ],
+          "output": "/model.1/conv/Conv_output_0__boundary_to_nchw",
+          "perm": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "requested": "memory_nhwc_to_nchw"
+        }
+      },
+      "physical_setup_id": "orin_nx_hailo8_01",
+      "runtime_artifacts": {
+        "part1_sha256": "39d90f2ac9c48a69fd217ecb127cd2aab51ccb1d1b3e9187fdcbc830d0b7de65",
+        "part2_engine_sha256": "2e31b2602ed810e35d36b63dc4a860e274352bb47ce3a9a8a289d4f9bca3f202"
+      },
+      "runtime_bundle_sha256": "a837bd56e8d72b501e42fac27ffc3d2b041848ebf616111f531efe14e1190ed8",
+      "runtime_config_sha256": "c8a9215e4b420a26076ae089d027072bf4fe01281abc01fedd550e2ea5df004c",
+      "setup": "H8",
+      "source_plan_row_sha256": "41033774851051a842f323ffa6955972160e5804609e77ac614481539225b5ad",
+      "source_plan_sha256": "9f4448a0534c8832093db0217acff00047e64819814a17a84a6226d3074409eb",
+      "staging_changed_binding_fields": [
+        "binding_sha256",
+        "central_quality_selection",
+        "central_quality_selection_sha256",
+        "central_result_sha256",
+        "producer_binding_sha256",
+        "source_request_sha256"
+      ],
+      "status": "FPS_REUSABLE_AFTER_QUALITY_ONLY_PHYSICAL_LAYOUT_REPAIR",
+      "unchanged_FPS_completion": {
+        "canonical_contract_sha256": "3a70151d0fd77f63e306ab85197a08f0b8e6b161f4cf21030dc63d0a954653d7",
+        "contract_sha256": "0b21089c4bac9bc5a308949cb90e24ab0649e76c22b71589cc11736e2c00fdf6",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "preserved_observation_note": "Original selected FPS bytes/configuration, preprocessing and completed-task policy remain unchanged; the correction enables the equivalent physical-feed route only in separate Generic Quality.",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ]
+      },
+      "unchanged_FPS_inputs": {
+        "input_binding_sha256": "be1bf558088de616fa0d5d10b607e3bcef7c9abe96221205dcc0006a6c3ccc84",
+        "prepared_input_contract_sha256": "ddb73624886ffc4eea8873d7395ad369835422bba3b42185ed8591dab40ea2b6",
+        "preprocessing_timed": false,
+        "representative_input_sha256": [
+          "0bd0f530dd401d77b085e0cd847c03cef94346395ff6e852a68f6e615c58b8cb"
+        ]
+      }
+    },
+    {
+      "actual_FPS_runner": {
+        "boundary_helper_AST_sha256": "4ced29a99bc8d30dea92a3e701f0e9a90b5882a4db2fe92c4ed0075bac16df0e",
+        "boundary_helper_line": 3203,
+        "native_binding_install_line": 16242,
+        "physical_adapter_sha256": "0e97f0640686a227519920eb51952413d35ab5c2cd8deca5d30809d235249264",
+        "route": "original_run_cfg.native_split_quality_binding -> ordinary local validator -> args._native_split_quality_binding + args._native_split_boundary_layout -> prepare_generic_native_boundary_input Native-first branch -> unchanged prepare_quality_first_boundary_input",
+        "runner_member": "runner/run_split_onnxruntime.py",
+        "runner_sha256": "5acbf3e61c7332cfbbc4cb4b1657092295dfcfd6e319c714bcd69e5cf9e8ffc8"
+      },
+      "boundary_contract_sha256": "fab1c674121bf75116458341e7fa7120c6e667153650d2b5032683f1cb363038",
+      "case_id": "b003",
+      "exceptions": [],
+      "fps_completed_at": "2026-10-21T14:35:07.587908+00:00",
+      "fps_recapture_required": false,
+      "generic_uid": "generic|yolo26m|H10|hailo10h_to_trt|b003",
+      "model": "yolo26m",
+      "native_split_quality_binding_file_sha256": "9992a5a7e358003f9d877b1a9b0bf012d6940b3c48667ffad0b1d9d596b76748",
+      "native_split_quality_binding_sha256": "eb62baf2cb80e1d37c5601d67baadb36eabb8398c6a70279f4dc46846e5acde9",
+      "normal_reuse_authority_sha256": "614690663d049bbff8d89f13f981f6a0ce5e5a6fca746f79618ad3eb3bda358a",
+      "normal_reuse_row_sha256": "eef4b3e56cb027dbe0f3878a821c18a78444da39d9289f44d80deef6e5ebde46",
+      "original_native_binding_sha256": "11efb0cae86059b6757cb15a1538faf0839fe02d33246877aa0a1020ea83ec77",
+      "performance_source_sha256": "8860b2f83b40bc95845f05206cfff695b4edf6c2923da786058428ae2333cf2f",
+      "physical_bridge": {
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 2.180621862411499,
+        "dequant_zero_point": 158.0,
+        "input_name": "/model.1/conv/Conv_output_0",
+        "input_shape": [
+          1,
+          128,
+          160,
+          160
+        ],
+        "layout": {
+          "applied": true,
+          "effective": "memory_nhwc_to_nchw",
+          "memory_shape": [
+            1,
+            160,
+            160,
+            128
+          ],
+          "output": "/model.1/conv/Conv_output_0__boundary_to_nchw",
+          "perm": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "requested": "memory_nhwc_to_nchw"
+        }
+      },
+      "physical_setup_id": "orin_nx_hailo10_01",
+      "runtime_artifacts": {
+        "part1_sha256": "4050035df4b03f4d13167cdedd892cc1225348ee2fa9beab6de5eaf39a719946",
+        "part2_engine_sha256": "4ac29f93a87fce72ae37f899d4234416e39173f775c0388b1b57c2c79bae90ab"
+      },
+      "runtime_bundle_sha256": "b4f13ac1522e88f5d2118c27d3aa2ffab6d761f758c1361d5f56a712680f2853",
+      "runtime_config_sha256": "f54b6a7823a218acf9e884b8c4645eb46b7efee97568b104c52ec3653035e3f0",
+      "setup": "H10",
+      "source_plan_row_sha256": "0e0b850795a7991e66386606ca6051a7e96274ace24b82caebc8fa318209dcf3",
+      "source_plan_sha256": "3dc13f8fb88fdfa568edc59d7385a8141568948496fa8a24dc3027c9930face7",
+      "staging_changed_binding_fields": [
+        "binding_sha256",
+        "central_quality_selection",
+        "central_quality_selection_sha256",
+        "central_result_sha256",
+        "producer_binding_sha256",
+        "source_request_sha256"
+      ],
+      "status": "FPS_REUSABLE_AFTER_QUALITY_ONLY_PHYSICAL_LAYOUT_REPAIR",
+      "unchanged_FPS_completion": {
+        "canonical_contract_sha256": "f352b55d98fd9fb02cc1de38b869c0994efc80281c1b85ae83699d7142c5eceb",
+        "contract_sha256": "db615274de1d249531b43f8dba4326ccf5699b3675cd688ea7777e9054a419c2",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "preserved_observation_note": "Original selected FPS bytes/configuration, preprocessing and completed-task policy remain unchanged; the correction enables the equivalent physical-feed route only in separate Generic Quality.",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ]
+      },
+      "unchanged_FPS_inputs": {
+        "input_binding_sha256": "fcf109061a050f921941b02362af77577f2fb092ee14cf5849e99a951c9bb308",
+        "prepared_input_contract_sha256": "5bd4ee48837594e020f94ad64fac78be2be899e3de97d5357cb29e101bb10b04",
+        "preprocessing_timed": false,
+        "representative_input_sha256": [
+          "027f452e6687eb60e293cd408f0ca77aab7fbe797d287b9a428a16df0b532fb4"
+        ]
+      }
+    },
+    {
+      "actual_FPS_runner": {
+        "boundary_helper_AST_sha256": "4ced29a99bc8d30dea92a3e701f0e9a90b5882a4db2fe92c4ed0075bac16df0e",
+        "boundary_helper_line": 3203,
+        "native_binding_install_line": 15965,
+        "physical_adapter_sha256": "0e97f0640686a227519920eb51952413d35ab5c2cd8deca5d30809d235249264",
+        "route": "original_run_cfg.native_split_quality_binding -> ordinary local validator -> args._native_split_quality_binding + args._native_split_boundary_layout -> prepare_generic_native_boundary_input Native-first branch -> unchanged prepare_quality_first_boundary_input",
+        "runner_member": "runner/run_split_onnxruntime.py",
+        "runner_sha256": "e772c52e31b1b0fb2158c4719ef0ca37236d9eeafdfaff4dc7bb917502a44512"
+      },
+      "boundary_contract_sha256": "6a2f0a395c7feeb7e205fc2740d056de10969106aa480b9da68dbcb71fa1317f",
+      "case_id": "b038",
+      "exceptions": [],
+      "fps_completed_at": "2026-10-08T17:21:40.125780+00:00",
+      "fps_recapture_required": false,
+      "generic_uid": "generic|yolo26m|H8|hailo8_to_trt|b038",
+      "model": "yolo26m",
+      "native_split_quality_binding_file_sha256": "bf0b00874c8901207ad8be5cf44de0edbc6d0f375b014db078b1317cf4e58288",
+      "native_split_quality_binding_sha256": "fd20d961317dcc3091cebcc9a6f97f00dab3a143045abf62856202bf69606c40",
+      "normal_reuse_authority_sha256": "66294f01962889e6e9ddb1749295b593bb3b14b7c0ebccb6c1ebf97e70e00012",
+      "normal_reuse_row_sha256": "5cb14cbadeede7edd4a2319d276bb9f144420b04a298abafb276b837e5deb8f1",
+      "original_native_binding_sha256": "73676a6f1a82b31c4f0b2635c4e1039264160bb9c59b4b3de6b688a399dc1304",
+      "performance_source_sha256": "94d8c475e8db3bddaf502bfe4f44945a00adf78bb018b8ac05ccb1ae244743a9",
+      "physical_bridge": {
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 0.10217117518186569,
+        "dequant_zero_point": 143.0,
+        "input_name": "/model.3/conv/Conv_output_0",
+        "input_shape": [
+          1,
+          256,
+          80,
+          80
+        ],
+        "layout": {
+          "applied": true,
+          "effective": "memory_nhwc_to_nchw",
+          "memory_shape": [
+            1,
+            80,
+            80,
+            256
+          ],
+          "output": "/model.3/conv/Conv_output_0__boundary_to_nchw",
+          "perm": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "requested": "memory_nhwc_to_nchw"
+        }
+      },
+      "physical_setup_id": "orin_nx_hailo8_01",
+      "runtime_artifacts": {
+        "part1_sha256": "fe28ea79f5a1c4a40f398bd07b82d829961a744f2601000b8d3b85f17888c74b",
+        "part2_engine_sha256": "24c266b8c14dc67475c7fe4954029d85a984197f2baca7dc5b2abe4949b5f9d6"
+      },
+      "runtime_bundle_sha256": "a837bd56e8d72b501e42fac27ffc3d2b041848ebf616111f531efe14e1190ed8",
+      "runtime_config_sha256": "03f5bd5a754c9f4623640b30d00a8916426d6e6848dd38f886700351b37750c3",
+      "setup": "H8",
+      "source_plan_row_sha256": "d27e2e0a955ae64ab4cdf06c938fd4227aafa1da5472cc38143f86c4351b2b50",
+      "source_plan_sha256": "9f4448a0534c8832093db0217acff00047e64819814a17a84a6226d3074409eb",
+      "staging_changed_binding_fields": [
+        "binding_sha256",
+        "central_quality_selection",
+        "central_quality_selection_sha256",
+        "central_result_sha256",
+        "producer_binding_sha256",
+        "source_request_sha256"
+      ],
+      "status": "FPS_REUSABLE_AFTER_QUALITY_ONLY_PHYSICAL_LAYOUT_REPAIR",
+      "unchanged_FPS_completion": {
+        "canonical_contract_sha256": "96b6ea714ce728fa6a16997d673b6661d61982109b540f87f4747f844b29db4e",
+        "contract_sha256": "9d4382ed8db7c2b7bc0a78dd0fea05660f87c06724975919f6d1fae5c204f9c9",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "preserved_observation_note": "Original selected FPS bytes/configuration, preprocessing and completed-task policy remain unchanged; the correction enables the equivalent physical-feed route only in separate Generic Quality.",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ]
+      },
+      "unchanged_FPS_inputs": {
+        "input_binding_sha256": "b4957898a510ca7961eefe5c19e33f513f7558407695572bcc9b98bdcfb70d86",
+        "prepared_input_contract_sha256": "be86382e16a3f8a2bb7837ca9e9a0c07801cdac7b15dbe71a7dd86101430db52",
+        "preprocessing_timed": false,
+        "representative_input_sha256": [
+          "0bd0f530dd401d77b085e0cd847c03cef94346395ff6e852a68f6e615c58b8cb"
+        ]
+      }
+    },
+    {
+      "actual_FPS_runner": {
+        "boundary_helper_AST_sha256": "4ced29a99bc8d30dea92a3e701f0e9a90b5882a4db2fe92c4ed0075bac16df0e",
+        "boundary_helper_line": 3203,
+        "native_binding_install_line": 16242,
+        "physical_adapter_sha256": "0e97f0640686a227519920eb51952413d35ab5c2cd8deca5d30809d235249264",
+        "route": "original_run_cfg.native_split_quality_binding -> ordinary local validator -> args._native_split_quality_binding + args._native_split_boundary_layout -> prepare_generic_native_boundary_input Native-first branch -> unchanged prepare_quality_first_boundary_input",
+        "runner_member": "runner/run_split_onnxruntime.py",
+        "runner_sha256": "5acbf3e61c7332cfbbc4cb4b1657092295dfcfd6e319c714bcd69e5cf9e8ffc8"
+      },
+      "boundary_contract_sha256": "df099db3ad0247af46c114c46d0bdd22f51969ea583edaaf1448ef53536c0cfb",
+      "case_id": "b038",
+      "exceptions": [],
+      "fps_completed_at": "2026-10-21T14:36:21.021921+00:00",
+      "fps_recapture_required": false,
+      "generic_uid": "generic|yolo26m|H10|hailo10h_to_trt|b038",
+      "model": "yolo26m",
+      "native_split_quality_binding_file_sha256": "61817e7df35f55f4cd53c6dcdd251de39abb3ed89d8e68cbe93e1432581a9cd9",
+      "native_split_quality_binding_sha256": "fe8d2d7252c0c70ed38e095be1d62ec0701f44bacdca7045545674a12c13e91f",
+      "normal_reuse_authority_sha256": "614690663d049bbff8d89f13f981f6a0ce5e5a6fca746f79618ad3eb3bda358a",
+      "normal_reuse_row_sha256": "cfef9d3a5f6571855e1aa002e8829955dd46e9e6ec8dfcfd7f559411b7381e68",
+      "original_native_binding_sha256": "790e7acd7a3279459630de8d6cece7ccb9df89fcc8d5ba78a024aea486e75fb4",
+      "performance_source_sha256": "0af92bbd9c00ae42af3b71500fa58f9fdf1d17fe9111c6c0348049150ea5bcda",
+      "physical_bridge": {
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 0.10217117518186569,
+        "dequant_zero_point": 143.0,
+        "input_name": "/model.3/conv/Conv_output_0",
+        "input_shape": [
+          1,
+          256,
+          80,
+          80
+        ],
+        "layout": {
+          "applied": true,
+          "effective": "memory_nhwc_to_nchw",
+          "memory_shape": [
+            1,
+            80,
+            80,
+            256
+          ],
+          "output": "/model.3/conv/Conv_output_0__boundary_to_nchw",
+          "perm": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "requested": "memory_nhwc_to_nchw"
+        }
+      },
+      "physical_setup_id": "orin_nx_hailo10_01",
+      "runtime_artifacts": {
+        "part1_sha256": "ab4538a125d33618c3bb3b2d675b8e59ecc059bf2879f9489d89c5b6b636e625",
+        "part2_engine_sha256": "34c35ab7c2541df66ac8ec960d2ce23338cc5facec2293f17ffd8f69aa899de6"
+      },
+      "runtime_bundle_sha256": "b4f13ac1522e88f5d2118c27d3aa2ffab6d761f758c1361d5f56a712680f2853",
+      "runtime_config_sha256": "604c70096d61993f51cb851232b2ad785988e251064f52452339a618395c75ef",
+      "setup": "H10",
+      "source_plan_row_sha256": "efeae9125f55c87d5ae855c5c3fd4b646c25adc93269d800d1099d4033273a27",
+      "source_plan_sha256": "3dc13f8fb88fdfa568edc59d7385a8141568948496fa8a24dc3027c9930face7",
+      "staging_changed_binding_fields": [
+        "binding_sha256",
+        "central_quality_selection",
+        "central_quality_selection_sha256",
+        "central_result_sha256",
+        "producer_binding_sha256",
+        "source_request_sha256"
+      ],
+      "status": "FPS_REUSABLE_AFTER_QUALITY_ONLY_PHYSICAL_LAYOUT_REPAIR",
+      "unchanged_FPS_completion": {
+        "canonical_contract_sha256": "8660852e78663152f39dec3aa17100c09235ea078117e94cc57ad5a2e075382b",
+        "contract_sha256": "8a4869ebe63813cb157ea6f306788d10b8639417ee48c35d36c544a9a2a5289a",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "preserved_observation_note": "Original selected FPS bytes/configuration, preprocessing and completed-task policy remain unchanged; the correction enables the equivalent physical-feed route only in separate Generic Quality.",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ]
+      },
+      "unchanged_FPS_inputs": {
+        "input_binding_sha256": "da06aeef3721da93116e27a63f1c77feafb74775db00c3af7acf1d84f6e28685",
+        "prepared_input_contract_sha256": "ff322e3af5b4697ebf856506fb8fc2f145f9e36f196848f5fc34b59e7c90abef",
+        "preprocessing_timed": false,
+        "representative_input_sha256": [
+          "027f452e6687eb60e293cd408f0ca77aab7fbe797d287b9a428a16df0b532fb4"
+        ]
+      }
+    },
+    {
+      "actual_FPS_runner": {
+        "boundary_helper_AST_sha256": "4ced29a99bc8d30dea92a3e701f0e9a90b5882a4db2fe92c4ed0075bac16df0e",
+        "boundary_helper_line": 3203,
+        "native_binding_install_line": 15965,
+        "physical_adapter_sha256": "0e97f0640686a227519920eb51952413d35ab5c2cd8deca5d30809d235249264",
+        "route": "original_run_cfg.native_split_quality_binding -> ordinary local validator -> args._native_split_quality_binding + args._native_split_boundary_layout -> prepare_generic_native_boundary_input Native-first branch -> unchanged prepare_quality_first_boundary_input",
+        "runner_member": "runner/run_split_onnxruntime.py",
+        "runner_sha256": "e772c52e31b1b0fb2158c4719ef0ca37236d9eeafdfaff4dc7bb917502a44512"
+      },
+      "boundary_contract_sha256": "d94aefcb06ca57eb8be4342732fdcad29b6d4e398224bc9cd64ab59610ec4abd",
+      "case_id": "b043",
+      "exceptions": [],
+      "fps_completed_at": "2026-10-08T17:22:58.695770+00:00",
+      "fps_recapture_required": false,
+      "generic_uid": "generic|yolo26m|H8|hailo8_to_trt|b043",
+      "model": "yolo26m",
+      "native_split_quality_binding_file_sha256": "f44f344e80dd210d0d79f2263232847263f57dba814ab23aadf51a9907f2ea03",
+      "native_split_quality_binding_sha256": "a40c58f4a9a8f756d03781791a2093441d211b7054d8cbe0090e1918681ecadc",
+      "normal_reuse_authority_sha256": "66294f01962889e6e9ddb1749295b593bb3b14b7c0ebccb6c1ebf97e70e00012",
+      "normal_reuse_row_sha256": "30889c6497771df68b3b30a526a9a3bfe461fa698734b7ae52d5e8f962c7d84d",
+      "original_native_binding_sha256": "bcba3edfb8b97ec38156beab99bfbe691662e1466c384c1fac875c282e6b5bd5",
+      "performance_source_sha256": "dc422368315ea30cc469e89405f2b0a73bf3e4c84972783edbd134edd9292a21",
+      "physical_bridge": {
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 0.035168521106243134,
+        "dequant_zero_point": 8.0,
+        "input_name": "/model.4/cv1/act/Mul_output_0",
+        "input_shape": [
+          1,
+          256,
+          80,
+          80
+        ],
+        "layout": {
+          "applied": true,
+          "effective": "memory_nhwc_to_nchw",
+          "memory_shape": [
+            1,
+            80,
+            80,
+            256
+          ],
+          "output": "/model.4/cv1/act/Mul_output_0__boundary_to_nchw",
+          "perm": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "requested": "memory_nhwc_to_nchw"
+        }
+      },
+      "physical_setup_id": "orin_nx_hailo8_01",
+      "runtime_artifacts": {
+        "part1_sha256": "f75ce43e696cbb1fb679eb50b6c5406752ff07bb84e60368511276c84352fdc2",
+        "part2_engine_sha256": "e924e103568a5d1797d3739daf2f1e16717e5cb2d3d76c624672d033704e83bf"
+      },
+      "runtime_bundle_sha256": "a837bd56e8d72b501e42fac27ffc3d2b041848ebf616111f531efe14e1190ed8",
+      "runtime_config_sha256": "2fb1b00042565e1e54fb2a8a162c034463887d027b639af9f12aa1d60197afe9",
+      "setup": "H8",
+      "source_plan_row_sha256": "95e042b6feaf6f11038604e7a6d1d97a952fdd2669769ed68d4f64fac7406556",
+      "source_plan_sha256": "9f4448a0534c8832093db0217acff00047e64819814a17a84a6226d3074409eb",
+      "staging_changed_binding_fields": [
+        "binding_sha256",
+        "central_quality_selection",
+        "central_quality_selection_sha256",
+        "central_result_sha256",
+        "producer_binding_sha256",
+        "source_request_sha256"
+      ],
+      "status": "FPS_REUSABLE_AFTER_QUALITY_ONLY_PHYSICAL_LAYOUT_REPAIR",
+      "unchanged_FPS_completion": {
+        "canonical_contract_sha256": "f2f3ddcdd0b4cf44da68aebb15a3d9d58a22798081e4ab0c19fc79516d0de50d",
+        "contract_sha256": "4f5d3dd094b126772554cbab8a516e90edae17c797adc90e7d715f7a5b766684",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "preserved_observation_note": "Original selected FPS bytes/configuration, preprocessing and completed-task policy remain unchanged; the correction enables the equivalent physical-feed route only in separate Generic Quality.",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ]
+      },
+      "unchanged_FPS_inputs": {
+        "input_binding_sha256": "8b31f99465b69f7b1f590b371916ec11337258f3793548e845271a79ea87cc9d",
+        "prepared_input_contract_sha256": "c0f784870b9ca66eeb25fa13b93cc286884267785264bb4a5b1c10981b5ec3b6",
+        "preprocessing_timed": false,
+        "representative_input_sha256": [
+          "0bd0f530dd401d77b085e0cd847c03cef94346395ff6e852a68f6e615c58b8cb"
+        ]
+      }
+    },
+    {
+      "actual_FPS_runner": {
+        "boundary_helper_AST_sha256": "4ced29a99bc8d30dea92a3e701f0e9a90b5882a4db2fe92c4ed0075bac16df0e",
+        "boundary_helper_line": 3203,
+        "native_binding_install_line": 16242,
+        "physical_adapter_sha256": "0e97f0640686a227519920eb51952413d35ab5c2cd8deca5d30809d235249264",
+        "route": "original_run_cfg.native_split_quality_binding -> ordinary local validator -> args._native_split_quality_binding + args._native_split_boundary_layout -> prepare_generic_native_boundary_input Native-first branch -> unchanged prepare_quality_first_boundary_input",
+        "runner_member": "runner/run_split_onnxruntime.py",
+        "runner_sha256": "5acbf3e61c7332cfbbc4cb4b1657092295dfcfd6e319c714bcd69e5cf9e8ffc8"
+      },
+      "boundary_contract_sha256": "23cf6336660a8aa754796db877f69733146bd3742994c8faaac9875504851868",
+      "case_id": "b043",
+      "exceptions": [],
+      "fps_completed_at": "2026-10-21T14:37:33.732741+00:00",
+      "fps_recapture_required": false,
+      "generic_uid": "generic|yolo26m|H10|hailo10h_to_trt|b043",
+      "model": "yolo26m",
+      "native_split_quality_binding_file_sha256": "7be46d6d7679bdf7003a0652e9ad1a4b3db0f5ab4e464660f9396f54e4cca73e",
+      "native_split_quality_binding_sha256": "83bb872ac2100cf41267250a296eb3649bb0387a63fb161d80168bffa60ac184",
+      "normal_reuse_authority_sha256": "614690663d049bbff8d89f13f981f6a0ce5e5a6fca746f79618ad3eb3bda358a",
+      "normal_reuse_row_sha256": "364743e7c58be680bd1653589f0c48c8842f3293e9083780f6f72c51a8cebaf2",
+      "original_native_binding_sha256": "697fd5a957401758648155e43914f97d9d809d73012a617e825bb6b631ddf3e7",
+      "performance_source_sha256": "ae52f06ff90b75d91f630280a53df7e71f30f8d825b5683ba3edbdafe6b94ff0",
+      "physical_bridge": {
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 0.035168521106243134,
+        "dequant_zero_point": 8.0,
+        "input_name": "/model.4/cv1/act/Mul_output_0",
+        "input_shape": [
+          1,
+          256,
+          80,
+          80
+        ],
+        "layout": {
+          "applied": true,
+          "effective": "memory_nhwc_to_nchw",
+          "memory_shape": [
+            1,
+            80,
+            80,
+            256
+          ],
+          "output": "/model.4/cv1/act/Mul_output_0__boundary_to_nchw",
+          "perm": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "requested": "memory_nhwc_to_nchw"
+        }
+      },
+      "physical_setup_id": "orin_nx_hailo10_01",
+      "runtime_artifacts": {
+        "part1_sha256": "13d7cb85e6d96bc5048f9aa0d65c87a8193eacb16f4f060dbeb548e31bb4d9d4",
+        "part2_engine_sha256": "2a713bdffb2cdf606d1b700fdf9549a638318ac0480ddbdf145ea8862b50511f"
+      },
+      "runtime_bundle_sha256": "b4f13ac1522e88f5d2118c27d3aa2ffab6d761f758c1361d5f56a712680f2853",
+      "runtime_config_sha256": "685b86d83ffd63bafb288c38b308f335c9d373d339e95f1d4684a1e96fb51d82",
+      "setup": "H10",
+      "source_plan_row_sha256": "8160286ffcebb640305b96536a16f3ebc8b89abb7ba44ad901bb2d2fc1baf9e5",
+      "source_plan_sha256": "3dc13f8fb88fdfa568edc59d7385a8141568948496fa8a24dc3027c9930face7",
+      "staging_changed_binding_fields": [
+        "binding_sha256",
+        "central_quality_selection",
+        "central_quality_selection_sha256",
+        "central_result_sha256",
+        "producer_binding_sha256",
+        "source_request_sha256"
+      ],
+      "status": "FPS_REUSABLE_AFTER_QUALITY_ONLY_PHYSICAL_LAYOUT_REPAIR",
+      "unchanged_FPS_completion": {
+        "canonical_contract_sha256": "1323bcc61e839c9f841eb4288c42b6af862df17896f2b9f0bee9daf2da3d455f",
+        "contract_sha256": "c04ba3a5b02dc208c4cbec0e8ba722ff48a91ad12396bcccaddd7d32367a6a87",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "preserved_observation_note": "Original selected FPS bytes/configuration, preprocessing and completed-task policy remain unchanged; the correction enables the equivalent physical-feed route only in separate Generic Quality.",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ]
+      },
+      "unchanged_FPS_inputs": {
+        "input_binding_sha256": "2f7e2af5e7a3cd900b09ca7212a203c3eb2148e907e4d98859fa0b17490d050c",
+        "prepared_input_contract_sha256": "1e8e935a4996b4081e598c44375bf6aaf108328cc35c157d6fa651a9476f77d9",
+        "preprocessing_timed": false,
+        "representative_input_sha256": [
+          "027f452e6687eb60e293cd408f0ca77aab7fbe797d287b9a428a16df0b532fb4"
+        ]
+      }
+    },
+    {
+      "actual_FPS_runner": {
+        "boundary_helper_AST_sha256": "4ced29a99bc8d30dea92a3e701f0e9a90b5882a4db2fe92c4ed0075bac16df0e",
+        "boundary_helper_line": 3203,
+        "native_binding_install_line": 15965,
+        "physical_adapter_sha256": "0e97f0640686a227519920eb51952413d35ab5c2cd8deca5d30809d235249264",
+        "route": "original_run_cfg.native_split_quality_binding -> ordinary local validator -> args._native_split_quality_binding + args._native_split_boundary_layout -> prepare_generic_native_boundary_input Native-first branch -> unchanged prepare_quality_first_boundary_input",
+        "runner_member": "runner/run_split_onnxruntime.py",
+        "runner_sha256": "e772c52e31b1b0fb2158c4719ef0ca37236d9eeafdfaff4dc7bb917502a44512"
+      },
+      "boundary_contract_sha256": "20ef095cdfc697d4d9a7df8d18ae7d866f93cbf534338e97706b2b9bff289111",
+      "case_id": "b003",
+      "exceptions": [],
+      "fps_completed_at": "2026-10-08T17:24:00.944040+00:00",
+      "fps_recapture_required": false,
+      "generic_uid": "generic|yolo26s|H8|hailo8_to_trt|b003",
+      "model": "yolo26s",
+      "native_split_quality_binding_file_sha256": "97fe7e3a84b2b6612f3f4609ef62424e75172b09a923248cd45d45d0f5755921",
+      "native_split_quality_binding_sha256": "73986982e8aca3186c3ea5addd70fa1ea43777b1a566e819ee36c16ed3c05e49",
+      "normal_reuse_authority_sha256": "66294f01962889e6e9ddb1749295b593bb3b14b7c0ebccb6c1ebf97e70e00012",
+      "normal_reuse_row_sha256": "8f4b767790f0811836cd346bddfa4be6cd4d7db97d98ed8a64c03484fb639f27",
+      "original_native_binding_sha256": "7b4f6b9446dd8f78a90495b1d386afe7a918c72636e9e59c5e38a29f65f993a2",
+      "performance_source_sha256": "a34f6d7ee869a4df747f2d23f47c9519f0140ce8e1ca20191292bf6a4577c63c",
+      "physical_bridge": {
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 1.9338165521621704,
+        "dequant_zero_point": 138.0,
+        "input_name": "/model.1/conv/Conv_output_0",
+        "input_shape": [
+          1,
+          64,
+          160,
+          160
+        ],
+        "layout": {
+          "applied": true,
+          "effective": "memory_nhwc_to_nchw",
+          "memory_shape": [
+            1,
+            160,
+            160,
+            64
+          ],
+          "output": "/model.1/conv/Conv_output_0__boundary_to_nchw",
+          "perm": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "requested": "memory_nhwc_to_nchw"
+        }
+      },
+      "physical_setup_id": "orin_nx_hailo8_01",
+      "runtime_artifacts": {
+        "part1_sha256": "0ccdb7468b877f4c5d68a8c2b002d54506020de2e33c067146e1fbf36e0ea9e5",
+        "part2_engine_sha256": "8333a9ef0c2386fd67fe900cf55df50eed8638be06f73f0a365c2a093d287eb6"
+      },
+      "runtime_bundle_sha256": "a837bd56e8d72b501e42fac27ffc3d2b041848ebf616111f531efe14e1190ed8",
+      "runtime_config_sha256": "45b72f8f8dfbdf80c8c94904a0775be0d08e7444243a9092913e04cc157f69ca",
+      "setup": "H8",
+      "source_plan_row_sha256": "a29f0063341a657845795afed3bab23fa499f87e3efba131e9ea87c1c96ea474",
+      "source_plan_sha256": "9f4448a0534c8832093db0217acff00047e64819814a17a84a6226d3074409eb",
+      "staging_changed_binding_fields": [
+        "binding_sha256",
+        "central_quality_selection",
+        "central_quality_selection_sha256",
+        "central_result_sha256",
+        "producer_binding_sha256",
+        "source_request_sha256"
+      ],
+      "status": "FPS_REUSABLE_AFTER_QUALITY_ONLY_PHYSICAL_LAYOUT_REPAIR",
+      "unchanged_FPS_completion": {
+        "canonical_contract_sha256": "f8e1b2d57ea77bdea00ee0d910210bb3879440f23f3061ebbc3da7f2353de227",
+        "contract_sha256": "47033429f554b91f9bb218630c827f67dc8f3da39c38fb9ec7814f78ffcca7a8",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "preserved_observation_note": "Original selected FPS bytes/configuration, preprocessing and completed-task policy remain unchanged; the correction enables the equivalent physical-feed route only in separate Generic Quality.",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ]
+      },
+      "unchanged_FPS_inputs": {
+        "input_binding_sha256": "6b7ab1c04f965946a4360739baf67d60037852b8390bda616ba7b1a69df8b34c",
+        "prepared_input_contract_sha256": "3bdf1c81488e0a029595ba26b721a46d63f8bd0146696d4dc56cc14e95971d6a",
+        "preprocessing_timed": false,
+        "representative_input_sha256": [
+          "0bd0f530dd401d77b085e0cd847c03cef94346395ff6e852a68f6e615c58b8cb"
+        ]
+      }
+    },
+    {
+      "actual_FPS_runner": {
+        "boundary_helper_AST_sha256": "4ced29a99bc8d30dea92a3e701f0e9a90b5882a4db2fe92c4ed0075bac16df0e",
+        "boundary_helper_line": 3203,
+        "native_binding_install_line": 16242,
+        "physical_adapter_sha256": "0e97f0640686a227519920eb51952413d35ab5c2cd8deca5d30809d235249264",
+        "route": "original_run_cfg.native_split_quality_binding -> ordinary local validator -> args._native_split_quality_binding + args._native_split_boundary_layout -> prepare_generic_native_boundary_input Native-first branch -> unchanged prepare_quality_first_boundary_input",
+        "runner_member": "runner/run_split_onnxruntime.py",
+        "runner_sha256": "5acbf3e61c7332cfbbc4cb4b1657092295dfcfd6e319c714bcd69e5cf9e8ffc8"
+      },
+      "boundary_contract_sha256": "022348c583325c893f1f7c429c97ab61165199f826f6eadcbfe6775e4533d1a0",
+      "case_id": "b003",
+      "exceptions": [],
+      "fps_completed_at": "2026-10-21T14:39:34.911849+00:00",
+      "fps_recapture_required": false,
+      "generic_uid": "generic|yolo26s|H10|hailo10h_to_trt|b003",
+      "model": "yolo26s",
+      "native_split_quality_binding_file_sha256": "937be71f52da6849724bf510329143933652480e4c9db6474309504303696815",
+      "native_split_quality_binding_sha256": "461eacb2bef2d03c8b0d0c22ea4ffc8b5e9af8d9c2d40b0c28d2b3f476d42026",
+      "normal_reuse_authority_sha256": "614690663d049bbff8d89f13f981f6a0ce5e5a6fca746f79618ad3eb3bda358a",
+      "normal_reuse_row_sha256": "dab899b60516f57e75215257b815d4f65ecd3f2ea68567055725ee882beea9d1",
+      "original_native_binding_sha256": "829696d353eac3b17ef6b296612a725992a347325af4990b7bdf8e3120c98757",
+      "performance_source_sha256": "45043778ef966de770657389d16084fb325d71c58c4ea0c0b74226e11a077ce6",
+      "physical_bridge": {
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 1.9338165521621704,
+        "dequant_zero_point": 138.0,
+        "input_name": "/model.1/conv/Conv_output_0",
+        "input_shape": [
+          1,
+          64,
+          160,
+          160
+        ],
+        "layout": {
+          "applied": true,
+          "effective": "memory_nhwc_to_nchw",
+          "memory_shape": [
+            1,
+            160,
+            160,
+            64
+          ],
+          "output": "/model.1/conv/Conv_output_0__boundary_to_nchw",
+          "perm": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "requested": "memory_nhwc_to_nchw"
+        }
+      },
+      "physical_setup_id": "orin_nx_hailo10_01",
+      "runtime_artifacts": {
+        "part1_sha256": "7629523fd2626449c308b38afb9963c512e61ffbf713f12feefd5a6b5296cc27",
+        "part2_engine_sha256": "f85278eba2ac13925565b2976123f35152010e4a6aef48b2053f825cbd88a750"
+      },
+      "runtime_bundle_sha256": "b4f13ac1522e88f5d2118c27d3aa2ffab6d761f758c1361d5f56a712680f2853",
+      "runtime_config_sha256": "68720c0e0f448db134b499b01dc2e7165be8858740865f88e686ef86aad27d41",
+      "setup": "H10",
+      "source_plan_row_sha256": "963450d4c6becf9a6c6f6ce28e6e24ee3b688de85fbd39b3be36c6e7af1bfc46",
+      "source_plan_sha256": "e5327f462787fe5976f7e401a141988a877941ebb3c7406e06b411ce676fc438",
+      "staging_changed_binding_fields": [
+        "binding_sha256",
+        "central_quality_selection",
+        "central_quality_selection_sha256",
+        "central_result_sha256",
+        "producer_binding_sha256",
+        "source_request_sha256"
+      ],
+      "status": "FPS_REUSABLE_AFTER_QUALITY_ONLY_PHYSICAL_LAYOUT_REPAIR",
+      "unchanged_FPS_completion": {
+        "canonical_contract_sha256": "5493c28033258e4f2339c65050975223df34fc9c935cff34fa14b29e8800d58e",
+        "contract_sha256": "155b5c9280011e3c60aea59aa78f0743c2525ed97b057ec556f637978a84fb0e",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "preserved_observation_note": "Original selected FPS bytes/configuration, preprocessing and completed-task policy remain unchanged; the correction enables the equivalent physical-feed route only in separate Generic Quality.",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ]
+      },
+      "unchanged_FPS_inputs": {
+        "input_binding_sha256": "63603664413e561766c4bd097dd1c88627f6d0a8eab33f75d72249f7135b0111",
+        "prepared_input_contract_sha256": "b65f25c78b166502f9570da40edf6f77f09ff43cae171b4ab57f23d1a4b85d33",
+        "preprocessing_timed": false,
+        "representative_input_sha256": [
+          "027f452e6687eb60e293cd408f0ca77aab7fbe797d287b9a428a16df0b532fb4"
+        ]
+      }
+    },
+    {
+      "actual_FPS_runner": {
+        "boundary_helper_AST_sha256": "4ced29a99bc8d30dea92a3e701f0e9a90b5882a4db2fe92c4ed0075bac16df0e",
+        "boundary_helper_line": 3203,
+        "native_binding_install_line": 15965,
+        "physical_adapter_sha256": "0e97f0640686a227519920eb51952413d35ab5c2cd8deca5d30809d235249264",
+        "route": "original_run_cfg.native_split_quality_binding -> ordinary local validator -> args._native_split_quality_binding + args._native_split_boundary_layout -> prepare_generic_native_boundary_input Native-first branch -> unchanged prepare_quality_first_boundary_input",
+        "runner_member": "runner/run_split_onnxruntime.py",
+        "runner_sha256": "e772c52e31b1b0fb2158c4719ef0ca37236d9eeafdfaff4dc7bb917502a44512"
+      },
+      "boundary_contract_sha256": "9c5b29013f2a70a8dea588e0ba5d3726043fb5e6572b59e11fca1a77e45649c7",
+      "case_id": "b021",
+      "exceptions": [],
+      "fps_completed_at": "2026-10-08T17:25:00.770673+00:00",
+      "fps_recapture_required": false,
+      "generic_uid": "generic|yolo26s|H8|hailo8_to_trt|b021",
+      "model": "yolo26s",
+      "native_split_quality_binding_file_sha256": "fde932670a216dc109d3732ad0ea05030b1188f8e02862edb06acf935be2e067",
+      "native_split_quality_binding_sha256": "c622e297ca11a16069f30ddf02fc0c13b80d7f4e23a7819d9dd045ec6e3fb3b6",
+      "normal_reuse_authority_sha256": "66294f01962889e6e9ddb1749295b593bb3b14b7c0ebccb6c1ebf97e70e00012",
+      "normal_reuse_row_sha256": "9c1a8e13910f66ed25d3ec217898cb7354e92eb0937cfbaa6750de8d4db8f559",
+      "original_native_binding_sha256": "f2597e60e07bb505ec537a043fd3405bab184747be82f0aaa7c92390e6a0dfc1",
+      "performance_source_sha256": "f9d405ad95e3b26257f85d382da0fb1ac2ca8d1df139783bd822a98c4a9e8c17",
+      "physical_bridge": {
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 0.0818437933921814,
+        "dequant_zero_point": 141.0,
+        "input_name": "/model.3/conv/Conv_output_0",
+        "input_shape": [
+          1,
+          128,
+          80,
+          80
+        ],
+        "layout": {
+          "applied": true,
+          "effective": "memory_nhwc_to_nchw",
+          "memory_shape": [
+            1,
+            80,
+            80,
+            128
+          ],
+          "output": "/model.3/conv/Conv_output_0__boundary_to_nchw",
+          "perm": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "requested": "memory_nhwc_to_nchw"
+        }
+      },
+      "physical_setup_id": "orin_nx_hailo8_01",
+      "runtime_artifacts": {
+        "part1_sha256": "c2db2492ef07e383f3da6a0d9c09b631dffa67d5c36937f19b7228dc311b69bd",
+        "part2_engine_sha256": "b2e15d72496ae39a34c829712897e6f70a08ebd3187c1fbe648c0e8423597be8"
+      },
+      "runtime_bundle_sha256": "a837bd56e8d72b501e42fac27ffc3d2b041848ebf616111f531efe14e1190ed8",
+      "runtime_config_sha256": "1d59b3e53b4c98967672faaafffcdfd1994c449d71c357f99e4d468c53db6a23",
+      "setup": "H8",
+      "source_plan_row_sha256": "90ef92909845034b179dc7e9bd175ca87e304dab66c346beb99eb24fa969af2a",
+      "source_plan_sha256": "9f4448a0534c8832093db0217acff00047e64819814a17a84a6226d3074409eb",
+      "staging_changed_binding_fields": [
+        "binding_sha256",
+        "central_quality_selection",
+        "central_quality_selection_sha256",
+        "central_result_sha256",
+        "producer_binding_sha256",
+        "source_request_sha256"
+      ],
+      "status": "FPS_REUSABLE_AFTER_QUALITY_ONLY_PHYSICAL_LAYOUT_REPAIR",
+      "unchanged_FPS_completion": {
+        "canonical_contract_sha256": "fdb8fc69d43bc8b89500e1044c181e1c2473402bbafb22f7543dd598ca69dcc5",
+        "contract_sha256": "983dd9312754ed57089064e798071ed590c9969a63e7a9853aface224bec6582",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "preserved_observation_note": "Original selected FPS bytes/configuration, preprocessing and completed-task policy remain unchanged; the correction enables the equivalent physical-feed route only in separate Generic Quality.",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ]
+      },
+      "unchanged_FPS_inputs": {
+        "input_binding_sha256": "f6921361bd09049a7428a3e47dd9c7d3106599dc695000b183def986aad4f50f",
+        "prepared_input_contract_sha256": "414d19112c8c075096997a2880ec297e26445189199e0f3cd3dcdf5833136fda",
+        "preprocessing_timed": false,
+        "representative_input_sha256": [
+          "0bd0f530dd401d77b085e0cd847c03cef94346395ff6e852a68f6e615c58b8cb"
+        ]
+      }
+    },
+    {
+      "actual_FPS_runner": {
+        "boundary_helper_AST_sha256": "4ced29a99bc8d30dea92a3e701f0e9a90b5882a4db2fe92c4ed0075bac16df0e",
+        "boundary_helper_line": 3203,
+        "native_binding_install_line": 16242,
+        "physical_adapter_sha256": "0e97f0640686a227519920eb51952413d35ab5c2cd8deca5d30809d235249264",
+        "route": "original_run_cfg.native_split_quality_binding -> ordinary local validator -> args._native_split_quality_binding + args._native_split_boundary_layout -> prepare_generic_native_boundary_input Native-first branch -> unchanged prepare_quality_first_boundary_input",
+        "runner_member": "runner/run_split_onnxruntime.py",
+        "runner_sha256": "5acbf3e61c7332cfbbc4cb4b1657092295dfcfd6e319c714bcd69e5cf9e8ffc8"
+      },
+      "boundary_contract_sha256": "2fb8e04f16fad3172ffdfb1bcefbffc3679ad448a588cb63bbc1ce5554208397",
+      "case_id": "b021",
+      "exceptions": [],
+      "fps_completed_at": "2026-10-21T14:40:32.424612+00:00",
+      "fps_recapture_required": false,
+      "generic_uid": "generic|yolo26s|H10|hailo10h_to_trt|b021",
+      "model": "yolo26s",
+      "native_split_quality_binding_file_sha256": "7acb2af97c53d087864f9f1220531346e13a25810f4baf1dd480b44b2acf912a",
+      "native_split_quality_binding_sha256": "d1e1c3a00429c5827e1356df4de268111b96f10ede8c991aa64df95745e4b40c",
+      "normal_reuse_authority_sha256": "614690663d049bbff8d89f13f981f6a0ce5e5a6fca746f79618ad3eb3bda358a",
+      "normal_reuse_row_sha256": "99c98b64e02d8357f8a01027a97ca5153f4cf4cdb4099e95873906a762bbf3d2",
+      "original_native_binding_sha256": "dfe07a08b7121b30a0ed031e789cb6079817c39ff5aa855d9e28652ca616c684",
+      "performance_source_sha256": "f6c5acbaa2473aaf579efac6ff090594bcfc1a551c12483a978caad20d7bdcb3",
+      "physical_bridge": {
+        "boundary_transform": "uint8_dequant_then_layout",
+        "dequant_scale": 0.0818437933921814,
+        "dequant_zero_point": 141.0,
+        "input_name": "/model.3/conv/Conv_output_0",
+        "input_shape": [
+          1,
+          128,
+          80,
+          80
+        ],
+        "layout": {
+          "applied": true,
+          "effective": "memory_nhwc_to_nchw",
+          "memory_shape": [
+            1,
+            80,
+            80,
+            128
+          ],
+          "output": "/model.3/conv/Conv_output_0__boundary_to_nchw",
+          "perm": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "requested": "memory_nhwc_to_nchw"
+        }
+      },
+      "physical_setup_id": "orin_nx_hailo10_01",
+      "runtime_artifacts": {
+        "part1_sha256": "76cb5c5778973699c6cb65310182052f9906a3a5cecc963012b24def02001a20",
+        "part2_engine_sha256": "dfc08117cf11142803343aa9af2b868f96d9086d3f22c88d653d34c3594de408"
+      },
+      "runtime_bundle_sha256": "b4f13ac1522e88f5d2118c27d3aa2ffab6d761f758c1361d5f56a712680f2853",
+      "runtime_config_sha256": "e7aecd7dad2e720fb46f4b2bdbcc642d55fba3f5e92958c1eb1609aa69cea611",
+      "setup": "H10",
+      "source_plan_row_sha256": "7aaf2f9ce51a4fbc4bb06e37e3d2814ccc29c18f31476e40a23d926c53d8a329",
+      "source_plan_sha256": "e5327f462787fe5976f7e401a141988a877941ebb3c7406e06b411ce676fc438",
+      "staging_changed_binding_fields": [
+        "binding_sha256",
+        "central_quality_selection",
+        "central_quality_selection_sha256",
+        "central_result_sha256",
+        "producer_binding_sha256",
+        "source_request_sha256"
+      ],
+      "status": "FPS_REUSABLE_AFTER_QUALITY_ONLY_PHYSICAL_LAYOUT_REPAIR",
+      "unchanged_FPS_completion": {
+        "canonical_contract_sha256": "fced43e8d70ba9a64d880e58d3d9080ef195fdb5465ef0a563758fd8db44b616",
+        "contract_sha256": "ee9d68cb61927bcd94ad1c3571d365e4bc25ec14e718fa08ed1a430cbd803268",
+        "measurement_boundary": "prepared_input_before_p1_to_last_completed_task",
+        "preserved_observation_note": "Original selected FPS bytes/configuration, preprocessing and completed-task policy remain unchanged; the correction enables the equivalent physical-feed route only in separate Generic Quality.",
+        "runtime_modes": [
+          "fast_oracle_outside_timing"
+        ]
+      },
+      "unchanged_FPS_inputs": {
+        "input_binding_sha256": "3c924a3611492c0ae7e94995814738c880f29db7f61171b1701c2906887ea435",
+        "prepared_input_contract_sha256": "4e963586b3deaa4556a099f6b9975acd7ced6af2daf7d2ddd78ac7298d2452e5",
+        "preprocessing_timed": false,
+        "representative_input_sha256": [
+          "027f452e6687eb60e293cd408f0ca77aab7fbe797d287b9a428a16df0b532fb4"
+        ]
+      }
+    }
+  ],
+  "schema": "rq2-affected15-fps-reuse-after-quality-fix-v1",
+  "scope": {
+    "queue": "quality_audit/AFFECTED_SCOPE_QUEUE.json",
+    "queue_sha256": "bba9ae179d83795331f00e68f1d66dc6ef07e305856c72e7fe67ca3d035938ac",
+    "rows": 15,
+    "selection_rule": "source/config/bridge identity predicate; AP and outcome not used"
+  },
+  "status": "PASS"
+}

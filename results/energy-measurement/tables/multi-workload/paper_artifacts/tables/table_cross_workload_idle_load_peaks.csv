@@ -1,0 +1,31 @@
+Workload,Rank,Load peak,Active/idle [dB],Idle line matched,Nearest idle peak,Classification
+GEMM-FP32,1,405.312 Hz,46.42,no,34.819 kHz,load-only candidate
+GEMM-FP32,2,7.062 kHz,57.86,no,34.819 kHz,load-only candidate
+GEMM-FP32,3,810.623 Hz,46.52,no,34.819 kHz,load-only candidate
+GEMM-FP32,4,38.147 Hz,34.10,no,34.819 kHz,load-only candidate
+GEMM-FP32,5,123.978 Hz,34.74,no,34.819 kHz,load-only candidate
+GEMM-INT8,1,29.13 kHz,54.95,no,34.819 kHz,load-only candidate
+GEMM-INT8,2,66.757 Hz,26.83,no,34.819 kHz,load-only candidate
+GEMM-INT8,3,29.397 kHz,54.67,no,34.819 kHz,load-only candidate
+GEMM-INT8,4,29.221 kHz,54.36,no,34.819 kHz,load-only candidate
+GEMM-INT8,5,29.297 kHz,54.42,no,34.819 kHz,load-only candidate
+Gemma3-4B,1,57.22 Hz,37.96,no,34.819 kHz,load-only candidate
+Gemma3-4B,2,38.147 Hz,37.22,no,34.819 kHz,load-only candidate
+Gemma3-4B,3,76.294 Hz,36.93,no,34.819 kHz,load-only candidate
+Gemma3-4B,4,877.38 Hz,50.25,no,34.819 kHz,load-only candidate
+Gemma3-4B,5,152.588 Hz,35.93,no,34.819 kHz,load-only candidate
+ResNet-50 FP32,1,4.811 kHz,56.13,no,34.819 kHz,load-only candidate
+ResNet-50 FP32,2,4.592 kHz,56.86,no,34.819 kHz,load-only candidate
+ResNet-50 FP32,3,5.031 kHz,53.65,no,34.819 kHz,load-only candidate
+ResNet-50 FP32,4,5.245 kHz,51.35,no,34.819 kHz,load-only candidate
+ResNet-50 FP32,5,438.69 Hz,40.09,no,34.819 kHz,load-only candidate
+YOLO-FP32,1,295.639 Hz,40.23,no,34.819 kHz,load-only candidate
+YOLO-FP32,2,2.375 kHz,45.26,no,34.819 kHz,load-only candidate
+YOLO-FP32,3,147.82 Hz,32.29,no,34.819 kHz,load-only candidate
+YOLO-FP32,4,1.483 kHz,45.81,no,34.819 kHz,load-only candidate
+YOLO-FP32,5,591.278 Hz,43.71,no,34.819 kHz,load-only candidate
+YOLO-INT8,1,329.018 Hz,47.36,no,34.819 kHz,load-only candidate
+YOLO-INT8,2,662.804 Hz,50.87,no,34.819 kHz,load-only candidate
+YOLO-INT8,3,991.821 Hz,44.64,no,34.819 kHz,load-only candidate
+YOLO-INT8,4,3.972 kHz,50.76,no,34.819 kHz,load-only candidate
+YOLO-INT8,5,2.646 kHz,45.75,no,34.819 kHz,load-only candidate

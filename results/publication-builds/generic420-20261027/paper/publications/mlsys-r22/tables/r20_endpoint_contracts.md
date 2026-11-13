@@ -1,0 +1,10 @@
+# tab:supp-endpoint-contracts
+
+Required task outputs and completion work. Generic, Native, and Full use the same model-specific comparison contract. The compiled graph determines whether decoding and suppression occur in the model or in host code. Required output processing and materialization precede task completion.
+
+| Model or output path | Completed result | Required processing |
+| --- | --- | --- |
+| MobileNet, RegNet, ResNet | Synchronized classifier outputs and ordered Top1/Top5 | Output materialization and Top1/Top5 processing. |
+| YOLO11l and YOLOv7 | Original-image boxes, probability scores, and class indices | Model-specific decoding and class-aware NMS where not already completed by the model, followed by materialization. |
+| YOLO26m/s, raw-head paths | The same detection record format | Decode raw heads and apply the required NMS. This includes Hailo Full paths. |
+| YOLO26m/s, integrated outputs | The same detection record format | Filter and normalize integrated detections, undo letterboxing, and materialize outputs. No additional NMS pass is applied to valid integrated outputs. |

@@ -1,0 +1,339 @@
+{
+  "fixed420_unchanged": true,
+  "fresh_normal_Generic_N5000_required": [
+    "generic|yolo26s|H10|hailo10h_to_trt|b038"
+  ],
+  "hardware_executed": false,
+  "independent_existing_Generic_N5000_reusable": [
+    "generic|yolov7_paper|DeepX|deepx_to_trt|b044"
+  ],
+  "new_Generic_FPS_required": [],
+  "no_observation_files_modified": true,
+  "rows": [
+    {
+      "blocker_origin": "Historical Native cross-backend endpoint decision preserved by generic_completion_reporting.py; not a same-device measured Generic/Native endpoint mismatch.",
+      "demonstrated_timed_Generic_postprocessing_bug": false,
+      "exact_postprocessing_difference": {
+        "latest_measured_Generic": "Graph-bound fixed TopK300 BN6; confidence filter, inverse letterbox and materialization, no second host NMS",
+        "old_N5000": "YoloHarness decodes BN6 then applies per-class host NMS at IoU .45 and caps300"
+      },
+      "existing_generic_quality_predictions": {
+        "sha256": "77472e937a90507db690667a737fc8507c063e1adf0f8c422fb8fa7e49bb988b",
+        "size_bytes": 8324089
+      },
+      "existing_generic_quality_request": {
+        "sha256": "801eda27c022f7975c26e469d3d9493ea4ec1f682717a93ca68c7874f06de438",
+        "size_bytes": 271103
+      },
+      "existing_prediction_reuse_compatible": false,
+      "existing_quality_producer_runner_sha256": "52906836fe91dfd22558f64432e7d51635f5485b30cb4b61a789114a10a5c77b",
+      "existing_quality_records": 5000,
+      "fresh_normal_N5000_required": true,
+      "generic_uid": "generic|yolo26s|H10|hailo10h_to_trt|b038",
+      "latest_generic_completion_contract_sha256": "ae951ebe45f1b588d5152b725a56d9bcd39366f1f0e25241e7b2608c049f820f",
+      "legacy_quality_harness": {
+        "sha256": "a6dffb51368b1c016729610658446c2fb8d609db3de7f3b5a5931d114c69d7e8",
+        "size_bytes": 81933
+      },
+      "next_action": "Use prepared normal RQ2-only N5000 plan after the validated Hailo sealed-bridge/layout fix and normal physical lease are available. Preserve existing Generic FPS.",
+      "normal_pair_authority": {
+        "sha256": "b2660e4ed0bd66442d0c13718cf8981b4af8f30e3620865d934fdc05856a20be",
+        "size_bytes": 23233
+      },
+      "normal_quality_transfer_blockers": [
+        "native_output_endpoint_match"
+      ],
+      "normal_same_device_pair_endpoint_evidence": {
+        "completed_output_endpoint_id": "detection:decoded_nms:comparison:0153c6c2c964096ca2469182c8e2c0fd276d3b57166b737de759dbc39ca75dad",
+        "completion_contract_sha256": "ae951ebe45f1b588d5152b725a56d9bcd39366f1f0e25241e7b2608c049f820f",
+        "functional_reference_evidence": {
+          "capture": {
+            "sha256": "35058e904cebe4897d389d4c4ae7f96ad5239546c9c0ca8f01731a89885293bd"
+          },
+          "captured_completed_tasks": 1,
+          "functional_native_command_sha256": "8324684248126b8b73f0622370c6ca8f1ad32a7006890e91da47e3d1dba9da8d",
+          "functional_output_manifest": {
+            "sha256": "0139fc36e50aded7b69659127fcce1fd16feeb47cbf7092cc137e4b2a64ad8f9"
+          },
+          "functional_raw_report": {
+            "sha256": "de0b19e099461a2a16c5906fd5fe2ebce0aeb42e09e2daf61b087cfc7c074dbe"
+          },
+          "historical_command_sha256": "1ba7f98d6780a18d50d4f31bc4236876842f584bca8cfce1e1775717fd80118e",
+          "historical_native_counts_times": {
+            "batch_size": 1,
+            "completion_mode": "decoded_nms_attested_materialization_no_second_nms",
+            "completion_output_endpoint_id": "detection:decoded_nms:comparison:0153c6c2c964096ca2469182c8e2c0fd276d3b57166b737de759dbc39ca75dad",
+            "execution_model": "scripts/native_hailo10_trt_e2e_from_benchmarkset.py",
+            "handoff_included": true,
+            "host_device_transfers_included": true,
+            "inflight": 8,
+            "input_sequence": "single_exact_prepared_feed_repeated",
+            "measured_task_count": 1000,
+            "native_command_contract_sha256": "1ba7f98d6780a18d50d4f31bc4236876842f584bca8cfce1e1775717fd80118e",
+            "native_command_contract_sha256s": [
+              "1ba7f98d6780a18d50d4f31bc4236876842f584bca8cfce1e1775717fd80118e",
+              "01de08bfbab746c47744cdeaa4f7c0d6ac12dae97cfb3224fdab8eca32a1a734",
+              "e1f2d120c8738f3fdbcb4351d408b1b0fd38037c1ac037c116388ff0b8b6e637"
+            ],
+            "observed_completed_counts": [
+              1000,
+              1000,
+              1000
+            ],
+            "observed_measurement_times_s": [
+              7.285327387042344,
+              7.395764575805515,
+              7.394478878006339
+            ],
+            "output_materialization_included": true,
+            "output_materialization_policy": "synchronized_d2h_pinned_view_no_post_copy",
+            "pipeline_drain_included": true,
+            "pipeline_fill_included": true,
+            "preprocessing_included": false,
+            "process_repetition_policy": "separate_processes",
+            "queue_depth": 3,
+            "repetitions": 3,
+            "task": "detection",
+            "timer_end": "last_required_task_completion_after_synchronized_host_output_and_task_postprocess",
+            "timer_start": "workers_ready_before_first_prepared_input_admission",
+            "warmup_count": 100,
+            "warmup_fully_completed_and_drained_before_timer": true
+          },
+          "historical_scientific_source": {
+            "reports": [
+              {
+                "sha256": "a2ad803e514c073773e0dce904be5bf454322f829caa444f7e080c51fdec4a14"
+              },
+              {
+                "sha256": "5572896fdd7e14bd1520291ec3c7ac613a3a1e46eadef25b13541934f5a63cab"
+              },
+              {
+                "sha256": "7d6713688e2a3f054adbe7bf5d85d45516845a5d9943e2382ad43a4189bba219"
+              }
+            ],
+            "summary": {
+              "sha256": "62fb6fd348b3b4a778fb63bef0afdf7e6d61a51ee95e6fe503105571f61ec0fc"
+            }
+          },
+          "historical_source": {
+            "sha256": "a2ad803e514c073773e0dce904be5bf454322f829caa444f7e080c51fdec4a14"
+          },
+          "historical_source_inside_original_run": false,
+          "native_split_semantic_proof": {
+            "native_split_final_portable_binding_status": "portable_binding_command_and_consumer_attestation_exact_match",
+            "native_split_final_portable_binding_valid": true,
+            "native_split_semantic_binding_required": true,
+            "native_split_semantic_binding_status": "sealed_manifest_and_payload_bytes_rehashed",
+            "native_split_semantic_binding_valid": true,
+            "native_split_semantic_boundary_manifest_sha256": "778f408132c9550b22f1862dd545a6c9af1e5f649db42aaa7b7bb87b0ae5c4d1",
+            "native_split_semantic_output_manifest_sha256": "0139fc36e50aded7b69659127fcce1fd16feeb47cbf7092cc137e4b2a64ad8f9"
+          },
+          "new_scientific_native_fps": null,
+          "original_quality_request": {
+            "sha256": "801eda27c022f7975c26e469d3d9493ea4ec1f682717a93ca68c7874f06de438"
+          },
+          "original_run_manifest": {
+            "sha256": "a930b399e253e84da0a2de9eee1f1f6924103d2e4b81b350de17e473009a3eb8"
+          },
+          "prepared_input_hwc_bytes_exact": true,
+          "scope": "fresh_single_input_native_functional_reference"
+        },
+        "generic_valid_repetitions": 3,
+        "native_functional_reference_role": "functional_control_only",
+        "native_functional_reference_source": {
+          "sha256": "35058e904cebe4897d389d4c4ae7f96ad5239546c9c0ca8f01731a89885293bd"
+        },
+        "native_output_manifest_sha256": "0139fc36e50aded7b69659127fcce1fd16feeb47cbf7092cc137e4b2a64ad8f9",
+        "native_performance_contract_relation": {
+          "functional_contract_sha256": "ae951ebe45f1b588d5152b725a56d9bcd39366f1f0e25241e7b2608c049f820f",
+          "historical_contract_sha256": "c8b22ce3e6b94e785ed55ce4bda55f83d45dd42166239b76a7c6625fe6a43d6e",
+          "same_full_contract_as_historical_generic": false,
+          "same_semantic_comparison_endpoint": true,
+          "scientific_native_performance_unchanged": true
+        },
+        "scope": "native_generic_completed_task_pair",
+        "status": "verified"
+      },
+      "own_native_and_generic_semantic_comparison_endpoint_equal": true,
+      "own_native_completion_contract_sha256": "c8b22ce3e6b94e785ed55ce4bda55f83d45dd42166239b76a7c6625fe6a43d6e",
+      "own_native_completion_source": {
+        "sha256": "a2ad803e514c073773e0dce904be5bf454322f829caa444f7e080c51fdec4a14",
+        "size_bytes": 695957
+      },
+      "selected_completed_at": "2026-10-21T21:23:58.058422+00:00",
+      "selected_latest_generic_FPS_source": {
+        "sha256": "386bbac3653cfba80cee4fac91c9451c998a994a155b65c249943006085cceef",
+        "size_bytes": 191879
+      },
+      "semantic_comparison_endpoint_hash": "0153c6c2c964096ca2469182c8e2c0fd276d3b57166b737de759dbc39ca75dad",
+      "targeted_Generic_FPS_repeat_required": false,
+      "why_old_predictions_cannot_be_repaired": "Post-NMS records do not retain discarded TopK candidates; the complete-task no-NMS predictions cannot be reconstructed from them."
+    },
+    {
+      "actual_Generic_AP": 0.4596962475811233,
+      "actual_Generic_reference_AP": 0.460346586685622,
+      "actual_Generic_relative_loss": 0.0014127162518591978,
+      "actual_N5000_image139_predictions_exact_all_three_latest_timed_sentinels": [
+        true,
+        true,
+        true
+      ],
+      "actual_candidate_record_fingerprint": "12c52de589817ac984aa008af46d83504186edef96a031487ba5f15940c6a96c",
+      "blocker_origin": "Historical Native cross-backend endpoint decision preserved by generic_completion_reporting.py; not a same-device measured Generic/Native endpoint mismatch.",
+      "bootstrap_repetitions": 1000,
+      "canonical_preprocessing_sha256": "411898b92628e2a769a2b8ea7aa35faff35373cfacb863c3ab34b243c105b70e",
+      "corrected_actual_generic_N5000_predictions": {
+        "sha256": "396e72274044d6fc1d7bae23f5d28f005d376afdbe0afb2fb37f3b283c32f44a",
+        "size_bytes": 11191441
+      },
+      "corrected_actual_generic_N5000_request": {
+        "sha256": "5b57d6dd8958a696e0a37823603247d02cbb5f78753585483a3af46e7dc5e051",
+        "size_bytes": 266059
+      },
+      "corrected_quality_result": {
+        "sha256": "a7f7241dff42591dcd47900d6b5f395b93ea3f43e16a9047c6f00183d17d2f8b",
+        "size_bytes": 134154
+      },
+      "dataset_image_ids_sha256": "9eced8e839495a204fb99096d0cc923f5c41e6bce8ba7155b70999686a303768",
+      "decoder_sigmoid_arithmetic": "clipped_float64_exp_denominator_to_float32_v1",
+      "demonstrated_timed_Generic_postprocessing_bug": false,
+      "evaluator_algorithm": "management_paired_quality_v2:detection-cached-matching-v2-ap75",
+      "existing_canonical_CPU_ONNX_reference": {
+        "reference_role": "canonical_cpu_ort",
+        "reference_sha256": "cbdb1635c89d65090dccc121ca62c7dc69e30674a22cc08454a45c5ad24470e9"
+      },
+      "existing_quality_36_actual_source_files_unchanged": true,
+      "existing_quality_records": 5000,
+      "existing_quality_source_after": {
+        "sha256": "87b686e95ab9be34e74ea8aae6b4b0e9e239a962faa779018f406cd4cf213ff8",
+        "size_bytes": 12826
+      },
+      "existing_quality_source_before": {
+        "sha256": "87b686e95ab9be34e74ea8aae6b4b0e9e239a962faa779018f406cd4cf213ff8",
+        "size_bytes": 12826
+      },
+      "fresh_normal_N5000_required": false,
+      "generic_uid": "generic|yolov7_paper|DeepX|deepx_to_trt|b044",
+      "independent_Generic_quality_reuse_proved": true,
+      "latest_generic_completion_contract_sha256": "2c26c1471f15885ee47a7cba6be4eb31811c57028d4ecd11e35711c7ffb81218",
+      "next_action": "Admit the independently verified Generic quality for the selected latest FPS observation, while preserving the separate Native cross-backend transfer block. Contingency normal N5000 metadata is prepared if required by final review.",
+      "normal_native_quality_transfer_remains_blocked": true,
+      "normal_pair_authority": {
+        "sha256": "eb510636035928019e5629e32d5c948beac04dac31645336ec9e54710304fc63",
+        "size_bytes": 65455
+      },
+      "normal_quality_transfer_blockers": [
+        "native_output_endpoint_match"
+      ],
+      "normal_same_device_pair_endpoint_evidence": {
+        "completed_output_endpoint_id": "detection:decoded_nms:comparison:43612439aff99a683e0c32f17d9bc70074301ae7445e83c8307439856fbf8a08",
+        "completion_contract_sha256": "2c26c1471f15885ee47a7cba6be4eb31811c57028d4ecd11e35711c7ffb81218",
+        "functional_reference_evidence": {
+          "capture": {
+            "sha256": "b8e9a9550c2b04ff5753b7f8bb1a26535742d5d93030d881be7ec56cd0d414e8"
+          },
+          "captured_completed_tasks": 1,
+          "functional_native_command_sha256": "caceaf674d08368738eb955b65d2579fd8ee74e4ddc90ceb1ba6a50a0570f50c",
+          "functional_output_manifest": {
+            "sha256": "c2f6d4a4aec5964d68a2b15583a2570cb47c3a6a3a472208c352f76ced87ff77"
+          },
+          "functional_raw_report": {
+            "sha256": "d94314c1178bb0ec1d6d55fcb78dca0b63cf61ffe12b836a21c1b56da075320d"
+          },
+          "historical_command_sha256": "0ecb22dd6579b144026457015f806fd8919216ba886c0f026fd42b3acfd8f519",
+          "historical_native_counts_times": {
+            "batch_size": 1,
+            "completion_mode": "raw_head_frozen_decode_nms",
+            "completion_output_endpoint_id": "detection:decoded_nms:comparison:43612439aff99a683e0c32f17d9bc70074301ae7445e83c8307439856fbf8a08",
+            "execution_model": "scripts/native_deepx_trt_e2e_from_benchmarkset.py",
+            "handoff_included": true,
+            "host_device_transfers_included": true,
+            "inflight": null,
+            "input_sequence": "single_exact_prepared_feed_repeated",
+            "measured_task_count": 1000,
+            "native_command_contract_sha256": "0ecb22dd6579b144026457015f806fd8919216ba886c0f026fd42b3acfd8f519",
+            "observed_completed_counts": [
+              1000,
+              1000,
+              1000
+            ],
+            "observed_measurement_times_s": [
+              70.47897824598476,
+              70.79227153398097,
+              68.50568756368011
+            ],
+            "output_materialization_included": true,
+            "output_materialization_policy": "synchronized_d2h_pinned_view_no_post_copy",
+            "pipeline_drain_included": true,
+            "pipeline_fill_included": true,
+            "preprocessing_included": false,
+            "queue_depth": 3,
+            "repetitions": 3,
+            "task": "detection",
+            "timer_end": "last_required_task_completion_after_synchronized_host_output_and_task_postprocess",
+            "timer_start": "workers_ready_before_first_prepared_input_admission",
+            "warmup_count": 100,
+            "warmup_fully_completed_and_drained_before_timer": true
+          },
+          "historical_scientific_source": null,
+          "historical_source": {
+            "sha256": "c235a8de13aa71fc166e7d601984d784d6d92bed87d199cf09c12aa78eea3602"
+          },
+          "historical_source_inside_original_run": true,
+          "native_split_semantic_proof": {
+            "native_split_final_portable_binding_status": "portable_binding_command_and_consumer_attestation_exact_match",
+            "native_split_final_portable_binding_valid": true,
+            "native_split_semantic_binding_required": true,
+            "native_split_semantic_binding_status": "sealed_manifest_and_payload_bytes_rehashed",
+            "native_split_semantic_binding_valid": true,
+            "native_split_semantic_boundary_manifest_sha256": "eef1058509d3ba475aa66f5f4b401fdb1c356e7ea8b761b6e1c638d6eb5e26e4",
+            "native_split_semantic_output_manifest_sha256": "c2f6d4a4aec5964d68a2b15583a2570cb47c3a6a3a472208c352f76ced87ff77"
+          },
+          "new_scientific_native_fps": null,
+          "original_quality_request": {
+            "sha256": "36e17e4c10725247d85781b9de6e1a88d4e8d14f30539d46d36dd3f1f12eeb43"
+          },
+          "original_run_manifest": {
+            "sha256": "a930b399e253e84da0a2de9eee1f1f6924103d2e4b81b350de17e473009a3eb8"
+          },
+          "prepared_input_hwc_bytes_exact": true,
+          "scope": "fresh_single_input_native_functional_reference"
+        },
+        "generic_valid_repetitions": 3,
+        "native_functional_reference_role": "functional_control_only",
+        "native_functional_reference_source": {
+          "sha256": "b8e9a9550c2b04ff5753b7f8bb1a26535742d5d93030d881be7ec56cd0d414e8"
+        },
+        "native_output_manifest_sha256": "c2f6d4a4aec5964d68a2b15583a2570cb47c3a6a3a472208c352f76ced87ff77",
+        "native_performance_contract_relation": {
+          "functional_contract_sha256": "2c26c1471f15885ee47a7cba6be4eb31811c57028d4ecd11e35711c7ffb81218",
+          "historical_contract_sha256": "a3806858b67f1321ecf36f0ee6d75657a3d6b2404f7a7c2f0064bc712697664f",
+          "same_full_contract_as_historical_generic": false,
+          "same_semantic_comparison_endpoint": true,
+          "scientific_native_performance_unchanged": true
+        },
+        "scope": "native_generic_completed_task_pair",
+        "status": "verified"
+      },
+      "own_native_and_generic_semantic_comparison_endpoint_equal": true,
+      "own_native_completion_contract_sha256": "5b9b4662218dc051bbefba40c73d8fab8485d19fa69caf37ed193d110217d637",
+      "own_native_completion_source": {
+        "sha256": "c235a8de13aa71fc166e7d601984d784d6d92bed87d199cf09c12aa78eea3602",
+        "size_bytes": 1492623
+      },
+      "production_decoder_contract_sha256": "b51ffac66948d89f7c31394b0a44a0aa88617061343a3fd2ec6691a1e9cf215a",
+      "proof_basis": "Actual Generic N5000 predictions, exact P1/P2 and preprocessing/dataset/reference; observed source pins show byte-identical numerical task runtime and harness; only endpoint/contract validators changed; actual first dataset record equals each latest measured sentinel. This does not reuse Native quality or choose an older favorable measurement.",
+      "same_exact_physical_P1_and_P2_engine_as_all_three_selected_FPS_processes": true,
+      "selected_completed_at": "2026-10-21T21:29:58.991278+00:00",
+      "selected_latest_generic_FPS_source": {
+        "sha256": "daf0132de5a21b5d7d62d727bc6c8b8a25a1952c3eb93fefba14466b0d02e7ac",
+        "size_bytes": 255047
+      },
+      "semantic_comparison_endpoint_hash": "43612439aff99a683e0c32f17d9bc70074301ae7445e83c8307439856fbf8a08",
+      "shared_harness_sha256": "ef63cbc2ce549fcde0926456d5a0269c583aef29ba7f031980e0241f00ca5965",
+      "shared_task_runtime_sha256": "22657a4b26d12ce3962862537ca7f994ebb7324259b5e25d983344277ab0a129",
+      "targeted_Generic_FPS_repeat_required": false
+    }
+  ],
+  "schema": "rq2-two-extra-endpoint-quality-resolution-v1"
+}

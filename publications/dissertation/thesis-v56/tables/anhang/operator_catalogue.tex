@@ -1,0 +1,20 @@
+\begin{table}[H]
+\centering\small\TableSetup
+\caption{Vollständig implementierter arithmetischer Stellvertreter. Zählwerte verwenden MAC-äquivalente und skalare Stellvertreter-Einheiten, keine physikalischen FLOP- oder Gerätebefehlsmessungen.}
+\label{tab:flop_formulas_landscape}
+\begin{tabularx}{\linewidth}{@{}L{3.5cm}Y@{}}
+\toprule
+Operatorfamilie & Zählweise und Konvention \\
+\midrule
+Conv, ConvInteger, QLinearConv & $NH_{out}W_{out}C_{out}(K_hK_wC_{in}/G)$. Fügen Sie $N_{out}$ für einen expliziten Bias hinzu. Eine MAC-äquivalente Einheit pro Kernel-Produkt pro Ausgangskanal. \\
+ConvTranspose & Gleiche Ausdrucks- und Bias-Konvention wie bei Conv. Historisches, auf dichten Ausgabewerten basierendes Surrogat, keine operatorgenaue MAC-Zählung. \\
+MatMul, MatMulInteger, QLinearMatMul & $BMNK$. Formen werden durch Inferenz aus Werten oder Initialisierern abgeleitet. Eine MAC-äquivalente Einheit pro Produkt. \\
+Gemm & $BMNK$. Fügen Sie $N_{out}$ hinzu, um eine explizite Voreinstellung anzugeben. \\
+Add, Sub, Mul, Div & $N_{out}$. Eine skalare Proxy-Einheit pro Ausgabekomponente. \\
+Batch-Normalisierung & $4N_{out}$. Fester Standardwert pro Ausgabeelement. \\
+ReLU, LeakyReLU, Sigmoid, tanh, Softsign, Softplus, GELU, Clip & $N_{out}$. Fester Standardwert von einer Proxy-Einheit pro Ausgabeelement. \\
+Größe anpassen, Hochskalieren, Interpolieren & $c_{mode}N_{out}$ mit $c_{mode}=1,8,16$ für den nächsten, linearen und kubischen Modus. Unbekannte Modi werden standardmäßig auf „eins“ gesetzt. \\
+Sonstige Operatoren & Null, sofern nicht in die aufgeführten Primitive zerlegt. Dazu gehören „Fused Attention“, „Pooling“, „Softmax“, „Layer Normalisation“, „Transpose“ und „Reshape“. Ihre Auswirkungen auf Laufzeit und Speicherbedarf bleiben beobachtbar. \\
+\bottomrule
+\end{tabularx}
+\end{table}
